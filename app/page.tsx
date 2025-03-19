@@ -1,13 +1,6 @@
 import Link from 'next/link'
 import './components/table.css'
 
-const other = {
-  BRC: 'BRC (VEuPathDB and more)',
-  CCGP: 'California Conservation Genome Project',
-  HPRC: 'Human Pangenome Resource Project',
-  VGP: 'Vertebrate Genome Project',
-  legacy: '',
-}
 export default function Home() {
   return (
     <div>
@@ -170,6 +163,10 @@ export default function Home() {
           </tr>
         </tbody>
       </table>
+      <div className="mt-20">
+        Feel free to contact or report issues to{' '}
+        <Link href="https://github.com/cmdcolin/jb2hubs/">Github</Link>
+      </div>
     </div>
   )
 }

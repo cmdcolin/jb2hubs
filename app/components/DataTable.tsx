@@ -11,7 +11,7 @@ interface LineData {
   assembly: string
   scientificName: string
   commonName: string
-  taxonId: string
+  taxonId: number
   genArkClade: string
   jbrowseLink: string
   ncbiLink: string
@@ -19,6 +19,7 @@ interface LineData {
   ucscDataLink: string
   ucscBrowserLink: string
   igvBrowserLink: string
+  ncbiBrowserLink: string
 }
 
 interface DataTableProps {
@@ -33,7 +34,7 @@ interface SortColumn {
 }
 
 export function DataTable({ rows }: DataTableProps) {
-  const [sortColumns, setSortColumns] = useState<SortColumn[]>([])
+  const [sortColumn, setSortColumn] = useState<SortColumn>()
   const [filterOption, setFilterOption] = useState<FilterOption>('all')
 
   const filteredRows = useMemo(() => {
@@ -45,49 +46,44 @@ export function DataTable({ rows }: DataTableProps) {
       return rows.filter(row => row.ncbiName.startsWith('GCA_'))
     }
   }, [rows, filterOption])
+  console.log({ filteredRows })
 
   const sortedRows = useMemo(() => {
-    if (sortColumns.length === 0) {
-      return filteredRows
-    }
-
-    return [...filteredRows].sort((a, b) => {
-      for (const sort of sortColumns) {
-        const aValue = a[sort.columnKey as keyof LineData]
-        const bValue = b[sort.columnKey as keyof LineData]
-        const compResult = aValue.localeCompare(bValue)
-        if (compResult !== 0) {
-          return sort.direction === 'ASC' ? compResult : -compResult
-        }
-      }
-      return 0
-    })
-  }, [filteredRows, sortColumns])
+    return sortColumn
+      ? filteredRows.toSorted((a, b) => {
+          const aValue = a[sortColumn.columnKey as keyof LineData]
+          const bValue = b[sortColumn.columnKey as keyof LineData]
+          const compResult =
+            typeof aValue === 'number'
+              ? // @ts-expect-error
+                aValue - bValue
+              : // @ts-expect-error
+                aValue.localeCompare(bValue)
+          return sortColumn.direction === 'ASC' ? compResult : -compResult
+        })
+      : filteredRows
+  }, [filteredRows, sortColumn])
 
   const handleSort = (columnKey: string) => {
-    const currentSortColumn = sortColumns[0]
-
-    if (currentSortColumn && currentSortColumn.columnKey === columnKey) {
+    if (sortColumn && sortColumn.columnKey === columnKey) {
       // Toggle direction if already sorting by this column
-      setSortColumns([
-        {
-          columnKey,
-          direction: currentSortColumn.direction === 'ASC' ? 'DESC' : 'ASC',
-        },
-      ])
+      setSortColumn({
+        columnKey,
+        direction: sortColumn.direction === 'ASC' ? 'DESC' : 'ASC',
+      })
     } else {
       // Set new sort column with ASC direction
-      setSortColumns([{ columnKey, direction: 'ASC' }])
+      setSortColumn({ columnKey, direction: 'ASC' })
     }
   }
 
   // Helper to determine sort indicator
   const getSortIndicator = (columnKey: string) => {
-    const sortColumn = sortColumns.find(col => col.columnKey === columnKey)
-    if (!sortColumn) {
-      return null
-    }
-    return sortColumn.direction === 'ASC' ? '↑' : '↓'
+    return sortColumn?.columnKey === columnKey
+      ? sortColumn?.direction === 'ASC'
+        ? '↑'
+        : '↓'
+      : ''
   }
 
   return (
@@ -136,87 +132,127 @@ export function DataTable({ rows }: DataTableProps) {
           <thead>
             <tr>
               <th
+                className="cursor-pointer"
                 onClick={() => {
                   handleSort('commonName')
                 }}
-                style={{ cursor: 'pointer' }}
               >
                 Common Name {getSortIndicator('commonName')}
               </th>
+              <th>JBrowse</th>
+              <th>UCSC</th>
+              <th>IGV</th>
+              <th>NCBI GDV</th>
               <th
+                className="cursor-pointer"
                 onClick={() => {
                   handleSort('scientificName')
                 }}
-                style={{ cursor: 'pointer' }}
               >
-                Scientific Name and Data Download{' '}
+                Scientific name
                 {getSortIndicator('scientificName')}
               </th>
               <th
+                className="cursor-pointer"
+                onClick={() => {
+                  handleSort('taxonId')
+                }}
+              >
+                Taxonomy ID
+                {getSortIndicator('taxonId')}
+              </th>
+              <th
+                className="cursor-pointer"
                 onClick={() => {
                   handleSort('accession')
                 }}
-                style={{ cursor: 'pointer' }}
               >
-                Accession and link to NCBI {getSortIndicator('accession')}
+                Accession {getSortIndicator('accession')}
               </th>
+              <th>UCSC download</th>
+              <th>NCBI portal</th>
             </tr>
           </thead>
           <tbody>
             {sortedRows.map((row, index) => (
               <tr key={index}>
                 <td>
-                  <div
-                    style={{ display: 'flex', justifyContent: 'space-between' }}
+                  <span>{row.commonName}</span>
+                </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href={row.jbrowseLink}
+                    rel="noopener noreferrer"
                   >
-                    <span>{row.commonName}</span>
-                    <span>
-                      <a
-                        target="_blank"
-                        href={row.jbrowseLink}
-                        rel="noopener noreferrer"
-                      >
-                        [JBrowse]
-                      </a>{' '}
-                      <a
-                        target="_blank"
-                        href={row.ucscBrowserLink}
-                        rel="noopener noreferrer"
-                      >
-                        [UCSC]
-                      </a>{' '}
-                      <a
-                        target="_blank"
-                        href={row.igvBrowserLink}
-                        rel="noopener noreferrer"
-                      >
-                        [IGV]
-                      </a>
-                    </span>
-                  </div>
+                    [JBrowse]
+                  </a>{' '}
+                </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href={row.ucscBrowserLink}
+                    rel="noopener noreferrer"
+                  >
+                    [UCSC]
+                  </a>
+                </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href={row.igvBrowserLink}
+                    rel="noopener noreferrer"
+                  >
+                    [IGV]
+                  </a>
+                </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href={row.ncbiBrowserLink}
+                    rel="noopener noreferrer"
+                  >
+                    [NCBI]
+                  </a>
                 </td>
 
                 <td>
                   <div
                     style={{ display: 'flex', justifyContent: 'space-between' }}
                   >
-                    <a
-                      target="_blank"
-                      href={row.ucscDataLink}
-                      rel="noopener noreferrer"
-                    >
-                      {row.scientificName}
-                    </a>
-                    <div>(taxId:{row.taxonId})</div>
+                    <div>{row.scientificName}</div>
+                  </div>
+                </td>
+                <td>
+                  <a
+                    href={`https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=${row.taxonId}&lvl=3&p=nuccore&lin=f&keep=1&srchmode=1&unlock`}
+                  >
+                    {row.taxonId}
+                  </a>
+                </td>
+                <td>
+                  <div
+                    style={{ display: 'flex', justifyContent: 'space-between' }}
+                  >
+                    {row.ncbiName}{' '}
                   </div>
                 </td>
                 <td>
                   <a
                     target="_blank"
-                    href={row.ncbiLink}
+                    href={row.ucscDataLink}
                     rel="noopener noreferrer"
                   >
-                    {row.ncbiName}
+                    UCSC
+                  </a>
+                </td>
+                <td>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href={row.ncbiLink}
+                  >
+                    NCBI
                   </a>
                 </td>
               </tr>
