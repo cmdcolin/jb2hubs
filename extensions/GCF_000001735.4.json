@@ -1,0 +1,93 @@
+{
+  "tracks": [
+    {
+      "type": "VariantTrack",
+      "trackId": "Deletions.vcf",
+      "name": "Deletions.vcf",
+      "category": ["SVs"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ145/ERZ1458872/Deletions.vcf.gz"
+      },
+      "assemblyNames": ["GCF_000001735.4"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "Duplications.vcf",
+      "name": "Duplications.vcf",
+      "category": ["SVs"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ145/ERZ1458872/Duplications.vcf.gz"
+      },
+      "assemblyNames": ["GCF_000001735.4"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "Inversions.vcf",
+      "name": "Inversions.vcf",
+      "category": ["SVs"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://ftp.sra.ebi.ac.uk/vol1/analysis/ERZ145/ERZ1458872/Inversions.vcf.gz"
+      },
+      "assemblyNames": ["GCF_000001735.4"]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "Athaliana.fa.mod.EDTA.intact",
+      "name": "Athaliana.fa.mod.EDTA.intact",
+      "category": ["Transposons"],
+      "adapter": {
+        "type": "Gff3Adapter",
+        "uri": "Athaliana.fa.mod.EDTA.intact.gff3"
+      },
+      "assemblyNames": ["GCF_000001735.4"]
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "Athaliana.fa.mod.EDTA.TEanno",
+      "name": "Athaliana.fa.mod.EDTA.TEanno",
+      "category": ["Transposons"],
+      "adapter": {
+        "type": "Gff3Adapter",
+        "uri": "Athaliana.fa.mod.EDTA.TEanno.gff3"
+      },
+      "assemblyNames": ["GCF_000001735.4"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "1001genomes_snp-short-indel_only_ACGTN_v3.1.snpeff.garys.final.vcf",
+      "name": "1001genomes_snp-short-indel_only_ACGTN_v3.1.snpeff.garys.final.vcf",
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "samplesTsvLocation": {
+          "uri": "accessions.tsv.gz"
+        },
+        "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJNA273563/1001genomes_snp-short-indel_only_ACGTN_v3.1.snpeff.garys.final.vcf.gz"
+      },
+      "assemblyNames": ["GCF_000001735.4"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "INSSV-1001Ara_merged.vcf",
+      "name": "INSSV-1001Ara_merged.vcf",
+      "category": ["Transposons"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB58052/INSSV-1001Ara_merged.vcf.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB58052/INSSV-1001Ara_merged.vcf.csi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "CSI"
+        }
+      },
+      "assemblyNames": ["GCF_000001735.4"]
+    }
+  ]
+}
