@@ -9,7 +9,7 @@ fs.writeFileSync(
   `app/hubs/${f}/page.tsx`,
   `import Page from '../../components/Page'
 
-export default function () {
+export default function ${capitalizeFirstLetter(f)}() {
   return <Page title="${capitalizeFirstLetter(f)}" />
 }`,
 )

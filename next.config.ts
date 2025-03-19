@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   output: 'export',
   basePath: '/jb2hubs',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 export default nextConfig

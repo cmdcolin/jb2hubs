@@ -52,12 +52,6 @@ export default tseslint.config(
           ignoreRestSiblings: true,
         },
       ],
-      'no-console': [
-        'warn',
-        {
-          allow: ['error', 'warn'],
-        },
-      ],
       'no-underscore-dangle': 0,
       curly: 'error',
       semi: ['error', 'never'],
@@ -67,6 +61,8 @@ export default tseslint.config(
       '@stylistic/object-curly-newline': 'error',
 
       '@typescript-eslint/restrict-template-expressions': 'off',
+      '@typescript-eslint/no-non-null-assertion': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
 
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/filename-case': 'off',

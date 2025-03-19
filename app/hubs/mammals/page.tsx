@@ -1,5 +1,5 @@
 import Page from '../../components/Page'
 
-export default function () {
+export default function Mammals() {
   return <Page title="Mammals" />
 }
