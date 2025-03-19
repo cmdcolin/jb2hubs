@@ -1,5 +1,17 @@
 import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
-import type { FileLocation } from '@jbrowse/core/util'
+import {
+  isUriLocation,
+  notEmpty,
+  objectHash,
+  type FileLocation,
+} from '@jbrowse/core/util/index.js'
+import {
+  generateUnknownTrackConf,
+  makeLoc,
+  makeLoc2,
+  makeLocAlt,
+  resolve,
+} from './util.ts'
 
 export function generateTracks({
   trackDb,
@@ -9,10 +21,10 @@ export function generateTracks({
   baseUrl,
 }: {
   trackDb: TrackDbFile
-  trackDbLoc: { uri: string; baseUri: string }
+  trackDbLoc: FileLocation
   assemblyName: string
   sequenceAdapter: any
-  baseUrl: string
+  baseUrl: string | URL
 }) {
   const parentTrackKeys = new Set([
     'superTrack',
