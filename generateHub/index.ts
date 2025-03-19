@@ -1,6 +1,5 @@
 import fs from 'fs'
 import readline from 'readline'
-import { generateConfigFromHub } from './generateConfigFromHub.ts'
 import { myfetchtext } from './util.ts'
 
 const filePath = process.argv[2]
@@ -13,6 +12,7 @@ for await (const line of rl) {
   if (line.startsWith('#')) {
     continue
   } else {
+    await new Promise(resolve => setTimeout(resolve, 100))
     const [
       accession,
       assembly,
@@ -21,6 +21,7 @@ for await (const line of rl) {
       taxonId,
       genArkClade,
     ] = line.split('\t')
+    console.log('processing:', line)
     const [base, rest] = accession.split('_')
     const [b1, b2, b3] = rest.match(/.{1,3}/g)!
 

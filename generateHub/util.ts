@@ -1,4 +1,4 @@
-import { objectHash } from '@jbrowse/core/util'
+import { objectHash } from '@jbrowse/core/util/index.js'
 
 export function resolve(uri: string, baseUri: string | URL) {
   return new URL(uri, baseUri).href
