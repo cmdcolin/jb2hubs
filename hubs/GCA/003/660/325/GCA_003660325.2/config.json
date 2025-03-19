@@ -1,0 +1,569 @@
+{
+  "assemblies": [
+    {
+      "name": "GCA_003660325.2",
+      "displayName": "Cannabis sativa (Jamaican Lion DASH 2019)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCA_003660325.2",
+          "taxId": "3483",
+          "groups": "groups.txt",
+          "description": "Cannabis sativa (Jamaican Lion DASH 2019)",
+          "twoBitPath": "GCA_003660325.2.2bit",
+          "twoBitBptUrl": "GCA_003660325.2.2bit.bpt",
+          "chromSizes": "GCA_003660325.2.chrom.sizes.txt",
+          "chromAliasBb": "GCA_003660325.2.chromAlias.bb",
+          "organism": "Oct15_3.7Mb_N50_Jamaican_Lion_Assembly Feb. 2019",
+          "defaultPos": "QVPT02000001.1:10874359-10884359",
+          "scientificName": "Cannabis sativa",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.description.html\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/003/660/325/GCA_003660325.2",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/003/660/325/GCA_003660325.2",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/003/660/325/GCA_003660325.2",
+          "liftOver.GCF_900626175.2": "liftOver/GCA_003660325.2ToGCF_900626175.2.over.chain.gz"
+        },
+        "trackId": "GCA_003660325.2-Pj_KGiaeOgoEnooeQVhrt",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "twoBitLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/GCA_003660325.2.2bit"
+          },
+          "chromSizesLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/GCA_003660325.2.chrom.sizes.txt"
+          }
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/GCA_003660325.2.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.assembly\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1814182482",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.cytoBand.bb"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1873706088",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.gc5Base\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.gc5Base</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-198085904",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-95884028",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.rmsk.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.repeatMasker\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.repeatMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.rmsk.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-844424889",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.simpleRepeat\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.simpleRepeat</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--726532429",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.cpgIslandExt.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-53200279",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.cpgIslandExtUnmasked.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-342510508",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.windowMasker\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.windowMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1070270105",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.augustus\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.augustus</a>"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1170128391",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.xenoRefGene\">html/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.xenoRefGene</a>"
+      },
+      "category": [
+        "rna"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1447187568",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_900626175.2",
+        "parent": "chainNetGCF_900626175.2Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "eudicots Chain",
+        "longLabel": "eudicots (2019-02-11) Chained Alignments",
+        "type": "bigChain GCF_900626175.2",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainGCF_900626175.2.bb",
+        "linkDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainGCF_900626175.2Link.bb",
+        "priority": "1"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "eudicots Chain",
+      "description": "eudicots (2019-02-11) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainGCF_900626175.2.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-769140704",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_900626175.2",
+        "parent": "chainNetGCF_900626175.2Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "eudicots synChain",
+        "longLabel": "eudicots (2019-02-11) Syntenic Chained Alignments",
+        "type": "bigChain GCF_900626175.2",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainSynGCF_900626175.2.bb",
+        "linkDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainSynGCF_900626175.2Link.bb",
+        "priority": "2"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "eudicots synChain",
+      "description": "eudicots (2019-02-11) Syntenic Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainSynGCF_900626175.2.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1099097889",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_900626175.2",
+        "parent": "chainNetGCF_900626175.2Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "eudicots rbChain",
+        "longLabel": "eudicots (2019-02-11) Reciprocal Best Chained Alignments",
+        "type": "bigChain GCF_900626175.2",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainRBestGCF_900626175.2.bb",
+        "linkDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainRBestGCF_900626175.2Link.bb",
+        "priority": "3"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "eudicots rbChain",
+      "description": "eudicots (2019-02-11) Reciprocal Best Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.chainRBestGCF_900626175.2.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-668194188",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "netGCF_900626175.2",
+        "parent": "mafNetGCF_900626175.2Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "eudicots net",
+        "longLabel": "eudicots (2019-02-11) Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.net.bb",
+        "summary": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.net.summary.bb",
+        "speciesOrder": "GCF_900626175.2",
+        "priority": "4"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "eudicots net",
+      "description": "eudicots (2019-02-11) Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--897896088",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_900626175.2",
+        "parent": "mafNetGCF_900626175.2Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "eudicots synNet",
+        "longLabel": "eudicots (2019-02-11) Syntenic Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.synNet.bb",
+        "summary": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.synNet.summary.bb",
+        "speciesOrder": "GCF_900626175.2",
+        "priority": "5"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "eudicots synNet",
+      "description": "eudicots (2019-02-11) Syntenic Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2068367027",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_900626175.2",
+        "parent": "mafNetGCF_900626175.2Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "eudicots rbestNet",
+        "longLabel": "eudicots (2019-02-11) Reciprocal Best Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.rbestNet.bb",
+        "summary": "bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.rbestNet.summary.bb",
+        "speciesOrder": "GCF_900626175.2",
+        "priority": "6"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "eudicots rbestNet",
+      "description": "eudicots (2019-02-11) Reciprocal Best Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1901504770",
+      "assemblyNames": [
+        "GCA_003660325.2"
+      ]
+    }
+  ]
+}

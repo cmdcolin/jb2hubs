@@ -1,0 +1,693 @@
+{
+  "assemblies": [
+    {
+      "name": "GCA_000208655.2",
+      "displayName": "nine-banded armadillo (v3.0 3-136 2012 Baylor genbank)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCA_000208655.2",
+          "taxId": "9361",
+          "groups": "groups.txt",
+          "description": "nine-banded armadillo (v3.0 3-136 2012 Baylor genbank)",
+          "twoBitPath": "GCA_000208655.2.2bit",
+          "twoBitBptUrl": "GCA_000208655.2.2bit.bpt",
+          "chromSizes": "GCA_000208655.2.chrom.sizes.txt",
+          "chromAliasBb": "GCA_000208655.2.chromAlias.bb",
+          "organism": "Dasnov3.0 Jan. 2012",
+          "defaultPos": "JH573670.1:4783171-4793171",
+          "scientificName": "Dasypus novemcinctus",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.description.html\">html/GCA_000208655.2_Dasnov3.0.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/208/655/GCA_000208655.2",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/208/655/GCA_000208655.2",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/208/655/GCA_000208655.2"
+        },
+        "trackId": "GCA_000208655.2-5xrRWhnGIJbV2X-BdITtI",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "twoBitLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/GCA_000208655.2.2bit"
+          },
+          "chromSizesLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/GCA_000208655.2.chrom.sizes.txt"
+          }
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/GCA_000208655.2.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.assembly\">html/GCA_000208655.2_Dasnov3.0.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_000208655.2_Dasnov3.0.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--561616114",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gap",
+        "longLabel": "AGP gap",
+        "shortLabel": "Gap (AGP defined)",
+        "visibility": "hide",
+        "color": "0,0,0",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.gap.bb",
+        "type": "bigBed 4",
+        "group": "map",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.gap\">html/GCA_000208655.2_Dasnov3.0.gap</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Gap (AGP defined)",
+      "description": "AGP gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.gap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1515647519",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.cytoBand.bb"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-60430600",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.gc5Base\">html/GCA_000208655.2_Dasnov3.0.gc5Base</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1015386670",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gapOverlap",
+        "parent": "tanDups on",
+        "shortLabel": "Gap Overlaps",
+        "longLabel": "Paired exactly identical sequence on each side of a gap",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.gapOverlap.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Gap Overlaps",
+      "description": "Paired exactly identical sequence on each side of a gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.gapOverlap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-744977530",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-46276644",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerSINE",
+        "parent": "repeatMasker",
+        "shortLabel": "SINE",
+        "longLabel": "SINE Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.SINE.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "SINE",
+      "description": "SINE Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.SINE.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1045258587",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerLINE",
+        "parent": "repeatMasker",
+        "shortLabel": "LINE",
+        "longLabel": "LINE Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.LINE.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "LINE",
+      "description": "LINE Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.LINE.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--239148225",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerLTR",
+        "parent": "repeatMasker",
+        "shortLabel": "LTR",
+        "longLabel": "LTR Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "3",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.LTR.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "LTR",
+      "description": "LTR Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.LTR.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--593178950",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerDNA",
+        "parent": "repeatMasker",
+        "shortLabel": "DNA",
+        "longLabel": "DNA Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "4",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.DNA.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "DNA",
+      "description": "DNA Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.DNA.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2141886392",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerSimple",
+        "parent": "repeatMasker",
+        "shortLabel": "Simple",
+        "longLabel": "Simple Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "5",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.Simple.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Simple",
+      "description": "Simple Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.Simple.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1633273508",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerLowComplexity",
+        "parent": "repeatMasker",
+        "shortLabel": "Low Complexity",
+        "longLabel": "Low Complexity Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "6",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.Low_complexity.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Low Complexity",
+      "description": "Low Complexity Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.Low_complexity.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-266006741",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerSatellite",
+        "parent": "repeatMasker",
+        "shortLabel": "Satellite",
+        "longLabel": "Satellite Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "7",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.Satellite.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Satellite",
+      "description": "Satellite Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.Satellite.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-183118063",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerRNA",
+        "parent": "repeatMasker",
+        "shortLabel": "RNA",
+        "longLabel": "RNA Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "8",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.RNA.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "RNA",
+      "description": "RNA Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.RNA.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--590117734",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerOther",
+        "parent": "repeatMasker",
+        "shortLabel": "Other",
+        "longLabel": "Other Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "9",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.rmsk.Other.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Other",
+      "description": "Other Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.rmsk.Other.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1534792154",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.simpleRepeat\">html/GCA_000208655.2_Dasnov3.0.simpleRepeat</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-958205911",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.cpgIslandExt.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1711540731",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.cpgIslandExtUnmasked.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--45390510",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.windowMasker\">html/GCA_000208655.2_Dasnov3.0.windowMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1648996425",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.allGaps\">html/GCA_000208655.2_Dasnov3.0.allGaps</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-821186647",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.augustus\">html/GCA_000208655.2_Dasnov3.0.augustus</a>"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-675990881",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_000208655.2_Dasnov3.0.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_000208655.2_Dasnov3.0.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/html/GCA_000208655.2_Dasnov3.0.xenoRefGene\">html/GCA_000208655.2_Dasnov3.0.xenoRefGene</a>"
+      },
+      "category": [
+        "rna"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/208/655/GCA_000208655.2/bbi/GCA_000208655.2_Dasnov3.0.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-655079564",
+      "assemblyNames": [
+        "GCA_000208655.2"
+      ]
+    }
+  ]
+}

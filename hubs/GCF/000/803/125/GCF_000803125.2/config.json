@@ -1,0 +1,873 @@
+{
+  "assemblies": [
+    {
+      "name": "GCF_000803125.2",
+      "displayName": "Arabian camel (Drom800 2019 refseq)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCF_000803125.2",
+          "taxId": "9838",
+          "groups": "groups.txt",
+          "description": "Arabian camel (Drom800 2019 refseq)",
+          "twoBitPath": "GCF_000803125.2.2bit",
+          "twoBitBptUrl": "GCF_000803125.2.2bit.bpt",
+          "chromSizes": "GCF_000803125.2.chrom.sizes.txt",
+          "chromAliasBb": "GCF_000803125.2.chromAlias.bb",
+          "chromAuthority": "ucsc",
+          "organism": "CamDro3 Oct. 2019",
+          "defaultPos": "NC_044511.1:41571780-41581780",
+          "scientificName": "Camelus dromedarius",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.description.html\">html/GCF_000803125.2_CamDro3.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/803/125/GCF_000803125.2",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/803/125/GCF_000803125.2",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/803/125/GCF_000803125.2",
+          "liftOver.GCF_036321535.1": "liftOver/GCF_000803125.2ToGCF_036321535.1.over.chain.gz"
+        },
+        "trackId": "GCF_000803125.2-rFWTYdFS2Ig116drJO6-J",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "twoBitLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/GCF_000803125.2.2bit"
+          },
+          "chromSizesLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/GCF_000803125.2.chrom.sizes.txt"
+          }
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/GCF_000803125.2.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.assembly\">html/GCF_000803125.2_CamDro3.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000803125.2_CamDro3.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-706776993",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.cytoBand.bb"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-518664648",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.gc5Base\">html/GCF_000803125.2_CamDro3.gc5Base</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-64286988",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gapOverlap",
+        "parent": "tanDups on",
+        "shortLabel": "Gap Overlaps",
+        "longLabel": "Paired exactly identical sequence on each side of a gap",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.gapOverlap.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Gap Overlaps",
+      "description": "Paired exactly identical sequence on each side of a gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.gapOverlap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1534431226",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1489964708",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.rmsk.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.repeatMasker\">html/GCF_000803125.2_CamDro3.repeatMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.rmsk.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-528349173",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.simpleRepeat\">html/GCF_000803125.2_CamDro3.simpleRepeat</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--819760483",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeq",
+        "parent": "refSeqComposite on",
+        "color": "12,12,120",
+        "shortLabel": "RefSeq All",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000803125.2_CamDro3.ncbiRefSeq.ix",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.ncbiRefSeq.bb",
+        "longLabel": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "1"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq All",
+      "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.ncbiRefSeq.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1390523556",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqCurated",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Curated",
+        "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000803125.2_CamDro3.ncbiRefSeqCurated.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.ncbiRefSeqCurated.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "2"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq Curated",
+      "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.ncbiRefSeqCurated.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--480592541",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPredicted",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Predicted",
+        "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000803125.2_CamDro3.ncbiRefSeqPredicted.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.ncbiRefSeqPredicted.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "3"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq Predicted",
+      "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.ncbiRefSeqPredicted.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-2096119620",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqOther",
+        "color": "32,32,32",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Other",
+        "longLabel": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+        "priority": "4",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000803125.2_CamDro3.ncbiRefSeqOther.ix",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.ncbiRefSeqOther.bb",
+        "type": "bigBed 12 +",
+        "labelFields": "name",
+        "skipEmptyFields": "on",
+        "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq Other",
+      "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.ncbiRefSeqOther.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1853047913",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPsl",
+        "priority": "5",
+        "parent": "refSeqComposite off",
+        "shortLabel": "RefSeq Alignments",
+        "longLabel": "RefSeq Alignments of RNAs",
+        "type": "bigPsl",
+        "searchIndex": "name",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.bigPsl.bb",
+        "indelDoubleInsert": "on",
+        "indelQueryInsert": "on",
+        "showDiffBasesAllScales": ".",
+        "showDiffBasesMaxZoom": "10000.0",
+        "showCdsMaxZoom": "10000.0",
+        "showCdsAllScales": ".",
+        "baseColorDefault": "diffCodons",
+        "pslSequence": "no",
+        "baseColorUseSequence": "lfExtra",
+        "baseColorUseCds": "table given",
+        "color": "0,0,0"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq Alignments",
+      "description": "RefSeq Alignments of RNAs",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.bigPsl.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1429091896",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.cpgIslandExt.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--409721355",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.cpgIslandExtUnmasked.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--122300142",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.windowMasker\">html/GCF_000803125.2_CamDro3.windowMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2031732035",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.allGaps\">html/GCF_000803125.2_CamDro3.allGaps</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-318188305",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "dense",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.augustus\">html/GCF_000803125.2_CamDro3.augustus</a>"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-432204443",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000803125.2_CamDro3.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/GCF_000803125.2_CamDro3.xenoRefGene\">html/GCF_000803125.2_CamDro3.xenoRefGene</a>"
+      },
+      "category": [
+        "rna"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1373469869",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_036321535.1",
+        "parent": "chainNetGCF_036321535.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Arabian camel Chain",
+        "longLabel": "Arabian camel (2019-10-07) Chained Alignments",
+        "type": "bigChain GCF_036321535.1",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.chainGCF_036321535.1.bb",
+        "linkDataUrl": "bbi/GCF_000803125.2_CamDro3.chainGCF_036321535.1Link.bb",
+        "priority": "1"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Arabian camel Chain",
+      "description": "Arabian camel (2019-10-07) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.chainGCF_036321535.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--284618405",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_036321535.1",
+        "parent": "chainNetGCF_036321535.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Arabian camel synChain",
+        "longLabel": "Arabian camel (2019-10-07) Syntenic Chained Alignments",
+        "type": "bigChain GCF_036321535.1",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.chainSynGCF_036321535.1.bb",
+        "linkDataUrl": "bbi/GCF_000803125.2_CamDro3.chainSynGCF_036321535.1Link.bb",
+        "priority": "2"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Arabian camel synChain",
+      "description": "Arabian camel (2019-10-07) Syntenic Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.chainSynGCF_036321535.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-903122954",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_036321535.1",
+        "parent": "chainNetGCF_036321535.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Arabian camel rbChain",
+        "longLabel": "Arabian camel (2019-10-07) Reciprocal Best Chained Alignments",
+        "type": "bigChain GCF_036321535.1",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.chainRBestGCF_036321535.1.bb",
+        "linkDataUrl": "bbi/GCF_000803125.2_CamDro3.chainRBestGCF_036321535.1Link.bb",
+        "priority": "3"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Arabian camel rbChain",
+      "description": "Arabian camel (2019-10-07) Reciprocal Best Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.chainRBestGCF_036321535.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1907883569",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_036321535.1",
+        "parent": "chainNetGCF_036321535.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Arabian camel loChain",
+        "longLabel": "Arabian camel (2019-10-07) Lift Over Chained Alignments",
+        "type": "bigChain GCF_036321535.1",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.chainLiftOverGCF_036321535.1.bb",
+        "linkDataUrl": "bbi/GCF_000803125.2_CamDro3.chainLiftOverGCF_036321535.1Link.bb",
+        "priority": "4"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Arabian camel loChain",
+      "description": "Arabian camel (2019-10-07) Lift Over Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.chainLiftOverGCF_036321535.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1778297270",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "netGCF_036321535.1",
+        "parent": "mafNetGCF_036321535.1Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "Arabian camel net",
+        "longLabel": "Arabian camel (2019-10-07) Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.net.bb",
+        "summary": "bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.net.summary.bb",
+        "speciesOrder": "GCF_036321535.1",
+        "priority": "5"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Arabian camel net",
+      "description": "Arabian camel (2019-10-07) Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2098907042",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_036321535.1",
+        "parent": "mafNetGCF_036321535.1Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "Arabian camel synNet",
+        "longLabel": "Arabian camel (2019-10-07) Syntenic Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.synNet.bb",
+        "summary": "bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.synNet.summary.bb",
+        "speciesOrder": "GCF_036321535.1",
+        "priority": "6"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Arabian camel synNet",
+      "description": "Arabian camel (2019-10-07) Syntenic Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--859442735",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_036321535.1",
+        "parent": "mafNetGCF_036321535.1Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "Arabian camel rbestNet",
+        "longLabel": "Arabian camel (2019-10-07) Reciprocal Best Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.rbestNet.bb",
+        "summary": "bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_036321535.1",
+        "priority": "7"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Arabian camel rbestNet",
+      "description": "Arabian camel (2019-10-07) Reciprocal Best Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/GCF_000803125.2_CamDro3.GCF_036321535.1.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1020617464",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "HLTOGAannotvHg38v1",
+        "bigDataUrl": "bbi/HLTOGAannotVsHg38v1.bb",
+        "shortLabel": "TOGA vs. hg38",
+        "longLabel": "TOGA annotations using human/hg38 as reference",
+        "group": "genes",
+        "visibility": "pack",
+        "itemRgb": "on",
+        "type": "bigBed 12",
+        "searchIndex": "name",
+        "searchTrix": " ixIxx/HLTOGAannotVsHg38v1.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/html/TOGAannotation\">html/TOGAannotation</a>"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "TOGA vs. hg38",
+      "description": "TOGA annotations using human/hg38 as reference",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/803/125/GCF_000803125.2/bbi/HLTOGAannotVsHg38v1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1001983674",
+      "assemblyNames": [
+        "GCF_000803125.2"
+      ]
+    }
+  ]
+}

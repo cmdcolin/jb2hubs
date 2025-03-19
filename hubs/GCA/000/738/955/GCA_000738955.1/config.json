@@ -1,0 +1,725 @@
+{
+  "assemblies": [
+    {
+      "name": "GCA_000738955.1",
+      "displayName": "Chinese pangolin (MPE899 2014 WashU)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCA_000738955.1",
+          "taxId": "143292",
+          "groups": "groups.txt",
+          "description": "Chinese pangolin (MPE899 2014 WashU)",
+          "twoBitPath": "GCA_000738955.1.2bit",
+          "twoBitBptUrl": "GCA_000738955.1.2bit.bpt",
+          "chromSizes": "GCA_000738955.1.chrom.sizes.txt",
+          "chromAliasBb": "GCA_000738955.1.chromAlias.bb",
+          "organism": "M_pentadactyla-1.1.1 Aug. 2014",
+          "defaultPos": "KN005617.1:439324-449324",
+          "scientificName": "Manis pentadactyla",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.description.html\">html/GCA_000738955.1_M_pentadactyla-1.1.1.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/738/955/GCA_000738955.1",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/738/955/GCA_000738955.1",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/738/955/GCA_000738955.1"
+        },
+        "trackId": "GCA_000738955.1-tjpW_pwbLrbnNVqzEAlUx",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "twoBitLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/GCA_000738955.1.2bit"
+          },
+          "chromSizesLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/GCA_000738955.1.chrom.sizes.txt"
+          }
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/GCA_000738955.1.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.assembly\">html/GCA_000738955.1_M_pentadactyla-1.1.1.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_000738955.1_M_pentadactyla-1.1.1.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--668989404",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gap",
+        "longLabel": "AGP gap",
+        "shortLabel": "Gap (AGP defined)",
+        "visibility": "hide",
+        "color": "0,0,0",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.gap.bb",
+        "type": "bigBed 4",
+        "group": "map",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.gap\">html/GCA_000738955.1_M_pentadactyla-1.1.1.gap</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Gap (AGP defined)",
+      "description": "AGP gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.gap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2068757453",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.cytoBand.bb"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1930071705",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.gc5Base\">html/GCA_000738955.1_M_pentadactyla-1.1.1.gc5Base</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1801239616",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gapOverlap",
+        "parent": "tanDups on",
+        "shortLabel": "Gap Overlaps",
+        "longLabel": "Paired exactly identical sequence on each side of a gap",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.gapOverlap.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Gap Overlaps",
+      "description": "Paired exactly identical sequence on each side of a gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.gapOverlap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1137067845",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-188527803",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerSINE",
+        "parent": "repeatMasker",
+        "shortLabel": "SINE",
+        "longLabel": "SINE Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.SINE.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "SINE",
+      "description": "SINE Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.SINE.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1234945094",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerLINE",
+        "parent": "repeatMasker",
+        "shortLabel": "LINE",
+        "longLabel": "LINE Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.LINE.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "LINE",
+      "description": "LINE Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.LINE.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1284466690",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerLTR",
+        "parent": "repeatMasker",
+        "shortLabel": "LTR",
+        "longLabel": "LTR Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "3",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.LTR.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "LTR",
+      "description": "LTR Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.LTR.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1059796487",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerDNA",
+        "parent": "repeatMasker",
+        "shortLabel": "DNA",
+        "longLabel": "DNA Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "4",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.DNA.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "DNA",
+      "description": "DNA Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.DNA.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1635497743",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerSimple",
+        "parent": "repeatMasker",
+        "shortLabel": "Simple",
+        "longLabel": "Simple Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "5",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Simple.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Simple",
+      "description": "Simple Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Simple.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1014068963",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerLowComplexity",
+        "parent": "repeatMasker",
+        "shortLabel": "Low Complexity",
+        "longLabel": "Low Complexity Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "6",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Low_complexity.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Low Complexity",
+      "description": "Low Complexity Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Low_complexity.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--650713566",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerSatellite",
+        "parent": "repeatMasker",
+        "shortLabel": "Satellite",
+        "longLabel": "Satellite Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "7",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Satellite.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Satellite",
+      "description": "Satellite Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Satellite.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-196646142",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerRNA",
+        "parent": "repeatMasker",
+        "shortLabel": "RNA",
+        "longLabel": "RNA Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "8",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.RNA.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "RNA",
+      "description": "RNA Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.RNA.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--581281603",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMaskerOther",
+        "parent": "repeatMasker",
+        "shortLabel": "Other",
+        "longLabel": "Other Repeating Elements by RepeatMasker",
+        "type": "bigBed 6 +",
+        "priority": "9",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Other.bb"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Other",
+      "description": "Other Repeating Elements by RepeatMasker",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.rmsk.Other.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1424539839",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.simpleRepeat\">html/GCA_000738955.1_M_pentadactyla-1.1.1.simpleRepeat</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-730036035",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.cpgIslandExt.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--760422778",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.cpgIslandExtUnmasked.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1083665643",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.windowMasker\">html/GCA_000738955.1_M_pentadactyla-1.1.1.windowMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-415918825",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.allGaps\">html/GCA_000738955.1_M_pentadactyla-1.1.1.allGaps</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--843816387",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.augustus\">html/GCA_000738955.1_M_pentadactyla-1.1.1.augustus</a>"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1190631145",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_000738955.1_M_pentadactyla-1.1.1.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_000738955.1_M_pentadactyla-1.1.1.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/GCA_000738955.1_M_pentadactyla-1.1.1.xenoRefGene\">html/GCA_000738955.1_M_pentadactyla-1.1.1.xenoRefGene</a>"
+      },
+      "category": [
+        "rna"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/GCA_000738955.1_M_pentadactyla-1.1.1.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1575813080",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "HLTOGAannotvHg38v1",
+        "bigDataUrl": "bbi/HLTOGAannotVsHg38v1.bb",
+        "shortLabel": "TOGA vs. hg38",
+        "longLabel": "TOGA annotations using human/hg38 as reference",
+        "group": "genes",
+        "visibility": "pack",
+        "itemRgb": "on",
+        "type": "bigBed 12",
+        "searchIndex": "name",
+        "searchTrix": " ixIxx/HLTOGAannotVsHg38v1.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/html/TOGAannotation\">html/TOGAannotation</a>"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "TOGA vs. hg38",
+      "description": "TOGA annotations using human/hg38 as reference",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/738/955/GCA_000738955.1/bbi/HLTOGAannotVsHg38v1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1726541606",
+      "assemblyNames": [
+        "GCA_000738955.1"
+      ]
+    }
+  ]
+}

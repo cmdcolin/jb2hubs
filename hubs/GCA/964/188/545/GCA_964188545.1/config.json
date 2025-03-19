@@ -1,0 +1,686 @@
+{
+  "assemblies": [
+    {
+      "name": "GCA_964188545.1",
+      "displayName": "Southeastern Asian house mouse (T2T 2024)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCA_964188545.1",
+          "taxId": "10091",
+          "groups": "groups.txt",
+          "description": "Southeastern Asian house mouse (T2T 2024)",
+          "twoBitPath": "GCA_964188545.1.2bit",
+          "twoBitBptUrl": "GCA_964188545.1.2bit.bpt",
+          "chromSizes": "GCA_964188545.1.chrom.sizes.txt",
+          "chromAliasBb": "GCA_964188545.1.chromAlias.bb",
+          "organism": "CAST_EiJ_T2T_v1 Jun. 2024",
+          "defaultPos": "OZ077261.1:73319489-73329489",
+          "scientificName": "Mus musculus castaneus",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.description.html\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/964/188/545/GCA_964188545.1",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/964/188/545/GCA_964188545.1",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/964/188/545/GCA_964188545.1",
+          "liftOver.mm39": "liftOver/GCA_964188545.1ToMm39.over.chain.gz"
+        },
+        "trackId": "GCA_964188545.1-iEFvvnfGTTa5v5UpGJw7m",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "twoBitLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/GCA_964188545.1.2bit"
+          },
+          "chromSizesLocation": {
+            "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/GCA_964188545.1.chrom.sizes.txt"
+          }
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/GCA_964188545.1.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.assembly\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_964188545.1_CAST_EiJ_T2T_v1.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1424777304",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gap",
+        "longLabel": "AGP gap",
+        "shortLabel": "Gap (AGP defined)",
+        "visibility": "hide",
+        "color": "0,0,0",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.gap.bb",
+        "type": "bigBed 4",
+        "group": "map",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.gap\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.gap</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Gap (AGP defined)",
+      "description": "AGP gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.gap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2087412869",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.cytoBand.bb"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1532089999",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.gc5Base\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.gc5Base</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2114390626",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "gapOverlap",
+        "parent": "tanDups on",
+        "shortLabel": "Gap Overlaps",
+        "longLabel": "Paired exactly identical sequence on each side of a gap",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.gapOverlap.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Gap Overlaps",
+      "description": "Paired exactly identical sequence on each side of a gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.gapOverlap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--448810559",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-871401451",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.rmsk.bb",
+        "xrefDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.rmsk.align.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.repeatMasker\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.repeatMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.rmsk.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1739640126",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.simpleRepeat\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.simpleRepeat</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--834127797",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.cpgIslandExt.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-191802094",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.cpgIslandExtUnmasked.bb"
+      },
+      "category": [
+        "regulation"
+      ],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1303386649",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.windowMasker\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.windowMasker</a>"
+      },
+      "category": [
+        "varRep"
+      ],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1747008363",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.allGaps\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.allGaps</a>"
+      },
+      "category": [
+        "map"
+      ],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1178707549",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.augustus\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.augustus</a>"
+      },
+      "category": [
+        "genes"
+      ],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--124603307",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_964188545.1_CAST_EiJ_T2T_v1.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/html/GCA_964188545.1_CAST_EiJ_T2T_v1.xenoRefGene\">html/GCA_964188545.1_CAST_EiJ_T2T_v1.xenoRefGene</a>"
+      },
+      "category": [
+        "rna"
+      ],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--715461714",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainMm39",
+        "parent": "chainNetMm39Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Mouse Chain",
+        "longLabel": "Mouse (Jun. 2020 (GRCm39/mm39)) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainMm39.bb",
+        "linkDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainMm39Link.bb",
+        "priority": "1"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Mouse Chain",
+      "description": "Mouse (Jun. 2020 (GRCm39/mm39)) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--892279977",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainSynMm39",
+        "parent": "chainNetMm39Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Mouse synChain",
+        "longLabel": "Mouse (Jun. 2020 (GRCm39/mm39)) Syntenic Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainSynMm39.bb",
+        "linkDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainSynMm39Link.bb",
+        "priority": "2"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Mouse synChain",
+      "description": "Mouse (Jun. 2020 (GRCm39/mm39)) Syntenic Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainSynMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1790311488",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestMm39",
+        "parent": "chainNetMm39Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Mouse rbChain",
+        "longLabel": "Mouse (Jun. 2020 (GRCm39/mm39)) Reciprocal Best Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainRBestMm39.bb",
+        "linkDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainRBestMm39Link.bb",
+        "priority": "3"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Mouse rbChain",
+      "description": "Mouse (Jun. 2020 (GRCm39/mm39)) Reciprocal Best Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainRBestMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1742289789",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverMm39",
+        "parent": "chainNetMm39Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "Mouse loChain",
+        "longLabel": "Mouse (Jun. 2020 (GRCm39/mm39)) Lift Over Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainLiftOverMm39.bb",
+        "linkDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainLiftOverMm39Link.bb",
+        "priority": "4"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Mouse loChain",
+      "description": "Mouse (Jun. 2020 (GRCm39/mm39)) Lift Over Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.chainLiftOverMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1171561574",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "netMm39",
+        "parent": "mafNetMm39Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "Mouse net",
+        "longLabel": "Mouse (Jun. 2020 (GRCm39/mm39)) Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.net.bb",
+        "summary": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.net.summary.bb",
+        "speciesOrder": "mm39",
+        "priority": "5"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Mouse net",
+      "description": "Mouse (Jun. 2020 (GRCm39/mm39)) Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1054729682",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "synNetMm39",
+        "parent": "mafNetMm39Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "Mouse synNet",
+        "longLabel": "Mouse (Jun. 2020 (GRCm39/mm39)) Syntenic Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.synNet.bb",
+        "summary": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.synNet.summary.bb",
+        "speciesOrder": "mm39",
+        "priority": "6"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Mouse synNet",
+      "description": "Mouse (Jun. 2020 (GRCm39/mm39)) Syntenic Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--10886277",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetMm39",
+        "parent": "mafNetMm39Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "Mouse rbestNet",
+        "longLabel": "Mouse (Jun. 2020 (GRCm39/mm39)) Reciprocal Best Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.rbestNet.bb",
+        "summary": "bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.rbestNet.summary.bb",
+        "speciesOrder": "mm39",
+        "priority": "7"
+      },
+      "category": [
+        "compGeno"
+      ],
+      "type": "FeatureTrack",
+      "name": "Mouse rbestNet",
+      "description": "Mouse (Jun. 2020 (GRCm39/mm39)) Reciprocal Best Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/545/GCA_964188545.1/bbi/GCA_964188545.1_CAST_EiJ_T2T_v1.mm39.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-20678202",
+      "assemblyNames": [
+        "GCA_964188545.1"
+      ]
+    }
+  ]
+}
