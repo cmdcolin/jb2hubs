@@ -50,8 +50,11 @@ export function generateConfigFromHub({
         ? {
             refNameAliases: {
               adapter: {
-                type: 'BigBedAdapter',
-                uri: resolve(genome.data.chromAliasBb, hubUri),
+                type: 'RefNameAliasAdapter',
+                uri: resolve(
+                  genome.data.chromAliasBb.replace('.bb', '.txt'),
+                  hubUri,
+                ),
               },
             },
           }
