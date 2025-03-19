@@ -2,11 +2,11 @@ import pkg from '@gmod/ucsc-hub'
 import { nanoid } from 'nanoid'
 import { resolve } from './util.ts'
 import { generateTracks } from './generateHubTracks.ts'
-import { FileLocation } from '@jbrowse/core/util/index'
+import type { FileLocation } from '@jbrowse/core/util'
 
 const { SingleFileHub } = pkg
 
-export async function generateConfigFromHub({
+export function generateConfigFromHub({
   hubFileText,
   hubFileLocation,
 }: {
@@ -65,9 +65,11 @@ export async function generateConfigFromHub({
       baseUrl: hubUri,
     })
 
+    console.log('wtf', { asm })
     return {
       assemblies: [asm],
       tracks: tracksNew,
     }
   }
+  return undefined
 }
