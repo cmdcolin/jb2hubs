@@ -61,8 +61,12 @@ export function DataTable({ rows }: DataTableProps) {
               <>
                 <span style={{ float: 'left' }}>{args.row.commonName}</span>
                 <span style={{ float: 'right' }}>
-                  <a href={args.row.jbrowseLink}>[JBrowse]</a>{' '}
-                  <a href={args.row.ucscBrowserLink}>[UCSC]</a>
+                  <a target="_blank" href={args.row.jbrowseLink}>
+                    [JBrowse]
+                  </a>{' '}
+                  <a target="_blank" href={args.row.ucscBrowserLink}>
+                    [UCSC]
+                  </a>
                 </span>
               </>
             )
@@ -72,17 +76,28 @@ export function DataTable({ rows }: DataTableProps) {
           key: 'accession',
           name: 'accession',
           renderCell: args => {
-            return <a href={args.row.ncbiLink}>{args.row.ncbiName}</a>
+            return (
+              <a target="_blank" href={args.row.ncbiLink}>
+                {args.row.ncbiName}
+              </a>
+            )
           },
         },
         {
           key: 'scientificName',
           name: 'scientificName and data download',
           renderCell: args => {
-            return <a href={args.row.ucscDataLink}>{args.row.scientificName}</a>
+            return (
+              <a target="_blank" href={args.row.ucscDataLink}>
+                {args.row.scientificName}
+              </a>
+            )
           },
         },
-        { key: 'taxonId', name: 'taxonId' },
+        {
+          key: 'taxonId',
+          name: 'taxonId',
+        },
       ]}
       rows={sortedRows}
       enableVirtualization={false}

@@ -3,6 +3,11 @@ export default function Home() {
     <div>
       <h1>Assembly Hub List</h1>
 
+      <p>
+        This is a clone of the{' '}
+        <a href="https://hgdownload.soe.ucsc.edu/hubs/">UCSC GenArk portal</a>{' '}
+        with added JBrowse configs
+      </p>
       <thead>
         <tr>
           <th>hub&nbsp;gateway</th>

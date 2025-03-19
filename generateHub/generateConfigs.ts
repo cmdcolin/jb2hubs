@@ -12,7 +12,6 @@ const config = generateConfigFromHub({
     locationType: 'UriLocation',
   },
 })
-console.log({ config })
 
 if (config) {
   fs.writeFileSync(
