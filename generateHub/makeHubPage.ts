@@ -1,4 +1,4 @@
-import fs from 'fs'
+import fs from 'node:fs'
 const f = process.argv[2]
 
 function capitalizeFirstLetter(val: string) {

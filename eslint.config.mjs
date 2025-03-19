@@ -64,6 +64,7 @@ export default tseslint.config(
 
       '@stylistic/object-curly-newline': 'error',
       '@stylistic/curly-newline': 'error',
+      '@stylistic/object-curly-newline': 'error',
 
       '@typescript-eslint/restrict-template-expressions': 'off',
 
