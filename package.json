@@ -10,7 +10,8 @@
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "deploy": "gh-pages -d out --nojekyll",
     "format": "prettier --write .",
-    "predeploy": "yarn build"
+    "predeploy": "yarn build",
+    "postdeploy": "git push --follow-tags"
   },
   "dependencies": {
     "@gmod/ucsc-hub": "^1.0.0",

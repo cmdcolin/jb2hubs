@@ -81,6 +81,42 @@ export default function Home() {
           </tr>
         </tbody>
       </table>
+
+      <p>Additionally there are specialized portals</p>
+      <table>
+        <thead>
+          <tr>
+            <th>hub&nbsp;gateway</th>
+            <th>description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <Link href="/hubs/BRC">BRC</Link>
+            </td>
+            <td>BRC (VEuPathDB et al.)</td>
+          </tr>
+          <tr>
+            <td>
+              <Link href="/hubs/HPRC">HPRC</Link>
+            </td>
+            <td>HPRC (human pangenome)</td>
+          </tr>
+          <tr>
+            <td>
+              <Link href="/hubs/VGP">VGP</Link>
+            </td>
+            <td>VGP (vertebrate genome project)</td>
+          </tr>
+          <tr>
+            <td>
+              <Link href="/hubs/CCGP">CCGP</Link>
+            </td>
+            <td>CCGP (California Conservation Genomics Project)</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   )
 }

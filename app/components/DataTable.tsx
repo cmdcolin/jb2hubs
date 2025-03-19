@@ -144,20 +144,20 @@ export function DataTable({ rows }: DataTableProps) {
               </th>
               <th
                 onClick={() => {
-                  handleSort('accession')
-                }}
-                style={{ cursor: 'pointer' }}
-              >
-                Accession and link to NCBI {getSortIndicator('accession')}
-              </th>
-              <th
-                onClick={() => {
                   handleSort('scientificName')
                 }}
                 style={{ cursor: 'pointer' }}
               >
                 Scientific Name and Data Download{' '}
                 {getSortIndicator('scientificName')}
+              </th>
+              <th
+                onClick={() => {
+                  handleSort('accession')
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                Accession and link to NCBI {getSortIndicator('accession')}
               </th>
             </tr>
           </thead>
@@ -187,15 +187,7 @@ export function DataTable({ rows }: DataTableProps) {
                     </span>
                   </div>
                 </td>
-                <td>
-                  <a
-                    target="_blank"
-                    href={row.ncbiLink}
-                    rel="noopener noreferrer"
-                  >
-                    {row.ncbiName}
-                  </a>
-                </td>
+
                 <td>
                   <div
                     style={{ display: 'flex', justifyContent: 'space-between' }}
@@ -209,6 +201,15 @@ export function DataTable({ rows }: DataTableProps) {
                     </a>
                     <div>(taxId:{row.taxonId})</div>
                   </div>
+                </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href={row.ncbiLink}
+                    rel="noopener noreferrer"
+                  >
+                    {row.ncbiName}
+                  </a>
                 </td>
               </tr>
             ))}
