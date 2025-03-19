@@ -39,9 +39,9 @@ export function DataTable({ rows }: DataTableProps) {
     if (filterOption === 'all') {
       return rows
     } else if (filterOption === 'refseq') {
-      return rows.filter(row => row.accession.startsWith('GCF_'))
+      return rows.filter(row => row.ncbiName.startsWith('GCF_'))
     } else {
-      return rows.filter(row => row.accession.startsWith('GCA_'))
+      return rows.filter(row => row.ncbiName.startsWith('GCA_'))
     }
   }, [rows, filterOption])
 

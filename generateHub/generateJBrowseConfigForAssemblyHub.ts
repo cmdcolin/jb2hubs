@@ -48,7 +48,7 @@ export function generateJBrowseConfigForAssemblyHub({
             refNameAliases: {
               adapter: {
                 type: 'RefNameAliasAdapter',
-                refNameColumn: 4,
+                refNameColumnHeaderName: 'ucsc',
                 uri: resolve(chromAliasBb.replace('.bb', '.txt'), hubUri),
               },
             },
