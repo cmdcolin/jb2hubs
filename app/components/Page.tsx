@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { DataTable } from '../components/DataTable'
 import styles from '../page.module.css'
 import { getLines } from '../util'
@@ -15,7 +16,7 @@ export default function ({
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{title}</h1>
-      <a href="/">Home</a>
+      <Link href="/">Home</Link>
       <DataTable
         rows={getLines(data).filter(f => f.genArkClade.startsWith(filter))}
       />

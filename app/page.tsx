@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Home() {
   return (
     <div>
@@ -17,81 +19,61 @@ export default function Home() {
       <tbody>
         <tr>
           <td>
-            <a href="primates/" target="_blank">
-              primates
-            </a>
+            <Link href="/primates">primates</Link>
           </td>
           <td>NCBI primate genomes (221 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="mammals/" target="_blank">
-              mammals
-            </a>
+            <Link href="/mammals">mammals</Link>
           </td>
           <td>NCBI mammal genomes (658 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="birds/" target="_blank">
-              birds
-            </a>
+            <Link href="/birds">birds</Link>
           </td>
           <td>NCBI bird genomes (424 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="fish/" target="_blank">
-              fishes
-            </a>
+            <Link href="/fish">fishes</Link>
           </td>
           <td>NCBI fish genomes (453 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="vertebrate/" target="_blank">
-              vertebrate
-            </a>
+            <Link href="/vertebrate">vertebrate</Link>
           </td>
           <td>NCBI other vertebrate genomes (302 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="invertebrate/" target="_blank">
-              invertebrate
-            </a>
+            <Link href="/invertebrate">invertebrate</Link>
           </td>
           <td>NCBI invertebrate genomes (1151 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="fungi/" target="_blank">
-              fungi
-            </a>
+            <Link href="/fungi">fungi</Link>
           </td>
           <td>NCBI fungi genomes (920 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="plants/" target="_blank">
-              plants
-            </a>
+            <Link href="/plants">plants</Link>
           </td>
           <td>NCBI plant genomes (310 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="viral/" target="_blank">
-              viral
-            </a>
+            <Link href="/viral">viral</Link>
           </td>
           <td>NCBI virus genomes (291 assemblies)</td>
         </tr>
         <tr>
           <td>
-            <a href="bacteria/" target="_blank">
-              bacteria
-            </a>
+            <Link href="/bacteria">bacteria</Link>
           </td>
           <td>NCBI bacteria genomes (113 assemblies)</td>
         </tr>
