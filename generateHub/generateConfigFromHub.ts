@@ -65,7 +65,6 @@ export function generateConfigFromHub({
       baseUrl: hubUri,
     })
 
-    console.log('wtf', { asm })
     return {
       assemblies: [asm],
       tracks: tracksNew,
