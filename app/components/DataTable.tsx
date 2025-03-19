@@ -14,6 +14,11 @@ type LineData = {
   commonName: string
   taxonId: string
   genArkClade: string
+  jbrowseLink: string
+  ncbiLink: string
+  ncbiName: string
+  ucscDataLink: string
+  ucscBrowserLink: string
 }
 
 type DataTableProps = {
@@ -48,13 +53,36 @@ export function DataTable({ rows }: DataTableProps) {
         resizable: true,
       }}
       columns={[
-        { key: 'jbrowseLink', name: 'jbrowseLink' },
-        { key: 'accession', name: 'accession' },
-        { key: 'assembly', name: 'assembly' },
-        { key: 'scientificName', name: 'scientificName' },
-        { key: 'commonName', name: 'commonName' },
+        {
+          key: 'commonName',
+          name: 'commonName',
+          renderCell: args => {
+            return (
+              <>
+                <span style={{ float: 'left' }}>{args.row.commonName}</span>
+                <span style={{ float: 'right' }}>
+                  <a href={args.row.jbrowseLink}>[JBrowse]</a>{' '}
+                  <a href={args.row.ucscBrowserLink}>[UCSC]</a>
+                </span>
+              </>
+            )
+          },
+        },
+        {
+          key: 'accession',
+          name: 'accession',
+          renderCell: args => {
+            return <a href={args.row.ncbiLink}>{args.row.ncbiName}</a>
+          },
+        },
+        {
+          key: 'scientificName',
+          name: 'scientificName and data download',
+          renderCell: args => {
+            return <a href={args.row.ucscDataLink}>{args.row.scientificName}</a>
+          },
+        },
         { key: 'taxonId', name: 'taxonId' },
-        { key: 'genArkClade', name: 'genArkClade' },
       ]}
       rows={sortedRows}
       enableVirtualization={false}

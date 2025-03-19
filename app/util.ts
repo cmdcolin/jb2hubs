@@ -24,7 +24,11 @@ export function getLines(data: string) {
         commonName: commonName || '',
         taxonId: taxonId || '',
         genArkClade: genArkClade || '',
-        jbrowseLink: `https://jbrowse.org/code/jb2/main/?config=/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`,
+        jbrowseLink: `https://jbrowse.org/code/jb2/main/?config=/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
+        ncbiLink: `https://www.ncbi.nlm.nih.gov/assembly/${accession}`,
+        ucscDataLink: `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/`,
+        ucscBrowserLink: `https://genome.ucsc.edu/h/${accession}`,
+        ncbiName: `${accession}_${assembly}`,
       }
     })
 }
