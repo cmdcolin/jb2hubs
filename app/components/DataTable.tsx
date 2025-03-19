@@ -18,6 +18,7 @@ interface LineData {
   ncbiName: string
   ucscDataLink: string
   ucscBrowserLink: string
+  igvBrowserLink: string
 }
 
 interface DataTableProps {
@@ -183,6 +184,13 @@ export function DataTable({ rows }: DataTableProps) {
                         rel="noopener noreferrer"
                       >
                         [UCSC]
+                      </a>{' '}
+                      <a
+                        target="_blank"
+                        href={row.igvBrowserLink}
+                        rel="noopener noreferrer"
+                      >
+                        [IGV]
                       </a>
                     </span>
                   </div>

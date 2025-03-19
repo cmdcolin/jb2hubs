@@ -16,6 +16,7 @@ export function getLines(data: string) {
 
       const [base, rest] = accession.split('_')
       const [b1, b2, b3] = rest.match(/.{1,3}/g)!
+      const ucscBase = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}`
 
       return {
         accession: accession || '',
@@ -26,8 +27,9 @@ export function getLines(data: string) {
         genArkClade: genArkClade || '',
         jbrowseLink: `http://jbrowse.org/code/jb2/refnamealias_header_name/?config=https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
         ncbiLink: `https://www.ncbi.nlm.nih.gov/assembly/${accession}`,
-        ucscDataLink: `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/`,
+        ucscDataLink: ucscBase,
         ucscBrowserLink: `https://genome.ucsc.edu/h/${accession}`,
+        igvBrowserLink: `https://igv.org/app/?hubURL=${ucscBase}/hub.txt`,
         ncbiName: `${accession}_${assembly}`,
       }
     })
@@ -48,6 +50,7 @@ export function parseAssembliesListJson(data: { data: any }) {
       const accession = genBank || refSeq
       const [base, rest] = accession.split('_')
       const [b1, b2, b3] = rest.match(/.{1,3}/g)!
+      const ucscBase = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}`
       return {
         accession: accession || '',
         assembly: asmId || '',
@@ -56,8 +59,9 @@ export function parseAssembliesListJson(data: { data: any }) {
         taxonId: taxId || '',
         jbrowseLink: `http://jbrowse.org/code/jb2/refnamealias_header_name/?config=https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
         ncbiLink: `https://www.ncbi.nlm.nih.gov/assembly/${accession}`,
-        ucscDataLink: `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/`,
+        ucscDataLink: ucscBase,
         ucscBrowserLink: `https://genome.ucsc.edu/h/${accession}`,
+        igvBrowserLink: `https://igv.org/app/?hubURL=${ucscBase}/hub.txt`,
         ncbiName: `${accession}_${asmId}`,
       }
     },
