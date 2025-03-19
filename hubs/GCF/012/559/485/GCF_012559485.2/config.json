@@ -1,0 +1,923 @@
+{
+  "assemblies": [
+    {
+      "name": "GCF_012559485.2",
+      "displayName": "crab-eating macaque CE1976F Keio U/RIKEN 2021",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCF_012559485.2",
+          "taxId": "9541",
+          "groups": "groups.txt",
+          "description": "crab-eating macaque CE1976F Keio U/RIKEN 2021",
+          "twoBitPath": "GCF_012559485.2.2bit",
+          "twoBitBptUrl": "GCF_012559485.2.2bit.bpt",
+          "chromSizes": "GCF_012559485.2.chrom.sizes.txt",
+          "chromAliasBb": "GCF_012559485.2.chromAlias.bb",
+          "chromAuthority": "ucsc",
+          "organism": "MFA1912RKSv2 Oct. 2021",
+          "defaultPos": "NC_052255.1:73990210-74000210",
+          "scientificName": "Macaca fascicularis",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.description.html\">html/GCF_012559485.2_MFA1912RKSv2.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/012/559/485/GCF_012559485.2",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/012/559/485/GCF_012559485.2",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/012/559/485/GCF_012559485.2",
+          "liftOver.GCF_002880755.1": "liftOver/GCF_012559485.2ToGCF_002880755.1.over.chain.gz",
+          "liftOver.hg38": "liftOver/GCF_012559485.2ToHg38.over.chain.gz"
+        },
+        "trackId": "GCF_012559485.2-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/GCF_012559485.2.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/GCF_012559485.2.chrom.sizes.txt"
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/GCF_012559485.2.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.assembly\">html/GCF_012559485.2_MFA1912RKSv2.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_012559485.2_MFA1912RKSv2.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1754552305",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.cytoBand.bb"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1169519268",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.gc5Base\">html/GCF_012559485.2_MFA1912RKSv2.gc5Base</a>"
+      },
+      "category": ["map"],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-587261786",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-489699192",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.rmsk.bb",
+        "xrefDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.rmsk.align.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.repeatMasker\">html/GCF_012559485.2_MFA1912RKSv2.repeatMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.rmsk.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1233374501",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.simpleRepeat\">html/GCF_012559485.2_MFA1912RKSv2.simpleRepeat</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--397798039",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeq",
+        "parent": "refSeqComposite on",
+        "color": "12,12,120",
+        "shortLabel": "RefSeq All",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeq.ix",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeq.bb",
+        "longLabel": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "1"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq All",
+      "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeq.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1573671904",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqCurated",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Curated",
+        "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqCurated.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqCurated.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "2"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Curated",
+      "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqCurated.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1184188391",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPredicted",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Predicted",
+        "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqPredicted.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqPredicted.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "3"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Predicted",
+      "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqPredicted.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--12691792",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqOther",
+        "color": "32,32,32",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Other",
+        "longLabel": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+        "priority": "4",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqOther.ix",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqOther.bb",
+        "type": "bigBed 12 +",
+        "labelFields": "name",
+        "skipEmptyFields": "on",
+        "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Other",
+      "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.ncbiRefSeqOther.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1071217627",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPsl",
+        "priority": "5",
+        "parent": "refSeqComposite off",
+        "shortLabel": "RefSeq Alignments",
+        "longLabel": "RefSeq Alignments of RNAs",
+        "type": "bigPsl",
+        "searchIndex": "name",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.bigPsl.bb",
+        "indelDoubleInsert": "on",
+        "indelQueryInsert": "on",
+        "showDiffBasesAllScales": ".",
+        "showDiffBasesMaxZoom": "10000.0",
+        "showCdsMaxZoom": "10000.0",
+        "showCdsAllScales": ".",
+        "baseColorDefault": "diffCodons",
+        "pslSequence": "no",
+        "baseColorUseSequence": "lfExtra",
+        "baseColorUseCds": "table given",
+        "color": "0,0,0"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Alignments",
+      "description": "RefSeq Alignments of RNAs",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.bigPsl.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--604152596",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.cpgIslandExt.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1719801033",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.cpgIslandExtUnmasked.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1642071784",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.windowMasker\">html/GCF_012559485.2_MFA1912RKSv2.windowMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1932608497",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.allGaps\">html/GCF_012559485.2_MFA1912RKSv2.allGaps</a>"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--536805417",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "dense",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.augustus\">html/GCF_012559485.2_MFA1912RKSv2.augustus</a>"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1072543281",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_012559485.2_MFA1912RKSv2.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.xenoRefGene\">html/GCF_012559485.2_MFA1912RKSv2.xenoRefGene</a>"
+      },
+      "category": ["rna"],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1003601585",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainHg38",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewchain on",
+        "subGroups": "view=chain species=s000 chainType=c00",
+        "shortLabel": "Human/hg38 Chain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainHg38.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "12.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 Chain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1787948873",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynHg38",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s000 chainType=c01",
+        "shortLabel": "Human/hg38 synChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainSynHg38.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainSynHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "12.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 synChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainSynHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-123011966",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestHg38",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s000 chainType=c02",
+        "shortLabel": "Human/hg38 rbChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainRBestHg38.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainRBestHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "12.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 rbChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainRBestHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1713420661",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverHg38",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s000 chainType=c03",
+        "shortLabel": "Human/hg38 loChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainLiftOverHg38.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainLiftOverHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "12.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 loChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainLiftOverHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--129108050",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_002880755.1",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewchain off",
+        "subGroups": "view=chain species=s001 chainType=c00",
+        "shortLabel": "chimpanzee Chain",
+        "longLabel": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+        "type": "bigChain GCF_002880755.1",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainGCF_002880755.1.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainGCF_002880755.1Link.bb",
+        "otherDb": "GCF_002880755.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "13.175"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "chimpanzee Chain",
+      "description": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainGCF_002880755.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--544661373",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_002880755.1",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s001 chainType=c01",
+        "shortLabel": "chimpanzee synChain",
+        "longLabel": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+        "type": "bigChain GCF_002880755.1",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainSynGCF_002880755.1.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainSynGCF_002880755.1Link.bb",
+        "otherDb": "GCF_002880755.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "13.175"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "chimpanzee synChain",
+      "description": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainSynGCF_002880755.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1381936690",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_002880755.1",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s001 chainType=c02",
+        "shortLabel": "chimpanzee rbChain",
+        "longLabel": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+        "type": "bigChain GCF_002880755.1",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainRBestGCF_002880755.1.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainRBestGCF_002880755.1Link.bb",
+        "otherDb": "GCF_002880755.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "13.175"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "chimpanzee rbChain",
+      "description": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainRBestGCF_002880755.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1960266165",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_002880755.1",
+        "parent": "GCF_012559485.2_MFA1912RKSv2ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s001 chainType=c03",
+        "shortLabel": "chimpanzee loChain",
+        "longLabel": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+        "type": "bigChain GCF_002880755.1",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainLiftOverGCF_002880755.1.bb",
+        "linkDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.chainLiftOverGCF_002880755.1Link.bb",
+        "otherDb": "GCF_002880755.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "13.175"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "chimpanzee loChain",
+      "description": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.chainLiftOverGCF_002880755.1.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2053754990",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "netHg38",
+        "parent": "GCF_012559485.2_MFA1912RKSv2MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c04",
+        "shortLabel": "Human/hg38 mafNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.hg38.net.bb",
+        "summary": "bbi/GCF_012559485.2_MFA1912RKSv2.hg38.net.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "12.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 mafNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.hg38.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--84503890",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "synNetHg38",
+        "parent": "GCF_012559485.2_MFA1912RKSv2MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c05",
+        "shortLabel": "Human/hg38 synNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.hg38.synNet.bb",
+        "summary": "bbi/GCF_012559485.2_MFA1912RKSv2.hg38.synNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "12.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 synNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.hg38.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--70340823",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetHg38",
+        "parent": "GCF_012559485.2_MFA1912RKSv2MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c06",
+        "shortLabel": "Human/hg38 rbestNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.hg38.rbestNet.bb",
+        "summary": "bbi/GCF_012559485.2_MFA1912RKSv2.hg38.rbestNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "12.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 rbestNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.hg38.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1715728874",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "netGCF_002880755.1",
+        "parent": "GCF_012559485.2_MFA1912RKSv2MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c04",
+        "shortLabel": "chimpanzee mafNet",
+        "longLabel": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.net.bb",
+        "summary": "bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.net.summary.bb",
+        "speciesOrder": "GCF_002880755.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "13.175"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "chimpanzee mafNet",
+      "description": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-153794363",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_002880755.1",
+        "parent": "GCF_012559485.2_MFA1912RKSv2MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c05",
+        "shortLabel": "chimpanzee synNet",
+        "longLabel": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.synNet.bb",
+        "summary": "bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.synNet.summary.bb",
+        "speciesOrder": "GCF_002880755.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "13.175"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "chimpanzee synNet",
+      "description": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--841727554",
+      "assemblyNames": ["GCF_012559485.2"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_002880755.1",
+        "parent": "GCF_012559485.2_MFA1912RKSv2MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c06",
+        "shortLabel": "chimpanzee rbestNet",
+        "longLabel": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.rbestNet.bb",
+        "summary": "bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_002880755.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/html/GCF_012559485.2_MFA1912RKSv2.chainNet\">html/GCF_012559485.2_MFA1912RKSv2.chainNet</a>",
+        "priority": "13.175"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "chimpanzee rbestNet",
+      "description": "chimpanzee/GCF_002880755.1_Clint_PTRv2 (2018-01-19) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/012/559/485/GCF_012559485.2/bbi/GCF_012559485.2_MFA1912RKSv2.GCF_002880755.1.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--723893533",
+      "assemblyNames": ["GCF_012559485.2"]
+    }
+  ]
+}

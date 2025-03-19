@@ -13,7 +13,7 @@ import {
   resolve,
 } from './util.ts'
 
-export function generateTracks({
+export function generateHubTracks({
   trackDb,
   trackDbLoc,
   assemblyName,
@@ -36,12 +36,12 @@ export function generateTracks({
     .map(([trackName, track]) => {
       const { data } = track
       if (Object.keys(data).some(key => parentTrackKeys.has(key))) {
-        return undefined
+        return
       } else {
         const parentTracks = []
         let currentTrackName = trackName
         do {
-          currentTrackName = trackDb.data[currentTrackName]?.data.parent || ''
+          currentTrackName = trackDb.data[currentTrackName].data.parent || ''
           if (currentTrackName) {
             currentTrackName = currentTrackName.split(' ')[0]!
             parentTracks.push(trackDb.data[currentTrackName])
@@ -61,7 +61,7 @@ export function generateTracks({
           category: [
             track.data.group,
             ...parentTracks
-              .map(p => p?.data.group)
+              .map(p => p.data.group)
               .filter((f): f is string => !!f),
           ].filter(f => !!f),
           ...makeTrackConfig({
@@ -97,7 +97,7 @@ function makeTrackConfig({
   const parent = data.parent || ''
   const bigDataUrl = data.bigDataUrl || ''
   const bigDataIdx = data.bigDataIndex || ''
-  const trackType = data.type || trackDb.data[parent]?.data.type || ''
+  const trackType = data.type || trackDb.data[parent].data.type || ''
   const name =
     (data.shortLabel || '') + (bigDataUrl.includes('xeno') ? ' (xeno)' : '')
 
@@ -110,95 +110,102 @@ function makeTrackConfig({
     ? makeLoc(bigDataUrl, trackDbLoc)
     : makeLoc2(bigDataUrl)
 
-  if (baseTrackType === 'bam') {
-    return {
-      type: 'AlignmentsTrack',
-      name,
-      description: data.longLabel,
-      adapter: {
-        type: 'BamAdapter',
-        bamLocation: bigDataLocation,
-        index: {
-          location: isUri
-            ? makeLocAlt(bigDataIdx, `${bigDataUrl}.bai`, trackDbLoc)
-            : makeLoc2(bigDataIdx, `${bigDataUrl}.bai`),
+  switch (baseTrackType) {
+    case 'bam': {
+      return {
+        type: 'AlignmentsTrack',
+        name,
+        description: data.longLabel,
+        adapter: {
+          type: 'BamAdapter',
+          bamLocation: bigDataLocation,
+          index: {
+            location: isUri
+              ? makeLocAlt(bigDataIdx, `${bigDataUrl}.bai`, trackDbLoc)
+              : makeLoc2(bigDataIdx, `${bigDataUrl}.bai`),
+          },
         },
-      },
+      }
     }
-  } else if (baseTrackType === 'cram') {
-    return {
-      type: 'AlignmentsTrack',
-      name,
-      description: data.longLabel,
-      adapter: {
-        type: 'CramAdapter',
-        cramLocation: bigDataLocation,
-        craiLocation: isUri
-          ? makeLocAlt(bigDataIdx, `${bigDataUrl}.crai`, trackDbLoc)
-          : makeLoc2(bigDataIdx, `${bigDataUrl}.crai`),
-        sequenceAdapter,
-      },
-    }
-  } else if (baseTrackType === 'bigWig') {
-    return {
-      type: 'QuantitativeTrack',
-      name,
-      description: data.longLabel,
-      adapter: {
-        type: 'BigWigAdapter',
-        bigWigLocation: bigDataLocation,
-      },
-    }
-  } else if (baseTrackType.startsWith('big')) {
-    return {
-      type: 'FeatureTrack',
-      name,
-      description: data.longLabel,
-      adapter: {
-        type: 'BigBedAdapter',
-        bigBedLocation: bigDataLocation,
-      },
-    }
-  } else if (baseTrackType === 'vcfTabix') {
-    return {
-      type: 'VariantTrack',
-      name,
-      description: data.longLabel,
-      adapter: {
-        type: 'VcfTabixAdapter',
-        vcfGzLocation: bigDataLocation,
-        index: {
-          location: isUri
-            ? makeLocAlt(bigDataIdx, `${bigDataUrl}.tbi`, trackDbLoc)
-            : makeLoc2(bigDataIdx, `${bigDataUrl}.tbi`),
+    case 'cram': {
+      return {
+        type: 'AlignmentsTrack',
+        name,
+        description: data.longLabel,
+        adapter: {
+          type: 'CramAdapter',
+          cramLocation: bigDataLocation,
+          craiLocation: isUri
+            ? makeLocAlt(bigDataIdx, `${bigDataUrl}.crai`, trackDbLoc)
+            : makeLoc2(bigDataIdx, `${bigDataUrl}.crai`),
+          sequenceAdapter,
         },
-      },
+      }
     }
-  } else if (baseTrackType === 'hic') {
-    return {
-      type: 'HicTrack',
-      name,
-      description: data.longLabel,
-      adapter: {
-        type: 'HicAdapter',
-        hicLocation: bigDataLocation,
-      },
+    case 'bigWig': {
+      return {
+        type: 'QuantitativeTrack',
+        name,
+        description: data.longLabel,
+        adapter: {
+          type: 'BigWigAdapter',
+          bigWigLocation: bigDataLocation,
+        },
+      }
     }
-  } else {
-    // unsupported types
-    //     case 'peptideMapping':
-    //     case 'gvf':
-    //     case 'ld2':
-    //     case 'narrowPeak':
-    //     case 'wig':
-    //     case 'wigMaf':
-    //     case 'halSnake':
-    //     case 'bed':
-    //     case 'bed5FloatScore':
-    //     case 'bedGraph':
-    //     case 'bedRnaElements':
-    //     case 'broadPeak':
-    //     case 'coloredExon':
-    return generateUnknownTrackConf(name, baseTrackType)
+    default: {
+      if (baseTrackType.startsWith('big')) {
+        return {
+          type: 'FeatureTrack',
+          name,
+          description: data.longLabel,
+          adapter: {
+            type: 'BigBedAdapter',
+            bigBedLocation: bigDataLocation,
+          },
+        }
+      } else if (baseTrackType === 'vcfTabix') {
+        return {
+          type: 'VariantTrack',
+          name,
+          description: data.longLabel,
+          adapter: {
+            type: 'VcfTabixAdapter',
+            vcfGzLocation: bigDataLocation,
+            index: {
+              location: isUri
+                ? makeLocAlt(bigDataIdx, `${bigDataUrl}.tbi`, trackDbLoc)
+                : makeLoc2(bigDataIdx, `${bigDataUrl}.tbi`),
+            },
+          },
+        }
+      } else if (baseTrackType === 'hic') {
+        return {
+          type: 'HicTrack',
+          name,
+          description: data.longLabel,
+          adapter: {
+            type: 'HicAdapter',
+            hicLocation: bigDataLocation,
+          },
+        }
+      } else {
+        // unsupported types
+        //     case 'peptideMapping':
+        //     case 'gvf':
+        //     case 'ld2':
+        //     case 'narrowPeak':
+        //     case 'wig':
+        //     case 'wigMaf':
+        //     case 'halSnake':
+        //     case 'bed':
+        //     case 'bed5FloatScore':
+        //     case 'bedGraph':
+        //     case 'bedRnaElements':
+        //     case 'broadPeak':
+        //     case 'coloredExon':
+        return generateUnknownTrackConf(name, baseTrackType)
+      }
+    }
   }
 }

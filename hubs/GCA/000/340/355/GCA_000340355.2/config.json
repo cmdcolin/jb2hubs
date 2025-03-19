@@ -1,0 +1,625 @@
+{
+  "assemblies": [
+    {
+      "name": "GCA_000340355.2",
+      "displayName": "Leishmania braziliensis (MHOM/BR/75/M2903 2016 kinetoplastids)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCA_000340355.2",
+          "taxId": "1295825",
+          "groups": "groups.txt",
+          "description": "Leishmania braziliensis (MHOM/BR/75/M2903 2016 kinetoplastids)",
+          "twoBitPath": "GCA_000340355.2.2bit",
+          "twoBitBptUrl": "GCA_000340355.2.2bit.bpt",
+          "chromSizes": "GCA_000340355.2.chrom.sizes.txt",
+          "chromAliasBb": "GCA_000340355.2.chromAlias.bb",
+          "chromAuthority": "ucsc",
+          "organism": "Leishmania_braziliensis_M2903-1.0.6 Sep. 2016",
+          "defaultPos": "CM007313.1:963351-973351",
+          "scientificName": "Leishmania braziliensis MHOM/BR/75/M2903",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.description.html\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/340/355/GCA_000340355.2",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/340/355/GCA_000340355.2",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/340/355/GCA_000340355.2",
+          "liftOver.GCF_000002845.2": "liftOver/GCA_000340355.2ToGCF_000002845.2.over.chain.gz"
+        },
+        "trackId": "GCA_000340355.2-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/GCA_000340355.2.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/GCA_000340355.2.chrom.sizes.txt"
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/GCA_000340355.2.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.assembly\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--545418675",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "gap",
+        "longLabel": "AGP gap",
+        "shortLabel": "Gap (AGP defined)",
+        "visibility": "hide",
+        "color": "0,0,0",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gap.bb",
+        "type": "bigBed 4",
+        "group": "map",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gap\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gap</a>"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Gap (AGP defined)",
+      "description": "AGP gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1937290347",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.cytoBand.bb"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-18626860",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gc5Base\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gc5Base</a>"
+      },
+      "category": ["map"],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--596777164",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "gapOverlap",
+        "parent": "tanDups on",
+        "shortLabel": "Gap Overlaps",
+        "longLabel": "Paired exactly identical sequence on each side of a gap",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gapOverlap.bb",
+        "type": "bigBed 12"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Gap Overlaps",
+      "description": "Paired exactly identical sequence on each side of a gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.gapOverlap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-40513374",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1614716152",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.rmsk.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.repeatMasker\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.repeatMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.rmsk.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-788257485",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.simpleRepeat\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.simpleRepeat</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1317987317",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.cpgIslandExt.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-2083152769",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.cpgIslandExtUnmasked.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-803738102",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.windowMasker\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.windowMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--419468139",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.allGaps\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.allGaps</a>"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--27717575",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.augustus\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.augustus</a>"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-505809663",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.xenoRefGene\">html/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.xenoRefGene</a>"
+      },
+      "category": ["rna"],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-2057764687",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_000002845.2",
+        "parent": "chainNetGCF_000002845.2Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "kinetoplastids Chain",
+        "longLabel": "kinetoplastids (2016-09-30) Chained Alignments",
+        "type": "bigChain GCF_000002845.2",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainGCF_000002845.2.bb",
+        "linkDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainGCF_000002845.2Link.bb",
+        "priority": "1"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids Chain",
+      "description": "kinetoplastids (2016-09-30) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainGCF_000002845.2.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-520238257",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_000002845.2",
+        "parent": "chainNetGCF_000002845.2Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "kinetoplastids synChain",
+        "longLabel": "kinetoplastids (2016-09-30) Syntenic Chained Alignments",
+        "type": "bigChain GCF_000002845.2",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainSynGCF_000002845.2.bb",
+        "linkDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainSynGCF_000002845.2Link.bb",
+        "priority": "2"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids synChain",
+      "description": "kinetoplastids (2016-09-30) Syntenic Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainSynGCF_000002845.2.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--983734552",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_000002845.2",
+        "parent": "chainNetGCF_000002845.2Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "kinetoplastids rbChain",
+        "longLabel": "kinetoplastids (2016-09-30) Reciprocal Best Chained Alignments",
+        "type": "bigChain GCF_000002845.2",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainRBestGCF_000002845.2.bb",
+        "linkDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainRBestGCF_000002845.2Link.bb",
+        "priority": "3"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids rbChain",
+      "description": "kinetoplastids (2016-09-30) Reciprocal Best Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainRBestGCF_000002845.2.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-161422545",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_000002845.2",
+        "parent": "chainNetGCF_000002845.2Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "kinetoplastids loChain",
+        "longLabel": "kinetoplastids (2016-09-30) Lift Over Chained Alignments",
+        "type": "bigChain GCF_000002845.2",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainLiftOverGCF_000002845.2.bb",
+        "linkDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainLiftOverGCF_000002845.2Link.bb",
+        "priority": "4"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids loChain",
+      "description": "kinetoplastids (2016-09-30) Lift Over Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.chainLiftOverGCF_000002845.2.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1801281196",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "netGCF_000002845.2",
+        "parent": "mafNetGCF_000002845.2Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "kinetoplastids net",
+        "longLabel": "kinetoplastids (2016-09-30) Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.net.bb",
+        "summary": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.net.summary.bb",
+        "speciesOrder": "GCF_000002845.2",
+        "priority": "5"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids net",
+      "description": "kinetoplastids (2016-09-30) Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1222146364",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_000002845.2",
+        "parent": "mafNetGCF_000002845.2Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "kinetoplastids synNet",
+        "longLabel": "kinetoplastids (2016-09-30) Syntenic Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.synNet.bb",
+        "summary": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.synNet.summary.bb",
+        "speciesOrder": "GCF_000002845.2",
+        "priority": "6"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids synNet",
+      "description": "kinetoplastids (2016-09-30) Syntenic Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--717336633",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_000002845.2",
+        "parent": "mafNetGCF_000002845.2Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "kinetoplastids rbestNet",
+        "longLabel": "kinetoplastids (2016-09-30) Reciprocal Best Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.rbestNet.bb",
+        "summary": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.rbestNet.summary.bb",
+        "speciesOrder": "GCF_000002845.2",
+        "priority": "7"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids rbestNet",
+      "description": "kinetoplastids (2016-09-30) Reciprocal Best Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--42334192",
+      "assemblyNames": ["GCA_000340355.2"]
+    },
+    {
+      "metadata": {
+        "track": "liftOverNetGCF_000002845.2",
+        "parent": "mafNetGCF_000002845.2Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "kinetoplastids liftOverNet",
+        "longLabel": "kinetoplastids (2016-09-30) Lift Over Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.liftOverNet.bb",
+        "summary": "bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.liftOverNet.summary.bb",
+        "speciesOrder": "GCF_000002845.2",
+        "priority": "8"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "kinetoplastids liftOverNet",
+      "description": "kinetoplastids (2016-09-30) Lift Over Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/340/355/GCA_000340355.2/bbi/GCA_000340355.2_Leishmania_braziliensis_M2903-1.0.6.GCF_000002845.2.liftOverNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--265683285",
+      "assemblyNames": ["GCA_000340355.2"]
+    }
+  ]
+}

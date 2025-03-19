@@ -1,0 +1,970 @@
+{
+  "assemblies": [
+    {
+      "name": "GCF_000767855.1",
+      "displayName": "Bactrian camel (Alxa 2014 refseq)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCF_000767855.1",
+          "taxId": "9837",
+          "groups": "groups.txt",
+          "description": "Bactrian camel (Alxa 2014 refseq)",
+          "twoBitPath": "GCF_000767855.1.2bit",
+          "twoBitBptUrl": "GCF_000767855.1.2bit.bpt",
+          "chromSizes": "GCF_000767855.1.chrom.sizes.txt",
+          "chromAliasBb": "GCF_000767855.1.chromAlias.bb",
+          "organism": "Ca_bactrianus_MBC_1.0 Oct. 2014",
+          "defaultPos": "NW_011516269.1:15512961-15522961",
+          "scientificName": "Camelus bactrianus",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.description.html\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/767/855/GCF_000767855.1",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/767/855/GCF_000767855.1",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/767/855/GCF_000767855.1",
+          "liftOver.GCF_002263795.3": "liftOver/GCF_000767855.1ToGCF_002263795.3.over.chain.gz",
+          "liftOver.hg38": "liftOver/GCF_000767855.1ToHg38.over.chain.gz"
+        },
+        "trackId": "GCF_000767855.1-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/GCF_000767855.1.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/GCF_000767855.1.chrom.sizes.txt"
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/GCF_000767855.1.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.assembly\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000767855.1_Ca_bactrianus_MBC_1.0.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--817678394",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "gap",
+        "longLabel": "AGP gap",
+        "shortLabel": "Gap (AGP defined)",
+        "visibility": "hide",
+        "color": "0,0,0",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gap.bb",
+        "type": "bigBed 4",
+        "group": "map",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gap\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gap</a>"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Gap (AGP defined)",
+      "description": "AGP gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-415087803",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.cytoBand.bb"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-749175883",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gc5Base\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gc5Base</a>"
+      },
+      "category": ["map"],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1316870850",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "gapOverlap",
+        "parent": "tanDups on",
+        "shortLabel": "Gap Overlaps",
+        "longLabel": "Paired exactly identical sequence on each side of a gap",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gapOverlap.bb",
+        "type": "bigBed 12"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Gap Overlaps",
+      "description": "Paired exactly identical sequence on each side of a gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.gapOverlap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1334952701",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--294961753",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.rmsk.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.repeatMasker\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.repeatMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.rmsk.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1805071999",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.simpleRepeat\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.simpleRepeat</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-985027559",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeq",
+        "parent": "refSeqComposite on",
+        "color": "12,12,120",
+        "shortLabel": "RefSeq All",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeq.ix",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeq.bb",
+        "longLabel": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "1"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq All",
+      "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeq.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--2141683134",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqCurated",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Curated",
+        "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqCurated.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqCurated.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "2"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Curated",
+      "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqCurated.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-335080645",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPredicted",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Predicted",
+        "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+        "type": "bigGenePred",
+        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqPredicted.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqPredicted.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "3"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Predicted",
+      "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqPredicted.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--200891354",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqOther",
+        "color": "32,32,32",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Other",
+        "longLabel": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+        "priority": "4",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqOther.ix",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqOther.bb",
+        "type": "bigBed 12 +",
+        "labelFields": "name",
+        "skipEmptyFields": "on",
+        "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Other",
+      "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.ncbiRefSeqOther.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1642082929",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPsl",
+        "priority": "5",
+        "parent": "refSeqComposite off",
+        "shortLabel": "RefSeq Alignments",
+        "longLabel": "RefSeq Alignments of RNAs",
+        "type": "bigPsl",
+        "searchIndex": "name",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.bigPsl.bb",
+        "indelDoubleInsert": "on",
+        "indelQueryInsert": "on",
+        "showDiffBasesAllScales": ".",
+        "showDiffBasesMaxZoom": "10000.0",
+        "showCdsMaxZoom": "10000.0",
+        "showCdsAllScales": ".",
+        "baseColorDefault": "diffCodons",
+        "pslSequence": "no",
+        "baseColorUseSequence": "lfExtra",
+        "baseColorUseCds": "table given",
+        "color": "0,0,0"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "RefSeq Alignments",
+      "description": "RefSeq Alignments of RNAs",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.bigPsl.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--534784751",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.cpgIslandExt.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--568793330",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.cpgIslandExtUnmasked.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-2057814165",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.windowMasker\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.windowMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-840670279",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.allGaps\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.allGaps</a>"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1649908807",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "dense",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.augustus\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.augustus</a>"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--643233115",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000767855.1_Ca_bactrianus_MBC_1.0.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.xenoRefGene\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.xenoRefGene</a>"
+      },
+      "category": ["rna"],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1045138268",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_002263795.3",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewchain on",
+        "subGroups": "view=chain species=s000 chainType=c00",
+        "shortLabel": "cattle Chain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "23.124"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "cattle Chain",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainGCF_002263795.3.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1724771883",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_002263795.3",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s000 chainType=c01",
+        "shortLabel": "cattle synChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainSynGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainSynGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "23.124"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "cattle synChain",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainSynGCF_002263795.3.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1413780100",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_002263795.3",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s000 chainType=c02",
+        "shortLabel": "cattle rbChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainRBestGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainRBestGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "23.124"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "cattle rbChain",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainRBestGCF_002263795.3.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1503737827",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_002263795.3",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s000 chainType=c03",
+        "shortLabel": "cattle loChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainLiftOverGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainLiftOverGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "23.124"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "cattle loChain",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainLiftOverGCF_002263795.3.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-219993998",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainHg38",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s001 chainType=c00",
+        "shortLabel": "Human/hg38 Chain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainHg38.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "29.276"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 Chain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--803231780",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynHg38",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s001 chainType=c01",
+        "shortLabel": "Human/hg38 synChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainSynHg38.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainSynHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "29.276"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 synChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainSynHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--197866291",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestHg38",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s001 chainType=c02",
+        "shortLabel": "Human/hg38 rbChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainRBestHg38.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainRBestHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "29.276"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 rbChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainRBestHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1249575016",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverHg38",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s001 chainType=c03",
+        "shortLabel": "Human/hg38 loChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainLiftOverHg38.bb",
+        "linkDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainLiftOverHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "29.276"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 loChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainLiftOverHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-92096457",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "netGCF_002263795.3",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c04",
+        "shortLabel": "cattle mafNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.net.bb",
+        "summary": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.net.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "23.124"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "cattle mafNet",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1465666574",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_002263795.3",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c05",
+        "shortLabel": "cattle synNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.synNet.bb",
+        "summary": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.synNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "23.124"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "cattle synNet",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1728854369",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_002263795.3",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c06",
+        "shortLabel": "cattle rbestNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.rbestNet.bb",
+        "summary": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.rbestNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "23.124"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "cattle rbestNet",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.GCF_002263795.3.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-787314988",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "netHg38",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c04",
+        "shortLabel": "Human/hg38 mafNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.net.bb",
+        "summary": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.net.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "29.276"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 mafNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1063200177",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "synNetHg38",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c05",
+        "shortLabel": "Human/hg38 synNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.synNet.bb",
+        "summary": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.synNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "29.276"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 synNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--338726612",
+      "assemblyNames": ["GCF_000767855.1"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetHg38",
+        "parent": "GCF_000767855.1_Ca_bactrianus_MBC_1.0MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c06",
+        "shortLabel": "Human/hg38 rbestNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.rbestNet.bb",
+        "summary": "bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.rbestNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet\">html/GCF_000767855.1_Ca_bactrianus_MBC_1.0.chainNet</a>",
+        "priority": "29.276"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 rbestNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/767/855/GCF_000767855.1/bbi/GCF_000767855.1_Ca_bactrianus_MBC_1.0.hg38.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-2025189871",
+      "assemblyNames": ["GCF_000767855.1"]
+    }
+  ]
+}

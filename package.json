@@ -7,19 +7,23 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "deploy": "gh-pages -d out --nojekyll",
+    "format": "prettier --write .",
     "predeploy": "yarn build"
   },
   "dependencies": {
     "@gmod/ucsc-hub": "^1.0.0",
     "@jbrowse/core": "^3.1.0",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "eslint-plugin-unicorn": "^57.0.0",
     "gh-pages": "^6.3.0",
     "nanoid": "^5.1.5",
     "next": "15.2.3",
     "prettier": "^3.5.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "typescript-eslint": "^8.26.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.0.0",

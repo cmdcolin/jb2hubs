@@ -3,9 +3,10 @@
 import { useMemo, useState } from 'react'
 
 import styles from '../page.module.css'
+import './table.css'
 
 // Define the type for our data
-type LineData = {
+interface LineData {
   accession: string
   assembly: string
   scientificName: string
@@ -19,13 +20,13 @@ type LineData = {
   ucscBrowserLink: string
 }
 
-type DataTableProps = {
+interface DataTableProps {
   rows: LineData[]
 }
 
 type FilterOption = 'all' | 'refseq' | 'genbank'
 
-type SortColumn = {
+interface SortColumn {
   columnKey: string
   direction: 'ASC' | 'DESC'
 }
@@ -51,8 +52,8 @@ export function DataTable({ rows }: DataTableProps) {
 
     return [...filteredRows].sort((a, b) => {
       for (const sort of sortColumns) {
-        const aValue = a[sort.columnKey as keyof LineData] as string
-        const bValue = b[sort.columnKey as keyof LineData] as string
+        const aValue = a[sort.columnKey as keyof LineData]
+        const bValue = b[sort.columnKey as keyof LineData]
         const compResult = aValue.localeCompare(bValue)
         if (compResult !== 0) {
           return sort.direction === 'ASC' ? compResult : -compResult
@@ -82,7 +83,9 @@ export function DataTable({ rows }: DataTableProps) {
   // Helper to determine sort indicator
   const getSortIndicator = (columnKey: string) => {
     const sortColumn = sortColumns.find(col => col.columnKey === columnKey)
-    if (!sortColumn) return null
+    if (!sortColumn) {
+      return null
+    }
     return sortColumn.direction === 'ASC' ? '↑' : '↓'
   }
 
@@ -95,7 +98,9 @@ export function DataTable({ rows }: DataTableProps) {
             name="databaseFilter"
             value="all"
             checked={filterOption === 'all'}
-            onChange={() => setFilterOption('all')}
+            onChange={() => {
+              setFilterOption('all')
+            }}
           />{' '}
           All
         </label>
@@ -105,7 +110,9 @@ export function DataTable({ rows }: DataTableProps) {
             name="databaseFilter"
             value="refseq"
             checked={filterOption === 'refseq'}
-            onChange={() => setFilterOption('refseq')}
+            onChange={() => {
+              setFilterOption('refseq')
+            }}
           />{' '}
           RefSeq only
         </label>
@@ -115,7 +122,9 @@ export function DataTable({ rows }: DataTableProps) {
             name="databaseFilter"
             value="genbank"
             checked={filterOption === 'genbank'}
-            onChange={() => setFilterOption('genbank')}
+            onChange={() => {
+              setFilterOption('genbank')
+            }}
           />{' '}
           GenBank only
         </label>
@@ -126,29 +135,29 @@ export function DataTable({ rows }: DataTableProps) {
           <thead>
             <tr>
               <th
-                onClick={() => handleSort('commonName')}
+                onClick={() => {
+                  handleSort('commonName')
+                }}
                 style={{ cursor: 'pointer' }}
               >
                 Common Name {getSortIndicator('commonName')}
               </th>
               <th
-                onClick={() => handleSort('accession')}
+                onClick={() => {
+                  handleSort('accession')
+                }}
                 style={{ cursor: 'pointer' }}
               >
-                Accession {getSortIndicator('accession')}
+                Accession and link to NCBI {getSortIndicator('accession')}
               </th>
               <th
-                onClick={() => handleSort('scientificName')}
+                onClick={() => {
+                  handleSort('scientificName')
+                }}
                 style={{ cursor: 'pointer' }}
               >
                 Scientific Name and Data Download{' '}
                 {getSortIndicator('scientificName')}
-              </th>
-              <th
-                onClick={() => handleSort('taxonId')}
-                style={{ cursor: 'pointer' }}
-              >
-                Taxon ID {getSortIndicator('taxonId')}
               </th>
             </tr>
           </thead>
@@ -188,15 +197,19 @@ export function DataTable({ rows }: DataTableProps) {
                   </a>
                 </td>
                 <td>
-                  <a
-                    target="_blank"
-                    href={row.ucscDataLink}
-                    rel="noopener noreferrer"
+                  <div
+                    style={{ display: 'flex', justifyContent: 'space-between' }}
                   >
-                    {row.scientificName}
-                  </a>
+                    <a
+                      target="_blank"
+                      href={row.ucscDataLink}
+                      rel="noopener noreferrer"
+                    >
+                      {row.scientificName}
+                    </a>
+                    <div>(taxId:{row.taxonId})</div>
+                  </div>
                 </td>
-                <td>{row.taxonId}</td>
               </tr>
             ))}
           </tbody>

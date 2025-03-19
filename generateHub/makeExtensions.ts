@@ -1,6 +1,6 @@
 import { dedupe } from '@jbrowse/core/util/index.js'
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 
 const ret = fs.readdirSync('extensions')
 for (const item of ret) {

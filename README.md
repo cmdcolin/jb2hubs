@@ -8,3 +8,11 @@ https://cmdcolin.github.io/jb2hubs
 
 - [x] GenArk hubs
 - [ ] Non-GenArk UCSC species
+
+## Preparing hubs
+
+```bash
+
+
+./makeAll.sh
+```

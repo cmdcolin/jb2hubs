@@ -1,5 +1,5 @@
-import fs from 'fs'
-import readline from 'readline'
+import fs from 'node:fs'
+import readline from 'node:readline'
 import { myfetchtext } from './util.ts'
 
 const filePath = process.argv[2]
@@ -28,10 +28,10 @@ for await (const line of rl) {
     const url = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
     const hubTxt = await myfetchtext(url)
     const b = `hubs/${base}/${b1}/${b2}/${b3}/${accession}`
-    fs.mkdirSync(`${b}`, { recursive: true })
+    fs.mkdirSync(b, { recursive: true })
     fs.writeFileSync(`${b}/hub.txt`, hubTxt)
     fs.writeFileSync(
-      `${b}/meta.txt`,
+      `${b}/meta.json`,
       JSON.stringify({
         accession,
         assembly,

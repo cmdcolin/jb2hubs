@@ -1,0 +1,1015 @@
+{
+  "assemblies": [
+    {
+      "name": "GCA_011100615.1",
+      "displayName": "crab-eating macaque (2020 cy0333)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCA_011100615.1",
+          "taxId": "9541",
+          "groups": "groups.txt",
+          "description": "crab-eating macaque (2020 cy0333)",
+          "twoBitPath": "GCA_011100615.1.2bit",
+          "twoBitBptUrl": "GCA_011100615.1.2bit.bpt",
+          "chromSizes": "GCA_011100615.1.chrom.sizes.txt",
+          "chromAliasBb": "GCA_011100615.1.chromAlias.bb",
+          "chromAuthority": "ucsc",
+          "organism": "Macaca_fascicularis_6.0 Mar. 2020",
+          "defaultPos": "CM021939.1:74535435-74545435",
+          "scientificName": "Macaca fascicularis",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.description.html\">html/GCA_011100615.1_Macaca_fascicularis_6.0.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/011/100/615/GCA_011100615.1",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/011/100/615/GCA_011100615.1",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCA/011/100/615/GCA_011100615.1",
+          "liftOver.hg38": "liftOver/GCA_011100615.1ToHg38.over.chain.gz",
+          "liftOver.macFas5": "liftOver/GCA_011100615.1ToMacFas5.over.chain.gz",
+          "liftOver.mm39": "liftOver/GCA_011100615.1ToMm39.over.chain.gz"
+        },
+        "trackId": "GCA_011100615.1-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/GCA_011100615.1.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/GCA_011100615.1.chrom.sizes.txt"
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumn": 4,
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/GCA_011100615.1.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.assembly\">html/GCA_011100615.1_Macaca_fascicularis_6.0.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_011100615.1_Macaca_fascicularis_6.0.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.assembly.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-525137081",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "gap",
+        "longLabel": "AGP gap",
+        "shortLabel": "Gap (AGP defined)",
+        "visibility": "hide",
+        "color": "0,0,0",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.gap.bb",
+        "type": "bigBed 4",
+        "group": "map",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.gap\">html/GCA_011100615.1_Macaca_fascicularis_6.0.gap</a>"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Gap (AGP defined)",
+      "description": "AGP gap",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.gap.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1051234449",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.cytoBand.bb"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.cytoBand.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1675150871",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.gc5Base\">html/GCA_011100615.1_Macaca_fascicularis_6.0.gc5Base</a>"
+      },
+      "category": ["map"],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "bigWigLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.gc5Base.bw",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-786532668",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.tandemDups.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--841369293",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.rmsk.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.repeatMasker\">html/GCA_011100615.1_Macaca_fascicularis_6.0.repeatMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.rmsk.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1265106427",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.simpleRepeat\">html/GCA_011100615.1_Macaca_fascicularis_6.0.simpleRepeat</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.simpleRepeat.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1060448019",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.cpgIslandExt.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.cpgIslandExt.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-461706452",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.cpgIslandExtUnmasked.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.cpgIslandExtUnmasked.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1174471967",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.windowMasker\">html/GCA_011100615.1_Macaca_fascicularis_6.0.windowMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.windowMasker.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1084783885",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "allGaps",
+        "shortLabel": "All Gaps",
+        "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+        "group": "map",
+        "visibility": "hide",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.allGaps.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.allGaps\">html/GCA_011100615.1_Macaca_fascicularis_6.0.allGaps</a>"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "All Gaps",
+      "description": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.allGaps.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1126839487",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "augustus",
+        "shortLabel": "Augustus",
+        "longLabel": "Augustus Gene Predictions",
+        "group": "genes",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.augustus.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.augustus\">html/GCA_011100615.1_Macaca_fascicularis_6.0.augustus</a>"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "Augustus",
+      "description": "Augustus Gene Predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.augustus.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--292059465",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "xenoRefGene",
+        "shortLabel": "RefSeq mRNAs",
+        "longLabel": "RefSeq mRNAs mapped to this assembly",
+        "group": "rna",
+        "visibility": "pack",
+        "color": "180,0,0",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCA_011100615.1_Macaca_fascicularis_6.0.xenoRefGene.ix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.xenoRefGene\">html/GCA_011100615.1_Macaca_fascicularis_6.0.xenoRefGene</a>"
+      },
+      "category": ["rna"],
+      "type": "FeatureTrack",
+      "name": "RefSeq mRNAs (xeno)",
+      "description": "RefSeq mRNAs mapped to this assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.xenoRefGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1763373429",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "ensGene",
+        "shortLabel": "Ensembl genes",
+        "longLabel": "Ensembl genes 2020_08",
+        "group": "genes",
+        "priority": "40",
+        "visibility": "pack",
+        "color": "150,0,0",
+        "itemRgb": "on",
+        "type": "bigGenePred",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.ensGene.bb",
+        "searchTrix": "ixIxx/GCA_011100615.1_Macaca_fascicularis_6.0.ensGene.ix",
+        "searchIndex": "name",
+        "labelFields": "name,name2",
+        "defaultLabelFields": "name2",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "labelSeparator": "\" \"",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.ensGene\">html/GCA_011100615.1_Macaca_fascicularis_6.0.ensGene</a>"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "Ensembl genes",
+      "description": "Ensembl genes 2020_08",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.ensGene.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-695386924",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainMacFas5",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewchain on",
+        "subGroups": "view=chain species=s000 chainType=c00",
+        "shortLabel": "Crab-eating macaque/macFas5 Chain",
+        "longLabel": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+        "type": "bigChain macFas5",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainMacFas5.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainMacFas5Link.bb",
+        "otherDb": "macFas5",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "4.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Crab-eating macaque/macFas5 Chain",
+      "description": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainMacFas5.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-65092304",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynMacFas5",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s000 chainType=c01",
+        "shortLabel": "Crab-eating macaque/macFas5 synChain",
+        "longLabel": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+        "type": "bigChain macFas5",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynMacFas5.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynMacFas5Link.bb",
+        "otherDb": "macFas5",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "4.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Crab-eating macaque/macFas5 synChain",
+      "description": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynMacFas5.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-551134341",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestMacFas5",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s000 chainType=c02",
+        "shortLabel": "Crab-eating macaque/macFas5 rbChain",
+        "longLabel": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+        "type": "bigChain macFas5",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestMacFas5.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestMacFas5Link.bb",
+        "otherDb": "macFas5",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "4.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Crab-eating macaque/macFas5 rbChain",
+      "description": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestMacFas5.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--60217828",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverMacFas5",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s000 chainType=c03",
+        "shortLabel": "Crab-eating macaque/macFas5 loChain",
+        "longLabel": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+        "type": "bigChain macFas5",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverMacFas5.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverMacFas5Link.bb",
+        "otherDb": "macFas5",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "4.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Crab-eating macaque/macFas5 loChain",
+      "description": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverMacFas5.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1789570081",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainHg38",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s001 chainType=c00",
+        "shortLabel": "Human/hg38 Chain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainHg38.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "14.879"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 Chain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1252322283",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynHg38",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s001 chainType=c01",
+        "shortLabel": "Human/hg38 synChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynHg38.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "14.879"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 synChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1745833170",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestHg38",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s001 chainType=c02",
+        "shortLabel": "Human/hg38 rbChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestHg38.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "14.879"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 rbChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--628707985",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverHg38",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s001 chainType=c03",
+        "shortLabel": "Human/hg38 loChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverHg38.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "14.879"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 loChain",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverHg38.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--535559592",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainMm39",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s002 chainType=c00",
+        "shortLabel": "Mouse/mm39 Chain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainMm39.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "68.585"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Mouse/mm39 Chain",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-477423311",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynMm39",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s002 chainType=c01",
+        "shortLabel": "Mouse/mm39 synChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynMm39.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "68.585"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Mouse/mm39 synChain",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainSynMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-164338674",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestMm39",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s002 chainType=c02",
+        "shortLabel": "Mouse/mm39 rbChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestMm39.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "68.585"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Mouse/mm39 rbChain",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainRBestMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-691930003",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverMm39",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s002 chainType=c03",
+        "shortLabel": "Mouse/mm39 loChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverMm39.bb",
+        "linkDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "68.585"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Mouse/mm39 loChain",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.chainLiftOverMm39.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-949239868",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "netMacFas5",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c04",
+        "shortLabel": "Crab-eating macaque/macFas5 mafNet",
+        "longLabel": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.net.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.net.summary.bb",
+        "speciesOrder": "macFas5",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "4.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Crab-eating macaque/macFas5 mafNet",
+      "description": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--1234071021",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "synNetMacFas5",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c05",
+        "shortLabel": "Crab-eating macaque/macFas5 synNet",
+        "longLabel": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.synNet.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.synNet.summary.bb",
+        "speciesOrder": "macFas5",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "4.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Crab-eating macaque/macFas5 synNet",
+      "description": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1360023464",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetMacFas5",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c06",
+        "shortLabel": "Crab-eating macaque/macFas5 rbestNet",
+        "longLabel": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.rbestNet.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.rbestNet.summary.bb",
+        "speciesOrder": "macFas5",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "4.960"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Crab-eating macaque/macFas5 rbestNet",
+      "description": "Crab-eating macaque/macFas5/macFas5 (Jun. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.macFas5.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-715939013",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "netHg38",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c04",
+        "shortLabel": "Human/hg38 mafNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.net.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.net.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "14.879"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 mafNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--929670852",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "synNetHg38",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c05",
+        "shortLabel": "Human/hg38 synNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.synNet.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.synNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "14.879"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 synNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-167064805",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetHg38",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c06",
+        "shortLabel": "Human/hg38 rbestNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.rbestNet.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.rbestNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "14.879"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Human/hg38 rbestNet",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.hg38.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-774427304",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "netMm39",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s002 chainType=c04",
+        "shortLabel": "Mouse/mm39 mafNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.net.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.net.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "68.585"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Mouse/mm39 mafNet",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.net.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub--392847446",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "synNetMm39",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s002 chainType=c05",
+        "shortLabel": "Mouse/mm39 synNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.synNet.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.synNet.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "68.585"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Mouse/mm39 synNet",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.synNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-1857164859",
+      "assemblyNames": ["GCA_011100615.1"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetMm39",
+        "parent": "GCA_011100615.1_Macaca_fascicularis_6.0MafNetViewnet off",
+        "subGroups": "view=align species=s002 chainType=c06",
+        "shortLabel": "Mouse/mm39 rbestNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.rbestNet.bb",
+        "summary": "bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.rbestNet.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet\">html/GCA_011100615.1_Macaca_fascicularis_6.0.chainNet</a>",
+        "priority": "68.585"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "Mouse/mm39 rbestNet",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "bigBedLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/100/615/GCA_011100615.1/bbi/GCA_011100615.1_Macaca_fascicularis_6.0.mm39.rbestNet.bb",
+          "locationType": "UriLocation"
+        }
+      },
+      "trackId": "ucsc-trackhub-2085272574",
+      "assemblyNames": ["GCA_011100615.1"]
+    }
+  ]
+}

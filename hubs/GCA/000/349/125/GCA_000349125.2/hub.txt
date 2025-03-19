@@ -1,0 +1,186 @@
+hub GCA_000349125.2 genome assembly
+shortLabel mosquito A.albimanus (ALBI9_A 2017)
+longLabel mosquito A.albimanus (ALBI9_A 2017)/Anopheles albimanus/GCA_000349125.2_Anop_albi_ALBI9_A_V2 genome assembly
+useOneFile on
+email hclawson@ucsc.edu
+descriptionUrl html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.description.html
+
+genome GCA_000349125.2
+taxId 7167
+groups groups.txt
+description mosquito A.albimanus (ALBI9_A 2017)
+twoBitPath GCA_000349125.2.2bit
+twoBitBptUrl GCA_000349125.2.2bit.bpt
+chromSizes GCA_000349125.2.chrom.sizes.txt
+chromAliasBb GCA_000349125.2.chromAlias.bb
+chromAuthority ucsc
+organism Anop_albi_ALBI9_A_V2 Aug. 2017
+defaultPos CM008153.1:17267252-17277252
+scientificName Anopheles albimanus
+htmlPath html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/349/125/GCA_000349125.2
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/349/125/GCA_000349125.2
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCA/000/349/125/GCA_000349125.2
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.assembly.bb
+type bigBed 6
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.assembly
+searchIndex name
+searchTrix ixIxx/GCA_000349125.2_Anop_albi_ALBI9_A_V2.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track gap
+longLabel AGP gap
+shortLabel Gap (AGP defined)
+visibility hide
+color 0,0,0
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.gap.bb
+type bigBed 4
+group map
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.gap
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.gc5Base.bw
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.tanDups
+
+    track gapOverlap
+    parent tanDups on
+    shortLabel Gap Overlaps
+    longLabel Paired exactly identical sequence on each side of a gap
+    bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.gapOverlap.bb
+    type bigBed 12
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.tandemDups.bb
+    type bigBed 12
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.rmsk.bb
+maxWindowToDraw 5000000
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.repeatMasker
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.simpleRepeat.bb
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.simpleRepeat
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.windowMasker.bb
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.windowMasker
+
+track allGaps
+shortLabel All Gaps
+longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
+group map
+visibility hide
+type bigBed 3
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.allGaps.bb
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.allGaps
+
+track augustus
+shortLabel Augustus
+longLabel Augustus Gene Predictions
+group genes
+visibility pack
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.augustus.bb
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.augustus
+
+track xenoRefGene
+shortLabel RefSeq mRNAs
+longLabel RefSeq mRNAs mapped to this assembly
+group rna
+visibility pack
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_000349125.2_Anop_albi_ALBI9_A_V2.xenoRefGene.bb
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName
+searchIndex name
+searchTrix ixIxx/GCA_000349125.2_Anop_albi_ALBI9_A_V2.xenoRefGene.ix
+html html/GCA_000349125.2_Anop_albi_ALBI9_A_V2.xenoRefGene
+
