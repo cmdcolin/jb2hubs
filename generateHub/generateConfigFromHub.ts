@@ -51,6 +51,7 @@ export function generateConfigFromHub({
             refNameAliases: {
               adapter: {
                 type: 'RefNameAliasAdapter',
+                refNameColumn: 4,
                 uri: resolve(
                   genome.data.chromAliasBb.replace('.bb', '.txt'),
                   hubUri,
