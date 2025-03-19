@@ -1,10 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { DataGrid, type SortColumn } from 'react-data-grid'
 
 import styles from '../page.module.css'
-import 'react-data-grid/lib/styles.css'
 
 // Define the type for our data
 type LineData = {
@@ -25,8 +23,15 @@ type DataTableProps = {
   rows: LineData[]
 }
 
+type FilterOption = 'all' | 'refseq' | 'genbank'
+
+type SortColumn = {
+  columnKey: string
+  direction: 'ASC' | 'DESC'
+}
+
 export function DataTable({ rows }: DataTableProps) {
-  const [sortColumns, setSortColumns] = useState<readonly SortColumn[]>([])
+  const [sortColumns, setSortColumns] = useState<SortColumn[]>([])
   const [filterOption, setFilterOption] = useState<FilterOption>('all')
 
   const filteredRows = useMemo(() => {
@@ -46,8 +51,9 @@ export function DataTable({ rows }: DataTableProps) {
 
     return [...filteredRows].sort((a, b) => {
       for (const sort of sortColumns) {
-        // @ts-expect-error
-        const compResult = a[sort.columnKey].localeCompare(b[sort.columnKey])
+        const aValue = a[sort.columnKey as keyof LineData] as string
+        const bValue = b[sort.columnKey as keyof LineData] as string
+        const compResult = aValue.localeCompare(bValue)
         if (compResult !== 0) {
           return sort.direction === 'ASC' ? compResult : -compResult
         }
@@ -55,6 +61,31 @@ export function DataTable({ rows }: DataTableProps) {
       return 0
     })
   }, [filteredRows, sortColumns])
+
+  const handleSort = (columnKey: string) => {
+    const currentSortColumn = sortColumns[0]
+
+    if (currentSortColumn && currentSortColumn.columnKey === columnKey) {
+      // Toggle direction if already sorting by this column
+      setSortColumns([
+        {
+          columnKey,
+          direction: currentSortColumn.direction === 'ASC' ? 'DESC' : 'ASC',
+        },
+      ])
+    } else {
+      // Set new sort column with ASC direction
+      setSortColumns([{ columnKey, direction: 'ASC' }])
+    }
+  }
+
+  // Helper to determine sort indicator
+  const getSortIndicator = (columnKey: string) => {
+    const sortColumn = sortColumns.find(col => col.columnKey === columnKey)
+    if (!sortColumn) return null
+    return sortColumn.direction === 'ASC' ? '↑' : '↓'
+  }
+
   return (
     <>
       <div style={{ marginBottom: '10px' }}>
@@ -89,64 +120,88 @@ export function DataTable({ rows }: DataTableProps) {
           GenBank only
         </label>
       </div>
-      <DataGrid
-        sortColumns={sortColumns}
-        onSortColumnsChange={setSortColumns}
-        className={styles.fillGrid}
-        defaultColumnOptions={{
-          sortable: true,
-          resizable: true,
-        }}
-        columns={[
-          {
-            key: 'commonName',
-            name: 'commonName',
-            renderCell: args => {
-              return (
-                <>
-                  <span style={{ float: 'left' }}>{args.row.commonName}</span>
-                  <span style={{ float: 'right' }}>
-                    <a target="_blank" href={args.row.jbrowseLink}>
-                      [JBrowse]
-                    </a>{' '}
-                    <a target="_blank" href={args.row.ucscBrowserLink}>
-                      [UCSC]
-                    </a>
-                  </span>
-                </>
-              )
-            },
-          },
-          {
-            key: 'accession',
-            name: 'accession',
-            renderCell: args => {
-              return (
-                <a target="_blank" href={args.row.ncbiLink}>
-                  {args.row.ncbiName}
-                </a>
-              )
-            },
-          },
-          {
-            key: 'scientificName',
-            name: 'scientificName and data download',
-            renderCell: args => {
-              return (
-                <a target="_blank" href={args.row.ucscDataLink}>
-                  {args.row.scientificName}
-                </a>
-              )
-            },
-          },
-          {
-            key: 'taxonId',
-            name: 'taxonId',
-          },
-        ]}
-        rows={sortedRows}
-        enableVirtualization={false}
-      />
+
+      <div className={styles.tableContainer}>
+        <table className={styles.dataTable}>
+          <thead>
+            <tr>
+              <th
+                onClick={() => handleSort('commonName')}
+                style={{ cursor: 'pointer' }}
+              >
+                Common Name {getSortIndicator('commonName')}
+              </th>
+              <th
+                onClick={() => handleSort('accession')}
+                style={{ cursor: 'pointer' }}
+              >
+                Accession {getSortIndicator('accession')}
+              </th>
+              <th
+                onClick={() => handleSort('scientificName')}
+                style={{ cursor: 'pointer' }}
+              >
+                Scientific Name and Data Download{' '}
+                {getSortIndicator('scientificName')}
+              </th>
+              <th
+                onClick={() => handleSort('taxonId')}
+                style={{ cursor: 'pointer' }}
+              >
+                Taxon ID {getSortIndicator('taxonId')}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {sortedRows.map((row, index) => (
+              <tr key={index}>
+                <td>
+                  <div
+                    style={{ display: 'flex', justifyContent: 'space-between' }}
+                  >
+                    <span>{row.commonName}</span>
+                    <span>
+                      <a
+                        target="_blank"
+                        href={row.jbrowseLink}
+                        rel="noopener noreferrer"
+                      >
+                        [JBrowse]
+                      </a>{' '}
+                      <a
+                        target="_blank"
+                        href={row.ucscBrowserLink}
+                        rel="noopener noreferrer"
+                      >
+                        [UCSC]
+                      </a>
+                    </span>
+                  </div>
+                </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href={row.ncbiLink}
+                    rel="noopener noreferrer"
+                  >
+                    {row.ncbiName}
+                  </a>
+                </td>
+                <td>
+                  <a
+                    target="_blank"
+                    href={row.ucscDataLink}
+                    rel="noopener noreferrer"
+                  >
+                    {row.scientificName}
+                  </a>
+                </td>
+                <td>{row.taxonId}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </>
   )
 }
