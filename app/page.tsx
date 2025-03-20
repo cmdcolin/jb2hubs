@@ -1,13 +1,8 @@
 import Link from 'next/link'
 import './components/table.css'
-import { readJSON } from '@/generateHub/util'
+import { hubCategories } from '@/generateHub/hubCategories'
 
 export default function Home() {
-  const r = readJSON('hubCategories.json') as {
-    id: string
-    tag: string
-    description: string
-  }[]
   return (
     <div>
       <h1>JBrowse 2 browsers for UCSC GenArk hubs</h1>
@@ -26,7 +21,7 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {r
+          {hubCategories
             .filter(f => f.tag === 'main')
             .map(elt => (
               <tr>
@@ -51,7 +46,7 @@ export default function Home() {
           </tr>
         </thead>
         <tbody>
-          {r
+          {hubCategories
             .filter(f => f.tag !== 'main')
             .map(elt => (
               <tr>

@@ -2,28 +2,9 @@
 
 import { useMemo, useState } from 'react'
 
+import type { AssemblyData } from '../util'
+
 import './table.css'
-
-// Define the type for our data
-interface LineData {
-  accession: string
-  assembly: string
-  scientificName: string
-  commonName: string
-  taxonId: number
-  genArkClade: string
-  jbrowseLink: string
-  ncbiLink: string
-  ncbiName: string
-  ucscDataLink: string
-  ucscBrowserLink: string
-  igvBrowserLink: string
-  ncbiBrowserLink: string
-}
-
-interface DataTableProps {
-  rows: LineData[]
-}
 
 type FilterOption = 'all' | 'refseq' | 'genbank'
 
@@ -32,7 +13,7 @@ interface SortColumn {
   direction: 'ASC' | 'DESC'
 }
 
-export function DataTable({ rows }: DataTableProps) {
+export function DataTable({ rows }: { rows: AssemblyData[] }) {
   const [sortColumn, setSortColumn] = useState<SortColumn>()
   const [filterOption, setFilterOption] = useState<FilterOption>('all')
 
@@ -49,8 +30,8 @@ export function DataTable({ rows }: DataTableProps) {
   const sortedRows = useMemo(() => {
     return sortColumn
       ? filteredRows.toSorted((a, b) => {
-          const aValue = a[sortColumn.columnKey as keyof LineData]
-          const bValue = b[sortColumn.columnKey as keyof LineData]
+          const aValue = a[sortColumn.columnKey as keyof AssemblyData]
+          const bValue = b[sortColumn.columnKey as keyof AssemblyData]
           const compResult =
             typeof aValue === 'number'
               ? // @ts-expect-error
