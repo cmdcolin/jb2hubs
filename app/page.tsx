@@ -42,6 +42,7 @@ export default function Home() {
       </table>
 
       <h3>Projects</h3>
+      <p>collections below are subsets of the assemblies above</p>
       <table>
         <thead>
           <tr>
@@ -65,6 +66,12 @@ export default function Home() {
         </tbody>
       </table>
 
+      <p>To reference these resources in publications, please credit:</p>
+      <p>
+        Clawson, H., Lee, B.T., Raney, B.J. et al. GenArk: towards a million
+        UCSC genome browsers. Genome Biol 24, 217 (2023).
+        https://doi.org/10.1186/s13059-023-03057-x
+      </p>
       <div className="mt-20">
         Feel free to contact or report issues to{' '}
         <Link href="https://github.com/cmdcolin/jb2hubs/">Github</Link>

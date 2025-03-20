@@ -9,7 +9,9 @@ export default async function ({ title, raw }: { title: string; raw: string }) {
       <Link href="/">Home</Link>
       <h1>{title}</h1>
       <DataTable
-        rows={parseAssembliesListJson(readJSON(`hubJson/${raw}.json`))}
+        rows={parseAssembliesListJson(
+          readJSON(`${process.cwd()}/hubJson/${raw}.json`),
+        )}
       />
     </div>
   )
