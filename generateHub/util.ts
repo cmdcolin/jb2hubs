@@ -1,3 +1,4 @@
+import fs from 'node:fs'
 import { objectHash } from '@jbrowse/core/util/index.js'
 
 export function resolve(uri: string, baseUri: string | URL) {
@@ -52,4 +53,8 @@ export function generateUnknownTrackConf(
   }
   conf.trackId = objectHash(conf)
   return conf
+}
+
+export function readJSON(f: string) {
+  return JSON.parse(fs.readFileSync(f, 'utf8'))
 }

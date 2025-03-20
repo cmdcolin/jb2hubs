@@ -1,46 +1,57 @@
+import path from 'node:path'
 import fs from 'node:fs'
-import readline from 'node:readline'
-import { myfetchtext } from './util.ts'
+import { myfetchtext, readJSON } from './util.ts'
+import { dedupe } from '@jbrowse/core/util/dedupe.js'
 
-const filePath = process.argv[2]
+const entries = dedupe(
+  fs
+    .readdirSync('hubJson')
+    .map(file => readJSON(`hubJson/${file}`).data)
+    .flat(),
+  d => d.ucscBrowser,
+)
 
-const rl = readline.createInterface({
-  input: fs.createReadStream(filePath),
-})
-
-for await (const line of rl) {
-  if (line.startsWith('#')) {
-    continue
-  } else {
+for (const [idx, entry] of entries.entries()) {
+  try {
     await new Promise(resolve => setTimeout(resolve, 100))
-    const [
-      accession,
-      assembly,
-      scientificName,
-      commonName,
-      taxonId,
-      genArkClade,
-    ] = line.split('\t')
-    console.log('processing:', line)
+    const {
+      taxId,
+      asmId,
+      genBank,
+      refSeq,
+      identical,
+      sciName,
+      comName,
+      ucscBrowser,
+    } = entry
+    console.log(`processing ${idx}/${entries.length}:`, entry)
+    const ucscAcc = path.basename(ucscBrowser)
+    const accession = ucscAcc.startsWith('GC') ? ucscAcc : refSeq || genBank
     const [base, rest] = accession.split('_')
     const [b1, b2, b3] = rest.match(/.{1,3}/g)!
 
-    const url = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
-    const hubTxt = await myfetchtext(url)
+    const hubTxt = await myfetchtext(
+      `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`,
+    )
     const b = `hubs/${base}/${b1}/${b2}/${b3}/${accession}`
-    fs.mkdirSync(b, { recursive: true })
+    fs.mkdirSync(b, {
+      recursive: true,
+    })
     fs.writeFileSync(`${b}/hub.txt`, hubTxt)
     fs.writeFileSync(
       `${b}/meta.json`,
       JSON.stringify({
         accession,
-        assembly,
-        scientificName,
-        commonName,
-        taxonId,
-        genArkClade,
-        hubFileLocation: url,
+        assembly: asmId,
+        scientificName: sciName,
+        commonName: comName,
+        taxonId: taxId,
+        identical,
+        genBank,
+        refSeq,
       }),
     )
+  } catch (e) {
+    console.error(e)
   }
 }

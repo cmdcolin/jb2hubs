@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react'
 
-import styles from '../page.module.css'
 import './table.css'
 
 // Define the type for our data
@@ -46,7 +45,6 @@ export function DataTable({ rows }: DataTableProps) {
       return rows.filter(row => row.ncbiName.startsWith('GCA_'))
     }
   }, [rows, filterOption])
-  console.log({ filteredRows })
 
   const sortedRows = useMemo(() => {
     return sortColumn
@@ -127,8 +125,8 @@ export function DataTable({ rows }: DataTableProps) {
         </label>
       </div>
 
-      <div className={styles.tableContainer}>
-        <table className={styles.dataTable}>
+      <div>
+        <table>
           <thead>
             <tr>
               <th
@@ -185,7 +183,7 @@ export function DataTable({ rows }: DataTableProps) {
                     href={row.jbrowseLink}
                     rel="noopener noreferrer"
                   >
-                    [JBrowse]
+                    JBrowse
                   </a>{' '}
                 </td>
                 <td>
@@ -194,7 +192,7 @@ export function DataTable({ rows }: DataTableProps) {
                     href={row.ucscBrowserLink}
                     rel="noopener noreferrer"
                   >
-                    [UCSC]
+                    UCSC
                   </a>
                 </td>
                 <td>
@@ -203,7 +201,7 @@ export function DataTable({ rows }: DataTableProps) {
                     href={row.igvBrowserLink}
                     rel="noopener noreferrer"
                   >
-                    [IGV]
+                    IGV
                   </a>
                 </td>
                 <td>
@@ -212,7 +210,7 @@ export function DataTable({ rows }: DataTableProps) {
                     href={row.ncbiBrowserLink}
                     rel="noopener noreferrer"
                   >
-                    [NCBI]
+                    NCBI
                   </a>
                 </td>
 
