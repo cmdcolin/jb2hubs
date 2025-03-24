@@ -3,7 +3,13 @@ import { DataTable } from '../components/DataTable'
 import { parseAssembliesListJson } from '../util'
 import { readJSON } from '@/generateHub/util'
 
-export default async function ({ title, raw }: { title: string; raw: string }) {
+export default async function Page({
+  title,
+  raw,
+}: {
+  title: string
+  raw: string
+}) {
   return (
     <div>
       <Link href="/">Home</Link>

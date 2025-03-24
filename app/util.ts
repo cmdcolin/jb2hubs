@@ -6,7 +6,6 @@ function parseAssemblyEntry({
   asmId,
   genBank,
   refSeq,
-  identical,
   sciName,
   comName,
   ucscBrowser,
