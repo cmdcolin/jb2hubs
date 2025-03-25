@@ -12,6 +12,7 @@ interface SortColumn {
   columnKey: string
   direction: 'ASC' | 'DESC'
 }
+const statusOrder = ['Complete genome', 'Chromosome', 'Scaffold', 'Contig']
 
 export function DataTable({ rows }: { rows: AssemblyData[] }) {
   const [sortColumn, setSortColumn] = useState<SortColumn>()
@@ -31,13 +32,27 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
   const sortedRows = useMemo(() => {
     return sortColumn
       ? filteredRows.toSorted((a, b) => {
-          const aValue = a[sortColumn.columnKey as keyof AssemblyData]
-          const bValue = b[sortColumn.columnKey as keyof AssemblyData]
-          const compResult =
-            typeof aValue === 'number'
-              ? aValue - bValue
-              : aValue.localeCompare(bValue)
-          return sortColumn.direction === 'ASC' ? compResult : -compResult
+          // Special handling for assemblyStatus column
+          const flipper = sortColumn.direction === 'ASC' ? 1 : -1
+          if (sortColumn.columnKey === 'assemblyStatus') {
+            const aStatus = a.assemblyStatus || ''
+            const bStatus = b.assemblyStatus || ''
+
+            // Get the index of each status in our custom order
+            const aIndex = statusOrder.indexOf(aStatus)
+            const bIndex = statusOrder.indexOf(bStatus)
+            return (aIndex - bIndex) * flipper
+          } else {
+            // Default sorting for other columns
+            const aValue = a[sortColumn.columnKey as keyof AssemblyData]
+            const bValue = b[sortColumn.columnKey as keyof AssemblyData]
+            return (
+              (typeof aValue === 'number'
+                ? aValue - bValue
+                : String(aValue || '').localeCompare(String(bValue || ''))) *
+              flipper
+            )
+          }
         })
       : filteredRows
   }, [filteredRows, sortColumn])
@@ -59,7 +74,6 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
         })
       }
     } else {
-      // Set new sort column with ASC direction
       setSortColumn({ columnKey, direction: 'ASC' })
     }
   }
@@ -87,7 +101,7 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
     { field: 'assemblyStatus', title: 'Assembly status', sortable: true },
     {
       field: 'submitterOrg',
-      title: 'Submitter org',
+      title: 'Submitter',
       sortable: false,
       extra: true,
     },
