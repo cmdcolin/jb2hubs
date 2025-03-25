@@ -13,7 +13,6 @@ const entries = dedupe(
 
 for (const [idx, entry] of entries.entries()) {
   try {
-    await new Promise(resolve => setTimeout(resolve, 100))
     const {
       taxId,
       asmId,
@@ -24,22 +23,35 @@ for (const [idx, entry] of entries.entries()) {
       comName,
       ucscBrowser,
     } = entry
-    console.log(`processing ${idx}/${entries.length}:`, entry)
     const ucscAcc = path.basename(ucscBrowser)
     const accession = ucscAcc.startsWith('GC') ? ucscAcc : refSeq || genBank
     const [base, rest] = accession.split('_')
     const [b1, b2, b3] = rest.match(/.{1,3}/g)!
 
+    const b = `hubs/${base}/${b1}/${b2}/${b3}/${accession}`
+    const metaFile = `${b}/meta.json`
+    const hubFile = `${b}/hub.txt`
+
+    console.log(`Processing ${idx}/${entries.length}:`, entry, metaFile)
+    // Skip if metaFile already exists
+    if (fs.existsSync(hubFile)) {
+      console.log(
+        `Skipping ${idx}/${entries.length}: ${accession} (already exists)`,
+      )
+      continue
+    }
+
+    await new Promise(resolve => setTimeout(resolve, 100))
     const hubTxt = await myfetchtext(
       `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`,
     )
-    const b = `hubs/${base}/${b1}/${b2}/${b3}/${accession}`
+
     fs.mkdirSync(b, {
       recursive: true,
     })
-    fs.writeFileSync(`${b}/hub.txt`, hubTxt)
+    fs.writeFileSync(hubFile, hubTxt)
     fs.writeFileSync(
-      `${b}/meta.json`,
+      metaFile,
       JSON.stringify({
         accession,
         assembly: asmId,
