@@ -15,24 +15,30 @@ function parseAssemblyEntry({
   const accession = ucscAcc.startsWith('GC') ? ucscAcc : refSeq || genBank
   const [base, rest] = accession.split('_')
   const [b1, b2, b3] = rest.match(/.{1,3}/g)!
-  const ncbiData = readJSON(
-    `hubs/${base}/${b1}/${b2}/${b3}/${accession}/ncbi.json`,
-  )
-  const r = ncbiData.result.uids[0]
-  const assemblyStatus = ncbiData.result[r].assemblystatus
-  const seqReleaseDate = ncbiData.result[r].seqreleasedate
-  const ncbiOrganism = ncbiData.result[r].organism
-  const submitterOrg = ncbiData.result[r].submitterorganization
-  const buscoStats = ncbiData.result[r].busco
-  const ncbiRefSeqCategory = ncbiData.result[r].refseq_category
+  let ncbiData
+  try {
+    ncbiData = readJSON(`hubs/${base}/${b1}/${b2}/${b3}/${accession}/ncbi.json`)
+  } catch (e) {
+    console.error('NCBI data not found')
+  }
+  const r = ncbiData?.result.uids[0]
+  const r2 = ncbiData?.result[r] || {}
+  const assemblyStatus = r2.assemblystatus
+  const ncbiAssemblyName = r2.assemblyname
+  const seqReleaseDate = r2.seqreleasedate
+  const ncbiOrganism = r2.organism
+  const submitterOrg = r2.submitterorganization
+  const buscoStats = r2.busco
+  const ncbiRefSeqCategory = r2.refseq_category
   const ucscBase = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}`
-  const stats = extractStats(ncbiData.result[r].meta)
+  const stats = ncbiData ? extractStats(ncbiData.result[r].meta) : undefined
   return {
     stats,
     buscoStats,
     seqReleaseDate,
     submitterOrg,
     ncbiOrganism,
+    ncbiAssemblyName,
     ncbiRefSeqCategory,
     accession: accession || '',
     assembly: asmId || '',

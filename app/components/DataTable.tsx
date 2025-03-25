@@ -17,7 +17,7 @@ const statusOrder = ['Complete genome', 'Chromosome', 'Scaffold', 'Contig']
 export function DataTable({ rows }: { rows: AssemblyData[] }) {
   const [sortColumn, setSortColumn] = useState<SortColumn>()
   const [filterOption, setFilterOption] = useState<FilterOption>('all')
-  const [showAllColumns, setShowAllColumns] = useState(true)
+  const [showAllColumns, setShowAllColumns] = useState(false)
 
   const filteredRows = useMemo(() => {
     if (filterOption === 'all') {
@@ -92,7 +92,8 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
     {
       field: 'ncbiRefSeqCategory',
       title: 'Designated reference',
-      sortable: false,
+      sortable: true,
+      extra: true,
     },
     { field: 'jbrowseLink', title: 'JBrowse', sortable: false },
     { field: 'ucscBrowserLink', title: 'UCSC', sortable: false },
@@ -107,6 +108,12 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
     },
     { field: 'seqReleaseDate', title: 'Release date', sortable: true },
     { field: 'scientificName', title: 'Scientific name', sortable: true },
+    {
+      field: 'ncbiAssemblyName',
+      title: 'NCBI assembly name',
+      sortable: true,
+      extra: true,
+    },
     { field: 'taxonId', title: 'Taxonomy ID', sortable: true, extra: true },
     { field: 'ucscDataLink', title: 'UCSC download', sortable: false },
     { field: 'ncbiLink', title: 'NCBI portal', sortable: false },
@@ -129,7 +136,7 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
               onChange={() => {
                 setFilterOption('all')
               }}
-            />{' '}
+            />
             All
           </label>
           <label style={{ marginRight: '15px' }}>
@@ -141,7 +148,7 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
               onChange={() => {
                 setFilterOption('refseq')
               }}
-            />{' '}
+            />
             RefSeq only
           </label>
           <label>
@@ -153,7 +160,7 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
               onChange={() => {
                 setFilterOption('genbank')
               }}
-            />{' '}
+            />
             GenBank only
           </label>
         </div>

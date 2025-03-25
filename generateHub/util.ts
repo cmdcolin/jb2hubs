@@ -2,7 +2,6 @@ import fs from 'node:fs'
 import { objectHash } from '@jbrowse/core/util/index.js'
 
 export function resolve(uri: string, baseUri: string | URL) {
-  console.log({ uri, baseUri })
   return new URL(uri, baseUri).href
 }
 

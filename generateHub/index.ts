@@ -32,13 +32,13 @@ for (const [idx, entry] of entries.entries()) {
     const metaFile = `${b}/meta.json`
     const hubFile = `${b}/hub.txt`
 
-    console.log(`Processing ${idx}/${entries.length}:`, entry, metaFile)
     if (fs.existsSync(hubFile)) {
-      console.log(
-        `Skipping ${idx}/${entries.length}: ${accession} (already exists)`,
-      )
+      // console.log(
+      //   `Skipping ${idx}/${entries.length}: ${accession} (already exists)`,
+      // )
       continue
     }
+    console.log(`Processing ${idx}/${entries.length}:`, entry, metaFile)
 
     await new Promise(resolve => setTimeout(resolve, 100))
     const hubFileLocation = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
