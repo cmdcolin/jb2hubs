@@ -1,30 +1,17 @@
 import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
-import {
-  isUriLocation,
-  notEmpty,
-  objectHash,
-  type FileLocation,
-} from '@jbrowse/core/util/index.js'
-import {
-  generateUnknownTrackConf,
-  makeLoc,
-  makeLoc2,
-  makeLocAlt,
-  resolve,
-} from './util.ts'
+import { notEmpty, objectHash } from '@jbrowse/core/util/index.js'
+import { generateUnknownTrackConf, resolve } from './util.ts'
 
 export function generateHubTracks({
   trackDb,
-  trackDbLoc,
+  trackDbUrl,
   assemblyName,
   sequenceAdapter,
-  baseUrl,
 }: {
   trackDb: TrackDbFile
-  trackDbLoc: FileLocation
+  trackDbUrl: string
   assemblyName: string
   sequenceAdapter: any
-  baseUrl: string | URL
 }) {
   const parentTrackKeys = new Set([
     'superTrack',
@@ -54,7 +41,7 @@ export function generateHubTracks({
             ...track.data,
             ...(track.data.html
               ? {
-                  html: `<a href="${resolve(track.data.html, baseUrl)}">${track.data.html}</a>`,
+                  html: `<a href="${resolve(track.data.html, trackDbUrl)}">${track.data.html}</a>`,
                 }
               : {}),
           },
@@ -66,7 +53,7 @@ export function generateHubTracks({
           ].filter(f => !!f),
           ...makeTrackConfig({
             track,
-            trackDbLoc,
+            trackDbUrl,
             trackDb,
             sequenceAdapter,
           }),
@@ -83,32 +70,32 @@ export function generateHubTracks({
 
 function makeTrackConfig({
   track,
-  trackDbLoc,
+  trackDbUrl,
   trackDb,
   sequenceAdapter,
 }: {
   track: RaStanza
-  trackDbLoc: FileLocation
+  trackDbUrl: string
   trackDb: TrackDbFile
   sequenceAdapter: any
 }) {
   const { data } = track
 
   const parent = data.parent || ''
-  const bigDataUrl = data.bigDataUrl || ''
+  const bigDataUrlPre = data.bigDataUrl || ''
   const bigDataIdx = data.bigDataIndex || ''
+  if (bigDataIdx) {
+    throw new Error("Don't yet support bigDataIdx")
+  }
   const trackType = data.type || trackDb.data[parent].data.type || ''
   const name =
-    (data.shortLabel || '') + (bigDataUrl.includes('xeno') ? ' (xeno)' : '')
+    (data.shortLabel || '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
 
-  const isUri = isUriLocation(trackDbLoc)
   let baseTrackType = trackType.split(' ')[0] || ''
-  if (baseTrackType === 'bam' && bigDataUrl.toLowerCase().endsWith('cram')) {
+  if (baseTrackType === 'bam' && bigDataUrlPre.toLowerCase().endsWith('cram')) {
     baseTrackType = 'cram'
   }
-  const bigDataLocation = isUri
-    ? makeLoc(bigDataUrl, trackDbLoc)
-    : makeLoc2(bigDataUrl)
+  const bigDataUrl = new URL(bigDataUrlPre, trackDbUrl)
 
   switch (baseTrackType) {
     case 'bam': {
@@ -118,12 +105,7 @@ function makeTrackConfig({
         description: data.longLabel,
         adapter: {
           type: 'BamAdapter',
-          bamLocation: bigDataLocation,
-          index: {
-            location: isUri
-              ? makeLocAlt(bigDataIdx, `${bigDataUrl}.bai`, trackDbLoc)
-              : makeLoc2(bigDataIdx, `${bigDataUrl}.bai`),
-          },
+          uri: bigDataUrl,
         },
       }
     }
@@ -134,10 +116,7 @@ function makeTrackConfig({
         description: data.longLabel,
         adapter: {
           type: 'CramAdapter',
-          cramLocation: bigDataLocation,
-          craiLocation: isUri
-            ? makeLocAlt(bigDataIdx, `${bigDataUrl}.crai`, trackDbLoc)
-            : makeLoc2(bigDataIdx, `${bigDataUrl}.crai`),
+          uri: bigDataUrl,
           sequenceAdapter,
         },
       }
@@ -149,7 +128,7 @@ function makeTrackConfig({
         description: data.longLabel,
         adapter: {
           type: 'BigWigAdapter',
-          bigWigLocation: bigDataLocation,
+          uri: bigDataUrl,
         },
       }
     }
@@ -161,7 +140,7 @@ function makeTrackConfig({
           description: data.longLabel,
           adapter: {
             type: 'BigBedAdapter',
-            bigBedLocation: bigDataLocation,
+            uri: bigDataUrl,
           },
         }
       } else if (baseTrackType === 'vcfTabix') {
@@ -171,12 +150,7 @@ function makeTrackConfig({
           description: data.longLabel,
           adapter: {
             type: 'VcfTabixAdapter',
-            vcfGzLocation: bigDataLocation,
-            index: {
-              location: isUri
-                ? makeLocAlt(bigDataIdx, `${bigDataUrl}.tbi`, trackDbLoc)
-                : makeLoc2(bigDataIdx, `${bigDataUrl}.tbi`),
-            },
+            uri: bigDataUrl,
           },
         }
       } else if (baseTrackType === 'hic') {
@@ -186,7 +160,7 @@ function makeTrackConfig({
           description: data.longLabel,
           adapter: {
             type: 'HicAdapter',
-            hicLocation: bigDataLocation,
+            uri: bigDataUrl,
           },
         }
       } else {

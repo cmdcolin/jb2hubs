@@ -33,7 +33,6 @@ for (const [idx, entry] of entries.entries()) {
     const hubFile = `${b}/hub.txt`
 
     console.log(`Processing ${idx}/${entries.length}:`, entry, metaFile)
-    // Skip if metaFile already exists
     if (fs.existsSync(hubFile)) {
       console.log(
         `Skipping ${idx}/${entries.length}: ${accession} (already exists)`,
@@ -42,9 +41,8 @@ for (const [idx, entry] of entries.entries()) {
     }
 
     await new Promise(resolve => setTimeout(resolve, 100))
-    const hubTxt = await myfetchtext(
-      `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`,
-    )
+    const hubFileLocation = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
+    const hubTxt = await myfetchtext(hubFileLocation)
 
     fs.mkdirSync(b, {
       recursive: true,
@@ -61,6 +59,7 @@ for (const [idx, entry] of entries.entries()) {
         identical,
         genBank,
         refSeq,
+        hubFileLocation,
       }),
     )
   } catch (e) {

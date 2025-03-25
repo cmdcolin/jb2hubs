@@ -7,13 +7,10 @@ const hubFileText = fs.readFileSync(
   meta.replace('meta.json', 'hub.txt'),
   'utf8',
 )
+
 const config = generateJBrowseConfigForAssemblyHub({
   hubFileText,
-  hubFileLocation: {
-    uri: hubMeta.hubFileLocation,
-    baseUri: 'http://localhost',
-    locationType: 'UriLocation',
-  },
+  trackDbUrl: hubMeta.hubFileLocation,
 })
 
 if (config) {

@@ -1,19 +1,16 @@
 import pkg from '@gmod/ucsc-hub'
 import { resolve } from './util.ts'
 import { generateHubTracks } from './generateHubTracks.ts'
-import type { FileLocation } from '@jbrowse/core/util'
 
 const { SingleFileHub } = pkg
 
 export function generateJBrowseConfigForAssemblyHub({
   hubFileText,
-  hubFileLocation,
+  trackDbUrl,
 }: {
   hubFileText: string
-  hubFileLocation: FileLocation
+  trackDbUrl: string
 }) {
-  // @ts-expect-error
-  const hubUri = new URL(hubFileLocation.uri, hubFileLocation.baseUri)
   if (hubFileText.includes('useOneFile on')) {
     const hub = new SingleFileHub(hubFileText)
     const { genome, tracks } = hub
@@ -24,8 +21,8 @@ export function generateJBrowseConfigForAssemblyHub({
 
     const sequenceAdapter = {
       type: 'TwoBitAdapter',
-      uri: resolve(twoBitPath, hubUri),
-      chromSizes: resolve(chromSizes, hubUri),
+      uri: resolve(twoBitPath, trackDbUrl),
+      chromSizes: resolve(chromSizes, trackDbUrl),
     }
     const asm = {
       name: genomeName,
@@ -36,7 +33,7 @@ export function generateJBrowseConfigForAssemblyHub({
           ...data,
           ...(htmlPath
             ? {
-                htmlPath: `<a href="${resolve(htmlPath, hubUri)}">${htmlPath}</a>`,
+                htmlPath: `<a href="${resolve(htmlPath, trackDbUrl)}">${htmlPath}</a>`,
               }
             : {}),
         },
@@ -49,7 +46,7 @@ export function generateJBrowseConfigForAssemblyHub({
               adapter: {
                 type: 'RefNameAliasAdapter',
                 refNameColumnHeaderName: 'ucsc',
-                uri: resolve(chromAliasBb.replace('.bb', '.txt'), hubUri),
+                uri: resolve(chromAliasBb.replace('.bb', '.txt'), trackDbUrl),
               },
             },
           }
@@ -60,10 +57,9 @@ export function generateJBrowseConfigForAssemblyHub({
       assemblies: [asm],
       tracks: generateHubTracks({
         trackDb: tracks,
-        trackDbLoc: hubFileLocation,
+        trackDbUrl,
         assemblyName: genomeName,
         sequenceAdapter,
-        baseUrl: hubUri,
       }),
     }
   }
