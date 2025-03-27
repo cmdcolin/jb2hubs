@@ -2,6 +2,8 @@ import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
 import { notEmpty, objectHash } from '@jbrowse/core/util/index.js'
 import { generateUnknownTrackConf, resolve } from './util.ts'
 
+type Adapter = Record<string, unknown>
+
 export function generateHubTracks({
   trackDb,
   trackDbUrl,
@@ -11,7 +13,7 @@ export function generateHubTracks({
   trackDb: TrackDbFile
   trackDbUrl: string
   assemblyName: string
-  sequenceAdapter: any
+  sequenceAdapter: Adapter
 }) {
   const parentTrackKeys = new Set([
     'superTrack',
@@ -60,7 +62,7 @@ export function generateHubTracks({
         }
       }
     })
-    .filter(notEmpty)
+    .filter(f => notEmpty(f))
     .map(r => ({
       ...r,
       trackId: `ucsc-trackhub-${objectHash(r)}`,
@@ -77,7 +79,7 @@ function makeTrackConfig({
   track: RaStanza
   trackDbUrl: string
   trackDb: TrackDbFile
-  sequenceAdapter: any
+  sequenceAdapter: Adapter
 }) {
   const { data } = track
 

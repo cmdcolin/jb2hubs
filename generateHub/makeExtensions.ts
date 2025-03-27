@@ -1,7 +1,11 @@
 import { dedupe } from '@jbrowse/core/util/index.js'
 import fs from 'node:fs'
 import path from 'node:path'
+import { readJSON } from './util'
 
+interface Config {
+  tracks: { trackId: string }[]
+}
 const ret = fs.readdirSync('extensions')
 for (const item of ret) {
   const accession = item.replace('.json', '')
@@ -19,13 +23,8 @@ for (const item of ret) {
   fs.copyFileSync(f, `${f}.bak`)
   console.log(`Created backup: ${f}.bak`)
 
-  // Read the existing config file
-  const existingConfig = JSON.parse(fs.readFileSync(f, 'utf8'))
-
-  // Read the extension file
-  const extensionConfig = JSON.parse(
-    fs.readFileSync(path.join('extensions', item), 'utf8'),
-  )
+  const existingConfig = readJSON(f) as Config
+  const extensionConfig = readJSON(path.join('extensions', item)) as Config
 
   // Merge the configs (extension takes precedence)
   const mergedConfig = {
@@ -38,6 +37,6 @@ for (const item of ret) {
   }
 
   // Write the merged config back to the original file
-  fs.writeFileSync(f, JSON.stringify(mergedConfig, null, 2))
+  fs.writeFileSync(f, JSON.stringify(mergedConfig, undefined, 2))
   console.log(`Updated config file: ${f}`)
 }

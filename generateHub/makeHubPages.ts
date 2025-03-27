@@ -4,7 +4,7 @@ function capitalizeFirstLetter(val: string) {
   return String(val).charAt(0).toUpperCase() + String(val).slice(1)
 }
 
-;[
+for (const f of [
   'primates',
   'mammals',
   'birds',
@@ -22,7 +22,7 @@ function capitalizeFirstLetter(val: string) {
   'globalReference',
   'mouseStrains',
   'legacy',
-].forEach(f => {
+]) {
   fs.mkdirSync(`app/hubs/${f}/`, { recursive: true })
   fs.writeFileSync(
     `app/hubs/${f}/page.tsx`,
@@ -32,4 +32,4 @@ export default function ${capitalizeFirstLetter(f)}() {
   return <Page title="${capitalizeFirstLetter(f)}" raw="${f}" />
 }`,
   )
-})
+}

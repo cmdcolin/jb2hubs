@@ -1,8 +1,9 @@
 import fs from 'node:fs'
 import { generateJBrowseConfigForAssemblyHub } from './generateJBrowseConfigForAssemblyHub.ts'
+import { readJSON, writeJSON } from './util.ts'
 
 const meta = process.argv[2]
-const hubMeta = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))
+const hubMeta = readJSON(process.argv[2]) as { hubFileLocation: string }
 const hubFileText = fs.readFileSync(
   meta.replace('meta.json', 'hub.txt'),
   'utf8',
@@ -14,10 +15,7 @@ const config = generateJBrowseConfigForAssemblyHub({
 })
 
 if (config) {
-  fs.writeFileSync(
-    meta.replace('meta.json', 'config.json'),
-    JSON.stringify(config, null, 2),
-  )
+  writeJSON(meta.replace('meta.json', 'config.json'), config)
 } else {
   console.error('No config generated')
 }

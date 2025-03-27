@@ -81,9 +81,9 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
   // Helper to determine sort indicator
   const getSortIndicator = (columnKey: string) => {
     return sortColumn?.columnKey === columnKey
-      ? sortColumn?.direction === 'ASC'
+      ? (sortColumn.direction === 'ASC'
         ? '↑'
-        : '↓'
+        : '↓')
       : ''
   }
 
@@ -200,7 +200,9 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                     className={column.sortable ? 'cursor-pointer' : ''}
                     onClick={
                       column.sortable
-                        ? () => handleSort(column.field)
+                        ? () => {
+                            handleSort(column.field)
+                          }
                         : undefined
                     }
                   >
@@ -224,11 +226,13 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
 
                     // Render cell based on column field
                     switch (field) {
-                      case 'commonName':
+                      case 'commonName': {
                         return <td key={field}>{row.commonName}</td>
-                      case 'ncbiRefSeqCategory':
+                      }
+                      case 'ncbiRefSeqCategory': {
                         return <td key={field}>{row.ncbiRefSeqCategory}</td>
-                      case 'jbrowseLink':
+                      }
+                      case 'jbrowseLink': {
                         return (
                           <td key={field}>
                             <a
@@ -240,7 +244,8 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </a>
                           </td>
                         )
-                      case 'ucscBrowserLink':
+                      }
+                      case 'ucscBrowserLink': {
                         return (
                           <td key={field}>
                             <a
@@ -252,7 +257,8 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </a>
                           </td>
                         )
-                      case 'igvBrowserLink':
+                      }
+                      case 'igvBrowserLink': {
                         return (
                           <td key={field}>
                             <a
@@ -264,7 +270,8 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </a>
                           </td>
                         )
-                      case 'ncbiBrowserLink':
+                      }
+                      case 'ncbiBrowserLink': {
                         return (
                           <td key={field}>
                             <a
@@ -276,17 +283,21 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </a>
                           </td>
                         )
-                      case 'assemblyStatus':
+                      }
+                      case 'assemblyStatus': {
                         return <td key={field}>{row.assemblyStatus}</td>
-                      case 'submitterOrg':
+                      }
+                      case 'submitterOrg': {
                         return <td key={field}>{row.submitterOrg}</td>
-                      case 'seqReleaseDate':
+                      }
+                      case 'seqReleaseDate': {
                         return (
                           <td key={field}>
                             {row.seqReleaseDate?.replace('00:00', '')}
                           </td>
                         )
-                      case 'scientificName':
+                      }
+                      case 'scientificName': {
                         return (
                           <td key={field}>
                             <div
@@ -299,7 +310,8 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </div>
                           </td>
                         )
-                      case 'taxonId':
+                      }
+                      case 'taxonId': {
                         return (
                           <td key={field}>
                             <a
@@ -309,7 +321,8 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </a>
                           </td>
                         )
-                      case 'ucscDataLink':
+                      }
+                      case 'ucscDataLink': {
                         return (
                           <td key={field}>
                             <a
@@ -321,7 +334,8 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </a>
                           </td>
                         )
-                      case 'ncbiLink':
+                      }
+                      case 'ncbiLink': {
                         return (
                           <td key={field}>
                             <a
@@ -333,8 +347,10 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
                             </a>
                           </td>
                         )
-                      default:
+                      }
+                      default: {
                         return <td key={field}>{String(row[field] || '')}</td>
+                      }
                     }
                   })}
                 </tr>

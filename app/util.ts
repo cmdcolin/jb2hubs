@@ -18,7 +18,7 @@ function parseAssemblyEntry({
   let ncbiData
   try {
     ncbiData = readJSON(`hubs/${base}/${b1}/${b2}/${b3}/${accession}/ncbi.json`)
-  } catch (e) {
+  } catch {
     console.error('NCBI data not found')
   }
   const r = ncbiData?.result.uids[0]

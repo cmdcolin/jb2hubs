@@ -7,7 +7,12 @@ import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   {
-    ignores: ['out/**/*', 'eslint.config.mjs', '.next/**/*'],
+    ignores: [
+      'out/**/*',
+      'eslint.config.mjs',
+      '.next/**/*',
+      'postcss.config.mjs',
+    ],
   },
   {
     plugins: {

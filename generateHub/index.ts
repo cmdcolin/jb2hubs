@@ -3,11 +3,21 @@ import fs from 'node:fs'
 import { myfetchtext, readJSON } from './util.ts'
 import { dedupe } from '@jbrowse/core/util/dedupe.js'
 
+interface Entry {
+  taxId: string
+  asmId: string
+  genBank: string
+  refSeq: string
+  identical: string
+  sciName: string
+  comName: string
+  ucscBrowser: string
+}
+
 const entries = dedupe(
   fs
     .readdirSync('hubJson')
-    .map(file => readJSON(`hubJson/${file}`).data)
-    .flat(),
+    .flatMap(file => (readJSON(`hubJson/${file}`) as { data: Entry[] }).data),
   d => d.ucscBrowser,
 )
 
@@ -62,7 +72,7 @@ for (const [idx, entry] of entries.entries()) {
         hubFileLocation,
       }),
     )
-  } catch (e) {
-    console.error(e)
+  } catch (error) {
+    console.error(error)
   }
 }

@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import './components/table.css'
 import { hubCategories } from '@/generateHub/hubCategories'
+import { list } from './list'
 
 export default function Home() {
   return (
     <div>
-      <h1>JBrowse 2 browsers for UCSC GenArk hubs</h1>
+      <h1>JBrowse 2 browsers for UCSC and GenArk hubs</h1>
       <p>
         This is a clone of the{' '}
         <Link href="https://hgdownload.soe.ucsc.edu/hubs/">
@@ -13,6 +14,38 @@ export default function Home() {
         </Link>{' '}
         with added JBrowse configs
       </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>JBrowse</th>
+            <th>UCSC</th>
+          </tr>
+        </thead>
+        <tbody>
+          {list.map(l => {
+            return (
+              <tr key={l}>
+                <td>{l}</td>
+                <td>
+                  <Link
+                    href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/${l}/config.json`}
+                  >
+                    JBrowse
+                  </Link>
+                </td>
+                <td>
+                  <Link
+                    href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=${l}`}
+                  >
+                    UCSC
+                  </Link>
+                </td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
       <table>
         <thead>
           <tr>
@@ -24,7 +57,7 @@ export default function Home() {
           {hubCategories
             .filter(f => f.tag === 'main')
             .map(elt => (
-              <tr>
+              <tr key={elt.id}>
                 <td>
                   <Link href={`/hubs/${elt.id}`} target="_blank">
                     {elt.id}
@@ -49,7 +82,7 @@ export default function Home() {
           {hubCategories
             .filter(f => f.tag !== 'main')
             .map(elt => (
-              <tr>
+              <tr key={elt.id}>
                 <td>
                   <Link href={`/hubs/${elt.id}`} target="_blank">
                     {elt.id}
