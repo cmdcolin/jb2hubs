@@ -1,6 +1,7 @@
 import pkg from '@gmod/ucsc-hub'
-import { resolve } from './util.ts'
+
 import { generateHubTracks } from './generateHubTracks.ts'
+import { resolve } from './util.ts'
 
 const { SingleFileHub } = pkg
 

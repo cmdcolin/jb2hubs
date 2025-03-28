@@ -1,10 +1,14 @@
-import { dedupe } from '@jbrowse/core/util/index.js'
 import fs from 'node:fs'
 import path from 'node:path'
+
+import { dedupe } from '@jbrowse/core/util/index.js'
+
 import { readJSON } from './util'
 
 interface Config {
-  tracks: { trackId: string }[]
+  tracks: {
+    trackId: string
+  }[]
 }
 const ret = fs.readdirSync('extensions')
 for (const item of ret) {
@@ -16,7 +20,9 @@ for (const item of ret) {
   // Create directory structure if it doesn't exist
   const dir = path.dirname(f)
   if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true })
+    fs.mkdirSync(dir, {
+      recursive: true,
+    })
   }
 
   // Create backup of existing config file

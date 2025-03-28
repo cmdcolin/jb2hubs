@@ -1,4 +1,5 @@
 import fs from 'node:fs'
+
 import { objectHash } from '@jbrowse/core/util/index.js'
 
 export function resolve(uri: string, baseUri: string | URL) {
@@ -15,7 +16,10 @@ export async function myfetchtext(url: string) {
 
 export function makeLoc(
   first: string,
-  base: { uri: string; baseUri?: string },
+  base: {
+    uri: string
+    baseUri?: string
+  },
 ) {
   return {
     uri: new URL(first, new URL(base.uri, base.baseUri)).href,
@@ -23,7 +27,13 @@ export function makeLoc(
   }
 }
 
-export function makeLocAlt(first: string, alt: string, base: { uri: string }) {
+export function makeLocAlt(
+  first: string,
+  alt: string,
+  base: {
+    uri: string
+  },
+) {
   return first ? makeLoc(first, base) : makeLoc(alt, base)
 }
 

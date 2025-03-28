@@ -1,6 +1,8 @@
-import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
 import { notEmpty, objectHash } from '@jbrowse/core/util/index.js'
+
 import { generateUnknownTrackConf, resolve } from './util.ts'
+
+import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
 
 type Adapter = Record<string, unknown>
 

@@ -1,4 +1,5 @@
 import stylistic from '@stylistic/eslint-plugin'
+import importPlugin from 'eslint-plugin-import'
 import eslint from '@eslint/js'
 import eslintPluginReact from 'eslint-plugin-react'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
@@ -36,6 +37,7 @@ export default tseslint.config(
     },
   },
   eslint.configs.recommended,
+  importPlugin.flatConfigs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylisticTypeChecked,
   ...tseslint.configs.strictTypeChecked,
@@ -61,9 +63,8 @@ export default tseslint.config(
       curly: 'error',
       semi: ['error', 'never'],
 
-      '@stylistic/object-curly-newline': 'error',
+      '@stylistic/object-curly-newline': ['error', 'always'],
       '@stylistic/curly-newline': 'error',
-      '@stylistic/object-curly-newline': 'error',
 
       '@typescript-eslint/restrict-template-expressions': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
@@ -71,6 +72,38 @@ export default tseslint.config(
 
       'unicorn/prevent-abbreviations': 'off',
       'unicorn/filename-case': 'off',
+
+      'import/no-unresolved': 'off',
+      'import/order': [
+        'error',
+        {
+          named: true,
+          'newlines-between': 'always',
+          alphabetize: {
+            order: 'asc',
+          },
+          groups: [
+            'builtin',
+            ['external', 'internal'],
+            ['parent', 'sibling', 'index', 'object'],
+            'type',
+          ],
+          pathGroups: [
+            {
+              group: 'builtin',
+              pattern: 'react',
+              position: 'before',
+            },
+            {
+              group: 'external',
+              pattern: '@mui/icons-material',
+              position: 'after',
+            },
+          ],
+
+          pathGroupsExcludedImportTypes: ['react'],
+        },
+      ],
     },
   },
 )

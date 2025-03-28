@@ -1,7 +1,9 @@
-import path from 'node:path'
 import fs from 'node:fs'
-import { myfetchtext, readJSON } from './util.ts'
+import path from 'node:path'
+
 import { dedupe } from '@jbrowse/core/util/dedupe.js'
+
+import { myfetchtext, readJSON } from './util.ts'
 
 interface Entry {
   taxId: string
@@ -15,9 +17,14 @@ interface Entry {
 }
 
 const entries = dedupe(
-  fs
-    .readdirSync('hubJson')
-    .flatMap(file => (readJSON(`hubJson/${file}`) as { data: Entry[] }).data),
+  fs.readdirSync('hubJson').flatMap(
+    file =>
+      (
+        readJSON(`hubJson/${file}`) as {
+          data: Entry[]
+        }
+      ).data,
+  ),
   d => d.ucscBrowser,
 )
 

@@ -1,6 +1,7 @@
 import fs from 'node:fs'
-import { myfetchtext } from './util.ts'
+
 import { hubCategories } from './hubCategories.ts'
+import { myfetchtext } from './util.ts'
 
 for (const { id } of hubCategories) {
   fs.writeFileSync(

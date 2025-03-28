@@ -23,7 +23,9 @@ for (const f of [
   'mouseStrains',
   'legacy',
 ]) {
-  fs.mkdirSync(`app/hubs/${f}/`, { recursive: true })
+  fs.mkdirSync(`app/hubs/${f}/`, {
+    recursive: true,
+  })
   fs.writeFileSync(
     `app/hubs/${f}/page.tsx`,
     `import Page from '../../components/Page'

@@ -14,7 +14,7 @@ interface SortColumn {
 }
 const statusOrder = ['Complete genome', 'Chromosome', 'Scaffold', 'Contig']
 
-export function DataTable({ rows }: { rows: AssemblyData[] }) {
+export default function DataTable({ rows }: { rows: AssemblyData[] }) {
   const [sortColumn, setSortColumn] = useState<SortColumn>()
   const [filterOption, setFilterOption] = useState<FilterOption>('all')
   const [showAllColumns, setShowAllColumns] = useState(false)
@@ -47,7 +47,7 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
             const aValue = a[sortColumn.columnKey as keyof AssemblyData]
             const bValue = b[sortColumn.columnKey as keyof AssemblyData]
             return (
-              (typeof aValue === 'number'
+              (typeof aValue === 'number' && typeof bValue === 'number'
                 ? aValue - bValue
                 : String(aValue || '').localeCompare(String(bValue || ''))) *
               flipper
@@ -74,49 +74,97 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
         })
       }
     } else {
-      setSortColumn({ columnKey, direction: 'ASC' })
+      setSortColumn({
+        columnKey,
+        direction: 'ASC',
+      })
     }
   }
 
   // Helper to determine sort indicator
   const getSortIndicator = (columnKey: string) => {
     return sortColumn?.columnKey === columnKey
-      ? (sortColumn.direction === 'ASC'
+      ? sortColumn.direction === 'ASC'
         ? '↑'
-        : '↓')
+        : '↓'
       : ''
   }
 
   const columns = [
-    { field: 'commonName', title: 'Common Name', sortable: true },
+    {
+      field: 'commonName',
+      title: 'Common Name',
+      sortable: true,
+    },
     {
       field: 'ncbiRefSeqCategory',
       title: 'Designated reference',
       sortable: true,
       extra: true,
     },
-    { field: 'jbrowseLink', title: 'JBrowse', sortable: false },
-    { field: 'ucscBrowserLink', title: 'UCSC', sortable: false },
-    { field: 'igvBrowserLink', title: 'IGV', sortable: false },
-    { field: 'ncbiBrowserLink', title: 'NCBI GDV', sortable: false },
-    { field: 'assemblyStatus', title: 'Assembly status', sortable: true },
+    {
+      field: 'jbrowseLink',
+      title: 'JBrowse',
+      sortable: false,
+    },
+    {
+      field: 'ucscBrowserLink',
+      title: 'UCSC',
+      sortable: false,
+    },
+    {
+      field: 'igvBrowserLink',
+      title: 'IGV',
+      sortable: false,
+    },
+    {
+      field: 'ncbiBrowserLink',
+      title: 'NCBI GDV',
+      sortable: false,
+    },
+    {
+      field: 'assemblyStatus',
+      title: 'Assembly status',
+      sortable: true,
+    },
     {
       field: 'submitterOrg',
       title: 'Submitter',
       sortable: false,
       extra: true,
     },
-    { field: 'seqReleaseDate', title: 'Release date', sortable: true },
-    { field: 'scientificName', title: 'Scientific name', sortable: true },
+    {
+      field: 'seqReleaseDate',
+      title: 'Release date',
+      sortable: true,
+    },
+    {
+      field: 'scientificName',
+      title: 'Scientific name',
+      sortable: true,
+    },
     {
       field: 'ncbiAssemblyName',
       title: 'NCBI assembly name',
       sortable: true,
       extra: true,
     },
-    { field: 'taxonId', title: 'Taxonomy ID', sortable: true, extra: true },
-    { field: 'ucscDataLink', title: 'UCSC download', sortable: false },
-    { field: 'ncbiLink', title: 'NCBI portal', sortable: false },
+    {
+      field: 'taxonId',
+      title: 'Taxonomy ID',
+      sortable: true,
+      extra: true,
+    },
+    {
+      field: 'ucscDataLink',
+      title: 'UCSC download',
+      sortable: false,
+    },
+    {
+      field: 'ncbiLink',
+      title: 'NCBI portal',
+      sortable: false,
+    },
   ]
 
   return (
@@ -127,7 +175,11 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
         }}
       >
         <div>
-          <label style={{ marginRight: '15px' }}>
+          <label
+            style={{
+              marginRight: '15px',
+            }}
+          >
             <input
               type="radio"
               name="databaseFilter"
@@ -139,7 +191,11 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
             />
             All
           </label>
-          <label style={{ marginRight: '15px' }}>
+          <label
+            style={{
+              marginRight: '15px',
+            }}
+          >
             <input
               type="radio"
               name="databaseFilter"
@@ -165,7 +221,11 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
           </label>
         </div>
         <div>
-          <label style={{ marginRight: '15px' }}>
+          <label
+            style={{
+              marginRight: '15px',
+            }}
+          >
             <input
               type="radio"
               checked={!showAllColumns}
@@ -175,7 +235,11 @@ export function DataTable({ rows }: { rows: AssemblyData[] }) {
             />
             Show essential columns
           </label>
-          <label style={{ marginRight: '15px' }}>
+          <label
+            style={{
+              marginRight: '15px',
+            }}
+          >
             <input
               type="radio"
               checked={showAllColumns}
