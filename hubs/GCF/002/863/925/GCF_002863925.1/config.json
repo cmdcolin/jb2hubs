@@ -689,6 +689,92 @@
       },
       "trackId": "ucsc-trackhub-1723601819",
       "assemblyNames": ["GCF_002863925.1"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "horses.88.vars.flt.pass.ebi.vcf",
+      "name": "High quality variant calls from multiple horse genome project (88 horses)",
+      "metadata": {
+        "source": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB28306/"
+      },
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB28306/horses.88.vars.flt.pass.ebi.vcf.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB28306/horses.88.vars.flt.pass.ebi.vcf.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": ["GCF_002863925.1"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "allsample1.vcf",
+      "name": "Whole genome detection of sequences of six horses from diverse breeds.",
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB9799/allsample1.vcf.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB9799/allsample1.vcf.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": ["GCF_002863925.1"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "omia",
+      "name": "OMIA horse variants",
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB49105/EquCab3.0.vcf.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB49105/EquCab3.0.vcf.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": ["GCF_002863925.1"]
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "thesis_intersect_pub.decomposed.vcf",
+      "name": "Catalog of equine genetic variation",
+      "metadata": {
+        "source": "https://www.ebi.ac.uk/eva/?eva-study=PRJEB47918"
+      },
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "vcfGzLocation": {
+          "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB47918/thesis_intersect_pub.decomposed.vcf.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "https://ftp.ebi.ac.uk/pub/databases/eva/PRJEB47918/thesis_intersect_pub.decomposed.vcf.gz.tbi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "TBI"
+        }
+      },
+      "assemblyNames": ["GCF_002863925.1"]
     }
   ]
 }

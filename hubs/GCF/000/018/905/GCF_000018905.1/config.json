@@ -1,0 +1,425 @@
+{
+  "assemblies": [
+    {
+      "name": "GCF_000018905.1",
+      "displayName": "Brucella suis (ATCC 23445 2007)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCF_000018905.1",
+          "taxId": "470137",
+          "groups": "groups.txt",
+          "description": "Brucella suis (ATCC 23445 2007)",
+          "twoBitPath": "GCF_000018905.1.2bit",
+          "twoBitBptUrl": "GCF_000018905.1.2bit.bpt",
+          "chromSizes": "GCF_000018905.1.chrom.sizes.txt",
+          "chromAliasBb": "GCF_000018905.1.chromAlias.bb",
+          "organism": "ASM1890v1 Dec. 2007",
+          "defaultPos": "NC_010169.1:641254-651254",
+          "scientificName": "Brucella suis ATCC 23445",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/html/GCF_000018905.1_ASM1890v1.description.html\">html/GCF_000018905.1_ASM1890v1.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/018/905/GCF_000018905.1",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/018/905/GCF_000018905.1",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/018/905/GCF_000018905.1",
+          "liftOver.GCF_000018525.1": "liftOver/GCF_000018905.1ToGCF_000018525.1.over.chain.gz"
+        },
+        "trackId": "GCF_000018905.1-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/GCF_000018905.1.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/GCF_000018905.1.chrom.sizes.txt"
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumnHeaderName": "ucsc",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/GCF_000018905.1.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/html/GCF_000018905.1_ASM1890v1.assembly\">html/GCF_000018905.1_ASM1890v1.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000018905.1_ASM1890v1.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.assembly.bb"
+      },
+      "trackId": "ucsc-trackhub-1519499775",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.cytoBand.bb"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.cytoBand.bb"
+      },
+      "trackId": "ucsc-trackhub--391316205",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/html/GCF_000018905.1_ASM1890v1.gc5Base\">html/GCF_000018905.1_ASM1890v1.gc5Base</a>"
+      },
+      "category": ["map"],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.gc5Base.bw"
+      },
+      "trackId": "ucsc-trackhub-585550540",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "tandemDups",
+        "parent": "tanDups on",
+        "shortLabel": "Tandem Dups",
+        "longLabel": "Paired exactly identical sequence survey over entire genome assembly",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.tandemDups.bb",
+        "type": "bigBed 12"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Tandem Dups",
+      "description": "Paired exactly identical sequence survey over entire genome assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.tandemDups.bb"
+      },
+      "trackId": "ucsc-trackhub-1307081903",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/html/GCF_000018905.1_ASM1890v1.simpleRepeat\">html/GCF_000018905.1_ASM1890v1.simpleRepeat</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.simpleRepeat.bb"
+      },
+      "trackId": "ucsc-trackhub--1475789893",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiGene",
+        "longLabel": "NCBI gene predictions",
+        "shortLabel": "NCBI Genes",
+        "visibility": "pack",
+        "color": "0,80,150",
+        "altColor": "150,80,0",
+        "colorByStrand": "0,80,150 150,80,0",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.ncbiGene.bb",
+        "type": "bigGenePred",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/html/GCF_000018905.1_ASM1890v1.ncbiGene\">html/GCF_000018905.1_ASM1890v1.ncbiGene</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000018905.1_ASM1890v1.ncbiGene.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/?term=$$",
+        "urlLabel": "Entrez gene:",
+        "labelFields": "geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "group": "genes"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "NCBI Genes",
+      "description": "NCBI gene predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.ncbiGene.bb"
+      },
+      "trackId": "ucsc-trackhub-11555548",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.cpgIslandExt.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.cpgIslandExt.bb"
+      },
+      "trackId": "ucsc-trackhub-1134953152",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.cpgIslandExtUnmasked.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.cpgIslandExtUnmasked.bb"
+      },
+      "trackId": "ucsc-trackhub-345744669",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/html/GCF_000018905.1_ASM1890v1.windowMasker\">html/GCF_000018905.1_ASM1890v1.windowMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.windowMasker.bb"
+      },
+      "trackId": "ucsc-trackhub--653153125",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_000018525.1",
+        "parent": "chainNetGCF_000018525.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "a-proteobacteria Chain",
+        "longLabel": "a-proteobacteria (2007-12-20) Chained Alignments",
+        "type": "bigChain GCF_000018525.1",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainGCF_000018525.1.bb",
+        "linkDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainGCF_000018525.1Link.bb",
+        "priority": "1"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "a-proteobacteria Chain",
+      "description": "a-proteobacteria (2007-12-20) Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.chainGCF_000018525.1.bb"
+      },
+      "trackId": "ucsc-trackhub-470775366",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_000018525.1",
+        "parent": "chainNetGCF_000018525.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "a-proteobacteria synChain",
+        "longLabel": "a-proteobacteria (2007-12-20) Syntenic Chained Alignments",
+        "type": "bigChain GCF_000018525.1",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainSynGCF_000018525.1.bb",
+        "linkDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainSynGCF_000018525.1Link.bb",
+        "priority": "2"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "a-proteobacteria synChain",
+      "description": "a-proteobacteria (2007-12-20) Syntenic Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.chainSynGCF_000018525.1.bb"
+      },
+      "trackId": "ucsc-trackhub--2130667683",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_000018525.1",
+        "parent": "chainNetGCF_000018525.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "a-proteobacteria rbChain",
+        "longLabel": "a-proteobacteria (2007-12-20) Reciprocal Best Chained Alignments",
+        "type": "bigChain GCF_000018525.1",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainRBestGCF_000018525.1.bb",
+        "linkDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainRBestGCF_000018525.1Link.bb",
+        "priority": "3"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "a-proteobacteria rbChain",
+      "description": "a-proteobacteria (2007-12-20) Reciprocal Best Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.chainRBestGCF_000018525.1.bb"
+      },
+      "trackId": "ucsc-trackhub-445357274",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_000018525.1",
+        "parent": "chainNetGCF_000018525.1Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "a-proteobacteria loChain",
+        "longLabel": "a-proteobacteria (2007-12-20) Lift Over Chained Alignments",
+        "type": "bigChain GCF_000018525.1",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainLiftOverGCF_000018525.1.bb",
+        "linkDataUrl": "bbi/GCF_000018905.1_ASM1890v1.chainLiftOverGCF_000018525.1Link.bb",
+        "priority": "4"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "a-proteobacteria loChain",
+      "description": "a-proteobacteria (2007-12-20) Lift Over Chained Alignments",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.chainLiftOverGCF_000018525.1.bb"
+      },
+      "trackId": "ucsc-trackhub--1023355711",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "netGCF_000018525.1",
+        "parent": "mafNetGCF_000018525.1Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "a-proteobacteria net",
+        "longLabel": "a-proteobacteria (2007-12-20) Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.net.bb",
+        "summary": "bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.net.summary.bb",
+        "speciesOrder": "GCF_000018525.1",
+        "priority": "5"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "a-proteobacteria net",
+      "description": "a-proteobacteria (2007-12-20) Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.net.bb"
+      },
+      "trackId": "ucsc-trackhub-1305362353",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_000018525.1",
+        "parent": "mafNetGCF_000018525.1Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "a-proteobacteria synNet",
+        "longLabel": "a-proteobacteria (2007-12-20) Syntenic Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.synNet.bb",
+        "summary": "bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.synNet.summary.bb",
+        "speciesOrder": "GCF_000018525.1",
+        "priority": "6"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "a-proteobacteria synNet",
+      "description": "a-proteobacteria (2007-12-20) Syntenic Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.synNet.bb"
+      },
+      "trackId": "ucsc-trackhub-1058355430",
+      "assemblyNames": ["GCF_000018905.1"]
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_000018525.1",
+        "parent": "mafNetGCF_000018525.1Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "a-proteobacteria rbestNet",
+        "longLabel": "a-proteobacteria (2007-12-20) Reciprocal Best Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.rbestNet.bb",
+        "summary": "bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_000018525.1",
+        "priority": "7"
+      },
+      "category": ["compGeno"],
+      "type": "FeatureTrack",
+      "name": "a-proteobacteria rbestNet",
+      "description": "a-proteobacteria (2007-12-20) Reciprocal Best Net Alignment",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/018/905/GCF_000018905.1/bbi/GCF_000018905.1_ASM1890v1.GCF_000018525.1.rbestNet.bb"
+      },
+      "trackId": "ucsc-trackhub--2076805445",
+      "assemblyNames": ["GCF_000018905.1"]
+    }
+  ]
+}

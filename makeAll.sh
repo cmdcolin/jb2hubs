@@ -3,7 +3,7 @@
 node generateHub/downloadHubs.ts
 
 node generateHub/index.ts
-./ncbi.sh
+./updateNcbiInfo.sh
 ./makeJBrowseConfigs.sh
-./makeHubPages.sh
+node generateHub/makeHubPages.ts
 node generateHub/makeExtensions.ts

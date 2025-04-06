@@ -1,0 +1,264 @@
+{
+  "assemblies": [
+    {
+      "name": "GCF_002145785.1",
+      "displayName": "Anjozorobe virus (Anjozorobe/Em/MDG/2009/ATD49 2017)",
+      "sequence": {
+        "type": "ReferenceSequenceTrack",
+        "metadata": {
+          "genome": "GCF_002145785.1",
+          "taxId": "1424613",
+          "groups": "groups.txt",
+          "description": "Anjozorobe virus (Anjozorobe/Em/MDG/2009/ATD49 2017)",
+          "twoBitPath": "GCF_002145785.1.2bit",
+          "twoBitBptUrl": "GCF_002145785.1.2bit.bpt",
+          "chromSizes": "GCF_002145785.1.chrom.sizes.txt",
+          "chromAliasBb": "GCF_002145785.1.chromAlias.bb",
+          "organism": "ViralMultiSegProj386346 May 2017",
+          "defaultPos": "NC_034556.1:2169-6508",
+          "scientificName": "Anjozorobe virus",
+          "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/html/GCF_002145785.1_ViralMultiSegProj386346.description.html\">html/GCF_002145785.1_ViralMultiSegProj386346.description.html</a>",
+          "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/145/785/GCF_002145785.1",
+          "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/145/785/GCF_002145785.1",
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/145/785/GCF_002145785.1"
+        },
+        "trackId": "GCF_002145785.1-ReferenceSequenceTrack",
+        "adapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/GCF_002145785.1.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/GCF_002145785.1.chrom.sizes.txt"
+        }
+      },
+      "refNameAliases": {
+        "adapter": {
+          "type": "RefNameAliasAdapter",
+          "refNameColumnHeaderName": "ucsc",
+          "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/GCF_002145785.1.chromAlias.txt"
+        }
+      }
+    }
+  ],
+  "tracks": [
+    {
+      "metadata": {
+        "track": "assembly",
+        "longLabel": "Assembly",
+        "shortLabel": "Assembly",
+        "visibility": "hide",
+        "colorByStrand": "150,100,30 230,170,40",
+        "color": "150,100,30",
+        "altColor": "230,170,40",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.assembly.bb",
+        "type": "bigBed 6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/html/GCF_002145785.1_ViralMultiSegProj386346.assembly\">html/GCF_002145785.1_ViralMultiSegProj386346.assembly</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_002145785.1_ViralMultiSegProj386346.assembly.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
+        "group": "map"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Assembly",
+      "description": "Assembly",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.assembly.bb"
+      },
+      "trackId": "ucsc-trackhub-964019215",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "cytoBandIdeo",
+        "shortLabel": "Chromosome Band (Ideogram)",
+        "longLabel": "Ideogram for Orientation",
+        "group": "map",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.cytoBand.bb"
+      },
+      "category": ["map"],
+      "type": "FeatureTrack",
+      "name": "Chromosome Band (Ideogram)",
+      "description": "Ideogram for Orientation",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.cytoBand.bb"
+      },
+      "trackId": "ucsc-trackhub--1844653341",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "gc5Base",
+        "shortLabel": "GC Percent",
+        "longLabel": "GC Percent in 5-Base Windows",
+        "group": "map",
+        "visibility": "dense",
+        "autoScale": "Off",
+        "maxHeightPixels": "128:36:16",
+        "graphTypeDefault": "Bar",
+        "gridDefault": "OFF",
+        "windowingFunction": "Mean",
+        "color": "0,0,0",
+        "altColor": "128,128,128",
+        "viewLimits": "30:70",
+        "type": "bigWig 0 100",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.gc5Base.bw",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/html/GCF_002145785.1_ViralMultiSegProj386346.gc5Base\">html/GCF_002145785.1_ViralMultiSegProj386346.gc5Base</a>"
+      },
+      "category": ["map"],
+      "type": "QuantitativeTrack",
+      "name": "GC Percent",
+      "description": "GC Percent in 5-Base Windows",
+      "adapter": {
+        "type": "BigWigAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.gc5Base.bw"
+      },
+      "trackId": "ucsc-trackhub-698697260",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.rmsk.bb",
+        "xrefDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.rmsk.align.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/html/GCF_002145785.1_ViralMultiSegProj386346.repeatMasker\">html/GCF_002145785.1_ViralMultiSegProj386346.repeatMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "RepeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.rmsk.bb"
+      },
+      "trackId": "ucsc-trackhub-1952584693",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "simpleRepeat",
+        "shortLabel": "Simple Repeats",
+        "longLabel": "Simple Tandem Repeats by TRF",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 4 +",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.simpleRepeat.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/html/GCF_002145785.1_ViralMultiSegProj386346.simpleRepeat\">html/GCF_002145785.1_ViralMultiSegProj386346.simpleRepeat</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "Simple Repeats",
+      "description": "Simple Tandem Repeats by TRF",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.simpleRepeat.bb"
+      },
+      "trackId": "ucsc-trackhub--2111074149",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "ncbiGene",
+        "longLabel": "NCBI gene predictions",
+        "shortLabel": "NCBI Genes",
+        "visibility": "pack",
+        "color": "0,80,150",
+        "altColor": "150,80,0",
+        "colorByStrand": "0,80,150 150,80,0",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.ncbiGene.bb",
+        "type": "bigGenePred",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/html/GCF_002145785.1_ViralMultiSegProj386346.ncbiGene\">html/GCF_002145785.1_ViralMultiSegProj386346.ncbiGene</a>",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_002145785.1_ViralMultiSegProj386346.ncbiGene.ix",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/?term=$$",
+        "urlLabel": "Entrez gene:",
+        "labelFields": "geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "group": "genes"
+      },
+      "category": ["genes"],
+      "type": "FeatureTrack",
+      "name": "NCBI Genes",
+      "description": "NCBI gene predictions",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.ncbiGene.bb"
+      },
+      "trackId": "ucsc-trackhub-1190553964",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExt",
+        "parent": "cpgIslands off",
+        "shortLabel": "CpG Islands",
+        "longLabel": "CpG Islands (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "1",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.cpgIslandExt.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "CpG Islands",
+      "description": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.cpgIslandExt.bb"
+      },
+      "trackId": "ucsc-trackhub-184146416",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "cpgIslandExtUnmasked",
+        "parent": "cpgIslands on",
+        "shortLabel": "Unmasked CpG",
+        "longLabel": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+        "type": "bigBed 4 +",
+        "priority": "2",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.cpgIslandExtUnmasked.bb"
+      },
+      "category": ["regulation"],
+      "type": "FeatureTrack",
+      "name": "Unmasked CpG",
+      "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.cpgIslandExtUnmasked.bb"
+      },
+      "trackId": "ucsc-trackhub-2137876781",
+      "assemblyNames": ["GCF_002145785.1"]
+    },
+    {
+      "metadata": {
+        "track": "windowMasker",
+        "shortLabel": "WM + SDust",
+        "longLabel": "Genomic Intervals Masked by WindowMasker + SDust",
+        "group": "varRep",
+        "visibility": "dense",
+        "type": "bigBed 3",
+        "bigDataUrl": "bbi/GCF_002145785.1_ViralMultiSegProj386346.windowMasker.bb",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/html/GCF_002145785.1_ViralMultiSegProj386346.windowMasker\">html/GCF_002145785.1_ViralMultiSegProj386346.windowMasker</a>"
+      },
+      "category": ["varRep"],
+      "type": "FeatureTrack",
+      "name": "WM + SDust",
+      "description": "Genomic Intervals Masked by WindowMasker + SDust",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/145/785/GCF_002145785.1/bbi/GCF_002145785.1_ViralMultiSegProj386346.windowMasker.bb"
+      },
+      "trackId": "ucsc-trackhub--1658058309",
+      "assemblyNames": ["GCF_002145785.1"]
+    }
+  ]
+}

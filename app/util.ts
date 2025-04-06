@@ -46,7 +46,6 @@ function parseAssemblyEntry({
   }
   const r = ncbiData?.result.uids[0]
   const r2 = r ? ncbiData?.result[r]! : ({} as any)
-  console.log({ ncbiData, r })
   if (!r2) {
     throw new Error('failed to parse NCBI json ' + accession)
   }
@@ -73,7 +72,8 @@ function parseAssemblyEntry({
     commonName: comName || '',
     taxonId: taxId || '',
     assemblyStatus,
-    jbrowseLink: `http://jbrowse.org/code/jb2/main/?config=https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
+    jbrowseLink: `https://jbrowse.org/code/jb2/main/?config=https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
+    jbrowseConfig: `https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
     ncbiLink: `https://www.ncbi.nlm.nih.gov/assembly/${accession}`,
     ucscDataLink: ucscBase,
     ucscBrowserLink: ucscBrowser,

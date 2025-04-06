@@ -1,18 +1,26 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { Download, Star } from 'lucide-react'
 
 import type { AssemblyData } from '../util'
 
 import './table.css'
-
-type FilterOption = 'all' | 'refseq' | 'genbank'
 
 interface SortColumn {
   columnKey: string
   direction: 'ASC' | 'DESC'
 }
 const statusOrder = ['Complete genome', 'Chromosome', 'Scaffold', 'Contig']
+
+const filterCategories = {
+  all: 'All',
+  refseq: 'RefSeq only',
+  genbank: 'GenBank only',
+  designatedReference: 'Designated reference only',
+}
+
+type FilterOption = keyof typeof filterCategories
 
 export default function DataTable({ rows }: { rows: AssemblyData[] }) {
   const [sortColumn, setSortColumn] = useState<SortColumn>()
@@ -23,9 +31,13 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
     if (filterOption === 'all') {
       return rows
     } else if (filterOption === 'refseq') {
-      return rows.filter(row => row.ncbiName.startsWith('GCF_'))
+      return rows.filter(r => r.ncbiName.startsWith('GCF_'))
+    } else if (filterOption === 'genbank') {
+      return rows.filter(r => r.ncbiName.startsWith('GCA_'))
+    } else if (filterOption === 'designatedReference') {
+      return rows.filter(r => r.ncbiRefSeqCategory === 'reference genome')
     } else {
-      return rows.filter(row => row.ncbiName.startsWith('GCA_'))
+      return rows
     }
   }, [rows, filterOption])
 
@@ -93,14 +105,8 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
   const columns = [
     {
       field: 'commonName',
-      title: 'Common Name',
+      title: 'Common Name (star indicates "designated reference")',
       sortable: true,
-    },
-    {
-      field: 'ncbiRefSeqCategory',
-      title: 'Designated reference',
-      sortable: true,
-      extra: true,
     },
     {
       field: 'jbrowseLink',
@@ -147,8 +153,14 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
       field: 'ncbiAssemblyName',
       title: 'NCBI assembly name',
       sortable: true,
+    },
+    {
+      field: 'accession',
+      title: 'Accession',
+      sortable: true,
       extra: true,
     },
+
     {
       field: 'taxonId',
       title: 'Taxonomy ID',
@@ -175,50 +187,25 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
         }}
       >
         <div>
-          <label
-            style={{
-              marginRight: '15px',
-            }}
-          >
-            <input
-              type="radio"
-              name="databaseFilter"
-              value="all"
-              checked={filterOption === 'all'}
-              onChange={() => {
-                setFilterOption('all')
+          {Object.entries(filterCategories).map(([key, val]) => (
+            <label
+              key={key}
+              style={{
+                marginRight: 15,
               }}
-            />
-            All
-          </label>
-          <label
-            style={{
-              marginRight: '15px',
-            }}
-          >
-            <input
-              type="radio"
-              name="databaseFilter"
-              value="refseq"
-              checked={filterOption === 'refseq'}
-              onChange={() => {
-                setFilterOption('refseq')
-              }}
-            />
-            RefSeq only
-          </label>
-          <label>
-            <input
-              type="radio"
-              name="databaseFilter"
-              value="genbank"
-              checked={filterOption === 'genbank'}
-              onChange={() => {
-                setFilterOption('genbank')
-              }}
-            />
-            GenBank only
-          </label>
+            >
+              <input
+                type="radio"
+                name="databaseFilter"
+                value={key}
+                checked={filterOption === key}
+                onChange={() => {
+                  setFilterOption(key as keyof typeof filterCategories)
+                }}
+              />
+              {val}
+            </label>
+          ))}
         </div>
         <div>
           <label
@@ -291,7 +278,18 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
                     // Render cell based on column field
                     switch (field) {
                       case 'commonName': {
-                        return <td key={field}>{row.commonName}</td>
+                        return (
+                          <td key={field}>
+                            {row.commonName}{' '}
+                            {row.ncbiRefSeqCategory === 'reference genome' ? (
+                              <Star
+                                fill="orange"
+                                strokeWidth={0}
+                                className="w-[1em] h-[1em]"
+                              />
+                            ) : null}
+                          </td>
+                        )
                       }
                       case 'ncbiRefSeqCategory': {
                         return <td key={field}>{row.ncbiRefSeqCategory}</td>
@@ -306,9 +304,15 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
                             >
                               JBrowse
                             </a>
+                            {showAllColumns ? (
+                              <a download href={row.jbrowseConfig}>
+                                <Download className="w-[1em] h-[1em]" />
+                              </a>
+                            ) : null}
                           </td>
                         )
                       }
+
                       case 'ucscBrowserLink': {
                         return (
                           <td key={field}>
