@@ -20,7 +20,6 @@ for (const f of [
   'HPRC',
   'BRC',
   'globalReference',
-  'mouseStrains',
   'legacy',
 ]) {
   fs.mkdirSync(`app/hubs/${f}/`, {

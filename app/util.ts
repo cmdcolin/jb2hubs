@@ -42,7 +42,7 @@ function parseAssemblyEntry({
       result: NCBIData
     }
   } catch {
-    console.error('NCBI data not found')
+    console.error(`NCBI data not found for ${accession}`)
   }
   const r = ncbiData?.result.uids[0]
   const r2 = r ? ncbiData?.result[r]! : ({} as any)
