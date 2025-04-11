@@ -8,5 +8,10 @@ https://cmdcolin.github.io/jb2hubs
 ## Preparing hubs
 
 ```bash
-./doEverything.sh
+./makeAll.sh
 ```
+
+
+## Footnote
+
+See also https://github.com/cmdcolin/ucsc2jbrowse for converting non-GenArk ucsc browsers to jbrowse configs
