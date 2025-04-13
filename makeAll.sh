@@ -7,3 +7,4 @@ node generateHub/index.ts
 ./makeJBrowseConfigs.sh
 node generateHub/makeHubPages.ts
 node generateHub/makeExtensions.ts
+yarn format
