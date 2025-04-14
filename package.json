@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "deploy": "gh-pages -d out --nojekyll",
-    "format": "prettier --write .",
+    "format": "prettier --write",
     "predeploy": "yarn build",
     "postdeploy": "git push --follow-tags"
   },
