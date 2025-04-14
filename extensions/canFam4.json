@@ -1,0 +1,34 @@
+{
+  "tracks": [
+    {
+      "type": "VariantTrack",
+      "name": "Dog10k SNPs",
+      "trackId": "dog10k_snps",
+      "assemblyNames": ["canFam4"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://myloveydove.com/dog10k/AutoAndXPAR.SNPs.vqsr99.vcf.gz"
+      }
+    },
+    {
+      "type": "VariantTrack",
+      "name": "Dog10k SVs",
+      "trackId": "dog10k_svs",
+      "assemblyNames": ["canFam4"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://myloveydove.com/dog10k/SV-genotype-v2.merge.agg_only.08032022.vcf.gz"
+      }
+    },
+    {
+      "type": "VariantTrack",
+      "name": "Dog10k inversions",
+      "trackId": "dog10k_inversions",
+      "assemblyNames": ["canFam4"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://myloveydove.com/dog10k/SV-genotype-v2.merge.INV.08042022.vcf.gz"
+      }
+    }
+  ]
+}
