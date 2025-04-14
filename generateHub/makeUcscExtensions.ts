@@ -10,12 +10,11 @@ interface Config {
     trackId: string
   }[]
 }
-const ret = fs.readdirSync('extensions')
+const base = 'ucscExtensions'
+const ret = fs.readdirSync(base)
 for (const item of ret) {
-  const accession = item.replace('.json', '')
-  const [base, rest] = accession.split('_')
-  const [b1, b2, b3] = rest.match(/.{1,3}/g)!
-  const f = `hubs/${base}/${b1}/${b2}/${b3}/${accession}/config.json`
+  console.log({ item })
+  const f = `ucsc/${item}/config.json`
 
   // Create directory structure if it doesn't exist
   const dir = path.dirname(f)
@@ -30,7 +29,7 @@ for (const item of ret) {
   console.log(`Created backup: ${f}.bak`)
 
   const existingConfig = readJSON(f) as Config
-  const extensionConfig = readJSON(path.join('extensions', item)) as Config
+  const extensionConfig = readJSON(path.join(base, item)) as Config
 
   // Merge the configs (extension takes precedence)
   const mergedConfig = {
