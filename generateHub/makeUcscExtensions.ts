@@ -13,8 +13,8 @@ interface Config {
 const base = 'ucscExtensions'
 const ret = fs.readdirSync(base)
 for (const item of ret) {
-  console.log({ item })
-  const f = `ucsc/${item}/config.json`
+  const accession = item.replace('.json', '')
+  const f = `ucscHubs/${accession}/config.json`
 
   // Create directory structure if it doesn't exist
   const dir = path.dirname(f)
@@ -36,7 +36,7 @@ for (const item of ret) {
     ...existingConfig,
     ...extensionConfig,
     tracks: dedupe(
-      [...existingConfig.tracks, ...extensionConfig.tracks],
+      [...extensionConfig.tracks, ...existingConfig.tracks],
       t => t.trackId,
     ),
   }

@@ -38,7 +38,7 @@ for (const item of ret) {
     ...existingConfig,
     ...extensionConfig,
     tracks: dedupe(
-      [...existingConfig.tracks, ...extensionConfig.tracks],
+      [...extensionConfig.tracks, ...existingConfig.tracks],
       t => t.trackId,
     ),
   }
