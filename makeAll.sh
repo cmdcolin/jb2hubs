@@ -6,6 +6,6 @@ node generateHub/index.ts
 ./updateNcbiInfo.sh
 ./makeJBrowseConfigs.sh
 node generateHub/makeHubPages.ts
-node generateHub/makeExtensions.ts
+node generateHub/makeGenArkExtensions.ts
 yarn format
 ./uploadUcscHubs.sh

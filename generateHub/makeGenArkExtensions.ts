@@ -10,8 +10,8 @@ interface Config {
     trackId: string
   }[]
 }
-const base = 'genArkExtensions'
-const ret = fs.readdirSync(base)
+const b = 'genArkExtensions'
+const ret = fs.readdirSync(b)
 for (const item of ret) {
   const accession = item.replace('.json', '')
   const [base, rest] = accession.split('_')
@@ -31,7 +31,7 @@ for (const item of ret) {
   console.log(`Created backup: ${f}.bak`)
 
   const existingConfig = readJSON(f) as Config
-  const extensionConfig = readJSON(path.join(base, item)) as Config
+  const extensionConfig = readJSON(path.join(b, item)) as Config
 
   // Merge the configs (extension takes precedence)
   const mergedConfig = {
