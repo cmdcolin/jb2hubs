@@ -23,7 +23,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CAT + Liftoff Gene Annotations",
+      "name": "CAT/Liftoff Genes",
       "category": ["genes"],
       "trackId": "catLiftOffGenesV1",
       "adapter": {
@@ -33,7 +33,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Cactus GRCh37/hg38",
+      "name": "hg38",
       "assemblyNames": ["hs1"],
       "category": ["compGeno"],
       "trackId": "snakeHg38",
@@ -44,7 +44,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Cactus CHM13/hs1",
+      "name": "CHM13/hs1",
       "assemblyNames": ["hs1"],
       "category": ["compGeno"],
       "trackId": "snakehs1",
@@ -56,7 +56,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Centromeric Satellite Annotation",
+      "name": "CenSat Annotation",
       "category": ["map"],
       "trackId": "censat",
       "adapter": {
@@ -67,7 +67,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+      "name": "RefSeq All",
       "category": ["genes"],
       "trackId": "ncbiRefSeq",
       "adapter": {
@@ -78,7 +78,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+      "name": "RefSeq Curated",
       "category": ["genes"],
       "trackId": "ncbiRefSeqCurated",
       "adapter": {
@@ -89,7 +89,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+      "name": "RefSeq Predicted",
       "category": ["genes"],
       "trackId": "ncbiRefSeqPredicted",
       "adapter": {
@@ -100,7 +100,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+      "name": "RefSeq Other",
       "category": ["genes"],
       "trackId": "ncbiRefSeqOther",
       "adapter": {
@@ -111,7 +111,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RefSeq Alignments of RNAs",
+      "name": "RefSeq Alignments",
       "category": ["genes"],
       "trackId": "ncbiRefSeqPsl",
       "adapter": {
@@ -122,7 +122,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Differences between NCBI RefSeq Transcripts and the Reference Genome",
+      "name": "RefSeq Diffs",
       "category": ["genes"],
       "trackId": "ncbiRefSeqGenomicDiff",
       "adapter": {
@@ -133,7 +133,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CHM13 unique in comparison to GRCh38/hg38",
+      "name": "CHM13 unique for hg38",
       "category": ["map"],
       "trackId": "hgUniqueHg38",
       "adapter": {
@@ -144,7 +144,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CHM13 unique in comparison to GRCh37/hg19",
+      "name": "CHM13 unique for hg19",
       "category": ["map"],
       "trackId": "hgUniquehg19",
       "adapter": {
@@ -155,7 +155,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Consensus rDNA models",
+      "name": "rDNA models",
       "category": ["map"],
       "trackId": "rdnaModel",
       "adapter": {
@@ -165,7 +165,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq default NEG no kmer filtering",
+      "name": "PROseq default NEG",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_default_NEG",
@@ -176,7 +176,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq default POS no kmer filtering",
+      "name": "PROseq default POS",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_default_POS",
@@ -187,7 +187,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq k100 NEG no kmer filtering",
+      "name": "PROseq k100 NEG",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_k100_NEG",
@@ -198,7 +198,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq k100 POS no kmer filtering",
+      "name": "PROseq k100 POS",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_k100_POS",
@@ -209,7 +209,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq k100 NEG 21mer filtering",
+      "name": "PROseq k100-21mer NEG",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_k100-21mer_NEG",
@@ -220,7 +220,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq k100 POS 21mer filtering",
+      "name": "PROseq k100-21mer POS",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_k100-21mer_POS",
@@ -231,7 +231,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq k100 NEG dual 21mer filtering",
+      "name": "PROseq k100-dual-21mer NEG",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_k100-dual-21mer_NEG",
@@ -242,7 +242,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "PROseq k100 POS dual 21mer filtering",
+      "name": "PROseq k100-dual-21mer POS",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "proseq_k100-dual-21mer_POS",
@@ -253,7 +253,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RNA-Seq default no kmer filtering",
+      "name": "RNA-Seq default",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "rnaseq_default",
@@ -264,7 +264,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RNA-Seq k100 no kmer filtering",
+      "name": "RNA-Seq k100",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "rnaseq_k100",
@@ -275,7 +275,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RNA-Seq k100 21mer filtering",
+      "name": "RNA-Seq k100 21mer",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "rnaseq_k100-21mer",
@@ -286,7 +286,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RNA-Seq k100 dual 21mer filtering",
+      "name": "RNA-Seq k100 dual 21mer",
       "assemblyNames": ["hs1"],
       "category": ["rna"],
       "trackId": "rnaseq_k100-dual-21mer",
@@ -298,7 +298,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Assembly from NCBI Genbank Sequences",
+      "name": "Assembly",
       "category": ["map"],
       "trackId": "assembly",
       "adapter": {
@@ -309,7 +309,7 @@
     {
       "type": "VariantTrack",
       "assemblyNames": ["hs1"],
-      "name": "ClinVar Variants 20220313 (lifted)",
+      "name": "ClinVar Variants",
       "category": ["phenDis"],
       "trackId": "clinVar20220313",
       "adapter": {
@@ -320,7 +320,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CpG Islands (Islands < 300 Bases are Light Green)",
+      "name": "CpG Islands",
       "category": ["regulation"],
       "trackId": "cpgIslandExt",
       "adapter": {
@@ -331,7 +331,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
+      "name": "Unmasked CpG",
       "category": ["regulation"],
       "trackId": "cpgIslandExtUnmasked",
       "adapter": {
@@ -342,7 +342,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CRISPR/Cas9 -NGG Targets, whole genome",
+      "name": "CRISPR Targets",
       "category": ["genes"],
       "trackId": "crisprHs1",
       "adapter": {
@@ -353,7 +353,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Cytobands Mapped from hg38/GRCh38",
+      "name": "Cytobands (Ideogram)",
       "category": ["map"],
       "trackId": "cytoBandIdeo",
       "adapter": {
@@ -364,7 +364,7 @@
     {
       "type": "VariantTrack",
       "assemblyNames": ["hs1"],
-      "name": "dbSNP 155 (lifted)",
+      "name": "dbSNP 155",
       "category": ["varRep"],
       "trackId": "dbSNP155",
       "adapter": {
@@ -374,7 +374,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "GC Percent in 5-Base Windows",
+      "name": "GC Percent",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "gc5Base",
@@ -386,7 +386,7 @@
     {
       "type": "VariantTrack",
       "assemblyNames": ["hs1"],
-      "name": "GWAS Variants 2022-03-08 (lifted)",
+      "name": "GWAS Variants",
       "category": ["phenDis"],
       "trackId": "gwasSNPs2022-03-08",
       "adapter": {
@@ -397,7 +397,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "T2T GRCh38/hg38 liftOver alignments: minimap2, no haps/alts, only same chrom",
+      "name": "T2T hg38 liftOver",
       "category": ["map"],
       "trackId": "t2tHg38LiftOver",
       "adapter": {
@@ -408,7 +408,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "T2T GRCh37/hg19 liftOver alignments: minimap2, no haps/alts, only same chrom",
+      "name": "T2T hg19 liftOver",
       "category": ["map"],
       "trackId": "t2tHg19LiftOver",
       "adapter": {
@@ -419,7 +419,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Single-read mappability with 24-mers",
+      "name": "Umap S24",
       "category": ["map"],
       "trackId": "umap24",
       "adapter": {
@@ -430,7 +430,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Single-read mappability with 36-mers",
+      "name": "Umap S36",
       "category": ["map"],
       "trackId": "umap36",
       "adapter": {
@@ -441,7 +441,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Single-read mappability with 50-mers",
+      "name": "Umap S50",
       "category": ["map"],
       "trackId": "umap50",
       "adapter": {
@@ -452,7 +452,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Single-read mappability with 100-mers",
+      "name": "Umap S100",
       "category": ["map"],
       "trackId": "umap100",
       "adapter": {
@@ -463,7 +463,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Single-read mappability with 150-mers",
+      "name": "Umap S150",
       "category": ["map"],
       "trackId": "umap150",
       "adapter": {
@@ -474,7 +474,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Single-read mappability with 250-mers",
+      "name": "Umap S250",
       "category": ["map"],
       "trackId": "umap250",
       "adapter": {
@@ -484,7 +484,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Multi-read mappability with 24-mers",
+      "name": "Umap M24",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "umap24Quantitative",
@@ -495,7 +495,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Multi-read mappability with 36-mers",
+      "name": "Umap M36",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "umap36Quantitative",
@@ -506,7 +506,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Multi-read mappability with 50-mers",
+      "name": "Umap M50",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "umap50Quantitative",
@@ -517,7 +517,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Multi-read mappability with 100-mers",
+      "name": "Umap M100",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "umap100Quantitative",
@@ -528,7 +528,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Multi-read mappability with 150-mers",
+      "name": "Umap M150",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "umap150Quantitative",
@@ -539,7 +539,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Multi-read mappability with 250-mers",
+      "name": "Umap M250",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "umap250Quantitative",
@@ -550,7 +550,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "GA Microsatellite repeats",
+      "name": "GA Microsatellites",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "microsatellites_GA",
@@ -561,7 +561,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "TC Microsatellite repeats",
+      "name": "TC Microsatellites",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "microsatellites_TC",
@@ -572,7 +572,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "GC Microsatellite repeats",
+      "name": "GC Microsatellites",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "microsatellites_GC",
@@ -583,7 +583,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "AT Microsatellite repeats",
+      "name": "AT Microsatellites",
       "assemblyNames": ["hs1"],
       "category": ["map"],
       "trackId": "microsatellites_AT",
@@ -595,7 +595,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "chimpanzee (Jan. 2024 GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri) chain alignment",
+      "name": "chimpanzee align",
       "category": ["compGeno"],
       "trackId": "netGCA_028858775.2",
       "adapter": {
@@ -606,7 +606,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "chimpanzee (Jan. 2024 GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri) syntenic alignment",
+      "name": "chimpanzee synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCA_028858775.2",
       "adapter": {
@@ -617,7 +617,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "chimpanzee (Jan. 2024 GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri) reciprocal best alignment",
+      "name": "chimpanzee rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCA_028858775.2",
       "adapter": {
@@ -628,7 +628,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "pygmy chimpanzee (Jan. 2024 GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri) chain alignment",
+      "name": "pygmy chimpanzee align",
       "category": ["compGeno"],
       "trackId": "netGCA_029289425.2",
       "adapter": {
@@ -639,7 +639,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "pygmy chimpanzee (Jan. 2024 GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri) syntenic alignment",
+      "name": "pygmy chimpanzee synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCA_029289425.2",
       "adapter": {
@@ -650,7 +650,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "pygmy chimpanzee (Jan. 2024 GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri) reciprocal best alignment",
+      "name": "pygmy chimpanzee rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCA_029289425.2",
       "adapter": {
@@ -661,7 +661,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "western lowland gorilla (Jan. 2024 GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri) chain alignment",
+      "name": "western lowland gorilla align",
       "category": ["compGeno"],
       "trackId": "netGCA_029281585.2",
       "adapter": {
@@ -672,7 +672,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "western lowland gorilla (Jan. 2024 GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri) syntenic alignment",
+      "name": "western lowland gorilla synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCA_029281585.2",
       "adapter": {
@@ -683,7 +683,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "western lowland gorilla (Jan. 2024 GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri) reciprocal best alignment",
+      "name": "western lowland gorilla rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCA_029281585.2",
       "adapter": {
@@ -694,7 +694,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Sumatran orangutan (Jan. 2024 GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri) chain alignment",
+      "name": "Sumatran orangutan align",
       "category": ["compGeno"],
       "trackId": "netGCA_028885655.2",
       "adapter": {
@@ -705,7 +705,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Sumatran orangutan (Jan. 2024 GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri) syntenic alignment",
+      "name": "Sumatran orangutan synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCA_028885655.2",
       "adapter": {
@@ -716,7 +716,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Sumatran orangutan (Jan. 2024 GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri) reciprocal best alignment",
+      "name": "Sumatran orangutan rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCA_028885655.2",
       "adapter": {
@@ -727,7 +727,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Bornean orangutan (Jan. 2024 GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri) chain alignment",
+      "name": "Bornean orangutan align",
       "category": ["compGeno"],
       "trackId": "netGCA_028885625.2",
       "adapter": {
@@ -738,7 +738,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Bornean orangutan (Jan. 2024 GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri) syntenic alignment",
+      "name": "Bornean orangutan synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCA_028885625.2",
       "adapter": {
@@ -749,7 +749,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Bornean orangutan (Jan. 2024 GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri) reciprocal best alignment",
+      "name": "Bornean orangutan rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCA_028885625.2",
       "adapter": {
@@ -760,7 +760,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "siamang (Jan. 2024 GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri) chain alignment",
+      "name": "siamang align",
       "category": ["compGeno"],
       "trackId": "netGCA_028878055.2",
       "adapter": {
@@ -771,7 +771,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "siamang (Jan. 2024 GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri) syntenic alignment",
+      "name": "siamang synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCA_028878055.2",
       "adapter": {
@@ -782,7 +782,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "siamang (Jan. 2024 GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri) reciprocal best alignment",
+      "name": "siamang rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCA_028878055.2",
       "adapter": {
@@ -793,7 +793,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "white-tufted-ear marmoset (Apr. 2021 GCF_011100555.1_mCalJa1.2.pat.X) chain alignment",
+      "name": "white-tufted-ear marmoset align",
       "category": ["compGeno"],
       "trackId": "netGCF_011100555.1",
       "adapter": {
@@ -804,7 +804,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "white-tufted-ear marmoset (Apr. 2021 GCF_011100555.1_mCalJa1.2.pat.X) syntenic alignment",
+      "name": "white-tufted-ear marmoset synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCF_011100555.1",
       "adapter": {
@@ -815,7 +815,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "white-tufted-ear marmoset (Apr. 2021 GCF_011100555.1_mCalJa1.2.pat.X) reciprocal best alignment",
+      "name": "white-tufted-ear marmoset rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCF_011100555.1",
       "adapter": {
@@ -826,7 +826,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Ring-tailed lemur (Nov. 2021 GCF_020740605.2_mLemCat1.pri) chain alignment",
+      "name": "Ring-tailed lemur align",
       "category": ["compGeno"],
       "trackId": "netGCF_020740605.2",
       "adapter": {
@@ -837,7 +837,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Ring-tailed lemur (Nov. 2021 GCF_020740605.2_mLemCat1.pri) syntenic alignment",
+      "name": "Ring-tailed lemur synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCF_020740605.2",
       "adapter": {
@@ -848,7 +848,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Ring-tailed lemur (Nov. 2021 GCF_020740605.2_mLemCat1.pri) reciprocal best alignment",
+      "name": "Ring-tailed lemur rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCF_020740605.2",
       "adapter": {
@@ -859,7 +859,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "slow loris (Dec. 2022 GCF_027406575.1_mNycCou1.pri) chain alignment",
+      "name": "slow loris align",
       "category": ["compGeno"],
       "trackId": "netGCF_027406575.1",
       "adapter": {
@@ -870,7 +870,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "slow loris (Dec. 2022 GCF_027406575.1_mNycCou1.pri) syntenic alignment",
+      "name": "slow loris synAlign",
       "category": ["compGeno"],
       "trackId": "synNetGCF_027406575.1",
       "adapter": {
@@ -881,7 +881,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "slow loris (Dec. 2022 GCF_027406575.1_mNycCou1.pri) reciprocal best alignment",
+      "name": "slow loris rbAlign",
       "category": ["compGeno"],
       "trackId": "rbestNetGCF_027406575.1",
       "adapter": {
@@ -892,7 +892,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "chimpanzee (Jan. 2024 GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri) Chained Alignments",
+      "name": "chimpanzee Chain",
       "category": ["compGeno"],
       "trackId": "chainGCA_028858775.2",
       "adapter": {
@@ -903,7 +903,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "pygmy chimpanzee (Jan. 2024 GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri) Chained Alignments",
+      "name": "pygmy chimpanzee Chain",
       "category": ["compGeno"],
       "trackId": "chainGCA_029289425.2",
       "adapter": {
@@ -914,7 +914,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "western lowland gorilla (Jan. 2024 GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri) Chained Alignments",
+      "name": "western lowland gorilla Chain",
       "category": ["compGeno"],
       "trackId": "chainGCA_029281585.2",
       "adapter": {
@@ -925,7 +925,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Sumatran orangutan (Jan. 2024 GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri) Chained Alignments",
+      "name": "Sumatran orangutan Chain",
       "category": ["compGeno"],
       "trackId": "chainGCA_028885655.2",
       "adapter": {
@@ -936,7 +936,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Bornean orangutan (Jan. 2024 GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri) Chained Alignments",
+      "name": "Bornean orangutan Chain",
       "category": ["compGeno"],
       "trackId": "chainGCA_028885625.2",
       "adapter": {
@@ -947,7 +947,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "siamang (Jan. 2024 GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri) Chained Alignments",
+      "name": "siamang Chain",
       "category": ["compGeno"],
       "trackId": "chainGCA_028878055.2",
       "adapter": {
@@ -958,7 +958,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "white-tufted-ear marmoset (Apr. 2021 GCF_011100555.1_mCalJa1.2.pat.X) Chained Alignments",
+      "name": "white-tufted-ear marmoset Chain",
       "category": ["compGeno"],
       "trackId": "chainGCF_011100555.1",
       "adapter": {
@@ -969,7 +969,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Ring-tailed lemur (Nov. 2021 GCF_020740605.2_mLemCat1.pri) Chained Alignments",
+      "name": "Ring-tailed lemur Chain",
       "category": ["compGeno"],
       "trackId": "chainGCF_020740605.2",
       "adapter": {
@@ -980,7 +980,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "slow loris (Dec. 2022 GCF_027406575.1_mNycCou1.pri) Chained Alignments",
+      "name": "slow loris Chain",
       "category": ["compGeno"],
       "trackId": "chainGCF_027406575.1",
       "adapter": {
@@ -991,7 +991,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "chimpanzee (Jan. 2024 GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri) Reciprocal best chained alignments",
+      "name": "chimpanzee rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCA_028858775.2",
       "adapter": {
@@ -1002,7 +1002,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "pygmy chimpanzee (Jan. 2024 GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri) Reciprocal best chained alignments",
+      "name": "pygmy chimpanzee rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCA_029289425.2",
       "adapter": {
@@ -1013,7 +1013,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "western lowland gorilla (Jan. 2024 GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri) Reciprocal best chained alignments",
+      "name": "western lowland gorilla rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCA_029281585.2",
       "adapter": {
@@ -1024,7 +1024,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Sumatran orangutan (Jan. 2024 GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri) Reciprocal best chained alignments",
+      "name": "Sumatran orangutan rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCA_028885655.2",
       "adapter": {
@@ -1035,7 +1035,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Bornean orangutan (Jan. 2024 GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri) Reciprocal best chained alignments",
+      "name": "Bornean orangutan rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCA_028885625.2",
       "adapter": {
@@ -1046,7 +1046,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "siamang (Jan. 2024 GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri) Reciprocal best chained alignments",
+      "name": "siamang rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCA_028878055.2",
       "adapter": {
@@ -1057,7 +1057,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "white-tufted-ear marmoset (Apr. 2021 GCF_011100555.1_mCalJa1.2.pat.X) Reciprocal best chained alignments",
+      "name": "white-tufted-ear marmoset rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCF_011100555.1",
       "adapter": {
@@ -1068,7 +1068,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Ring-tailed lemur (Nov. 2021 GCF_020740605.2_mLemCat1.pri) Reciprocal best chained alignments",
+      "name": "Ring-tailed lemur rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCF_020740605.2",
       "adapter": {
@@ -1079,7 +1079,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "slow loris (Dec. 2022 GCF_027406575.1_mNycCou1.pri) Reciprocal best chained alignments",
+      "name": "slow loris rbChain",
       "category": ["compGeno"],
       "trackId": "chainRBestGCF_027406575.1",
       "adapter": {
@@ -1090,7 +1090,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "chimpanzee (Jan. 2024 GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri) Syntenic net chained alignments",
+      "name": "chimpanzee synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCA_028858775.2",
       "adapter": {
@@ -1101,7 +1101,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "pygmy chimpanzee (Jan. 2024 GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri) Syntenic net chained alignments",
+      "name": "pygmy chimpanzee synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCA_029289425.2",
       "adapter": {
@@ -1112,7 +1112,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "western lowland gorilla (Jan. 2024 GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri) Syntenic net chained alignments",
+      "name": "western lowland gorilla synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCA_029281585.2",
       "adapter": {
@@ -1123,7 +1123,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Sumatran orangutan (Jan. 2024 GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri) Syntenic net chained alignments",
+      "name": "Sumatran orangutan synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCA_028885655.2",
       "adapter": {
@@ -1134,7 +1134,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Bornean orangutan (Jan. 2024 GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri) Syntenic net chained alignments",
+      "name": "Bornean orangutan synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCA_028885625.2",
       "adapter": {
@@ -1145,7 +1145,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "siamang (Jan. 2024 GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri) Syntenic net chained alignments",
+      "name": "siamang synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCA_028878055.2",
       "adapter": {
@@ -1156,7 +1156,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "white-tufted-ear marmoset (Apr. 2021 GCF_011100555.1_mCalJa1.2.pat.X) Syntenic net chained alignments",
+      "name": "white-tufted-ear marmoset synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCF_011100555.1",
       "adapter": {
@@ -1167,7 +1167,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Ring-tailed lemur (Nov. 2021 GCF_020740605.2_mLemCat1.pri) Syntenic net chained alignments",
+      "name": "Ring-tailed lemur synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCF_020740605.2",
       "adapter": {
@@ -1178,7 +1178,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "slow loris (Dec. 2022 GCF_027406575.1_mNycCou1.pri) Syntenic net chained alignments",
+      "name": "slow loris synChain",
       "category": ["compGeno"],
       "trackId": "chainSynGCF_027406575.1",
       "adapter": {
@@ -1189,7 +1189,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Genome In a Bottle: all difficult regions",
+      "name": "All difficult regions",
       "category": ["map"],
       "trackId": "alldifficultregions",
       "adapter": {
@@ -1200,7 +1200,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Genome In a Bottle: lowMap+SegDup regions",
+      "name": "LowMap+SegDup",
       "category": ["map"],
       "trackId": "alllowmapandsegdupregions",
       "adapter": {
@@ -1211,7 +1211,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Genome In a Bottle: not difficult regions",
+      "name": "Not difficult regions",
       "category": ["map"],
       "trackId": "notinalldifficultregions",
       "adapter": {
@@ -1222,7 +1222,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Genome In a Bottle: not lowMap+SegDup mapping regions",
+      "name": "Not lowMap+SegDup",
       "category": ["map"],
       "trackId": "notinalllowmapandsegdupregions",
       "adapter": {
@@ -1233,7 +1233,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RefSeq mRNAs mapped to this assembly",
+      "name": "RefSeq mRNAs",
       "category": ["rna"],
       "trackId": "xenoRefGene",
       "adapter": {
@@ -1244,7 +1244,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RepeatMasker Repetitive Elements",
+      "name": "RepeatMasker",
       "category": ["varRep"],
       "trackId": "t2tRepeatMasker",
       "adapter": {
@@ -1255,7 +1255,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SEDEF Segmental Duplications",
+      "name": "SEDEF Segmental Dups",
       "category": ["varRep"],
       "trackId": "sedefSegDups",
       "adapter": {
@@ -1266,7 +1266,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Simple Tandem Repeats by TRF",
+      "name": "Simple Repeats",
       "category": ["varRep"],
       "trackId": "simpleRepeat",
       "adapter": {
@@ -1276,7 +1276,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C Control Coverage",
+      "name": "BE2C Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_BE2C.Control",
@@ -1287,7 +1287,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K27me3 Coverage",
+      "name": "BE2C H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_BE2C.H3K27me3",
@@ -1298,7 +1298,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K36me3 Coverage",
+      "name": "BE2C H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_BE2C.H3K36me3",
@@ -1309,7 +1309,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K4me1 Coverage",
+      "name": "BE2C H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_BE2C.H3K4me1",
@@ -1320,7 +1320,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K9me3 Coverage",
+      "name": "BE2C H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_BE2C.H3K9me3",
@@ -1331,7 +1331,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "C4-2B CTCF Coverage",
+      "name": "C4-2B CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_C4-2B.CTCF",
@@ -1342,7 +1342,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "C4-2B Control Coverage",
+      "name": "C4-2B Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_C4-2B.Control",
@@ -1353,7 +1353,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "C4-2B H3K27ac Coverage",
+      "name": "C4-2B H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_C4-2B.H3K27ac",
@@ -1364,7 +1364,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "22Rv1 CTCF Coverage",
+      "name": "22Rv1 CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_22Rv1.CTCF",
@@ -1375,7 +1375,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "22Rv1 Control Coverage",
+      "name": "22Rv1 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_22Rv1.Control",
@@ -1386,7 +1386,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "22Rv1 H3K27ac Coverage",
+      "name": "22Rv1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_22Rv1.H3K27ac",
@@ -1397,7 +1397,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Caco-2 Control Coverage",
+      "name": "Caco-2 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_Caco-2.Control",
@@ -1408,7 +1408,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Caco-2 H3K4me1 Coverage",
+      "name": "Caco-2 H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_Caco-2.H3K4me1",
@@ -1419,7 +1419,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Caco-2 H3K9me3 Coverage",
+      "name": "Caco-2 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_Caco-2.H3K9me3",
@@ -1430,7 +1430,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 Control Coverage",
+      "name": "HAP-1 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HAP-1.Control",
@@ -1441,7 +1441,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K27ac Coverage",
+      "name": "HAP-1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HAP-1.H3K27ac",
@@ -1452,7 +1452,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K27me3 Coverage",
+      "name": "HAP-1 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HAP-1.H3K27me3",
@@ -1463,7 +1463,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K36me3 Coverage",
+      "name": "HAP-1 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HAP-1.H3K36me3",
@@ -1474,7 +1474,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K4me1 Coverage",
+      "name": "HAP-1 H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HAP-1.H3K4me1",
@@ -1485,7 +1485,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K4me3 Coverage",
+      "name": "HAP-1 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HAP-1.H3K4me3",
@@ -1496,7 +1496,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K9me3 Coverage",
+      "name": "HAP-1 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HAP-1.H3K9me3",
@@ -1507,7 +1507,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HL-60 Control Coverage",
+      "name": "HL-60 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HL-60.Control",
@@ -1518,7 +1518,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HL-60 H3K27ac Coverage",
+      "name": "HL-60 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_HL-60.H3K27ac",
@@ -1529,7 +1529,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 Control Coverage",
+      "name": "MG63 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_MG63.Control",
@@ -1540,7 +1540,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K27me3 Coverage",
+      "name": "MG63 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_MG63.H3K27me3",
@@ -1551,7 +1551,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K36me3 Coverage",
+      "name": "MG63 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_MG63.H3K36me3",
@@ -1562,7 +1562,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K4me3 Coverage",
+      "name": "MG63 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_MG63.H3K4me3",
@@ -1573,7 +1573,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K9me3 Coverage",
+      "name": "MG63 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_MG63.H3K9me3",
@@ -1584,7 +1584,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE1 CTCF Coverage",
+      "name": "RWPE1 CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_RWPE1.CTCF",
@@ -1595,7 +1595,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE1 Control Coverage",
+      "name": "RWPE1 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_RWPE1.Control",
@@ -1606,7 +1606,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE1 H3K27ac Coverage",
+      "name": "RWPE1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_RWPE1.H3K27ac",
@@ -1617,7 +1617,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE2 CTCF Coverage",
+      "name": "RWPE2 CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_RWPE2.CTCF",
@@ -1628,7 +1628,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE2 Control Coverage",
+      "name": "RWPE2 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_RWPE2.Control",
@@ -1639,7 +1639,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE2 H3K27ac Coverage",
+      "name": "RWPE2 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_RWPE2.H3K27ac",
@@ -1650,7 +1650,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE2 H3K36me3 Coverage",
+      "name": "RWPE2 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_RWPE2.H3K36me3",
@@ -1661,7 +1661,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 Control Coverage",
+      "name": "SJCRH30 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJCRH30.Control",
@@ -1672,7 +1672,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K27ac Coverage",
+      "name": "SJCRH30 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJCRH30.H3K27ac",
@@ -1683,7 +1683,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K27me3 Coverage",
+      "name": "SJCRH30 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJCRH30.H3K27me3",
@@ -1694,7 +1694,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K36me3 Coverage",
+      "name": "SJCRH30 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJCRH30.H3K36me3",
@@ -1705,7 +1705,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K4me1 Coverage",
+      "name": "SJCRH30 H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJCRH30.H3K4me1",
@@ -1716,7 +1716,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K4me3 Coverage",
+      "name": "SJCRH30 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJCRH30.H3K4me3",
@@ -1727,7 +1727,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K9me3 Coverage",
+      "name": "SJCRH30 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJCRH30.H3K9me3",
@@ -1738,7 +1738,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 Control Coverage",
+      "name": "SJSA1 Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJSA1.Control",
@@ -1749,7 +1749,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K27ac Coverage",
+      "name": "SJSA1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJSA1.H3K27ac",
@@ -1760,7 +1760,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K27me3 Coverage",
+      "name": "SJSA1 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJSA1.H3K27me3",
@@ -1771,7 +1771,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K36me3 Coverage",
+      "name": "SJSA1 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJSA1.H3K36me3",
@@ -1782,7 +1782,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K4me3 Coverage",
+      "name": "SJSA1 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJSA1.H3K4me3",
@@ -1793,7 +1793,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K9me3 Coverage",
+      "name": "SJSA1 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_SJSA1.H3K9me3",
@@ -1804,7 +1804,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "VCaP CTCF Coverage",
+      "name": "VCaP CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_VCaP.CTCF",
@@ -1815,7 +1815,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "VCaP Control Coverage",
+      "name": "VCaP Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_VCaP.Control",
@@ -1826,7 +1826,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "VCaP H3K27ac Coverage",
+      "name": "VCaP H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_VCaP.H3K27ac",
@@ -1837,7 +1837,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "brain_microvascular_endothelial_cell Control Coverage",
+      "name": "bmec Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_brain_microvascular_endothelial_cell.Control",
@@ -1848,7 +1848,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "brain_microvascular_endothelial_cell H3K27ac Coverage",
+      "name": "bmec H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_brain_microvascular_endothelial_cell.H3K27ac",
@@ -1859,7 +1859,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "brain_microvascular_endothelial_cell H3K27me3 Coverage",
+      "name": "bmec H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_brain_microvascular_endothelial_cell.H3K27me3",
@@ -1870,7 +1870,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "brain_microvascular_endothelial_cell H3K36me3 Coverage",
+      "name": "bmec H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_brain_microvascular_endothelial_cell.H3K36me3",
@@ -1881,7 +1881,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "epithelial_cell_of_prostate_male CTCF Coverage",
+      "name": "ecopm CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_epithelial_cell_of_prostate_male.CTCF",
@@ -1892,7 +1892,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "epithelial_cell_of_prostate_male Control Coverage",
+      "name": "ecopm Control",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_epithelial_cell_of_prostate_male.Control",
@@ -1903,7 +1903,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "epithelial_cell_of_prostate_male H3K27ac Coverage",
+      "name": "ecopm H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Coverage_epithelial_cell_of_prostate_male.H3K27ac",
@@ -1914,7 +1914,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K27me3 Enrichment",
+      "name": "BE2C H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_BE2C.H3K27me3",
@@ -1925,7 +1925,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K36me3 Enrichment",
+      "name": "BE2C H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_BE2C.H3K36me3",
@@ -1936,7 +1936,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K4me1 Enrichment",
+      "name": "BE2C H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_BE2C.H3K4me1",
@@ -1947,7 +1947,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "BE2C H3K9me3 Enrichment",
+      "name": "BE2C H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_BE2C.H3K9me3",
@@ -1958,7 +1958,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "C4-2B CTCF Enrichment",
+      "name": "C4-2B CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_C4-2B.CTCF",
@@ -1969,7 +1969,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "C4-2B H3K27ac Enrichment",
+      "name": "C4-2B H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_C4-2B.H3K27ac",
@@ -1980,7 +1980,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "22Rv1 CTCF Enrichment",
+      "name": "22Rv1 CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_22Rv1.CTCF",
@@ -1991,7 +1991,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "22Rv1 H3K27ac Enrichment",
+      "name": "22Rv1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_22Rv1.H3K27ac",
@@ -2002,7 +2002,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Caco-2 H3K4me1 Enrichment",
+      "name": "Caco-2 H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_Caco-2.H3K4me1",
@@ -2013,7 +2013,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "Caco-2 H3K9me3 Enrichment",
+      "name": "Caco-2 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_Caco-2.H3K9me3",
@@ -2024,7 +2024,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K27ac Enrichment",
+      "name": "HAP-1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_HAP-1.H3K27ac",
@@ -2035,7 +2035,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K27me3 Enrichment",
+      "name": "HAP-1 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_HAP-1.H3K27me3",
@@ -2046,7 +2046,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K36me3 Enrichment",
+      "name": "HAP-1 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_HAP-1.H3K36me3",
@@ -2057,7 +2057,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K4me1 Enrichment",
+      "name": "HAP-1 H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_HAP-1.H3K4me1",
@@ -2068,7 +2068,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K4me3 Enrichment",
+      "name": "HAP-1 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_HAP-1.H3K4me3",
@@ -2079,7 +2079,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HAP-1 H3K9me3 Enrichment",
+      "name": "HAP-1 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_HAP-1.H3K9me3",
@@ -2090,7 +2090,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "HL-60 H3K27ac Enrichment",
+      "name": "HL-60 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_HL-60.H3K27ac",
@@ -2101,7 +2101,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K27me3 Enrichment",
+      "name": "MG63 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_MG63.H3K27me3",
@@ -2112,7 +2112,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K36me3 Enrichment",
+      "name": "MG63 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_MG63.H3K36me3",
@@ -2123,7 +2123,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K4me3 Enrichment",
+      "name": "MG63 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_MG63.H3K4me3",
@@ -2134,7 +2134,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "MG63 H3K9me3 Enrichment",
+      "name": "MG63 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_MG63.H3K9me3",
@@ -2145,7 +2145,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE1 CTCF Enrichment",
+      "name": "RWPE1 CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_RWPE1.CTCF",
@@ -2156,7 +2156,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE1 H3K27ac Enrichment",
+      "name": "RWPE1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_RWPE1.H3K27ac",
@@ -2167,7 +2167,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE2 CTCF Enrichment",
+      "name": "RWPE2 CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_RWPE2.CTCF",
@@ -2178,7 +2178,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE2 H3K27ac Enrichment",
+      "name": "RWPE2 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_RWPE2.H3K27ac",
@@ -2189,7 +2189,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "RWPE2 H3K36me3 Enrichment",
+      "name": "RWPE2 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_RWPE2.H3K36me3",
@@ -2200,7 +2200,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K27ac Enrichment",
+      "name": "SJCRH30 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJCRH30.H3K27ac",
@@ -2211,7 +2211,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K27me3 Enrichment",
+      "name": "SJCRH30 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJCRH30.H3K27me3",
@@ -2222,7 +2222,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K36me3 Enrichment",
+      "name": "SJCRH30 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJCRH30.H3K36me3",
@@ -2233,7 +2233,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K4me1 Enrichment",
+      "name": "SJCRH30 H3K4me1",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJCRH30.H3K4me1",
@@ -2244,7 +2244,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K4me3 Enrichment",
+      "name": "SJCRH30 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJCRH30.H3K4me3",
@@ -2255,7 +2255,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJCRH30 H3K9me3 Enrichment",
+      "name": "SJCRH30 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJCRH30.H3K9me3",
@@ -2266,7 +2266,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K27ac Enrichment",
+      "name": "SJSA1 H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJSA1.H3K27ac",
@@ -2277,7 +2277,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K27me3 Enrichment",
+      "name": "SJSA1 H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJSA1.H3K27me3",
@@ -2288,7 +2288,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K36me3 Enrichment",
+      "name": "SJSA1 H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJSA1.H3K36me3",
@@ -2299,7 +2299,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K4me3 Enrichment",
+      "name": "SJSA1 H3K4me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJSA1.H3K4me3",
@@ -2310,7 +2310,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "SJSA1 H3K9me3 Enrichment",
+      "name": "SJSA1 H3K9me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_SJSA1.H3K9me3",
@@ -2321,7 +2321,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "VCaP CTCF Enrichment",
+      "name": "VCaP CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_VCaP.CTCF",
@@ -2332,7 +2332,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "VCaP H3K27ac Enrichment",
+      "name": "VCaP H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_VCaP.H3K27ac",
@@ -2343,7 +2343,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "brain_microvascular_endothelial_cell H3K27ac Enrichment",
+      "name": "bmec H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_brain_microvascular_endothelial_cell.H3K27ac",
@@ -2354,7 +2354,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "brain_microvascular_endothelial_cell H3K27me3 Enrichment",
+      "name": "bmec H3K27me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_brain_microvascular_endothelial_cell.H3K27me3",
@@ -2365,7 +2365,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "brain_microvascular_endothelial_cell H3K36me3 Enrichment",
+      "name": "bmec H3K36me3",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_brain_microvascular_endothelial_cell.H3K36me3",
@@ -2376,7 +2376,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "epithelial_cell_of_prostate_male CTCF Enrichment",
+      "name": "ecopm CTCF",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_epithelial_cell_of_prostate_male.CTCF",
@@ -2387,7 +2387,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "name": "epithelial_cell_of_prostate_male H3K27ac Enrichment",
+      "name": "ecopm H3K27ac",
       "assemblyNames": ["hs1"],
       "category": ["regulation"],
       "trackId": "T2T_Encode_Enrichment_epithelial_cell_of_prostate_male.H3K27ac",
@@ -2399,7 +2399,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K27me3 hg38 liftover Macs2 Peaks",
+      "name": "BE2C H3K27me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_BE2C.H3K27me3",
       "adapter": {
@@ -2410,7 +2410,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K36me3 hg38 liftover Macs2 Peaks",
+      "name": "BE2C H3K36me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_BE2C.H3K36me3",
       "adapter": {
@@ -2421,7 +2421,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K4me1 hg38 liftover Macs2 Peaks",
+      "name": "BE2C H3K4me1 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_BE2C.H3K4me1",
       "adapter": {
@@ -2432,7 +2432,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K9me3 hg38 liftover Macs2 Peaks",
+      "name": "BE2C H3K9me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_BE2C.H3K9me3",
       "adapter": {
@@ -2443,7 +2443,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "C4-2B CTCF hg38 liftover Macs2 Peaks",
+      "name": "C4-2B CTCF hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_C4-2B.CTCF",
       "adapter": {
@@ -2454,7 +2454,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "C4-2B H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "C4-2B H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_C4-2B.H3K27ac",
       "adapter": {
@@ -2465,7 +2465,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "22Rv1 CTCF hg38 liftover Macs2 Peaks",
+      "name": "22Rv1 CTCF hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_22Rv1.CTCF",
       "adapter": {
@@ -2476,7 +2476,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "22Rv1 H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "22Rv1 H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_22Rv1.H3K27ac",
       "adapter": {
@@ -2487,7 +2487,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Caco-2 H3K4me1 hg38 liftover Macs2 Peaks",
+      "name": "Caco-2 H3K4me1 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_Caco-2.H3K4me1",
       "adapter": {
@@ -2498,7 +2498,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Caco-2 H3K9me3 hg38 liftover Macs2 Peaks",
+      "name": "Caco-2 H3K9me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_Caco-2.H3K9me3",
       "adapter": {
@@ -2509,7 +2509,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "HAP-1 H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_HAP-1.H3K27ac",
       "adapter": {
@@ -2520,7 +2520,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K27me3 hg38 liftover Macs2 Peaks",
+      "name": "HAP-1 H3K27me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_HAP-1.H3K27me3",
       "adapter": {
@@ -2531,7 +2531,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K36me3 hg38 liftover Macs2 Peaks",
+      "name": "HAP-1 H3K36me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_HAP-1.H3K36me3",
       "adapter": {
@@ -2542,7 +2542,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K4me1 hg38 liftover Macs2 Peaks",
+      "name": "HAP-1 H3K4me1 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_HAP-1.H3K4me1",
       "adapter": {
@@ -2553,7 +2553,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K4me3 hg38 liftover Macs2 Peaks",
+      "name": "HAP-1 H3K4me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_HAP-1.H3K4me3",
       "adapter": {
@@ -2564,7 +2564,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K9me3 hg38 liftover Macs2 Peaks",
+      "name": "HAP-1 H3K9me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_HAP-1.H3K9me3",
       "adapter": {
@@ -2575,7 +2575,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HL-60 H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "HL-60 H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_HL-60.H3K27ac",
       "adapter": {
@@ -2586,7 +2586,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K27me3 hg38 liftover Macs2 Peaks",
+      "name": "MG63 H3K27me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_MG63.H3K27me3",
       "adapter": {
@@ -2597,7 +2597,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K36me3 hg38 liftover Macs2 Peaks",
+      "name": "MG63 H3K36me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_MG63.H3K36me3",
       "adapter": {
@@ -2608,7 +2608,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K4me3 hg38 liftover Macs2 Peaks",
+      "name": "MG63 H3K4me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_MG63.H3K4me3",
       "adapter": {
@@ -2619,7 +2619,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K9me3 hg38 liftover Macs2 Peaks",
+      "name": "MG63 H3K9me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_MG63.H3K9me3",
       "adapter": {
@@ -2630,7 +2630,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE1 CTCF hg38 liftover Macs2 Peaks",
+      "name": "RWPE1 CTCF hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_RWPE1.CTCF",
       "adapter": {
@@ -2641,7 +2641,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE1 H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "RWPE1 H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_RWPE1.H3K27ac",
       "adapter": {
@@ -2652,7 +2652,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE2 CTCF hg38 liftover Macs2 Peaks",
+      "name": "RWPE2 CTCF hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_RWPE2.CTCF",
       "adapter": {
@@ -2663,7 +2663,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE2 H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "RWPE2 H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_RWPE2.H3K27ac",
       "adapter": {
@@ -2674,7 +2674,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE2 H3K36me3 hg38 liftover Macs2 Peaks",
+      "name": "RWPE2 H3K36me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_RWPE2.H3K36me3",
       "adapter": {
@@ -2685,7 +2685,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "SJCRH30 H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJCRH30.H3K27ac",
       "adapter": {
@@ -2696,7 +2696,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K27me3 hg38 liftover Macs2 Peaks",
+      "name": "SJCRH30 H3K27me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJCRH30.H3K27me3",
       "adapter": {
@@ -2707,7 +2707,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K36me3 hg38 liftover Macs2 Peaks",
+      "name": "SJCRH30 H3K36me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJCRH30.H3K36me3",
       "adapter": {
@@ -2718,7 +2718,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K4me1 hg38 liftover Macs2 Peaks",
+      "name": "SJCRH30 H3K4me1 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJCRH30.H3K4me1",
       "adapter": {
@@ -2729,7 +2729,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K4me3 hg38 liftover Macs2 Peaks",
+      "name": "SJCRH30 H3K4me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJCRH30.H3K4me3",
       "adapter": {
@@ -2740,7 +2740,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K9me3 hg38 liftover Macs2 Peaks",
+      "name": "SJCRH30 H3K9me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJCRH30.H3K9me3",
       "adapter": {
@@ -2751,7 +2751,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "SJSA1 H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJSA1.H3K27ac",
       "adapter": {
@@ -2762,7 +2762,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K27me3 hg38 liftover Macs2 Peaks",
+      "name": "SJSA1 H3K27me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJSA1.H3K27me3",
       "adapter": {
@@ -2773,7 +2773,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K36me3 hg38 liftover Macs2 Peaks",
+      "name": "SJSA1 H3K36me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJSA1.H3K36me3",
       "adapter": {
@@ -2784,7 +2784,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K4me3 hg38 liftover Macs2 Peaks",
+      "name": "SJSA1 H3K4me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJSA1.H3K4me3",
       "adapter": {
@@ -2795,7 +2795,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K9me3 hg38 liftover Macs2 Peaks",
+      "name": "SJSA1 H3K9me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_SJSA1.H3K9me3",
       "adapter": {
@@ -2806,7 +2806,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "VCaP CTCF hg38 liftover Macs2 Peaks",
+      "name": "VCaP CTCF hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_VCaP.CTCF",
       "adapter": {
@@ -2817,7 +2817,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "VCaP H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "VCaP H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_VCaP.H3K27ac",
       "adapter": {
@@ -2828,7 +2828,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "brain_microvascular_endothelial_cell H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "bmec H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_brain_microvascular_endothelial_cell.H3K27ac",
       "adapter": {
@@ -2839,7 +2839,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "brain_microvascular_endothelial_cell H3K27me3 hg38 liftover Macs2 Peaks",
+      "name": "bmec H3K27me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_brain_microvascular_endothelial_cell.H3K27me3",
       "adapter": {
@@ -2850,7 +2850,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "brain_microvascular_endothelial_cell H3K36me3 hg38 liftover Macs2 Peaks",
+      "name": "bmec H3K36me3 hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_brain_microvascular_endothelial_cell.H3K36me3",
       "adapter": {
@@ -2861,7 +2861,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "epithelial_cell_of_prostate_male CTCF hg38 liftover Macs2 Peaks",
+      "name": "ecopm CTCF hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_epithelial_cell_of_prostate_male.CTCF",
       "adapter": {
@@ -2872,7 +2872,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "epithelial_cell_of_prostate_male H3K27ac hg38 liftover Macs2 Peaks",
+      "name": "ecopm H3K27ac hg38LO",
       "category": ["regulation"],
       "trackId": "T2T_Encode_LOPeaks_epithelial_cell_of_prostate_male.H3K27ac",
       "adapter": {
@@ -2883,7 +2883,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K27me3 Macs2 Peaks",
+      "name": "BE2C H3K27me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_BE2C.H3K27me3",
       "adapter": {
@@ -2894,7 +2894,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K36me3 Macs2 Peaks",
+      "name": "BE2C H3K36me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_BE2C.H3K36me3",
       "adapter": {
@@ -2905,7 +2905,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K4me1 Macs2 Peaks",
+      "name": "BE2C H3K4me1",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_BE2C.H3K4me1",
       "adapter": {
@@ -2916,7 +2916,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "BE2C H3K9me3 Macs2 Peaks",
+      "name": "BE2C H3K9me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_BE2C.H3K9me3",
       "adapter": {
@@ -2927,7 +2927,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "C4-2B CTCF Macs2 Peaks",
+      "name": "C4-2B CTCF",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_C4-2B.CTCF",
       "adapter": {
@@ -2938,7 +2938,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "C4-2B H3K27ac Macs2 Peaks",
+      "name": "C4-2B H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_C4-2B.H3K27ac",
       "adapter": {
@@ -2949,7 +2949,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "22Rv1 CTCF Macs2 Peaks",
+      "name": "22Rv1 CTCF",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_22Rv1.CTCF",
       "adapter": {
@@ -2960,7 +2960,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "22Rv1 H3K27ac Macs2 Peaks",
+      "name": "22Rv1 H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_22Rv1.H3K27ac",
       "adapter": {
@@ -2971,7 +2971,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Caco-2 H3K4me1 Macs2 Peaks",
+      "name": "Caco-2 H3K4me1",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_Caco-2.H3K4me1",
       "adapter": {
@@ -2982,7 +2982,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Caco-2 H3K9me3 Macs2 Peaks",
+      "name": "Caco-2 H3K9me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_Caco-2.H3K9me3",
       "adapter": {
@@ -2993,7 +2993,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K27ac Macs2 Peaks",
+      "name": "HAP-1 H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_HAP-1.H3K27ac",
       "adapter": {
@@ -3004,7 +3004,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K27me3 Macs2 Peaks",
+      "name": "HAP-1 H3K27me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_HAP-1.H3K27me3",
       "adapter": {
@@ -3015,7 +3015,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K36me3 Macs2 Peaks",
+      "name": "HAP-1 H3K36me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_HAP-1.H3K36me3",
       "adapter": {
@@ -3026,7 +3026,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K4me1 Macs2 Peaks",
+      "name": "HAP-1 H3K4me1",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_HAP-1.H3K4me1",
       "adapter": {
@@ -3037,7 +3037,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K4me3 Macs2 Peaks",
+      "name": "HAP-1 H3K4me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_HAP-1.H3K4me3",
       "adapter": {
@@ -3048,7 +3048,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HAP-1 H3K9me3 Macs2 Peaks",
+      "name": "HAP-1 H3K9me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_HAP-1.H3K9me3",
       "adapter": {
@@ -3059,7 +3059,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "HL-60 H3K27ac Macs2 Peaks",
+      "name": "HL-60 H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_HL-60.H3K27ac",
       "adapter": {
@@ -3070,7 +3070,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K27me3 Macs2 Peaks",
+      "name": "MG63 H3K27me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_MG63.H3K27me3",
       "adapter": {
@@ -3081,7 +3081,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K36me3 Macs2 Peaks",
+      "name": "MG63 H3K36me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_MG63.H3K36me3",
       "adapter": {
@@ -3092,7 +3092,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K4me3 Macs2 Peaks",
+      "name": "MG63 H3K4me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_MG63.H3K4me3",
       "adapter": {
@@ -3103,7 +3103,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "MG63 H3K9me3 Macs2 Peaks",
+      "name": "MG63 H3K9me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_MG63.H3K9me3",
       "adapter": {
@@ -3114,7 +3114,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE1 CTCF Macs2 Peaks",
+      "name": "RWPE1 CTCF",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_RWPE1.CTCF",
       "adapter": {
@@ -3125,7 +3125,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE1 H3K27ac Macs2 Peaks",
+      "name": "RWPE1 H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_RWPE1.H3K27ac",
       "adapter": {
@@ -3136,7 +3136,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE2 CTCF Macs2 Peaks",
+      "name": "RWPE2 CTCF",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_RWPE2.CTCF",
       "adapter": {
@@ -3147,7 +3147,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE2 H3K27ac Macs2 Peaks",
+      "name": "RWPE2 H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_RWPE2.H3K27ac",
       "adapter": {
@@ -3158,7 +3158,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "RWPE2 H3K36me3 Macs2 Peaks",
+      "name": "RWPE2 H3K36me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_RWPE2.H3K36me3",
       "adapter": {
@@ -3169,7 +3169,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K27ac Macs2 Peaks",
+      "name": "SJCRH30 H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJCRH30.H3K27ac",
       "adapter": {
@@ -3180,7 +3180,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K27me3 Macs2 Peaks",
+      "name": "SJCRH30 H3K27me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJCRH30.H3K27me3",
       "adapter": {
@@ -3191,7 +3191,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K36me3 Macs2 Peaks",
+      "name": "SJCRH30 H3K36me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJCRH30.H3K36me3",
       "adapter": {
@@ -3202,7 +3202,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K4me1 Macs2 Peaks",
+      "name": "SJCRH30 H3K4me1",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJCRH30.H3K4me1",
       "adapter": {
@@ -3213,7 +3213,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K4me3 Macs2 Peaks",
+      "name": "SJCRH30 H3K4me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJCRH30.H3K4me3",
       "adapter": {
@@ -3224,7 +3224,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJCRH30 H3K9me3 Macs2 Peaks",
+      "name": "SJCRH30 H3K9me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJCRH30.H3K9me3",
       "adapter": {
@@ -3235,7 +3235,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K27ac Macs2 Peaks",
+      "name": "SJSA1 H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJSA1.H3K27ac",
       "adapter": {
@@ -3246,7 +3246,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K27me3 Macs2 Peaks",
+      "name": "SJSA1 H3K27me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJSA1.H3K27me3",
       "adapter": {
@@ -3257,7 +3257,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K36me3 Macs2 Peaks",
+      "name": "SJSA1 H3K36me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJSA1.H3K36me3",
       "adapter": {
@@ -3268,7 +3268,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K4me3 Macs2 Peaks",
+      "name": "SJSA1 H3K4me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJSA1.H3K4me3",
       "adapter": {
@@ -3279,7 +3279,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SJSA1 H3K9me3 Macs2 Peaks",
+      "name": "SJSA1 H3K9me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_SJSA1.H3K9me3",
       "adapter": {
@@ -3290,7 +3290,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "VCaP CTCF Macs2 Peaks",
+      "name": "VCaP CTCF",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_VCaP.CTCF",
       "adapter": {
@@ -3301,7 +3301,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "VCaP H3K27ac Macs2 Peaks",
+      "name": "VCaP H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_VCaP.H3K27ac",
       "adapter": {
@@ -3312,7 +3312,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "brain_microvascular_endothelial_cell H3K27ac Macs2 Peaks",
+      "name": "bmec H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_brain_microvascular_endothelial_cell.H3K27ac",
       "adapter": {
@@ -3323,7 +3323,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "brain_microvascular_endothelial_cell H3K27me3 Macs2 Peaks",
+      "name": "bmec H3K27me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_brain_microvascular_endothelial_cell.H3K27me3",
       "adapter": {
@@ -3334,7 +3334,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "brain_microvascular_endothelial_cell H3K36me3 Macs2 Peaks",
+      "name": "bmec H3K36me3",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_brain_microvascular_endothelial_cell.H3K36me3",
       "adapter": {
@@ -3345,7 +3345,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "epithelial_cell_of_prostate_male CTCF Macs2 Peaks",
+      "name": "ecopm CTCF",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_epithelial_cell_of_prostate_male.CTCF",
       "adapter": {
@@ -3356,7 +3356,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "epithelial_cell_of_prostate_male H3K27ac Macs2 Peaks",
+      "name": "ecopm H3K27ac",
       "category": ["regulation"],
       "trackId": "T2T_Encode_Peaks_epithelial_cell_of_prostate_male.H3K27ac",
       "adapter": {
@@ -3367,7 +3367,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "Genomic Intervals Masked by WindowMasker + SDust",
+      "name": "WM + SDust",
       "category": ["varRep"],
       "trackId": "windowMasker",
       "adapter": {
@@ -3378,7 +3378,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Aari_LP6005519-DNA_D09 Copy Number",
+      "name": "AFR_Aari_LP6005519-DNA_D09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Aari_LP6005519-DNA_D09_wssd",
       "adapter": {
@@ -3389,7 +3389,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Agaw_LP6005519-DNA_E09 Copy Number",
+      "name": "AFR_Agaw_LP6005519-DNA_E09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Agaw_LP6005519-DNA_E09_wssd",
       "adapter": {
@@ -3400,7 +3400,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Agaw_LP6005519-DNA_F09 Copy Number",
+      "name": "AFR_Agaw_LP6005519-DNA_F09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Agaw_LP6005519-DNA_F09_wssd",
       "adapter": {
@@ -3411,7 +3411,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Amhara_LP6005519-DNA_G09 Copy Number",
+      "name": "AFR_Amhara_LP6005519-DNA_G09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Amhara_LP6005519-DNA_G09_wssd",
       "adapter": {
@@ -3422,7 +3422,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Amhara_LP6005519-DNA_H09 Copy Number",
+      "name": "AFR_Amhara_LP6005519-DNA_H09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Amhara_LP6005519-DNA_H09_wssd",
       "adapter": {
@@ -3433,7 +3433,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Baka_LP6005519-DNA_G06 Copy Number",
+      "name": "AFR_Baka_LP6005519-DNA_G06 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Baka_LP6005519-DNA_G06_wssd",
       "adapter": {
@@ -3444,7 +3444,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Baka_LP6005677-DNA_E03 Copy Number",
+      "name": "AFR_Baka_LP6005677-DNA_E03 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Baka_LP6005677-DNA_E03_wssd",
       "adapter": {
@@ -3455,7 +3455,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Bakola_LP6005677-DNA_F03 Copy Number",
+      "name": "AFR_Bakola_LP6005677-DNA_F03 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Bakola_LP6005677-DNA_F03_wssd",
       "adapter": {
@@ -3466,7 +3466,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Bakola_LP6005677-DNA_G03 Copy Number",
+      "name": "AFR_Bakola_LP6005677-DNA_G03 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Bakola_LP6005677-DNA_G03_wssd",
       "adapter": {
@@ -3477,7 +3477,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_BantuHerero_LP6005441-DNA_F01 Copy Number",
+      "name": "AFR_BantuHerero_LP6005441-DNA_F01 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_BantuHerero_LP6005441-DNA_F01_wssd",
       "adapter": {
@@ -3488,7 +3488,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_BantuHerero_LP6005443-DNA_E02 Copy Number",
+      "name": "AFR_BantuHerero_LP6005443-DNA_E02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_BantuHerero_LP6005443-DNA_E02_wssd",
       "adapter": {
@@ -3499,7 +3499,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_BantuKenya_LP6005441-DNA_B02 Copy Number",
+      "name": "AFR_BantuKenya_LP6005441-DNA_B02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_BantuKenya_LP6005441-DNA_B02_wssd",
       "adapter": {
@@ -3510,7 +3510,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_BantuKenya_LP6005443-DNA_A01 Copy Number",
+      "name": "AFR_BantuKenya_LP6005443-DNA_A01 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_BantuKenya_LP6005443-DNA_A01_wssd",
       "adapter": {
@@ -3521,7 +3521,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_BantuTswana_LP6005443-DNA_F02 Copy Number",
+      "name": "AFR_BantuTswana_LP6005443-DNA_F02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_BantuTswana_LP6005443-DNA_F02_wssd",
       "adapter": {
@@ -3532,7 +3532,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_BantuTswana_LP6005443-DNA_G02 Copy Number",
+      "name": "AFR_BantuTswana_LP6005443-DNA_G02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_BantuTswana_LP6005443-DNA_G02_wssd",
       "adapter": {
@@ -3543,7 +3543,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Bedzan_LP6005677-DNA_H03 Copy Number",
+      "name": "AFR_Bedzan_LP6005677-DNA_H03 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Bedzan_LP6005677-DNA_H03_wssd",
       "adapter": {
@@ -3554,7 +3554,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Biaka_LP6005441-DNA_G02 Copy Number",
+      "name": "AFR_Biaka_LP6005441-DNA_G02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Biaka_LP6005441-DNA_G02_wssd",
       "adapter": {
@@ -3565,7 +3565,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Biaka_LP6005441-DNA_H02 Copy Number",
+      "name": "AFR_Biaka_LP6005441-DNA_H02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Biaka_LP6005441-DNA_H02_wssd",
       "adapter": {
@@ -3576,7 +3576,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Bulala_LP6005519-DNA_E08 Copy Number",
+      "name": "AFR_Bulala_LP6005519-DNA_E08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Bulala_LP6005519-DNA_E08_wssd",
       "adapter": {
@@ -3587,7 +3587,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Bulala_LP6005519-DNA_F08 Copy Number",
+      "name": "AFR_Bulala_LP6005519-DNA_F08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Bulala_LP6005519-DNA_F08_wssd",
       "adapter": {
@@ -3598,7 +3598,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Dinka_LP6005443-DNA_B09 Copy Number",
+      "name": "AFR_Dinka_LP6005443-DNA_B09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Dinka_LP6005443-DNA_B09_wssd",
       "adapter": {
@@ -3609,7 +3609,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Dinka_LP6005443-DNA_H08 Copy Number",
+      "name": "AFR_Dinka_LP6005443-DNA_H08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Dinka_LP6005443-DNA_H08_wssd",
       "adapter": {
@@ -3620,7 +3620,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Dinka_SS6004480 Copy Number",
+      "name": "AFR_Dinka_SS6004480 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Dinka_SS6004480_wssd",
       "adapter": {
@@ -3631,7 +3631,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Elmolo_LP6005519-DNA_G10 Copy Number",
+      "name": "AFR_Elmolo_LP6005519-DNA_G10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Elmolo_LP6005519-DNA_G10_wssd",
       "adapter": {
@@ -3642,7 +3642,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Elmolo_LP6005519-DNA_H10 Copy Number",
+      "name": "AFR_Elmolo_LP6005519-DNA_H10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Elmolo_LP6005519-DNA_H10_wssd",
       "adapter": {
@@ -3653,7 +3653,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Esan_LP6005442-DNA_A10 Copy Number",
+      "name": "AFR_Esan_LP6005442-DNA_A10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Esan_LP6005442-DNA_A10_wssd",
       "adapter": {
@@ -3664,7 +3664,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Esan_LP6005442-DNA_B10 Copy Number",
+      "name": "AFR_Esan_LP6005442-DNA_B10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Esan_LP6005442-DNA_B10_wssd",
       "adapter": {
@@ -3675,7 +3675,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Fulani_LP6005677-DNA_A04 Copy Number",
+      "name": "AFR_Fulani_LP6005677-DNA_A04 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Fulani_LP6005677-DNA_A04_wssd",
       "adapter": {
@@ -3686,7 +3686,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Fulani_LP6005677-DNA_B04 Copy Number",
+      "name": "AFR_Fulani_LP6005677-DNA_B04 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Fulani_LP6005677-DNA_B04_wssd",
       "adapter": {
@@ -3697,7 +3697,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Gambian_LP6005442-DNA_G10 Copy Number",
+      "name": "AFR_Gambian_LP6005442-DNA_G10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Gambian_LP6005442-DNA_G10_wssd",
       "adapter": {
@@ -3708,7 +3708,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Gambian_LP6005442-DNA_H10 Copy Number",
+      "name": "AFR_Gambian_LP6005442-DNA_H10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Gambian_LP6005442-DNA_H10_wssd",
       "adapter": {
@@ -3719,7 +3719,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Hadza_LP6005519-DNA_C12 Copy Number",
+      "name": "AFR_Hadza_LP6005519-DNA_C12 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Hadza_LP6005519-DNA_C12_wssd",
       "adapter": {
@@ -3730,7 +3730,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Igbo_LP6005519-DNA_A12 Copy Number",
+      "name": "AFR_Igbo_LP6005519-DNA_A12 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Igbo_LP6005519-DNA_A12_wssd",
       "adapter": {
@@ -3741,7 +3741,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Igbo_LP6005519-DNA_B12 Copy Number",
+      "name": "AFR_Igbo_LP6005519-DNA_B12 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Igbo_LP6005519-DNA_B12_wssd",
       "adapter": {
@@ -3752,7 +3752,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ju_hoan_North_LP6005441-DNA_A11 Copy Number",
+      "name": "AFR_Ju_hoan_North_LP6005441-DNA_A11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Ju_hoan_North_LP6005441-DNA_A11_wssd",
       "adapter": {
@@ -3763,7 +3763,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ju_hoan_North_LP6005441-DNA_B11 Copy Number",
+      "name": "AFR_Ju_hoan_North_LP6005441-DNA_B11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Ju_hoan_North_LP6005441-DNA_B11_wssd",
       "adapter": {
@@ -3774,7 +3774,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ju_hoan_North_LP6005443-DNA_G08 Copy Number",
+      "name": "AFR_Ju_hoan_North_LP6005443-DNA_G08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Ju_hoan_North_LP6005443-DNA_G08_wssd",
       "adapter": {
@@ -3785,7 +3785,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Kaba_LP6005519-DNA_D08 Copy Number",
+      "name": "AFR_Kaba_LP6005519-DNA_D08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Kaba_LP6005519-DNA_D08_wssd",
       "adapter": {
@@ -3796,7 +3796,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Khomani_San_LP6005592-DNA_C05 Copy Number",
+      "name": "AFR_Khomani_San_LP6005592-DNA_C05 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Khomani_San_LP6005592-DNA_C05_wssd",
       "adapter": {
@@ -3807,7 +3807,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Khomani_San_LP6005677-DNA_D03 Copy Number",
+      "name": "AFR_Khomani_San_LP6005677-DNA_D03 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Khomani_San_LP6005677-DNA_D03_wssd",
       "adapter": {
@@ -3818,7 +3818,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Kikuyu_LP6005519-DNA_A11 Copy Number",
+      "name": "AFR_Kikuyu_LP6005519-DNA_A11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Kikuyu_LP6005519-DNA_A11_wssd",
       "adapter": {
@@ -3829,7 +3829,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Kikuyu_LP6005519-DNA_B11 Copy Number",
+      "name": "AFR_Kikuyu_LP6005519-DNA_B11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Kikuyu_LP6005519-DNA_B11_wssd",
       "adapter": {
@@ -3840,7 +3840,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Kongo_LP6005519-DNA_A09 Copy Number",
+      "name": "AFR_Kongo_LP6005519-DNA_A09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Kongo_LP6005519-DNA_A09_wssd",
       "adapter": {
@@ -3851,7 +3851,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Laka_LP6005519-DNA_G08 Copy Number",
+      "name": "AFR_Laka_LP6005519-DNA_G08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Laka_LP6005519-DNA_G08_wssd",
       "adapter": {
@@ -3862,7 +3862,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Laka_LP6005677-DNA_E04 Copy Number",
+      "name": "AFR_Laka_LP6005677-DNA_E04 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Laka_LP6005677-DNA_E04_wssd",
       "adapter": {
@@ -3873,7 +3873,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Lemande_LP6005677-DNA_C04 Copy Number",
+      "name": "AFR_Lemande_LP6005677-DNA_C04 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Lemande_LP6005677-DNA_C04_wssd",
       "adapter": {
@@ -3884,7 +3884,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Lemande_LP6005677-DNA_D04 Copy Number",
+      "name": "AFR_Lemande_LP6005677-DNA_D04 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Lemande_LP6005677-DNA_D04_wssd",
       "adapter": {
@@ -3895,7 +3895,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Luhya_LP6005442-DNA_E11 Copy Number",
+      "name": "AFR_Luhya_LP6005442-DNA_E11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Luhya_LP6005442-DNA_E11_wssd",
       "adapter": {
@@ -3906,7 +3906,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Luhya_LP6005442-DNA_F11 Copy Number",
+      "name": "AFR_Luhya_LP6005442-DNA_F11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Luhya_LP6005442-DNA_F11_wssd",
       "adapter": {
@@ -3917,7 +3917,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Luo_LP6005442-DNA_F09 Copy Number",
+      "name": "AFR_Luo_LP6005442-DNA_F09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Luo_LP6005442-DNA_F09_wssd",
       "adapter": {
@@ -3928,7 +3928,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Luo_LP6005677-DNA_G01 Copy Number",
+      "name": "AFR_Luo_LP6005677-DNA_G01 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Luo_LP6005677-DNA_G01_wssd",
       "adapter": {
@@ -3939,7 +3939,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mada_LP6005519-DNA_B08 Copy Number",
+      "name": "AFR_Mada_LP6005519-DNA_B08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mada_LP6005519-DNA_B08_wssd",
       "adapter": {
@@ -3950,7 +3950,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mandenka_LP6005441-DNA_E07 Copy Number",
+      "name": "AFR_Mandenka_LP6005441-DNA_E07 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mandenka_LP6005441-DNA_E07_wssd",
       "adapter": {
@@ -3961,7 +3961,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mandenka_LP6005441-DNA_F07 Copy Number",
+      "name": "AFR_Mandenka_LP6005441-DNA_F07 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mandenka_LP6005441-DNA_F07_wssd",
       "adapter": {
@@ -3972,7 +3972,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Masai_LP6005443-DNA_E06 Copy Number",
+      "name": "AFR_Masai_LP6005443-DNA_E06 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Masai_LP6005443-DNA_E06_wssd",
       "adapter": {
@@ -3983,7 +3983,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Masai_LP6005443-DNA_F06 Copy Number",
+      "name": "AFR_Masai_LP6005443-DNA_F06 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Masai_LP6005443-DNA_F06_wssd",
       "adapter": {
@@ -3994,7 +3994,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mbuti_LP6005441-DNA_A08 Copy Number",
+      "name": "AFR_Mbuti_LP6005441-DNA_A08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mbuti_LP6005441-DNA_A08_wssd",
       "adapter": {
@@ -4005,7 +4005,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mbuti_LP6005441-DNA_B08 Copy Number",
+      "name": "AFR_Mbuti_LP6005441-DNA_B08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mbuti_LP6005441-DNA_B08_wssd",
       "adapter": {
@@ -4016,7 +4016,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mbuti_LP6005592-DNA_C03 Copy Number",
+      "name": "AFR_Mbuti_LP6005592-DNA_C03 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mbuti_LP6005592-DNA_C03_wssd",
       "adapter": {
@@ -4027,7 +4027,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mbuti_SS6004471 Copy Number",
+      "name": "AFR_Mbuti_SS6004471 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mbuti_SS6004471_wssd",
       "adapter": {
@@ -4038,7 +4038,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mende_LP6005442-DNA_G11 Copy Number",
+      "name": "AFR_Mende_LP6005442-DNA_G11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mende_LP6005442-DNA_G11_wssd",
       "adapter": {
@@ -4049,7 +4049,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mende_LP6005442-DNA_H11 Copy Number",
+      "name": "AFR_Mende_LP6005442-DNA_H11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mende_LP6005442-DNA_H11_wssd",
       "adapter": {
@@ -4060,7 +4060,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mozabite_LP6005441-DNA_G08 Copy Number",
+      "name": "AFR_Mozabite_LP6005441-DNA_G08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mozabite_LP6005441-DNA_G08_wssd",
       "adapter": {
@@ -4071,7 +4071,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mozabite_LP6005441-DNA_H08 Copy Number",
+      "name": "AFR_Mozabite_LP6005441-DNA_H08 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mozabite_LP6005441-DNA_H08_wssd",
       "adapter": {
@@ -4082,7 +4082,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mursi_LP6005519-DNA_A10 Copy Number",
+      "name": "AFR_Mursi_LP6005519-DNA_A10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mursi_LP6005519-DNA_A10_wssd",
       "adapter": {
@@ -4093,7 +4093,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mursi_LP6005519-DNA_B10 Copy Number",
+      "name": "AFR_Mursi_LP6005519-DNA_B10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Mursi_LP6005519-DNA_B10_wssd",
       "adapter": {
@@ -4104,7 +4104,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ngumba_LP6005519-DNA_E10 Copy Number",
+      "name": "AFR_Ngumba_LP6005519-DNA_E10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Ngumba_LP6005519-DNA_E10_wssd",
       "adapter": {
@@ -4115,7 +4115,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ngumba_LP6005519-DNA_F10 Copy Number",
+      "name": "AFR_Ngumba_LP6005519-DNA_F10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Ngumba_LP6005519-DNA_F10_wssd",
       "adapter": {
@@ -4126,7 +4126,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ogiek_LP6005519-DNA_C11 Copy Number",
+      "name": "AFR_Ogiek_LP6005519-DNA_C11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Ogiek_LP6005519-DNA_C11_wssd",
       "adapter": {
@@ -4137,7 +4137,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ogiek_LP6005519-DNA_D11 Copy Number",
+      "name": "AFR_Ogiek_LP6005519-DNA_D11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Ogiek_LP6005519-DNA_D11_wssd",
       "adapter": {
@@ -4148,7 +4148,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Rendille_LP6005519-DNA_E11 Copy Number",
+      "name": "AFR_Rendille_LP6005519-DNA_E11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Rendille_LP6005519-DNA_E11_wssd",
       "adapter": {
@@ -4159,7 +4159,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Rendille_LP6005519-DNA_F11 Copy Number",
+      "name": "AFR_Rendille_LP6005519-DNA_F11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Rendille_LP6005519-DNA_F11_wssd",
       "adapter": {
@@ -4170,7 +4170,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Saharawi_LP6005619-DNA_B01 Copy Number",
+      "name": "AFR_Saharawi_LP6005619-DNA_B01 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Saharawi_LP6005619-DNA_B01_wssd",
       "adapter": {
@@ -4181,7 +4181,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Saharawi_LP6005619-DNA_C01 Copy Number",
+      "name": "AFR_Saharawi_LP6005619-DNA_C01 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Saharawi_LP6005619-DNA_C01_wssd",
       "adapter": {
@@ -4192,7 +4192,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Sandawe_LP6005519-DNA_H12 Copy Number",
+      "name": "AFR_Sandawe_LP6005519-DNA_H12 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Sandawe_LP6005519-DNA_H12_wssd",
       "adapter": {
@@ -4203,7 +4203,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Sengwer_LP6005519-DNA_G11 Copy Number",
+      "name": "AFR_Sengwer_LP6005519-DNA_G11 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Sengwer_LP6005519-DNA_G11_wssd",
       "adapter": {
@@ -4214,7 +4214,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Somali_LP6005442-DNA_D09 Copy Number",
+      "name": "AFR_Somali_LP6005442-DNA_D09 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Somali_LP6005442-DNA_D09_wssd",
       "adapter": {
@@ -4225,7 +4225,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Tikar_South_LP6005519-DNA_C10 Copy Number",
+      "name": "AFR_Tikar_South_LP6005519-DNA_C10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Tikar_South_LP6005519-DNA_C10_wssd",
       "adapter": {
@@ -4236,7 +4236,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Tikar_South_LP6005519-DNA_D10 Copy Number",
+      "name": "AFR_Tikar_South_LP6005519-DNA_D10 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Tikar_South_LP6005519-DNA_D10_wssd",
       "adapter": {
@@ -4247,7 +4247,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Yoruba_LP6005442-DNA_A02 Copy Number",
+      "name": "AFR_Yoruba_LP6005442-DNA_A02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Yoruba_LP6005442-DNA_A02_wssd",
       "adapter": {
@@ -4258,7 +4258,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Yoruba_LP6005442-DNA_B02 Copy Number",
+      "name": "AFR_Yoruba_LP6005442-DNA_B02 wssd CN",
       "category": ["varRep"],
       "trackId": "AFR_Yoruba_LP6005442-DNA_B02_wssd",
       "adapter": {
@@ -4269,7 +4269,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Chane_LP6005519-DNA_D01 Copy Number",
+      "name": "AMR_Chane_LP6005519-DNA_D01 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Chane_LP6005519-DNA_D01_wssd",
       "adapter": {
@@ -4280,7 +4280,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Karitiana_LP6005441-DNA_G06 Copy Number",
+      "name": "AMR_Karitiana_LP6005441-DNA_G06 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Karitiana_LP6005441-DNA_G06_wssd",
       "adapter": {
@@ -4291,7 +4291,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Karitiana_LP6005441-DNA_H06 Copy Number",
+      "name": "AMR_Karitiana_LP6005441-DNA_H06 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Karitiana_LP6005441-DNA_H06_wssd",
       "adapter": {
@@ -4302,7 +4302,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Mayan_LP6005441-DNA_G07 Copy Number",
+      "name": "AMR_Mayan_LP6005441-DNA_G07 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Mayan_LP6005441-DNA_G07_wssd",
       "adapter": {
@@ -4313,7 +4313,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Mayan_LP6005441-DNA_H07 Copy Number",
+      "name": "AMR_Mayan_LP6005441-DNA_H07 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Mayan_LP6005441-DNA_H07_wssd",
       "adapter": {
@@ -4324,7 +4324,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Mixe_LP6005443-DNA_E11 Copy Number",
+      "name": "AMR_Mixe_LP6005443-DNA_E11 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Mixe_LP6005443-DNA_E11_wssd",
       "adapter": {
@@ -4335,7 +4335,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Mixe_LP6005443-DNA_F11 Copy Number",
+      "name": "AMR_Mixe_LP6005443-DNA_F11 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Mixe_LP6005443-DNA_F11_wssd",
       "adapter": {
@@ -4346,7 +4346,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Mixtec_LP6005443-DNA_G11 Copy Number",
+      "name": "AMR_Mixtec_LP6005443-DNA_G11 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Mixtec_LP6005443-DNA_G11_wssd",
       "adapter": {
@@ -4357,7 +4357,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Mixtec_LP6005443-DNA_H11 Copy Number",
+      "name": "AMR_Mixtec_LP6005443-DNA_H11 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Mixtec_LP6005443-DNA_H11_wssd",
       "adapter": {
@@ -4368,7 +4368,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Nahua_LP6005519-DNA_A03 Copy Number",
+      "name": "AMR_Nahua_LP6005519-DNA_A03 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Nahua_LP6005519-DNA_A03_wssd",
       "adapter": {
@@ -4379,7 +4379,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Nahua_LP6005519-DNA_B03 Copy Number",
+      "name": "AMR_Nahua_LP6005519-DNA_B03 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Nahua_LP6005519-DNA_B03_wssd",
       "adapter": {
@@ -4390,7 +4390,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Piapoco_LP6005441-DNA_A04 Copy Number",
+      "name": "AMR_Piapoco_LP6005441-DNA_A04 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Piapoco_LP6005441-DNA_A04_wssd",
       "adapter": {
@@ -4401,7 +4401,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Piapoco_LP6005441-DNA_B04 Copy Number",
+      "name": "AMR_Piapoco_LP6005441-DNA_B04 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Piapoco_LP6005441-DNA_B04_wssd",
       "adapter": {
@@ -4412,7 +4412,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Pima_LP6005441-DNA_E10 Copy Number",
+      "name": "AMR_Pima_LP6005441-DNA_E10 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Pima_LP6005441-DNA_E10_wssd",
       "adapter": {
@@ -4423,7 +4423,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Pima_LP6005441-DNA_F10 Copy Number",
+      "name": "AMR_Pima_LP6005441-DNA_F10 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Pima_LP6005441-DNA_F10_wssd",
       "adapter": {
@@ -4434,7 +4434,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Quechua_LP6005519-DNA_G02 Copy Number",
+      "name": "AMR_Quechua_LP6005519-DNA_G02 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Quechua_LP6005519-DNA_G02_wssd",
       "adapter": {
@@ -4445,7 +4445,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Quechua_LP6005677-DNA_E01 Copy Number",
+      "name": "AMR_Quechua_LP6005677-DNA_E01 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Quechua_LP6005677-DNA_E01_wssd",
       "adapter": {
@@ -4456,7 +4456,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Quechua_LP6005677-DNA_F01 Copy Number",
+      "name": "AMR_Quechua_LP6005677-DNA_F01 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Quechua_LP6005677-DNA_F01_wssd",
       "adapter": {
@@ -4467,7 +4467,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Surui_LP6005441-DNA_A12 Copy Number",
+      "name": "AMR_Surui_LP6005441-DNA_A12 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Surui_LP6005441-DNA_A12_wssd",
       "adapter": {
@@ -4478,7 +4478,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Surui_LP6005441-DNA_B12 Copy Number",
+      "name": "AMR_Surui_LP6005441-DNA_B12 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Surui_LP6005441-DNA_B12_wssd",
       "adapter": {
@@ -4489,7 +4489,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Zapotec_LP6005443-DNA_A12 Copy Number",
+      "name": "AMR_Zapotec_LP6005443-DNA_A12 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Zapotec_LP6005443-DNA_A12_wssd",
       "adapter": {
@@ -4500,7 +4500,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Zapotec_LP6005677-DNA_D01 Copy Number",
+      "name": "AMR_Zapotec_LP6005677-DNA_D01 wssd CN",
       "category": ["varRep"],
       "trackId": "AMR_Zapotec_LP6005677-DNA_D01_wssd",
       "adapter": {
@@ -4511,7 +4511,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Ami_LP6005442-DNA_C07 Copy Number",
+      "name": "EAS_Ami_LP6005442-DNA_C07 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Ami_LP6005442-DNA_C07_wssd",
       "adapter": {
@@ -4522,7 +4522,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Ami_LP6005443-DNA_G05 Copy Number",
+      "name": "EAS_Ami_LP6005443-DNA_G05 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Ami_LP6005443-DNA_G05_wssd",
       "adapter": {
@@ -4533,7 +4533,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Atayal_LP6005442-DNA_E07 Copy Number",
+      "name": "EAS_Atayal_LP6005442-DNA_E07 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Atayal_LP6005442-DNA_E07_wssd",
       "adapter": {
@@ -4544,7 +4544,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Burmese_LP6005519-DNA_A06 Copy Number",
+      "name": "EAS_Burmese_LP6005519-DNA_A06 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Burmese_LP6005519-DNA_A06_wssd",
       "adapter": {
@@ -4555,7 +4555,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Burmese_LP6005519-DNA_B06 Copy Number",
+      "name": "EAS_Burmese_LP6005519-DNA_B06 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Burmese_LP6005519-DNA_B06_wssd",
       "adapter": {
@@ -4566,7 +4566,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Cambodian_LP6005441-DNA_G03 Copy Number",
+      "name": "EAS_Cambodian_LP6005441-DNA_G03 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Cambodian_LP6005441-DNA_G03_wssd",
       "adapter": {
@@ -4577,7 +4577,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Cambodian_LP6005441-DNA_H03 Copy Number",
+      "name": "EAS_Cambodian_LP6005441-DNA_H03 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Cambodian_LP6005441-DNA_H03_wssd",
       "adapter": {
@@ -4588,7 +4588,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Dai_LP6005441-DNA_D04 Copy Number",
+      "name": "EAS_Dai_LP6005441-DNA_D04 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Dai_LP6005441-DNA_D04_wssd",
       "adapter": {
@@ -4599,7 +4599,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Dai_LP6005443-DNA_B01 Copy Number",
+      "name": "EAS_Dai_LP6005443-DNA_B01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Dai_LP6005443-DNA_B01_wssd",
       "adapter": {
@@ -4610,7 +4610,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Dai_LP6005592-DNA_D03 Copy Number",
+      "name": "EAS_Dai_LP6005592-DNA_D03 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Dai_LP6005592-DNA_D03_wssd",
       "adapter": {
@@ -4621,7 +4621,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Daur_LP6005441-DNA_F04 Copy Number",
+      "name": "EAS_Daur_LP6005441-DNA_F04 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Daur_LP6005441-DNA_F04_wssd",
       "adapter": {
@@ -4632,7 +4632,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Daur_LP6005443-DNA_C01 Copy Number",
+      "name": "EAS_Daur_LP6005443-DNA_C01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Daur_LP6005443-DNA_C01_wssd",
       "adapter": {
@@ -4643,7 +4643,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Han_LP6005441-DNA_C05 Copy Number",
+      "name": "EAS_Han_LP6005441-DNA_C05 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Han_LP6005441-DNA_C05_wssd",
       "adapter": {
@@ -4654,7 +4654,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Han_LP6005441-DNA_D05 Copy Number",
+      "name": "EAS_Han_LP6005441-DNA_D05 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Han_LP6005441-DNA_D05_wssd",
       "adapter": {
@@ -4665,7 +4665,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Hezhen_LP6005441-DNA_G05 Copy Number",
+      "name": "EAS_Hezhen_LP6005441-DNA_G05 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Hezhen_LP6005441-DNA_G05_wssd",
       "adapter": {
@@ -4676,7 +4676,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Hezhen_LP6005441-DNA_H05 Copy Number",
+      "name": "EAS_Hezhen_LP6005441-DNA_H05 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Hezhen_LP6005441-DNA_H05_wssd",
       "adapter": {
@@ -4687,7 +4687,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Japanese_LP6005441-DNA_C06 Copy Number",
+      "name": "EAS_Japanese_LP6005441-DNA_C06 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Japanese_LP6005441-DNA_C06_wssd",
       "adapter": {
@@ -4698,7 +4698,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Japanese_LP6005441-DNA_D06 Copy Number",
+      "name": "EAS_Japanese_LP6005441-DNA_D06 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Japanese_LP6005441-DNA_D06_wssd",
       "adapter": {
@@ -4709,7 +4709,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Japanese_LP6005592-DNA_C02 Copy Number",
+      "name": "EAS_Japanese_LP6005592-DNA_C02 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Japanese_LP6005592-DNA_C02_wssd",
       "adapter": {
@@ -4720,7 +4720,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Kinh_LP6005442-DNA_C11 Copy Number",
+      "name": "EAS_Kinh_LP6005442-DNA_C11 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Kinh_LP6005442-DNA_C11_wssd",
       "adapter": {
@@ -4731,7 +4731,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Kinh_LP6005442-DNA_D11 Copy Number",
+      "name": "EAS_Kinh_LP6005442-DNA_D11 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Kinh_LP6005442-DNA_D11_wssd",
       "adapter": {
@@ -4742,7 +4742,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Korean_LP6005443-DNA_C06 Copy Number",
+      "name": "EAS_Korean_LP6005443-DNA_C06 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Korean_LP6005443-DNA_C06_wssd",
       "adapter": {
@@ -4753,7 +4753,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Korean_LP6005443-DNA_D06 Copy Number",
+      "name": "EAS_Korean_LP6005443-DNA_D06 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Korean_LP6005443-DNA_D06_wssd",
       "adapter": {
@@ -4764,7 +4764,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Lahu_LP6005441-DNA_B07 Copy Number",
+      "name": "EAS_Lahu_LP6005441-DNA_B07 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Lahu_LP6005441-DNA_B07_wssd",
       "adapter": {
@@ -4775,7 +4775,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Lahu_LP6005443-DNA_E01 Copy Number",
+      "name": "EAS_Lahu_LP6005443-DNA_E01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Lahu_LP6005443-DNA_E01_wssd",
       "adapter": {
@@ -4786,7 +4786,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Miao_LP6005441-DNA_C08 Copy Number",
+      "name": "EAS_Miao_LP6005441-DNA_C08 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Miao_LP6005441-DNA_C08_wssd",
       "adapter": {
@@ -4797,7 +4797,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Miao_LP6005441-DNA_D08 Copy Number",
+      "name": "EAS_Miao_LP6005441-DNA_D08 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Miao_LP6005441-DNA_D08_wssd",
       "adapter": {
@@ -4808,7 +4808,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Naxi_LP6005441-DNA_A09 Copy Number",
+      "name": "EAS_Naxi_LP6005441-DNA_A09 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Naxi_LP6005441-DNA_A09_wssd",
       "adapter": {
@@ -4819,7 +4819,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Naxi_LP6005441-DNA_B09 Copy Number",
+      "name": "EAS_Naxi_LP6005441-DNA_B09 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Naxi_LP6005441-DNA_B09_wssd",
       "adapter": {
@@ -4830,7 +4830,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Naxi_LP6005443-DNA_E09 Copy Number",
+      "name": "EAS_Naxi_LP6005443-DNA_E09 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Naxi_LP6005443-DNA_E09_wssd",
       "adapter": {
@@ -4841,7 +4841,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Oroqen_LP6005441-DNA_E09 Copy Number",
+      "name": "EAS_Oroqen_LP6005441-DNA_E09 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Oroqen_LP6005441-DNA_E09_wssd",
       "adapter": {
@@ -4852,7 +4852,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Oroqen_LP6005441-DNA_F09 Copy Number",
+      "name": "EAS_Oroqen_LP6005441-DNA_F09 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Oroqen_LP6005441-DNA_F09_wssd",
       "adapter": {
@@ -4863,7 +4863,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_She_LP6005443-DNA_F01 Copy Number",
+      "name": "EAS_She_LP6005443-DNA_F01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_She_LP6005443-DNA_F01_wssd",
       "adapter": {
@@ -4874,7 +4874,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_She_LP6005443-DNA_G01 Copy Number",
+      "name": "EAS_She_LP6005443-DNA_G01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_She_LP6005443-DNA_G01_wssd",
       "adapter": {
@@ -4885,7 +4885,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Thai_LP6005443-DNA_A07 Copy Number",
+      "name": "EAS_Thai_LP6005443-DNA_A07 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Thai_LP6005443-DNA_A07_wssd",
       "adapter": {
@@ -4896,7 +4896,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Thai_LP6005443-DNA_B07 Copy Number",
+      "name": "EAS_Thai_LP6005443-DNA_B07 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Thai_LP6005443-DNA_B07_wssd",
       "adapter": {
@@ -4907,7 +4907,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Tu_LP6005441-DNA_D12 Copy Number",
+      "name": "EAS_Tu_LP6005441-DNA_D12 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Tu_LP6005441-DNA_D12_wssd",
       "adapter": {
@@ -4918,7 +4918,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Tu_LP6005443-DNA_H01 Copy Number",
+      "name": "EAS_Tu_LP6005443-DNA_H01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Tu_LP6005443-DNA_H01_wssd",
       "adapter": {
@@ -4929,7 +4929,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Tujia_LP6005441-DNA_F12 Copy Number",
+      "name": "EAS_Tujia_LP6005441-DNA_F12 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Tujia_LP6005441-DNA_F12_wssd",
       "adapter": {
@@ -4940,7 +4940,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Tujia_LP6005443-DNA_A02 Copy Number",
+      "name": "EAS_Tujia_LP6005443-DNA_A02 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Tujia_LP6005443-DNA_A02_wssd",
       "adapter": {
@@ -4951,7 +4951,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Uygur_LP6005442-DNA_B01 Copy Number",
+      "name": "EAS_Uygur_LP6005442-DNA_B01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Uygur_LP6005442-DNA_B01_wssd",
       "adapter": {
@@ -4962,7 +4962,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Uygur_LP6005443-DNA_B02 Copy Number",
+      "name": "EAS_Uygur_LP6005443-DNA_B02 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Uygur_LP6005443-DNA_B02_wssd",
       "adapter": {
@@ -4973,7 +4973,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Xibo_LP6005442-DNA_D01 Copy Number",
+      "name": "EAS_Xibo_LP6005442-DNA_D01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Xibo_LP6005442-DNA_D01_wssd",
       "adapter": {
@@ -4984,7 +4984,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Xibo_LP6005443-DNA_C02 Copy Number",
+      "name": "EAS_Xibo_LP6005443-DNA_C02 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Xibo_LP6005443-DNA_C02_wssd",
       "adapter": {
@@ -4995,7 +4995,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Yi_LP6005442-DNA_G01 Copy Number",
+      "name": "EAS_Yi_LP6005442-DNA_G01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Yi_LP6005442-DNA_G01_wssd",
       "adapter": {
@@ -5006,7 +5006,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Yi_LP6005442-DNA_H01 Copy Number",
+      "name": "EAS_Yi_LP6005442-DNA_H01 wssd CN",
       "category": ["varRep"],
       "trackId": "EAS_Yi_LP6005442-DNA_H01_wssd",
       "adapter": {
@@ -5017,7 +5017,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Abkhasian_LP6005442-DNA_C02 Copy Number",
+      "name": "EUR_Abkhasian_LP6005442-DNA_C02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Abkhasian_LP6005442-DNA_C02_wssd",
       "adapter": {
@@ -5028,7 +5028,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Abkhasian_LP6005442-DNA_D02 Copy Number",
+      "name": "EUR_Abkhasian_LP6005442-DNA_D02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Abkhasian_LP6005442-DNA_D02_wssd",
       "adapter": {
@@ -5039,7 +5039,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Adygei_LP6005441-DNA_A01 Copy Number",
+      "name": "EUR_Adygei_LP6005441-DNA_A01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Adygei_LP6005441-DNA_A01_wssd",
       "adapter": {
@@ -5050,7 +5050,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Adygei_LP6005441-DNA_B01 Copy Number",
+      "name": "EUR_Adygei_LP6005441-DNA_B01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Adygei_LP6005441-DNA_B01_wssd",
       "adapter": {
@@ -5061,7 +5061,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Albanian_LP6005677-DNA_B01 Copy Number",
+      "name": "EUR_Albanian_LP6005677-DNA_B01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Albanian_LP6005677-DNA_B01_wssd",
       "adapter": {
@@ -5072,7 +5072,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Armenian_LP6005442-DNA_G02 Copy Number",
+      "name": "EUR_Armenian_LP6005442-DNA_G02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Armenian_LP6005442-DNA_G02_wssd",
       "adapter": {
@@ -5083,7 +5083,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Armenian_LP6005519-DNA_F03 Copy Number",
+      "name": "EUR_Armenian_LP6005519-DNA_F03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Armenian_LP6005519-DNA_F03_wssd",
       "adapter": {
@@ -5094,7 +5094,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Basque_LP6005441-DNA_C02 Copy Number",
+      "name": "EUR_Basque_LP6005441-DNA_C02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Basque_LP6005441-DNA_C02_wssd",
       "adapter": {
@@ -5105,7 +5105,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Basque_LP6005441-DNA_D02 Copy Number",
+      "name": "EUR_Basque_LP6005441-DNA_D02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Basque_LP6005441-DNA_D02_wssd",
       "adapter": {
@@ -5116,7 +5116,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_BedouinB_LP6005441-DNA_E02 Copy Number",
+      "name": "EUR_BedouinB_LP6005441-DNA_E02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_BedouinB_LP6005441-DNA_E02_wssd",
       "adapter": {
@@ -5127,7 +5127,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_BedouinB_LP6005441-DNA_F02 Copy Number",
+      "name": "EUR_BedouinB_LP6005441-DNA_F02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_BedouinB_LP6005441-DNA_F02_wssd",
       "adapter": {
@@ -5138,7 +5138,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Bergamo_LP6005441-DNA_A06 Copy Number",
+      "name": "EUR_Bergamo_LP6005441-DNA_A06 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Bergamo_LP6005441-DNA_A06_wssd",
       "adapter": {
@@ -5149,7 +5149,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Bergamo_LP6005441-DNA_B06 Copy Number",
+      "name": "EUR_Bergamo_LP6005441-DNA_B06 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Bergamo_LP6005441-DNA_B06_wssd",
       "adapter": {
@@ -5160,7 +5160,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Bulgarian_LP6005442-DNA_A03 Copy Number",
+      "name": "EUR_Bulgarian_LP6005442-DNA_A03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Bulgarian_LP6005442-DNA_A03_wssd",
       "adapter": {
@@ -5171,7 +5171,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Bulgarian_LP6005442-DNA_B03 Copy Number",
+      "name": "EUR_Bulgarian_LP6005442-DNA_B03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Bulgarian_LP6005442-DNA_B03_wssd",
       "adapter": {
@@ -5182,7 +5182,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Chechen_LP6005442-DNA_D03 Copy Number",
+      "name": "EUR_Chechen_LP6005442-DNA_D03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Chechen_LP6005442-DNA_D03_wssd",
       "adapter": {
@@ -5193,7 +5193,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Crete_LP6007068-DNA_A01 Copy Number",
+      "name": "EUR_Crete_LP6007068-DNA_A01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Crete_LP6007068-DNA_A01_wssd",
       "adapter": {
@@ -5204,7 +5204,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Crete_LP6007069-DNA_A01 Copy Number",
+      "name": "EUR_Crete_LP6007069-DNA_A01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Crete_LP6007069-DNA_A01_wssd",
       "adapter": {
@@ -5215,7 +5215,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Czech_LP6005443-DNA_H05 Copy Number",
+      "name": "EUR_Czech_LP6005443-DNA_H05 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Czech_LP6005443-DNA_H05_wssd",
       "adapter": {
@@ -5226,7 +5226,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Druze_LP6005441-DNA_G04 Copy Number",
+      "name": "EUR_Druze_LP6005441-DNA_G04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Druze_LP6005441-DNA_G04_wssd",
       "adapter": {
@@ -5237,7 +5237,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Druze_LP6005443-DNA_D01 Copy Number",
+      "name": "EUR_Druze_LP6005443-DNA_D01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Druze_LP6005443-DNA_D01_wssd",
       "adapter": {
@@ -5248,7 +5248,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_English_LP6005442-DNA_E10 Copy Number",
+      "name": "EUR_English_LP6005442-DNA_E10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_English_LP6005442-DNA_E10_wssd",
       "adapter": {
@@ -5259,7 +5259,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_English_LP6005442-DNA_F10 Copy Number",
+      "name": "EUR_English_LP6005442-DNA_F10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_English_LP6005442-DNA_F10_wssd",
       "adapter": {
@@ -5270,7 +5270,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Estonian_LP6005442-DNA_G03 Copy Number",
+      "name": "EUR_Estonian_LP6005442-DNA_G03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Estonian_LP6005442-DNA_G03_wssd",
       "adapter": {
@@ -5281,7 +5281,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Estonian_LP6005442-DNA_H03 Copy Number",
+      "name": "EUR_Estonian_LP6005442-DNA_H03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Estonian_LP6005442-DNA_H03_wssd",
       "adapter": {
@@ -5292,7 +5292,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Finnish_LP6005442-DNA_C10 Copy Number",
+      "name": "EUR_Finnish_LP6005442-DNA_C10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Finnish_LP6005442-DNA_C10_wssd",
       "adapter": {
@@ -5303,7 +5303,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Finnish_LP6005442-DNA_D10 Copy Number",
+      "name": "EUR_Finnish_LP6005442-DNA_D10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Finnish_LP6005442-DNA_D10_wssd",
       "adapter": {
@@ -5314,7 +5314,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Finnish_LP6005592-DNA_A02 Copy Number",
+      "name": "EUR_Finnish_LP6005592-DNA_A02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Finnish_LP6005592-DNA_A02_wssd",
       "adapter": {
@@ -5325,7 +5325,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_French_LP6005441-DNA_A05 Copy Number",
+      "name": "EUR_French_LP6005441-DNA_A05 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_French_LP6005441-DNA_A05_wssd",
       "adapter": {
@@ -5336,7 +5336,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_French_LP6005441-DNA_B05 Copy Number",
+      "name": "EUR_French_LP6005441-DNA_B05 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_French_LP6005441-DNA_B05_wssd",
       "adapter": {
@@ -5347,7 +5347,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Georgian_LP6005442-DNA_A04 Copy Number",
+      "name": "EUR_Georgian_LP6005442-DNA_A04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Georgian_LP6005442-DNA_A04_wssd",
       "adapter": {
@@ -5358,7 +5358,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Georgian_LP6005442-DNA_B04 Copy Number",
+      "name": "EUR_Georgian_LP6005442-DNA_B04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Georgian_LP6005442-DNA_B04_wssd",
       "adapter": {
@@ -5369,7 +5369,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Greek_LP6005442-DNA_G07 Copy Number",
+      "name": "EUR_Greek_LP6005442-DNA_G07 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Greek_LP6005442-DNA_G07_wssd",
       "adapter": {
@@ -5380,7 +5380,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Greek_LP6005443-DNA_A06 Copy Number",
+      "name": "EUR_Greek_LP6005443-DNA_A06 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Greek_LP6005443-DNA_A06_wssd",
       "adapter": {
@@ -5391,7 +5391,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Hungarian_LP6005442-DNA_A08 Copy Number",
+      "name": "EUR_Hungarian_LP6005442-DNA_A08 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Hungarian_LP6005442-DNA_A08_wssd",
       "adapter": {
@@ -5402,7 +5402,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Hungarian_LP6005442-DNA_B08 Copy Number",
+      "name": "EUR_Hungarian_LP6005442-DNA_B08 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Hungarian_LP6005442-DNA_B08_wssd",
       "adapter": {
@@ -5413,7 +5413,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Icelandic_LP6005442-DNA_D08 Copy Number",
+      "name": "EUR_Icelandic_LP6005442-DNA_D08 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Icelandic_LP6005442-DNA_D08_wssd",
       "adapter": {
@@ -5424,7 +5424,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Icelandic_LP6005443-DNA_B06 Copy Number",
+      "name": "EUR_Icelandic_LP6005443-DNA_B06 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Icelandic_LP6005443-DNA_B06_wssd",
       "adapter": {
@@ -5435,7 +5435,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Iranian_LP6005442-DNA_C04 Copy Number",
+      "name": "EUR_Iranian_LP6005442-DNA_C04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Iranian_LP6005442-DNA_C04_wssd",
       "adapter": {
@@ -5446,7 +5446,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Iranian_LP6005443-DNA_B10 Copy Number",
+      "name": "EUR_Iranian_LP6005443-DNA_B10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Iranian_LP6005443-DNA_B10_wssd",
       "adapter": {
@@ -5457,7 +5457,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Iraqi_Jew_LP6005592-DNA_E01 Copy Number",
+      "name": "EUR_Iraqi_Jew_LP6005592-DNA_E01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Iraqi_Jew_LP6005592-DNA_E01_wssd",
       "adapter": {
@@ -5468,7 +5468,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Iraqi_Jew_LP6005592-DNA_F01 Copy Number",
+      "name": "EUR_Iraqi_Jew_LP6005592-DNA_F01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Iraqi_Jew_LP6005592-DNA_F01_wssd",
       "adapter": {
@@ -5479,7 +5479,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Jordanian_LP6005442-DNA_E04 Copy Number",
+      "name": "EUR_Jordanian_LP6005442-DNA_E04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Jordanian_LP6005442-DNA_E04_wssd",
       "adapter": {
@@ -5490,7 +5490,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Jordanian_LP6005442-DNA_F04 Copy Number",
+      "name": "EUR_Jordanian_LP6005442-DNA_F04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Jordanian_LP6005442-DNA_F04_wssd",
       "adapter": {
@@ -5501,7 +5501,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Jordanian_LP6005592-DNA_G03 Copy Number",
+      "name": "EUR_Jordanian_LP6005592-DNA_G03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Jordanian_LP6005592-DNA_G03_wssd",
       "adapter": {
@@ -5512,7 +5512,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Lezgin_LP6005442-DNA_G04 Copy Number",
+      "name": "EUR_Lezgin_LP6005442-DNA_G04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Lezgin_LP6005442-DNA_G04_wssd",
       "adapter": {
@@ -5523,7 +5523,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Lezgin_LP6005442-DNA_H04 Copy Number",
+      "name": "EUR_Lezgin_LP6005442-DNA_H04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Lezgin_LP6005442-DNA_H04_wssd",
       "adapter": {
@@ -5534,7 +5534,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_North_Ossetian_LP6005443-DNA_E10 Copy Number",
+      "name": "EUR_North_Ossetian_LP6005443-DNA_E10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_North_Ossetian_LP6005443-DNA_E10_wssd",
       "adapter": {
@@ -5545,7 +5545,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_North_Ossetian_LP6005443-DNA_F10 Copy Number",
+      "name": "EUR_North_Ossetian_LP6005443-DNA_F10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_North_Ossetian_LP6005443-DNA_F10_wssd",
       "adapter": {
@@ -5556,7 +5556,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Norwegian_LP6005592-DNA_B01 Copy Number",
+      "name": "EUR_Norwegian_LP6005592-DNA_B01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Norwegian_LP6005592-DNA_B01_wssd",
       "adapter": {
@@ -5567,7 +5567,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Orcadian_LP6005441-DNA_C09 Copy Number",
+      "name": "EUR_Orcadian_LP6005441-DNA_C09 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Orcadian_LP6005441-DNA_C09_wssd",
       "adapter": {
@@ -5578,7 +5578,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Orcadian_LP6005441-DNA_D09 Copy Number",
+      "name": "EUR_Orcadian_LP6005441-DNA_D09 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Orcadian_LP6005441-DNA_D09_wssd",
       "adapter": {
@@ -5589,7 +5589,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Palestinian_LP6005441-DNA_G09 Copy Number",
+      "name": "EUR_Palestinian_LP6005441-DNA_G09 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Palestinian_LP6005441-DNA_G09_wssd",
       "adapter": {
@@ -5600,7 +5600,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Palestinian_LP6005441-DNA_H09 Copy Number",
+      "name": "EUR_Palestinian_LP6005441-DNA_H09 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Palestinian_LP6005441-DNA_H09_wssd",
       "adapter": {
@@ -5611,7 +5611,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Palestinian_LP6005592-DNA_B03 Copy Number",
+      "name": "EUR_Palestinian_LP6005592-DNA_B03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Palestinian_LP6005592-DNA_B03_wssd",
       "adapter": {
@@ -5622,7 +5622,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Polish_LP6005592-DNA_E02 Copy Number",
+      "name": "EUR_Polish_LP6005592-DNA_E02 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Polish_LP6005592-DNA_E02_wssd",
       "adapter": {
@@ -5633,7 +5633,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Russian_LP6005441-DNA_G10 Copy Number",
+      "name": "EUR_Russian_LP6005441-DNA_G10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Russian_LP6005441-DNA_G10_wssd",
       "adapter": {
@@ -5644,7 +5644,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Russian_LP6005441-DNA_H10 Copy Number",
+      "name": "EUR_Russian_LP6005441-DNA_H10 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Russian_LP6005441-DNA_H10_wssd",
       "adapter": {
@@ -5655,7 +5655,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Saami_LP6005592-DNA_C01 Copy Number",
+      "name": "EUR_Saami_LP6005592-DNA_C01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Saami_LP6005592-DNA_C01_wssd",
       "adapter": {
@@ -5666,7 +5666,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Saami_LP6005592-DNA_D01 Copy Number",
+      "name": "EUR_Saami_LP6005592-DNA_D01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Saami_LP6005592-DNA_D01_wssd",
       "adapter": {
@@ -5677,7 +5677,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Samaritan_LP6005592-DNA_D04 Copy Number",
+      "name": "EUR_Samaritan_LP6005592-DNA_D04 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Samaritan_LP6005592-DNA_D04_wssd",
       "adapter": {
@@ -5688,7 +5688,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Sardinian_LP6005441-DNA_C11 Copy Number",
+      "name": "EUR_Sardinian_LP6005441-DNA_C11 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Sardinian_LP6005441-DNA_C11_wssd",
       "adapter": {
@@ -5699,7 +5699,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Sardinian_LP6005441-DNA_D11 Copy Number",
+      "name": "EUR_Sardinian_LP6005441-DNA_D11 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Sardinian_LP6005441-DNA_D11_wssd",
       "adapter": {
@@ -5710,7 +5710,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Spanish_LP6005442-DNA_A11 Copy Number",
+      "name": "EUR_Spanish_LP6005442-DNA_A11 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Spanish_LP6005442-DNA_A11_wssd",
       "adapter": {
@@ -5721,7 +5721,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Spanish_LP6005442-DNA_B11 Copy Number",
+      "name": "EUR_Spanish_LP6005442-DNA_B11 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Spanish_LP6005442-DNA_B11_wssd",
       "adapter": {
@@ -5732,7 +5732,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Tajik_LP6005519-DNA_C03 Copy Number",
+      "name": "EUR_Tajik_LP6005519-DNA_C03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Tajik_LP6005519-DNA_C03_wssd",
       "adapter": {
@@ -5743,7 +5743,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Tajik_LP6005519-DNA_D03 Copy Number",
+      "name": "EUR_Tajik_LP6005519-DNA_D03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Tajik_LP6005519-DNA_D03_wssd",
       "adapter": {
@@ -5754,7 +5754,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Turkish_LP6005677-DNA_A03 Copy Number",
+      "name": "EUR_Turkish_LP6005677-DNA_A03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Turkish_LP6005677-DNA_A03_wssd",
       "adapter": {
@@ -5765,7 +5765,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Turkish_LP6005677-DNA_C03 Copy Number",
+      "name": "EUR_Turkish_LP6005677-DNA_C03 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Turkish_LP6005677-DNA_C03_wssd",
       "adapter": {
@@ -5776,7 +5776,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Tuscan_LP6005441-DNA_G12 Copy Number",
+      "name": "EUR_Tuscan_LP6005441-DNA_G12 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Tuscan_LP6005441-DNA_G12_wssd",
       "adapter": {
@@ -5787,7 +5787,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Tuscan_LP6005441-DNA_H12 Copy Number",
+      "name": "EUR_Tuscan_LP6005441-DNA_H12 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Tuscan_LP6005441-DNA_H12_wssd",
       "adapter": {
@@ -5798,7 +5798,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Yemenite_Jew_LP6005592-DNA_G01 Copy Number",
+      "name": "EUR_Yemenite_Jew_LP6005592-DNA_G01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Yemenite_Jew_LP6005592-DNA_G01_wssd",
       "adapter": {
@@ -5809,7 +5809,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Yemenite_Jew_LP6005592-DNA_H01 Copy Number",
+      "name": "EUR_Yemenite_Jew_LP6005592-DNA_H01 wssd CN",
       "category": ["varRep"],
       "trackId": "EUR_Yemenite_Jew_LP6005592-DNA_H01_wssd",
       "adapter": {
@@ -5820,7 +5820,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Australian_LP6005442-DNA_A09 Copy Number",
+      "name": "OCN_Australian_LP6005442-DNA_A09 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Australian_LP6005442-DNA_A09_wssd",
       "adapter": {
@@ -5831,7 +5831,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Australian_SS6004477 Copy Number",
+      "name": "OCN_Australian_SS6004477 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Australian_SS6004477_wssd",
       "adapter": {
@@ -5842,7 +5842,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Australian_SS6004478 Copy Number",
+      "name": "OCN_Australian_SS6004478 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Australian_SS6004478_wssd",
       "adapter": {
@@ -5853,7 +5853,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Bougainville_LP6005441-DNA_A03 Copy Number",
+      "name": "OCN_Bougainville_LP6005441-DNA_A03 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Bougainville_LP6005441-DNA_A03_wssd",
       "adapter": {
@@ -5864,7 +5864,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Bougainville_LP6005441-DNA_B03 Copy Number",
+      "name": "OCN_Bougainville_LP6005441-DNA_B03 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Bougainville_LP6005441-DNA_B03_wssd",
       "adapter": {
@@ -5875,7 +5875,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Dusun_LP6005519-DNA_E06 Copy Number",
+      "name": "OCN_Dusun_LP6005519-DNA_E06 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Dusun_LP6005519-DNA_E06_wssd",
       "adapter": {
@@ -5886,7 +5886,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Dusun_LP6005519-DNA_F06 Copy Number",
+      "name": "OCN_Dusun_LP6005519-DNA_F06 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Dusun_LP6005519-DNA_F06_wssd",
       "adapter": {
@@ -5897,7 +5897,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Hawaiian_LP6005592-DNA_H03 Copy Number",
+      "name": "OCN_Hawaiian_LP6005592-DNA_H03 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Hawaiian_LP6005592-DNA_H03_wssd",
       "adapter": {
@@ -5908,7 +5908,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Igorot_LP6005519-DNA_C06 Copy Number",
+      "name": "OCN_Igorot_LP6005519-DNA_C06 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Igorot_LP6005519-DNA_C06_wssd",
       "adapter": {
@@ -5919,7 +5919,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Igorot_LP6005519-DNA_D06 Copy Number",
+      "name": "OCN_Igorot_LP6005519-DNA_D06 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Igorot_LP6005519-DNA_D06_wssd",
       "adapter": {
@@ -5930,7 +5930,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Maori_LP6005592-DNA_B02 Copy Number",
+      "name": "OCN_Maori_LP6005592-DNA_B02 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Maori_LP6005592-DNA_B02_wssd",
       "adapter": {
@@ -5941,7 +5941,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005441-DNA_A10 Copy Number",
+      "name": "OCN_Papuan_LP6005441-DNA_A10 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005441-DNA_A10_wssd",
       "adapter": {
@@ -5952,7 +5952,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005441-DNA_B10 Copy Number",
+      "name": "OCN_Papuan_LP6005441-DNA_B10 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005441-DNA_B10_wssd",
       "adapter": {
@@ -5963,7 +5963,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_A08 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_A08 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_A08_wssd",
       "adapter": {
@@ -5974,7 +5974,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_B08 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_B08 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_B08_wssd",
       "adapter": {
@@ -5985,7 +5985,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_C07 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_C07 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_C07_wssd",
       "adapter": {
@@ -5996,7 +5996,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_C08 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_C08 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_C08_wssd",
       "adapter": {
@@ -6007,7 +6007,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_D07 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_D07 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_D07_wssd",
       "adapter": {
@@ -6018,7 +6018,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_D08 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_D08 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_D08_wssd",
       "adapter": {
@@ -6029,7 +6029,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_E07 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_E07 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_E07_wssd",
       "adapter": {
@@ -6040,7 +6040,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_E08 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_E08 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_E08_wssd",
       "adapter": {
@@ -6051,7 +6051,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_F07 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_F07 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_F07_wssd",
       "adapter": {
@@ -6062,7 +6062,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_F08 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_F08 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_F08_wssd",
       "adapter": {
@@ -6073,7 +6073,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_G07 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_G07 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_G07_wssd",
       "adapter": {
@@ -6084,7 +6084,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005443-DNA_H07 Copy Number",
+      "name": "OCN_Papuan_LP6005443-DNA_H07 wssd CN",
       "category": ["varRep"],
       "trackId": "OCN_Papuan_LP6005443-DNA_H07_wssd",
       "adapter": {
@@ -6095,7 +6095,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Balochi_LP6005441-DNA_D01 Copy Number",
+      "name": "SAS_Balochi_LP6005441-DNA_D01 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Balochi_LP6005441-DNA_D01_wssd",
       "adapter": {
@@ -6106,7 +6106,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Bengali_LP6005442-DNA_G09 Copy Number",
+      "name": "SAS_Bengali_LP6005442-DNA_G09 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Bengali_LP6005442-DNA_G09_wssd",
       "adapter": {
@@ -6117,7 +6117,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Bengali_LP6005442-DNA_H09 Copy Number",
+      "name": "SAS_Bengali_LP6005442-DNA_H09 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Bengali_LP6005442-DNA_H09_wssd",
       "adapter": {
@@ -6128,7 +6128,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Brahmin_LP6005519-DNA_G03 Copy Number",
+      "name": "SAS_Brahmin_LP6005519-DNA_G03 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Brahmin_LP6005519-DNA_G03_wssd",
       "adapter": {
@@ -6139,7 +6139,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Brahmin_LP6005519-DNA_H03 Copy Number",
+      "name": "SAS_Brahmin_LP6005519-DNA_H03 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Brahmin_LP6005519-DNA_H03_wssd",
       "adapter": {
@@ -6150,7 +6150,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Brahui_LP6005441-DNA_C03 Copy Number",
+      "name": "SAS_Brahui_LP6005441-DNA_C03 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Brahui_LP6005441-DNA_C03_wssd",
       "adapter": {
@@ -6161,7 +6161,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Brahui_LP6005441-DNA_D03 Copy Number",
+      "name": "SAS_Brahui_LP6005441-DNA_D03 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Brahui_LP6005441-DNA_D03_wssd",
       "adapter": {
@@ -6172,7 +6172,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Burusho_LP6005441-DNA_E03 Copy Number",
+      "name": "SAS_Burusho_LP6005441-DNA_E03 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Burusho_LP6005441-DNA_E03_wssd",
       "adapter": {
@@ -6183,7 +6183,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Burusho_LP6005441-DNA_F03 Copy Number",
+      "name": "SAS_Burusho_LP6005441-DNA_F03 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Burusho_LP6005441-DNA_F03_wssd",
       "adapter": {
@@ -6194,7 +6194,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Hazara_LP6005441-DNA_E05 Copy Number",
+      "name": "SAS_Hazara_LP6005441-DNA_E05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Hazara_LP6005441-DNA_E05_wssd",
       "adapter": {
@@ -6205,7 +6205,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Hazara_LP6005441-DNA_F05 Copy Number",
+      "name": "SAS_Hazara_LP6005441-DNA_F05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Hazara_LP6005441-DNA_F05_wssd",
       "adapter": {
@@ -6216,7 +6216,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Irula_LP6005519-DNA_C05 Copy Number",
+      "name": "SAS_Irula_LP6005519-DNA_C05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Irula_LP6005519-DNA_C05_wssd",
       "adapter": {
@@ -6227,7 +6227,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Irula_LP6005519-DNA_D05 Copy Number",
+      "name": "SAS_Irula_LP6005519-DNA_D05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Irula_LP6005519-DNA_D05_wssd",
       "adapter": {
@@ -6238,7 +6238,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Kalash_LP6005441-DNA_E06 Copy Number",
+      "name": "SAS_Kalash_LP6005441-DNA_E06 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Kalash_LP6005441-DNA_E06_wssd",
       "adapter": {
@@ -6249,7 +6249,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Kalash_LP6005441-DNA_F06 Copy Number",
+      "name": "SAS_Kalash_LP6005441-DNA_F06 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Kalash_LP6005441-DNA_F06_wssd",
       "adapter": {
@@ -6260,7 +6260,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Kapu_LP6005519-DNA_A04 Copy Number",
+      "name": "SAS_Kapu_LP6005519-DNA_A04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Kapu_LP6005519-DNA_A04_wssd",
       "adapter": {
@@ -6271,7 +6271,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Kapu_LP6005519-DNA_B04 Copy Number",
+      "name": "SAS_Kapu_LP6005519-DNA_B04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Kapu_LP6005519-DNA_B04_wssd",
       "adapter": {
@@ -6282,7 +6282,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Khonda_Dora_LP6005519-DNA_E05 Copy Number",
+      "name": "SAS_Khonda_Dora_LP6005519-DNA_E05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Khonda_Dora_LP6005519-DNA_E05_wssd",
       "adapter": {
@@ -6293,7 +6293,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Kusunda_LP6005443-DNA_C09 Copy Number",
+      "name": "SAS_Kusunda_LP6005443-DNA_C09 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Kusunda_LP6005443-DNA_C09_wssd",
       "adapter": {
@@ -6304,7 +6304,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Kusunda_LP6005443-DNA_D09 Copy Number",
+      "name": "SAS_Kusunda_LP6005443-DNA_D09 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Kusunda_LP6005443-DNA_D09_wssd",
       "adapter": {
@@ -6315,7 +6315,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Madiga_LP6005519-DNA_G04 Copy Number",
+      "name": "SAS_Madiga_LP6005519-DNA_G04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Madiga_LP6005519-DNA_G04_wssd",
       "adapter": {
@@ -6326,7 +6326,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Madiga_LP6005519-DNA_H04 Copy Number",
+      "name": "SAS_Madiga_LP6005519-DNA_H04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Madiga_LP6005519-DNA_H04_wssd",
       "adapter": {
@@ -6337,7 +6337,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Makrani_LP6005441-DNA_C07 Copy Number",
+      "name": "SAS_Makrani_LP6005441-DNA_C07 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Makrani_LP6005441-DNA_C07_wssd",
       "adapter": {
@@ -6348,7 +6348,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Makrani_LP6005441-DNA_D07 Copy Number",
+      "name": "SAS_Makrani_LP6005441-DNA_D07 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Makrani_LP6005441-DNA_D07_wssd",
       "adapter": {
@@ -6359,7 +6359,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Mala_LP6005519-DNA_E04 Copy Number",
+      "name": "SAS_Mala_LP6005519-DNA_E04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Mala_LP6005519-DNA_E04_wssd",
       "adapter": {
@@ -6370,7 +6370,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Mala_LP6005519-DNA_F04 Copy Number",
+      "name": "SAS_Mala_LP6005519-DNA_F04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Mala_LP6005519-DNA_F04_wssd",
       "adapter": {
@@ -6381,7 +6381,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Pathan_LP6005441-DNA_C10 Copy Number",
+      "name": "SAS_Pathan_LP6005441-DNA_C10 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Pathan_LP6005441-DNA_C10_wssd",
       "adapter": {
@@ -6392,7 +6392,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Pathan_LP6005441-DNA_D10 Copy Number",
+      "name": "SAS_Pathan_LP6005441-DNA_D10 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Pathan_LP6005441-DNA_D10_wssd",
       "adapter": {
@@ -6403,7 +6403,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Punjabi_LP6005442-DNA_A12 Copy Number",
+      "name": "SAS_Punjabi_LP6005442-DNA_A12 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Punjabi_LP6005442-DNA_A12_wssd",
       "adapter": {
@@ -6414,7 +6414,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Punjabi_LP6005442-DNA_B12 Copy Number",
+      "name": "SAS_Punjabi_LP6005442-DNA_B12 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Punjabi_LP6005442-DNA_B12_wssd",
       "adapter": {
@@ -6425,7 +6425,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Punjabi_LP6005592-DNA_A04 Copy Number",
+      "name": "SAS_Punjabi_LP6005592-DNA_A04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Punjabi_LP6005592-DNA_A04_wssd",
       "adapter": {
@@ -6436,7 +6436,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Punjabi_LP6005592-DNA_B04 Copy Number",
+      "name": "SAS_Punjabi_LP6005592-DNA_B04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Punjabi_LP6005592-DNA_B04_wssd",
       "adapter": {
@@ -6447,7 +6447,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Relli_LP6005519-DNA_A05 Copy Number",
+      "name": "SAS_Relli_LP6005519-DNA_A05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Relli_LP6005519-DNA_A05_wssd",
       "adapter": {
@@ -6458,7 +6458,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Relli_LP6005519-DNA_B05 Copy Number",
+      "name": "SAS_Relli_LP6005519-DNA_B05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Relli_LP6005519-DNA_B05_wssd",
       "adapter": {
@@ -6469,7 +6469,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Sherpa_LP6005592-DNA_E05 Copy Number",
+      "name": "SAS_Sherpa_LP6005592-DNA_E05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Sherpa_LP6005592-DNA_E05_wssd",
       "adapter": {
@@ -6480,7 +6480,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Sherpa_LP6005592-DNA_F05 Copy Number",
+      "name": "SAS_Sherpa_LP6005592-DNA_F05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Sherpa_LP6005592-DNA_F05_wssd",
       "adapter": {
@@ -6491,7 +6491,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Sindhi_LP6005441-DNA_G11 Copy Number",
+      "name": "SAS_Sindhi_LP6005441-DNA_G11 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Sindhi_LP6005441-DNA_G11_wssd",
       "adapter": {
@@ -6502,7 +6502,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Sindhi_LP6005441-DNA_H11 Copy Number",
+      "name": "SAS_Sindhi_LP6005441-DNA_H11 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Sindhi_LP6005441-DNA_H11_wssd",
       "adapter": {
@@ -6513,7 +6513,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Tibetan_LP6005592-DNA_G05 Copy Number",
+      "name": "SAS_Tibetan_LP6005592-DNA_G05 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Tibetan_LP6005592-DNA_G05_wssd",
       "adapter": {
@@ -6524,7 +6524,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Tibetan_LP6005619-DNA_A01 Copy Number",
+      "name": "SAS_Tibetan_LP6005619-DNA_A01 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Tibetan_LP6005619-DNA_A01_wssd",
       "adapter": {
@@ -6535,7 +6535,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Yadava_LP6005519-DNA_C04 Copy Number",
+      "name": "SAS_Yadava_LP6005519-DNA_C04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Yadava_LP6005519-DNA_C04_wssd",
       "adapter": {
@@ -6546,7 +6546,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Yadava_LP6005519-DNA_D04 Copy Number",
+      "name": "SAS_Yadava_LP6005519-DNA_D04 wssd CN",
       "category": ["varRep"],
       "trackId": "SAS_Yadava_LP6005519-DNA_D04_wssd",
       "adapter": {
@@ -6557,7 +6557,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Aleut_LP6005443-DNA_A03 Copy Number",
+      "name": "SIB_Aleut_LP6005443-DNA_A03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Aleut_LP6005443-DNA_A03_wssd",
       "adapter": {
@@ -6568,7 +6568,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Aleut_LP6005443-DNA_H02 Copy Number",
+      "name": "SIB_Aleut_LP6005443-DNA_H02 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Aleut_LP6005443-DNA_H02_wssd",
       "adapter": {
@@ -6579,7 +6579,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Altaian_LP6005442-DNA_F02 Copy Number",
+      "name": "SIB_Altaian_LP6005442-DNA_F02 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Altaian_LP6005442-DNA_F02_wssd",
       "adapter": {
@@ -6590,7 +6590,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Chukchi_LP6005443-DNA_C03 Copy Number",
+      "name": "SIB_Chukchi_LP6005443-DNA_C03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Chukchi_LP6005443-DNA_C03_wssd",
       "adapter": {
@@ -6601,7 +6601,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Eskimo_Chaplin_LP6005443-DNA_D03 Copy Number",
+      "name": "SIB_Eskimo_Chaplin_LP6005443-DNA_D03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Eskimo_Chaplin_LP6005443-DNA_D03_wssd",
       "adapter": {
@@ -6612,7 +6612,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Eskimo_Naukan_LP6005443-DNA_F03 Copy Number",
+      "name": "SIB_Eskimo_Naukan_LP6005443-DNA_F03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Eskimo_Naukan_LP6005443-DNA_F03_wssd",
       "adapter": {
@@ -6623,7 +6623,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Eskimo_Naukan_LP6005443-DNA_G03 Copy Number",
+      "name": "SIB_Eskimo_Naukan_LP6005443-DNA_G03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Eskimo_Naukan_LP6005443-DNA_G03_wssd",
       "adapter": {
@@ -6634,7 +6634,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Eskimo_Sireniki_LP6005443-DNA_B03 Copy Number",
+      "name": "SIB_Eskimo_Sireniki_LP6005443-DNA_B03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Eskimo_Sireniki_LP6005443-DNA_B03_wssd",
       "adapter": {
@@ -6645,7 +6645,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Eskimo_Sireniki_LP6005443-DNA_H03 Copy Number",
+      "name": "SIB_Eskimo_Sireniki_LP6005443-DNA_H03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Eskimo_Sireniki_LP6005443-DNA_H03_wssd",
       "adapter": {
@@ -6656,7 +6656,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Even_LP6005443-DNA_B04 Copy Number",
+      "name": "SIB_Even_LP6005443-DNA_B04 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Even_LP6005443-DNA_B04_wssd",
       "adapter": {
@@ -6667,7 +6667,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Even_LP6005443-DNA_C04 Copy Number",
+      "name": "SIB_Even_LP6005443-DNA_C04 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Even_LP6005443-DNA_C04_wssd",
       "adapter": {
@@ -6678,7 +6678,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Even_LP6005592-DNA_F03 Copy Number",
+      "name": "SIB_Even_LP6005592-DNA_F03 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Even_LP6005592-DNA_F03_wssd",
       "adapter": {
@@ -6689,7 +6689,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Itelman_LP6005443-DNA_D04 Copy Number",
+      "name": "SIB_Itelman_LP6005443-DNA_D04 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Itelman_LP6005443-DNA_D04_wssd",
       "adapter": {
@@ -6700,7 +6700,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Kyrgyz_LP6005677-DNA_A02 Copy Number",
+      "name": "SIB_Kyrgyz_LP6005677-DNA_A02 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Kyrgyz_LP6005677-DNA_A02_wssd",
       "adapter": {
@@ -6711,7 +6711,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Kyrgyz_LP6005677-DNA_B02 Copy Number",
+      "name": "SIB_Kyrgyz_LP6005677-DNA_B02 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Kyrgyz_LP6005677-DNA_B02_wssd",
       "adapter": {
@@ -6722,7 +6722,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Mansi_LP6005443-DNA_F04 Copy Number",
+      "name": "SIB_Mansi_LP6005443-DNA_F04 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Mansi_LP6005443-DNA_F04_wssd",
       "adapter": {
@@ -6733,7 +6733,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Mansi_LP6005443-DNA_G04 Copy Number",
+      "name": "SIB_Mansi_LP6005443-DNA_G04 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Mansi_LP6005443-DNA_G04_wssd",
       "adapter": {
@@ -6744,7 +6744,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Mongola_LP6005441-DNA_E08 Copy Number",
+      "name": "SIB_Mongola_LP6005441-DNA_E08 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Mongola_LP6005441-DNA_E08_wssd",
       "adapter": {
@@ -6755,7 +6755,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Mongola_LP6005441-DNA_F08 Copy Number",
+      "name": "SIB_Mongola_LP6005441-DNA_F08 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Mongola_LP6005441-DNA_F08_wssd",
       "adapter": {
@@ -6766,7 +6766,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Tlingit_LP6005443-DNA_D05 Copy Number",
+      "name": "SIB_Tlingit_LP6005443-DNA_D05 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Tlingit_LP6005443-DNA_D05_wssd",
       "adapter": {
@@ -6777,7 +6777,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Tlingit_LP6005443-DNA_E05 Copy Number",
+      "name": "SIB_Tlingit_LP6005443-DNA_E05 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Tlingit_LP6005443-DNA_E05_wssd",
       "adapter": {
@@ -6788,7 +6788,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Tubalar_LP6005442-DNA_E12 Copy Number",
+      "name": "SIB_Tubalar_LP6005442-DNA_E12 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Tubalar_LP6005442-DNA_E12_wssd",
       "adapter": {
@@ -6799,7 +6799,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Tubalar_LP6005442-DNA_F12 Copy Number",
+      "name": "SIB_Tubalar_LP6005442-DNA_F12 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Tubalar_LP6005442-DNA_F12_wssd",
       "adapter": {
@@ -6810,7 +6810,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Ulchi_LP6005442-DNA_G12 Copy Number",
+      "name": "SIB_Ulchi_LP6005442-DNA_G12 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Ulchi_LP6005442-DNA_G12_wssd",
       "adapter": {
@@ -6821,7 +6821,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Ulchi_LP6005442-DNA_H12 Copy Number",
+      "name": "SIB_Ulchi_LP6005442-DNA_H12 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Ulchi_LP6005442-DNA_H12_wssd",
       "adapter": {
@@ -6832,7 +6832,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Yakut_LP6005442-DNA_F01 Copy Number",
+      "name": "SIB_Yakut_LP6005442-DNA_F01 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Yakut_LP6005442-DNA_F01_wssd",
       "adapter": {
@@ -6843,7 +6843,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SIB_Yakut_LP6005443-DNA_D02 Copy Number",
+      "name": "SIB_Yakut_LP6005443-DNA_D02 wssd CN",
       "category": ["varRep"],
       "trackId": "SIB_Yakut_LP6005443-DNA_D02_wssd",
       "adapter": {
@@ -6854,7 +6854,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CHM13_kmer Copy Number",
+      "name": "CHM13_kmer wssd CN",
       "category": ["varRep"],
       "trackId": "CHM13_kmer_wssd",
       "adapter": {
@@ -6865,7 +6865,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "GRCh38_kmer Copy Number",
+      "name": "GRCh38_kmer wssd CN",
       "category": ["varRep"],
       "trackId": "GRCh38_kmer_wssd",
       "adapter": {
@@ -6876,7 +6876,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "LP6005619-DNA_D01 Copy Number",
+      "name": "LP6005619-DNA_D01 wssd CN",
       "category": ["varRep"],
       "trackId": "LP6005619-DNA_D01_wssd",
       "adapter": {
@@ -6887,7 +6887,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_BantuKenya_LP6005441-DNA_B02 Copy Number",
+      "name": "AFR_BantuKenya_LP6005441-DNA_B02 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AFR_BantuKenya_LP6005441-DNA_B02_wssd",
       "adapter": {
@@ -6898,7 +6898,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ju_hoan_North_LP6005441-DNA_A11 Copy Number",
+      "name": "AFR_Ju_hoan_North_LP6005441-DNA_A11 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AFR_Ju_hoan_North_LP6005441-DNA_A11_wssd",
       "adapter": {
@@ -6909,7 +6909,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Ju_hoan_North_LP6005441-DNA_B11 Copy Number",
+      "name": "AFR_Ju_hoan_North_LP6005441-DNA_B11 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AFR_Ju_hoan_North_LP6005441-DNA_B11_wssd",
       "adapter": {
@@ -6920,7 +6920,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mbuti_LP6005441-DNA_A08 Copy Number",
+      "name": "AFR_Mbuti_LP6005441-DNA_A08 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AFR_Mbuti_LP6005441-DNA_A08_wssd",
       "adapter": {
@@ -6931,7 +6931,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AFR_Mbuti_LP6005441-DNA_B08 Copy Number",
+      "name": "AFR_Mbuti_LP6005441-DNA_B08 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AFR_Mbuti_LP6005441-DNA_B08_wssd",
       "adapter": {
@@ -6942,7 +6942,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Piapoco_LP6005441-DNA_A04 Copy Number",
+      "name": "AMR_Piapoco_LP6005441-DNA_A04 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AMR_Piapoco_LP6005441-DNA_A04_wssd",
       "adapter": {
@@ -6953,7 +6953,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Piapoco_LP6005441-DNA_B04 Copy Number",
+      "name": "AMR_Piapoco_LP6005441-DNA_B04 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AMR_Piapoco_LP6005441-DNA_B04_wssd",
       "adapter": {
@@ -6964,7 +6964,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Surui_LP6005441-DNA_A12 Copy Number",
+      "name": "AMR_Surui_LP6005441-DNA_A12 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AMR_Surui_LP6005441-DNA_A12_wssd",
       "adapter": {
@@ -6975,7 +6975,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "AMR_Surui_LP6005441-DNA_B12 Copy Number",
+      "name": "AMR_Surui_LP6005441-DNA_B12 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_AMR_Surui_LP6005441-DNA_B12_wssd",
       "adapter": {
@@ -6986,7 +6986,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Han_LP6005441-DNA_C05 Copy Number",
+      "name": "EAS_Han_LP6005441-DNA_C05 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EAS_Han_LP6005441-DNA_C05_wssd",
       "adapter": {
@@ -6997,7 +6997,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Japanese_LP6005441-DNA_C06 Copy Number",
+      "name": "EAS_Japanese_LP6005441-DNA_C06 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EAS_Japanese_LP6005441-DNA_C06_wssd",
       "adapter": {
@@ -7008,7 +7008,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Lahu_LP6005441-DNA_B07 Copy Number",
+      "name": "EAS_Lahu_LP6005441-DNA_B07 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EAS_Lahu_LP6005441-DNA_B07_wssd",
       "adapter": {
@@ -7019,7 +7019,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Naxi_LP6005441-DNA_A09 Copy Number",
+      "name": "EAS_Naxi_LP6005441-DNA_A09 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EAS_Naxi_LP6005441-DNA_A09_wssd",
       "adapter": {
@@ -7030,7 +7030,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EAS_Naxi_LP6005441-DNA_B09 Copy Number",
+      "name": "EAS_Naxi_LP6005441-DNA_B09 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EAS_Naxi_LP6005441-DNA_B09_wssd",
       "adapter": {
@@ -7041,7 +7041,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Adygei_LP6005441-DNA_A01 Copy Number",
+      "name": "EUR_Adygei_LP6005441-DNA_A01 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EUR_Adygei_LP6005441-DNA_A01_wssd",
       "adapter": {
@@ -7052,7 +7052,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Adygei_LP6005441-DNA_B01 Copy Number",
+      "name": "EUR_Adygei_LP6005441-DNA_B01 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EUR_Adygei_LP6005441-DNA_B01_wssd",
       "adapter": {
@@ -7063,7 +7063,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Basque_LP6005441-DNA_C02 Copy Number",
+      "name": "EUR_Basque_LP6005441-DNA_C02 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EUR_Basque_LP6005441-DNA_C02_wssd",
       "adapter": {
@@ -7074,7 +7074,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Bergamo_LP6005441-DNA_A06 Copy Number",
+      "name": "EUR_Bergamo_LP6005441-DNA_A06 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EUR_Bergamo_LP6005441-DNA_A06_wssd",
       "adapter": {
@@ -7085,7 +7085,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_Bergamo_LP6005441-DNA_B06 Copy Number",
+      "name": "EUR_Bergamo_LP6005441-DNA_B06 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EUR_Bergamo_LP6005441-DNA_B06_wssd",
       "adapter": {
@@ -7096,7 +7096,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_French_LP6005441-DNA_A05 Copy Number",
+      "name": "EUR_French_LP6005441-DNA_A05 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EUR_French_LP6005441-DNA_A05_wssd",
       "adapter": {
@@ -7107,7 +7107,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "EUR_French_LP6005441-DNA_B05 Copy Number",
+      "name": "EUR_French_LP6005441-DNA_B05 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_EUR_French_LP6005441-DNA_B05_wssd",
       "adapter": {
@@ -7118,7 +7118,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Bougainville_LP6005441-DNA_A03 Copy Number",
+      "name": "OCN_Bougainville_LP6005441-DNA_A03 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_OCN_Bougainville_LP6005441-DNA_A03_wssd",
       "adapter": {
@@ -7129,7 +7129,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Bougainville_LP6005441-DNA_B03 Copy Number",
+      "name": "OCN_Bougainville_LP6005441-DNA_B03 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_OCN_Bougainville_LP6005441-DNA_B03_wssd",
       "adapter": {
@@ -7140,7 +7140,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005441-DNA_A10 Copy Number",
+      "name": "OCN_Papuan_LP6005441-DNA_A10 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_OCN_Papuan_LP6005441-DNA_A10_wssd",
       "adapter": {
@@ -7151,7 +7151,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "OCN_Papuan_LP6005441-DNA_B10 Copy Number",
+      "name": "OCN_Papuan_LP6005441-DNA_B10 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_OCN_Papuan_LP6005441-DNA_B10_wssd",
       "adapter": {
@@ -7162,7 +7162,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Brahui_LP6005441-DNA_C03 Copy Number",
+      "name": "SAS_Brahui_LP6005441-DNA_C03 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_SAS_Brahui_LP6005441-DNA_C03_wssd",
       "adapter": {
@@ -7173,7 +7173,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "SAS_Makrani_LP6005441-DNA_C07 Copy Number",
+      "name": "SAS_Makrani_LP6005441-DNA_C07 wssd CN",
       "category": ["varRep"],
       "trackId": "subset_SAS_Makrani_LP6005441-DNA_C07_wssd",
       "adapter": {
@@ -7184,7 +7184,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "CHM13_kmer Copy Number",
+      "name": "CHM13_kmer wssd CN",
       "category": ["varRep"],
       "trackId": "subset_CHM13_kmer_wssd",
       "adapter": {
@@ -7195,7 +7195,7 @@
     {
       "type": "FeatureTrack",
       "assemblyNames": ["hs1"],
-      "name": "GRCh38_kmer Copy Number",
+      "name": "GRCh38_kmer wssd CN",
       "category": ["varRep"],
       "trackId": "subset_GRCh38_kmer_wssd",
       "adapter": {
