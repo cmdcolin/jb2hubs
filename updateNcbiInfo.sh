@@ -7,10 +7,10 @@ fd meta.json hubs | while read p; do
 
   # Only run esearch if ncbi.json doesn't exist
   if [ ! -f "$dir/ncbi.json" ]; then
-    echo "Processing $id"
+    echo "Fetching NCBI info for $id"
     (esearch -db assembly -query $id </dev/null | esummary -mode json) >$dir/ncbi.json
     sleep 0.1
-  else
-    echo "Skipping $id (ncbi.json already exists)"
+  # else
+  #   echo "Skipping $id (ncbi.json already exists)"
   fi
 done

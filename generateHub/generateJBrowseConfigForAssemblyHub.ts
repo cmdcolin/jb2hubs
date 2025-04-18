@@ -64,5 +64,5 @@ export function generateJBrowseConfigForAssemblyHub({
       }),
     }
   }
-  return
+  throw new Error('not a single file hub')
 }

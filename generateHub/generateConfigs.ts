@@ -2,23 +2,30 @@ import fs from 'node:fs'
 
 import { generateJBrowseConfigForAssemblyHub } from './generateJBrowseConfigForAssemblyHub.ts'
 import { readJSON, writeJSON } from './util.ts'
+import deepEqual from 'fast-deep-equal'
 
-const meta = process.argv[2]
-const hubMeta = readJSON(process.argv[2]) as {
+const metaPath = process.argv[2]
+const configPath = metaPath.replace('meta.json', 'config.json')
+const hubMeta = readJSON(metaPath) as {
   hubFileLocation: string
 }
+let oldConfig
+try {
+  oldConfig = readJSON(configPath)
+} catch (e) {}
+
 const hubFileText = fs.readFileSync(
-  meta.replace('meta.json', 'hub.txt'),
+  metaPath.replace('meta.json', 'hub.txt'),
   'utf8',
 )
 
-const config = generateJBrowseConfigForAssemblyHub({
+const newConfig = generateJBrowseConfigForAssemblyHub({
   hubFileText,
   trackDbUrl: hubMeta.hubFileLocation,
 })
 
-if (config) {
-  writeJSON(meta.replace('meta.json', 'config.json'), config)
+if (!deepEqual(newConfig, oldConfig)) {
+  writeJSON(configPath, newConfig)
 } else {
   console.error('No config generated')
 }

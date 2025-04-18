@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
     "deploy": "gh-pages -d out --nojekyll",
-    "format": "prettier --write",
+    "format": "prettier --write --cache",
     "predeploy": "yarn build",
     "postdeploy": "git push --follow-tags"
   },
@@ -19,6 +19,7 @@
     "@stylistic/eslint-plugin": "^4.2.0",
     "@tailwindcss/postcss": "^4.0.14",
     "eslint-plugin-unicorn": "^58.0.0",
+    "fast-deep-equal": "^3.1.3",
     "gh-pages": "^6.3.0",
     "lucide-react": "^0.487.0",
     "nanoid": "^5.1.5",
