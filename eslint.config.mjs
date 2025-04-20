@@ -1,9 +1,7 @@
-import stylistic from '@stylistic/eslint-plugin'
 import importPlugin from 'eslint-plugin-import'
 import eslint from '@eslint/js'
 import eslintPluginReact from 'eslint-plugin-react'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
-import eslintPluginUnicorn from 'eslint-plugin-unicorn'
 import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
@@ -15,11 +13,7 @@ export default tseslint.config(
       'postcss.config.mjs',
     ],
   },
-  {
-    plugins: {
-      '@stylistic': stylistic,
-    },
-  },
+
   {
     languageOptions: {
       parserOptions: {
@@ -62,9 +56,6 @@ export default tseslint.config(
       'no-underscore-dangle': 0,
       curly: 'error',
       semi: ['error', 'never'],
-
-      '@stylistic/object-curly-newline': ['error', 'always'],
-      '@stylistic/curly-newline': 'error',
 
       '@typescript-eslint/restrict-template-expressions': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',

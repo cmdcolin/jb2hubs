@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+
 import { Download, Star } from 'lucide-react'
 
 import type { AssemblyData } from '../util'
@@ -28,16 +29,22 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
   const [showAllColumns, setShowAllColumns] = useState(false)
 
   const filteredRows = useMemo(() => {
-    if (filterOption === 'all') {
-      return rows
-    } else if (filterOption === 'refseq') {
-      return rows.filter(r => r.ncbiName.startsWith('GCF_'))
-    } else if (filterOption === 'genbank') {
-      return rows.filter(r => r.ncbiName.startsWith('GCA_'))
-    } else if (filterOption === 'designatedReference') {
-      return rows.filter(r => r.ncbiRefSeqCategory === 'reference genome')
-    } else {
-      return rows
+    switch (filterOption) {
+      case 'all': {
+        return rows
+      }
+      case 'refseq': {
+        return rows.filter(r => r.ncbiName.startsWith('GCF_'))
+      }
+      case 'genbank': {
+        return rows.filter(r => r.ncbiName.startsWith('GCA_'))
+      }
+      case 'designatedReference': {
+        return rows.filter(r => r.ncbiRefSeqCategory === 'reference genome')
+      }
+      default: {
+        return rows
+      }
     }
   }, [rows, filterOption])
 

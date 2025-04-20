@@ -27,7 +27,7 @@ export function generateHubTracks({
     .map(([trackName, track]) => {
       const { data } = track
       if (Object.keys(data).some(key => parentTrackKeys.has(key))) {
-        return
+        return undefined
       } else {
         const parentTracks = []
         let currentTrackName = trackName
@@ -67,7 +67,7 @@ export function generateHubTracks({
     .filter(f => notEmpty(f))
     .map(r => ({
       ...r,
-      trackId: `ucsc-trackhub-${objectHash(r)}`,
+      trackId: `${assemblyName}-ucsc-trackhub-${objectHash(r)}`,
       assemblyNames: [assemblyName],
     }))
 }

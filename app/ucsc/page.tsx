@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
-import { list } from './list'
-import DataTable from '../components/DataTable'
+import list from './list.json'
 
 import '../components/table.css'
 

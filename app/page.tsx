@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import './components/table.css'
-import { list } from './ucsc/list'
+import list from './ucsc/list.json'
 
 import { hubCategories } from '@/generateHub/hubCategories'
 
@@ -13,7 +13,7 @@ export default function Home() {
         This page has JBrowse genome browsers for both main UCSC genomes and the{' '}
         <Link href="https://hgdownload.soe.ucsc.edu/hubs/">
           UCSC GenArk hubs
-        </Link>{' '}
+        </Link>
       </p>
       <div>
         <h3>Main UCSC browsers</h3>
