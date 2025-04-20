@@ -85,8 +85,8 @@ function parseAssemblyEntry({
     commonName: comName || '',
     taxonId: taxId || '',
     assemblyStatus,
-    ucscDataLink: ucscBase,
     ncbiName: asmId,
+    jbrowseConfig: `https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
     source,
   }
 }
