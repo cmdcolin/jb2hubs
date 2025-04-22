@@ -1,5 +1,4 @@
-import { notEmpty, objectHash } from '@jbrowse/core/util/index.js'
-
+import { notEmpty } from './notEmpty.ts'
 import { generateUnknownTrackConf, resolve } from './util.ts'
 
 import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
@@ -67,7 +66,7 @@ export function generateHubTracks({
     .filter(f => notEmpty(f))
     .map(r => ({
       ...r,
-      trackId: `${assemblyName}-ucsc-trackhub-${objectHash(r)}`,
+      trackId: `${assemblyName}-${r.metadata.track}`,
       assemblyNames: [assemblyName],
     }))
 }

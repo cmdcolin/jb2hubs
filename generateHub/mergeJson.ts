@@ -2,8 +2,9 @@ import fs from 'fs'
 import path from 'path'
 import { readJSON } from './util.ts'
 
+type IndexEntry = any
+
 interface NCBIData {
-  // @ts-expect-error
   uids: string[]
   [key: string]: IndexEntry
 }

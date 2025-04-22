@@ -1,8 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe } from '@jbrowse/core/util/index.js'
-
+import { dedupe } from './dedupe.ts'
 import { readJSON } from './util.ts'
 
 interface Config {

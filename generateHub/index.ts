@@ -1,8 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe } from '@jbrowse/core/util/dedupe.js'
-
+import { dedupe } from './dedupe.ts'
 import { myfetchtext, readJSON } from './util.ts'
 
 interface Entry {

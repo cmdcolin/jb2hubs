@@ -1,7 +1,5 @@
 import fs from 'node:fs'
 
-import { objectHash } from '@jbrowse/core/util/index.js'
-
 export function resolve(uri: string, baseUri: string | URL) {
   return new URL(uri, baseUri).href
 }
@@ -54,15 +52,12 @@ export function generateUnknownTrackConf(
   trackUrl: string,
   categories?: string[],
 ) {
-  const conf = {
+  return {
     type: 'FeatureTrack',
     name: `${trackName} (Unknown)`,
     description: `Could not determine track type for "${trackUrl}"`,
     category: categories,
-    trackId: '',
   }
-  conf.trackId = objectHash(conf)
-  return conf
 }
 
 export function readJSON(f: string) {
