@@ -7,4 +7,4 @@ node generateHub/index.ts
 node generateHub/makeHubPages.ts
 node generateHub/makeGenArkExtensions.ts
 yarn format --log-level error .
-aws s3 sync hubs s3://jbrowse.org/hubs/genark/
+aws s3 sync hubs s3://jbrowse.org/hubs/genark/ --size-only
