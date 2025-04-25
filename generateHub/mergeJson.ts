@@ -11,7 +11,6 @@ for (const entry of process.argv.slice(2)) {
   const source = path.basename(entry, '.json')
   if (source !== 'all') {
     entries = entries.concat(
-       
       (readJSON(entry) as { data: APIData[] }).data.map(t => ({
         ...t,
         source,
