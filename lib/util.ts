@@ -3,6 +3,7 @@ import path from 'node:path'
 import type { APIData } from './types'
 
 import { readJSON } from '@/generateHub/util'
+import { notEmpty } from '@/generateHub/notEmpty'
 
 interface IndexEntry {
   assemblystatus: string
@@ -47,7 +48,7 @@ export function parseAssemblyEntry({
   const r = ncbiData?.result.uids[0]
   const r2 = r ? ncbiData?.result[r] : undefined
   if (!r2) {
-    throw new Error('failed to parse NCBI json ' + accession)
+    return undefined
   }
   const assemblyStatus = r2.assemblystatus
   const ncbiAssemblyName = r2.assemblyname
@@ -96,8 +97,8 @@ function extractStats(xmlString: string) {
   return stats
 }
 
-export function parseAssembliesListJson(data: { data: APIData[] }) {
-  return data.data.map(d => parseAssemblyEntry(d))
+export function parseAssembliesListJson({ data }: { data: APIData[] }) {
+  return data.map(d => parseAssemblyEntry(d)).filter(notEmpty)
 }
 
 export async function myjsonfetch(url: string) {

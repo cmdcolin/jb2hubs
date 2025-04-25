@@ -22,7 +22,11 @@ const filterCategories = {
 
 type FilterOption = keyof typeof filterCategories
 
-export default function DataTable({ rows }: { rows: AssemblyData[] }) {
+export default function DataTable({
+  rows,
+}: {
+  rows: NonNullable<AssemblyData>[]
+}) {
   const [sortColumn, setSortColumn] = useState<SortColumn>()
   const [filterOption, setFilterOption] = useState<FilterOption>('all')
   const [showAllColumns, setShowAllColumns] = useState(false)
