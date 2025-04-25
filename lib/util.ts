@@ -21,7 +21,7 @@ interface NCBIData {
   [key: string]: IndexEntry
 }
 
-function parseAssemblyEntry({
+export function parseAssemblyEntry({
   taxId,
   asmId,
   genBank,
@@ -45,7 +45,7 @@ function parseAssemblyEntry({
     console.error(`NCBI data not found for ${accession}`)
   }
   const r = ncbiData?.result.uids[0]
-  const r2 = r ? ncbiData?.result[r]! : ({} as any)
+  const r2 = r ? ncbiData?.result[r] : undefined
   if (!r2) {
     throw new Error('failed to parse NCBI json ' + accession)
   }
@@ -84,7 +84,7 @@ function parseAssemblyEntry({
 }
 
 function extractStats(xmlString: string) {
-  const stats = {} as Record<string, any>
+  const stats = {} as Record<string, unknown>
   const statsRegex =
     /<Stat category="([^"]+)" sequence_tag="([^"]+)">([^<]+)<\/Stat>/g
   let match
@@ -105,7 +105,7 @@ export async function myjsonfetch(url: string) {
   if (!res.ok) {
     throw new Error(`HTTP ${res.status} fetching ${url}`)
   }
-  return res.json()
+  return res.json() as Promise<unknown>
 }
 
 export type AssemblyData = ReturnType<typeof parseAssemblyEntry>

@@ -4,9 +4,8 @@ import { useMemo, useState } from 'react'
 
 import { Download, Star } from 'lucide-react'
 
-import type { AssemblyData } from '../util'
-
 import './table.css'
+import { AssemblyData } from '@/lib/util'
 
 interface SortColumn {
   columnKey: string
@@ -68,7 +67,7 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
             return (
               (typeof aValue === 'number' && typeof bValue === 'number'
                 ? aValue - bValue
-                : String(aValue || '').localeCompare(String(bValue || ''))) *
+                : String(aValue ?? '').localeCompare(String(bValue ?? ''))) *
               flipper
             )
           }
@@ -84,7 +83,9 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
           columnKey,
           direction: 'DESC',
         })
-      } else if (sortColumn.direction === 'DESC') {
+      }
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      else if (sortColumn.direction === 'DESC') {
         setSortColumn(undefined)
       } else {
         setSortColumn({
@@ -368,7 +369,7 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
                       case 'seqReleaseDate': {
                         return (
                           <td key={field}>
-                            {row.seqReleaseDate?.replace('00:00', '')}
+                            {row.seqReleaseDate.replace('00:00', '')}
                           </td>
                         )
                       }
@@ -424,7 +425,7 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
                         )
                       }
                       default: {
-                        return <td key={field}>{String(row[field] || '')}</td>
+                        return <td key={field}>{String(row[field] ?? '')}</td>
                       }
                     }
                   })}

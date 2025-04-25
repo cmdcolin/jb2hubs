@@ -59,19 +59,41 @@ export function generateHubTracks({
             trackDbUrl,
             trackDb,
             sequenceAdapter,
+            assemblyName,
           }),
         }
       }
     })
     .filter(f => notEmpty(f))
-    .map(r => ({
-      ...r,
-      trackId: `${assemblyName}-${r.metadata.track}`,
-      assemblyNames: [assemblyName],
-    }))
 }
 
 function makeTrackConfig({
+  track,
+  trackDbUrl,
+  trackDb,
+  sequenceAdapter,
+  assemblyName,
+}: {
+  track: RaStanza
+  trackDbUrl: string
+  trackDb: TrackDbFile
+  sequenceAdapter: Adapter
+  assemblyName: string
+}) {
+  const { data } = track
+  const bigDataUrlPre = data.bigDataUrl || ''
+  const name =
+    (data.shortLabel || '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
+
+  return {
+    trackId: `${assemblyName}-${data.track}`,
+    description: data.longLabel,
+    assemblyNames: [assemblyName],
+    name,
+    ...makeTrackConfigSub({ track, trackDbUrl, trackDb, sequenceAdapter }),
+  }
+}
+function makeTrackConfigSub({
   track,
   trackDbUrl,
   trackDb,
@@ -83,7 +105,6 @@ function makeTrackConfig({
   sequenceAdapter: Adapter
 }) {
   const { data } = track
-
   const parent = data.parent || ''
   const bigDataUrlPre = data.bigDataUrl || ''
   const bigDataIdx = data.bigDataIndex || ''
@@ -104,8 +125,6 @@ function makeTrackConfig({
     case 'bam': {
       return {
         type: 'AlignmentsTrack',
-        name,
-        description: data.longLabel,
         adapter: {
           type: 'BamAdapter',
           uri: bigDataUrl,
@@ -115,8 +134,6 @@ function makeTrackConfig({
     case 'cram': {
       return {
         type: 'AlignmentsTrack',
-        name,
-        description: data.longLabel,
         adapter: {
           type: 'CramAdapter',
           uri: bigDataUrl,
@@ -127,8 +144,6 @@ function makeTrackConfig({
     case 'bigWig': {
       return {
         type: 'QuantitativeTrack',
-        name,
-        description: data.longLabel,
         adapter: {
           type: 'BigWigAdapter',
           uri: bigDataUrl,
@@ -139,8 +154,6 @@ function makeTrackConfig({
       if (baseTrackType.startsWith('big')) {
         return {
           type: 'FeatureTrack',
-          name,
-          description: data.longLabel,
           adapter: {
             type: 'BigBedAdapter',
             uri: bigDataUrl,
@@ -149,8 +162,6 @@ function makeTrackConfig({
       } else if (baseTrackType === 'vcfTabix') {
         return {
           type: 'VariantTrack',
-          name,
-          description: data.longLabel,
           adapter: {
             type: 'VcfTabixAdapter',
             uri: bigDataUrl,
@@ -159,8 +170,6 @@ function makeTrackConfig({
       } else if (baseTrackType === 'hic') {
         return {
           type: 'HicTrack',
-          name,
-          description: data.longLabel,
           adapter: {
             type: 'HicAdapter',
             uri: bigDataUrl,

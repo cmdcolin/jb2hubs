@@ -1,10 +1,11 @@
 import Link from 'next/link'
 
 import DataTable from '../components/DataTable'
-import { APIData } from '../types'
-import { parseAssembliesListJson } from '../util'
+
+import type { APIData } from '@/lib/types'
 
 import { readJSON } from '@/generateHub/util'
+import { parseAssembliesListJson } from '@/lib/util'
 
 export default function Page({ title, raw }: { title: string; raw: string }) {
   return (

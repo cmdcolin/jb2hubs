@@ -42,7 +42,6 @@ export default tseslint.config(
     },
     rules: eslintPluginReactHooks.configs.recommended.rules,
   },
-  eslintPluginUnicorn.configs.recommended,
   {
     rules: {
       'react/react-in-jsx-scope': 'off',
@@ -60,10 +59,9 @@ export default tseslint.config(
       '@typescript-eslint/restrict-template-expressions': 'off',
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
+      '@typescript-eslint/no-base-to-string': 'off',
 
-      'unicorn/prevent-abbreviations': 'off',
-      'unicorn/filename-case': 'off',
-
+      'no-empty': 'off',
       'import/no-unresolved': 'off',
       'import/order': [
         'error',
