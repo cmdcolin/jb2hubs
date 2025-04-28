@@ -1,8 +1,6 @@
+import { dedupe, readJSON } from 'hubtools'
 import fs from 'node:fs'
 import path from 'node:path'
-
-import { dedupe } from './dedupe.ts'
-import { readJSON } from './util.ts'
 
 interface Config {
   tracks: {
@@ -33,16 +31,20 @@ for (const item of ret) {
   const extensionConfig = readJSON(path.join(b, item)) as Config
 
   // Merge the configs (extension takes precedence)
-  const mergedConfig = {
-    ...existingConfig,
-    ...extensionConfig,
-    tracks: dedupe(
-      [...extensionConfig.tracks, ...existingConfig.tracks],
-      t => t.trackId,
+  fs.writeFileSync(
+    f,
+    JSON.stringify(
+      {
+        ...existingConfig,
+        ...extensionConfig,
+        tracks: dedupe(
+          [...extensionConfig.tracks, ...existingConfig.tracks],
+          t => t.trackId,
+        ),
+      },
+      undefined,
+      2,
     ),
-  }
-
-  // Write the merged config back to the original file
-  fs.writeFileSync(f, JSON.stringify(mergedConfig, undefined, 2))
+  )
   console.log(`Updated config file: ${f}`)
 }

@@ -22,7 +22,7 @@ for (const f of [
   'globalReference',
   'legacy',
 ]) {
-  fs.mkdirSync(`app/hubs/${f}/`, {
+  fs.mkdirSync(`../website/app/hubs/${f}/`, {
     recursive: true,
   })
   fs.writeFileSync(

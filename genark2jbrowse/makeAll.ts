@@ -16,10 +16,10 @@ interface Entry {
 }
 
 const entries = dedupe(
-  fs.readdirSync('website/hubJson').flatMap(
-    file =>
+  fs.readdirSync('hubJson').flatMap(
+    f =>
       (
-        readJSON(`website/hubJson/${file}`) as {
+        readJSON(`hubJson/${f}`) as {
           data: Entry[]
         }
       ).data,
@@ -27,7 +27,7 @@ const entries = dedupe(
   d => d.ucscBrowser,
 )
 
-for (const [idx, entry] of entries.entries()) {
+async function processEntry(entry: Entry, idx: number, totalEntries: number) {
   const {
     taxId,
     asmId,
@@ -49,11 +49,11 @@ for (const [idx, entry] of entries.entries()) {
 
   if (fs.existsSync(hubFile)) {
     // console.log(
-    //   `Skipping ${idx}/${entries.length}: ${accession} (already exists)`,
+    //   `Skipping ${idx}/${totalEntries}: ${accession} (already exists)`,
     // )
-    continue
+    return
   }
-  console.log(`Processing ${idx}/${entries.length}:`, entry, metaFile)
+  console.log(`Processing ${idx}/${totalEntries}:`, entry, metaFile)
 
   await new Promise(resolve => setTimeout(resolve, 100))
   const hubFileLocation = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
@@ -77,4 +77,13 @@ for (const [idx, entry] of entries.entries()) {
       hubFileLocation,
     }),
   )
+}
+
+for (const [idx, entry] of entries.entries()) {
+  try {
+    await processEntry(entry, idx, entries.length)
+  } catch (e) {
+    // some 404 exist in the list, just log and continue
+    console.error(e)
+  }
 }
