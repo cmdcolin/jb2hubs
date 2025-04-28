@@ -1,0 +1,127 @@
+hub GCF_000880735.1 genome assembly
+shortLabel Rotavirus A (RVA/Simian-tc/ZAF/SA11-H96/1958/G3P5B[2] 2008)
+longLabel Rotavirus A (RVA/Simian-tc/ZAF/SA11-H96/1958/G3P5B[2] 2008)/Rotavirus A/GCF_000880735.1_ViralMultiSegProj32521 genome assembly
+useOneFile on
+email hclawson@ucsc.edu
+descriptionUrl html/GCF_000880735.1_ViralMultiSegProj32521.description.html
+
+genome GCF_000880735.1
+taxId 28875
+groups groups.txt
+description Rotavirus A (RVA/Simian-tc/ZAF/SA11-H96/1958/G3P5B[2] 2008)
+twoBitPath GCF_000880735.1.2bit
+twoBitBptUrl GCF_000880735.1.2bit.bpt
+chromSizes GCF_000880735.1.chrom.sizes.txt
+chromAliasBb GCF_000880735.1.chromAlias.bb
+organism ViralMultiSegProj32521 Oct. 2011
+defaultPos NC_011507.2:1100-3302
+scientificName Rotavirus A
+htmlPath html/GCF_000880735.1_ViralMultiSegProj32521.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/880/735/GCF_000880735.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/880/735/GCF_000880735.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/880/735/GCF_000880735.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.assembly.bb
+type bigBed 6
+html html/GCF_000880735.1_ViralMultiSegProj32521.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000880735.1_ViralMultiSegProj32521.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.gc5Base.bw
+html html/GCF_000880735.1_ViralMultiSegProj32521.gc5Base
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.rmsk.bb
+xrefDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_000880735.1_ViralMultiSegProj32521.repeatMasker
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.ncbiGene.bb
+type bigGenePred
+html html/GCF_000880735.1_ViralMultiSegProj32521.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000880735.1_ViralMultiSegProj32521.ncbiGene.ix
+url https://www.ncbi.nlm.nih.gov/gene/?term=$$
+urlLabel Entrez gene:
+labelFields geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000880735.1_ViralMultiSegProj32521.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000880735.1_ViralMultiSegProj32521.windowMasker.bb
+html html/GCF_000880735.1_ViralMultiSegProj32521.windowMasker
+

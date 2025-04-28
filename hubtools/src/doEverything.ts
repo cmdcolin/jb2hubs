@@ -16,10 +16,10 @@ interface Entry {
 }
 
 const entries = dedupe(
-  fs.readdirSync('hubJson').flatMap(
+  fs.readdirSync('website/hubJson').flatMap(
     file =>
       (
-        readJSON(`hubJson/${file}`) as {
+        readJSON(`website/hubJson/${file}`) as {
           data: Entry[]
         }
       ).data,

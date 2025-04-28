@@ -1,0 +1,300 @@
+hub GCA_900093555.2 genome assembly
+shortLabel malaria parasite P. vivax (PvP01 2019)
+longLabel malaria parasite P. vivax (PvP01 2019)/Plasmodium vivax/GCA_900093555.2_GCA_900093555 genome assembly
+useOneFile on
+email hclawson@ucsc.edu
+descriptionUrl html/GCA_900093555.2_GCA_900093555.description.html
+
+genome GCA_900093555.2
+taxId 5855
+groups groups.txt
+description malaria parasite P. vivax (PvP01 2019)
+twoBitPath GCA_900093555.2.2bit
+twoBitBptUrl GCA_900093555.2.2bit.bpt
+chromSizes GCA_900093555.2.chrom.sizes.txt
+chromAliasBb GCA_900093555.2.chromAlias.bb
+chromAuthority ucsc
+organism GCA_900093555 Aug. 2019
+defaultPos LT635623.1:1060921-1070921
+scientificName Plasmodium vivax
+htmlPath html/GCA_900093555.2_GCA_900093555.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/900/093/555/GCA_900093555.2
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/900/093/555/GCA_900093555.2
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCA/900/093/555/GCA_900093555.2
+liftOver.GCF_000002415.2 liftOver/GCA_900093555.2ToGCF_000002415.2.over.chain.gz
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.assembly.bb
+type bigBed 6
+html html/GCA_900093555.2_GCA_900093555.assembly
+searchIndex name
+searchTrix ixIxx/GCA_900093555.2_GCA_900093555.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.gc5Base.bw
+html html/GCA_900093555.2_GCA_900093555.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCA_900093555.2_GCA_900093555.tanDups
+
+    track gapOverlap
+    parent tanDups on
+    shortLabel Gap Overlaps
+    longLabel Paired exactly identical sequence on each side of a gap
+    bigDataUrl bbi/GCA_900093555.2_GCA_900093555.gapOverlap.bb
+    type bigBed 12
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCA_900093555.2_GCA_900093555.tandemDups.bb
+    type bigBed 12
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.rmsk.bb
+maxWindowToDraw 5000000
+html html/GCA_900093555.2_GCA_900093555.repeatMasker
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.simpleRepeat.bb
+html html/GCA_900093555.2_GCA_900093555.simpleRepeat
+
+track ncbiGene
+longLabel Gene models submitted to NCBI
+shortLabel Gene models
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.ncbiGene.bb
+type bigGenePred
+html html/GCA_900093555.2_GCA_900093555.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCA_900093555.2_GCA_900093555.ncbiGene.ix
+url https://www.ncbi.nlm.nih.gov/gene/?term=$$
+urlLabel Entrez gene:
+labelFields geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCA_900093555.2_GCA_900093555.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCA_900093555.2_GCA_900093555.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCA_900093555.2_GCA_900093555.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.windowMasker.bb
+html html/GCA_900093555.2_GCA_900093555.windowMasker
+
+track allGaps
+shortLabel All Gaps
+longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
+group map
+visibility hide
+type bigBed 3
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.allGaps.bb
+html html/GCA_900093555.2_GCA_900093555.allGaps
+
+track augustus
+shortLabel Augustus
+longLabel Augustus Gene Predictions
+group genes
+visibility dense
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.augustus.bb
+html html/GCA_900093555.2_GCA_900093555.augustus
+
+track xenoRefGene
+shortLabel RefSeq mRNAs
+longLabel RefSeq mRNAs mapped to this assembly
+group rna
+visibility pack
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_900093555.2_GCA_900093555.xenoRefGene.bb
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName
+searchIndex name
+searchTrix ixIxx/GCA_900093555.2_GCA_900093555.xenoRefGene.ix
+html html/GCA_900093555.2_GCA_900093555.xenoRefGene
+
+##############################################################################
+# GCF_000002415.2 - malaria parasite P. vivax - Plasmodium vivax - taxId: 5855
+##############################################################################
+track chainNetGCF_000002415.2
+compositeTrack on
+shortLabel malaria parasite P. vivax Chain/Net
+longLabel malaria parasite P. vivax (2019-08-01), Chain and Net Alignments
+subGroup1 view Views chain=Chain net=Net
+dragAndDrop subTracks
+visibility hide
+group compGeno
+priority 100.1
+color 0,0,0
+altColor 100,50,0
+type bed 3
+sortOrder view=+
+otherDb GCF_000002415.2
+html html/GCA_900093555.2_GCA_900093555.chainNet
+
+    track chainNetGCF_000002415.2Viewchain
+    shortLabel Chain
+    view chain
+    visibility pack
+    parent chainNetGCF_000002415.2
+    spectrum on
+
+        track chainGCF_000002415.2
+        parent chainNetGCF_000002415.2Viewchain
+        subGroups view=chain
+        shortLabel malaria parasite P. vivax Chain
+        longLabel malaria parasite P. vivax (2019-08-01) Chained Alignments
+        type bigChain GCF_000002415.2
+        bigDataUrl bbi/GCA_900093555.2_GCA_900093555.chainGCF_000002415.2.bb
+        linkDataUrl bbi/GCA_900093555.2_GCA_900093555.chainGCF_000002415.2Link.bb
+        priority 1
+
+        track chainSynGCF_000002415.2
+        parent chainNetGCF_000002415.2Viewchain
+        subGroups view=chain
+        shortLabel malaria parasite P. vivax synChain
+        longLabel malaria parasite P. vivax (2019-08-01) Syntenic Chained Alignments
+        type bigChain GCF_000002415.2
+        bigDataUrl bbi/GCA_900093555.2_GCA_900093555.chainSynGCF_000002415.2.bb
+        linkDataUrl bbi/GCA_900093555.2_GCA_900093555.chainSynGCF_000002415.2Link.bb
+        priority 2
+
+        track chainRBestGCF_000002415.2
+        parent chainNetGCF_000002415.2Viewchain
+        subGroups view=chain
+        shortLabel malaria parasite P. vivax rbChain
+        longLabel malaria parasite P. vivax (2019-08-01) Reciprocal Best Chained Alignments
+        type bigChain GCF_000002415.2
+        bigDataUrl bbi/GCA_900093555.2_GCA_900093555.chainRBestGCF_000002415.2.bb
+        linkDataUrl bbi/GCA_900093555.2_GCA_900093555.chainRBestGCF_000002415.2Link.bb
+        priority 3
+
+        track chainLiftOverGCF_000002415.2
+        parent chainNetGCF_000002415.2Viewchain
+        subGroups view=chain
+        shortLabel malaria parasite P. vivax loChain
+        longLabel malaria parasite P. vivax (2019-08-01) Lift Over Chained Alignments
+        type bigChain GCF_000002415.2
+        bigDataUrl bbi/GCA_900093555.2_GCA_900093555.chainLiftOverGCF_000002415.2.bb
+        linkDataUrl bbi/GCA_900093555.2_GCA_900093555.chainLiftOverGCF_000002415.2Link.bb
+        priority 4
+
+    track mafNetGCF_000002415.2Viewnet
+    shortLabel Net
+    view net
+    visibility full
+    parent chainNetGCF_000002415.2
+
+        track netGCF_000002415.2
+        parent mafNetGCF_000002415.2Viewnet
+        subGroups view=net
+        shortLabel malaria parasite P. vivax net
+        longLabel malaria parasite P. vivax (2019-08-01) Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCA_900093555.2_GCA_900093555.GCF_000002415.2.net.bb
+        summary bbi/GCA_900093555.2_GCA_900093555.GCF_000002415.2.net.summary.bb
+        speciesOrder GCF_000002415.2
+        priority 5
+
+        track synNetGCF_000002415.2
+        parent mafNetGCF_000002415.2Viewnet
+        subGroups view=net
+        shortLabel malaria parasite P. vivax synNet
+        longLabel malaria parasite P. vivax (2019-08-01) Syntenic Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCA_900093555.2_GCA_900093555.GCF_000002415.2.synNet.bb
+        summary bbi/GCA_900093555.2_GCA_900093555.GCF_000002415.2.synNet.summary.bb
+        speciesOrder GCF_000002415.2
+        priority 6
+
+        track rbestNetGCF_000002415.2
+        parent mafNetGCF_000002415.2Viewnet
+        subGroups view=net
+        shortLabel malaria parasite P. vivax rbestNet
+        longLabel malaria parasite P. vivax (2019-08-01) Reciprocal Best Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCA_900093555.2_GCA_900093555.GCF_000002415.2.rbestNet.bb
+        summary bbi/GCA_900093555.2_GCA_900093555.GCF_000002415.2.rbestNet.summary.bb
+        speciesOrder GCF_000002415.2
+        priority 7
+

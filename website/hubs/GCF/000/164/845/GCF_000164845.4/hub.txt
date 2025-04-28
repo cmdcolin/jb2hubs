@@ -1,0 +1,384 @@
+hub GCF_000164845.4 genome assembly
+shortLabel alpaca (v3.2 Carlotta AHFN-0088 2019 Deakin U)
+longLabel alpaca (v3.2 Carlotta AHFN-0088 2019 Deakin U)/Vicugna pacos/GCF_000164845.4_VicPac3.2 genome assembly
+useOneFile on
+email hclawson@ucsc.edu
+descriptionUrl html/GCF_000164845.4_VicPac3.2.description.html
+
+genome GCF_000164845.4
+taxId 30538
+groups groups.txt
+description alpaca (v3.2 Carlotta AHFN-0088 2019 Deakin U)
+twoBitPath GCF_000164845.4.2bit
+twoBitBptUrl GCF_000164845.4.2bit.bpt
+chromSizes GCF_000164845.4.chrom.sizes.txt
+chromAliasBb GCF_000164845.4.chromAlias.bb
+organism VicPac3.2 Jul. 2019
+defaultPos NW_021964157.1:40456873-40466873
+scientificName Vicugna pacos
+htmlPath html/GCF_000164845.4_VicPac3.2.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/164/845/GCF_000164845.4
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/164/845/GCF_000164845.4
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/164/845/GCF_000164845.4
+liftOver.hg38 liftOver/GCF_000164845.4ToHg38.over.chain.gz
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.assembly.bb
+type bigBed 6
+html html/GCF_000164845.4_VicPac3.2.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000164845.4_VicPac3.2.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.gc5Base.bw
+html html/GCF_000164845.4_VicPac3.2.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCF_000164845.4_VicPac3.2.tanDups
+
+    track gapOverlap
+    parent tanDups on
+    shortLabel Gap Overlaps
+    longLabel Paired exactly identical sequence on each side of a gap
+    bigDataUrl bbi/GCF_000164845.4_VicPac3.2.gapOverlap.bb
+    type bigBed 12
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCF_000164845.4_VicPac3.2.tandemDups.bb
+    type bigBed 12
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.rmsk.bb
+xrefDataUrl bbi/GCF_000164845.4_VicPac3.2.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_000164845.4_VicPac3.2.repeatMasker
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.simpleRepeat.bb
+html html/GCF_000164845.4_VicPac3.2.simpleRepeat
+
+track refSeqComposite
+compositeTrack on
+shortLabel NCBI RefSeq
+longLabel RefSeq gene predictions from NCBI
+group genes
+visibility pack
+type bigBed
+dragAndDrop subTracks
+allButtonPair on
+dataVersion NCBI Vicugna pacos Annotation Release 102 (2022-05-18)
+html html/GCF_000164845.4_VicPac3.2.refSeqComposite
+priority 2
+
+        track ncbiRefSeq
+        parent refSeqComposite on
+        color 12,12,120
+        shortLabel RefSeq All
+        type bigGenePred
+        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_000164845.4_VicPac3.2.ncbiRefSeq.ix
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.ncbiRefSeq.bb
+        longLabel NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)
+        idXref ncbiRefSeqLink mrnaAcc name
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 1
+
+        track ncbiRefSeqCurated
+        color 12,12,120
+        parent refSeqComposite on
+        shortLabel RefSeq Curated
+        longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
+        type bigGenePred
+        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_000164845.4_VicPac3.2.ncbiRefSeqCurated.ix
+        idXref ncbiRefSeqLink mrnaAcc name
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.ncbiRefSeqCurated.bb
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 2
+
+        track ncbiRefSeqPredicted
+        color 12,12,120
+        parent refSeqComposite on
+        shortLabel RefSeq Predicted
+        longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
+        type bigGenePred
+        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_000164845.4_VicPac3.2.ncbiRefSeqPredicted.ix
+        idXref ncbiRefSeqLink mrnaAcc name
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.ncbiRefSeqPredicted.bb
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 3
+
+        track ncbiRefSeqOther
+        color 32,32,32
+        parent refSeqComposite on
+        shortLabel RefSeq Other
+        longLabel NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)
+        priority 4
+        searchIndex name
+        searchTrix ixIxx/GCF_000164845.4_VicPac3.2.ncbiRefSeqOther.ix
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.ncbiRefSeqOther.bb
+        type bigBed 12 +
+        labelFields name
+        skipEmptyFields on
+        urls GeneID="https://www.ncbi.nlm.nih.gov/gene/$$" MIM="https://www.ncbi.nlm.nih.gov/omim/$$" HGNC="http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$" FlyBase="http://flybase.org/reports/$$" WormBase="http://www.wormbase.org/db/gene/gene?name=$$" RGD="https://rgd.mcw.edu/rgdweb/search/search.html?term=$$" SGD="https://www.yeastgenome.org/locus/$$" miRBase="http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$" ZFIN="https://zfin.org/$$" MGI="http://www.informatics.jax.org/marker/$$"
+
+        track ncbiRefSeqPsl
+        priority 5
+        parent refSeqComposite off
+        shortLabel RefSeq Alignments
+        longLabel RefSeq Alignments of RNAs
+        type bigPsl
+        searchIndex name
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.bigPsl.bb
+        indelDoubleInsert on
+        indelQueryInsert on
+        showDiffBasesAllScales .
+        showDiffBasesMaxZoom 10000.0
+        showCdsMaxZoom 10000.0
+        showCdsAllScales .
+        baseColorDefault diffCodons
+        pslSequence no
+        baseColorUseSequence lfExtra
+        baseColorUseCds table given
+        color 0,0,0
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000164845.4_VicPac3.2.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000164845.4_VicPac3.2.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000164845.4_VicPac3.2.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.windowMasker.bb
+html html/GCF_000164845.4_VicPac3.2.windowMasker
+
+track allGaps
+shortLabel All Gaps
+longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
+group map
+visibility hide
+type bigBed 3
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.allGaps.bb
+html html/GCF_000164845.4_VicPac3.2.allGaps
+
+track augustus
+shortLabel Augustus
+longLabel Augustus Gene Predictions
+group genes
+visibility dense
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.augustus.bb
+html html/GCF_000164845.4_VicPac3.2.augustus
+
+track xenoRefGene
+shortLabel RefSeq mRNAs
+longLabel RefSeq mRNAs mapped to this assembly
+group rna
+visibility pack
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCF_000164845.4_VicPac3.2.xenoRefGene.bb
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName
+searchIndex name
+searchTrix ixIxx/GCF_000164845.4_VicPac3.2.xenoRefGene.ix
+html html/GCF_000164845.4_VicPac3.2.xenoRefGene
+
+##############################################################################
+# hg38 - Human - Homo sapiens - taxId: 9606
+##############################################################################
+track chainNetHg38
+compositeTrack on
+shortLabel Human Chain/Net
+longLabel Human (Dec. 2013 (GRCh38/hg38)), Chain and Net Alignments
+subGroup1 view Views chain=Chain net=Net
+dragAndDrop subTracks
+visibility hide
+group compGeno
+priority 100.1
+color 0,0,0
+altColor 100,50,0
+type bed 3
+sortOrder view=+
+matrix 16 91,-114,-31,-123,-114,100,-125,-31,-31,-125,100,-114,-123,-31,-114,91
+chainMinScore 3000
+chainLinearGap medium
+matrixHeader A, C, G, T
+otherDb hg38
+html html/GCF_000164845.4_VicPac3.2.chainNet
+
+    track chainNetHg38Viewchain
+    shortLabel Chain
+    view chain
+    visibility pack
+    parent chainNetHg38
+    spectrum on
+
+        track chainHg38
+        parent chainNetHg38Viewchain
+        subGroups view=chain
+        shortLabel Human Chain
+        longLabel Human (Dec. 2013 (GRCh38/hg38)) Chained Alignments
+        type bigChain hg38
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.chainHg38.bb
+        linkDataUrl bbi/GCF_000164845.4_VicPac3.2.chainHg38Link.bb
+        priority 1
+
+        track chainSynHg38
+        parent chainNetHg38Viewchain
+        subGroups view=chain
+        shortLabel Human synChain
+        longLabel Human (Dec. 2013 (GRCh38/hg38)) Syntenic Chained Alignments
+        type bigChain hg38
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.chainSynHg38.bb
+        linkDataUrl bbi/GCF_000164845.4_VicPac3.2.chainSynHg38Link.bb
+        priority 2
+
+        track chainRBestHg38
+        parent chainNetHg38Viewchain
+        subGroups view=chain
+        shortLabel Human rbChain
+        longLabel Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Chained Alignments
+        type bigChain hg38
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.chainRBestHg38.bb
+        linkDataUrl bbi/GCF_000164845.4_VicPac3.2.chainRBestHg38Link.bb
+        priority 3
+
+        track chainLiftOverHg38
+        parent chainNetHg38Viewchain
+        subGroups view=chain
+        shortLabel Human loChain
+        longLabel Human (Dec. 2013 (GRCh38/hg38)) Lift Over Chained Alignments
+        type bigChain hg38
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.chainLiftOverHg38.bb
+        linkDataUrl bbi/GCF_000164845.4_VicPac3.2.chainLiftOverHg38Link.bb
+        priority 4
+
+    track mafNetHg38Viewnet
+    shortLabel Net
+    view net
+    visibility full
+    parent chainNetHg38
+
+        track netHg38
+        parent mafNetHg38Viewnet
+        subGroups view=net
+        shortLabel Human net
+        longLabel Human (Dec. 2013 (GRCh38/hg38)) Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.hg38.net.bb
+        summary bbi/GCF_000164845.4_VicPac3.2.hg38.net.summary.bb
+        speciesOrder hg38
+        priority 5
+
+        track synNetHg38
+        parent mafNetHg38Viewnet
+        subGroups view=net
+        shortLabel Human synNet
+        longLabel Human (Dec. 2013 (GRCh38/hg38)) Syntenic Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.hg38.synNet.bb
+        summary bbi/GCF_000164845.4_VicPac3.2.hg38.synNet.summary.bb
+        speciesOrder hg38
+        priority 6
+
+        track rbestNetHg38
+        parent mafNetHg38Viewnet
+        subGroups view=net
+        shortLabel Human rbestNet
+        longLabel Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000164845.4_VicPac3.2.hg38.rbestNet.bb
+        summary bbi/GCF_000164845.4_VicPac3.2.hg38.rbestNet.summary.bb
+        speciesOrder hg38
+        priority 7
+
