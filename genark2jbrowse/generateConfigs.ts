@@ -2,8 +2,11 @@ import fs from 'node:fs'
 
 import deepEqual from 'fast-deep-equal'
 
-import { generateJBrowseConfigForAssemblyHub } from './generateJBrowseConfigForAssemblyHub.ts'
-import { readJSON, writeJSON } from './util.ts'
+import {
+  generateJBrowseConfigForAssemblyHub,
+  readJSON,
+  writeJSON,
+} from 'hubtools'
 
 const metaPath = process.argv[2]!
 const configPath = metaPath.replace('meta.json', 'config.json')

@@ -1,3 +1,4 @@
+import { hubCategories, myfetchtext } from 'hubtools'
 import fs from 'node:fs'
 
 for (const { id } of hubCategories) {
