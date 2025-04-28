@@ -1,14 +1,14 @@
 const assemblyName = process.argv[2]
 
 const f = (j: string) =>
-  `https://hgdownload.soe.ucsc.edu/goldenPath/${name}/bigZips/${j}`
+  `https://hgdownload.soe.ucsc.edu/goldenPath/${assemblyName}/bigZips/${j}`
 
 const g = () =>
-  `https://hgdownload.soe.ucsc.edu/goldenPath/${name}/database/cytoBandIdeo.txt.gz`
+  `https://hgdownload.soe.ucsc.edu/goldenPath/${assemblyName}/database/cytoBandIdeo.txt.gz`
 
 let hasAliases = false
 try {
-  const res = await fetch(f(`${name}.chromAlias.txt`))
+  const res = await fetch(f(`${assemblyName}.chromAlias.txt`))
   if (!res.ok) {
     throw new Error('Error fetching chromAlias')
   }
@@ -29,14 +29,14 @@ console.log(
     {
       assemblies: [
         {
-          name,
+          assemblyName,
           sequence: {
             type: 'ReferenceSequenceTrack',
-            trackId: `${name}-refseq`,
+            trackId: `${assemblyName}-refseq`,
             adapter: {
               type: 'TwoBitAdapter',
-              uri: f(`${name}.2bit`),
-              chromSizes: f(`${name}.chrom.sizes`),
+              uri: f(`${assemblyName}.2bit`),
+              chromSizes: f(`${assemblyName}.chrom.sizes`),
             },
           },
           ...(hasAliases
@@ -44,7 +44,7 @@ console.log(
                 refNameAliases: {
                   adapter: {
                     type: 'RefNameAliasAdapter',
-                    uri: f(`${name}.chromAlias.txt`),
+                    uri: f(`${assemblyName}.chromAlias.txt`),
                   },
                 },
               }
@@ -67,3 +67,5 @@ console.log(
     2,
   ),
 )
+
+export {}

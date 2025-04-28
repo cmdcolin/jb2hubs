@@ -2,8 +2,7 @@ import Link from 'next/link'
 
 import './components/table.css'
 import list from './ucsc/list.json'
-
-import { hubCategories } from '@/generateHub/hubCategories'
+import { hubCategories } from '@/hubtools/src/hubCategories'
 
 export default function Home() {
   return (
