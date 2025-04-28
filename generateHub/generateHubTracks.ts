@@ -1,5 +1,6 @@
+import { categoryMap } from './const.ts'
 import { notEmpty } from './notEmpty.ts'
-import { generateUnknownTrackConf, resolve } from './util.ts'
+import { resolve } from './util.ts'
 
 import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
 
@@ -49,7 +50,8 @@ export function generateHubTracks({
               : {}),
           },
           category: [
-            track.data.group,
+            categoryMap[track.data.group as keyof typeof categoryMap] ??
+              track.data.group,
             ...parentTracks
               .map(p => p.data.group)
               .filter((f): f is string => !!f),
@@ -190,7 +192,8 @@ function makeTrackConfigSub({
         //     case 'bedRnaElements':
         //     case 'broadPeak':
         //     case 'coloredExon':
-        return generateUnknownTrackConf(name, baseTrackType)
+        console.error('Unknown track:', name, baseTrackType)
+        return undefined
       }
     }
   }

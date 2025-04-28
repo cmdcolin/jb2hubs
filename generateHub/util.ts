@@ -47,19 +47,6 @@ export function makeLoc2(first: string, alt?: string) {
       }
 }
 
-export function generateUnknownTrackConf(
-  trackName: string,
-  trackUrl: string,
-  categories?: string[],
-) {
-  return {
-    type: 'FeatureTrack',
-    name: `${trackName} (Unknown)`,
-    description: `Could not determine track type for "${trackUrl}"`,
-    category: categories,
-  }
-}
-
 export function readJSON(f: string) {
   return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
 }
