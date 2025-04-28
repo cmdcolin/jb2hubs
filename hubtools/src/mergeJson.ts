@@ -1,8 +1,8 @@
 import fs from 'fs'
 import path from 'path'
 
-import { parseAssemblyEntry, readJSON } from './util.ts'
 import { APIData } from './types'
+import { parseAssemblyEntry, readJSON } from './util.ts'
 
 let entries = [] as APIData[]
 for (const entry of process.argv.slice(2)) {

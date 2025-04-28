@@ -1,9 +1,10 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
+import { notEmpty } from './notEmpty'
+
 import type { APIData, NCBIData } from './types'
 
-import { notEmpty } from './notEmpty'
 
 export function resolve(uri: string, baseUri: string | URL) {
   return new URL(uri, baseUri).href

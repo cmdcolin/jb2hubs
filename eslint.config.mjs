@@ -7,10 +7,10 @@ import tseslint from 'typescript-eslint'
 export default tseslint.config(
   {
     ignores: [
-      'out/**/*',
       'eslint.config.mjs',
-      '.next/**/*',
-      'postcss.config.mjs',
+      'website/out/**/*',
+      'website/.next/**/*',
+      'website/postcss.config.mjs',
     ],
   },
 
@@ -46,10 +46,11 @@ export default tseslint.config(
     rules: {
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': [
-        'warn',
+        'error',
         {
           argsIgnorePattern: '^_',
           ignoreRestSiblings: true,
+          caughtErrors: 'none',
         },
       ],
       'no-underscore-dangle': 0,
@@ -60,6 +61,14 @@ export default tseslint.config(
       '@typescript-eslint/no-non-null-assertion': 'off',
       '@typescript-eslint/ban-ts-comment': 'off',
       '@typescript-eslint/no-base-to-string': 'off',
+
+      '@typescript-eslint/no-explicit-any': 'off',
+      '@typescript-eslint/no-unsafe-member-access': 'off',
+      '@typescript-eslint/no-unsafe-argument': 'off',
+      '@typescript-eslint/no-unsafe-assignment': 'off',
+      '@typescript-eslint/restrict-plus-operands': 'off',
+      '@typescript-eslint/no-unsafe-call': 'off',
+      '@typescript-eslint/no-unsafe-return': 'off',
 
       'no-empty': 'off',
       'import/no-unresolved': 'off',

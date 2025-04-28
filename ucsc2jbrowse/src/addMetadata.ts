@@ -35,6 +35,7 @@ console.log(
             description: longLabel,
             category: [grp]
               .filter(f => !!f)
+              // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
               .map(r => categoryMap[r as keyof typeof categoryMap] ?? r),
           }
         } else {
