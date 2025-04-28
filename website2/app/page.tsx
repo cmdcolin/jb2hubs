@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import './components/table.css'
 import list from './ucsc/list.json'
-console.log({ hubCategories })
 
 export default function Home() {
   return (

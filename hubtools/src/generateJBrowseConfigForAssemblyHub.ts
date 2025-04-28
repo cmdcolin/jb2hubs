@@ -1,4 +1,4 @@
-import pkg from '@gmod/ucsc-hub'
+import * as pkg from '@gmod/ucsc-hub'
 
 import { generateHubTracks } from './generateHubTracks.ts'
 import { resolve } from './util.ts'
