@@ -23,5 +23,5 @@ process_assembly() {
 export -f process_assembly
 export OUT
 
-# Run the process_assembly function in parallel for each input directory
+echo "createTracksForGoldenPath"
 parallel --bar --will-cite process_assembly ::: "$@"

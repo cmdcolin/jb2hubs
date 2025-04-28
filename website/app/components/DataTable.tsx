@@ -435,7 +435,6 @@ export default function DataTable({
                         )
                       }
                       default: {
-                        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                         return <td key={field}>{String(row[field] ?? '')}</td>
                       }
                     }

@@ -1,4 +1,4 @@
-import { readConfig } from './util'
+import { readConfig } from './util.ts'
 
 const config = readConfig(process.argv[2]!)
 

@@ -34,4 +34,5 @@ export -f process_assembly
 export OUT
 
 # Run the process_assembly function in parallel for each input directory
-parallel --will-cite process_assembly ::: "$@"
+echo "createConfigsForGoldenPath"
+parallel --bar --will-cite process_assembly ::: "$@"

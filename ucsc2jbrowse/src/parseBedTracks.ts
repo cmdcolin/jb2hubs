@@ -3,8 +3,9 @@ import fs from 'fs'
 import path from 'path'
 import { promisify } from 'util'
 
-import { TrackDbEntry } from './types.ts'
 import { readJSON } from './util.ts'
+
+import type { TrackDbEntry } from './types.ts'
 const pexec = promisify(exec)
 
 if (process.argv.length < 5) {

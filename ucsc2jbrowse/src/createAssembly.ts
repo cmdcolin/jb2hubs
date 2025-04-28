@@ -29,7 +29,7 @@ console.log(
     {
       assemblies: [
         {
-          assemblyName,
+          name: assemblyName,
           sequence: {
             type: 'ReferenceSequenceTrack',
             trackId: `${assemblyName}-refseq`,

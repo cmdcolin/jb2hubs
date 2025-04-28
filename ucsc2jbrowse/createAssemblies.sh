@@ -11,7 +11,6 @@ process_assembly() {
   local ASM=$(basename $INDIR)
   local OUTDIR=$OUT/$ASM
   local DB=$INDIR/database
-  echo "Creating assembly" $ASM
   mkdir -p $OUTDIR
   node src/createAssembly.ts $ASM >$OUTDIR/config.json
 }
@@ -20,4 +19,5 @@ export -f process_assembly
 export OUT
 
 # Use GNU parallel to process assemblies in parallel
-parallel process_assembly ::: "$@"
+echo "createAssemblies"
+parallel --bar process_assembly ::: "$@"

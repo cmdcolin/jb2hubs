@@ -22,5 +22,5 @@ process_rmsk() {
 export -f process_rmsk
 export OUT
 
-# Run the process_rmsk function in parallel for each input directory
+echo "createRmskTracksForGoldenPath"
 parallel --bar --will-cite process_rmsk ::: "$@"
