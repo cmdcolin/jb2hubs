@@ -1,11 +1,6 @@
-import fs from 'fs'
+import { readConfig } from './util'
 
-interface Track {
-  trackId: string
-}
-const config = JSON.parse(fs.readFileSync(process.argv[2]!, 'utf8')) as {
-  tracks: Track[]
-}
+const config = readConfig(process.argv[2]!)
 
 const items = [
   'wgEncodeGencodePolyaV',

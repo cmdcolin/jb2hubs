@@ -13,7 +13,6 @@ const config = readConfig(process.argv[2]!)
 const arg = path.basename(process.argv[3]!)
 const base = path.basename(arg, '.sorted.gff.gz')
 
-// Create the new track configuration
 const newTrack = {
   type: 'FeatureTrack',
   trackId: base,
@@ -29,18 +28,14 @@ const newTrack = {
   },
 }
 
-// Check if track already exists
 const existingTrackIndex = config.tracks.findIndex(f => f.trackId === base)
 
-// Create updated tracks array - either replace existing or add new
 let updatedTracks
 if (existingTrackIndex >= 0) {
-  // Replace existing track
   console.log(`Replacing existing track with ID "${base}"`)
   updatedTracks = [...config.tracks]
   updatedTracks[existingTrackIndex] = newTrack
 } else {
-  // Add new track
   console.log(`Adding new track with ID "${base}"`)
   updatedTracks = [...config.tracks, newTrack]
 }
