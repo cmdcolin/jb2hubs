@@ -1,4 +1,4 @@
-const name = process.argv[2]
+const assemblyName = process.argv[2]
 
 const f = (j: string) =>
   `https://hgdownload.soe.ucsc.edu/goldenPath/${name}/bigZips/${j}`
