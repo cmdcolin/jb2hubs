@@ -57,8 +57,8 @@ export default function DataTable({
           // Special handling for assemblyStatus column
           const flipper = sortColumn.direction === 'ASC' ? 1 : -1
           if (sortColumn.columnKey === 'assemblyStatus') {
-            const aStatus = a.assemblyStatus || ''
-            const bStatus = b.assemblyStatus || ''
+            const aStatus = a.assemblyStatus
+            const bStatus = b.assemblyStatus
 
             // Get the index of each status in our custom order
             const aIndex = statusOrder.indexOf(aStatus)
@@ -66,8 +66,14 @@ export default function DataTable({
             return (aIndex - bIndex) * flipper
           } else {
             // Default sorting for other columns
-            const aValue = a[sortColumn.columnKey as keyof AssemblyData]
-            const bValue = b[sortColumn.columnKey as keyof AssemblyData]
+            const aValue = a[sortColumn.columnKey as keyof AssemblyData] as
+              | string
+              | number
+              | undefined
+            const bValue = b[sortColumn.columnKey as keyof AssemblyData] as
+              | string
+              | number
+              | undefined
             return (
               (typeof aValue === 'number' && typeof bValue === 'number'
                 ? aValue - bValue
@@ -429,6 +435,7 @@ export default function DataTable({
                         )
                       }
                       default: {
+                        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                         return <td key={field}>{String(row[field] ?? '')}</td>
                       }
                     }

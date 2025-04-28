@@ -5,7 +5,7 @@ import deepEqual from 'fast-deep-equal'
 import { generateJBrowseConfigForAssemblyHub } from './generateJBrowseConfigForAssemblyHub.ts'
 import { readJSON, writeJSON } from './util.ts'
 
-const metaPath = process.argv[2]
+const metaPath = process.argv[2]!
 const configPath = metaPath.replace('meta.json', 'config.json')
 const hubMeta = readJSON(metaPath) as {
   hubFileLocation: string

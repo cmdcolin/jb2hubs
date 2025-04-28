@@ -32,10 +32,10 @@ export function generateHubTracks({
         const parentTracks = []
         let currentTrackName = trackName
         do {
-          currentTrackName = trackDb.data[currentTrackName].data.parent || ''
+          currentTrackName = trackDb.data[currentTrackName]?.data.parent ?? ''
           if (currentTrackName) {
             currentTrackName = currentTrackName.split(' ')[0]!
-            parentTracks.push(trackDb.data[currentTrackName])
+            parentTracks.push(trackDb.data[currentTrackName]!)
           }
         } while (currentTrackName)
         parentTracks.reverse()
@@ -50,6 +50,7 @@ export function generateHubTracks({
               : {}),
           },
           category: [
+            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
             categoryMap[track.data.group as keyof typeof categoryMap] ??
               track.data.group,
             ...parentTracks
@@ -83,9 +84,9 @@ function makeTrackConfig({
   assemblyName: string
 }) {
   const { data } = track
-  const bigDataUrlPre = data.bigDataUrl || ''
+  const bigDataUrlPre = data.bigDataUrl ?? ''
   const name =
-    (data.shortLabel || '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
+    (data.shortLabel ?? '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
 
   return {
     trackId: `${assemblyName}-${data.track}`,
@@ -107,17 +108,17 @@ function makeTrackConfigSub({
   sequenceAdapter: Adapter
 }) {
   const { data } = track
-  const parent = data.parent || ''
-  const bigDataUrlPre = data.bigDataUrl || ''
-  const bigDataIdx = data.bigDataIndex || ''
+  const parent = data.parent ?? ''
+  const bigDataUrlPre = data.bigDataUrl ?? ''
+  const bigDataIdx = data.bigDataIndex ?? ''
   if (bigDataIdx) {
     throw new Error("Don't yet support bigDataIdx")
   }
-  const trackType = data.type || trackDb.data[parent].data.type || ''
+  const trackType = data.type ?? trackDb.data[parent]!.data.type ?? ''
   const name =
-    (data.shortLabel || '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
+    (data.shortLabel ?? '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
 
-  let baseTrackType = trackType.split(' ')[0] || ''
+  let baseTrackType = trackType.split(' ')[0] ?? ''
   if (baseTrackType === 'bam' && bigDataUrlPre.toLowerCase().endsWith('cram')) {
     baseTrackType = 'cram'
   }

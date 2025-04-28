@@ -2,8 +2,8 @@ import path from 'node:path'
 
 import type { APIData } from './types'
 
-import { readJSON } from '@/generateHub/util'
 import { notEmpty } from '@/generateHub/notEmpty'
+import { readJSON } from '@/generateHub/util'
 
 interface IndexEntry {
   assemblystatus: string
@@ -34,7 +34,7 @@ export function parseAssemblyEntry({
   const ucscAcc = path.basename(ucscBrowser)
   const accession = ucscAcc.startsWith('GC') ? ucscAcc : refSeq || genBank
   const [base, rest] = accession.split('_')
-  const [b1, b2, b3] = rest.match(/.{1,3}/g)!
+  const [b1, b2, b3] = rest!.match(/.{1,3}/g)!
   let ncbiData
   try {
     ncbiData = readJSON(
@@ -91,7 +91,7 @@ function extractStats(xmlString: string) {
   let match
 
   while ((match = statsRegex.exec(xmlString)) !== null) {
-    stats[match[1]] = match[3]
+    stats[match[1]!] = match[3]!
   }
 
   return stats

@@ -20,6 +20,12 @@ export function generateJBrowseConfigForAssemblyHub({
     const genomeName = genome.name!
     const shortLabel = data.description
 
+    if (!twoBitPath) {
+      throw new Error('No twoBitPath')
+    }
+    if (!chromSizes) {
+      throw new Error('No chromSizes')
+    }
     const sequenceAdapter = {
       type: 'TwoBitAdapter',
       uri: resolve(twoBitPath, trackDbUrl),
