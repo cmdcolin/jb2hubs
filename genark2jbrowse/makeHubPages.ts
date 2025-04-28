@@ -26,7 +26,7 @@ for (const f of [
     recursive: true,
   })
   fs.writeFileSync(
-    `app/hubs/${f}/page.tsx`,
+    `../website/app/hubs/${f}/page.tsx`,
     `import Page from '../../components/Page'
 
 export default function ${capitalizeFirstLetter(f)}() {

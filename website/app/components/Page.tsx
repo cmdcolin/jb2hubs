@@ -2,7 +2,8 @@ import Link from 'next/link'
 
 import DataTable from '../components/DataTable'
 
-import { APIData } from '@/hubtools/src'
+import type { APIData } from 'hubtools'
+
 import { parseAssembliesListJson, readJSON } from '@/hubtools/src/util'
 
 export default function Page({ title, raw }: { title: string; raw: string }) {

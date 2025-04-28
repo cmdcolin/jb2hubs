@@ -1,7 +1,7 @@
 #!/bin/bash
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
-node generateHub/downloadHubs.ts
-node generateHub/index.ts
+node downloadHubs.ts
+node doEverything.ts
 ./updateNcbiInfo.sh
 ./makeJBrowseConfigs.sh
 node generateHub/makeHubPages.ts
