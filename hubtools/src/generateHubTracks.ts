@@ -39,32 +39,35 @@ export function generateHubTracks({
           }
         } while (currentTrackName)
         parentTracks.reverse()
+        const conf = makeTrackConfig({
+          track,
+          trackDbUrl,
+          trackDb,
+          sequenceAdapter,
+          assemblyName,
+        })
 
-        return {
-          metadata: {
-            ...track.data,
-            ...(track.data.html
-              ? {
-                  html: `<a href="${resolve(track.data.html, trackDbUrl)}">${track.data.html}</a>`,
-                }
-              : {}),
-          },
-          category: [
-            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-            categoryMap[track.data.group as keyof typeof categoryMap] ??
-              track.data.group,
-            ...parentTracks
-              .map(p => p.data.group)
-              .filter((f): f is string => !!f),
-          ].filter(f => !!f),
-          ...makeTrackConfig({
-            track,
-            trackDbUrl,
-            trackDb,
-            sequenceAdapter,
-            assemblyName,
-          }),
-        }
+        return conf
+          ? {
+              metadata: {
+                ...track.data,
+                ...(track.data.html
+                  ? {
+                      html: `<a href="${resolve(track.data.html, trackDbUrl)}">${track.data.html}</a>`,
+                    }
+                  : {}),
+              },
+              category: [
+                // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                categoryMap[track.data.group as keyof typeof categoryMap] ??
+                  track.data.group,
+                ...parentTracks
+                  .map(p => p.data.group)
+                  .filter((f): f is string => !!f),
+              ].filter(f => !!f),
+              ...conf,
+            }
+          : undefined
       }
     })
     .filter(f => notEmpty(f))
@@ -87,14 +90,21 @@ function makeTrackConfig({
   const bigDataUrlPre = data.bigDataUrl ?? ''
   const name =
     (data.shortLabel ?? '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
-
-  return {
-    trackId: `${assemblyName}-${data.track}`,
-    description: data.longLabel,
-    assemblyNames: [assemblyName],
-    name,
-    ...makeTrackConfigSub({ track, trackDbUrl, trackDb, sequenceAdapter }),
-  }
+  const conf = makeTrackConfigSub({
+    track,
+    trackDbUrl,
+    trackDb,
+    sequenceAdapter,
+  })
+  return conf
+    ? {
+        trackId: `${assemblyName}-${data.track}`,
+        description: data.longLabel,
+        assemblyNames: [assemblyName],
+        name,
+        ...conf,
+      }
+    : undefined
 }
 function makeTrackConfigSub({
   track,
@@ -124,78 +134,71 @@ function makeTrackConfigSub({
   }
   const bigDataUrl = new URL(bigDataUrlPre, trackDbUrl)
 
-  switch (baseTrackType) {
-    case 'bam': {
-      return {
-        type: 'AlignmentsTrack',
-        adapter: {
-          type: 'BamAdapter',
-          uri: bigDataUrl,
-        },
-      }
+  if (baseTrackType === 'bam') {
+    return {
+      type: 'AlignmentsTrack',
+      adapter: {
+        type: 'BamAdapter',
+        uri: bigDataUrl,
+      },
     }
-    case 'cram': {
-      return {
-        type: 'AlignmentsTrack',
-        adapter: {
-          type: 'CramAdapter',
-          uri: bigDataUrl,
-          sequenceAdapter,
-        },
-      }
+  } else if (baseTrackType === 'cram') {
+    return {
+      type: 'AlignmentsTrack',
+      adapter: {
+        type: 'CramAdapter',
+        uri: bigDataUrl,
+        sequenceAdapter,
+      },
     }
-    case 'bigWig': {
-      return {
-        type: 'QuantitativeTrack',
-        adapter: {
-          type: 'BigWigAdapter',
-          uri: bigDataUrl,
-        },
-      }
+  } else if (baseTrackType === 'bigWig') {
+    return {
+      type: 'QuantitativeTrack',
+      adapter: {
+        type: 'BigWigAdapter',
+        uri: bigDataUrl,
+      },
     }
-    default: {
-      if (baseTrackType.startsWith('big')) {
-        return {
-          type: 'FeatureTrack',
-          adapter: {
-            type: 'BigBedAdapter',
-            uri: bigDataUrl,
-          },
-        }
-      } else if (baseTrackType === 'vcfTabix') {
-        return {
-          type: 'VariantTrack',
-          adapter: {
-            type: 'VcfTabixAdapter',
-            uri: bigDataUrl,
-          },
-        }
-      } else if (baseTrackType === 'hic') {
-        return {
-          type: 'HicTrack',
-          adapter: {
-            type: 'HicAdapter',
-            uri: bigDataUrl,
-          },
-        }
-      } else {
-        // unsupported types
-        //     case 'peptideMapping':
-        //     case 'gvf':
-        //     case 'ld2':
-        //     case 'narrowPeak':
-        //     case 'wig':
-        //     case 'wigMaf':
-        //     case 'halSnake':
-        //     case 'bed':
-        //     case 'bed5FloatScore':
-        //     case 'bedGraph':
-        //     case 'bedRnaElements':
-        //     case 'broadPeak':
-        //     case 'coloredExon':
-        console.error('Unknown track:', name, baseTrackType)
-        return undefined
-      }
+  } else if (baseTrackType.startsWith('big')) {
+    return {
+      type: 'FeatureTrack',
+      adapter: {
+        type: 'BigBedAdapter',
+        uri: bigDataUrl,
+      },
     }
+  } else if (baseTrackType === 'vcfTabix') {
+    return {
+      type: 'VariantTrack',
+      adapter: {
+        type: 'VcfTabixAdapter',
+        uri: bigDataUrl,
+      },
+    }
+  } else if (baseTrackType === 'hic') {
+    return {
+      type: 'HicTrack',
+      adapter: {
+        type: 'HicAdapter',
+        uri: bigDataUrl,
+      },
+    }
+  } else {
+    // unsupported types
+    //     case 'peptideMapping':
+    //     case 'gvf':
+    //     case 'ld2':
+    //     case 'narrowPeak':
+    //     case 'wig':
+    //     case 'wigMaf':
+    //     case 'halSnake':
+    //     case 'bed':
+    //     case 'bed5FloatScore':
+    //     case 'bedGraph':
+    //     case 'bedRnaElements':
+    //     case 'broadPeak':
+    //     case 'coloredExon':
+    console.error('Unknown track:', name, baseTrackType)
+    return undefined
   }
 }

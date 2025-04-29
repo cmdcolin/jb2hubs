@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
+export PATH=$(pwd):$PATH
 
 ./downloadGoldenpath.sh ~/ucsc
 ./createAssemblies.sh ~/ucsc/*

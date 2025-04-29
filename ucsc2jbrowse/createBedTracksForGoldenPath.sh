@@ -13,9 +13,11 @@ process_assembly() {
   local DB=$INDIR/$ASM/database
 
   # make bed.gz files from "regular bed" sql db tracks
-  node src/parseBedTracks.ts $OUTDIR/tracks.json $DB $OUTDIR >$OUTDIR/bed.sh
-  chmod +x $OUTDIR/bed.sh
-  $OUTDIR/bed.sh && rm $OUTDIR/bed.sh
+  if [ -f "$OUTDIR/tracks.json" ]; then
+    node src/parseBedTracks.ts $OUTDIR/tracks.json $DB $OUTDIR >$OUTDIR/bed.sh
+    chmod +x $OUTDIR/bed.sh
+    $OUTDIR/bed.sh && rm $OUTDIR/bed.sh
+  fi
 }
 
 export -f process_assembly

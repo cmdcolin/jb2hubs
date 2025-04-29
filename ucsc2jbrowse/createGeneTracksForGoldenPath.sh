@@ -40,7 +40,7 @@ process_gene_tracks() {
       fi
 
       if [ "$need_processing" = true ]; then
-        echo "Processing ${key}: file changed or new"
+        # echo "Processing ${key}: file changed or new"
         node src/geneLike.ts "${infile}.sql" "${infile}.txt.gz" | sort -k1,1 -k2,2n >"${outfile}.bed"
         hck -f 13,4 "${outfile}.bed" >${outfile}.isoforms.txt
         node src/fixupIsoforms.ts ${outfile}.isoforms.txt

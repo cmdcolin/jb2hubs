@@ -15,7 +15,19 @@ process_rmsk() {
   mkdir -p $OUTDIR
 
   if [ -f "$OUTDIR/tracks.json" ]; then
-    node src/parseRmskTracks.ts $OUTDIR/tracks.json $DB $OUTDIR
+    keys=$(jq -r 'to_entries | .[] | select(.value.type | startswith("rmsk")) | .key' "$OUTDIR/tracks.json")
+
+    for key in $keys; do
+      infile="$DB/$key"
+      outfile="$OUTDIR/$key"
+
+      if [ -f "${infile}.sql" ]; then
+        node src/rmskLike.ts "${infile}.sql" "${infile}.txt.gz" >${outfile}.tmp
+        sortIfNeeded.sh ${outfile}.tmp | bgzip -@8 >"${outfile}.bed.gz"
+        rm ${outfile}.tmp
+      fi
+    done
+
   fi
 }
 

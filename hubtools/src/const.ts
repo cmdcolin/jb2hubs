@@ -8,4 +8,6 @@ export const categoryMap = {
   expression: 'Expression',
   compGeno: 'Comparative Genomics',
   regulation: 'Regulation',
+  singleCell: 'Single cell',
+  hprc: 'Human Pangenome',
 }

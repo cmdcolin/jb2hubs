@@ -13,11 +13,13 @@ process_assembly() {
   local DB=$INDIR/$ASM/database
 
   ## make tracks.json file
-  node src/tracksDbLike.ts $DB/trackDb.sql $DB/trackDb.txt.gz >$OUTDIR/tracks.json
+  if [[ -f $DB/trackDb.sql ]]; then
+    node src/tracksDbLike.ts $DB/trackDb.sql $DB/trackDb.txt.gz >$OUTDIR/tracks.json
 
-  # find bigbed files in the tracks.json, these do not have sql db files
-  node src/parseBigFileTracks.ts $OUTDIR/tracks.json $DB $OUTDIR >$OUTDIR/bigTracks.json
-  node src/addBigDataTracks.ts $OUTDIR/bigTracks.json $OUTDIR/config.json
+    # find bigbed files in the tracks.json, these do not have sql db files
+    node src/parseBigFileTracks.ts $OUTDIR/tracks.json $DB $OUTDIR >$OUTDIR/bigTracks.json
+    node src/addBigDataTracks.ts $OUTDIR/bigTracks.json $OUTDIR/config.json
+  fi
 }
 
 export -f process_assembly

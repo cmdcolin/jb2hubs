@@ -20,7 +20,7 @@ const tracks = readJSON(process.argv[2]!) as Record<string, TrackDbEntry>
 // many narrow/broad peak tracks
 const types = ['bed', 'pgSnp', 'peptideMapping'] //less tracks
 
-for (const [key, val] of Object.entries(tracks).filter(([_key, val]) =>
+for (const [key] of Object.entries(tracks).filter(([_key, val]) =>
   types.some(t => val.type.startsWith(t)),
 )) {
   const infile = path.join(process.argv[3]!, key)
@@ -34,21 +34,21 @@ for (const [key, val] of Object.entries(tracks).filter(([_key, val]) =>
     if (fs.existsSync(`${outfile}.bed.gz.csi`)) {
       console.log(`echo "already processed ${outfile}"`)
     } else {
-      console.log(`echo " ${process.argv[1]} processing ${key} ${val.type}"`)
+      // console.log(`echo " ${process.argv[1]} processing ${key} ${val.type}"`)
       const { stdout, stderr } = await pexec(
         `node src/bedLike.ts ${infile}.sql`,
       )
       if (stderr.trim() === 'no_bin') {
         console.log(
-          `(echo "${stdout.trim()}" && pigz -dc ${infile}.txt.gz)   |sort -k1,1 -k2,2n|bgzip  > ${outfile}.bed.gz`,
+          `(echo "${stdout.trim()}" && pigz -dc ${infile}.txt.gz)  > ${outfile}.tmp; sortIfNeeded.sh ${outfile}.tmp |bgzip -@8  > ${outfile}.bed.gz; rm ${outfile}.tmp`,
         )
       } else {
         console.log(
-          `(echo "${stdout.trim()}" && pigz -dc ${infile}.txt.gz | hck -Ld$'\\t' -f2- )   |sort -k1,1 -k2,2n|bgzip  > ${outfile}.bed.gz`,
+          `(echo "${stdout.trim()}" && pigz -dc ${infile}.txt.gz | hck -Ld$'\\t' -f2- ) > ${outfile}.tmp; sortIfNeeded.sh ${outfile}.tmp  |bgzip -@8  > ${outfile}.bed.gz; rm ${outfile}.tmp`,
         )
       }
     }
   } else {
-    console.error('no sql file for ' + key)
+    // console.error('no sql file for ' + key)
   }
 }
