@@ -34,5 +34,5 @@ try {
     }
   }
 } catch (e) {
-  console.error(e, process.argv[2])
+  console.error(`${e}`, process.argv[2])
 }
