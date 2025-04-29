@@ -12,9 +12,6 @@ export default tseslint.config(
       'website/out/**/*',
       'website/.next/**/*',
       'website/postcss.config.mjs',
-      'website2/out/**/*',
-      'website2/.next/**/*',
-      'website2/postcss.config.mjs',
     ],
   },
 

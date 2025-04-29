@@ -1,13 +1,15 @@
 import fs from 'fs'
 import path from 'path'
 
-import { notEmpty } from 'hubtools'
 import Link from 'next/link'
 
 import DataTable from '../components/DataTable'
 
 import type { APIData, NCBIData } from 'hubtools'
 
+function notEmpty<T>(value: T | null | undefined): value is T {
+  return value !== null && value !== undefined
+}
 function readJSON(f: string) {
   return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
 }
@@ -91,7 +93,6 @@ export function parseAssembliesListJson({ data }: { data: APIData[] }) {
 }
 
 export default function Page({ title, raw }: { title: string; raw: string }) {
-  console.log({ title, raw })
   return (
     <div>
       <Link href="/">Home</Link>
