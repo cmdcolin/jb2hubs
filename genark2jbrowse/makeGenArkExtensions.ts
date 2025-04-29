@@ -1,6 +1,7 @@
-import { dedupe, readJSON } from 'hubtools'
 import fs from 'node:fs'
 import path from 'node:path'
+
+import { dedupe, readJSON } from 'hubtools'
 
 interface Config {
   tracks: {

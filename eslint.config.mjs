@@ -12,6 +12,9 @@ export default tseslint.config(
       'website/out/**/*',
       'website/.next/**/*',
       'website/postcss.config.mjs',
+      'website2/out/**/*',
+      'website2/.next/**/*',
+      'website2/postcss.config.mjs',
     ],
   },
 
@@ -73,6 +76,7 @@ export default tseslint.config(
 
       'no-empty': 'off',
       'import/no-unresolved': 'off',
+      'import/no-cycle': 'error',
       'import/order': [
         'error',
         {

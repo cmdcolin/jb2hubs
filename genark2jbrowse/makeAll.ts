@@ -1,8 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe } from 'hubtools'
-import { myfetchtext, readJSON } from 'hubtools'
+import { dedupe , myfetchtext, readJSON } from 'hubtools'
 
 interface Entry {
   taxId: string

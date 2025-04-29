@@ -1,7 +1,6 @@
 import fs from 'node:fs'
 
 import deepEqual from 'fast-deep-equal'
-
 import {
   generateJBrowseConfigForAssemblyHub,
   readJSON,

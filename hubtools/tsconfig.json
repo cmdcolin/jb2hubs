@@ -1,18 +1,19 @@
 {
+  "include": [
+    "src"
+  ],
   "compilerOptions": {
-    "target": "esnext",
+    "outDir": "dist",
     "skipLibCheck": true,
-    "strict": true,
     "declaration": true,
-    "esModuleInterop": true,
-    "module": "esnext",
     "moduleResolution": "node",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
     "allowImportingTsExtensions": true,
     "rewriteRelativeImportExtensions": true,
-    "noUncheckedIndexedAccess": true,
-    "isolatedModules": true,
-    "outDir": "dist"
-  },
-  "include": ["src"],
-  "exclude": ["dist", "node_modules"]
+    "esModuleInterop": true
+  }
 }

@@ -1,13 +1,13 @@
+import { parseAssembliesListJson, readJSON } from 'hubtools'
 import Link from 'next/link'
 
 import DataTable from '../components/DataTable'
 
 import type { APIData } from 'hubtools'
 
-import { parseAssembliesListJson, readJSON } from '@/hubtools/src/util'
-console.log('wtf')
 
 export default function Page({ title, raw }: { title: string; raw: string }) {
+  console.log({ title, raw })
   return (
     <div>
       <Link href="/">Home</Link>
