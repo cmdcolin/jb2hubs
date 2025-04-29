@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "gh-pages -d out --nojekyll",
+    "predeploy": "yarn build",
+    "postdeploy": "git push --follow-tags"
   },
   "dependencies": {
     "hubtools": "^1.0.0",
