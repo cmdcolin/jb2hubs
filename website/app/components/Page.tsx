@@ -1,9 +1,9 @@
-import { parseAssembliesListJson, readJSON } from 'hubtools'
+import { parseAssembliesListJson, readJSON } from '@gmod/bam'
 import Link from 'next/link'
 
 import DataTable from '../components/DataTable'
 
-import type { APIData } from 'hubtools'
+import type { APIData } from '@gmod/bam'
 
 
 export default function Page({ title, raw }: { title: string; raw: string }) {
