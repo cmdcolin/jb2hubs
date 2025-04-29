@@ -1,11 +1,11 @@
-import { notEmpty } from 'toolshub'
+import { notEmpty } from 'hubtools'
 import path from 'path'
 import fs from 'fs'
 import Link from 'next/link'
 
 import DataTable from '../components/DataTable'
 
-import type { APIData, NCBIData } from 'toolshub'
+import type { APIData, NCBIData } from 'hubtools'
 
 function readJSON(f: string) {
   return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown

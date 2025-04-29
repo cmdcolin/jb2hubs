@@ -1,4 +1,4 @@
-import { hubCategories } from 'toolshub'
+import { hubCategories } from 'hubtools'
 import Link from 'next/link'
 
 import './components/table.css'
