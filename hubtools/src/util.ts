@@ -55,19 +55,6 @@ export function writeJSON(f: string, d: unknown) {
   fs.writeFileSync(f, JSON.stringify(d, undefined, 2))
 }
 
-function extractStats(xmlString: string) {
-  const stats = {} as Record<string, unknown>
-  const statsRegex =
-    /<Stat category="([^"]+)" sequence_tag="([^"]+)">([^<]+)<\/Stat>/g
-  let match
-
-  while ((match = statsRegex.exec(xmlString)) !== null) {
-    stats[match[1]!] = match[3]!
-  }
-
-  return stats
-}
-
 export async function myjsonfetch(url: string) {
   const res = await fetch(url)
   if (!res.ok) {
