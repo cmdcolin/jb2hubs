@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe , myfetchtext, readJSON } from '@gmod/bam'
+import { dedupe , myfetchtext, readJSON } from 'hubtools'
 
 interface Entry {
   taxId: string

@@ -1,6 +1,6 @@
 import fs from 'node:fs'
 
-import { hubCategories, myfetchtext } from '@gmod/bam'
+import { hubCategories, myfetchtext } from 'hubtools'
 
 for (const { id } of hubCategories) {
   fs.writeFileSync(

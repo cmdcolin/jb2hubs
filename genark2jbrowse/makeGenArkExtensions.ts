@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe, readJSON } from '@gmod/bam'
+import { dedupe, readJSON } from 'hubtools'
 
 interface Config {
   tracks: {
