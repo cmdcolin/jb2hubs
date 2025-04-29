@@ -1,8 +1,7 @@
 #!/bin/bash
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 node downloadHubs.ts
-node makeAll.ts
-./updateNcbiInfo.sh
+node makeHubs.ts
 
 # get ncbi json from entrez
 fd meta.json hubs | while read p; do
@@ -27,4 +26,4 @@ node makeGenArkExtensions.ts
 
 yarn prettier --log-level error --write ../website/hubs/
 
-aws s3 sync hubs s3://jbrowse.org/hubs/genark/
+aws s3 sync hubs s3://jbrowse.org/hubs/genark/ --size-only

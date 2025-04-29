@@ -1,0 +1,294 @@
+hub GCA_030012505.1 genome assembly
+shortLabel hawksbill sea turtle (B2_1 2023)
+longLabel hawksbill sea turtle (B2_1 2023)/Eretmochelys imbricata/GCA_030012505.1_ASM3001250v1 genome assembly
+useOneFile on
+email hclawson@ucsc.edu
+descriptionUrl html/GCA_030012505.1_ASM3001250v1.description.html
+
+genome GCA_030012505.1
+taxId 27787
+groups groups.txt
+description hawksbill sea turtle (B2_1 2023)
+twoBitPath GCA_030012505.1.2bit
+twoBitBptUrl GCA_030012505.1.2bit.bpt
+chromSizes GCA_030012505.1.chrom.sizes.txt
+chromAliasBb GCA_030012505.1.chromAlias.bb
+chromAuthority ucsc
+organism ASM3001250v1 May 2023
+defaultPos CM057283.1:122451316-122461316
+scientificName Eretmochelys imbricata
+htmlPath html/GCA_030012505.1_ASM3001250v1.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/030/012/505/GCA_030012505.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/030/012/505/GCA_030012505.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCA/030/012/505/GCA_030012505.1
+liftOver.GCF_023653815.1 liftOver/GCA_030012505.1ToGCF_023653815.1.over.chain.gz
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.assembly.bb
+type bigBed 6
+html html/GCA_030012505.1_ASM3001250v1.assembly
+searchIndex name
+searchTrix ixIxx/GCA_030012505.1_ASM3001250v1.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.gc5Base.bw
+html html/GCA_030012505.1_ASM3001250v1.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCA_030012505.1_ASM3001250v1.tanDups
+
+    track gapOverlap
+    parent tanDups on
+    shortLabel Gap Overlaps
+    longLabel Paired exactly identical sequence on each side of a gap
+    bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.gapOverlap.bb
+    type bigBed 12
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.tandemDups.bb
+    type bigBed 12
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.rmsk.bb
+xrefDataUrl bbi/GCA_030012505.1_ASM3001250v1.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCA_030012505.1_ASM3001250v1.repeatMasker
+
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.rModel.bb
+xrefDataUrl bbi/GCA_030012505.1_ASM3001250v1.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCA_030012505.1_ASM3001250v1.repeatModeler
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.simpleRepeat.bb
+html html/GCA_030012505.1_ASM3001250v1.simpleRepeat
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCA_030012505.1_ASM3001250v1.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.windowMasker.bb
+html html/GCA_030012505.1_ASM3001250v1.windowMasker
+
+track allGaps
+shortLabel All Gaps
+longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
+group map
+visibility hide
+type bigBed 3
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.allGaps.bb
+html html/GCA_030012505.1_ASM3001250v1.allGaps
+
+track augustus
+shortLabel Augustus
+longLabel Augustus Gene Predictions
+group genes
+visibility pack
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.augustus.bb
+html html/GCA_030012505.1_ASM3001250v1.augustus
+
+track xenoRefGene
+shortLabel RefSeq mRNAs
+longLabel RefSeq mRNAs mapped to this assembly
+group rna
+visibility pack
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.xenoRefGene.bb
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName
+searchIndex name
+searchTrix ixIxx/GCA_030012505.1_ASM3001250v1.xenoRefGene.ix
+html html/GCA_030012505.1_ASM3001250v1.xenoRefGene
+
+##############################################################################
+# GCF_023653815.1 - hawksbill sea turtle - Eretmochelys imbricata - taxId: 27787
+##############################################################################
+track chainNetGCF_023653815.1
+compositeTrack on
+shortLabel hawksbill sea turtle Chain/Net
+longLabel hawksbill sea turtle (2023-05-15), Chain and Net Alignments
+subGroup1 view Views chain=Chain net=Net
+dragAndDrop subTracks
+visibility hide
+group compGeno
+priority 100.1
+color 0,0,0
+altColor 100,50,0
+type bed 3
+sortOrder view=+
+otherDb GCF_023653815.1
+html html/GCA_030012505.1_ASM3001250v1.chainNet
+
+    track chainNetGCF_023653815.1Viewchain
+    shortLabel Chain
+    view chain
+    visibility pack
+    parent chainNetGCF_023653815.1
+    spectrum on
+
+        track chainGCF_023653815.1
+        parent chainNetGCF_023653815.1Viewchain
+        subGroups view=chain
+        shortLabel hawksbill sea turtle Chain
+        longLabel hawksbill sea turtle (2023-05-15) Chained Alignments
+        type bigChain GCF_023653815.1
+        bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainGCF_023653815.1.bb
+        linkDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainGCF_023653815.1Link.bb
+        priority 1
+
+        track chainSynGCF_023653815.1
+        parent chainNetGCF_023653815.1Viewchain
+        subGroups view=chain
+        shortLabel hawksbill sea turtle synChain
+        longLabel hawksbill sea turtle (2023-05-15) Syntenic Chained Alignments
+        type bigChain GCF_023653815.1
+        bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainSynGCF_023653815.1.bb
+        linkDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainSynGCF_023653815.1Link.bb
+        priority 2
+
+        track chainRBestGCF_023653815.1
+        parent chainNetGCF_023653815.1Viewchain
+        subGroups view=chain
+        shortLabel hawksbill sea turtle rbChain
+        longLabel hawksbill sea turtle (2023-05-15) Reciprocal Best Chained Alignments
+        type bigChain GCF_023653815.1
+        bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainRBestGCF_023653815.1.bb
+        linkDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainRBestGCF_023653815.1Link.bb
+        priority 3
+
+        track chainLiftOverGCF_023653815.1
+        parent chainNetGCF_023653815.1Viewchain
+        subGroups view=chain
+        shortLabel hawksbill sea turtle loChain
+        longLabel hawksbill sea turtle (2023-05-15) Lift Over Chained Alignments
+        type bigChain GCF_023653815.1
+        bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainLiftOverGCF_023653815.1.bb
+        linkDataUrl bbi/GCA_030012505.1_ASM3001250v1.chainLiftOverGCF_023653815.1Link.bb
+        priority 4
+
+    track mafNetGCF_023653815.1Viewnet
+    shortLabel Net
+    view net
+    visibility full
+    parent chainNetGCF_023653815.1
+
+        track netGCF_023653815.1
+        parent mafNetGCF_023653815.1Viewnet
+        subGroups view=net
+        shortLabel hawksbill sea turtle net
+        longLabel hawksbill sea turtle (2023-05-15) Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.GCF_023653815.1.net.bb
+        summary bbi/GCA_030012505.1_ASM3001250v1.GCF_023653815.1.net.summary.bb
+        speciesOrder GCF_023653815.1
+        priority 5
+
+        track synNetGCF_023653815.1
+        parent mafNetGCF_023653815.1Viewnet
+        subGroups view=net
+        shortLabel hawksbill sea turtle synNet
+        longLabel hawksbill sea turtle (2023-05-15) Syntenic Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.GCF_023653815.1.synNet.bb
+        summary bbi/GCA_030012505.1_ASM3001250v1.GCF_023653815.1.synNet.summary.bb
+        speciesOrder GCF_023653815.1
+        priority 6
+
+        track rbestNetGCF_023653815.1
+        parent mafNetGCF_023653815.1Viewnet
+        subGroups view=net
+        shortLabel hawksbill sea turtle rbestNet
+        longLabel hawksbill sea turtle (2023-05-15) Reciprocal Best Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCA_030012505.1_ASM3001250v1.GCF_023653815.1.rbestNet.bb
+        summary bbi/GCA_030012505.1_ASM3001250v1.GCF_023653815.1.rbestNet.summary.bb
+        speciesOrder GCF_023653815.1
+        priority 7
+

@@ -80,5 +80,3 @@ export async function myjsonfetch(url: string) {
   }
   return res.json() as Promise<unknown>
 }
-
-export type AssemblyData = ReturnType<typeof parseAssemblyEntry>

@@ -1,0 +1,177 @@
+hub GCA_012923435.1 genome assembly
+shortLabel Cannabis sativa (Jamaican Lion Mother 2020)
+longLabel Cannabis sativa (Jamaican Lion Mother 2020)/Cannabis sativa/GCA_012923435.1_JL_Mother genome assembly
+useOneFile on
+email hclawson@ucsc.edu
+descriptionUrl html/GCA_012923435.1_JL_Mother.description.html
+
+genome GCA_012923435.1
+taxId 3483
+groups groups.txt
+description Cannabis sativa (Jamaican Lion Mother 2020)
+twoBitPath GCA_012923435.1.2bit
+twoBitBptUrl GCA_012923435.1.2bit.bpt
+chromSizes GCA_012923435.1.chrom.sizes.txt
+chromAliasBb GCA_012923435.1.chromAlias.bb
+organism JL_Mother Apr. 2020
+defaultPos JAATIP010000001.1:5119600-5129600
+scientificName Cannabis sativa
+htmlPath html/GCA_012923435.1_JL_Mother.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/012/923/435/GCA_012923435.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/012/923/435/GCA_012923435.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCA/012/923/435/GCA_012923435.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.assembly.bb
+type bigBed 6
+html html/GCA_012923435.1_JL_Mother.assembly
+searchIndex name
+searchTrix ixIxx/GCA_012923435.1_JL_Mother.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.gc5Base.bw
+html html/GCA_012923435.1_JL_Mother.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCA_012923435.1_JL_Mother.tanDups
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCA_012923435.1_JL_Mother.tandemDups.bb
+    type bigBed 12
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.rmsk.bb
+maxWindowToDraw 5000000
+html html/GCA_012923435.1_JL_Mother.repeatMasker
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.simpleRepeat.bb
+html html/GCA_012923435.1_JL_Mother.simpleRepeat
+
+track ncbiGene
+longLabel Gene models submitted to NCBI
+shortLabel Gene models
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.ncbiGene.bb
+type bigGenePred
+html html/GCA_012923435.1_JL_Mother.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCA_012923435.1_JL_Mother.ncbiGene.ix
+url https://www.ncbi.nlm.nih.gov/gene/?term=$$
+urlLabel Entrez gene:
+labelFields geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCA_012923435.1_JL_Mother.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCA_012923435.1_JL_Mother.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCA_012923435.1_JL_Mother.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.windowMasker.bb
+html html/GCA_012923435.1_JL_Mother.windowMasker
+
+track augustus
+shortLabel Augustus
+longLabel Augustus Gene Predictions
+group genes
+visibility dense
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.augustus.bb
+html html/GCA_012923435.1_JL_Mother.augustus
+
+track xenoRefGene
+shortLabel RefSeq mRNAs
+longLabel RefSeq mRNAs mapped to this assembly
+group rna
+visibility pack
+color 180,0,0
+type bigGenePred
+bigDataUrl bbi/GCA_012923435.1_JL_Mother.xenoRefGene.bb
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName
+searchIndex name
+searchTrix ixIxx/GCA_012923435.1_JL_Mother.xenoRefGene.ix
+html html/GCA_012923435.1_JL_Mother.xenoRefGene
+

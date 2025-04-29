@@ -1,11 +1,28 @@
-import { notEmpty, readJSON } from 'toolshub'
+import { notEmpty } from 'toolshub'
 import path from 'path'
+import fs from 'fs'
 import Link from 'next/link'
 
 import DataTable from '../components/DataTable'
 
 import type { APIData, NCBIData } from 'toolshub'
 
+function readJSON(f: string) {
+  return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
+}
+
+function extractStats(xmlString: string) {
+  const stats = {} as Record<string, unknown>
+  const statsRegex =
+    /<Stat category="([^"]+)" sequence_tag="([^"]+)">([^<]+)<\/Stat>/g
+  let match
+
+  while ((match = statsRegex.exec(xmlString)) !== null) {
+    stats[match[1]!] = match[3]!
+  }
+
+  return stats
+}
 export function parseAssemblyEntry({
   taxId,
   asmId,
@@ -42,7 +59,7 @@ export function parseAssemblyEntry({
   const buscoStats = r2.busco
   const ncbiRefSeqCategory = r2.refseq_category
   const ucscBase = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}`
-  const stats = undefined //ncbiData ? extractStats(r2.meta) : undefined
+  const stats = ncbiData ? extractStats(r2.meta) : undefined
   return {
     stats,
     buscoStats,

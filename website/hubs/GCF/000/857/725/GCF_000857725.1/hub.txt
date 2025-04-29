@@ -1,0 +1,127 @@
+hub GCF_000857725.1 genome assembly
+shortLabel Yellow fever virus (17D vaccine strain 1986)
+longLabel Yellow fever virus (17D vaccine strain 1986)/Yellow fever virus/GCF_000857725.1_ViralProj15284 genome assembly
+useOneFile on
+email hclawson@ucsc.edu
+descriptionUrl html/GCF_000857725.1_ViralProj15284.description.html
+
+genome GCF_000857725.1
+taxId 11089
+groups groups.txt
+description Yellow fever virus (17D vaccine strain 1986)
+twoBitPath GCF_000857725.1.2bit
+twoBitBptUrl GCF_000857725.1.2bit.bpt
+chromSizes GCF_000857725.1.chrom.sizes.txt
+chromAliasBb GCF_000857725.1.chromAlias.bb
+organism ViralProj15284 Aug. 2000
+defaultPos NC_002031.1:3620-10862
+scientificName Yellow fever virus
+htmlPath html/GCF_000857725.1_ViralProj15284.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/857/725/GCF_000857725.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/857/725/GCF_000857725.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/857/725/GCF_000857725.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000857725.1_ViralProj15284.assembly.bb
+type bigBed 6
+html html/GCF_000857725.1_ViralProj15284.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000857725.1_ViralProj15284.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000857725.1_ViralProj15284.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000857725.1_ViralProj15284.gc5Base.bw
+html html/GCF_000857725.1_ViralProj15284.gc5Base
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_000857725.1_ViralProj15284.rmsk.bb
+xrefDataUrl bbi/GCF_000857725.1_ViralProj15284.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_000857725.1_ViralProj15284.repeatMasker
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000857725.1_ViralProj15284.ncbiGene.bb
+type bigGenePred
+html html/GCF_000857725.1_ViralProj15284.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000857725.1_ViralProj15284.ncbiGene.ix
+url https://www.ncbi.nlm.nih.gov/gene/?term=$$
+urlLabel Entrez gene:
+labelFields geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000857725.1_ViralProj15284.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000857725.1_ViralProj15284.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000857725.1_ViralProj15284.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000857725.1_ViralProj15284.windowMasker.bb
+html html/GCF_000857725.1_ViralProj15284.windowMasker
+
