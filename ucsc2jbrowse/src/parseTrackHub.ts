@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import { generateJBrowseConfigForAssemblyHub } from 'hubtools'
+import { generateJBrowseConfigForAssemblyHub } from 'toolshub'
 
 const hubFileText = fs.readFileSync(process.argv[2]!, 'utf8')
 

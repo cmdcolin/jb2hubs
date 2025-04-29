@@ -5,7 +5,7 @@ import {
   generateJBrowseConfigForAssemblyHub,
   readJSON,
   writeJSON,
-} from 'hubtools'
+} from 'toolshub'
 
 const metaPath = process.argv[2]!
 const configPath = metaPath.replace('meta.json', 'config.json')

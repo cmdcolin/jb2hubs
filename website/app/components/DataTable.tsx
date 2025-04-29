@@ -5,7 +5,7 @@ import { useMemo, useState } from 'react'
 import { Download, Star } from 'lucide-react'
 
 import './table.css'
-import type { AssemblyData } from 'hubtools'
+import type { AssemblyData } from 'toolshub'
 
 interface SortColumn {
   columnKey: string
