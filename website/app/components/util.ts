@@ -6,7 +6,7 @@ import type { APIData, NCBIData } from 'hubtools'
 function notEmpty<T>(value: T | null | undefined): value is T {
   return value !== null && value !== undefined
 }
-function readJSON(f: string) {
+export function readJSON(f: string) {
   return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
 }
 
