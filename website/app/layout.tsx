@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
+
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'JBrowse UCSC GenArk hubs',
-  description: 'All the genomes!',
+  title: 'jb2hubs',
+  description: 'JBrowse 2 genome browser hubs',
 }
 
 export default function RootLayout({

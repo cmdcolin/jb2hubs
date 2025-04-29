@@ -1,5 +1,6 @@
-import { hubCategories, myfetchtext } from 'hubtools'
 import fs from 'node:fs'
+
+import { hubCategories, myfetchtext } from 'hubtools'
 
 for (const { id } of hubCategories) {
   fs.writeFileSync(

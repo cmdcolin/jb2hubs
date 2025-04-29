@@ -1,9 +1,7 @@
-import pkg from '@gmod/ucsc-hub'
+import { SingleFileHub } from '@gmod/ucsc-hub'
 
 import { generateHubTracks } from './generateHubTracks.ts'
 import { resolve } from './util.ts'
-
-const { SingleFileHub } = pkg
 
 export function generateJBrowseConfigForAssemblyHub({
   hubFileText,

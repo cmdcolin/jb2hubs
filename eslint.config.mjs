@@ -73,6 +73,7 @@ export default tseslint.config(
 
       'no-empty': 'off',
       'import/no-unresolved': 'off',
+      'import/no-cycle': 'error',
       'import/order': [
         'error',
         {
