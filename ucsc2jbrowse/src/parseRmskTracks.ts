@@ -14,23 +14,25 @@ if (process.argv.length < 5) {
 }
 type Track = Record<string, string>
 
-const tracks = readJSON(process.argv[2]!) as Record<string, Track>
+try {
+  const tracks = readJSON(process.argv[2]!) as Record<string, Track>
 
-for (const [key] of Object.entries(tracks).filter(([_key, val]) =>
-  val.type!.startsWith('rmsk'),
-)) {
-  const infile = path.join(process.argv[3]!, key)
-  const outfile = path.join(process.argv[4]!, key)
-  try {
-    if (fs.existsSync(`${infile}.sql`)) {
-      await pexec(
-        `node src/rmskLike.ts ${infile}.sql ${infile}.txt.gz | sort -k1,1 -k2,2n| bgzip > ${outfile}.bed.gz`,
-      )
-    } else {
-      console.error('no sql file for ' + key)
+  for (const [key] of Object.entries(tracks).filter(([_key, val]) =>
+    val.type!.startsWith('rmsk'),
+  )) {
+    const infile = path.join(process.argv[3]!, key)
+    const outfile = path.join(process.argv[4]!, key)
+    try {
+      if (fs.existsSync(`${infile}.sql`)) {
+        await pexec(
+          `node src/rmskLike.ts ${infile}.sql ${infile}.txt.gz | sort -k1,1 -k2,2n| bgzip > ${outfile}.bed.gz`,
+        )
+      }
+    } catch (e) {
+      console.error(e)
+      await pexec(`echo ${key} >> ${outfile}.errors`)
     }
-  } catch (e) {
-    console.error(e)
-    await pexec(`echo ${key} >> ${outfile}.errors`)
   }
+} catch (e) {
+  console.error(e, process.argv[2])
 }
