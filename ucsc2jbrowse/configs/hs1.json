@@ -70,46 +70,6 @@
     },
     {
       "metadata": {
-        "track": "snakeHg38",
-        "type": "halSnake",
-        "visibility": "full",
-        "shortLabel": "hg38",
-        "group": "compGeno",
-        "priority": "1",
-        "subGroups": "view=Snake orgs=hg38",
-        "bigDataUrl": "/gbdb/hs1/hgCactus/t2tChm13.v2.0.hal",
-        "parent": "cactusAlignments on",
-        "longLabel": "Cactus GRCh37/hg38",
-        "otherSpecies": "hg38"
-      },
-      "category": ["Comparative Genomics", "compGeno"],
-      "trackId": "hs1-snakeHg38",
-      "description": "Cactus GRCh37/hg38",
-      "assemblyNames": ["hs1"],
-      "name": "hg38"
-    },
-    {
-      "metadata": {
-        "track": "snakehs1",
-        "type": "halSnake",
-        "visibility": "hide",
-        "shortLabel": "CHM13/hs1",
-        "group": "compGeno",
-        "priority": "2",
-        "subGroups": "view=Snake orgs=hs1",
-        "bigDataUrl": "/gbdb/hs1/hgCactus/t2tChm13.v2.0.hal",
-        "parent": "cactusAlignments off",
-        "longLabel": "Cactus CHM13/hs1",
-        "otherSpecies": "hs1"
-      },
-      "category": ["Comparative Genomics", "compGeno"],
-      "trackId": "hs1-snakehs1",
-      "description": "Cactus CHM13/hs1",
-      "assemblyNames": ["hs1"],
-      "name": "CHM13/hs1"
-    },
-    {
-      "metadata": {
         "track": "censat",
         "type": "bigBed 9 +",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/censat.html\">censat.html</a>",
@@ -14710,42 +14670,6 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hs1/sgdpCopyNumber/GRCh38_kmer_wssd.bb"
-      }
-    },
-    {
-      "type": "FeatureTrack",
-      "trackId": "*",
-      "name": "*",
-      "assemblyNames": ["hs1"],
-      "adapter": {
-        "type": "BedTabixAdapter",
-        "bedGzLocation": {
-          "uri": "*.bed.gz"
-        },
-        "index": {
-          "indexType": "CSI",
-          "location": {
-            "uri": "*.bed.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "FeatureTrack",
-      "trackId": "*.gff.gz",
-      "name": "*.gff.gz",
-      "assemblyNames": ["hs1"],
-      "adapter": {
-        "type": "Gff3TabixAdapter",
-        "gffGzLocation": {
-          "uri": "*.gff.gz"
-        },
-        "index": {
-          "indexType": "CSI",
-          "location": {
-            "uri": "*.gff.gz.csi"
-          }
-        }
       }
     }
   ]

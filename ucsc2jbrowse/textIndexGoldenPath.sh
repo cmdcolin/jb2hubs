@@ -17,4 +17,4 @@ export -f process_assembly
 export OUT
 
 # Run the process_assembly function in parallel for each input directory
-parallel -j4 --bar --will-cite process_assembly ::: "$@"
+parallel -j8 --bar --will-cite process_assembly ::: "$@"

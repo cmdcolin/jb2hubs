@@ -19,3 +19,4 @@ node src/makeUcscExtensions.ts ~/ucscResults
 aws s3 sync --delete --size-only ~/ucscResults s3://jbrowse.org/ucsc/
 aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths "/ucsc/*"
 fd config.json ~/ucscResults/ | xargs -I {} bash -c 'cp "{}" configs/"$(basename "$(dirname "{}")").json"'
+yarn prettier --write .
