@@ -58,13 +58,14 @@ export function generateHubTracks({
                   : {}),
               },
               category: [
-                // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                categoryMap[track.data.group as keyof typeof categoryMap] ??
-                  track.data.group,
+                track.data.group,
                 ...parentTracks
                   .map(p => p.data.group)
                   .filter((f): f is string => !!f),
-              ].filter(f => !!f),
+              ]
+                .filter(f => !!f)
+                // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                .map(f => categoryMap[f as keyof typeof categoryMap] ?? f),
               ...conf,
             }
           : undefined

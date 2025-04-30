@@ -1,12 +1,9 @@
-import fs from 'fs'
-import path from 'path'
-
 import Link from 'next/link'
 
+import { parseAssembliesListJson, readJSON } from './util'
 import DataTable from '../components/DataTable'
 
-import type { APIData, NCBIData } from 'hubtools'
-import { readJSON, parseAssembliesListJson } from './util'
+import type { APIData } from 'hubtools'
 
 export default function Page({ title, raw }: { title: string; raw: string }) {
   return (

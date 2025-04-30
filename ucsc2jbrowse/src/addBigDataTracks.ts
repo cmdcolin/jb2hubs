@@ -1,7 +1,7 @@
 import fs from 'fs'
 
-import { readConfig, readJSON } from './util.ts'
 import { dedupe } from './dedupe.ts'
+import { readConfig, readJSON } from './util.ts'
 
 interface BigDataTrack {
   tableName: string

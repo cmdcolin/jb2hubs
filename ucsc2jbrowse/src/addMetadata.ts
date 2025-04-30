@@ -1,4 +1,5 @@
-import { categoryMap } from './const.ts'
+import { categoryMap } from 'hubtools'
+
 import { readConfig, readJSON, replaceLink, splitOnFirst } from './util.ts'
 
 import type { TrackDbEntry } from './types.ts'

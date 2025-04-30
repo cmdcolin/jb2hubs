@@ -2,13 +2,11 @@ import fs from 'fs'
 
 import { generateJBrowseConfigForAssemblyHub } from 'hubtools'
 
-const hubFileText = fs.readFileSync(process.argv[2]!, 'utf8')
-
 fs.writeFileSync(
   process.argv[3]!,
   JSON.stringify(
     generateJBrowseConfigForAssemblyHub({
-      hubFileText,
+      hubFileText: fs.readFileSync(process.argv[2]!, 'utf8'),
       trackDbUrl:
         'https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/hub.txt',
     }),
@@ -16,9 +14,5 @@ fs.writeFileSync(
     2,
   ),
 )
-
-export function resolve(uri: string, baseUri: string | URL) {
-  return new URL(uri, baseUri).href
-}
 
 // TODO:add scoreColumn hack back
