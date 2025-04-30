@@ -60,13 +60,14 @@ export function generateHubTracks({
               category: [
                 track.data.group,
                 ...parentTracks
-                  .map(p => p.data.group)
-                  .filter((f): f is string => !!f),
+                  .map(p => trackDb.data[p.name!]?.data.shortLabel)
+                  .filter(f => !!f),
               ]
                 .filter(f => !!f)
                 // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                 .map(f => categoryMap[f as keyof typeof categoryMap] ?? f),
               ...conf,
+              name: [conf.name].join(' - '),
             }
           : undefined
       }
