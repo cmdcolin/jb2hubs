@@ -1,7 +1,7 @@
 #!/bin/bash
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
-node downloadHubs.ts
-node makeHubs.ts
+node src/downloadHubs.ts
+node src/makeHubs.ts
 
 # get ncbi json from entrez
 fd meta.json hubs | while read p; do
@@ -20,9 +20,9 @@ done
 
 fd meta.json hubs | parallel --bar node generateConfigs.ts {}
 
-node makeHubPages.ts
+node src/makeHubPages.ts
 
-node makeGenArkExtensions.ts
+node src/makeGenArkExtensions.ts
 
 yarn prettier --log-level error --write ../website/hubs/
 
