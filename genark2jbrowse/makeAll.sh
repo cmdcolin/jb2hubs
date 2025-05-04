@@ -2,12 +2,11 @@
 
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 
-# Download hub.txt into the hubs folder (we mirror them)
-# Note: the hubs folder has tons of files
+# Download list of hubs (in json)
 node src/downloadHubList.ts
 
-# Make JBrowse configs
-node src/makeJBrowseConfigsFromHubs.ts
+# Download actual hub.txt files
+node src/downloadHubs.ts
 
 # Write info about assembly from NCBI to ncbi.json in hubs folder
 fd meta.json hubs | parallel -j1 --bar 'dir=$(dirname {}); id=$(basename $dir); if [ ! -f "$dir/ncbi.json" ]; then (esearch -db assembly -query $id </dev/null | esummary -mode json) >$dir/ncbi.json; sleep 0.1; fi'

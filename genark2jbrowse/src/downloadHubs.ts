@@ -1,25 +1,19 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe, myfetchtext, readJSON } from 'hubtools'
-
-interface Entry {
-  taxId: string
-  asmId: string
-  genBank: string
-  refSeq: string
-  identical: string
-  sciName: string
-  comName: string
-  ucscBrowser: string
-}
+import {
+  type UCSCGenArkAssemblyEntry,
+  dedupe,
+  myfetchtext,
+  readJSON,
+} from 'hubtools'
 
 const entries = dedupe(
   fs.readdirSync('hubJson').flatMap(
     f =>
       (
         readJSON(`hubJson/${f}`) as {
-          data: Entry[]
+          data: UCSCGenArkAssemblyEntry[]
         }
       ).data,
   ),
@@ -31,7 +25,7 @@ async function processEntry({
   idx,
   totalEntries,
 }: {
-  entry: Entry
+  entry: UCSCGenArkAssemblyEntry
   idx: number
   totalEntries: number
 }) {
