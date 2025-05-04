@@ -1,8 +1,9 @@
 import path from 'path'
 
 import { extractStats } from './extractStats.ts'
-import { NCBIData, UCSCGenArkAssemblyEntry } from './types.ts'
 import { readJSON } from './util.ts'
+
+import type { NCBIData, UCSCGenArkAssemblyEntry } from './types.ts'
 
 export function parseAssemblyEntry({
   entry,

@@ -10,8 +10,9 @@
     "dist"
   ],
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "tsc",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "tsdown --dts src/index.ts",
     "preversion": "npm run build",
     "postversion": "git push --follow-tags"
   },
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@types/node": "^22.15.3",
     "rimraf": "^6.0.1",
+    "tsdown": "^0.11.0-beta.3",
     "typescript": "^5.8.3"
   }
 }
