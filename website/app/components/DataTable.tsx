@@ -181,104 +181,9 @@ export default function DataTable({
       : ''
   }
 
-  const columns = [
-    {
-      field: 'commonName',
-      title: (
-        <div>
-          <div style={{ float: 'left' }}>Common Name</div>
-          <div style={{ float: 'right' }}>
-            <div>
-              <Star fill="orange" strokeWidth={0} className="w-[1em] h-[1em]" />{' '}
-              == "designated reference"
-            </div>
-            <div>
-              <X stroke="red" className="w-[1em] h-[1em]" /> == "refseq
-              suppressed"
-            </div>
-          </div>
-        </div>
-      ),
-      sortable: true,
-    },
-    {
-      field: 'jbrowseLink',
-      title: 'JBrowse',
-      sortable: false,
-    },
-    {
-      field: 'ucscBrowserLink',
-      title: 'UCSC',
-      sortable: false,
-    },
-    {
-      field: 'igvBrowserLink',
-      title: 'IGV',
-      sortable: false,
-    },
-    {
-      field: 'ncbiBrowserLink',
-      title: 'NCBI GDV',
-      sortable: false,
-    },
-    {
-      field: 'assemblyStatus',
-      title: 'Assembly status',
-      sortable: true,
-    },
-    {
-      field: 'submitterOrg',
-      title: 'Submitter',
-      sortable: false,
-      extra: true,
-    },
-    {
-      field: 'seqReleaseDate',
-      title: 'Release date',
-      sortable: true,
-    },
-    {
-      field: 'scientificName',
-      title: 'Scientific name',
-      sortable: true,
-    },
-    {
-      field: 'ncbiAssemblyName',
-      title: 'NCBI assembly name',
-      sortable: true,
-    },
-    {
-      field: 'accession',
-      title: 'Accession',
-      sortable: true,
-      extra: true,
-    },
-
-    {
-      field: 'taxonId',
-      title: 'Taxonomy ID',
-      sortable: true,
-      extra: true,
-    },
-    {
-      field: 'ucscDataLink',
-      title: 'UCSC download',
-      sortable: false,
-    },
-    {
-      field: 'ncbiLink',
-      title: 'NCBI portal',
-      sortable: false,
-    },
-  ]
-
   return (
     <>
-      <div
-        style={{
-          marginBottom: '10px',
-        }}
-      >
+      <div>
         <div>
           {Object.entries(filterCategories).map(([key, val]) => (
             <label
@@ -336,7 +241,100 @@ export default function DataTable({
         <table>
           <thead>
             <tr>
-              {columns
+              {[
+                {
+                  field: 'commonName',
+                  title: (
+                    <div>
+                      <div style={{ float: 'left' }}>Common Name</div>
+                      <div style={{ float: 'right' }}>
+                        <div>
+                          <Star
+                            fill="orange"
+                            strokeWidth={0}
+                            className="w-[1em] h-[1em]"
+                          />{' '}
+                          == "designated reference"
+                        </div>
+                        <div>
+                          <X stroke="red" className="w-[1em] h-[1em]" /> ==
+                          "refseq suppressed"
+                        </div>
+                      </div>
+                    </div>
+                  ),
+                  sortable: true,
+                },
+                {
+                  field: 'jbrowseLink',
+                  title: 'JBrowse',
+                  sortable: false,
+                },
+                {
+                  field: 'ucscBrowserLink',
+                  title: 'UCSC',
+                  sortable: false,
+                },
+                {
+                  field: 'igvBrowserLink',
+                  title: 'IGV',
+                  sortable: false,
+                },
+                {
+                  field: 'ncbiBrowserLink',
+                  title: 'NCBI GDV',
+                  sortable: false,
+                },
+                {
+                  field: 'assemblyStatus',
+                  title: 'Assembly status',
+                  sortable: true,
+                },
+                {
+                  field: 'submitterOrg',
+                  title: 'Submitter',
+                  sortable: false,
+                  extra: true,
+                },
+                {
+                  field: 'seqReleaseDate',
+                  title: 'Release date',
+                  sortable: true,
+                },
+                {
+                  field: 'scientificName',
+                  title: 'Scientific name',
+                  sortable: true,
+                },
+                {
+                  field: 'ncbiAssemblyName',
+                  title: 'NCBI assembly name',
+                  sortable: true,
+                },
+                {
+                  field: 'accession',
+                  title: 'Accession',
+                  sortable: true,
+                  extra: true,
+                },
+
+                {
+                  field: 'taxonId',
+                  title: 'Taxonomy ID',
+                  sortable: true,
+                  extra: true,
+                },
+                {
+                  field: 'ucscDataLink',
+                  title: 'UCSC download',
+                  sortable: false,
+                },
+                {
+                  field: 'ncbiLink',
+                  title: 'NCBI portal',
+                  sortable: false,
+                },
+              ]
                 .filter(column => showAllColumns || !column.extra)
                 .map(column => (
                   <th
@@ -359,7 +357,100 @@ export default function DataTable({
           <tbody>
             {sortedRows.map((row, index) => (
               <tr key={index}>
-                {columns
+                {[
+                  {
+                    field: 'commonName',
+                    title: (
+                      <div>
+                        <div style={{ float: 'left' }}>Common Name</div>
+                        <div style={{ float: 'right' }}>
+                          <div>
+                            <Star
+                              fill="orange"
+                              strokeWidth={0}
+                              className="w-[1em] h-[1em]"
+                            />{' '}
+                            == "designated reference"
+                          </div>
+                          <div>
+                            <X stroke="red" className="w-[1em] h-[1em]" /> ==
+                            "refseq suppressed"
+                          </div>
+                        </div>
+                      </div>
+                    ),
+                    sortable: true,
+                  },
+                  {
+                    field: 'jbrowseLink',
+                    title: 'JBrowse',
+                    sortable: false,
+                  },
+                  {
+                    field: 'ucscBrowserLink',
+                    title: 'UCSC',
+                    sortable: false,
+                  },
+                  {
+                    field: 'igvBrowserLink',
+                    title: 'IGV',
+                    sortable: false,
+                  },
+                  {
+                    field: 'ncbiBrowserLink',
+                    title: 'NCBI GDV',
+                    sortable: false,
+                  },
+                  {
+                    field: 'assemblyStatus',
+                    title: 'Assembly status',
+                    sortable: true,
+                  },
+                  {
+                    field: 'submitterOrg',
+                    title: 'Submitter',
+                    sortable: false,
+                    extra: true,
+                  },
+                  {
+                    field: 'seqReleaseDate',
+                    title: 'Release date',
+                    sortable: true,
+                  },
+                  {
+                    field: 'scientificName',
+                    title: 'Scientific name',
+                    sortable: true,
+                  },
+                  {
+                    field: 'ncbiAssemblyName',
+                    title: 'NCBI assembly name',
+                    sortable: true,
+                  },
+                  {
+                    field: 'accession',
+                    title: 'Accession',
+                    sortable: true,
+                    extra: true,
+                  },
+
+                  {
+                    field: 'taxonId',
+                    title: 'Taxonomy ID',
+                    sortable: true,
+                    extra: true,
+                  },
+                  {
+                    field: 'ucscDataLink',
+                    title: 'UCSC download',
+                    sortable: false,
+                  },
+                  {
+                    field: 'ncbiLink',
+                    title: 'NCBI portal',
+                    sortable: false,
+                  },
+                ]
                   .filter(column => showAllColumns || !column.extra)
                   .map(column => {
                     const field = column.field as keyof AssemblyData
