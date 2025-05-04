@@ -90,6 +90,17 @@ xrefDataUrl bbi/GCF_028583425.1_MPM_Emac_v1.0.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCF_028583425.1_MPM_Emac_v1.0.repeatMasker
 
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCF_028583425.1_MPM_Emac_v1.0.rModel.bb
+xrefDataUrl bbi/GCF_028583425.1_MPM_Emac_v1.0.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCF_028583425.1_MPM_Emac_v1.0.repeatModeler
+
 track simpleRepeat
 shortLabel Simple Repeats
 longLabel Simple Tandem Repeats by TRF
@@ -117,7 +128,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -135,7 +146,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name

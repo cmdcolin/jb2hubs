@@ -130,7 +130,7 @@
         "bigDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_910594005.1-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCF_910594005.1"],
@@ -150,7 +150,7 @@
         "bigDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_910594005.1-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_910594005.1"],
@@ -238,7 +238,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -250,7 +250,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_910594005.1-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_910594005.1"],
@@ -269,7 +269,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -280,7 +280,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_910594005.1-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_910594005.1"],
@@ -307,7 +307,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_910594005.1-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_910594005.1"],
@@ -340,7 +340,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_910594005.1-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_910594005.1"],
@@ -361,7 +361,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_910594005.1-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_910594005.1"],
@@ -382,7 +382,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_910594005.1-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_910594005.1"],
@@ -501,7 +501,7 @@
         "linkDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.chainHg38Link.bb",
         "priority": "1"
       },
-      "category": ["compGeno"],
+      "category": ["Human Chain/Net", "Chain"],
       "trackId": "GCF_910594005.1-chainHg38",
       "description": "Human (Dec. 2013 (GRCh38/hg38)) Chained Alignments",
       "assemblyNames": ["GCF_910594005.1"],
@@ -524,7 +524,7 @@
         "linkDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.chainSynHg38Link.bb",
         "priority": "2"
       },
-      "category": ["compGeno"],
+      "category": ["Human Chain/Net", "Chain"],
       "trackId": "GCF_910594005.1-chainSynHg38",
       "description": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Chained Alignments",
       "assemblyNames": ["GCF_910594005.1"],
@@ -547,7 +547,7 @@
         "linkDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.chainRBestHg38Link.bb",
         "priority": "3"
       },
-      "category": ["compGeno"],
+      "category": ["Human Chain/Net", "Chain"],
       "trackId": "GCF_910594005.1-chainRBestHg38",
       "description": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Chained Alignments",
       "assemblyNames": ["GCF_910594005.1"],
@@ -570,7 +570,7 @@
         "linkDataUrl": "bbi/GCF_910594005.1_mCerEla1.1.chainLiftOverHg38Link.bb",
         "priority": "4"
       },
-      "category": ["compGeno"],
+      "category": ["Human Chain/Net", "Chain"],
       "trackId": "GCF_910594005.1-chainLiftOverHg38",
       "description": "Human (Dec. 2013 (GRCh38/hg38)) Lift Over Chained Alignments",
       "assemblyNames": ["GCF_910594005.1"],
@@ -594,7 +594,7 @@
         "speciesOrder": "hg38",
         "priority": "5"
       },
-      "category": ["compGeno"],
+      "category": ["Human Chain/Net", "Net"],
       "trackId": "GCF_910594005.1-netHg38",
       "description": "Human (Dec. 2013 (GRCh38/hg38)) Net Alignment",
       "assemblyNames": ["GCF_910594005.1"],
@@ -618,7 +618,7 @@
         "speciesOrder": "hg38",
         "priority": "6"
       },
-      "category": ["compGeno"],
+      "category": ["Human Chain/Net", "Net"],
       "trackId": "GCF_910594005.1-synNetHg38",
       "description": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Net Alignment",
       "assemblyNames": ["GCF_910594005.1"],
@@ -642,7 +642,7 @@
         "speciesOrder": "hg38",
         "priority": "7"
       },
-      "category": ["compGeno"],
+      "category": ["Human Chain/Net", "Net"],
       "trackId": "GCF_910594005.1-rbestNetHg38",
       "description": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Net Alignment",
       "assemblyNames": ["GCF_910594005.1"],

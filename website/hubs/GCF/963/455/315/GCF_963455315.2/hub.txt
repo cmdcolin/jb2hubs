@@ -1,6 +1,6 @@
 hub GCF_963455315.2 genome assembly
-shortLabel long-finned pilot whale (primary hap 2024)
-longLabel long-finned pilot whale (primary hap 2024)/Globicephala melas/GCF_963455315.2_mGloMel1.2 genome assembly
+shortLabel long-finned pilot whale (v2 primary hap 2024 refseq)
+longLabel long-finned pilot whale (v2 primary hap 2024 refseq)/Globicephala melas/GCF_963455315.2_mGloMel1.2 genome assembly
 useOneFile on
 email hclawson@ucsc.edu
 descriptionUrl html/GCF_963455315.2_mGloMel1.2.description.html
@@ -8,7 +8,7 @@ descriptionUrl html/GCF_963455315.2_mGloMel1.2.description.html
 genome GCF_963455315.2
 taxId 9731
 groups groups.txt
-description long-finned pilot whale (primary hap 2024)
+description long-finned pilot whale (v2 primary hap 2024 refseq)
 twoBitPath GCF_963455315.2.2bit
 twoBitBptUrl GCF_963455315.2.2bit.bpt
 chromSizes GCF_963455315.2.chrom.sizes.txt
@@ -106,6 +106,17 @@ xrefDataUrl bbi/GCF_963455315.2_mGloMel1.2.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCF_963455315.2_mGloMel1.2.repeatMasker
 
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCF_963455315.2_mGloMel1.2.rModel.bb
+xrefDataUrl bbi/GCF_963455315.2_mGloMel1.2.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCF_963455315.2_mGloMel1.2.repeatModeler
+
 track simpleRepeat
 shortLabel Simple Repeats
 longLabel Simple Tandem Repeats by TRF
@@ -133,7 +144,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -151,7 +162,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name

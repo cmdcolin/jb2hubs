@@ -23,7 +23,8 @@
           "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/004/115/215/GCF_004115215.2",
           "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/004/115/215/GCF_004115215.2",
           "liftOver.GCA_002966995.1": "liftOver/GCF_004115215.2ToGCA_002966995.1.over.chain.gz",
-          "liftOver.hg38": "liftOver/GCF_004115215.2ToHg38.over.chain.gz"
+          "liftOver.hg38": "liftOver/GCF_004115215.2ToHg38.over.chain.gz",
+          "liftOver.mm39": "liftOver/GCF_004115215.2ToMm39.over.chain.gz"
         },
         "trackId": "GCF_004115215.2-ReferenceSequenceTrack",
         "adapter": {
@@ -131,7 +132,7 @@
         "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_004115215.2-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_004115215.2"],
@@ -219,7 +220,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -231,7 +232,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_004115215.2-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_004115215.2"],
@@ -250,7 +251,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -261,7 +262,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "2"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_004115215.2-ncbiRefSeqCurated",
       "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_004115215.2"],
@@ -280,7 +281,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -291,7 +292,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_004115215.2-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_004115215.2"],
@@ -318,7 +319,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_004115215.2-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_004115215.2"],
@@ -351,7 +352,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_004115215.2-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_004115215.2"],
@@ -372,7 +373,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_004115215.2-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_004115215.2"],
@@ -393,7 +394,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_004115215.2-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_004115215.2"],
@@ -514,7 +515,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "1.373"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_004115215.2-chainGCA_002966995.1",
       "description": "platypus/GCA_002966995.1_ASM296699v1 (2018-03-02) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -539,7 +540,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "1.373"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_004115215.2-chainSynGCA_002966995.1",
       "description": "platypus/GCA_002966995.1_ASM296699v1 (2018-03-02) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -564,7 +565,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "85.047"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_004115215.2-chainHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -589,7 +590,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "85.047"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_004115215.2-chainSynHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -614,7 +615,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "85.047"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_004115215.2-chainRBestHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -623,6 +624,106 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainRBestHg38.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainMm39",
+        "parent": "GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewchain off",
+        "subGroups": "view=chain species=s002 chainType=c00",
+        "shortLabel": "Mouse/mm39 Chain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainMm39.bb",
+        "linkDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
+        "priority": "94.879"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_004115215.2-chainMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_004115215.2"],
+      "name": "Mouse/mm39 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainMm39.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynMm39",
+        "parent": "GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s002 chainType=c01",
+        "shortLabel": "Mouse/mm39 synChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainSynMm39.bb",
+        "linkDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainSynMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
+        "priority": "94.879"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_004115215.2-chainSynMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_004115215.2"],
+      "name": "Mouse/mm39 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainSynMm39.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestMm39",
+        "parent": "GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s002 chainType=c02",
+        "shortLabel": "Mouse/mm39 rbChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainRBestMm39.bb",
+        "linkDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainRBestMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
+        "priority": "94.879"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_004115215.2-chainRBestMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_004115215.2"],
+      "name": "Mouse/mm39 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainRBestMm39.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverMm39",
+        "parent": "GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s002 chainType=c03",
+        "shortLabel": "Mouse/mm39 loChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainLiftOverMm39.bb",
+        "linkDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainLiftOverMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
+        "priority": "94.879"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_004115215.2-chainLiftOverMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_004115215.2"],
+      "name": "Mouse/mm39 loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainLiftOverMm39.bb"
       }
     },
     {
@@ -639,7 +740,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "1.373"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_004115215.2-netGCA_002966995.1",
       "description": "platypus/GCA_002966995.1_ASM296699v1 (2018-03-02) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -664,7 +765,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "1.373"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_004115215.2-synNetGCA_002966995.1",
       "description": "platypus/GCA_002966995.1_ASM296699v1 (2018-03-02) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -689,7 +790,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "85.047"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_004115215.2-netHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -714,7 +815,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "85.047"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_004115215.2-synNetHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -739,7 +840,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
         "priority": "85.047"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_004115215.2-rbestNetHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_004115215.2"],
@@ -748,6 +849,81 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.hg38.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netMm39",
+        "parent": "GCF_004115215.2_mOrnAna1.pri.v4MafNetViewnet off",
+        "subGroups": "view=align species=s002 chainType=c04",
+        "shortLabel": "Mouse/mm39 mafNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.net.bb",
+        "summary": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.net.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
+        "priority": "94.879"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_004115215.2-netMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_004115215.2"],
+      "name": "Mouse/mm39 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetMm39",
+        "parent": "GCF_004115215.2_mOrnAna1.pri.v4MafNetViewnet off",
+        "subGroups": "view=align species=s002 chainType=c05",
+        "shortLabel": "Mouse/mm39 synNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.synNet.bb",
+        "summary": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.synNet.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
+        "priority": "94.879"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_004115215.2-synNetMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_004115215.2"],
+      "name": "Mouse/mm39 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetMm39",
+        "parent": "GCF_004115215.2_mOrnAna1.pri.v4MafNetViewnet off",
+        "subGroups": "view=align species=s002 chainType=c06",
+        "shortLabel": "Mouse/mm39 rbestNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.rbestNet.bb",
+        "summary": "bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.rbestNet.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet\">html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet</a>",
+        "priority": "94.879"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_004115215.2-rbestNetMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_004115215.2"],
+      "name": "Mouse/mm39 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/004/115/215/GCF_004115215.2/bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.rbestNet.bb"
       }
     }
   ]

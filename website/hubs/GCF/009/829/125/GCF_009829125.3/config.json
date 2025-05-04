@@ -129,7 +129,7 @@
         "bigDataUrl": "bbi/GCF_009829125.3_fPerMag1.2.pri.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_009829125.3-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCF_009829125.3"],
@@ -149,7 +149,7 @@
         "bigDataUrl": "bbi/GCF_009829125.3_fPerMag1.2.pri.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_009829125.3-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_009829125.3"],
@@ -237,7 +237,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -249,7 +249,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_009829125.3-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_009829125.3"],
@@ -268,7 +268,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -279,7 +279,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_009829125.3-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_009829125.3"],
@@ -306,7 +306,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_009829125.3-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_009829125.3"],
@@ -339,7 +339,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_009829125.3-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_009829125.3"],
@@ -360,7 +360,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_009829125.3_fPerMag1.2.pri.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_009829125.3-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_009829125.3"],
@@ -381,7 +381,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_009829125.3_fPerMag1.2.pri.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_009829125.3-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_009829125.3"],

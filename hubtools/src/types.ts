@@ -1,4 +1,4 @@
-export interface APIData {
+export interface UCSCGenArkAssemblyEntry {
   taxId: number
   asmId: string
   genBank: string
@@ -9,13 +9,14 @@ export interface APIData {
   ucscBrowser: string
 }
 
-export interface IndexEntry {
+export interface NCBIAssemblyEntry {
   assemblystatus: string
   assemblyname: string
   assemblydate: string
   submitterorganization: string
   seqreleasedate: string
   organism: string
+  propertylist: string[]
   refseq_category: string
   busco: unknown
   meta: string
@@ -23,5 +24,5 @@ export interface IndexEntry {
 export interface NCBIData {
   // @ts-expect-error
   uids: string[]
-  [key: string]: IndexEntry
+  [key: string]: NCBIAssemblyEntry
 }

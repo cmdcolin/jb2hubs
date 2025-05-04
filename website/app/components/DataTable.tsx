@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react'
 
-import { Download, Star } from 'lucide-react'
+import { Download, Star, X } from 'lucide-react'
 
 import './table.css'
 
@@ -303,6 +303,13 @@ export default function DataTable({
                             {row.ncbiRefSeqCategory === 'reference genome' ? (
                               <Star
                                 fill="orange"
+                                strokeWidth={0}
+                                className="w-[1em] h-[1em]"
+                              />
+                            ) : null}
+                            {row.suppressed ? (
+                              <X
+                                fill="red"
                                 strokeWidth={0}
                                 className="w-[1em] h-[1em]"
                               />

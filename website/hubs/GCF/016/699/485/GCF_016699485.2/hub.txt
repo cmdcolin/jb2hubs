@@ -21,6 +21,7 @@ htmlPath html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.description.html
 blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/016/699/485/GCF_016699485.2
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/016/699/485/GCF_016699485.2
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/016/699/485/GCF_016699485.2
+liftOver.GCF_002263795.3 liftOver/GCF_016699485.2ToGCF_002263795.3.over.chain.gz
 liftOver.GCF_014805655.1 liftOver/GCF_016699485.2ToGCF_014805655.1.over.chain.gz
 liftOver.galGal5 liftOver/GCF_016699485.2ToGalGal5.over.chain.gz
 liftOver.galGal6 liftOver/GCF_016699485.2ToGalGal6.over.chain.gz
@@ -151,7 +152,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -169,7 +170,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -186,7 +187,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -324,7 +325,7 @@ compositeTrack on
 shortLabel Chain/Net
 longLabel Chain alignments to target sequence: GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b
 subGroup1 view Views chain=Chains synten=Syntenic rbest=Reciprocal_best liftover=Lift_over align=Alignment
-subGroup2 species Assembly s000=galGal6 s001=galGal5 s002=GCF_014805655.1 s003=hg38 s004=mm39 s005=mm10
+subGroup2 species Assembly s000=galGal6 s001=galGal5 s002=GCF_014805655.1 s003=hg38 s004=GCF_002263795.3 s005=mm39 s006=mm10
 subGroup3 chainType chain_type c00=chain c01=syntenic c02=reciprocal_best c03=lift_over c04=chain_align c05=syntenic_align c06=reciprocal_align c07=lift_over_align
 dragAndDrop subTracks
 visibility hide
@@ -535,9 +536,57 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
         html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
         priority 88.635
 
-        track chainMm39
+        track chainGCF_002263795.3
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewchain off
         subGroups view=chain species=s004 chainType=c00
+        shortLabel cattle Chain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
+        priority 93.758
+
+        track chainSynGCF_002263795.3
+        parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewSynTen off
+        subGroups view=synten species=s004 chainType=c01
+        shortLabel cattle synChain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainSynGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainSynGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
+        priority 93.758
+
+        track chainRBestGCF_002263795.3
+        parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewRBest off
+        subGroups view=rbest species=s004 chainType=c02
+        shortLabel cattle rbChain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainRBestGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainRBestGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
+        priority 93.758
+
+        track chainLiftOverGCF_002263795.3
+        parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewLiftOver off
+        subGroups view=liftover species=s004 chainType=c03
+        shortLabel cattle loChain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainLiftOverGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainLiftOverGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
+        priority 93.758
+
+        track chainMm39
+        parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewchain off
+        subGroups view=chain species=s005 chainType=c00
         shortLabel Mouse/mm39 Chain
         longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
         type bigChain mm39
@@ -549,7 +598,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track chainSynMm39
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewSynTen off
-        subGroups view=synten species=s004 chainType=c01
+        subGroups view=synten species=s005 chainType=c01
         shortLabel Mouse/mm39 synChain
         longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
         type bigChain mm39
@@ -561,7 +610,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track chainRBestMm39
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewRBest off
-        subGroups view=rbest species=s004 chainType=c02
+        subGroups view=rbest species=s005 chainType=c02
         shortLabel Mouse/mm39 rbChain
         longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
         type bigChain mm39
@@ -573,7 +622,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track chainMm10
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewchain off
-        subGroups view=chain species=s005 chainType=c00
+        subGroups view=chain species=s006 chainType=c00
         shortLabel Mouse/mm10 Chain
         longLabel Mouse/mm10/mm10 (Dec. 2011) Chained Alignments
         type bigChain mm10
@@ -585,7 +634,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track chainSynMm10
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewSynTen off
-        subGroups view=synten species=s005 chainType=c01
+        subGroups view=synten species=s006 chainType=c01
         shortLabel Mouse/mm10 synChain
         longLabel Mouse/mm10/mm10 (Dec. 2011) Chained Alignments
         type bigChain mm10
@@ -597,7 +646,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track chainRBestMm10
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewRBest off
-        subGroups view=rbest species=s005 chainType=c02
+        subGroups view=rbest species=s006 chainType=c02
         shortLabel Mouse/mm10 rbChain
         longLabel Mouse/mm10/mm10 (Dec. 2011) Chained Alignments
         type bigChain mm10
@@ -769,9 +818,45 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
         html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
         priority 88.635
 
-        track netMm39
+        track netGCF_002263795.3
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
         subGroups view=align species=s004 chainType=c04
+        shortLabel cattle mafNet
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.net.bb
+        summary bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.net.summary.bb
+        speciesOrder GCF_002263795.3
+        html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
+        priority 93.758
+
+        track synNetGCF_002263795.3
+        parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
+        subGroups view=align species=s004 chainType=c05
+        shortLabel cattle synNet
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.synNet.bb
+        summary bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.synNet.summary.bb
+        speciesOrder GCF_002263795.3
+        html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
+        priority 93.758
+
+        track rbestNetGCF_002263795.3
+        parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
+        subGroups view=align species=s004 chainType=c06
+        shortLabel cattle rbestNet
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.rbestNet.bb
+        summary bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.rbestNet.summary.bb
+        speciesOrder GCF_002263795.3
+        html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
+        priority 93.758
+
+        track netMm39
+        parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
+        subGroups view=align species=s005 chainType=c04
         shortLabel Mouse/mm39 mafNet
         longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
         type bigMaf
@@ -783,7 +868,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track synNetMm39
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
-        subGroups view=align species=s004 chainType=c05
+        subGroups view=align species=s005 chainType=c05
         shortLabel Mouse/mm39 synNet
         longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
         type bigMaf
@@ -795,7 +880,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track rbestNetMm39
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
-        subGroups view=align species=s004 chainType=c06
+        subGroups view=align species=s005 chainType=c06
         shortLabel Mouse/mm39 rbestNet
         longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
         type bigMaf
@@ -807,7 +892,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track netMm10
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
-        subGroups view=align species=s005 chainType=c04
+        subGroups view=align species=s006 chainType=c04
         shortLabel Mouse/mm10 mafNet
         longLabel Mouse/mm10/mm10 (Dec. 2011) Chained Alignments
         type bigMaf
@@ -819,7 +904,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track synNetMm10
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
-        subGroups view=align species=s005 chainType=c05
+        subGroups view=align species=s006 chainType=c05
         shortLabel Mouse/mm10 synNet
         longLabel Mouse/mm10/mm10 (Dec. 2011) Chained Alignments
         type bigMaf
@@ -831,7 +916,7 @@ html html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet
 
         track rbestNetMm10
         parent GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off
-        subGroups view=align species=s005 chainType=c06
+        subGroups view=align species=s006 chainType=c06
         shortLabel Mouse/mm10 rbestNet
         longLabel Mouse/mm10/mm10 (Dec. 2011) Chained Alignments
         type bigMaf

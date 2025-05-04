@@ -22,6 +22,7 @@
           "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/016/699/485/GCF_016699485.2",
           "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/016/699/485/GCF_016699485.2",
           "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/016/699/485/GCF_016699485.2",
+          "liftOver.GCF_002263795.3": "liftOver/GCF_016699485.2ToGCF_002263795.3.over.chain.gz",
           "liftOver.GCF_014805655.1": "liftOver/GCF_016699485.2ToGCF_014805655.1.over.chain.gz",
           "liftOver.galGal5": "liftOver/GCF_016699485.2ToGalGal5.over.chain.gz",
           "liftOver.galGal6": "liftOver/GCF_016699485.2ToGalGal6.over.chain.gz",
@@ -158,7 +159,7 @@
         "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_016699485.2-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCF_016699485.2"],
@@ -178,7 +179,7 @@
         "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_016699485.2-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_016699485.2"],
@@ -266,7 +267,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -278,7 +279,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_016699485.2-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_016699485.2"],
@@ -297,7 +298,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -308,7 +309,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "2"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_016699485.2-ncbiRefSeqCurated",
       "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_016699485.2"],
@@ -327,7 +328,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -338,7 +339,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_016699485.2-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_016699485.2"],
@@ -365,7 +366,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_016699485.2-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_016699485.2"],
@@ -398,7 +399,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_016699485.2-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_016699485.2"],
@@ -419,7 +420,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_016699485.2-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_016699485.2"],
@@ -440,7 +441,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_016699485.2-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_016699485.2"],
@@ -593,7 +594,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_016699485.2-chainGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -618,7 +619,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_016699485.2-chainSynGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -643,7 +644,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_016699485.2-chainRBestGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -668,7 +669,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_016699485.2-chainLiftOverGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -693,7 +694,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.573"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_016699485.2-chainGalGal5",
       "description": "Chicken/galGal5/galGal5 (Dec 2015) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -718,7 +719,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.573"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_016699485.2-chainSynGalGal5",
       "description": "Chicken/galGal5/galGal5 (Dec 2015) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -743,7 +744,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.573"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_016699485.2-chainRBestGalGal5",
       "description": "Chicken/galGal5/galGal5 (Dec 2015) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -768,7 +769,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "28.668"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_016699485.2-chainGCF_014805655.1",
       "description": "Eurasian tree sparrow/GCF_014805655.1_ASM1480565v1 (2020-09-30) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -793,7 +794,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "28.668"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_016699485.2-chainSynGCF_014805655.1",
       "description": "Eurasian tree sparrow/GCF_014805655.1_ASM1480565v1 (2020-09-30) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -818,7 +819,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "28.668"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_016699485.2-chainRBestGCF_014805655.1",
       "description": "Eurasian tree sparrow/GCF_014805655.1_ASM1480565v1 (2020-09-30) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -843,7 +844,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "28.668"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_016699485.2-chainLiftOverGCF_014805655.1",
       "description": "Eurasian tree sparrow/GCF_014805655.1_ASM1480565v1 (2020-09-30) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -868,7 +869,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "88.635"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_016699485.2-chainHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -893,7 +894,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "88.635"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_016699485.2-chainSynHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -918,7 +919,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "88.635"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_016699485.2-chainRBestHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -931,9 +932,109 @@
     },
     {
       "metadata": {
-        "track": "chainMm39",
+        "track": "chainGCF_002263795.3",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewchain off",
         "subGroups": "view=chain species=s004 chainType=c00",
+        "shortLabel": "cattle Chain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
+        "priority": "93.758"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_016699485.2-chainGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_016699485.2"],
+      "name": "cattle Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_002263795.3",
+        "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewSynTen off",
+        "subGroups": "view=synten species=s004 chainType=c01",
+        "shortLabel": "cattle synChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainSynGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainSynGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
+        "priority": "93.758"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_016699485.2-chainSynGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_016699485.2"],
+      "name": "cattle synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainSynGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_002263795.3",
+        "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewRBest off",
+        "subGroups": "view=rbest species=s004 chainType=c02",
+        "shortLabel": "cattle rbChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainRBestGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainRBestGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
+        "priority": "93.758"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_016699485.2-chainRBestGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_016699485.2"],
+      "name": "cattle rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainRBestGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_002263795.3",
+        "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s004 chainType=c03",
+        "shortLabel": "cattle loChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainLiftOverGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainLiftOverGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
+        "priority": "93.758"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_016699485.2-chainLiftOverGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_016699485.2"],
+      "name": "cattle loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainLiftOverGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainMm39",
+        "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewchain off",
+        "subGroups": "view=chain species=s005 chainType=c00",
         "shortLabel": "Mouse/mm39 Chain",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigChain mm39",
@@ -943,7 +1044,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.636"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_016699485.2-chainMm39",
       "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -958,7 +1059,7 @@
       "metadata": {
         "track": "chainSynMm39",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewSynTen off",
-        "subGroups": "view=synten species=s004 chainType=c01",
+        "subGroups": "view=synten species=s005 chainType=c01",
         "shortLabel": "Mouse/mm39 synChain",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigChain mm39",
@@ -968,7 +1069,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.636"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_016699485.2-chainSynMm39",
       "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -983,7 +1084,7 @@
       "metadata": {
         "track": "chainRBestMm39",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewRBest off",
-        "subGroups": "view=rbest species=s004 chainType=c02",
+        "subGroups": "view=rbest species=s005 chainType=c02",
         "shortLabel": "Mouse/mm39 rbChain",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigChain mm39",
@@ -993,7 +1094,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.636"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_016699485.2-chainRBestMm39",
       "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1008,7 +1109,7 @@
       "metadata": {
         "track": "chainMm10",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewchain off",
-        "subGroups": "view=chain species=s005 chainType=c00",
+        "subGroups": "view=chain species=s006 chainType=c00",
         "shortLabel": "Mouse/mm10 Chain",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigChain mm10",
@@ -1018,7 +1119,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.639"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_016699485.2-chainMm10",
       "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1033,7 +1134,7 @@
       "metadata": {
         "track": "chainSynMm10",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewSynTen off",
-        "subGroups": "view=synten species=s005 chainType=c01",
+        "subGroups": "view=synten species=s006 chainType=c01",
         "shortLabel": "Mouse/mm10 synChain",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigChain mm10",
@@ -1043,7 +1144,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.639"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_016699485.2-chainSynMm10",
       "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1058,7 +1159,7 @@
       "metadata": {
         "track": "chainRBestMm10",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bChainNetViewRBest off",
-        "subGroups": "view=rbest species=s005 chainType=c02",
+        "subGroups": "view=rbest species=s006 chainType=c02",
         "shortLabel": "Mouse/mm10 rbChain",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigChain mm10",
@@ -1068,7 +1169,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.639"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_016699485.2-chainRBestMm10",
       "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1093,7 +1194,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-netGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1118,7 +1219,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-synNetGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1143,7 +1244,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-rbestNetGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1168,7 +1269,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.479"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-liftOverNetGalGal6",
       "description": "Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1193,7 +1294,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.573"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-netGalGal5",
       "description": "Chicken/galGal5/galGal5 (Dec 2015) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1218,7 +1319,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.573"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-synNetGalGal5",
       "description": "Chicken/galGal5/galGal5 (Dec 2015) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1243,7 +1344,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "1.573"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-rbestNetGalGal5",
       "description": "Chicken/galGal5/galGal5 (Dec 2015) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1268,7 +1369,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "28.668"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-netGCF_014805655.1",
       "description": "Eurasian tree sparrow/GCF_014805655.1_ASM1480565v1 (2020-09-30) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1293,7 +1394,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "28.668"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-synNetGCF_014805655.1",
       "description": "Eurasian tree sparrow/GCF_014805655.1_ASM1480565v1 (2020-09-30) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1318,7 +1419,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "28.668"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-rbestNetGCF_014805655.1",
       "description": "Eurasian tree sparrow/GCF_014805655.1_ASM1480565v1 (2020-09-30) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1343,7 +1444,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "88.635"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-netHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1368,7 +1469,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "88.635"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-synNetHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1393,7 +1494,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "88.635"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-rbestNetHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1406,9 +1507,84 @@
     },
     {
       "metadata": {
-        "track": "netMm39",
+        "track": "netGCF_002263795.3",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
         "subGroups": "view=align species=s004 chainType=c04",
+        "shortLabel": "cattle mafNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.net.bb",
+        "summary": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.net.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
+        "priority": "93.758"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_016699485.2-netGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_016699485.2"],
+      "name": "cattle mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_002263795.3",
+        "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
+        "subGroups": "view=align species=s004 chainType=c05",
+        "shortLabel": "cattle synNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.synNet.bb",
+        "summary": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.synNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
+        "priority": "93.758"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_016699485.2-synNetGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_016699485.2"],
+      "name": "cattle synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_002263795.3",
+        "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
+        "subGroups": "view=align species=s004 chainType=c06",
+        "shortLabel": "cattle rbestNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.rbestNet.bb",
+        "summary": "bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.rbestNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
+        "priority": "93.758"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_016699485.2-rbestNetGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_016699485.2"],
+      "name": "cattle rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/bbi/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.GCF_002263795.3.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netMm39",
+        "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
+        "subGroups": "view=align species=s005 chainType=c04",
         "shortLabel": "Mouse/mm39 mafNet",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigMaf",
@@ -1418,7 +1594,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.636"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-netMm39",
       "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1433,7 +1609,7 @@
       "metadata": {
         "track": "synNetMm39",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
-        "subGroups": "view=align species=s004 chainType=c05",
+        "subGroups": "view=align species=s005 chainType=c05",
         "shortLabel": "Mouse/mm39 synNet",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigMaf",
@@ -1443,7 +1619,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.636"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-synNetMm39",
       "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1458,7 +1634,7 @@
       "metadata": {
         "track": "rbestNetMm39",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
-        "subGroups": "view=align species=s004 chainType=c06",
+        "subGroups": "view=align species=s005 chainType=c06",
         "shortLabel": "Mouse/mm39 rbestNet",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigMaf",
@@ -1468,7 +1644,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.636"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-rbestNetMm39",
       "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1483,7 +1659,7 @@
       "metadata": {
         "track": "netMm10",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
-        "subGroups": "view=align species=s005 chainType=c04",
+        "subGroups": "view=align species=s006 chainType=c04",
         "shortLabel": "Mouse/mm10 mafNet",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigMaf",
@@ -1493,7 +1669,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.639"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-netMm10",
       "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1508,7 +1684,7 @@
       "metadata": {
         "track": "synNetMm10",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
-        "subGroups": "view=align species=s005 chainType=c05",
+        "subGroups": "view=align species=s006 chainType=c05",
         "shortLabel": "Mouse/mm10 synNet",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigMaf",
@@ -1518,7 +1694,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.639"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-synNetMm10",
       "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],
@@ -1533,7 +1709,7 @@
       "metadata": {
         "track": "rbestNetMm10",
         "parent": "GCF_016699485.2_bGalGal1.mat.broiler.GRCg7bMafNetViewnet off",
-        "subGroups": "view=align species=s005 chainType=c06",
+        "subGroups": "view=align species=s006 chainType=c06",
         "shortLabel": "Mouse/mm10 rbestNet",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigMaf",
@@ -1543,7 +1719,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/016/699/485/GCF_016699485.2/html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet\">html/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b.chainNet</a>",
         "priority": "94.639"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_016699485.2-rbestNetMm10",
       "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
       "assemblyNames": ["GCF_016699485.2"],

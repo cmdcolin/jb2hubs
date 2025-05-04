@@ -22,7 +22,8 @@
           "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/028/858/775/GCF_028858775.2",
           "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/028/858/775/GCF_028858775.2",
           "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/028/858/775/GCF_028858775.2",
-          "liftOver.hg38": "liftOver/GCF_028858775.2ToHg38.over.chain.gz"
+          "liftOver.hg38": "liftOver/GCF_028858775.2ToHg38.over.chain.gz",
+          "liftOver.panTro6": "liftOver/GCF_028858775.2ToPanTro6.over.chain.gz"
         },
         "trackId": "GCF_028858775.2-ReferenceSequenceTrack",
         "adapter": {
@@ -130,7 +131,7 @@
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_028858775.2-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_028858775.2"],
@@ -218,7 +219,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -230,7 +231,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_028858775.2-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_028858775.2"],
@@ -249,7 +250,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -260,7 +261,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "2"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_028858775.2-ncbiRefSeqCurated",
       "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_028858775.2"],
@@ -279,7 +280,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -290,7 +291,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_028858775.2-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_028858775.2"],
@@ -317,7 +318,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_028858775.2-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_028858775.2"],
@@ -350,7 +351,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_028858775.2-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_028858775.2"],
@@ -371,7 +372,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_028858775.2-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_028858775.2"],
@@ -392,7 +393,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_028858775.2-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_028858775.2"],
@@ -501,21 +502,123 @@
     },
     {
       "metadata": {
+        "track": "chainPanTro6",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewchain on",
+        "subGroups": "view=chain species=s000 chainType=c00",
+        "shortLabel": "Chimp/panTro6 Chain",
+        "longLabel": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+        "type": "bigChain panTro6",
+        "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainPanTro6.bb",
+        "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainPanTro6Link.bb",
+        "otherDb": "panTro6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "5.319"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_028858775.2-chainPanTro6",
+      "description": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_028858775.2"],
+      "name": "Chimp/panTro6 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainPanTro6.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynPanTro6",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewSynTen off",
+        "subGroups": "view=synten species=s000 chainType=c01",
+        "shortLabel": "Chimp/panTro6 synChain",
+        "longLabel": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+        "type": "bigChain panTro6",
+        "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainSynPanTro6.bb",
+        "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainSynPanTro6Link.bb",
+        "otherDb": "panTro6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "5.319"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_028858775.2-chainSynPanTro6",
+      "description": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_028858775.2"],
+      "name": "Chimp/panTro6 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainSynPanTro6.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestPanTro6",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewRBest off",
+        "subGroups": "view=rbest species=s000 chainType=c02",
+        "shortLabel": "Chimp/panTro6 rbChain",
+        "longLabel": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+        "type": "bigChain panTro6",
+        "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainRBestPanTro6.bb",
+        "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainRBestPanTro6Link.bb",
+        "otherDb": "panTro6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "5.319"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_028858775.2-chainRBestPanTro6",
+      "description": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_028858775.2"],
+      "name": "Chimp/panTro6 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainRBestPanTro6.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverPanTro6",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s000 chainType=c03",
+        "shortLabel": "Chimp/panTro6 loChain",
+        "longLabel": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+        "type": "bigChain panTro6",
+        "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainLiftOverPanTro6.bb",
+        "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainLiftOverPanTro6Link.bb",
+        "otherDb": "panTro6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "5.319"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_028858775.2-chainLiftOverPanTro6",
+      "description": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_028858775.2"],
+      "name": "Chimp/panTro6 loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainLiftOverPanTro6.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human Chain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Chained Alignments",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewchain off",
+        "subGroups": "view=chain species=s001 chainType=c00",
+        "shortLabel": "Human/hg38 Chain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainHg38.bb",
         "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainHg38Link.bb",
-        "priority": "1"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "9.893"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_028858775.2-chainHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_028858775.2"],
-      "name": "Human Chain",
+      "name": "Human/hg38 Chain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -525,20 +628,22 @@
     {
       "metadata": {
         "track": "chainSynHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human synChain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Chained Alignments",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewSynTen off",
+        "subGroups": "view=synten species=s001 chainType=c01",
+        "shortLabel": "Human/hg38 synChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainSynHg38.bb",
         "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainSynHg38Link.bb",
-        "priority": "2"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "9.893"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_028858775.2-chainSynHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_028858775.2"],
-      "name": "Human synChain",
+      "name": "Human/hg38 synChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -548,20 +653,22 @@
     {
       "metadata": {
         "track": "chainRBestHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human rbChain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Chained Alignments",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewRBest off",
+        "subGroups": "view=rbest species=s001 chainType=c02",
+        "shortLabel": "Human/hg38 rbChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainRBestHg38.bb",
         "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainRBestHg38Link.bb",
-        "priority": "3"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "9.893"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_028858775.2-chainRBestHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_028858775.2"],
-      "name": "Human rbChain",
+      "name": "Human/hg38 rbChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -571,20 +678,22 @@
     {
       "metadata": {
         "track": "chainLiftOverHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human loChain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Lift Over Chained Alignments",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s001 chainType=c03",
+        "shortLabel": "Human/hg38 loChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainLiftOverHg38.bb",
         "linkDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainLiftOverHg38Link.bb",
-        "priority": "4"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "9.893"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_028858775.2-chainLiftOverHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Lift Over Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_028858775.2"],
-      "name": "Human loChain",
+      "name": "Human/hg38 loChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -593,22 +702,98 @@
     },
     {
       "metadata": {
+        "track": "netPanTro6",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priMafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c04",
+        "shortLabel": "Chimp/panTro6 mafNet",
+        "longLabel": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.net.bb",
+        "summary": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.net.summary.bb",
+        "speciesOrder": "panTro6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "5.319"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_028858775.2-netPanTro6",
+      "description": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_028858775.2"],
+      "name": "Chimp/panTro6 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetPanTro6",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priMafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c05",
+        "shortLabel": "Chimp/panTro6 synNet",
+        "longLabel": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.synNet.bb",
+        "summary": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.synNet.summary.bb",
+        "speciesOrder": "panTro6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "5.319"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_028858775.2-synNetPanTro6",
+      "description": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_028858775.2"],
+      "name": "Chimp/panTro6 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetPanTro6",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priMafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c06",
+        "shortLabel": "Chimp/panTro6 rbestNet",
+        "longLabel": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.rbestNet.bb",
+        "summary": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.rbestNet.summary.bb",
+        "speciesOrder": "panTro6",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "5.319"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_028858775.2-rbestNetPanTro6",
+      "description": "Chimp/panTro6/panTro6 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_028858775.2"],
+      "name": "Chimp/panTro6 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.panTro6.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "netHg38",
-        "parent": "mafNetHg38Viewnet",
-        "subGroups": "view=net",
-        "shortLabel": "Human net",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Net Alignment",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priMafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c04",
+        "shortLabel": "Human/hg38 mafNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.hg38.net.bb",
         "summary": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.hg38.net.summary.bb",
         "speciesOrder": "hg38",
-        "priority": "5"
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "9.893"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_028858775.2-netHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Net Alignment",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_028858775.2"],
-      "name": "Human net",
+      "name": "Human/hg38 mafNet",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -618,21 +803,22 @@
     {
       "metadata": {
         "track": "synNetHg38",
-        "parent": "mafNetHg38Viewnet",
-        "subGroups": "view=net",
-        "shortLabel": "Human synNet",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Net Alignment",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priMafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c05",
+        "shortLabel": "Human/hg38 synNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.hg38.synNet.bb",
         "summary": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.hg38.synNet.summary.bb",
         "speciesOrder": "hg38",
-        "priority": "6"
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "9.893"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_028858775.2-synNetHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Net Alignment",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_028858775.2"],
-      "name": "Human synNet",
+      "name": "Human/hg38 synNet",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -642,21 +828,22 @@
     {
       "metadata": {
         "track": "rbestNetHg38",
-        "parent": "mafNetHg38Viewnet",
-        "subGroups": "view=net",
-        "shortLabel": "Human rbestNet",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Net Alignment",
+        "parent": "GCF_028858775.2_NHGRI_mPanTro3-v2.0_priMafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c06",
+        "shortLabel": "Human/hg38 rbestNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
         "bigDataUrl": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.hg38.rbestNet.bb",
         "summary": "bbi/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.hg38.rbestNet.summary.bb",
         "speciesOrder": "hg38",
-        "priority": "7"
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/028/858/775/GCF_028858775.2/html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet\">html/GCF_028858775.2_NHGRI_mPanTro3-v2.0_pri.chainNet</a>",
+        "priority": "9.893"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_028858775.2-rbestNetHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Net Alignment",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_028858775.2"],
-      "name": "Human rbestNet",
+      "name": "Human/hg38 rbestNet",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",

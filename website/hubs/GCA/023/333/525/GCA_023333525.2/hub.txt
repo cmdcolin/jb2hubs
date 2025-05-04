@@ -1,6 +1,6 @@
 hub GCA_023333525.2 genome assembly
-shortLabel western whiptail (HBS 135688 primary hap 2025)
-longLabel western whiptail (HBS 135688 primary hap 2025)/Aspidoscelis tigris stejnegeri/GCA_023333525.2_rAspTig1.1.pri genome assembly
+shortLabel San Diegan tiger whiptail (v1.1 HBS 135688 primary hap 2025)
+longLabel San Diegan tiger whiptail (v1.1 HBS 135688 primary hap 2025)/Aspidoscelis tigris stejnegeri/GCA_023333525.2_rAspTig1.1.pri genome assembly
 useOneFile on
 email hclawson@ucsc.edu
 descriptionUrl html/GCA_023333525.2_rAspTig1.1.pri.description.html
@@ -8,7 +8,7 @@ descriptionUrl html/GCA_023333525.2_rAspTig1.1.pri.description.html
 genome GCA_023333525.2
 taxId 2917703
 groups groups.txt
-description western whiptail (HBS 135688 primary hap 2025)
+description San Diegan tiger whiptail (v1.1 HBS 135688 primary hap 2025)
 twoBitPath GCA_023333525.2.2bit
 twoBitBptUrl GCA_023333525.2.2bit.bpt
 chromSizes GCA_023333525.2.chrom.sizes.txt
@@ -96,6 +96,17 @@ bigDataUrl bbi/GCA_023333525.2_rAspTig1.1.pri.rmsk.bb
 xrefDataUrl bbi/GCA_023333525.2_rAspTig1.1.pri.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCA_023333525.2_rAspTig1.1.pri.repeatMasker
+
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCA_023333525.2_rAspTig1.1.pri.rModel.bb
+xrefDataUrl bbi/GCA_023333525.2_rAspTig1.1.pri.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCA_023333525.2_rAspTig1.1.pri.repeatModeler
 
 track simpleRepeat
 shortLabel Simple Repeats

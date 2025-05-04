@@ -1,6 +1,6 @@
 hub GCF_035609145.1 genome assembly
-shortLabel Puerto Rican coqui (aEleCoq1hap1 2024)
-longLabel Puerto Rican coqui (aEleCoq1hap1 2024)/Eleutherodactylus coqui/GCF_035609145.1_aEleCoq1.hap1 genome assembly
+shortLabel Puerto Rican coqui (hap1 2024 refseq)
+longLabel Puerto Rican coqui (hap1 2024 refseq)/Eleutherodactylus coqui/GCF_035609145.1_aEleCoq1.hap1 genome assembly
 useOneFile on
 email hclawson@ucsc.edu
 descriptionUrl html/GCF_035609145.1_aEleCoq1.hap1.description.html
@@ -8,7 +8,7 @@ descriptionUrl html/GCF_035609145.1_aEleCoq1.hap1.description.html
 genome GCF_035609145.1
 taxId 57060
 groups groups.txt
-description Puerto Rican coqui (aEleCoq1hap1 2024)
+description Puerto Rican coqui (hap1 2024 refseq)
 twoBitPath GCF_035609145.1.2bit
 twoBitBptUrl GCF_035609145.1.2bit.bpt
 chromSizes GCF_035609145.1.chrom.sizes.txt
@@ -97,6 +97,17 @@ xrefDataUrl bbi/GCF_035609145.1_aEleCoq1.hap1.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCF_035609145.1_aEleCoq1.hap1.repeatMasker
 
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCF_035609145.1_aEleCoq1.hap1.rModel.bb
+xrefDataUrl bbi/GCF_035609145.1_aEleCoq1.hap1.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCF_035609145.1_aEleCoq1.hap1.repeatModeler
+
 track simpleRepeat
 shortLabel Simple Repeats
 longLabel Simple Tandem Repeats by TRF
@@ -124,7 +135,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -142,7 +153,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name

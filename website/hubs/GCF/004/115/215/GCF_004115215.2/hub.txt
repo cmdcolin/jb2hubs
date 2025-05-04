@@ -23,6 +23,7 @@ transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/004/115/215/GCF_004115215.2
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/004/115/215/GCF_004115215.2
 liftOver.GCA_002966995.1 liftOver/GCF_004115215.2ToGCA_002966995.1.over.chain.gz
 liftOver.hg38 liftOver/GCF_004115215.2ToHg38.over.chain.gz
+liftOver.mm39 liftOver/GCF_004115215.2ToMm39.over.chain.gz
 
 track assembly
 longLabel Assembly
@@ -130,7 +131,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -148,7 +149,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -165,7 +166,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -284,7 +285,7 @@ compositeTrack on
 shortLabel Chain/Net
 longLabel Chain alignments to target sequence: GCF_004115215.2_mOrnAna1.pri.v4
 subGroup1 view Views chain=Chains synten=Syntenic rbest=Reciprocal_best liftover=Lift_over align=Alignment
-subGroup2 species Assembly s000=GCA_002966995.1 s001=hg38
+subGroup2 species Assembly s000=GCA_002966995.1 s001=hg38 s002=mm39
 subGroup3 chainType chain_type c00=chain c01=syntenic c02=reciprocal_best c03=lift_over c04=chain_align c05=syntenic_align c06=reciprocal_align c07=lift_over_align
 dragAndDrop subTracks
 visibility hide
@@ -387,6 +388,54 @@ html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
         html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
         priority 85.047
 
+        track chainMm39
+        parent GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewchain off
+        subGroups view=chain species=s002 chainType=c00
+        shortLabel Mouse/mm39 Chain
+        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        type bigChain mm39
+        bigDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainMm39.bb
+        linkDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainMm39Link.bb
+        otherDb mm39
+        html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
+        priority 94.879
+
+        track chainSynMm39
+        parent GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewSynTen off
+        subGroups view=synten species=s002 chainType=c01
+        shortLabel Mouse/mm39 synChain
+        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        type bigChain mm39
+        bigDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainSynMm39.bb
+        linkDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainSynMm39Link.bb
+        otherDb mm39
+        html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
+        priority 94.879
+
+        track chainRBestMm39
+        parent GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewRBest off
+        subGroups view=rbest species=s002 chainType=c02
+        shortLabel Mouse/mm39 rbChain
+        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        type bigChain mm39
+        bigDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainRBestMm39.bb
+        linkDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainRBestMm39Link.bb
+        otherDb mm39
+        html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
+        priority 94.879
+
+        track chainLiftOverMm39
+        parent GCF_004115215.2_mOrnAna1.pri.v4ChainNetViewLiftOver off
+        subGroups view=liftover species=s002 chainType=c03
+        shortLabel Mouse/mm39 loChain
+        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        type bigChain mm39
+        bigDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainLiftOverMm39.bb
+        linkDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.chainLiftOverMm39Link.bb
+        otherDb mm39
+        html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
+        priority 94.879
+
     track GCF_004115215.2_mOrnAna1.pri.v4MafNetViewnet
     shortLabel Nets
     view align
@@ -452,4 +501,40 @@ html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
         speciesOrder hg38
         html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
         priority 85.047
+
+        track netMm39
+        parent GCF_004115215.2_mOrnAna1.pri.v4MafNetViewnet off
+        subGroups view=align species=s002 chainType=c04
+        shortLabel Mouse/mm39 mafNet
+        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.net.bb
+        summary bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.net.summary.bb
+        speciesOrder mm39
+        html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
+        priority 94.879
+
+        track synNetMm39
+        parent GCF_004115215.2_mOrnAna1.pri.v4MafNetViewnet off
+        subGroups view=align species=s002 chainType=c05
+        shortLabel Mouse/mm39 synNet
+        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.synNet.bb
+        summary bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.synNet.summary.bb
+        speciesOrder mm39
+        html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
+        priority 94.879
+
+        track rbestNetMm39
+        parent GCF_004115215.2_mOrnAna1.pri.v4MafNetViewnet off
+        subGroups view=align species=s002 chainType=c06
+        shortLabel Mouse/mm39 rbestNet
+        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.rbestNet.bb
+        summary bbi/GCF_004115215.2_mOrnAna1.pri.v4.mm39.rbestNet.summary.bb
+        speciesOrder mm39
+        html html/GCF_004115215.2_mOrnAna1.pri.v4.chainNet
+        priority 94.879
 

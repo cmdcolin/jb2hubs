@@ -139,7 +139,7 @@
         "bigDataUrl": "bbi/GCF_027406575.1_mNycCou1.pri.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_027406575.1-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCF_027406575.1"],
@@ -159,7 +159,7 @@
         "bigDataUrl": "bbi/GCF_027406575.1_mNycCou1.pri.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_027406575.1-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_027406575.1"],
@@ -247,7 +247,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -259,7 +259,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_027406575.1-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_027406575.1"],
@@ -278,7 +278,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -289,7 +289,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_027406575.1-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_027406575.1"],
@@ -316,7 +316,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_027406575.1-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_027406575.1"],
@@ -349,7 +349,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_027406575.1-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_027406575.1"],
@@ -370,7 +370,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_027406575.1_mNycCou1.pri.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_027406575.1-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_027406575.1"],
@@ -391,7 +391,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_027406575.1_mNycCou1.pri.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_027406575.1-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_027406575.1"],
@@ -512,7 +512,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "62.404"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCF_020740605.2",
       "description": "ring-tailed lemur/GCF_020740605.2_mLemCat1.pri (2021-11-04) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -537,7 +537,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "62.404"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCF_020740605.2",
       "description": "ring-tailed lemur/GCF_020740605.2_mLemCat1.pri (2021-11-04) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -562,7 +562,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "62.404"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCF_020740605.2",
       "description": "ring-tailed lemur/GCF_020740605.2_mLemCat1.pri (2021-11-04) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -587,7 +587,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "62.404"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCF_020740605.2",
       "description": "ring-tailed lemur/GCF_020740605.2_mLemCat1.pri (2021-11-04) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -612,7 +612,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.730"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCA_028858775.2",
       "description": "chimpanzee/GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -637,7 +637,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.730"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCA_028858775.2",
       "description": "chimpanzee/GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -662,7 +662,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.730"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCA_028858775.2",
       "description": "chimpanzee/GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -687,7 +687,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.730"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCA_028858775.2",
       "description": "chimpanzee/GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -712,7 +712,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.732"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCA_029289425.2",
       "description": "pygmy chimpanzee/GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -737,7 +737,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.732"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCA_029289425.2",
       "description": "pygmy chimpanzee/GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -762,7 +762,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.732"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCA_029289425.2",
       "description": "pygmy chimpanzee/GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -787,7 +787,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.732"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCA_029289425.2",
       "description": "pygmy chimpanzee/GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -812,7 +812,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.746"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -837,7 +837,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.746"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -862,7 +862,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.746"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -887,7 +887,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.746"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -912,7 +912,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.791"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCA_029281585.2",
       "description": "western lowland gorilla/GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -937,7 +937,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.791"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCA_029281585.2",
       "description": "western lowland gorilla/GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -962,7 +962,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.791"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCA_029281585.2",
       "description": "western lowland gorilla/GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -987,7 +987,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.791"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCA_029281585.2",
       "description": "western lowland gorilla/GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1012,7 +1012,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.799"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCA_028885655.2",
       "description": "Sumatran orangutan/GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1037,7 +1037,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.799"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCA_028885655.2",
       "description": "Sumatran orangutan/GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1062,7 +1062,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.799"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCA_028885655.2",
       "description": "Sumatran orangutan/GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1087,7 +1087,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.799"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCA_028885655.2",
       "description": "Sumatran orangutan/GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1112,7 +1112,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.803"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCA_028885625.2",
       "description": "Bornean orangutan/GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1137,7 +1137,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.803"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCA_028885625.2",
       "description": "Bornean orangutan/GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1162,7 +1162,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.803"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCA_028885625.2",
       "description": "Bornean orangutan/GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1187,7 +1187,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.803"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCA_028885625.2",
       "description": "Bornean orangutan/GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1212,7 +1212,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.846"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainHs1",
       "description": "Human/hs1/hs1 (Jan. 2022) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1237,7 +1237,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.846"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynHs1",
       "description": "Human/hs1/hs1 (Jan. 2022) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1262,7 +1262,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.846"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestHs1",
       "description": "Human/hs1/hs1 (Jan. 2022) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1287,7 +1287,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.846"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverHs1",
       "description": "Human/hs1/hs1 (Jan. 2022) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1312,7 +1312,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "84.250"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCA_028878055.2",
       "description": "siamang/GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1337,7 +1337,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "84.250"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCA_028878055.2",
       "description": "siamang/GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1362,7 +1362,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "84.250"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCA_028878055.2",
       "description": "siamang/GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1387,7 +1387,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "84.250"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCA_028878055.2",
       "description": "siamang/GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1412,7 +1412,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "87.719"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027406575.1-chainGCF_011100555.1",
       "description": "white-tufted-ear marmoset/GCF_011100555.1_mCalJa1.2.pat.X (2021-04-28) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1437,7 +1437,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "87.719"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027406575.1-chainSynGCF_011100555.1",
       "description": "white-tufted-ear marmoset/GCF_011100555.1_mCalJa1.2.pat.X (2021-04-28) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1462,7 +1462,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "87.719"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027406575.1-chainRBestGCF_011100555.1",
       "description": "white-tufted-ear marmoset/GCF_011100555.1_mCalJa1.2.pat.X (2021-04-28) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1487,7 +1487,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "87.719"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027406575.1-chainLiftOverGCF_011100555.1",
       "description": "white-tufted-ear marmoset/GCF_011100555.1_mCalJa1.2.pat.X (2021-04-28) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1512,7 +1512,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "62.404"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCF_020740605.2",
       "description": "ring-tailed lemur/GCF_020740605.2_mLemCat1.pri (2021-11-04) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1537,7 +1537,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "62.404"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCF_020740605.2",
       "description": "ring-tailed lemur/GCF_020740605.2_mLemCat1.pri (2021-11-04) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1562,7 +1562,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "62.404"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCF_020740605.2",
       "description": "ring-tailed lemur/GCF_020740605.2_mLemCat1.pri (2021-11-04) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1587,7 +1587,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.730"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCA_028858775.2",
       "description": "chimpanzee/GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1612,7 +1612,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.730"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCA_028858775.2",
       "description": "chimpanzee/GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1637,7 +1637,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.730"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCA_028858775.2",
       "description": "chimpanzee/GCA_028858775.2_NHGRI_mPanTro3-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1662,7 +1662,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.732"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCA_029289425.2",
       "description": "pygmy chimpanzee/GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1687,7 +1687,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.732"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCA_029289425.2",
       "description": "pygmy chimpanzee/GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1712,7 +1712,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.732"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCA_029289425.2",
       "description": "pygmy chimpanzee/GCA_029289425.2_NHGRI_mPanPan1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1737,7 +1737,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.746"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1762,7 +1762,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.746"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1787,7 +1787,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.746"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetHg38",
       "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1812,7 +1812,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.791"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCA_029281585.2",
       "description": "western lowland gorilla/GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1837,7 +1837,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.791"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCA_029281585.2",
       "description": "western lowland gorilla/GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1862,7 +1862,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.791"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCA_029281585.2",
       "description": "western lowland gorilla/GCA_029281585.2_NHGRI_mGorGor1-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1887,7 +1887,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.799"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCA_028885655.2",
       "description": "Sumatran orangutan/GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1912,7 +1912,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.799"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCA_028885655.2",
       "description": "Sumatran orangutan/GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1937,7 +1937,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.799"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCA_028885655.2",
       "description": "Sumatran orangutan/GCA_028885655.2_NHGRI_mPonAbe1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1962,7 +1962,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.803"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCA_028885625.2",
       "description": "Bornean orangutan/GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -1987,7 +1987,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.803"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCA_028885625.2",
       "description": "Bornean orangutan/GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2012,7 +2012,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.803"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCA_028885625.2",
       "description": "Bornean orangutan/GCA_028885625.2_NHGRI_mPonPyg2-v2.0_pri (2024-01-08) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2037,7 +2037,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.846"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netHs1",
       "description": "Human/hs1/hs1 (Jan. 2022) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2062,7 +2062,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.846"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetHs1",
       "description": "Human/hs1/hs1 (Jan. 2022) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2087,7 +2087,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "83.846"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetHs1",
       "description": "Human/hs1/hs1 (Jan. 2022) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2112,7 +2112,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "84.250"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCA_028878055.2",
       "description": "siamang/GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2137,7 +2137,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "84.250"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCA_028878055.2",
       "description": "siamang/GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2162,7 +2162,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "84.250"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCA_028878055.2",
       "description": "siamang/GCA_028878055.2_NHGRI_mSymSyn1-v2.0_pri (2024-01-05) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2187,7 +2187,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "87.719"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-netGCF_011100555.1",
       "description": "white-tufted-ear marmoset/GCF_011100555.1_mCalJa1.2.pat.X (2021-04-28) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2212,7 +2212,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "87.719"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-synNetGCF_011100555.1",
       "description": "white-tufted-ear marmoset/GCF_011100555.1_mCalJa1.2.pat.X (2021-04-28) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],
@@ -2237,7 +2237,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/406/575/GCF_027406575.1/html/GCF_027406575.1_mNycCou1.pri.chainNet\">html/GCF_027406575.1_mNycCou1.pri.chainNet</a>",
         "priority": "87.719"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027406575.1-rbestNetGCF_011100555.1",
       "description": "white-tufted-ear marmoset/GCF_011100555.1_mCalJa1.2.pat.X (2021-04-28) Chained Alignments",
       "assemblyNames": ["GCF_027406575.1"],

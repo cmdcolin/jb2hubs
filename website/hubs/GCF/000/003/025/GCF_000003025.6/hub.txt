@@ -21,6 +21,7 @@ htmlPath html/GCF_000003025.6_Sscrofa11.1.description.html
 blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/003/025/GCF_000003025.6
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/003/025/GCF_000003025.6
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/003/025/GCF_000003025.6
+liftOver.GCF_002263795.3 liftOver/GCF_000003025.6ToGCF_002263795.3.over.chain.gz
 
 track assembly
 longLabel Assembly
@@ -133,7 +134,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -151,7 +152,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -168,7 +169,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -300,4 +301,109 @@ baseColorUseCds given
 baseColorDefault genomicCodons
 labelSeparator " "
 html html/GCF_000003025.6_Sscrofa11.1.ensGene
+
+##############################################################################
+# GCF_002263795.3 - pig - Sus scrofa - taxId: 9823
+##############################################################################
+track chainNetGCF_002263795.3
+compositeTrack on
+shortLabel pig Chain/Net
+longLabel pig (2017-02-07), Chain and Net Alignments
+subGroup1 view Views chain=Chain net=Net
+dragAndDrop subTracks
+visibility hide
+group compGeno
+priority 100.1
+color 0,0,0
+altColor 100,50,0
+type bed 3
+sortOrder view=+
+otherDb GCF_002263795.3
+html html/GCF_000003025.6_Sscrofa11.1.chainNet
+
+    track chainNetGCF_002263795.3Viewchain
+    shortLabel Chain
+    view chain
+    visibility pack
+    parent chainNetGCF_002263795.3
+    spectrum on
+
+        track chainGCF_002263795.3
+        parent chainNetGCF_002263795.3Viewchain
+        subGroups view=chain
+        shortLabel pig Chain
+        longLabel pig (2017-02-07) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainGCF_002263795.3Link.bb
+        priority 1
+
+        track chainSynGCF_002263795.3
+        parent chainNetGCF_002263795.3Viewchain
+        subGroups view=chain
+        shortLabel pig synChain
+        longLabel pig (2017-02-07) Syntenic Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainSynGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainSynGCF_002263795.3Link.bb
+        priority 2
+
+        track chainRBestGCF_002263795.3
+        parent chainNetGCF_002263795.3Viewchain
+        subGroups view=chain
+        shortLabel pig rbChain
+        longLabel pig (2017-02-07) Reciprocal Best Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainRBestGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainRBestGCF_002263795.3Link.bb
+        priority 3
+
+        track chainLiftOverGCF_002263795.3
+        parent chainNetGCF_002263795.3Viewchain
+        subGroups view=chain
+        shortLabel pig loChain
+        longLabel pig (2017-02-07) Lift Over Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainLiftOverGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_000003025.6_Sscrofa11.1.chainLiftOverGCF_002263795.3Link.bb
+        priority 4
+
+    track mafNetGCF_002263795.3Viewnet
+    shortLabel Net
+    view net
+    visibility full
+    parent chainNetGCF_002263795.3
+
+        track netGCF_002263795.3
+        parent mafNetGCF_002263795.3Viewnet
+        subGroups view=net
+        shortLabel pig net
+        longLabel pig (2017-02-07) Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.net.bb
+        summary bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.net.summary.bb
+        speciesOrder GCF_002263795.3
+        priority 5
+
+        track synNetGCF_002263795.3
+        parent mafNetGCF_002263795.3Viewnet
+        subGroups view=net
+        shortLabel pig synNet
+        longLabel pig (2017-02-07) Syntenic Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.synNet.bb
+        summary bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.synNet.summary.bb
+        speciesOrder GCF_002263795.3
+        priority 6
+
+        track rbestNetGCF_002263795.3
+        parent mafNetGCF_002263795.3Viewnet
+        subGroups view=net
+        shortLabel pig rbestNet
+        longLabel pig (2017-02-07) Reciprocal Best Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.rbestNet.bb
+        summary bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.rbestNet.summary.bb
+        speciesOrder GCF_002263795.3
+        priority 7
 

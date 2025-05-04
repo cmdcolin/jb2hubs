@@ -129,7 +129,7 @@
         "bigDataUrl": "bbi/GCA_964212035.2_mMyoNat1.hap1.2.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCA_964212035.2-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCA_964212035.2"],
@@ -149,7 +149,7 @@
         "bigDataUrl": "bbi/GCA_964212035.2_mMyoNat1.hap1.2.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCA_964212035.2-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCA_964212035.2"],
@@ -186,6 +186,30 @@
     },
     {
       "metadata": {
+        "track": "repeatModeler",
+        "shortLabel": "RepeatModeler",
+        "longLabel": "RepeatModeler Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "hide",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCA_964212035.2_mMyoNat1.hap1.2.rModel.bb",
+        "xrefDataUrl": "bbi/GCA_964212035.2_mMyoNat1.hap1.2.rModel.align.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/964/212/035/GCA_964212035.2/html/GCA_964212035.2_mMyoNat1.hap1.2.repeatModeler\">html/GCA_964212035.2_mMyoNat1.hap1.2.repeatModeler</a>"
+      },
+      "category": ["Variation and Repeats"],
+      "trackId": "GCA_964212035.2-repeatModeler",
+      "description": "RepeatModeler Repetitive Elements",
+      "assemblyNames": ["GCA_964212035.2"],
+      "name": "RepeatModeler",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/212/035/GCA_964212035.2/bbi/GCA_964212035.2_mMyoNat1.hap1.2.rModel.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "simpleRepeat",
         "shortLabel": "Simple Repeats",
         "longLabel": "Simple Tandem Repeats by TRF",
@@ -216,7 +240,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCA_964212035.2_mMyoNat1.hap1.2.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCA_964212035.2-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCA_964212035.2"],
@@ -237,7 +261,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCA_964212035.2_mMyoNat1.hap1.2.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCA_964212035.2-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCA_964212035.2"],

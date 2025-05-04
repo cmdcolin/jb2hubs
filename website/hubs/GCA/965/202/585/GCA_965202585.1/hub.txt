@@ -1,6 +1,6 @@
 hub GCA_965202585.1 genome assembly
-shortLabel tunicate T.democratica (ktThaDemo2.hap1.1 2025)
-longLabel tunicate T.democratica (ktThaDemo2.hap1.1 2025)/Thalia democratica/GCA_965202585.1_ktThaDemo2.hap1.1 genome assembly
+shortLabel tunicate T.democratica (hap1.1 2025)
+longLabel tunicate T.democratica (hap1.1 2025)/Thalia democratica/GCA_965202585.1_ktThaDemo2.hap1.1 genome assembly
 useOneFile on
 email hclawson@ucsc.edu
 descriptionUrl html/GCA_965202585.1_ktThaDemo2.hap1.1.description.html
@@ -8,7 +8,7 @@ descriptionUrl html/GCA_965202585.1_ktThaDemo2.hap1.1.description.html
 genome GCA_965202585.1
 taxId 34761
 groups groups.txt
-description tunicate T.democratica (ktThaDemo2.hap1.1 2025)
+description tunicate T.democratica (hap1.1 2025)
 twoBitPath GCA_965202585.1.2bit
 twoBitBptUrl GCA_965202585.1.2bit.bpt
 chromSizes GCA_965202585.1.chrom.sizes.txt
@@ -96,6 +96,17 @@ bigDataUrl bbi/GCA_965202585.1_ktThaDemo2.hap1.1.rmsk.bb
 xrefDataUrl bbi/GCA_965202585.1_ktThaDemo2.hap1.1.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCA_965202585.1_ktThaDemo2.hap1.1.repeatMasker
+
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCA_965202585.1_ktThaDemo2.hap1.1.rModel.bb
+xrefDataUrl bbi/GCA_965202585.1_ktThaDemo2.hap1.1.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCA_965202585.1_ktThaDemo2.hap1.1.repeatModeler
 
 track simpleRepeat
 shortLabel Simple Repeats

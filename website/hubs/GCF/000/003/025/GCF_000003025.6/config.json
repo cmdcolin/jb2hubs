@@ -21,7 +21,8 @@
           "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/html/GCF_000003025.6_Sscrofa11.1.description.html\">html/GCF_000003025.6_Sscrofa11.1.description.html</a>",
           "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/003/025/GCF_000003025.6",
           "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/003/025/GCF_000003025.6",
-          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/003/025/GCF_000003025.6"
+          "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/003/025/GCF_000003025.6",
+          "liftOver.GCF_002263795.3": "liftOver/GCF_000003025.6ToGCF_002263795.3.over.chain.gz"
         },
         "trackId": "GCF_000003025.6-ReferenceSequenceTrack",
         "adapter": {
@@ -152,7 +153,7 @@
         "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_000003025.6-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCF_000003025.6"],
@@ -172,7 +173,7 @@
         "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_000003025.6-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_000003025.6"],
@@ -235,7 +236,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -247,7 +248,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_000003025.6-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_000003025.6"],
@@ -266,7 +267,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -277,7 +278,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "2"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_000003025.6-ncbiRefSeqCurated",
       "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_000003025.6"],
@@ -296,7 +297,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -307,7 +308,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_000003025.6-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_000003025.6"],
@@ -334,7 +335,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_000003025.6-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_000003025.6"],
@@ -367,7 +368,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_000003025.6-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_000003025.6"],
@@ -388,7 +389,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_000003025.6-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_000003025.6"],
@@ -409,7 +410,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_000003025.6-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_000003025.6"],
@@ -546,6 +547,170 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.ensGene.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_002263795.3",
+        "parent": "chainNetGCF_002263795.3Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "pig Chain",
+        "longLabel": "pig (2017-02-07) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainGCF_002263795.3Link.bb",
+        "priority": "1"
+      },
+      "category": ["pig Chain/Net", "Chain"],
+      "trackId": "GCF_000003025.6-chainGCF_002263795.3",
+      "description": "pig (2017-02-07) Chained Alignments",
+      "assemblyNames": ["GCF_000003025.6"],
+      "name": "pig Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.chainGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_002263795.3",
+        "parent": "chainNetGCF_002263795.3Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "pig synChain",
+        "longLabel": "pig (2017-02-07) Syntenic Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainSynGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainSynGCF_002263795.3Link.bb",
+        "priority": "2"
+      },
+      "category": ["pig Chain/Net", "Chain"],
+      "trackId": "GCF_000003025.6-chainSynGCF_002263795.3",
+      "description": "pig (2017-02-07) Syntenic Chained Alignments",
+      "assemblyNames": ["GCF_000003025.6"],
+      "name": "pig synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.chainSynGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_002263795.3",
+        "parent": "chainNetGCF_002263795.3Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "pig rbChain",
+        "longLabel": "pig (2017-02-07) Reciprocal Best Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainRBestGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainRBestGCF_002263795.3Link.bb",
+        "priority": "3"
+      },
+      "category": ["pig Chain/Net", "Chain"],
+      "trackId": "GCF_000003025.6-chainRBestGCF_002263795.3",
+      "description": "pig (2017-02-07) Reciprocal Best Chained Alignments",
+      "assemblyNames": ["GCF_000003025.6"],
+      "name": "pig rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.chainRBestGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_002263795.3",
+        "parent": "chainNetGCF_002263795.3Viewchain",
+        "subGroups": "view=chain",
+        "shortLabel": "pig loChain",
+        "longLabel": "pig (2017-02-07) Lift Over Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainLiftOverGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.chainLiftOverGCF_002263795.3Link.bb",
+        "priority": "4"
+      },
+      "category": ["pig Chain/Net", "Chain"],
+      "trackId": "GCF_000003025.6-chainLiftOverGCF_002263795.3",
+      "description": "pig (2017-02-07) Lift Over Chained Alignments",
+      "assemblyNames": ["GCF_000003025.6"],
+      "name": "pig loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.chainLiftOverGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netGCF_002263795.3",
+        "parent": "mafNetGCF_002263795.3Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "pig net",
+        "longLabel": "pig (2017-02-07) Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.net.bb",
+        "summary": "bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.net.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "priority": "5"
+      },
+      "category": ["pig Chain/Net", "Net"],
+      "trackId": "GCF_000003025.6-netGCF_002263795.3",
+      "description": "pig (2017-02-07) Net Alignment",
+      "assemblyNames": ["GCF_000003025.6"],
+      "name": "pig net",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_002263795.3",
+        "parent": "mafNetGCF_002263795.3Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "pig synNet",
+        "longLabel": "pig (2017-02-07) Syntenic Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.synNet.bb",
+        "summary": "bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.synNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "priority": "6"
+      },
+      "category": ["pig Chain/Net", "Net"],
+      "trackId": "GCF_000003025.6-synNetGCF_002263795.3",
+      "description": "pig (2017-02-07) Syntenic Net Alignment",
+      "assemblyNames": ["GCF_000003025.6"],
+      "name": "pig synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_002263795.3",
+        "parent": "mafNetGCF_002263795.3Viewnet",
+        "subGroups": "view=net",
+        "shortLabel": "pig rbestNet",
+        "longLabel": "pig (2017-02-07) Reciprocal Best Net Alignment",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.rbestNet.bb",
+        "summary": "bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.rbestNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "priority": "7"
+      },
+      "category": ["pig Chain/Net", "Net"],
+      "trackId": "GCF_000003025.6-rbestNetGCF_002263795.3",
+      "description": "pig (2017-02-07) Reciprocal Best Net Alignment",
+      "assemblyNames": ["GCF_000003025.6"],
+      "name": "pig rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/003/025/GCF_000003025.6/bbi/GCF_000003025.6_Sscrofa11.1.GCF_002263795.3.rbestNet.bb"
       }
     }
   ]

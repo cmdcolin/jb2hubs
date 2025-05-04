@@ -132,7 +132,7 @@
         "bigDataUrl": "bbi/GCF_010993605.1_kPetMar1.pri.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_010993605.1-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCF_010993605.1"],
@@ -152,7 +152,7 @@
         "bigDataUrl": "bbi/GCF_010993605.1_kPetMar1.pri.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCF_010993605.1-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCF_010993605.1"],
@@ -239,7 +239,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -251,7 +251,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "1"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_010993605.1-ncbiRefSeq",
       "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_010993605.1"],
@@ -270,7 +270,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -281,7 +281,7 @@
         "baseColorDefault": "genomicCodons",
         "priority": "3"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_010993605.1-ncbiRefSeqPredicted",
       "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
       "assemblyNames": ["GCF_010993605.1"],
@@ -308,7 +308,7 @@
         "skipEmptyFields": "on",
         "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_010993605.1-ncbiRefSeqOther",
       "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_010993605.1"],
@@ -341,7 +341,7 @@
         "baseColorUseCds": "table given",
         "color": "0,0,0"
       },
-      "category": ["genes"],
+      "category": ["NCBI RefSeq"],
       "trackId": "GCF_010993605.1-ncbiRefSeqPsl",
       "description": "RefSeq Alignments of RNAs",
       "assemblyNames": ["GCF_010993605.1"],
@@ -362,7 +362,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCF_010993605.1_kPetMar1.pri.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_010993605.1-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_010993605.1"],
@@ -383,7 +383,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCF_010993605.1_kPetMar1.pri.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCF_010993605.1-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCF_010993605.1"],
@@ -536,7 +536,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "40.427"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_010993605.1-chainGCA_014621495.2",
       "description": "Pacific lamprey/GCA_014621495.2_ETRf_v1 (2020-11-05) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -561,7 +561,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "40.427"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_010993605.1-chainSynGCA_014621495.2",
       "description": "Pacific lamprey/GCA_014621495.2_ETRf_v1 (2020-11-05) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -586,7 +586,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "40.427"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_010993605.1-chainRBestGCA_014621495.2",
       "description": "Pacific lamprey/GCA_014621495.2_ETRf_v1 (2020-11-05) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -611,7 +611,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "40.427"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_010993605.1-chainLiftOverGCA_014621495.2",
       "description": "Pacific lamprey/GCA_014621495.2_ETRf_v1 (2020-11-05) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -636,7 +636,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.336"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_010993605.1-chainGCF_000242695.1",
       "description": "spotted gar/GCF_000242695.1_LepOcu1 (2012-01-13) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -661,7 +661,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.336"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_010993605.1-chainSynGCF_000242695.1",
       "description": "spotted gar/GCF_000242695.1_LepOcu1 (2012-01-13) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -686,7 +686,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.336"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_010993605.1-chainRBestGCF_000242695.1",
       "description": "spotted gar/GCF_000242695.1_LepOcu1 (2012-01-13) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -711,7 +711,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.336"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_010993605.1-chainLiftOverGCF_000242695.1",
       "description": "spotted gar/GCF_000242695.1_LepOcu1 (2012-01-13) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -736,7 +736,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.796"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_010993605.1-chainGCF_000002035.6",
       "description": "zebrafish GRCz11/GCF_000002035.6_GRCz11 (2017-05-09) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -761,7 +761,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.796"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_010993605.1-chainSynGCF_000002035.6",
       "description": "zebrafish GRCz11/GCF_000002035.6_GRCz11 (2017-05-09) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -786,7 +786,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.796"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_010993605.1-chainRBestGCF_000002035.6",
       "description": "zebrafish GRCz11/GCF_000002035.6_GRCz11 (2017-05-09) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -811,7 +811,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.796"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_010993605.1-chainLiftOverGCF_000002035.6",
       "description": "zebrafish GRCz11/GCF_000002035.6_GRCz11 (2017-05-09) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -836,7 +836,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "40.427"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-netGCA_014621495.2",
       "description": "Pacific lamprey/GCA_014621495.2_ETRf_v1 (2020-11-05) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -861,7 +861,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "40.427"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-synNetGCA_014621495.2",
       "description": "Pacific lamprey/GCA_014621495.2_ETRf_v1 (2020-11-05) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -886,7 +886,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "40.427"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-rbestNetGCA_014621495.2",
       "description": "Pacific lamprey/GCA_014621495.2_ETRf_v1 (2020-11-05) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -911,7 +911,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.336"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-netGCF_000242695.1",
       "description": "spotted gar/GCF_000242695.1_LepOcu1 (2012-01-13) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -936,7 +936,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.336"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-synNetGCF_000242695.1",
       "description": "spotted gar/GCF_000242695.1_LepOcu1 (2012-01-13) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -961,7 +961,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.336"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-rbestNetGCF_000242695.1",
       "description": "spotted gar/GCF_000242695.1_LepOcu1 (2012-01-13) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -986,7 +986,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.796"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-netGCF_000002035.6",
       "description": "zebrafish GRCz11/GCF_000002035.6_GRCz11 (2017-05-09) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -1011,7 +1011,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.796"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-synNetGCF_000002035.6",
       "description": "zebrafish GRCz11/GCF_000002035.6_GRCz11 (2017-05-09) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],
@@ -1036,7 +1036,7 @@
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/010/993/605/GCF_010993605.1/html/GCF_010993605.1_kPetMar1.pri.chainNet\">html/GCF_010993605.1_kPetMar1.pri.chainNet</a>",
         "priority": "97.796"
       },
-      "category": ["compGeno"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_010993605.1-rbestNetGCF_000002035.6",
       "description": "zebrafish GRCz11/GCF_000002035.6_GRCz11 (2017-05-09) Chained Alignments",
       "assemblyNames": ["GCF_010993605.1"],

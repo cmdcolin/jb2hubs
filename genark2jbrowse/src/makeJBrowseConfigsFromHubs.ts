@@ -26,7 +26,15 @@ const entries = dedupe(
   d => d.ucscBrowser,
 )
 
-async function processEntry(entry: Entry, idx: number, totalEntries: number) {
+async function processEntry({
+  entry,
+  idx,
+  totalEntries,
+}: {
+  entry: Entry
+  idx: number
+  totalEntries: number
+}) {
   const {
     taxId,
     asmId,
@@ -46,41 +54,44 @@ async function processEntry(entry: Entry, idx: number, totalEntries: number) {
   const metaFile = `${b}/meta.json`
   const hubFile = `${b}/hub.txt`
 
-  if (fs.existsSync(hubFile)) {
-    // console.log(
-    //   `Skipping ${idx}/${totalEntries}: ${accession} (already exists)`,
-    // )
-    return
+  if (!fs.existsSync(hubFile) || process.env.REPROCESS) {
+    console.log(`Processing ${idx}/${totalEntries}:`, entry, metaFile)
+
+    await new Promise(resolve => setTimeout(resolve, 100))
+    const hubFileLocation = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
+
+    fs.mkdirSync(b, {
+      recursive: true,
+    })
+    fs.writeFileSync(hubFile, await myfetchtext(hubFileLocation))
+    fs.writeFileSync(
+      metaFile,
+      JSON.stringify(
+        {
+          accession,
+          assembly: asmId,
+          scientificName: sciName,
+          commonName: comName,
+          taxonId: taxId,
+          identical,
+          genBank,
+          refSeq,
+          hubFileLocation,
+        },
+        null,
+        2,
+      ),
+    )
   }
-  console.log(`Processing ${idx}/${totalEntries}:`, entry, metaFile)
-
-  await new Promise(resolve => setTimeout(resolve, 100))
-  const hubFileLocation = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
-  const hubTxt = await myfetchtext(hubFileLocation)
-
-  fs.mkdirSync(b, {
-    recursive: true,
-  })
-  fs.writeFileSync(hubFile, hubTxt)
-  fs.writeFileSync(
-    metaFile,
-    JSON.stringify({
-      accession,
-      assembly: asmId,
-      scientificName: sciName,
-      commonName: comName,
-      taxonId: taxId,
-      identical,
-      genBank,
-      refSeq,
-      hubFileLocation,
-    }),
-  )
 }
 
 for (const [idx, entry] of entries.entries()) {
   try {
-    await processEntry(entry, idx, entries.length)
+    await processEntry({
+      entry,
+      idx,
+      totalEntries: entries.length,
+    })
   } catch (e) {
     // some 404 exist in the list, just log and continue
     console.error(e)

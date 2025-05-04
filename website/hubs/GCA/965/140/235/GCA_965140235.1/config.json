@@ -151,7 +151,7 @@
         "bigDataUrl": "bbi/GCA_965140235.1_rCarCar1.hap1.gapOverlap.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCA_965140235.1-gapOverlap",
       "description": "Paired exactly identical sequence on each side of a gap",
       "assemblyNames": ["GCA_965140235.1"],
@@ -171,7 +171,7 @@
         "bigDataUrl": "bbi/GCA_965140235.1_rCarCar1.hap1.tandemDups.bb",
         "type": "bigBed 12"
       },
-      "category": ["map"],
+      "category": ["Tandem Dups"],
       "trackId": "GCA_965140235.1-tandemDups",
       "description": "Paired exactly identical sequence survey over entire genome assembly",
       "assemblyNames": ["GCA_965140235.1"],
@@ -204,6 +204,30 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/965/140/235/GCA_965140235.1/bbi/GCA_965140235.1_rCarCar1.hap1.rmsk.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "repeatModeler",
+        "shortLabel": "RepeatModeler",
+        "longLabel": "RepeatModeler Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "hide",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCA_965140235.1_rCarCar1.hap1.rModel.bb",
+        "xrefDataUrl": "bbi/GCA_965140235.1_rCarCar1.hap1.rModel.align.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/965/140/235/GCA_965140235.1/html/GCA_965140235.1_rCarCar1.hap1.repeatModeler\">html/GCA_965140235.1_rCarCar1.hap1.repeatModeler</a>"
+      },
+      "category": ["Variation and Repeats"],
+      "trackId": "GCA_965140235.1-repeatModeler",
+      "description": "RepeatModeler Repetitive Elements",
+      "assemblyNames": ["GCA_965140235.1"],
+      "name": "RepeatModeler",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/965/140/235/GCA_965140235.1/bbi/GCA_965140235.1_rCarCar1.hap1.rModel.bb"
       }
     },
     {
@@ -269,7 +293,7 @@
         "priority": "1",
         "bigDataUrl": "bbi/GCA_965140235.1_rCarCar1.hap1.cpgIslandExt.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCA_965140235.1-cpgIslandExt",
       "description": "CpG Islands (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCA_965140235.1"],
@@ -290,7 +314,7 @@
         "priority": "2",
         "bigDataUrl": "bbi/GCA_965140235.1_rCarCar1.hap1.cpgIslandExtUnmasked.bb"
       },
-      "category": ["regulation"],
+      "category": ["CpG Islands"],
       "trackId": "GCA_965140235.1-cpgIslandExtUnmasked",
       "description": "CpG Islands on All Sequence (Islands < 300 Bases are Light Green)",
       "assemblyNames": ["GCA_965140235.1"],

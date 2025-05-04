@@ -21,6 +21,7 @@ htmlPath html/GCF_000002775.5_P.trichocarpa_v4.1.description.html
 blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/002/775/GCF_000002775.5
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/002/775/GCF_000002775.5
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/002/775/GCF_000002775.5
+liftOver.GCF_000002775.4 liftOver/GCF_000002775.5ToGCF_000002775.4.over.chain.gz
 
 track assembly
 longLabel Assembly
@@ -127,7 +128,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -145,7 +146,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -162,7 +163,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -275,4 +276,109 @@ defaultLabelFields geneName
 searchIndex name
 searchTrix ixIxx/GCF_000002775.5_P.trichocarpa_v4.1.xenoRefGene.ix
 html html/GCF_000002775.5_P.trichocarpa_v4.1.xenoRefGene
+
+##############################################################################
+# GCF_000002775.4 - black cottonwood - Populus trichocarpa - taxId: 3694
+##############################################################################
+track chainNetGCF_000002775.4
+compositeTrack on
+shortLabel black cottonwood Chain/Net
+longLabel black cottonwood (2022-10-20), Chain and Net Alignments
+subGroup1 view Views chain=Chain net=Net
+dragAndDrop subTracks
+visibility hide
+group compGeno
+priority 100.1
+color 0,0,0
+altColor 100,50,0
+type bed 3
+sortOrder view=+
+otherDb GCF_000002775.4
+html html/GCF_000002775.5_P.trichocarpa_v4.1.chainNet
+
+    track chainNetGCF_000002775.4Viewchain
+    shortLabel Chain
+    view chain
+    visibility pack
+    parent chainNetGCF_000002775.4
+    spectrum on
+
+        track chainGCF_000002775.4
+        parent chainNetGCF_000002775.4Viewchain
+        subGroups view=chain
+        shortLabel black cottonwood Chain
+        longLabel black cottonwood (2022-10-20) Chained Alignments
+        type bigChain GCF_000002775.4
+        bigDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainGCF_000002775.4.bb
+        linkDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainGCF_000002775.4Link.bb
+        priority 1
+
+        track chainSynGCF_000002775.4
+        parent chainNetGCF_000002775.4Viewchain
+        subGroups view=chain
+        shortLabel black cottonwood synChain
+        longLabel black cottonwood (2022-10-20) Syntenic Chained Alignments
+        type bigChain GCF_000002775.4
+        bigDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainSynGCF_000002775.4.bb
+        linkDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainSynGCF_000002775.4Link.bb
+        priority 2
+
+        track chainRBestGCF_000002775.4
+        parent chainNetGCF_000002775.4Viewchain
+        subGroups view=chain
+        shortLabel black cottonwood rbChain
+        longLabel black cottonwood (2022-10-20) Reciprocal Best Chained Alignments
+        type bigChain GCF_000002775.4
+        bigDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainRBestGCF_000002775.4.bb
+        linkDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainRBestGCF_000002775.4Link.bb
+        priority 3
+
+        track chainLiftOverGCF_000002775.4
+        parent chainNetGCF_000002775.4Viewchain
+        subGroups view=chain
+        shortLabel black cottonwood loChain
+        longLabel black cottonwood (2022-10-20) Lift Over Chained Alignments
+        type bigChain GCF_000002775.4
+        bigDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainLiftOverGCF_000002775.4.bb
+        linkDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.chainLiftOverGCF_000002775.4Link.bb
+        priority 4
+
+    track mafNetGCF_000002775.4Viewnet
+    shortLabel Net
+    view net
+    visibility full
+    parent chainNetGCF_000002775.4
+
+        track netGCF_000002775.4
+        parent mafNetGCF_000002775.4Viewnet
+        subGroups view=net
+        shortLabel black cottonwood net
+        longLabel black cottonwood (2022-10-20) Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.GCF_000002775.4.net.bb
+        summary bbi/GCF_000002775.5_P.trichocarpa_v4.1.GCF_000002775.4.net.summary.bb
+        speciesOrder GCF_000002775.4
+        priority 5
+
+        track synNetGCF_000002775.4
+        parent mafNetGCF_000002775.4Viewnet
+        subGroups view=net
+        shortLabel black cottonwood synNet
+        longLabel black cottonwood (2022-10-20) Syntenic Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.GCF_000002775.4.synNet.bb
+        summary bbi/GCF_000002775.5_P.trichocarpa_v4.1.GCF_000002775.4.synNet.summary.bb
+        speciesOrder GCF_000002775.4
+        priority 6
+
+        track rbestNetGCF_000002775.4
+        parent mafNetGCF_000002775.4Viewnet
+        subGroups view=net
+        shortLabel black cottonwood rbestNet
+        longLabel black cottonwood (2022-10-20) Reciprocal Best Net Alignment
+        type bigMaf
+        bigDataUrl bbi/GCF_000002775.5_P.trichocarpa_v4.1.GCF_000002775.4.rbestNet.bb
+        summary bbi/GCF_000002775.5_P.trichocarpa_v4.1.GCF_000002775.4.rbestNet.summary.bb
+        speciesOrder GCF_000002775.4
+        priority 7
 
