@@ -6,6 +6,85 @@ import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
 
 type Adapter = Record<string, unknown>
 
+function createHtmlLink(html: string, trackDbUrl: string): string {
+  return `<a href="${resolve(html, trackDbUrl)}">${html}</a>`
+}
+
+function extractParentTracks(trackName: string, trackDb: TrackDbFile) {
+  const parentTracks = []
+  let currentTrackName = trackName
+
+  do {
+    currentTrackName = trackDb.data[currentTrackName]?.data.parent ?? ''
+    if (currentTrackName) {
+      currentTrackName = currentTrackName.split(' ')[0]!
+      parentTracks.push(trackDb.data[currentTrackName]!)
+    }
+  } while (currentTrackName)
+
+  return parentTracks.reverse()
+}
+
+function createTrackConfiguration({
+  track,
+  trackName,
+  trackDb,
+  trackDbUrl,
+  sequenceAdapter,
+  assemblyName,
+}: {
+  track: RaStanza
+  trackName: string
+  trackDb: TrackDbFile
+  trackDbUrl: string
+  sequenceAdapter: Adapter
+  assemblyName: string
+}) {
+  const conf = makeTrackConfig({
+    track,
+    trackDbUrl,
+    trackDb,
+    sequenceAdapter,
+    assemblyName,
+  })
+  const { data } = track
+  const { group, html } = data
+
+  return conf
+    ? {
+        metadata: {
+          ...data,
+          ...(html
+            ? {
+                html: createHtmlLink(html, trackDbUrl),
+              }
+            : {}),
+        },
+        category: [
+          group,
+          ...extractParentTracks(trackName, trackDb).map(
+            p => trackDb.data[p.name!]?.data.shortLabel,
+          ),
+        ]
+          .filter(f => !!f)
+          // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+          .map(f => categoryMap[f as keyof typeof categoryMap] ?? f),
+        ...conf,
+        name: [conf.name].join(' - '),
+      }
+    : undefined
+}
+
+function isMetaTrack(obj: RaStanza) {
+  const parentTrackKeys = new Set([
+    'superTrack',
+    'compositeTrack',
+    'container',
+    'view',
+  ])
+
+  return Object.keys(obj.data).some(key => parentTrackKeys.has(key))
+}
 export function generateHubTracks({
   trackDb,
   trackDbUrl,
@@ -17,61 +96,19 @@ export function generateHubTracks({
   assemblyName: string
   sequenceAdapter: Adapter
 }) {
-  const parentTrackKeys = new Set([
-    'superTrack',
-    'compositeTrack',
-    'container',
-    'view',
-  ])
   return Object.entries(trackDb.data)
-    .map(([trackName, track]) => {
-      const { data } = track
-      if (Object.keys(data).some(key => parentTrackKeys.has(key))) {
-        return undefined
-      } else {
-        const parentTracks = []
-        let currentTrackName = trackName
-        do {
-          currentTrackName = trackDb.data[currentTrackName]?.data.parent ?? ''
-          if (currentTrackName) {
-            currentTrackName = currentTrackName.split(' ')[0]!
-            parentTracks.push(trackDb.data[currentTrackName]!)
-          }
-        } while (currentTrackName)
-        parentTracks.reverse()
-        const conf = makeTrackConfig({
-          track,
-          trackDbUrl,
-          trackDb,
-          sequenceAdapter,
-          assemblyName,
-        })
-
-        return conf
-          ? {
-              metadata: {
-                ...track.data,
-                ...(track.data.html
-                  ? {
-                      html: `<a href="${resolve(track.data.html, trackDbUrl)}">${track.data.html}</a>`,
-                    }
-                  : {}),
-              },
-              category: [
-                track.data.group,
-                ...parentTracks
-                  .map(p => trackDb.data[p.name!]?.data.shortLabel)
-                  .filter(f => !!f),
-              ]
-                .filter(f => !!f)
-                // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                .map(f => categoryMap[f as keyof typeof categoryMap] ?? f),
-              ...conf,
-              name: [conf.name].join(' - '),
-            }
-          : undefined
-      }
-    })
+    .map(([trackName, track]) =>
+      isMetaTrack(track)
+        ? undefined
+        : createTrackConfiguration({
+            track,
+            trackName,
+            trackDb,
+            trackDbUrl,
+            sequenceAdapter,
+            assemblyName,
+          }),
+    )
     .filter(f => notEmpty(f))
 }
 
