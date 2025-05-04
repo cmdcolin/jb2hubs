@@ -1,14 +1,3 @@
-import {
-  parseAssemblyEntry,
-  readJSON,
-  type UCSCGenArkAssemblyEntry,
-} from 'hubtools'
+import { readJSON } from 'hubtools'
 
-const metaPath = process.argv[2]!
-console.log({ metaPath }, readJSON(metaPath))
-
-const newConfig = parseAssemblyEntry({
-  entry: readJSON(metaPath) as UCSCGenArkAssemblyEntry,
-})
-
-console.log({ newConfig })
+console.log(readJSON(process.argv[2] || 'hubJson2/all.json'))
