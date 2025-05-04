@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { Download, Star, X } from 'lucide-react'
 
@@ -12,7 +12,12 @@ interface SortColumn {
   columnKey: string
   direction: 'ASC' | 'DESC'
 }
-const statusOrder = ['Complete genome', 'Chromosome', 'Scaffold', 'Contig']
+const statusOrder = {
+  'Complete genome': 1,
+  Chromosome: 2,
+  Scaffold: 3,
+  Contig: 4,
+}
 
 const filterCategories = {
   all: 'All',
@@ -28,9 +33,62 @@ export default function DataTable({
 }: {
   rows: NonNullable<AssemblyData>[]
 }) {
-  const [sortColumn, setSortColumn] = useState<SortColumn>()
-  const [filterOption, setFilterOption] = useState<FilterOption>('all')
-  const [showAllColumns, setShowAllColumns] = useState(false)
+  const [sortColumn, setSortColumn] = useState<SortColumn | undefined>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const columnKey = params.get('sort')
+      const direction = params.get('dir') as 'ASC' | 'DESC' | null
+      if (columnKey && direction) {
+        return {
+          columnKey,
+          direction,
+        }
+      }
+    }
+    return undefined
+  })
+  const [filterOption, setFilterOption] = useState<FilterOption>(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const filter = params.get('filter') as FilterOption
+      return filter && Object.keys(filterCategories).includes(filter)
+        ? filter
+        : 'all'
+    }
+    return 'all'
+  })
+  const [showAllColumns, setShowAllColumns] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      return params.get('showAll') === 'true'
+    }
+    return false
+  })
+
+  // Update URL when state changes
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams()
+
+      if (sortColumn) {
+        params.set('sort', sortColumn.columnKey)
+        params.set('dir', sortColumn.direction)
+      }
+
+      if (filterOption !== 'all') {
+        params.set('filter', filterOption)
+      }
+
+      if (showAllColumns) {
+        params.set('showAll', 'true')
+      }
+
+      const newUrl = params.toString()
+        ? `?${params.toString()}`
+        : window.location.pathname
+      window.history.replaceState({}, '', newUrl)
+    }
+  }, [sortColumn, filterOption, showAllColumns])
 
   const filteredRows = useMemo(() => {
     switch (filterOption) {
@@ -58,15 +116,12 @@ export default function DataTable({
           // Special handling for assemblyStatus column
           const flipper = sortColumn.direction === 'ASC' ? 1 : -1
           if (sortColumn.columnKey === 'assemblyStatus') {
-            const aStatus = a.assemblyStatus
-            const bStatus = b.assemblyStatus
-
-            // Get the index of each status in our custom order
-            const aIndex = statusOrder.indexOf(aStatus)
-            const bIndex = statusOrder.indexOf(bStatus)
-            return (aIndex - bIndex) * flipper
+            return (
+              (statusOrder[a.assemblyStatus as keyof typeof statusOrder] -
+                statusOrder[b.assemblyStatus as keyof typeof statusOrder]) *
+              flipper
+            )
           } else {
-            // Default sorting for other columns
             const aValue = a[sortColumn.columnKey as keyof AssemblyData] as
               | string
               | number
@@ -288,6 +343,8 @@ export default function DataTable({
               const visibleColumns = columns.filter(
                 column => showAllColumns || !column.extra,
               )
+
+              console.log({ row })
 
               return (
                 <tr key={index}>

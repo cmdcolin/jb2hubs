@@ -27,3 +27,9 @@ cd website
 yarn
 yarn deploy
 ```
+
+## Note
+
+This repo was written with the aid of Claude and avante.nvim
+
+Big thank you as well to UCSC team for their data sharing and more!
