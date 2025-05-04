@@ -179,7 +179,21 @@ export default function DataTable({
   const columns = [
     {
       field: 'commonName',
-      title: 'Common Name (star indicates "designated reference")',
+      title: (
+        <div>
+          <div style={{ float: 'left' }}>Common Name</div>
+          <div style={{ float: 'right' }}>
+            <div>
+              <Star fill="orange" strokeWidth={0} className="w-[1em] h-[1em]" />{' '}
+              == "designated reference"
+            </div>
+            <div>
+              <X stroke="red" className="w-[1em] h-[1em]" /> == "refseq
+              suppressed"
+            </div>
+          </div>
+        </div>
+      ),
       sortable: true,
     },
     {
@@ -344,7 +358,7 @@ export default function DataTable({
                 column => showAllColumns || !column.extra,
               )
 
-              console.log({ row })
+              if (row.commonName.includes('PEST')) console.log({ row })
 
               return (
                 <tr key={index}>
@@ -365,15 +379,12 @@ export default function DataTable({
                               />
                             ) : null}
                             {row.suppressed ? (
-                              <X
-                                fill="red"
-                                strokeWidth={0}
-                                className="w-[1em] h-[1em]"
-                              />
+                              <X stroke="red" className="w-[1em] h-[1em]" />
                             ) : null}
                           </td>
                         )
                       }
+
                       case 'ncbiRefSeqCategory': {
                         return <td key={field}>{row.ncbiRefSeqCategory}</td>
                       }
