@@ -39,7 +39,6 @@ export function parseAssemblyEntry({
   const ncbiRefSeqCategory = r2.refseq_category
   const ucscBase = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}`
   const stats = ncbiData ? extractStats(r2.meta) : undefined
-  console.log(r2.propertylist)
   return {
     stats,
     buscoStats,

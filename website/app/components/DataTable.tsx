@@ -13,6 +13,7 @@ interface SortColumn {
   direction: 'ASC' | 'DESC'
 }
 const statusOrder = {
+  'Complete Genome': 1,
   'Complete genome': 1,
   Chromosome: 2,
   Scaffold: 3,
@@ -24,6 +25,7 @@ const filterCategories = {
   refseq: 'RefSeq only',
   genbank: 'GenBank only',
   designatedReference: 'Designated reference only',
+  hidesuppressed: 'Hide suppressed',
 }
 
 type FilterOption = keyof typeof filterCategories
@@ -103,6 +105,9 @@ export default function DataTable({
       }
       case 'designatedReference': {
         return rows.filter(r => r.ncbiRefSeqCategory === 'reference genome')
+      }
+      case 'hidesuppressed': {
+        return rows.filter(r => !r.suppressed)
       }
       default: {
         return rows
@@ -352,17 +357,11 @@ export default function DataTable({
             </tr>
           </thead>
           <tbody>
-            {sortedRows.map((row, index) => {
-              // Get visible columns
-              const visibleColumns = columns.filter(
-                column => showAllColumns || !column.extra,
-              )
-
-              if (row.commonName.includes('PEST')) console.log({ row })
-
-              return (
-                <tr key={index}>
-                  {visibleColumns.map(column => {
+            {sortedRows.map((row, index) => (
+              <tr key={index}>
+                {columns
+                  .filter(column => showAllColumns || !column.extra)
+                  .map(column => {
                     const field = column.field as keyof AssemblyData
 
                     // Render cell based on column field
@@ -516,9 +515,8 @@ export default function DataTable({
                       }
                     }
                   })}
-                </tr>
-              )
-            })}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
