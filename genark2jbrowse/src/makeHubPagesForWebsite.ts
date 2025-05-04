@@ -27,7 +27,7 @@ for (const f of [
   })
   fs.writeFileSync(
     `../website/app/hubs/${f}/page.tsx`,
-    `import Page from '../../components/Page'
+    `import Page from '../../components/Page.tsx'
 
 export default function ${capitalizeFirstLetter(f)}() {
   return <Page title="${capitalizeFirstLetter(f)}" raw="${f}" />

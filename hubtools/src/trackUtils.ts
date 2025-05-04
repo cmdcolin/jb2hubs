@@ -1,4 +1,4 @@
-import { resolve } from './util'
+import { resolve } from './util.ts'
 
 import type { RaStanza, TrackDbFile } from '@gmod/ucsc-hub'
 

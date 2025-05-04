@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
-import { parseAssembliesListJson, readJSON } from './util'
-import DataTable from '../components/DataTable'
+import { parseAssembliesListJson, readJSON } from './util.ts'
+import DataTable from '../components/DataTable.tsx'
 
 import type { UCSCGenArkAssemblyEntry } from 'hubtools'
 

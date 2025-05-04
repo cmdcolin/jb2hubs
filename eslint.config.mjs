@@ -74,6 +74,8 @@ export default tseslint.config(
       'no-empty': 'off',
       'import/no-unresolved': 'off',
       'import/no-cycle': 'error',
+      'import/extensions': ['error', 'ignorePackages'],
+
       'import/order': [
         'error',
         {
