@@ -1,17 +1,19 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useMemo } from 'react'
 
 import { Download, Star, X } from 'lucide-react'
+import {
+  parseAsBoolean,
+  parseAsString,
+  parseAsStringLiteral,
+  useQueryState,
+} from 'nuqs'
 
 import './table.css'
 
 import type { AssemblyData } from './util'
 
-interface SortColumn {
-  columnKey: string
-  direction: 'ASC' | 'DESC'
-}
 const statusOrder = {
   'Complete Genome': 1,
   'Complete genome': 1,
@@ -28,69 +30,34 @@ const filterCategories = {
   hidesuppressed: 'Hide suppressed',
 }
 
-type FilterOption = keyof typeof filterCategories
+// List accepted values
+const sortOrder = ['ASC', 'DESC', ''] as const
 
 export default function DataTable({
   rows,
 }: {
   rows: NonNullable<AssemblyData>[]
 }) {
-  const [sortColumn, setSortColumn] = useState<SortColumn | undefined>(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search)
-      const columnKey = params.get('sort')
-      const direction = params.get('dir') as 'ASC' | 'DESC' | null
-      if (columnKey && direction) {
-        return {
-          columnKey,
-          direction,
-        }
-      }
-    }
-    return undefined
-  })
-  const [filterOption, setFilterOption] = useState<FilterOption>(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search)
-      const filter = params.get('filter') as FilterOption
-      return filter && Object.keys(filterCategories).includes(filter)
-        ? filter
-        : 'all'
-    }
-    return 'all'
-  })
-  const [showAllColumns, setShowAllColumns] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search)
-      return params.get('showAll') === 'true'
-    }
-    return false
-  })
+  const [sortDirectionPre, setSortDirection] = useQueryState(
+    'dir',
+    parseAsStringLiteral(sortOrder),
+  )
+  const [sortColumn, setSortColumn] = useQueryState(
+    'sort',
+    parseAsString.withDefault(''),
+  )
 
-  // Update URL when state changes
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams()
+  const [filterOption, setFilterOption] = useQueryState(
+    'filter',
+    parseAsStringLiteral(Object.keys(filterCategories)),
+  )
 
-      if (sortColumn) {
-        params.set('sort', sortColumn.columnKey)
-        params.set('dir', sortColumn.direction)
-      }
+  const [showAllColumns, setShowAllColumns] = useQueryState(
+    'show',
+    parseAsBoolean.withDefault(false),
+  )
 
-      if (filterOption !== 'all') {
-        params.set('filter', filterOption)
-      }
-
-      if (showAllColumns) {
-        params.set('showAll', 'true')
-      }
-
-      const newUrl = params.toString()
-        ? `?${params.toString()}`
-        : window.location.pathname
-      window.history.replaceState({}, '', newUrl)
-    }
-  }, [sortColumn, filterOption, showAllColumns])
+  const sortDirection = sortDirectionPre ?? ''
 
   const filteredRows = useMemo(() => {
     switch (filterOption) {
@@ -116,22 +83,22 @@ export default function DataTable({
   }, [rows, filterOption])
 
   const sortedRows = useMemo(() => {
-    return sortColumn
+    return sortDirection
       ? filteredRows.toSorted((a, b) => {
           // Special handling for assemblyStatus column
-          const flipper = sortColumn.direction === 'ASC' ? 1 : -1
-          if (sortColumn.columnKey === 'assemblyStatus') {
+          const flipper = sortDirection === 'ASC' ? 1 : -1
+          if (sortColumn === 'assemblyStatus') {
             return (
               (statusOrder[a.assemblyStatus as keyof typeof statusOrder] -
                 statusOrder[b.assemblyStatus as keyof typeof statusOrder]) *
               flipper
             )
           } else {
-            const aValue = a[sortColumn.columnKey as keyof AssemblyData] as
+            const aValue = a[sortColumn as keyof AssemblyData] as
               | string
               | number
               | undefined
-            const bValue = b[sortColumn.columnKey as keyof AssemblyData] as
+            const bValue = b[sortColumn as keyof AssemblyData] as
               | string
               | number
               | undefined
@@ -144,42 +111,32 @@ export default function DataTable({
           }
         })
       : filteredRows
-  }, [filteredRows, sortColumn])
+  }, [filteredRows, sortColumn, sortDirection])
 
   const handleSort = (columnKey: string) => {
-    if (sortColumn && sortColumn.columnKey === columnKey) {
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    setSortColumn(columnKey)
+    if (sortColumn === columnKey) {
       // Toggle direction if already sorting by this column
-      if (sortColumn.direction === 'ASC') {
-        setSortColumn({
-          columnKey,
-          direction: 'DESC',
-        })
-      }
-      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-      else if (sortColumn.direction === 'DESC') {
-        setSortColumn(undefined)
+      if (sortDirection === 'ASC') {
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
+        setSortDirection('DESC')
+      } else if (sortDirection === 'DESC') {
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
+        setSortDirection('')
       } else {
-        setSortColumn({
-          columnKey,
-          direction: 'ASC',
-        })
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
+        setSortDirection('ASC')
       }
     } else {
-      setSortColumn({
-        columnKey,
-        direction: 'ASC',
-      })
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      setSortDirection('ASC')
     }
   }
 
-  // Helper to determine sort indicator
-  const getSortIndicator = (columnKey: string) => {
-    return sortColumn?.columnKey === columnKey
-      ? sortColumn.direction === 'ASC'
-        ? '↑'
-        : '↓'
-      : ''
-  }
+  const map = { ASC: '↑', DESC: '↓' }
+  const getSortIndicator = (columnKey: string) =>
+    sortColumn === columnKey ? map[sortDirection as keyof typeof map] : ''
 
   return (
     <>
@@ -198,6 +155,7 @@ export default function DataTable({
                 value={key}
                 checked={filterOption === key}
                 onChange={() => {
+                  // eslint-disable-next-line @typescript-eslint/no-floating-promises
                   setFilterOption(key as keyof typeof filterCategories)
                 }}
               />
@@ -215,6 +173,7 @@ export default function DataTable({
               type="radio"
               checked={!showAllColumns}
               onChange={() => {
+                // eslint-disable-next-line @typescript-eslint/no-floating-promises
                 setShowAllColumns(false)
               }}
             />
@@ -229,6 +188,7 @@ export default function DataTable({
               type="radio"
               checked={showAllColumns}
               onChange={() => {
+                // eslint-disable-next-line @typescript-eslint/no-floating-promises
                 setShowAllColumns(true)
               }}
             />
@@ -254,11 +214,11 @@ export default function DataTable({
                             strokeWidth={0}
                             className="w-[1em] h-[1em]"
                           />{' '}
-                          == "designated reference"
+                          == &quot;designated reference&quot;
                         </div>
                         <div>
                           <X stroke="red" className="w-[1em] h-[1em]" /> ==
-                          "refseq suppressed"
+                          &quot;refseq suppressed&quot;
                         </div>
                       </div>
                     </div>
@@ -370,11 +330,11 @@ export default function DataTable({
                               strokeWidth={0}
                               className="w-[1em] h-[1em]"
                             />{' '}
-                            == "designated reference"
+                            == &quot;designated reference&quot;
                           </div>
                           <div>
                             <X stroke="red" className="w-[1em] h-[1em]" /> ==
-                            "refseq suppressed"
+                            &quot;refseq suppressed&quot;
                           </div>
                         </div>
                       </div>
