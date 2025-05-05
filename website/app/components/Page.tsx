@@ -1,3 +1,5 @@
+import { Suspense } from 'react'
+
 import Link from 'next/link'
 
 import { readJSON } from './util.ts'
@@ -12,9 +14,11 @@ export default function Page({ title, raw }: { title: string; raw: string }) {
     <div>
       <Link href="/">Home</Link>
       <h1>GenArk hubs - {title}</h1>
-      <DataTable
-        rows={readJSON(`${process.cwd()}/hubJson2/${raw}.json`) as Assemblies}
-      />
+      <Suspense>
+        <DataTable
+          rows={readJSON(`${process.cwd()}/hubJson2/${raw}.json`) as Assemblies}
+        />
+      </Suspense>
     </div>
   )
 }
