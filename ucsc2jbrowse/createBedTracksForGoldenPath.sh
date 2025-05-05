@@ -14,9 +14,63 @@ process_assembly() {
 
   # make bed.gz files from "regular bed" sql db tracks
   if [ -f "$OUTDIR/tracks.json" ]; then
-    node src/parseBedTracks.ts $OUTDIR/tracks.json $DB $OUTDIR >$OUTDIR/bed.sh
-    chmod +x $OUTDIR/bed.sh
-    $OUTDIR/bed.sh && rm $OUTDIR/bed.sh
+    TRACKS_JSON="$OUTDIR/tracks.json"
+    DBDIR="$DB"
+
+    # Define track types to process
+    # Commented out types that would result in many narrow/broad peak tracks
+    # TYPES='"bed", "narrowPeak", "broadPeak", "pgSnp", "peptideMapping"'
+    TYPES='"bed", "pgSnp", "peptideMapping"'
+
+    # Process each track that matches our types
+    jq -r "to_entries | map(select(.value.type | startswith(\"bed\") or startswith(\"pgSnp\") or startswith(\"peptideMapping\"))) | map(.key) | .[]" "$TRACKS_JSON" | while read -r key; do
+      # Skip tracks that start with "snp" or "wgEncode" (these are large and numerous)
+      if [[ "$key" == snp* ]] || [[ "$key" == wgEncode* ]]; then
+        continue
+      fi
+
+      infile="$DBDIR/$key"
+      outfile="$OUTDIR/$key"
+
+      # Check if SQL file exists
+      if [ -f "${infile}.sql" ]; then
+
+        # Create hash file path
+        hash_file="${outfile}.hash"
+
+        # Calculate current hash of the input file
+        current_hash=$(md5sum "${infile}.txt.gz" | awk '{print $1}')
+
+        # Check if we need to process the file
+        need_processing=true
+        if [ -f "${outfile}.sorted.gff.gz" ] && [ -f "$hash_file" ]; then
+          stored_hash=$(cat "$hash_file")
+          if [ "$current_hash" = "$stored_hash" ]; then
+            echo "Skipping ${key}: file unchanged"
+            need_processing=false
+          fi
+        fi
+
+        if [ "$need_processing" = true ]; then
+          # Run bedLike.ts to process the SQL file
+          result=$(node src/bedLike.ts "${infile}.sql" 2>&1)
+          header=$(echo "$result" | grep -v "^no_bin$")
+
+          # Check if stderr contains "no_bin"
+          if echo "$result" | grep -q "no_bin"; then
+            (echo "$header" && pigz -dc "${infile}.txt.gz") >"${outfile}.tmp"
+            sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
+            tabix ${outfile}.bed.gz
+            rm "${outfile}.tmp"
+          else
+            (echo "$header" && pigz -dc "${infile}.txt.gz" | hck -Ld$'\t' -f2-) >"${outfile}.tmp"
+            sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
+            tabix ${outfile}.bed.gz
+            rm "${outfile}.tmp"
+          fi
+        fi
+      fi
+    done
   fi
 }
 

@@ -11,6 +11,8 @@ node src/downloadHubs.ts
 # Write info about assembly from NCBI to ncbi.json in hubs folder
 fd meta.json hubs | parallel -j1 --bar 'dir=$(dirname {}); id=$(basename $dir); if [ ! -f "$dir/ncbi.json" ]; then (esearch -db assembly -query $id </dev/null | esummary -mode json) >$dir/ncbi.json; sleep 0.1; fi'
 
+cat hubJson2/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
+
 # Generate a 'native' jbrowse2 config.json for each hub.txt
 fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
 

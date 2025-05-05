@@ -2,7 +2,7 @@
 
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 export PATH=$(pwd):$PATH
-
+curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
 ./downloadGoldenpath.sh ~/ucsc
 ./createAssemblies.sh ~/ucsc/*
 ./createTracksJsonForGoldenPath.sh ~/ucsc/*
@@ -11,7 +11,6 @@ export PATH=$(pwd):$PATH
 ./createGeneTracksForGoldenPath.sh ~/ucsc/*
 ./createCoreTracksForHs1.sh ~/ucsc/*
 ./createConfigsForGoldenPath.sh ~/ucsc/*
-./createTabixIndexes.sh ~/ucscResults/
 ./textIndexGoldenPath.sh ~/ucscResults/*
 ./addMetadata.sh ~/ucscResults/*
 node src/makeUcscExtensions.ts ~/ucscResults

@@ -22,9 +22,29 @@ process_rmsk() {
       outfile="$OUTDIR/$key"
 
       if [ -f "${infile}.sql" ]; then
-        node src/rmskLike.ts "${infile}.sql" "${infile}.txt.gz" >${outfile}.tmp
-        sortIfNeeded.sh ${outfile}.tmp | bgzip -@8 >"${outfile}.bed.gz"
-        rm ${outfile}.tmp
+
+        # Create hash file path
+        hash_file="${outfile}.hash"
+
+        # Calculate current hash of the input file
+        current_hash=$(md5sum "${infile}.txt.gz" | awk '{print $1}')
+
+        # Check if we need to process the file
+        need_processing=true
+        if [ -f "${outfile}.sorted.gff.gz" ] && [ -f "$hash_file" ]; then
+          stored_hash=$(cat "$hash_file")
+          if [ "$current_hash" = "$stored_hash" ]; then
+            echo "Skipping ${key}: file unchanged"
+            need_processing=false
+          fi
+        fi
+
+        if [ "$need_processing" = true ]; then
+          node src/rmskLike.ts "${infile}.sql" "${infile}.txt.gz" >${outfile}.tmp
+          sortIfNeeded.sh ${outfile}.tmp | bgzip -@8 >"${outfile}.bed.gz"
+          tabix "${outfile}.bed.gz"
+          rm ${outfile}.tmp
+        fi
       fi
     done
 

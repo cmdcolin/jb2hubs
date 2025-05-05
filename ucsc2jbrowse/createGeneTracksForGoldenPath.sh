@@ -57,6 +57,8 @@ process_gene_tracks() {
           rm -f "${outfile}.enhanced.gff" &&
           rm -f "${outfile}.gff"
 
+        tabix ${outfile}.sorted.gff.gz
+
         # Store the hash for future comparisons
         echo "$current_hash" >"$hash_file"
       fi
