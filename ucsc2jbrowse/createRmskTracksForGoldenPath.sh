@@ -31,10 +31,10 @@ process_rmsk() {
 
         # Check if we need to process the file
         need_processing=true
-        if [ -f "${outfile}.sorted.gff.gz" ] && [ -f "$hash_file" ]; then
+        if [ -f "${outfile}.bed.gz" ] && [ -f "$hash_file" ]; then
           stored_hash=$(cat "$hash_file")
           if [ "$current_hash" = "$stored_hash" ]; then
-            echo "Skipping ${key}: file unchanged"
+            # echo "Skipping ${key}: file unchanged"
             need_processing=false
           fi
         fi
@@ -42,8 +42,10 @@ process_rmsk() {
         if [ "$need_processing" = true ]; then
           node src/rmskLike.ts "${infile}.sql" "${infile}.txt.gz" >${outfile}.tmp
           sortIfNeeded.sh ${outfile}.tmp | bgzip -@8 >"${outfile}.bed.gz"
-          tabix "${outfile}.bed.gz"
+          tabix -p bed -C "${outfile}.bed.gz"
           rm ${outfile}.tmp
+          # Store the hash for future comparisons
+          echo "$current_hash" >"$hash_file"
         fi
       fi
     done

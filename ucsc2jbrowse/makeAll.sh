@@ -2,6 +2,7 @@
 
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 export PATH=$(pwd):$PATH
+mkdir -p ~/ucscResults
 curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
 ./downloadGoldenpath.sh ~/ucsc
 ./createAssemblies.sh ~/ucsc/*
@@ -16,11 +17,9 @@ curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
 node src/makeUcscExtensions.ts ~/ucscResults
 ./getFileListing.sh ~/ucscResults/
 
-## size only on most...would be good to avoid this but it updates based on file times
-aws s3 sync --delete --size-only ~/ucscResults s3://jbrowse.org/ucsc/
-## include indexes without size-only
-aws s3 sync --delete --exclude="*" --include="*.csi" ~/ucscResults s3://jbrowse.org/ucsc/
+aws s3 sync --delete --exclude="*meta.json" --exclude "*.hash" ~/ucscResults s3://jbrowse.org/ucsc/
 
 aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths "/ucsc/*"
-fd config.json ~/ucscResults/ | xargs -I {} bash -c 'cp "{}" configs/"$(basename "$(dirname "{}")").json"'
+fd config.json ~/ucscResults/ | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
+
 yarn prettier --write .

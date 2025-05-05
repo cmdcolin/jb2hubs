@@ -43,10 +43,10 @@ process_assembly() {
 
         # Check if we need to process the file
         need_processing=true
-        if [ -f "${outfile}.sorted.gff.gz" ] && [ -f "$hash_file" ]; then
+        if [ -f "${outfile}.bed.gz" ] && [ -f "$hash_file" ]; then
           stored_hash=$(cat "$hash_file")
           if [ "$current_hash" = "$stored_hash" ]; then
-            echo "Skipping ${key}: file unchanged"
+            # echo "Skipping ${key}: file unchanged"
             need_processing=false
           fi
         fi
@@ -59,15 +59,14 @@ process_assembly() {
           # Check if stderr contains "no_bin"
           if echo "$result" | grep -q "no_bin"; then
             (echo "$header" && pigz -dc "${infile}.txt.gz") >"${outfile}.tmp"
-            sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
-            tabix ${outfile}.bed.gz
-            rm "${outfile}.tmp"
           else
             (echo "$header" && pigz -dc "${infile}.txt.gz" | hck -Ld$'\t' -f2-) >"${outfile}.tmp"
-            sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
-            tabix ${outfile}.bed.gz
-            rm "${outfile}.tmp"
           fi
+          sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
+          tabix -p bed -C ${outfile}.bed.gz
+          # Store the hash for future comparisons
+          echo "$current_hash" >"$hash_file"
+          rm "${outfile}.tmp"
         fi
       fi
     done
