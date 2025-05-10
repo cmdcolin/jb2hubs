@@ -17,9 +17,5 @@ curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
 node src/makeUcscExtensions.ts ~/ucscResults
 ./getFileListing.sh ~/ucscResults/
 
-aws s3 sync --delete --exclude="*meta.json" --exclude "*.hash" ~/ucscResults s3://jbrowse.org/ucsc/
-
-aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths "/ucsc/*"
-fd config.json ~/ucscResults/ | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
-
+fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
 yarn prettier --write .
