@@ -4,4 +4,4 @@
 DIR="${1:-.}"
 
 # Run find on the specified directory
-find "$DIR" -type f | parallel --bar xxh128sum | sort -k2,2 >fileListing.txt
+find "$DIR" -type f | grep -v "meta.json" | grep -v "\.hash" | parallel --bar xxh128sum | sort -k2,2 >fileListing.txt

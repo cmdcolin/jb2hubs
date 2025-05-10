@@ -24,6 +24,3 @@ node src/makeGenArkExtensions.ts
 
 # Format
 yarn prettier --log-level error --write ../website/hubs/
-
-# Upload to S3
-aws s3 sync hubs s3://jbrowse.org/hubs/genark/ --size-only
