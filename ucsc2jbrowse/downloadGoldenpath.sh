@@ -1,7 +1,7 @@
 curl https://api.genome.ucsc.edu/list/ucscGenomes | jq -r '.ucscGenomes | keys[]' | while
   read p
 do
-  if [ "$p" = "cb1" ]; then
+  if [ "$p" = "cb1" ] || [ "$p" = "hs1" ]; then
     echo "Skipping $p genome"
     continue
   fi
