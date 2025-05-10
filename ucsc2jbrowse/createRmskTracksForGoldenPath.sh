@@ -27,7 +27,7 @@ process_rmsk() {
         hash_file="${outfile}.hash"
 
         # Calculate current hash of the input file
-        current_hash=$(md5sum "${infile}.txt.gz" | awk '{print $1}')
+        current_hash=$(xxh128sum "${infile}.txt.gz" | awk '{print $1}')
 
         # Check if we need to process the file
         need_processing=true
@@ -43,7 +43,7 @@ process_rmsk() {
           node src/rmskLike.ts "${infile}.sql" "${infile}.txt.gz" >${outfile}.tmp
           sortIfNeeded.sh ${outfile}.tmp | bgzip -@8 >"${outfile}.bed.gz"
           tabix -p bed -C "${outfile}.bed.gz"
-          rm ${outfile}.tmp
+          rm -f ${outfile}.tmp
           # Store the hash for future comparisons
           echo "$current_hash" >"$hash_file"
         fi

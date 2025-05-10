@@ -39,7 +39,7 @@ process_assembly() {
         hash_file="${outfile}.hash"
 
         # Calculate current hash of the input file
-        current_hash=$(md5sum "${infile}.txt.gz" | awk '{print $1}')
+        current_hash=$(xxh128sum "${infile}.txt.gz" | awk '{print $1}')
 
         # Check if we need to process the file
         need_processing=true
@@ -62,11 +62,11 @@ process_assembly() {
           else
             (echo "$header" && pigz -dc "${infile}.txt.gz" | hck -Ld$'\t' -f2-) >"${outfile}.tmp"
           fi
-          sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
+          ./sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
           tabix -p bed -C ${outfile}.bed.gz
           # Store the hash for future comparisons
           echo "$current_hash" >"$hash_file"
-          rm "${outfile}.tmp"
+          rm -f "${outfile}.tmp"
         fi
       fi
     done

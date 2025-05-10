@@ -27,20 +27,20 @@ process_gene_tracks() {
       hash_file="${outfile}.hash"
 
       # Calculate current hash of the input file
-      current_hash=$(md5sum "${infile}.txt.gz" | awk '{print $1}')
+      current_hash=$(xxh128sum "${infile}.txt.gz" | awk '{print $1}')
 
       # Check if we need to process the file
       need_processing=true
       if [ -f "${outfile}.sorted.gff.gz" ] && [ -f "$hash_file" ]; then
         stored_hash=$(cat "$hash_file")
         if [ "$current_hash" = "$stored_hash" ]; then
-          echo "Skipping ${key}: file unchanged"
+          # echo "Skipping ${key}: file unchanged"
           need_processing=false
         fi
       fi
 
       if [ "$need_processing" = true ]; then
-        # echo "Processing ${key}: file changed or new"
+        echo "Processing ${key}: file changed or new"
         node src/geneLike.ts "${infile}.sql" "${infile}.txt.gz" | sort -k1,1 -k2,2n >"${outfile}.bed"
         hck -f 13,4 "${outfile}.bed" >${outfile}.isoforms.txt
         node src/fixupIsoforms.ts ${outfile}.isoforms.txt
