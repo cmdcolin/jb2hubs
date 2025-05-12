@@ -1817,6 +1817,71 @@
       },
       "description": "Non-Rat RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rn7_to_hg38_chain",
+      "name": "rn7 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rn7"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "rn7",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rn7/liftOver/rn7ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rn7_to_mm10_chain",
+      "name": "rn7 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rn7"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "rn7",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rn7/liftOver/rn7ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rn7_to_mm39_chain",
+      "name": "rn7 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rn7"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "rn7",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rn7/liftOver/rn7ToMm39.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rn7_to_rn5_chain",
+      "name": "rn7 to rn5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rn7"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "rn7",
+        "queryAssembly": "rn5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rn7/liftOver/rn7ToRn5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rn7_to_rn6_chain",
+      "name": "rn7 to rn6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rn7"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "rn7",
+        "queryAssembly": "rn6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rn7/liftOver/rn7ToRn6.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

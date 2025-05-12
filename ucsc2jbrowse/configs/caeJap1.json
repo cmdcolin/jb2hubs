@@ -951,6 +951,19 @@
       },
       "description": "Non-C. japonica RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeJap1_to_ce6_chain",
+      "name": "caeJap1 to ce6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeJap1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caeJap1",
+        "queryAssembly": "ce6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeJap1/liftOver/caeJap1ToCe6.over.chain.gz"
+      }
     }
   ]
 }

@@ -915,6 +915,71 @@
       },
       "description": "Non-Gorilla RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_gorGor3_chain",
+      "name": "gorGor4 to gorGor3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "gorGor3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor4/liftOver/gorGor4ToGorGor3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_gorGor5_chain",
+      "name": "gorGor4 to gorGor5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "gorGor5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor4/liftOver/gorGor4ToGorGor5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_hg18_chain",
+      "name": "gorGor4 to hg18 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "hg18",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor4/liftOver/gorGor4ToHg18.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_hg38_chain",
+      "name": "gorGor4 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor4/liftOver/gorGor4ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_panTro4_chain",
+      "name": "gorGor4 to panTro4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "panTro4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor4/liftOver/gorGor4ToPanTro4.over.chain.gz"
+      }
     }
   ]
 }

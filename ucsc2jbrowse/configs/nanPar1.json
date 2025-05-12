@@ -1692,6 +1692,32 @@
       },
       "description": "Non-Tibetan frog RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nanPar1_to_xenTro7_chain",
+      "name": "nanPar1 to xenTro7 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nanPar1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nanPar1",
+        "queryAssembly": "xenTro7",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro7.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nanPar1_to_xenTro9_chain",
+      "name": "nanPar1 to xenTro9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nanPar1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nanPar1",
+        "queryAssembly": "xenTro9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro9.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

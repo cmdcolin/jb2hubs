@@ -365,6 +365,32 @@
       },
       "description": "Non-D. yakuba RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droYak1_to_dm2_chain",
+      "name": "droYak1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droYak1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droYak1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak1/liftOver/droYak1ToDm2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droYak1_to_droYak2_chain",
+      "name": "droYak1 to droYak2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droYak1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droYak1",
+        "queryAssembly": "droYak2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak1/liftOver/droYak1ToDroYak2.over.chain.gz"
+      }
     }
   ]
 }

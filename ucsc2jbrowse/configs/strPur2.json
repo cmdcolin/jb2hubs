@@ -1046,6 +1046,45 @@
       },
       "description": "Non-S. purpuratus RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur2_to_ci2_chain",
+      "name": "strPur2 to ci2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "strPur2",
+        "queryAssembly": "ci2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToCi2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur2_to_hg18_chain",
+      "name": "strPur2 to hg18 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "strPur2",
+        "queryAssembly": "hg18",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToHg18.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur2_to_strPur1_chain",
+      "name": "strPur2 to strPur1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "strPur2",
+        "queryAssembly": "strPur1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToStrPur1.over.chain.gz"
+      }
     }
   ]
 }

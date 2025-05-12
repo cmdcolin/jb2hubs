@@ -683,6 +683,32 @@
       },
       "description": "Non-Shrew RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra1_to_mm10_chain",
+      "name": "sorAra1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "sorAra1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra1/liftOver/sorAra1ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra1_to_sorAra2_chain",
+      "name": "sorAra1 to sorAra2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "sorAra1",
+        "queryAssembly": "sorAra2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra1/liftOver/sorAra1ToSorAra2.over.chain.gz"
+      }
     }
   ]
 }

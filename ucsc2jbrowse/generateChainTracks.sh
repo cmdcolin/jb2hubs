@@ -1,8 +1,38 @@
 #!/bin/bash
 
-# generated with Claude
-# Extract the source assembly from the URL
-SOURCE_ASSEMBLY="hg19"
+# Script to generate chain tracks for a specified assembly
+
+# Function to display usage information
+usage() {
+  echo "Usage: $0 [options]"
+  echo "Options:"
+  echo "  -a, --assembly ASSEMBLY  Source assembly name (e.g., hg19, hg38, mm10)"
+  echo "  -o, --output DIR         Output directory (default: ~/ucscResults)"
+  echo "  -h, --help               Display this help message"
+  exit 1
+}
+
+# Parse command line arguments
+SOURCE_ASSEMBLY="hg19" # Default assembly
+while [[ $# -gt 0 ]]; do
+  case $1 in
+  -a | --assembly)
+    SOURCE_ASSEMBLY="$2"
+    shift 2
+    ;;
+  -o | --output)
+    OUT="$2"
+    shift 2
+    ;;
+  -h | --help)
+    usage
+    ;;
+  *)
+    echo "Unknown option: $1"
+    usage
+    ;;
+  esac
+done
 
 # Set default output directory if not already set
 : ${OUT:=~/ucscResults}
@@ -20,8 +50,8 @@ fi
 TEMP_TRACKS_FILE=$(mktemp)
 echo "[]" >"$TEMP_TRACKS_FILE"
 
-echo "Fetching chain files from UCSC..."
-wget -q -O - https://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/ | grep -o 'href="[^"]*"' | sed 's!href="\(.*\)"!https://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/\1!' | grep -v md5sum | grep .chain.gz | while read p; do
+echo "Fetching chain files for $SOURCE_ASSEMBLY from UCSC..."
+wget -q -O - "https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOver/" | grep -o 'href="[^"]*"' | sed "s!href=\"\(.*\)\"!https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOver/\1!" | grep -v md5sum | grep .chain.gz | while read p; do
   echo "Processing $p"
 
   # Extract the filename from the URL
@@ -46,6 +76,7 @@ wget -q -O - https://hgdownload.soe.ucsc.edu/goldenPath/hg19/liftOver/ | grep -o
   "type": "SyntenyTrack",
   "trackId": "${track_id}",
   "name": "${track_name}",
+  "category":["Liftover"],
   "assemblyNames": [
     "${source_assembly}"
   ],

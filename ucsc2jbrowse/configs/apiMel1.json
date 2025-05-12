@@ -409,6 +409,19 @@
       },
       "description": "Non-A. mellifera RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "apiMel1_to_dm2_chain",
+      "name": "apiMel1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["apiMel1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "apiMel1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/apiMel1/liftOver/apiMel1ToDm2.over.chain.gz"
+      }
     }
   ]
 }

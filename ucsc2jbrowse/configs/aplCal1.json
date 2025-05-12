@@ -1037,6 +1037,19 @@
       },
       "description": "Non-Sea hare RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aplCal1_to_hg19_chain",
+      "name": "aplCal1 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aplCal1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "aplCal1",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aplCal1/liftOver/aplCal1ToHg19.over.chain.gz"
+      }
     }
   ]
 }

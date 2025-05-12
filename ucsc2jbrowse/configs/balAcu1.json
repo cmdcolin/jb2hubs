@@ -1778,6 +1778,45 @@
       },
       "description": "Non-Minke whale RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "balAcu1_to_hg19_chain",
+      "name": "balAcu1 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["balAcu1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "balAcu1",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "balAcu1_to_hg38_chain",
+      "name": "balAcu1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["balAcu1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "balAcu1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "balAcu1_to_mm10_chain",
+      "name": "balAcu1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["balAcu1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "balAcu1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToMm10.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

@@ -588,6 +588,32 @@
       },
       "description": "Non-Gibbon RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu2_to_mm10_chain",
+      "name": "nomLeu2 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu2",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu2/liftOver/nomLeu2ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu2_to_nomLeu3_chain",
+      "name": "nomLeu2 to nomLeu3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu2",
+        "queryAssembly": "nomLeu3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu2/liftOver/nomLeu2ToNomLeu3.over.chain.gz"
+      }
     }
   ]
 }

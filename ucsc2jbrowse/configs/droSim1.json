@@ -952,6 +952,45 @@
       },
       "description": "Non-D. simulans RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSim1_to_dm2_chain",
+      "name": "droSim1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSim1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droSim1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSim1_to_dm3_chain",
+      "name": "droSim1 to dm3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSim1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droSim1",
+        "queryAssembly": "dm3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSim1_to_dm6_chain",
+      "name": "droSim1 to dm6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSim1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droSim1",
+        "queryAssembly": "dm6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm6.over.chain.gz"
+      }
     }
   ]
 }

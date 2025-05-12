@@ -1927,6 +1927,58 @@
       },
       "description": "Non-Green monkey RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "chlSab2_to_hg38_chain",
+      "name": "chlSab2 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["chlSab2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "chlSab2",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "chlSab2_to_rheMac2_chain",
+      "name": "chlSab2 to rheMac2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["chlSab2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "chlSab2",
+        "queryAssembly": "rheMac2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "chlSab2_to_rheMac8_chain",
+      "name": "chlSab2 to rheMac8 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["chlSab2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "chlSab2",
+        "queryAssembly": "rheMac8",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac8.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "chlSab2_to_tarSyr2_chain",
+      "name": "chlSab2 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["chlSab2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "chlSab2",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToTarSyr2.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

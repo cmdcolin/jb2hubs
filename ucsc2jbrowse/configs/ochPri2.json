@@ -683,6 +683,32 @@
       },
       "description": "Non-Pika RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ochPri2_to_mm10_chain",
+      "name": "ochPri2 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ochPri2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ochPri2",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ochPri2_to_ochPri3_chain",
+      "name": "ochPri2 to ochPri3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ochPri2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ochPri2",
+        "queryAssembly": "ochPri3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToOchPri3.over.chain.gz"
+      }
     }
   ]
 }

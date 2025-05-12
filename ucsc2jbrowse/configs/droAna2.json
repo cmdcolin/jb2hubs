@@ -1040,6 +1040,32 @@
       },
       "description": "Non-D. ananassae RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droAna2_to_dm2_chain",
+      "name": "droAna2 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droAna2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droAna2",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droAna2/liftOver/droAna2ToDm2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droAna2_to_dm3_chain",
+      "name": "droAna2 to dm3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droAna2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droAna2",
+        "queryAssembly": "dm3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droAna2/liftOver/droAna2ToDm3.over.chain.gz"
+      }
     }
   ]
 }

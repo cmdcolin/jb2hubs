@@ -1824,6 +1824,32 @@
       },
       "description": "Non-Naked mole-rat RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hetGla2_to_hg38_chain",
+      "name": "hetGla2 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hetGla2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hetGla2",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hetGla2_to_mm10_chain",
+      "name": "hetGla2 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hetGla2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hetGla2",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToMm10.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

@@ -951,6 +951,19 @@
       },
       "description": "Non-C. remanei RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem3_to_ce6_chain",
+      "name": "caeRem3 to ce6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caeRem3",
+        "queryAssembly": "ce6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeRem3/liftOver/caeRem3ToCe6.over.chain.gz"
+      }
     }
   ]
 }

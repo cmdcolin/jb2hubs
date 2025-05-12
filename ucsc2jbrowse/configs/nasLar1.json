@@ -1507,6 +1507,32 @@
       },
       "description": "Non-Proboscis monkey RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nasLar1_to_hg38_chain",
+      "name": "nasLar1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nasLar1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nasLar1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nasLar1_to_tarSyr2_chain",
+      "name": "nasLar1 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nasLar1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nasLar1",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToTarSyr2.over.chain.gz"
+      }
     }
   ]
 }

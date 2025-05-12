@@ -463,6 +463,58 @@
       },
       "description": "Non-Gibbon RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_gorGor3_chain",
+      "name": "nomLeu1 to gorGor3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "gorGor3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu1/liftOver/nomLeu1ToGorGor3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_hg19_chain",
+      "name": "nomLeu1 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu1/liftOver/nomLeu1ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_mm10_chain",
+      "name": "nomLeu1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu1/liftOver/nomLeu1ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_nomLeu2_chain",
+      "name": "nomLeu1 to nomLeu2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "nomLeu2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu1/liftOver/nomLeu1ToNomLeu2.over.chain.gz"
+      }
     }
   ]
 }

@@ -951,6 +951,19 @@
       },
       "description": "Non-C. brenneri RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb2_to_ce6_chain",
+      "name": "caePb2 to ce6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caePb2",
+        "queryAssembly": "ce6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb2/liftOver/caePb2ToCe6.over.chain.gz"
+      }
     }
   ]
 }

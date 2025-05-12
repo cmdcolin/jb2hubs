@@ -1976,6 +1976,58 @@
       },
       "description": "Non-Sheep RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri4_to_hg38_chain",
+      "name": "oviAri4 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "oviAri4",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri4_to_mm10_chain",
+      "name": "oviAri4 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "oviAri4",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri4_to_mm39_chain",
+      "name": "oviAri4 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "oviAri4",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToMm39.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri4_to_oviAri3_chain",
+      "name": "oviAri4 to oviAri3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "oviAri4",
+        "queryAssembly": "oviAri3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToOviAri3.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

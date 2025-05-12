@@ -461,6 +461,32 @@
       },
       "description": "Non-C. intestinalis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci2_to_ci3_chain",
+      "name": "ci2 to ci3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ci2",
+        "queryAssembly": "ci3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToCi3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci2_to_strPur2_chain",
+      "name": "ci2 to strPur2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ci2",
+        "queryAssembly": "strPur2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToStrPur2.over.chain.gz"
+      }
     }
   ]
 }

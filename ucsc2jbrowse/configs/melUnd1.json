@@ -1784,6 +1784,45 @@
       },
       "description": "Non-Budgerigar RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "melUnd1_to_geoFor1_chain",
+      "name": "melUnd1 to geoFor1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["melUnd1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "melUnd1",
+        "queryAssembly": "geoFor1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToGeoFor1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "melUnd1_to_hg38_chain",
+      "name": "melUnd1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["melUnd1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "melUnd1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "melUnd1_to_mm10_chain",
+      "name": "melUnd1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["melUnd1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "melUnd1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToMm10.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

@@ -408,6 +408,19 @@
       },
       "description": "Non-D. mojavensis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droMoj1_to_dm2_chain",
+      "name": "droMoj1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droMoj1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droMoj1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droMoj1/liftOver/droMoj1ToDm2.over.chain.gz"
+      }
     }
   ]
 }

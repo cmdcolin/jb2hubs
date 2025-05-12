@@ -1519,6 +1519,19 @@
       },
       "description": "Non-Kangaroo rat RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dipOrd1_to_mm10_chain",
+      "name": "dipOrd1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dipOrd1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "dipOrd1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dipOrd1/liftOver/dipOrd1ToMm10.over.chain.gz"
+      }
     }
   ]
 }

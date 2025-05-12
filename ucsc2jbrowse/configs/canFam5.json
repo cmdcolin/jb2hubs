@@ -1399,6 +1399,84 @@
       },
       "description": "Non-Dog RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam5_to_canFam3_chain",
+      "name": "canFam5 to canFam3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "canFam5",
+        "queryAssembly": "canFam3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/liftOver/canFam5ToCanFam3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam5_to_canFam4_chain",
+      "name": "canFam5 to canFam4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "canFam5",
+        "queryAssembly": "canFam4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/liftOver/canFam5ToCanFam4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam5_to_canFam6_chain",
+      "name": "canFam5 to canFam6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "canFam5",
+        "queryAssembly": "canFam6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/liftOver/canFam5ToCanFam6.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam5_to_hg38_chain",
+      "name": "canFam5 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "canFam5",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/liftOver/canFam5ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam5_to_mm10_chain",
+      "name": "canFam5 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "canFam5",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/liftOver/canFam5ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam5_to_mm39_chain",
+      "name": "canFam5 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "canFam5",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/liftOver/canFam5ToMm39.over.chain.gz"
+      }
     }
   ]
 }

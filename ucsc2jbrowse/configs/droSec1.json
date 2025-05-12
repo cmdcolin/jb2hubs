@@ -1002,6 +1002,58 @@
       },
       "description": "Non-D. sechellia RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSec1_to_dm2_chain",
+      "name": "droSec1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSec1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droSec1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSec1_to_dm3_chain",
+      "name": "droSec1 to dm3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSec1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droSec1",
+        "queryAssembly": "dm3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSec1_to_dm6_chain",
+      "name": "droSec1 to dm6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSec1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droSec1",
+        "queryAssembly": "dm6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm6.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSec1_to_droSim2_chain",
+      "name": "droSec1 to droSim2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSec1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droSec1",
+        "queryAssembly": "droSim2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDroSim2.over.chain.gz"
+      }
     }
   ]
 }

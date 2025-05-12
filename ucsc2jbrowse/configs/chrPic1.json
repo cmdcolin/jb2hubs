@@ -1263,6 +1263,19 @@
       },
       "description": "Non-Painted turtle RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "chrPic1_to_mm10_chain",
+      "name": "chrPic1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["chrPic1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "chrPic1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chrPic1/liftOver/chrPic1ToMm10.over.chain.gz"
+      }
     }
   ]
 }

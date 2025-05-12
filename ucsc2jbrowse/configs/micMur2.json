@@ -1737,6 +1737,45 @@
       },
       "description": "Non-Mouse lemur RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "micMur2_to_hg38_chain",
+      "name": "micMur2 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["micMur2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "micMur2",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/micMur2/liftOver/micMur2ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "micMur2_to_micMur1_chain",
+      "name": "micMur2 to micMur1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["micMur2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "micMur2",
+        "queryAssembly": "micMur1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/micMur2/liftOver/micMur2ToMicMur1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "micMur2_to_tarSyr2_chain",
+      "name": "micMur2 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["micMur2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "micMur2",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/micMur2/liftOver/micMur2ToTarSyr2.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

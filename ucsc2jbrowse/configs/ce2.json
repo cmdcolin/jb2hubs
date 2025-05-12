@@ -594,6 +594,19 @@
       },
       "description": "Non-C. elegans RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ce2_to_ce4_chain",
+      "name": "ce2 to ce4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ce2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ce2",
+        "queryAssembly": "ce4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce2/liftOver/ce2ToCe4.over.chain.gz"
+      }
     }
   ]
 }

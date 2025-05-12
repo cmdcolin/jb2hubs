@@ -1734,6 +1734,45 @@
       },
       "description": "Non-Pika RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ochPri3_to_hg19_chain",
+      "name": "ochPri3 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ochPri3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ochPri3",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri3/liftOver/ochPri3ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ochPri3_to_hg38_chain",
+      "name": "ochPri3 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ochPri3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ochPri3",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri3/liftOver/ochPri3ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ochPri3_to_mm39_chain",
+      "name": "ochPri3 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ochPri3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ochPri3",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri3/liftOver/ochPri3ToMm39.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

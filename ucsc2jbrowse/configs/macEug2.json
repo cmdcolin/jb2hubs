@@ -1388,6 +1388,32 @@
       },
       "description": "Non-Wallaby RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "macEug2_to_hg38_chain",
+      "name": "macEug2 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["macEug2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "macEug2",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/macEug2/liftOver/macEug2ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "macEug2_to_mm10_chain",
+      "name": "macEug2 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["macEug2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "macEug2",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/macEug2/liftOver/macEug2ToMm10.over.chain.gz"
+      }
     }
   ]
 }

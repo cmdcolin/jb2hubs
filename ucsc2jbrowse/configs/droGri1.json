@@ -996,6 +996,19 @@
       },
       "description": "Non-D. grimshawi RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droGri1_to_dm2_chain",
+      "name": "droGri1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droGri1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droGri1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droGri1/liftOver/droGri1ToDm2.over.chain.gz"
+      }
     }
   ]
 }

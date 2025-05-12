@@ -1128,6 +1128,58 @@
       },
       "description": "Non-Chinese hamster RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV1_to_criGri1_chain",
+      "name": "criGriChoV1 to criGri1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "criGriChoV1",
+        "queryAssembly": "criGri1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV1/liftOver/criGriChoV1ToCriGri1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV1_to_criGriChoV2_chain",
+      "name": "criGriChoV1 to criGriChoV2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "criGriChoV1",
+        "queryAssembly": "criGriChoV2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV1/liftOver/criGriChoV1ToCriGriChoV2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV1_to_hg38_chain",
+      "name": "criGriChoV1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "criGriChoV1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV1/liftOver/criGriChoV1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV1_to_mm10_chain",
+      "name": "criGriChoV1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "criGriChoV1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV1/liftOver/criGriChoV1ToMm10.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

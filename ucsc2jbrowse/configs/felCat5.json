@@ -817,6 +817,71 @@
       },
       "description": "Non-Cat RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat5_to_felCat4_chain",
+      "name": "felCat5 to felCat4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "felCat5",
+        "queryAssembly": "felCat4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat5/liftOver/felCat5ToFelCat4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat5_to_felCat8_chain",
+      "name": "felCat5 to felCat8 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "felCat5",
+        "queryAssembly": "felCat8",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat5/liftOver/felCat5ToFelCat8.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat5_to_felCat9_chain",
+      "name": "felCat5 to felCat9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "felCat5",
+        "queryAssembly": "felCat9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat5/liftOver/felCat5ToFelCat9.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat5_to_hg19_chain",
+      "name": "felCat5 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "felCat5",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat5/liftOver/felCat5ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat5_to_mm10_chain",
+      "name": "felCat5 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat5"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "felCat5",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat5/liftOver/felCat5ToMm10.over.chain.gz"
+      }
     }
   ]
 }

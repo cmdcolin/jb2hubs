@@ -1828,6 +1828,45 @@
       },
       "description": "Non-Gibbon RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu3_to_hg19_chain",
+      "name": "nomLeu3 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu3",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu3/liftOver/nomLeu3ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu3_to_hg38_chain",
+      "name": "nomLeu3 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu3",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu3/liftOver/nomLeu3ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu3_to_tarSyr2_chain",
+      "name": "nomLeu3 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "nomLeu3",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu3/liftOver/nomLeu3ToTarSyr2.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

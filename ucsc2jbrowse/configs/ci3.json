@@ -1499,6 +1499,58 @@
       },
       "description": "Non-C. intestinalis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_ce11_chain",
+      "name": "ci3 to ce11 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "ce11",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci3/liftOver/ci3ToCe11.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_ci2_chain",
+      "name": "ci3 to ci2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "ci2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci3/liftOver/ci3ToCi2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_cioSav2_chain",
+      "name": "ci3 to cioSav2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "cioSav2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci3/liftOver/ci3ToCioSav2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_strPur2_chain",
+      "name": "ci3 to strPur2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "strPur2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci3/liftOver/ci3ToStrPur2.over.chain.gz"
+      }
     }
   ]
 }

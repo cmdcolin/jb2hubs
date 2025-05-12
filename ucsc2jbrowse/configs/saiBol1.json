@@ -1824,6 +1824,58 @@
       },
       "description": "Non-Squirrel monkey RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "saiBol1_to_hg19_chain",
+      "name": "saiBol1 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["saiBol1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "saiBol1",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/saiBol1/liftOver/saiBol1ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "saiBol1_to_hg38_chain",
+      "name": "saiBol1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["saiBol1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "saiBol1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/saiBol1/liftOver/saiBol1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "saiBol1_to_mm10_chain",
+      "name": "saiBol1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["saiBol1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "saiBol1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/saiBol1/liftOver/saiBol1ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "saiBol1_to_tarSyr2_chain",
+      "name": "saiBol1 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["saiBol1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "saiBol1",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/saiBol1/liftOver/saiBol1ToTarSyr2.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

@@ -683,6 +683,45 @@
       },
       "description": "Non-Tarsier RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "tarSyr1_to_gorGor3_chain",
+      "name": "tarSyr1 to gorGor3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tarSyr1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "tarSyr1",
+        "queryAssembly": "gorGor3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToGorGor3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "tarSyr1_to_mm10_chain",
+      "name": "tarSyr1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tarSyr1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "tarSyr1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "tarSyr1_to_tarSyr2_chain",
+      "name": "tarSyr1 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tarSyr1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "tarSyr1",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToTarSyr2.over.chain.gz"
+      }
     }
   ]
 }

@@ -927,6 +927,45 @@
       },
       "description": "Non-Chinese hamster RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGri1_to_criGriChoV1_chain",
+      "name": "criGri1 to criGriChoV1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGri1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "criGri1",
+        "queryAssembly": "criGriChoV1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToCriGriChoV1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGri1_to_criGriChoV2_chain",
+      "name": "criGri1 to criGriChoV2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGri1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "criGri1",
+        "queryAssembly": "criGriChoV2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToCriGriChoV2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGri1_to_hg19_chain",
+      "name": "criGri1 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGri1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "criGri1",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToHg19.over.chain.gz"
+      }
     }
   ]
 }

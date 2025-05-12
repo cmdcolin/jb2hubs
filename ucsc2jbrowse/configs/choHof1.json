@@ -1519,6 +1519,19 @@
       },
       "description": "Non-Sloth RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "choHof1_to_mm10_chain",
+      "name": "choHof1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["choHof1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "choHof1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/choHof1/liftOver/choHof1ToMm10.over.chain.gz"
+      }
     }
   ]
 }

@@ -1545,6 +1545,32 @@
       },
       "description": "Non-A. gambiae RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoGam3_to_anoGam1_chain",
+      "name": "anoGam3 to anoGam1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoGam3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "anoGam3",
+        "queryAssembly": "anoGam1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToAnoGam1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoGam3_to_dm6_chain",
+      "name": "anoGam3 to dm6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoGam3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "anoGam3",
+        "queryAssembly": "dm6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToDm6.over.chain.gz"
+      }
     }
   ]
 }

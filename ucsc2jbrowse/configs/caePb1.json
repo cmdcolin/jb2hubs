@@ -278,6 +278,71 @@
       },
       "description": "Non-C. brenneri RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb1_to_caePb2_chain",
+      "name": "caePb1 to caePb2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caePb1",
+        "queryAssembly": "caePb2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCaePb2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb1_to_caeRem2_chain",
+      "name": "caePb1 to caeRem2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caePb1",
+        "queryAssembly": "caeRem2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCaeRem2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb1_to_cb3_chain",
+      "name": "caePb1 to cb3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caePb1",
+        "queryAssembly": "cb3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCb3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb1_to_ce4_chain",
+      "name": "caePb1 to ce4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caePb1",
+        "queryAssembly": "ce4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCe4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb1_to_priPac1_chain",
+      "name": "caePb1 to priPac1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caePb1",
+        "queryAssembly": "priPac1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToPriPac1.over.chain.gz"
+      }
     }
   ]
 }

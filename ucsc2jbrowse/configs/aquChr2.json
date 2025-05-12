@@ -1518,6 +1518,45 @@
       },
       "description": "Non-Golden eagle RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aquChr2_to_galGal5_chain",
+      "name": "aquChr2 to galGal5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aquChr2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "aquChr2",
+        "queryAssembly": "galGal5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToGalGal5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aquChr2_to_hg38_chain",
+      "name": "aquChr2 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aquChr2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "aquChr2",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aquChr2_to_mm10_chain",
+      "name": "aquChr2 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aquChr2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "aquChr2",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToMm10.over.chain.gz"
+      }
     }
   ]
 }

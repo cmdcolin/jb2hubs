@@ -1518,6 +1518,71 @@
       },
       "description": "Non-Lamprey RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_hg38_chain",
+      "name": "petMar3 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/petMar3/liftOver/petMar3ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_mm10_chain",
+      "name": "petMar3 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/petMar3/liftOver/petMar3ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_mm39_chain",
+      "name": "petMar3 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/petMar3/liftOver/petMar3ToMm39.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_petMar1_chain",
+      "name": "petMar3 to petMar1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "petMar1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/petMar3/liftOver/petMar3ToPetMar1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_petMar2_chain",
+      "name": "petMar3 to petMar2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "petMar2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/petMar3/liftOver/petMar3ToPetMar2.over.chain.gz"
+      }
     }
   ]
 }

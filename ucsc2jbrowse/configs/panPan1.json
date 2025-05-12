@@ -996,6 +996,71 @@
       },
       "description": "Non-Bonobo RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_hg18_chain",
+      "name": "panPan1 to hg18 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "hg18",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg18.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_hg38_chain",
+      "name": "panPan1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_panPan2_chain",
+      "name": "panPan1 to panPan2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "panPan2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_panPan3_chain",
+      "name": "panPan1 to panPan3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "panPan3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_tarSyr2_chain",
+      "name": "panPan1 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToTarSyr2.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

@@ -683,6 +683,32 @@
       },
       "description": "Non-Hedgehog RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "eriEur1_to_eriEur2_chain",
+      "name": "eriEur1 to eriEur2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["eriEur1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "eriEur1",
+        "queryAssembly": "eriEur2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToEriEur2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "eriEur1_to_mm10_chain",
+      "name": "eriEur1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["eriEur1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "eriEur1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToMm10.over.chain.gz"
+      }
     }
   ]
 }

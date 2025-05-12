@@ -1085,6 +1085,71 @@
       },
       "description": "Non-D. pseudoobscura RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dp3_to_dm2_chain",
+      "name": "dp3 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dp3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "dp3",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dp3_to_dm3_chain",
+      "name": "dp3 to dm3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dp3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "dp3",
+        "queryAssembly": "dm3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dp3_to_dm6_chain",
+      "name": "dp3 to dm6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dp3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "dp3",
+        "queryAssembly": "dm6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm6.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dp3_to_dp4_chain",
+      "name": "dp3 to dp4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dp3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "dp3",
+        "queryAssembly": "dp4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDp4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dp3_to_droPer1_chain",
+      "name": "dp3 to droPer1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dp3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "dp3",
+        "queryAssembly": "droPer1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDroPer1.over.chain.gz"
+      }
     }
   ]
 }

@@ -1823,6 +1823,58 @@
       },
       "description": "Non-Bushbaby RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "otoGar3_to_hg38_chain",
+      "name": "otoGar3 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["otoGar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "otoGar3",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "otoGar3_to_mm10_chain",
+      "name": "otoGar3 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["otoGar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "otoGar3",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "otoGar3_to_mm39_chain",
+      "name": "otoGar3 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["otoGar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "otoGar3",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm39.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "otoGar3_to_tarSyr2_chain",
+      "name": "otoGar3 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["otoGar3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "otoGar3",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToTarSyr2.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

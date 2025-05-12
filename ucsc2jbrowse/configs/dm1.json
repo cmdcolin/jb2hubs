@@ -777,6 +777,19 @@
       },
       "description": "Non-D. melanogaster RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm1_to_dm2_chain",
+      "name": "dm1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "dm1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm1/liftOver/dm1ToDm2.over.chain.gz"
+      }
     }
   ]
 }

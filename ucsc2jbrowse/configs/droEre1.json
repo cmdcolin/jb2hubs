@@ -1040,6 +1040,32 @@
       },
       "description": "Non-D. erecta RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droEre1_to_dm2_chain",
+      "name": "droEre1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droEre1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droEre1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droEre1/liftOver/droEre1ToDm2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droEre1_to_dm3_chain",
+      "name": "droEre1 to dm3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droEre1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droEre1",
+        "queryAssembly": "dm3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droEre1/liftOver/droEre1ToDm3.over.chain.gz"
+      }
     }
   ]
 }

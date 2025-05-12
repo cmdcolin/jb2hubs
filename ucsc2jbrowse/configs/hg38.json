@@ -1454,6 +1454,49 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
+      "trackId": "yale_parents",
+      "name": "Pseudogenes - Pseudogene Parents",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/pseudogenes/pseudoPipeParents.bb"
+      },
+      "metadata": {
+        "tableName": "yale_parents",
+        "type": "bigBed 9 +",
+        "visibility": "pack",
+        "priority": "1",
+        "colorR": "0",
+        "colorG": "0",
+        "colorB": "0",
+        "altColorR": "127",
+        "altColorG": "127",
+        "altColorB": "127",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg38/pseudogenes/pseudoPipeParents.bb",
+        "html": "<h2>Description</h2>\n<p>\nThese tracks contain pseudogene predictions and their parents as identified by PseudoPipe.\n<a href=\"http://pseudogene.org/pseudopipe/\" target=\"_blank\">PseudoPipe</a> is a developed\nhomology-based computational pipeline that can search a mammalian genome and identify pseudogene\nsequences in a comprehensive and consistent manner.\n</p>\n<p>\nPseudogenes are genomic sequences that bear similarity to specific protein-coding genes, but  are\nunable to produce functional proteins due to the existence of frameshifts, premature stop codons, or\nother deleterious mutations. They arise from gene duplication or retrotransposition events and are\nimportant resources in understanding the evolutionary history of genes and genomes.</p>\n\n<h2>Display Conventions</h2>\n\n<p>This composite track consists of two subtracks: the <b>Pseudogenes</b> track and the <b>Pseudogene\nParents</b> track. The <b>Pseudogene Parents</b> track displays parent genes labeled with their\n<a href=\"https://www.hugo-international.org/standards/\" target=\"_blank\">HUGO</a> IDs,\nwhich were derived from Ensembl gene IDs provided by the\n<a href=\"https://www.gersteinlab.org/\" target=\"_blank\">Gerstein lab</a> after dataset creation. It\nincludes indicators for pseudogenes, each linked to its corresponding entry in the Pseudogenes\ntrack. The <b>Pseudogenes</b> track shows pseudogenes labeled with their parent HUGO ID and colored\naccording to pseudogene type. The authors assigned PGOHUMG IDs to genes and PGOHUMT IDs\nto transcripts. <b>Note</b>: Not all PseudoPipe IDs could be mapped back to their original Ensembl\nIDs. In these cases, the gene ID is listed as NA.</p>\n\n<b>Pseudogene types:</b>\n<ul>\n<li><b>Unspecified pseudogenes</b> include pseudogenic fragments and protein/chromosome homologies\n with high sequence similarity but are too decayed to be reliably classified as processed or\n duplicated.</li>\n<li><b>Processed pseudogenes</b> (retrotransposed pseudogenes) result from the reverse\n transcription of mRNA into DNA, which is then inserted into the genome. These pseudogenes\n lack introns, often have small flanking direct repeats, and may retain a 3' polyadenine\n tail. PseudoPipe distinguishes them from duplicated pseudogenes by a combination of these\n features, with the emphasis on the evidence of ancient introns.</li>\n<li><b>Unprocessed pseudogenes</b> (duplicated pseudogenes) arise from genomic DNA duplication or\n unequal crossing-over. They often retain the original exon-intron structures of the\n functional genes, although sometimes incompletely.</li>\n</ul>\n\n<h3>Pseudogene Parents track</h3>\n<p>Each parent gene is shown with their pseudogenes represented as grey blocks.</p>\n<ul>\n<li><b><font color=\"#800080\">purple</font></b> - <b> parent gene </b></li>\n<li><b><font color=\"#A9A9A9\">grey</font></b> - <b> pseudogene indicators </b></li>\n</ul>\n\n<p>\nIf a parent gene has four grey blocks beneath it, this indicates the presence of four pseudogenes\nelsewhere in the genome. Hovering over a grey block displays the pseudogene type and its PGOHUMT\nID, along with a link to its corresponding entry in the Pseudogenes track and its genomic position.\nClicking the PGOHUMT ID redirects the genome browser to the pseudogene&apos;s locus.\n</p>\n\n<h3>Pseudogenes track</h3>\n<p>Pseudogenes are colored by type.</p>\n<ul>\n<li><b><font color=\"#FF8C00\">orange</font></b> - <b> unspecified pseudogene </b></li>\n<li><b><font color=\"#0000FF\">blue</font></b> - <b> unprocessed pseudogene </b></li>\n<li><b><font color=\"#556B2F\">olive green</font></b> - <b> processed pseudogene </b></li>\n</ul>\n\n<p>\nMouse over on an item will display the PseudoPipe ID (PGOHUMG), the Parent Ensembl gene ID\nwith a link to the corresponding parent gene location in the Pseudogenes track, and the pseudogene\ntype.</p>\n\n<h2>Methods</h2>\n<p>\nThe PseudoPipe pipeline identifies pseudogenes through a series of steps. It first uses BLAST to\nrapidly cross-reference potential parent proteins against the intergenic regions of the genome. The\nresulting raw hits are then processed by removing redundancies, clustering neighboring sequences,\nand aligning each cluster with a unique parent gene. Finally, pseudogenes are classified based on a\ncombination of criteria, including homology, intron-exon structure, and the presence of stop codons\nor frameshifts. This method is designed to detect pseudogenes that are unable to be translated into\nproteins.</p> \n<p>\nThese tracks were generated using a Bash script that processes a GTF file with pseudogene\nannotations by removing duplicates, correcting overlapping exons, and converting the data to BED\nformat with pseudoPipeToBed.py. This script extracts gene and transcript IDs, merges overlapping\nexons, assigns colors based on pseudogene type, and outputs a BED file with gene and parent\nannotations. PseudoPipeParents.py then links pseudogenes to their functional genes by determining\nparent gene coordinates, updating pseudogene entries with interactive browser links and generating a\nparent BED file. The final data are formatted into pseudoPipePgenes.bb and pseudoPipeParents.bb BigBed\nfiles. The <a href=\"https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/doc/hg38/pseudogenes.txt\"\ntarget=\"_blank\">detailed documentation (makeDoc)</a> and \n<a href=\"https://github.com/ucscGenomeBrowser/kent/tree/master/src/hg/makeDb/outside/pseudogenes\"\ntarget=\"_blank\">Python scripts</a> are available in our GitHub repository.\n</p>\n\n<h2>Data Access</h2>\n<p>The raw data can be explored interactively with the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgTables\">Table Browser</a> or the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgIntegrator\">Data Integrator</a>.\nThe data may also be explored interactively using our\n<a href=\"https://genome.ucsc.edu/goldenPath/help/api.html\">REST API</a>.</p>\n<p>For automated download and analysis, the genome annotation is stored at UCSC in bigBed files\nthat can be downloaded from the\n<a href=\"http://hgdownload.soe.ucsc.edu/gbdb/hg38/pseudogenes/\" target=\"_blank\">download server</a>.\nIndividual regions or the whole genome annotation can be obtained using our tool\n<tt>bigBedToBed</tt> which can be compiled from the source code or downloaded as a precompiled\nbinary for your system.</p>\n<p>\nInstructions for downloading source code and binaries can be found\n<a href=\"http://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads\">here</a>.\nThe tool can also be used to obtain only features within a given range, e.g.</p>\n<tt>bigBedToBed http://hgdownload.soe.ucsc.edu/gbdb/hg38/hg38/pseudogenes/pseudoPipePgenes.bb -chrom=chr21 -start=0 -end=10000000 stdout</tt>\n</p>\n\n<h2>Credits</h2>\n<p>Thanks to the Gerstein lab at Yale University for making this data available, and to Cristina\nSisu for providing data in GTF format with parent annotations.</p>\n\n<h2>References</h2>\n<p>\nZhang Z, Carriero N, Zheng D, Karro J, Harrison PM, Gerstein M.\n<a href=\"https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btl116\"\ntarget=\"_blank\">\nPseudoPipe: an automated pseudogene identification pipeline</a>.\n<em>Bioinformatics</em>. 2006 Jun 15;22(12):1437-9.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/16574694\" target=\"_blank\">16574694</a>\n</p>\n",
+        "itemRgb": "on",
+        "labelFields": "hugo",
+        "labelSeparator": "\" \"",
+        "longLabel": "Yale Pseudogene Parents",
+        "mouseOver": "${url}",
+        "parent": "pseudogenes",
+        "searchIndex": "hugo,name",
+        "searchTrix": "/gbdb/hg38/pseudogenes/pseudoPipeParents.ix",
+        "shortLabel": "Pseudogene Parents",
+        "skipEmptyFields": "on",
+        "track": "yale_parents"
+      },
+      "description": "Yale Pseudogene Parents",
+      "category": ["Genes and Gene Predictions"]
+    },
+    {
       "trackId": "recombAvg",
       "name": "Recomb Rate - Recomb. deCODE Avg",
       "type": "QuantitativeTrack",
@@ -3280,6 +3323,49 @@
       },
       "description": "Genomics England PanelApp Genes",
       "category": ["Phenotypes, Variants, and Literature"]
+    },
+    {
+      "trackId": "yale_pseudogenes",
+      "name": "Pseudogenes - Pseudogenes",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/pseudogenes/pseudoPipePgenes.bb"
+      },
+      "metadata": {
+        "tableName": "yale_pseudogenes",
+        "type": "bigBed 12 +",
+        "visibility": "pack",
+        "priority": "2",
+        "colorR": "0",
+        "colorG": "0",
+        "colorB": "0",
+        "altColorR": "127",
+        "altColorG": "127",
+        "altColorB": "127",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg38/pseudogenes/pseudoPipePgenes.bb",
+        "defaultLabelFields": "hugo",
+        "html": "<h2>Description</h2>\n<p>\nThese tracks contain pseudogene predictions and their parents as identified by PseudoPipe.\n<a href=\"http://pseudogene.org/pseudopipe/\" target=\"_blank\">PseudoPipe</a> is a developed\nhomology-based computational pipeline that can search a mammalian genome and identify pseudogene\nsequences in a comprehensive and consistent manner.\n</p>\n<p>\nPseudogenes are genomic sequences that bear similarity to specific protein-coding genes, but  are\nunable to produce functional proteins due to the existence of frameshifts, premature stop codons, or\nother deleterious mutations. They arise from gene duplication or retrotransposition events and are\nimportant resources in understanding the evolutionary history of genes and genomes.</p>\n\n<h2>Display Conventions</h2>\n\n<p>This composite track consists of two subtracks: the <b>Pseudogenes</b> track and the <b>Pseudogene\nParents</b> track. The <b>Pseudogene Parents</b> track displays parent genes labeled with their\n<a href=\"https://www.hugo-international.org/standards/\" target=\"_blank\">HUGO</a> IDs,\nwhich were derived from Ensembl gene IDs provided by the\n<a href=\"https://www.gersteinlab.org/\" target=\"_blank\">Gerstein lab</a> after dataset creation. It\nincludes indicators for pseudogenes, each linked to its corresponding entry in the Pseudogenes\ntrack. The <b>Pseudogenes</b> track shows pseudogenes labeled with their parent HUGO ID and colored\naccording to pseudogene type. The authors assigned PGOHUMG IDs to genes and PGOHUMT IDs\nto transcripts. <b>Note</b>: Not all PseudoPipe IDs could be mapped back to their original Ensembl\nIDs. In these cases, the gene ID is listed as NA.</p>\n\n<b>Pseudogene types:</b>\n<ul>\n<li><b>Unspecified pseudogenes</b> include pseudogenic fragments and protein/chromosome homologies\n with high sequence similarity but are too decayed to be reliably classified as processed or\n duplicated.</li>\n<li><b>Processed pseudogenes</b> (retrotransposed pseudogenes) result from the reverse\n transcription of mRNA into DNA, which is then inserted into the genome. These pseudogenes\n lack introns, often have small flanking direct repeats, and may retain a 3' polyadenine\n tail. PseudoPipe distinguishes them from duplicated pseudogenes by a combination of these\n features, with the emphasis on the evidence of ancient introns.</li>\n<li><b>Unprocessed pseudogenes</b> (duplicated pseudogenes) arise from genomic DNA duplication or\n unequal crossing-over. They often retain the original exon-intron structures of the\n functional genes, although sometimes incompletely.</li>\n</ul>\n\n<h3>Pseudogene Parents track</h3>\n<p>Each parent gene is shown with their pseudogenes represented as grey blocks.</p>\n<ul>\n<li><b><font color=\"#800080\">purple</font></b> - <b> parent gene </b></li>\n<li><b><font color=\"#A9A9A9\">grey</font></b> - <b> pseudogene indicators </b></li>\n</ul>\n\n<p>\nIf a parent gene has four grey blocks beneath it, this indicates the presence of four pseudogenes\nelsewhere in the genome. Hovering over a grey block displays the pseudogene type and its PGOHUMT\nID, along with a link to its corresponding entry in the Pseudogenes track and its genomic position.\nClicking the PGOHUMT ID redirects the genome browser to the pseudogene&apos;s locus.\n</p>\n\n<h3>Pseudogenes track</h3>\n<p>Pseudogenes are colored by type.</p>\n<ul>\n<li><b><font color=\"#FF8C00\">orange</font></b> - <b> unspecified pseudogene </b></li>\n<li><b><font color=\"#0000FF\">blue</font></b> - <b> unprocessed pseudogene </b></li>\n<li><b><font color=\"#556B2F\">olive green</font></b> - <b> processed pseudogene </b></li>\n</ul>\n\n<p>\nMouse over on an item will display the PseudoPipe ID (PGOHUMG), the Parent Ensembl gene ID\nwith a link to the corresponding parent gene location in the Pseudogenes track, and the pseudogene\ntype.</p>\n\n<h2>Methods</h2>\n<p>\nThe PseudoPipe pipeline identifies pseudogenes through a series of steps. It first uses BLAST to\nrapidly cross-reference potential parent proteins against the intergenic regions of the genome. The\nresulting raw hits are then processed by removing redundancies, clustering neighboring sequences,\nand aligning each cluster with a unique parent gene. Finally, pseudogenes are classified based on a\ncombination of criteria, including homology, intron-exon structure, and the presence of stop codons\nor frameshifts. This method is designed to detect pseudogenes that are unable to be translated into\nproteins.</p> \n<p>\nThese tracks were generated using a Bash script that processes a GTF file with pseudogene\nannotations by removing duplicates, correcting overlapping exons, and converting the data to BED\nformat with pseudoPipeToBed.py. This script extracts gene and transcript IDs, merges overlapping\nexons, assigns colors based on pseudogene type, and outputs a BED file with gene and parent\nannotations. PseudoPipeParents.py then links pseudogenes to their functional genes by determining\nparent gene coordinates, updating pseudogene entries with interactive browser links and generating a\nparent BED file. The final data are formatted into pseudoPipePgenes.bb and pseudoPipeParents.bb BigBed\nfiles. The <a href=\"https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/doc/hg38/pseudogenes.txt\"\ntarget=\"_blank\">detailed documentation (makeDoc)</a> and \n<a href=\"https://github.com/ucscGenomeBrowser/kent/tree/master/src/hg/makeDb/outside/pseudogenes\"\ntarget=\"_blank\">Python scripts</a> are available in our GitHub repository.\n</p>\n\n<h2>Data Access</h2>\n<p>The raw data can be explored interactively with the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgTables\">Table Browser</a> or the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgIntegrator\">Data Integrator</a>.\nThe data may also be explored interactively using our\n<a href=\"https://genome.ucsc.edu/goldenPath/help/api.html\">REST API</a>.</p>\n<p>For automated download and analysis, the genome annotation is stored at UCSC in bigBed files\nthat can be downloaded from the\n<a href=\"http://hgdownload.soe.ucsc.edu/gbdb/hg38/pseudogenes/\" target=\"_blank\">download server</a>.\nIndividual regions or the whole genome annotation can be obtained using our tool\n<tt>bigBedToBed</tt> which can be compiled from the source code or downloaded as a precompiled\nbinary for your system.</p>\n<p>\nInstructions for downloading source code and binaries can be found\n<a href=\"http://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads\">here</a>.\nThe tool can also be used to obtain only features within a given range, e.g.</p>\n<tt>bigBedToBed http://hgdownload.soe.ucsc.edu/gbdb/hg38/hg38/pseudogenes/pseudoPipePgenes.bb -chrom=chr21 -start=0 -end=10000000 stdout</tt>\n</p>\n\n<h2>Credits</h2>\n<p>Thanks to the Gerstein lab at Yale University for making this data available, and to Cristina\nSisu for providing data in GTF format with parent annotations.</p>\n\n<h2>References</h2>\n<p>\nZhang Z, Carriero N, Zheng D, Karro J, Harrison PM, Gerstein M.\n<a href=\"https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btl116\"\ntarget=\"_blank\">\nPseudoPipe: an automated pseudogene identification pipeline</a>.\n<em>Bioinformatics</em>. 2006 Jun 15;22(12):1437-9.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/16574694\" target=\"_blank\">16574694</a>\n</p>\n",
+        "itemRgb": "on",
+        "labelFields": "hugo",
+        "labelSeparator": "\" \"",
+        "longLabel": "Yale Pseudogenes",
+        "mouseOver": "<b>PseudoPipe ID</b>: ${ppgene} <br> <b>Parent Ensembl gene ID</b>: ${geneParent} <br>  <b>Pseudogene type</b>: ${pgeneType}",
+        "parent": "pseudogenes",
+        "searchIndex": "hugo,name,ppgene",
+        "searchTrix": "/gbdb/hg38/pseudogenes/pseudoPipePgenes.ix",
+        "shortLabel": "Pseudogenes",
+        "track": "yale_pseudogenes"
+      },
+      "description": "Yale Pseudogenes",
+      "category": ["Genes and Gene Predictions"]
     },
     {
       "trackId": "pTriplo",
@@ -14757,6 +14843,7 @@
         "longLabel": "HUGO Gene Nomenclature",
         "mouseOver": "Symbol:$symbol; $name, Alias symbol: $alias_symbol; Previous symbols:$prev_symbol",
         "noScoreFilter": "on",
+        "pennantIcon": "Updated red ../goldenPath/newsarch.html \"Updated May 5, 2025\"",
         "searchIndex": "name",
         "searchTrix": "/gbdb/hg38/hgnc/search.ix",
         "shortLabel": "HGNC",
@@ -17650,11 +17737,11 @@
         "itemRgb": "on",
         "longLabel": "VISTA Enhancers",
         "mouseOverField": "patternExpression",
-        "pennantIcon": "Updated red ../goldenPath/newsarch.html \"\"",
+        "pennantIcon": "Updated red ../goldenPath/newsarch.html#050525 \"Updated May 5, 2025\"",
         "shortLabel": "VISTA Enhancers",
         "track": "vistaEnhancersBb",
         "urlLabel": "View on the VISTA Enhancer Browser",
-        "html": "<H2>Description</H2>\n\n<p>This track shows potential enhancers whose activity was experimentally validated in transgenic\nmice. Most of these noncoding elements were selected for testing based on their extreme conservation\nin other vertebrates or epigenomic evidence (ChIP-Seq) of putative enhancer marks. More information\ncan be found on the <a href=\"https://enhancer.lbl.gov/\" target=\"_blank\">VISTA Enhancer Browser</a>\npage.\n</p>\n\n<h2> Display Conventions and Configuration </h2>\n<p>Items appearing in <b><font color=\"#2260f2\">blue</font></b> (positive) indicate that a\nreproducible pattern was observed in the in vivo enhancer assay under at least one of the\ntested conditions. Items appearing in <b><font color=\"#646464\">gray</font></b> (negative) indicate\nthat NO reproducible pattern was observed in the in vivo enhancer assay under any of the tested\nconditions. This does not exclude the possibility that this region is a reproducible enhancer active\nunder different conditions, for example at an earlier or later timepoint in development.</p>\n\n<h2>Methods</h2>\n<p> Excerpted from the Vista Enhancer <a HREF=\"https://enhancer.lbl.gov/vista/manual\"\nTARGET=_BLANK>Mouse Enhancer Screen Handbook and Methods</a> page at the Lawrence Berkeley\nNational Laboratory (LBNL) website:\n<h4>Enhancer Candidate Identification</h4>\n<p> Most enhancer candidate sequences are identified by extreme evolutionary sequence conservation or\nby ChIP-seq.  Detailed information related to enhancer identification by extreme evolutionary\nconservation can be found in the following publications:\n</p>\n<ul>\n<li>Pennacchio et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/11253049/\" target=\"_blank\"\n>Genomic strategies to identify mammalian regulatory sequences.</a> Nature Rev Genet 2001</li>\n<li>Nobrega et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/14563999/\" target=\"_blank\"\n>Nobrega et al., Scanning human gene deserts for long-range enhancers.</a> Science 2003</li>\n<li>Pennacchio et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/17086198/\" target=\"_blank\"\n>In vivo enhancer analysis of human conserved non-coding sequences.</a> Nature 2006</li>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/17276707/\" target=\"_blank\"\n>Enhancer identification through comparative genomics.</a> Semin Cell Dev Biol. 2007</li>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/18176564/\" target=\"_blank\"\n>Ultraconservation identifies a small subset of extremely constrained developmental enhancers.</a>\n Nature Genet 2008</li>\n</ul>\n\n<p>Detailed information related to enhancer identification by ChIP-seq can be found in the\nfollowing publications:</p>\n<ul>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/19212405/\" target=\"_blank\"\n>ChIP-seq accurately predicts tissue-specific activity of enhancers.</a> Nature 2009</li>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/19741700/\" target=\"_blank\"\n>Genomic views of distant-acting enhancers.</a> Nature 2009</li>\n</ul></p>\n\n<p>See the Transgenic Mouse Assay section for experimental procedures that were used to perform the\ntransgenic assays: <a HREF=\"https://enhancer.lbl.gov/vista/manual\"\nTARGET=_BLANK>Mouse Enhancer Screen Handbook and Methods</a> \n\n<p>UCSC converted the\n<a href=\"https://gitlab.com/egsb-mfgl/vista-data/\" target=\"_blank\">vista-data</a> bed files for\nhg38 and mm10 into bigBed format using the bedToBigBed utility. The data for mm39 was lifted over\nfrom mm10. The data for hg19 was lifted over from hg38.</p> \n\n<h2>Data Access</h2>\n<p>\nVISTA Enhancers data can be explored interactively with the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgTables\">Table Browser</a> and cross-referenced with the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgIntegrator\">Data Integrator</a>. For programmatic access, the track can be\naccessed using the Genome Browser's <a href=\"/goldenPath/help/api.html\">REST API</a>. ReMap\nannotations can be downloaded from the Genome Browser's\n<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hg38/vistaEnhancers\">download server</a>\nas a bigBed file. This compressed binary format can be remotely queried through\ncommand line utilities. Please note that some of the download files can be quite large.</p>\n\n<h2>Credits</h2>\n<p>Thanks to the Lawrence Berkeley National Laboratory for providing this data.</p>\n\n\n<h2>References</h2>\n<p>\nKosicki M, Baltoumas FA, Kelman G, Boverhof J, Ong Y, Cook LE, Dickel DE, Pavlopoulos GA, Pennacchio\nLA, Visel A.\n<a href=\"https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkae940\" target=\"_blank\">\nVISTA Enhancer browser: an updated database of tissue-specific developmental enhancers</a>.\n<em>Nucleic Acids Res</em>. 2025 Jan 6;53(D1):D324-D330.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/39470740\" target=\"_blank\">39470740</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11701537/\" target=\"_blank\">PMC11701537</a>\n</p>\n<p>\nVisel A, Minovitsky S, Dubchak I, Pennacchio LA.\n<a href=\"https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkl822\" target=\"_blank\">\nVISTA Enhancer Browser--a database of tissue-specific human enhancers</a>.\n<em>Nucleic Acids Res</em>. 2007 Jan;35(Database issue):D88-92.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/17130149\" target=\"_blank\">17130149</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1716724/\" target=\"_blank\">PMC1716724</a>\n</p>\n"
+        "html": "<H2>Description</H2>\n\n<p>This track shows potential enhancers whose activity was experimentally validated in transgenic\nmice. Most of these noncoding elements were selected for testing based on their extreme conservation\nin other vertebrates or epigenomic evidence (ChIP-Seq) of putative enhancer marks. More information\ncan be found on the <a href=\"https://enhancer.lbl.gov/\" target=\"_blank\">VISTA Enhancer Browser</a>\npage.\n</p>\n\n<h2> Display Conventions and Configuration </h2>\n<p>Items appearing in <b><font color=\"#2260f2\">blue</font></b> (positive) indicate that a\nreproducible pattern was observed in the in vivo enhancer assay under at least one of the\ntested conditions. Items appearing in <b><font color=\"#646464\">gray</font></b> (negative) indicate\nthat NO reproducible pattern was observed in the in vivo enhancer assay under any of the tested\nconditions. This does not exclude the possibility that this region is a reproducible enhancer active\nunder different conditions, for example at an earlier or later timepoint in development.</p>\n\n<h2>Methods</h2>\n<p> Excerpted from the Vista Enhancer <a HREF=\"https://enhancer.lbl.gov/vista/manual\"\ntarget=\"_blank\">Mouse Enhancer Screen Handbook and Methods</a> page at the Lawrence Berkeley\nNational Laboratory (LBNL) website:\n<h4>Enhancer Candidate Identification</h4>\n<p> Most enhancer candidate sequences are identified by extreme evolutionary sequence conservation or\nby ChIP-seq.  Detailed information related to enhancer identification by extreme evolutionary\nconservation can be found in the following publications:\n</p>\n<ul>\n<li>Pennacchio et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/11253049/\" target=\"_blank\"\n>Genomic strategies to identify mammalian regulatory sequences.</a> Nature Rev Genet 2001</li>\n<li>Nobrega et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/14563999/\" target=\"_blank\"\n>Nobrega et al., Scanning human gene deserts for long-range enhancers.</a> Science 2003</li>\n<li>Pennacchio et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/17086198/\" target=\"_blank\"\n>In vivo enhancer analysis of human conserved non-coding sequences.</a> Nature 2006</li>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/17276707/\" target=\"_blank\"\n>Enhancer identification through comparative genomics.</a> Semin Cell Dev Biol. 2007</li>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/18176564/\" target=\"_blank\"\n>Ultraconservation identifies a small subset of extremely constrained developmental enhancers.</a>\n Nature Genet 2008</li>\n</ul>\n\n<p>Detailed information related to enhancer identification by ChIP-seq can be found in the\nfollowing publications:</p>\n<ul>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/19212405/\" target=\"_blank\"\n>ChIP-seq accurately predicts tissue-specific activity of enhancers.</a> Nature 2009</li>\n<li>Visel et al., <a href=\"https://pubmed.ncbi.nlm.nih.gov/19741700/\" target=\"_blank\"\n>Genomic views of distant-acting enhancers.</a> Nature 2009</li>\n</ul></p>\n\n<p>See the Transgenic Mouse Assay section for experimental procedures that were used to perform the\ntransgenic assays: <a HREF=\"https://enhancer.lbl.gov/vista/manual\"\ntarget=\"_blank\">Mouse Enhancer Screen Handbook and Methods</a>\n\n<p>UCSC converted the\n<a href=\"https://gitlab.com/egsb-mfgl/vista-data/\" target=\"_blank\">vista-data</a> bed files for\nhg38 and mm10 into bigBed format using the bedToBigBed utility. The data for mm39 was lifted over\nfrom mm10. The data for hg19 was lifted over from hg38.</p> \n\n<h2>Data Access</h2>\n<p>\nVISTA Enhancers data can be explored interactively with the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgTables\">Table Browser</a> and cross-referenced with the\n<a href=\"https://genome.ucsc.edu/cgi-bin/hgIntegrator\">Data Integrator</a>. For programmatic access, the track can be\naccessed using the Genome Browser's <a href=\"/goldenPath/help/api.html\">REST API</a>. ReMap\nannotations can be downloaded from the Genome Browser's\n<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hg38/vistaEnhancers\">download server</a>\nas a bigBed file. This compressed binary format can be remotely queried through\ncommand line utilities. Please note that some of the download files can be quite large.</p>\n\n<h2>Credits</h2>\n<p>Thanks to the Lawrence Berkeley National Laboratory for providing this data.</p>\n\n\n<h2>References</h2>\n<p>\nKosicki M, Baltoumas FA, Kelman G, Boverhof J, Ong Y, Cook LE, Dickel DE, Pavlopoulos GA, Pennacchio\nLA, Visel A.\n<a href=\"https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkae940\" target=\"_blank\">\nVISTA Enhancer browser: an updated database of tissue-specific developmental enhancers</a>.\n<em>Nucleic Acids Res</em>. 2025 Jan 6;53(D1):D324-D330.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/39470740\" target=\"_blank\">39470740</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11701537/\" target=\"_blank\">PMC11701537</a>\n</p>\n<p>\nVisel A, Minovitsky S, Dubchak I, Pennacchio LA.\n<a href=\"https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkl822\" target=\"_blank\">\nVISTA Enhancer Browser--a database of tissue-specific human enhancers</a>.\n<em>Nucleic Acids Res</em>. 2007 Jan;35(Database issue):D88-92.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/17130149\" target=\"_blank\">17130149</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1716724/\" target=\"_blank\">PMC1716724</a>\n</p>\n"
       },
       "description": "VISTA Enhancers",
       "category": ["Regulation"]
@@ -21753,6 +21840,2242 @@
       },
       "description": "Non-Human RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ailMel1_chain",
+      "name": "hg38 to ailMel1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ailMel1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAilMel1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_allMis1_chain",
+      "name": "hg38 to allMis1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "allMis1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAllMis1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_amaVit1_chain",
+      "name": "hg38 to amaVit1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "amaVit1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAmaVit1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_anaPla1_chain",
+      "name": "hg38 to anaPla1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "anaPla1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAnaPla1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_anoCar2_chain",
+      "name": "hg38 to anoCar2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "anoCar2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAnoCar2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_aotNan1_chain",
+      "name": "hg38 to aotNan1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "aotNan1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAotNan1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_apaSpi1_chain",
+      "name": "hg38 to apaSpi1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "apaSpi1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToApaSpi1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_aptMan1_chain",
+      "name": "hg38 to aptMan1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "aptMan1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAptMan1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_aquChr2_chain",
+      "name": "hg38 to aquChr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "aquChr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAquChr2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_araMac1_chain",
+      "name": "hg38 to araMac1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "araMac1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAraMac1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_astMex1_chain",
+      "name": "hg38 to astMex1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "astMex1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToAstMex1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_balAcu1_chain",
+      "name": "hg38 to balAcu1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "balAcu1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToBalAcu1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_bisBis1_chain",
+      "name": "hg38 to bisBis1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "bisBis1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToBisBis1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_bosTau8_chain",
+      "name": "hg38 to bosTau8 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "bosTau8",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToBosTau8.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_bosTau9_chain",
+      "name": "hg38 to bosTau9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "bosTau9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToBosTau9.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_calJac3_chain",
+      "name": "hg38 to calJac3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "calJac3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCalJac3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_calJac4_chain",
+      "name": "hg38 to calJac4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "calJac4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCalJac4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_camFer1_chain",
+      "name": "hg38 to camFer1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "camFer1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCamFer1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_canFam3_chain",
+      "name": "hg38 to canFam3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "canFam3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCanFam3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_canFam4_chain",
+      "name": "hg38 to canFam4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "canFam4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCanFam4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_canFam5_chain",
+      "name": "hg38 to canFam5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "canFam5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCanFam5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_canFam6_chain",
+      "name": "hg38 to canFam6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "canFam6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCanFam6.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_capHir1_chain",
+      "name": "hg38 to capHir1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "capHir1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCapHir1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_casCan1_chain",
+      "name": "hg38 to casCan1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "casCan1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCasCan1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_cavApe1_chain",
+      "name": "hg38 to cavApe1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "cavApe1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCavApe1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_cavPor3_chain",
+      "name": "hg38 to cavPor3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "cavPor3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCavPor3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ce11_chain",
+      "name": "hg38 to ce11 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ce11",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCe11.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_cebCap1_chain",
+      "name": "hg38 to cebCap1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "cebCap1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCebCap1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_cerAty1_chain",
+      "name": "hg38 to cerAty1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "cerAty1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCerAty1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_cerSim1_chain",
+      "name": "hg38 to cerSim1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "cerSim1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCerSim1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_cheMyd1_chain",
+      "name": "hg38 to cheMyd1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "cheMyd1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCheMyd1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_chiLan1_chain",
+      "name": "hg38 to chiLan1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "chiLan1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToChiLan1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_chlSab2_chain",
+      "name": "hg38 to chlSab2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "chlSab2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToChlSab2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_chrAsi1_chain",
+      "name": "hg38 to chrAsi1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "chrAsi1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToChrAsi1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_chrPic2_chain",
+      "name": "hg38 to chrPic2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "chrPic2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToChrPic2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_colAng1_chain",
+      "name": "hg38 to colAng1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "colAng1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToColAng1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_colLiv1_chain",
+      "name": "hg38 to colLiv1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "colLiv1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToColLiv1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_conCri1_chain",
+      "name": "hg38 to conCri1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "conCri1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToConCri1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_criGri1_chain",
+      "name": "hg38 to criGri1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "criGri1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCriGri1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_criGriChoV1_chain",
+      "name": "hg38 to criGriChoV1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "criGriChoV1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCriGriChoV1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_criGriChoV2_chain",
+      "name": "hg38 to criGriChoV2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "criGriChoV2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToCriGriChoV2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_danRer10_chain",
+      "name": "hg38 to danRer10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "danRer10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToDanRer10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_danRer11_chain",
+      "name": "hg38 to danRer11 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "danRer11",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToDanRer11.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_dasNov3_chain",
+      "name": "hg38 to dasNov3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "dasNov3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToDasNov3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_dipOrd2_chain",
+      "name": "hg38 to dipOrd2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "dipOrd2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToDipOrd2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_echTel2_chain",
+      "name": "hg38 to echTel2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "echTel2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEchTel2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_eleEdw1_chain",
+      "name": "hg38 to eleEdw1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "eleEdw1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEleEdw1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_enhLutNer1_chain",
+      "name": "hg38 to enhLutNer1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "enhLutNer1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEnhLutNer1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_eptFus1_chain",
+      "name": "hg38 to eptFus1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "eptFus1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEptFus1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_equCab2_chain",
+      "name": "hg38 to equCab2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "equCab2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEquCab2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_equCab3_chain",
+      "name": "hg38 to equCab3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "equCab3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEquCab3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_eriEur2_chain",
+      "name": "hg38 to eriEur2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "eriEur2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEriEur2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_eulFla1_chain",
+      "name": "hg38 to eulFla1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "eulFla1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEulFla1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_eulMac1_chain",
+      "name": "hg38 to eulMac1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "eulMac1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToEulMac1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_falChe1_chain",
+      "name": "hg38 to falChe1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "falChe1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFalChe1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_falPer1_chain",
+      "name": "hg38 to falPer1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "falPer1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFalPer1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_felCat8_chain",
+      "name": "hg38 to felCat8 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "felCat8",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFelCat8.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_felCat9_chain",
+      "name": "hg38 to felCat9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "felCat9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFelCat9.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ficAlb1_chain",
+      "name": "hg38 to ficAlb1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ficAlb1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFicAlb1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ficAlb2_chain",
+      "name": "hg38 to ficAlb2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ficAlb2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFicAlb2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_fr3_chain",
+      "name": "hg38 to fr3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "fr3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFr3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_fukDam1_chain",
+      "name": "hg38 to fukDam1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "fukDam1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToFukDam1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_gadMor1_chain",
+      "name": "hg38 to gadMor1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "gadMor1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGadMor1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_galGal4_chain",
+      "name": "hg38 to galGal4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "galGal4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGalGal4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_galGal5_chain",
+      "name": "hg38 to galGal5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "galGal5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGalGal5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_galGal6_chain",
+      "name": "hg38 to galGal6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "galGal6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGalGal6.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_galVar1_chain",
+      "name": "hg38 to galVar1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "galVar1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGalVar1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_gasAcu1_chain",
+      "name": "hg38 to gasAcu1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "gasAcu1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGasAcu1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_geoFor1_chain",
+      "name": "hg38 to geoFor1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "geoFor1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGeoFor1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_gorGor3_chain",
+      "name": "hg38 to gorGor3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "gorGor3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGorGor3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_gorGor4_chain",
+      "name": "hg38 to gorGor4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "gorGor4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGorGor4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_gorGor5_chain",
+      "name": "hg38 to gorGor5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "gorGor5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToGorGor5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_hapBur1_chain",
+      "name": "hg38 to hapBur1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "hapBur1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToHapBur1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_hetGla2_chain",
+      "name": "hg38 to hetGla2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "hetGla2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToHetGla2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_hg19_chain",
+      "name": "hg38 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_hs1_chain",
+      "name": "hg38 to hs1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "hs1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToHs1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_jacJac1_chain",
+      "name": "hg38 to jacJac1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "jacJac1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToJacJac1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_latCha1_chain",
+      "name": "hg38 to latCha1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "latCha1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToLatCha1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_lepOcu1_chain",
+      "name": "hg38 to lepOcu1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "lepOcu1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToLepOcu1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_lepWed1_chain",
+      "name": "hg38 to lepWed1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "lepWed1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToLepWed1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_loxAfr3_chain",
+      "name": "hg38 to loxAfr3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "loxAfr3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToLoxAfr3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_macEug2_chain",
+      "name": "hg38 to macEug2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "macEug2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMacEug2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_macFas5_chain",
+      "name": "hg38 to macFas5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "macFas5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMacFas5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_macNem1_chain",
+      "name": "hg38 to macNem1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "macNem1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMacNem1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_manLeu1_chain",
+      "name": "hg38 to manLeu1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "manLeu1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToManLeu1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_manPen1_chain",
+      "name": "hg38 to manPen1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "manPen1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToManPen1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_mayZeb1_chain",
+      "name": "hg38 to mayZeb1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "mayZeb1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMayZeb1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_melGal1_chain",
+      "name": "hg38 to melGal1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "melGal1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMelGal1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_melGal5_chain",
+      "name": "hg38 to melGal5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "melGal5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMelGal5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_melUnd1_chain",
+      "name": "hg38 to melUnd1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "melUnd1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMelUnd1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_mesAur1_chain",
+      "name": "hg38 to mesAur1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "mesAur1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMesAur1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_micMur1_chain",
+      "name": "hg38 to micMur1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "micMur1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMicMur1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_micMur2_chain",
+      "name": "hg38 to micMur2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "micMur2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMicMur2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_micMur3_chain",
+      "name": "hg38 to micMur3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "micMur3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMicMur3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_micOch1_chain",
+      "name": "hg38 to micOch1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "micOch1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMicOch1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_mm10_chain",
+      "name": "hg38 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_mm39_chain",
+      "name": "hg38 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMm39.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_monDom5_chain",
+      "name": "hg38 to monDom5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "monDom5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMonDom5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_musFur1_chain",
+      "name": "hg38 to musFur1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "musFur1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMusFur1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_myoDav1_chain",
+      "name": "hg38 to myoDav1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "myoDav1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMyoDav1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_myoLuc2_chain",
+      "name": "hg38 to myoLuc2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "myoLuc2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToMyoLuc2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_nasLar1_chain",
+      "name": "hg38 to nasLar1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "nasLar1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToNasLar1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_neoBri1_chain",
+      "name": "hg38 to neoBri1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "neoBri1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToNeoBri1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_neoSch1_chain",
+      "name": "hg38 to neoSch1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "neoSch1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToNeoSch1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_nomLeu3_chain",
+      "name": "hg38 to nomLeu3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "nomLeu3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToNomLeu3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ochPri3_chain",
+      "name": "hg38 to ochPri3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ochPri3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOchPri3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_octDeg1_chain",
+      "name": "hg38 to octDeg1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "octDeg1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOctDeg1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_odoRosDiv1_chain",
+      "name": "hg38 to odoRosDiv1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "odoRosDiv1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOdoRosDiv1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_orcOrc1_chain",
+      "name": "hg38 to orcOrc1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "orcOrc1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOrcOrc1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_oreNil2_chain",
+      "name": "hg38 to oreNil2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "oreNil2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOreNil2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_oreNil3_chain",
+      "name": "hg38 to oreNil3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "oreNil3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOreNil3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ornAna1_chain",
+      "name": "hg38 to ornAna1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ornAna1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOrnAna1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ornAna2_chain",
+      "name": "hg38 to ornAna2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ornAna2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOrnAna2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_oryAfe1_chain",
+      "name": "hg38 to oryAfe1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "oryAfe1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOryAfe1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_oryCun2_chain",
+      "name": "hg38 to oryCun2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "oryCun2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOryCun2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_oryLat2_chain",
+      "name": "hg38 to oryLat2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "oryLat2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOryLat2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_otoGar3_chain",
+      "name": "hg38 to otoGar3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "otoGar3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOtoGar3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_oviAri3_chain",
+      "name": "hg38 to oviAri3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "oviAri3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOviAri3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_oviAri4_chain",
+      "name": "hg38 to oviAri4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "oviAri4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToOviAri4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panHod1_chain",
+      "name": "hg38 to panHod1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panHod1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanHod1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panPan1_chain",
+      "name": "hg38 to panPan1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panPan1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanPan1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panPan2_chain",
+      "name": "hg38 to panPan2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panPan2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanPan2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panPan3_chain",
+      "name": "hg38 to panPan3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panPan3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanPan3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panTro3_chain",
+      "name": "hg38 to panTro3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panTro3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanTro3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panTro4_chain",
+      "name": "hg38 to panTro4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panTro4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanTro4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panTro5_chain",
+      "name": "hg38 to panTro5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panTro5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanTro5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_panTro6_chain",
+      "name": "hg38 to panTro6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "panTro6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPanTro6.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_papAnu2_chain",
+      "name": "hg38 to papAnu2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "papAnu2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPapAnu2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_papAnu3_chain",
+      "name": "hg38 to papAnu3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "papAnu3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPapAnu3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_papAnu4_chain",
+      "name": "hg38 to papAnu4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "papAnu4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPapAnu4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_pelSin1_chain",
+      "name": "hg38 to pelSin1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "pelSin1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPelSin1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_petMar2_chain",
+      "name": "hg38 to petMar2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "petMar2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPetMar2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_petMar3_chain",
+      "name": "hg38 to petMar3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "petMar3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPetMar3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ponAbe2_chain",
+      "name": "hg38 to ponAbe2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ponAbe2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPonAbe2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_ponAbe3_chain",
+      "name": "hg38 to ponAbe3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "ponAbe3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPonAbe3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_proCoq1_chain",
+      "name": "hg38 to proCoq1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "proCoq1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToProCoq1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_pseHum1_chain",
+      "name": "hg38 to pseHum1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "pseHum1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPseHum1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_pteAle1_chain",
+      "name": "hg38 to pteAle1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "pteAle1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPteAle1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_pteVam1_chain",
+      "name": "hg38 to pteVam1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "pteVam1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPteVam1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_punNye1_chain",
+      "name": "hg38 to punNye1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "punNye1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToPunNye1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rheMac2_chain",
+      "name": "hg38 to rheMac2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rheMac2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRheMac2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rheMac3_chain",
+      "name": "hg38 to rheMac3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rheMac3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRheMac3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rheMac8_chain",
+      "name": "hg38 to rheMac8 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rheMac8",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRheMac8.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rheMac10_chain",
+      "name": "hg38 to rheMac10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rheMac10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRheMac10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rhiBie1_chain",
+      "name": "hg38 to rhiBie1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rhiBie1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRhiBie1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rhiRox1_chain",
+      "name": "hg38 to rhiRox1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rhiRox1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRhiRox1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rn4_chain",
+      "name": "hg38 to rn4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rn4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRn4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rn5_chain",
+      "name": "hg38 to rn5 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rn5",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRn5.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rn6_chain",
+      "name": "hg38 to rn6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rn6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRn6.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_rn7_chain",
+      "name": "hg38 to rn7 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "rn7",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToRn7.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_saiBol1_chain",
+      "name": "hg38 to saiBol1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "saiBol1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToSaiBol1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_sarHar1_chain",
+      "name": "hg38 to sarHar1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "sarHar1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToSarHar1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_sorAra2_chain",
+      "name": "hg38 to sorAra2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "sorAra2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToSorAra2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_speTri2_chain",
+      "name": "hg38 to speTri2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "speTri2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToSpeTri2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_susScr3_chain",
+      "name": "hg38 to susScr3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "susScr3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToSusScr3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_susScr11_chain",
+      "name": "hg38 to susScr11 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "susScr11",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToSusScr11.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_taeGut2_chain",
+      "name": "hg38 to taeGut2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "taeGut2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTaeGut2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_takFla1_chain",
+      "name": "hg38 to takFla1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "takFla1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTakFla1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_tarSyr2_chain",
+      "name": "hg38 to tarSyr2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "tarSyr2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTarSyr2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_tetNig2_chain",
+      "name": "hg38 to tetNig2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "tetNig2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTetNig2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_thaSir1_chain",
+      "name": "hg38 to thaSir1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "thaSir1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToThaSir1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_triMan1_chain",
+      "name": "hg38 to triMan1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "triMan1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTriMan1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_tupBel1_chain",
+      "name": "hg38 to tupBel1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "tupBel1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTupBel1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_tupChi1_chain",
+      "name": "hg38 to tupChi1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "tupChi1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTupChi1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_turTru2_chain",
+      "name": "hg38 to turTru2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "turTru2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToTurTru2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_vicPac2_chain",
+      "name": "hg38 to vicPac2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "vicPac2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToVicPac2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_xenLae2_chain",
+      "name": "hg38 to xenLae2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "xenLae2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToXenLae2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_xenTro7_chain",
+      "name": "hg38 to xenTro7 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "xenTro7",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToXenTro7.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_xenTro9_chain",
+      "name": "hg38 to xenTro9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "xenTro9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToXenTro9.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_xenTro10_chain",
+      "name": "hg38 to xenTro10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "xenTro10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToXenTro10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_xipMac1_chain",
+      "name": "hg38 to xipMac1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "xipMac1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToXipMac1.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_zonAlb1_chain",
+      "name": "hg38 to zonAlb1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "zonAlb1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/liftOver/hg38ToZonAlb1.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

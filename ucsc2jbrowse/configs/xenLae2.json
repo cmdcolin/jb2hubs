@@ -1788,6 +1788,45 @@
       },
       "description": "Non-African clawed frog RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenLae2_to_hg38_chain",
+      "name": "xenLae2 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenLae2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenLae2",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenLae2_to_mm10_chain",
+      "name": "xenLae2 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenLae2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenLae2",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenLae2_to_xenTro9_chain",
+      "name": "xenLae2 to xenTro9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenLae2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenLae2",
+        "queryAssembly": "xenTro9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToXenTro9.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

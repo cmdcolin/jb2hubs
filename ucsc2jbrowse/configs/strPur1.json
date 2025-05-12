@@ -954,6 +954,19 @@
       },
       "description": "Non-S. purpuratus RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur1_to_strPur2_chain",
+      "name": "strPur1 to strPur2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "strPur1",
+        "queryAssembly": "strPur2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur1/liftOver/strPur1ToStrPur2.over.chain.gz"
+      }
     }
   ]
 }

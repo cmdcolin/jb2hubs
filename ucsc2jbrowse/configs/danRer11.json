@@ -2147,6 +2147,71 @@
       },
       "description": "Non-Zebrafish RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_danRer7_chain",
+      "name": "danRer11 to danRer7 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "danRer7",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer11/liftOver/danRer11ToDanRer7.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_danRer10_chain",
+      "name": "danRer11 to danRer10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "danRer10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer11/liftOver/danRer11ToDanRer10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_hg38_chain",
+      "name": "danRer11 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer11/liftOver/danRer11ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_mm10_chain",
+      "name": "danRer11 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer11/liftOver/danRer11ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_mm39_chain",
+      "name": "danRer11 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer11/liftOver/danRer11ToMm39.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

@@ -690,6 +690,32 @@
       },
       "description": "Non-S. cerevisiae RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sacCer1_to_sacCer2_chain",
+      "name": "sacCer1 to sacCer2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sacCer1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "sacCer1",
+        "queryAssembly": "sacCer2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sacCer1_to_sacCer3_chain",
+      "name": "sacCer1 to sacCer3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sacCer1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "sacCer1",
+        "queryAssembly": "sacCer3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer3.over.chain.gz"
+      }
     }
   ]
 }

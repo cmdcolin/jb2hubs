@@ -1833,6 +1833,58 @@
       },
       "description": "Non-Baboon RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papAnu4_to_hg38_chain",
+      "name": "papAnu4 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papAnu4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "papAnu4",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papAnu4_to_mm10_chain",
+      "name": "papAnu4 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papAnu4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "papAnu4",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papAnu4_to_papAnu2_chain",
+      "name": "papAnu4 to papAnu2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papAnu4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "papAnu4",
+        "queryAssembly": "papAnu2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToPapAnu2.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papAnu4_to_papAnu3_chain",
+      "name": "papAnu4 to papAnu3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papAnu4"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "papAnu4",
+        "queryAssembly": "papAnu3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToPapAnu3.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

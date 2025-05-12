@@ -866,6 +866,58 @@
       },
       "description": "Non-Lancelet RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_galGal3_chain",
+      "name": "braFlo1 to galGal3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "galGal3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToGalGal3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_hg18_chain",
+      "name": "braFlo1 to hg18 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "hg18",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToHg18.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_mm9_chain",
+      "name": "braFlo1 to mm9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "mm9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToMm9.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_petMar1_chain",
+      "name": "braFlo1 to petMar1 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "petMar1",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToPetMar1.over.chain.gz"
+      }
     }
   ]
 }

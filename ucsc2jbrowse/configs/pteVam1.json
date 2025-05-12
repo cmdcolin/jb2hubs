@@ -1519,6 +1519,32 @@
       },
       "description": "Non-Megabat RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "pteVam1_to_hg38_chain",
+      "name": "pteVam1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["pteVam1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "pteVam1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/pteVam1/liftOver/pteVam1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "pteVam1_to_mm10_chain",
+      "name": "pteVam1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["pteVam1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "pteVam1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/pteVam1/liftOver/pteVam1ToMm10.over.chain.gz"
+      }
     }
   ]
 }

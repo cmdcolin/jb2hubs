@@ -1509,6 +1509,45 @@
       },
       "description": "Non-Alpaca RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac2_to_hg19_chain",
+      "name": "vicPac2 to hg19 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "vicPac2",
+        "queryAssembly": "hg19",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/vicPac2/liftOver/vicPac2ToHg19.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac2_to_hg38_chain",
+      "name": "vicPac2 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "vicPac2",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/vicPac2/liftOver/vicPac2ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac2_to_mm10_chain",
+      "name": "vicPac2 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "vicPac2",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/vicPac2/liftOver/vicPac2ToMm10.over.chain.gz"
+      }
     }
   ]
 }

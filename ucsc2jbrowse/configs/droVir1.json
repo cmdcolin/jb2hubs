@@ -408,6 +408,19 @@
       },
       "description": "Non-D. virilis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droVir1_to_dm2_chain",
+      "name": "droVir1 to dm2 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droVir1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "droVir1",
+        "queryAssembly": "dm2",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir1/liftOver/droVir1ToDm2.over.chain.gz"
+      }
     }
   ]
 }

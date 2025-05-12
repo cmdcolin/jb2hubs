@@ -3,8 +3,7 @@
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 export PATH=$(pwd):$PATH
 mkdir -p ~/ucscResults
-curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
-./downloadGoldenpath.sh ~/ucsc
+
 ./createAssemblies.sh ~/ucsc/*
 ./createTracksJsonForGoldenPath.sh ~/ucsc/*
 ./createBedTracksForGoldenPath.sh ~/ucsc/*
@@ -16,6 +15,10 @@ curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
 ./addMetadata.sh ~/ucscResults/*
 node src/makeUcscExtensions.ts ~/ucscResults
 ./getFileListing.sh ~/ucscResults/
-./generateChainTracks.sh
+
+for i in ~/ucsc/*; do
+  ./generateChainTracks.sh -a $(basename $i)
+done
+
 fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
 yarn prettier --write .

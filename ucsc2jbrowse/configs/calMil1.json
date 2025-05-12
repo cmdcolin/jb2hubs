@@ -1784,6 +1784,19 @@
       },
       "description": "Non-Elephant shark RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "calMil1_to_rn6_chain",
+      "name": "calMil1 to rn6 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["calMil1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "calMil1",
+        "queryAssembly": "rn6",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/calMil1/liftOver/calMil1ToRn6.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

@@ -1784,6 +1784,45 @@
       },
       "description": "Non-Coelacanth RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "latCha1_to_fr3_chain",
+      "name": "latCha1 to fr3 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["latCha1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "latCha1",
+        "queryAssembly": "fr3",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/latCha1/liftOver/latCha1ToFr3.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "latCha1_to_hg38_chain",
+      "name": "latCha1 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["latCha1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "latCha1",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/latCha1/liftOver/latCha1ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "latCha1_to_mm10_chain",
+      "name": "latCha1 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["latCha1"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "latCha1",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/latCha1/liftOver/latCha1ToMm10.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [
