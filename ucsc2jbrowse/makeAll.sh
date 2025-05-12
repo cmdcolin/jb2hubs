@@ -22,3 +22,4 @@ done
 
 fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
 yarn prettier --write .
+node src/mergeAll.ts

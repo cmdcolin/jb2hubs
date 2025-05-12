@@ -10,6 +10,6 @@ export interface TrackDbEntry {
 export interface JBrowseConfig {
   tracks: { trackId: string; adapter: Record<string, unknown> }[]
   assemblies: { name: string }[]
-  plugins: unknown[]
+  plugins?: unknown[]
   aggregateTextSearchAdapters?: Record<string, unknown>[]
 }
