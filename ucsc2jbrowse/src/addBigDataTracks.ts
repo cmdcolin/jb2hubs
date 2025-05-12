@@ -14,6 +14,8 @@ const bigDataEntries = readJSON(process.argv[2]!) as BigDataTracksJson
 const config = readConfig(process.argv[3]!)
 const base = 'https://hgdownload.soe.ucsc.edu'
 const asm0 = config.assemblies[0]!
+const n0 = asm0.name
+
 fs.writeFileSync(
   process.argv[3]!,
   JSON.stringify(
@@ -26,6 +28,7 @@ fs.writeFileSync(
             .map(val => {
               const { settings, tableName } = val
               const { bigDataUrl } = settings
+              const trackId = `${n0}-${tableName}`
               if (bigDataUrl && !bigDataUrl.includes('fantom')) {
                 const uri = bigDataUrl.startsWith(base)
                   ? bigDataUrl
@@ -36,10 +39,10 @@ fs.writeFileSync(
                   bigDataUrl.endsWith('.bigBed')
                 ) {
                   return {
-                    trackId: tableName,
+                    trackId,
                     name: tableName,
                     type: 'FeatureTrack',
-                    assemblyNames: [asm0.name],
+                    assemblyNames: [n0],
                     adapter: {
                       type: 'BigBedAdapter',
                       uri,
@@ -47,10 +50,10 @@ fs.writeFileSync(
                   }
                 } else if (bigDataUrl.endsWith('.bam')) {
                   return {
-                    trackId: tableName,
+                    trackId,
                     name: tableName,
                     type: 'AlignmentsTrack',
-                    assemblyNames: [asm0.name],
+                    assemblyNames: [n0],
                     adapter: {
                       type: 'BamAdapter',
                       uri,
@@ -60,10 +63,10 @@ fs.writeFileSync(
                   }
                 } else {
                   return {
-                    trackId: tableName,
+                    trackId,
                     name: tableName,
                     type: 'QuantitativeTrack',
-                    assemblyNames: [asm0.name],
+                    assemblyNames: [n0],
                     adapter: {
                       type: 'BigWigAdapter',
                       uri,

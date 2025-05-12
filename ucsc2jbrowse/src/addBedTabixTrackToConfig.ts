@@ -13,13 +13,15 @@ const config = readConfig(process.argv[2]!)
 const arg = path.basename(process.argv[3]!)
 const base = path.basename(arg, '.bed.gz')
 const asm0 = config.assemblies[0]!
+const n0 = asm0.name
+const trackId = `${n0}-${base}`
 
 // Create the new track configuration
 const newTrack = {
   type: 'FeatureTrack',
-  trackId: base,
+  trackId,
   name: base,
-  assemblyNames: [asm0.name],
+  assemblyNames: [n0],
   adapter: {
     type: 'BedTabixAdapter',
     bedGzLocation: { uri: arg },
@@ -31,18 +33,18 @@ const newTrack = {
 }
 
 // Check if track already exists
-const existingTrackIndex = config.tracks.findIndex(f => f.trackId === base)
+const existingTrackIndex = config.tracks.findIndex(f => f.trackId === trackId)
 
 // Create updated tracks array - either replace existing or add new
 let updatedTracks
 if (existingTrackIndex >= 0) {
   // Replace existing track
-  console.log(`Replacing existing track with ID "${base}"`)
+  console.log(`Replacing existing track with ID "${trackId}"`)
   updatedTracks = [...config.tracks]
   updatedTracks[existingTrackIndex] = newTrack
 } else {
   // Add new track
-  console.log(`Adding new track with ID "${base}"`)
+  console.log(`Adding new track with ID "${trackId}"`)
   updatedTracks = [...config.tracks, newTrack]
 }
 

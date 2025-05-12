@@ -1,4 +1,5 @@
 import path from 'path'
+// this script currently unused
 
 const args = process.argv.slice(2)
 const base = args.map(a => path.basename(a))

@@ -33,16 +33,11 @@ fs.writeFileSync(
   path.join(os.homedir(), 'ucscResults', 'all.json'),
   JSON.stringify(
     {
-      // intentionally not doing aggregate text search
-      assemblies: ret.map(r => r.assemblies).flat(),
-      tracks: ret
-        .map(r =>
-          r.tracks.map(track => ({
-            ...track,
-            trackId: `${r.assemblies[0]!.name}-${track.trackId}`,
-          })),
-        )
-        .flat(),
+      assemblies: ret.flatMap(r => r.assemblies),
+      aggregateTextSearchAdapters: ret.flatMap(
+        r => r.aggregateTextSearchAdapters || [],
+      ),
+      tracks: ret.flatMap(r => r.tracks),
     },
     null,
     2,

@@ -12,12 +12,15 @@ if (process.argv.length < 3) {
 const config = readConfig(process.argv[2]!)
 const arg = path.basename(process.argv[3]!)
 const base = path.basename(arg, '.sorted.gff.gz')
+const asm0 = config.assemblies[0]!
+const n0 = asm0.name
+const trackId = `${n0}-${base}`
 
 const newTrack = {
   type: 'FeatureTrack',
-  trackId: base,
+  trackId,
   name: base,
-  assemblyNames: [config.assemblies[0]!.name],
+  assemblyNames: [n0],
   adapter: {
     type: 'Gff3TabixAdapter',
     gffGzLocation: { uri: arg },
@@ -28,15 +31,15 @@ const newTrack = {
   },
 }
 
-const existingTrackIndex = config.tracks.findIndex(f => f.trackId === base)
+const existingTrackIndex = config.tracks.findIndex(f => f.trackId === trackId)
 
 let updatedTracks
 if (existingTrackIndex >= 0) {
-  console.log(`Replacing existing track with ID "${base}"`)
+  console.log(`Replacing existing track with ID "${trackId}"`)
   updatedTracks = [...config.tracks]
   updatedTracks[existingTrackIndex] = newTrack
 } else {
-  console.log(`Adding new track with ID "${base}"`)
+  console.log(`Adding new track with ID "${trackId}"`)
   updatedTracks = [...config.tracks, newTrack]
 }
 
