@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rclone sync --exclude "*.hash" ~/ucscResults jbrowse-data:jbrowse-org-data/ucsc
+rclone sync -c --exclude "*.hash" --exclude "*_meta.json" ~/ucscResults jbrowse-data:jbrowse.org/ucsc
