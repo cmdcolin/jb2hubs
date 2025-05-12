@@ -22,7 +22,8 @@ export function addRelativeUris(
       if (typeof config[key] === 'object' && config[key] !== null) {
         addRelativeUris(config[key] as Record<string, unknown>, base)
       } else if (key === 'uri') {
-        config[key] = `${base}/${config[key]}`
+        const s = config[key] as string
+        config[key] = s.startsWith('http') ? s : `${base}/${s}`
       }
     }
   }

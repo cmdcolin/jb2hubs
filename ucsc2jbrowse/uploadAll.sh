@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# use size-only for most everything, hope that things don't differ by 1 byte...
-aws s3 sync --delete --size-only --exclude="*meta.json" --exclude "*.hash" ~/ucscResults s3://jbrowse.org/ucsc/
-
-# don't use size-only for csi files, because they sometimes do only differ by 1 byte
-aws s3 sync --delete --exclude="*" --include "*.csi" ~/ucscResults s3://jbrowse.org/ucsc/
+# We use rclone because it has the ability to checksum, compared with plain aws sync (which often will re-upload exact same file, with updated filetime)
+rclone sync -c --exclude "*.hash" --exclude "*_meta.json" ~/ucscResults jbrowse-data:jbrowse.org/ucsc
 
 aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths "/ucsc/*"
