@@ -16,6 +16,6 @@ curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
 ./addMetadata.sh ~/ucscResults/*
 node src/makeUcscExtensions.ts ~/ucscResults
 ./getFileListing.sh ~/ucscResults/
-
+./generateChainTracks.sh
 fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
 yarn prettier --write .
