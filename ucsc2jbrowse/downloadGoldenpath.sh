@@ -3,17 +3,17 @@
 : ${OUT:=~/ucsc}
 : ${OUT2:=~/ucscAlt}
 
-# curl https://api.genome.ucsc.edu/list/ucscGenomes | jq -r '.ucscGenomes | keys[]' | while
-#   read p
-# do
-#   if [ "$p" = "cb1" ] || [ "$p" = "hs1" ]; then
-#     echo "Skipping $p genome"
-#     continue
-#   fi
-#   echo "rsync $OUT/$p"
-#   mkdir -p $OUT/$p/$p
-#   rsync --max-size=2G -qavzP rsync://hgdownload.cse.ucsc.edu/goldenPath/$p/database $OUT/$p/$p/
-# done
+curl https://api.genome.ucsc.edu/list/ucscGenomes | jq -r '.ucscGenomes | keys[]' | while
+  read p
+do
+  if [ "$p" = "cb1" ] || [ "$p" = "hs1" ]; then
+    echo "Skipping $p genome"
+    continue
+  fi
+  echo "rsync $OUT/$p"
+  mkdir -p $OUT/$p/$p
+  rsync --max-size=2G -qavzP rsync://hgdownload.cse.ucsc.edu/goldenPath/$p/database $OUT/$p/$p/
+done
 
 for p in hgFixed; do
   echo "rsync $OUT2/$p"
