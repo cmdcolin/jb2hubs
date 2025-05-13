@@ -22,9 +22,11 @@ export async function enhanceGffWithLinkTable(
       .map(r => {
         const ret = r.split('\t')
         return [
-          ret[0],
+          ret[0]!,
           Object.fromEntries(
-            ret.map((col, idx) => [linkCols.colNames[idx], col] as const),
+            ret.map(
+              (col, idx) => [linkCols.colNames[idx]!, col.split(',')] as const,
+            ),
           ),
         ] as const
       }),
@@ -43,12 +45,15 @@ export async function enhanceGffWithLinkTable(
           .map(f => f.trim())
           .filter(f => !!f)
           .map(f => f.split('=') as [string, string])
-          .map(([key, val]) => [key.trim(), val] as const),
+          .map(([key, val]) => [key.trim(), val.split(',')] as const),
       )
       const ID = col9attrs.ID ?? ''
-      const newCol9 = `${col9};${Object.entries(data[ID] ?? {})
+      const newCol9 = `${col9};${Object.entries(data[ID[0]!] || {})
         .filter(([_key, val]) => !!val)
-        .map(([key, val]) => `${key}=${encodeURIComponent(val as string)}`)
+        .map(
+          ([key, val]) =>
+            `${key}=${val.map(r => encodeURIComponent(r as string)).join(',')}`,
+        )
         .join(';')}`
 
       process.stdout.write(

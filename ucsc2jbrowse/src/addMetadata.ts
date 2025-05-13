@@ -12,10 +12,10 @@ console.log(
     {
       ...config,
       tracks: config.tracks.map(t => {
-        const r = tracksDb[t.trackId]
-        if (r) {
-          const { settings, html, longLabel, shortLabel, grp, ...rest } =
-            tracksDb[t.trackId]!
+        const trackLabelWithoutAssemblyName = t.trackId.replace(/.*-/, '')
+        const track = tracksDb[trackLabelWithoutAssemblyName]
+        if (track) {
+          const { settings, html, longLabel, shortLabel, grp, ...rest } = track
           const s2 = Object.fromEntries(
             settings
               .split('\n')
