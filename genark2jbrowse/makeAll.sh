@@ -24,3 +24,4 @@ node src/makeGenArkExtensions.ts
 
 # Format
 yarn prettier --log-level error --write ../website/hubs/
+yarn prettier --log-level error --write ../website/hubJson

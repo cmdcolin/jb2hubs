@@ -5,7 +5,6 @@ import { type UCSCGenArkAssemblyEntry, parseAssemblyEntry } from 'hubtools'
 
 import { readJSON } from './util.ts'
 
-
 let entries = [] as UCSCGenArkAssemblyEntry[]
 const files = fs.readdirSync('hubJson').map(f => path.join('hubJson', f))
 for (const file of files) {
