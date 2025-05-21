@@ -1001,12 +1001,12 @@
       "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
-          "uri": "augustusGene.sorted.gff.gz"
+          "uri": "augustusGene.gff.gz"
         },
         "index": {
           "indexType": "CSI",
           "location": {
-            "uri": "augustusGene.sorted.gff.gz.csi"
+            "uri": "augustusGene.gff.gz.csi"
           }
         }
       },
@@ -1047,12 +1047,12 @@
       "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
-          "uri": "genscan.sorted.gff.gz"
+          "uri": "genscan.gff.gz"
         },
         "index": {
           "indexType": "CSI",
           "location": {
-            "uri": "genscan.sorted.gff.gz.csi"
+            "uri": "genscan.gff.gz.csi"
           }
         }
       },
@@ -1091,12 +1091,12 @@
       "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
-          "uri": "ncbiRefSeq.sorted.gff.gz"
+          "uri": "ncbiRefSeq.gff.gz"
         },
         "index": {
           "indexType": "CSI",
           "location": {
-            "uri": "ncbiRefSeq.sorted.gff.gz.csi"
+            "uri": "ncbiRefSeq.gff.gz.csi"
           }
         }
       },
@@ -1138,12 +1138,12 @@
       "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
-          "uri": "ncbiRefSeqPredicted.sorted.gff.gz"
+          "uri": "ncbiRefSeqPredicted.gff.gz"
         },
         "index": {
           "indexType": "CSI",
           "location": {
-            "uri": "ncbiRefSeqPredicted.sorted.gff.gz.csi"
+            "uri": "ncbiRefSeqPredicted.gff.gz.csi"
           }
         }
       },
@@ -1185,12 +1185,12 @@
       "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
-          "uri": "xenoRefGene.sorted.gff.gz"
+          "uri": "xenoRefGene.gff.gz"
         },
         "index": {
           "indexType": "CSI",
           "location": {
-            "uri": "xenoRefGene.sorted.gff.gz.csi"
+            "uri": "xenoRefGene.gff.gz.csi"
           }
         }
       },
@@ -1272,25 +1272,6 @@
         "queryAssembly": "dp3",
         "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droPer1/liftOver/droPer1ToDp3.over.chain.gz"
       }
-    }
-  ],
-  "aggregateTextSearchAdapters": [
-    {
-      "type": "TrixTextSearchAdapter",
-      "textSearchAdapterId": "droPer1-index",
-      "ixFilePath": {
-        "uri": "trix/droPer1.ix",
-        "locationType": "UriLocation"
-      },
-      "ixxFilePath": {
-        "uri": "trix/droPer1.ixx",
-        "locationType": "UriLocation"
-      },
-      "metaFilePath": {
-        "uri": "trix/droPer1_meta.json",
-        "locationType": "UriLocation"
-      },
-      "assemblyNames": ["droPer1"]
     }
   ]
 }

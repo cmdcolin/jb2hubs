@@ -14,11 +14,11 @@ mkdir -p ~/ucscResults
 ./textIndexGoldenPath.sh ~/ucscResults/*
 ./addMetadata.sh ~/ucscResults/*
 node src/makeUcscExtensions.ts ~/ucscResults
-./getFileListing.sh ~/ucscResults/
 
 for i in ~/ucsc/*; do
   ./generateChainTracks.sh -a $(basename $i)
 done
+./getFileListing.sh ~/ucscResults/
 
 fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
 yarn prettier --write .

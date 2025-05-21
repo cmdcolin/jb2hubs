@@ -26,24 +26,6 @@
       "name": "*",
       "assemblyNames": ["mpxvRivers"],
       "adapter": {
-        "type": "BedTabixAdapter",
-        "bedGzLocation": {
-          "uri": "*.bed.gz"
-        },
-        "index": {
-          "indexType": "CSI",
-          "location": {
-            "uri": "*.bed.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "FeatureTrack",
-      "trackId": "mpxvRivers-*.gff.gz",
-      "name": "*.gff.gz",
-      "assemblyNames": ["mpxvRivers"],
-      "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
           "uri": "*.gff.gz"

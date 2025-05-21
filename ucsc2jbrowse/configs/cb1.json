@@ -20,24 +20,6 @@
       "name": "*",
       "assemblyNames": ["cb1"],
       "adapter": {
-        "type": "BedTabixAdapter",
-        "bedGzLocation": {
-          "uri": "*.bed.gz"
-        },
-        "index": {
-          "indexType": "CSI",
-          "location": {
-            "uri": "*.bed.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "FeatureTrack",
-      "trackId": "cb1-*.gff.gz",
-      "name": "*.gff.gz",
-      "assemblyNames": ["cb1"],
-      "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
           "uri": "*.gff.gz"

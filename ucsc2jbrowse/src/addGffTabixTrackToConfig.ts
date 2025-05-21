@@ -11,7 +11,7 @@ if (process.argv.length < 3) {
 
 const config = readConfig(process.argv[2]!)
 const arg = path.basename(process.argv[3]!)
-const base = path.basename(arg, '.sorted.gff.gz')
+const base = path.basename(arg, '.gff.gz')
 const asm0 = config.assemblies[0]!
 const n0 = asm0.name
 const trackId = `${n0}-${base}`

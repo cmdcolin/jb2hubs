@@ -20,24 +20,6 @@
       "name": "*",
       "assemblyNames": ["hgFixed"],
       "adapter": {
-        "type": "BedTabixAdapter",
-        "bedGzLocation": {
-          "uri": "*.bed.gz"
-        },
-        "index": {
-          "indexType": "CSI",
-          "location": {
-            "uri": "*.bed.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "FeatureTrack",
-      "trackId": "hgFixed-*.gff.gz",
-      "name": "*.gff.gz",
-      "assemblyNames": ["hgFixed"],
-      "adapter": {
         "type": "Gff3TabixAdapter",
         "gffGzLocation": {
           "uri": "*.gff.gz"
