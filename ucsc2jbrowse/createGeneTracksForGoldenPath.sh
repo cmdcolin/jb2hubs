@@ -31,7 +31,7 @@ process_gene_tracks() {
 
       # Check if we need to process the file
       need_processing=true
-      if [ -f "${outfile}.sorted.gff.gz" ] && [ -f "$hash_file" ]; then
+      if [ -f "${outfile}.gff.gz" ] && [ -f "$hash_file" ]; then
         stored_hash=$(cat "$hash_file")
         if [ "$current_hash" = "$stored_hash" ]; then
           # echo "Skipping ${key}: file unchanged"
@@ -48,16 +48,16 @@ process_gene_tracks() {
         if [ -f "${infile}Link.sql" ]; then
           echo node src/enhanceGffWithLinkTable.ts ${outfile}.gff "${infile}Link.txt.gz" "${infile}Link.sql" >${outfile}.enhanced.gff
           node src/enhanceGffWithLinkTable.ts ${outfile}.gff "${infile}Link.txt.gz" "${infile}Link.sql" >${outfile}.enhanced.gff
-          jbrowse sort-gff ${outfile}.enhanced.gff | bgzip >${outfile}.sorted.gff.gz
+          jbrowse sort-gff ${outfile}.enhanced.gff | bgzip >${outfile}.gff.gz
         else
-          jbrowse sort-gff ${outfile}.gff | bgzip >${outfile}.sorted.gff.gz
+          jbrowse sort-gff ${outfile}.gff | bgzip >${outfile}.gff.gz
         fi
         rm -f "${outfile}.bed" &&
           rm -f "${outfile}.isoforms.txt" &&
           rm -f "${outfile}.enhanced.gff" &&
           rm -f "${outfile}.gff"
 
-        tabix -C ${outfile}.sorted.gff.gz
+        tabix -C ${outfile}.gff.gz
 
         # Store the hash for future comparisons
         echo "$current_hash" >"$hash_file"
