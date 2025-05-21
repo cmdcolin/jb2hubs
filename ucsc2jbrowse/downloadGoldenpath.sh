@@ -18,5 +18,5 @@ done
 for p in hgFixed; do
   echo "rsync $OUT2/$p"
   mkdir -p $OUT2/$p/$p
-  rsync --max-size=2G -qavzP rsync://hgdownload.cse.ucsc.edu/goldenPath/hgFixed/database $OUT2/$p/$p/
+  rsync --max-size=2G -azP rsync://hgdownload.cse.ucsc.edu/goldenPath/hgFixed/database $OUT2/$p/$p/
 done

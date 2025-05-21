@@ -6,4 +6,3 @@ mkdir -p ~/ucscResults
 curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
 
 ./downloadGoldenpath.sh ~/ucsc
-./createAssemblies.sh ~/ucsc/*

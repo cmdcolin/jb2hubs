@@ -35,11 +35,9 @@ const existingTrackIndex = config.tracks.findIndex(f => f.trackId === trackId)
 
 let updatedTracks
 if (existingTrackIndex >= 0) {
-  console.log(`Replacing existing track with ID "${trackId}"`)
   updatedTracks = [...config.tracks]
   updatedTracks[existingTrackIndex] = newTrack
 } else {
-  console.log(`Adding new track with ID "${trackId}"`)
   updatedTracks = [...config.tracks, newTrack]
 }
 
