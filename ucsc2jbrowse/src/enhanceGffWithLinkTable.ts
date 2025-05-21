@@ -4,6 +4,14 @@ import zlib from 'zlib'
 
 import { getColNames } from './utils/getColNames.ts'
 
+function encode(s: string) {
+  return s
+    .replaceAll(';', '%3B')
+    .replaceAll('=', '%3D')
+    .replaceAll('&', '%26')
+    .replaceAll(',', '%2C')
+}
+
 export async function enhanceGffWithLinkTable(
   gffFile: string,
   linkFile: string,
@@ -19,14 +27,16 @@ export async function enhanceGffWithLinkTable(
       .gunzipSync(fs.readFileSync(linkFile))
       .toString('utf8')
       .split('\n')
+      .filter(f => !!f)
       .map(r => {
         const ret = r.split('\t')
         return [
           ret[0]!,
           Object.fromEntries(
-            ret.map(
-              (col, idx) => [linkCols.colNames[idx]!, col.split(',')] as const,
-            ),
+            ret.map((col, idx) => {
+              // console.log({ key: linkCols.colNames[idx]!, col: col.split(',') })
+              return [linkCols.colNames[idx]!, col.split(',')] as const
+            }),
           ),
         ] as const
       }),
@@ -47,19 +57,29 @@ export async function enhanceGffWithLinkTable(
           .map(f => f.split('=') as [string, string])
           .map(([key, val]) => [key.trim(), val.split(',')] as const),
       )
-      const ID = col9attrs.ID ?? ''
-      const newCol9 = `${col9};${Object.entries(data[ID[0]!] || {})
-        .filter(([_key, val]) => !!val)
-        .map(
-          ([key, val]) =>
-            `${key}=${val.map(r => encodeURIComponent(r as string)).join(',')}`,
-        )
-        .join(';')}`
+      const ID0 = col9attrs.ID?.[0] ?? ''
+      const r0 = Object.fromEntries(
+        Object.entries(data[ID0] ?? {})
+          .map(([key, val]) => [key, val] as const)
+          .filter(([_key, val]) => val.filter(f => !!f).length > 0),
+      )
 
       process.stdout.write(
-        [chr, source, type, start, end, score, strand, phase, newCol9].join(
-          '\t',
-        ) + '\n',
+        [
+          chr,
+          source,
+          type,
+          start,
+          end,
+          score,
+          strand,
+          phase,
+          Object.entries({ ...col9attrs, ...r0 })
+            .map(([key, val]) => [key, val.map(r => encode(r)).join(',')])
+            .filter(([_key, val]) => !!val)
+            .map(([key, val]) => `${key}=${val}`)
+            .join(';'),
+        ].join('\t') + '\n',
       )
     }
   }

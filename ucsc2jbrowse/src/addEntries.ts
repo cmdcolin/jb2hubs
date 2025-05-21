@@ -7,7 +7,7 @@ console.log(
     {
       ...config,
       plugins: [
-        ...(config.plugins || []),
+        ...(config.plugins ?? []),
         {
           name: 'MsaView',
           umdLoc: {

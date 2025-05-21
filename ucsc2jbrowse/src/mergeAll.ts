@@ -1,6 +1,7 @@
 import fs from 'fs'
-import path from 'path'
 import os from 'os'
+import path from 'path'
+
 import { readConfig } from './util.ts'
 
 const base = 'configs'
@@ -9,7 +10,7 @@ const ret = fs
   .map(file => readConfig(path.join(base, file)))
   .map(config => {
     // @ts-expect-error
-    addRelativeUris(config, `${config.assemblies[0]!.name}`)
+    addRelativeUris(config, config.assemblies[0]!.name)
     return config
   })
 
@@ -35,7 +36,7 @@ fs.writeFileSync(
     {
       assemblies: ret.flatMap(r => r.assemblies),
       aggregateTextSearchAdapters: ret.flatMap(
-        r => r.aggregateTextSearchAdapters || [],
+        r => r.aggregateTextSearchAdapters ?? [],
       ),
       tracks: ret.flatMap(r => r.tracks),
     },
