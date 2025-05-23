@@ -94,8 +94,6 @@ EOF
     temp_file=$(mktemp)
     jq --argjson new_track "$track_json" '. += [$new_track]' "$TEMP_TRACKS_FILE" >"$temp_file"
     mv "$temp_file" "$TEMP_TRACKS_FILE"
-
-    echo "Added track for ${source_assembly} to ${target_assembly}"
   else
     echo "Warning: Could not parse filename format for $filename"
   fi

@@ -65,13 +65,40 @@
     },
     {
       "trackId": "hg19-AmpliSeq-Target",
-      "name": "AmpliSeq-Target",
+      "name": "Exome Probesets - AmpliSeq Target",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/Exome.dna_manifest.20180509.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "AmpliSeq-Target",
+        "type": "bigBed 4",
+        "visibility": "0",
+        "priority": "1",
+        "colorR": "22",
+        "colorG": "62",
+        "colorB": "164",
+        "altColorR": "138",
+        "altColorG": "158",
+        "altColorB": "209",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/Exome.dna_manifest.20180509.bb",
+        "color": "22,62,164",
+        "longLabel": "Illumina - AmpliSeq Exome Panel Target Regions",
+        "parent": "exomeProbesets on",
+        "shortLabel": "AmpliSeq Target",
+        "track": "AmpliSeq-Target",
+        "html": ""
+      },
+      "description": "Illumina - AmpliSeq Exome Panel Target Regions",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-clinGenHaplo",
@@ -865,7 +892,7 @@
         "html": ""
       },
       "description": "gnomAD pext Mean Proportion",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-mitoMapVars",
@@ -1107,13 +1134,42 @@
     },
     {
       "trackId": "hg19-denovoDbnon-ssc",
-      "name": "denovoDbnon-ssc",
+      "name": "denovo-db - non-ssc samples",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/denovoDb/non_ssc_variants.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "denovoDbnon-ssc",
+        "type": "bigBed 9 +",
+        "visibility": "dense",
+        "priority": "1",
+        "colorR": "0",
+        "colorG": "0",
+        "colorB": "0",
+        "altColorR": "127",
+        "altColorG": "127",
+        "altColorB": "127",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/denovoDb/non_ssc_variants.bb",
+        "labelFields": "variant",
+        "longLabel": "Non-Simons Simplex Collection samples from denovo-db",
+        "mouseOver": "<b>Position</b>: $chrom:${chromStart}-${chromEnd}<br> <b>Variant</b>: ${variant}<br> <b>Primary Phenotype</b>: ${primaryPhenotype}<br> <b>Validation</b>: ${validation}<br> <b>Transcript</b>: ${transcript}",
+        "parent": "denovoDbComposite",
+        "shortLabel": "non-ssc samples",
+        "track": "denovoDbnon-ssc",
+        "urls": "pubmedID=\"https://www.ncbi.nlm.nih.gov/pubmed/$$\" gene=\"http://www.genecards.org/cgi-bin/cardsearch.pl?search=$$\" transcript=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=GenBank\"",
+        "html": ""
+      },
+      "description": "Non-Simons Simplex Collection samples from denovo-db",
+      "category": ["Variation and Repeats"]
     },
     {
       "trackId": "hg19-panelAppGenes",
@@ -2380,7 +2436,7 @@
         "html": ""
       },
       "description": "IDT -  xGen Exome Research Panel V1.0 Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-jaspar2022",
@@ -3524,7 +3580,7 @@
         "html": ""
       },
       "description": "IDT - xGen Exome Research Panel V1.0 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-jaspar2020",
@@ -4368,7 +4424,7 @@
         "html": ""
       },
       "description": "IDT -  xGen Exome Research Panel V2.0 Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-unipInterest",
@@ -4959,7 +5015,10 @@
         "track": "knownGeneV45lift37"
       },
       "description": "GENCODE V45lift37",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "trackId": "hg19-knownGeneV47lift37",
@@ -5011,7 +5070,10 @@
         "track": "knownGeneV47lift37"
       },
       "description": "GENCODE V47lift37",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "trackId": "hg19-geneHancerRegElements",
@@ -5085,7 +5147,7 @@
         "html": ""
       },
       "description": "IDT - xGen Exome Research Panel V2.0 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-dbSnp153BadCoords",
@@ -5473,7 +5535,10 @@
         "track": "knownGeneKent"
       },
       "description": "Legacy UCSC Genes track (knownGene) from 2013",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "trackId": "hg19-unipLocCytopl",
@@ -5624,7 +5689,7 @@
         "html": ""
       },
       "description": "Roche - KAPA HyperExome Capture Probe Footprint",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-getRmNgsProblemHigh",
@@ -5998,7 +6063,7 @@
         "html": ""
       },
       "description": "Roche - KAPA HyperExome Primary Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-noAFmutG",
@@ -6299,7 +6364,7 @@
         "html": ""
       },
       "description": "MGI - Easy Exome Capture V4 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-noAFmutT",
@@ -6561,7 +6626,7 @@
         "html": ""
       },
       "description": "MGI - Easy Exome Capture V5 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-prsT2Diabetes",
@@ -6798,13 +6863,40 @@
     },
     {
       "trackId": "hg19-nextera-dna-exome-targeted-regions-manifest-v1-2",
-      "name": "nextera-dna-exome-targeted-regions-manifest-v1-2",
+      "name": "Exome Probesets - Nextera DNA V1.2 T",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/nextera-dna-exome-targeted-regions-manifest-v1-2.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "nextera-dna-exome-targeted-regions-manifest-v1-2",
+        "type": "bigBed 4",
+        "visibility": "0",
+        "priority": "10",
+        "colorR": "22",
+        "colorG": "62",
+        "colorB": "164",
+        "altColorR": "138",
+        "altColorG": "158",
+        "altColorB": "209",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/nextera-dna-exome-targeted-regions-manifest-v1-2.bb",
+        "color": "22,62,164",
+        "longLabel": "Illumina - Nextera DNA Exome V1.2 Target Regions",
+        "parent": "exomeProbesets off",
+        "shortLabel": "Nextera DNA V1.2 T",
+        "track": "nextera-dna-exome-targeted-regions-manifest-v1-2",
+        "html": ""
+      },
+      "description": "Illumina - Nextera DNA Exome V1.2 Target Regions",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-transMapEnsemblV5",
@@ -7082,7 +7174,7 @@
         "html": ""
       },
       "description": "Illumina - Nextera Rapid Capture Expanded Exome Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-unipOther",
@@ -7232,7 +7324,7 @@
         "html": ""
       },
       "description": "Illumina - Nextera Rapid Capture Exome Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-unipRepeat",
@@ -7343,7 +7435,7 @@
         "html": ""
       },
       "description": "Illumina - Nextera Rapid Capture Exome V1.2 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-unipConflict",
@@ -7385,13 +7477,40 @@
     },
     {
       "trackId": "hg19-SeqCap-EZ_MedExome_hg19_capture_targets",
-      "name": "SeqCap-EZ_MedExome_hg19_capture_targets",
+      "name": "Exome Probesets - SeqCap EZ Med P",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/sorted-SeqCap_EZ_MedExome_hg19_capture_targets.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "SeqCap-EZ_MedExome_hg19_capture_targets",
+        "type": "bigBed 4",
+        "visibility": "0",
+        "priority": "14",
+        "colorR": "100",
+        "colorG": "143",
+        "colorB": "255",
+        "altColorR": "177",
+        "altColorG": "199",
+        "altColorB": "255",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/sorted-SeqCap_EZ_MedExome_hg19_capture_targets.bb",
+        "color": "100,143,255",
+        "longLabel": "Roche - SeqCap EZ MedExome Capture Probe Footprint",
+        "parent": "exomeProbesets off",
+        "shortLabel": "SeqCap EZ Med P",
+        "track": "SeqCap-EZ_MedExome_hg19_capture_targets",
+        "html": ""
+      },
+      "description": "Roche - SeqCap EZ MedExome Capture Probe Footprint",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-epdNew",
@@ -7436,33 +7555,114 @@
     },
     {
       "trackId": "hg19-SeqCap-EZ_MedExome_hg19_empirical_targets",
-      "name": "SeqCap-EZ_MedExome_hg19_empirical_targets",
+      "name": "Exome Probesets - SeqCap EZ Med T",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/sorted_SeqCap_EZ_MedExome_hg19_empirical_targets.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "SeqCap-EZ_MedExome_hg19_empirical_targets",
+        "type": "bigBed 4",
+        "visibility": "0",
+        "priority": "15",
+        "colorR": "100",
+        "colorG": "143",
+        "colorB": "255",
+        "altColorR": "177",
+        "altColorG": "199",
+        "altColorB": "255",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/sorted_SeqCap_EZ_MedExome_hg19_empirical_targets.bb",
+        "color": "100,143,255",
+        "longLabel": "Roche - SeqCap EZ MedExome Empirical Target Regions",
+        "parent": "exomeProbesets off",
+        "shortLabel": "SeqCap EZ Med T",
+        "track": "SeqCap-EZ_MedExome_hg19_empirical_targets",
+        "html": ""
+      },
+      "description": "Roche - SeqCap EZ MedExome Empirical Target Regions",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-SeqCap-EZ_MedExomePlusMito_hg19_capture",
-      "name": "SeqCap-EZ_MedExomePlusMito_hg19_capture",
+      "name": "Exome Probesets - SeqCap EZ Med+Mito P",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/sorted-SeqCap_EZ_MedExomePlusMito_hg19_capture_targets.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "SeqCap-EZ_MedExomePlusMito_hg19_capture",
+        "type": "bigBed 4",
+        "visibility": "0",
+        "priority": "16",
+        "colorR": "100",
+        "colorG": "143",
+        "colorB": "255",
+        "altColorR": "177",
+        "altColorG": "199",
+        "altColorB": "255",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/sorted-SeqCap_EZ_MedExomePlusMito_hg19_capture_targets.bb",
+        "color": "100,143,255",
+        "longLabel": "Roche - SeqCap EZ MedExome + Mito Capture Probe Footprint",
+        "parent": "exomeProbesets on",
+        "shortLabel": "SeqCap EZ Med+Mito P",
+        "track": "SeqCap-EZ_MedExomePlusMito_hg19_capture",
+        "html": ""
+      },
+      "description": "Roche - SeqCap EZ MedExome + Mito Capture Probe Footprint",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-SeqCap-EZ_MedExomePlusMito_hg19_empirical_targets",
-      "name": "SeqCap-EZ_MedExomePlusMito_hg19_empirical_targets",
+      "name": "Exome Probesets - SeqCap EZ Med+Mito T",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/SeqCap_EZ_MedExomePlusMito_hg19_empirical_targets.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "SeqCap-EZ_MedExomePlusMito_hg19_empirical_targets",
+        "type": "bigBed 3",
+        "visibility": "0",
+        "priority": "17",
+        "colorR": "100",
+        "colorG": "143",
+        "colorB": "255",
+        "altColorR": "177",
+        "altColorG": "199",
+        "altColorB": "255",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/SeqCap_EZ_MedExomePlusMito_hg19_empirical_targets.bb",
+        "color": "100,143,255",
+        "longLabel": "Roche - SeqCap EZ MedExome + Mito Empirical Target Regions",
+        "parent": "exomeProbesets on",
+        "shortLabel": "SeqCap EZ Med+Mito T",
+        "track": "SeqCap-EZ_MedExomePlusMito_hg19_empirical_targets",
+        "html": ""
+      },
+      "description": "Roche - SeqCap EZ MedExome + Mito Empirical Target Regions",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-SeqCap_EZ_Exome_v3_hg19_capture",
@@ -7499,7 +7699,7 @@
         "html": ""
       },
       "description": "Roche - SeqCap EZ Exome V3 Capture Probe Footprint",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-SeqCap_EZ_Exome_v3_hg19_primary",
@@ -7536,7 +7736,7 @@
         "html": ""
       },
       "description": "Roche - SeqCap EZ Exome V3 Primary Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-SeqCap_EZ_ExomeV3_Plus_UTR_hg19_capture_annotated",
@@ -7573,7 +7773,7 @@
         "html": ""
       },
       "description": "Roche - SeqCap EZ Exome V3 + UTR Capture Probe Footprint",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-SeqCap_EZ_ExomeV3_Plus_UTR_hg19_primary_annotated",
@@ -7610,7 +7810,7 @@
         "html": ""
       },
       "description": "Roche - SeqCap EZ Exome V3 + UTR Primary Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_Clinical_Research_Covered",
@@ -7647,7 +7847,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect Clinical Research Exome Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_Clinical_Research_Regions",
@@ -7684,7 +7884,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect Clinical Research Exome Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-snpArrayIllumina450k",
@@ -7720,7 +7920,7 @@
         "html": ""
       },
       "description": "Illumina 450k Methylation Array",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_Clinical_Research_V2_Covered",
@@ -7757,7 +7957,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect Clinical Research Exome V2 Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-snpArrayIllumina850k",
@@ -7793,7 +7993,7 @@
         "html": ""
       },
       "description": "Illumina 850k EPIC Methylation Array",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_Clinical_Research_V2_Regions",
@@ -7830,7 +8030,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect Clinical Research Exome V2 Target",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-epicV2illuminaMethylation",
@@ -7868,7 +8068,7 @@
         "track": "epicV2illuminaMethylation"
       },
       "description": "Illumina EPIC v2 Methylation Array",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-snpArrayCytoSnp850k",
@@ -7906,7 +8106,7 @@
         "urls": "rsID=\"https://www.ncbi.nlm.nih.gov/snp/?term=$$\""
       },
       "description": "Illumina 850k CytoSNP Array",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_Focused_Covered",
@@ -7943,7 +8143,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect Focused Exome Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_Focused_Regions",
@@ -7980,7 +8180,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect Focused Exome Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V4_Covered",
@@ -8017,7 +8217,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V4 Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V4_Regions",
@@ -8054,7 +8254,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V4 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V4_UTRs_Covered",
@@ -8091,7 +8291,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V4 + UTRs Covered by Probe",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V4_UTRs_Regions",
@@ -8128,7 +8328,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V4 + UTRs Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V5_Covered",
@@ -8165,7 +8365,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V5 Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V5_Regions",
@@ -8202,7 +8402,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V5 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V5_UTRs_Covered",
@@ -8239,7 +8439,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V5 + UTRs Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V5_UTRs_Regions",
@@ -8276,7 +8476,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V5 + UTRs Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V6_Covered",
@@ -8313,7 +8513,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V6 r2 Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V6_Regions",
@@ -8350,7 +8550,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V6 r2 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V6_COSMIC_Covered",
@@ -8387,7 +8587,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V6 + COSMIC r2 Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V6_COSMIC_Regions",
@@ -8424,7 +8624,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V6 + COSMIC r2 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V6_UTRs_Covered",
@@ -8461,7 +8661,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V6 + UTR r2 Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V7_Covered",
@@ -8498,7 +8698,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V7 Covered by Probes",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V7_Regions",
@@ -8535,7 +8735,7 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V7 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Agilent_Human_Exon_V6_UTRs_Regions",
@@ -8572,27 +8772,81 @@
         "html": ""
       },
       "description": "Agilent - SureSelect All Exon V6 + UTR r2 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-truseq-dna-exome-targeted-manifest-v1-2",
-      "name": "truseq-dna-exome-targeted-manifest-v1-2",
+      "name": "Exome Probesets - TruSeq DNA V1.2 T",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/truseq-dna-exome-targeted-regions-manifest-v1-2.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "truseq-dna-exome-targeted-manifest-v1-2",
+        "type": "bigBed 4",
+        "visibility": "0",
+        "priority": "44",
+        "colorR": "22",
+        "colorG": "62",
+        "colorB": "164",
+        "altColorR": "138",
+        "altColorG": "158",
+        "altColorB": "209",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/truseq-dna-exome-targeted-regions-manifest-v1-2.bb",
+        "color": "22,62,164",
+        "longLabel": "Illumina - TruSeq DNA Exome V1.2 Target Regions",
+        "parent": "exomeProbesets off",
+        "shortLabel": "TruSeq DNA V1.2 T",
+        "track": "truseq-dna-exome-targeted-manifest-v1-2",
+        "html": ""
+      },
+      "description": "Illumina - TruSeq DNA Exome V1.2 Target Regions",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-truseq-rapid-exome-targeted-regions-manifest-v1-2",
-      "name": "truseq-rapid-exome-targeted-regions-manifest-v1-2",
+      "name": "Exome Probesets - TruSeq Rapid v1.2 T",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/exomeProbesets/truseq-rapid-exome-targeted-regions-manifest-v1-2.bb"
-      }
+      },
+      "metadata": {
+        "tableName": "truseq-rapid-exome-targeted-regions-manifest-v1-2",
+        "type": "bigBed 4",
+        "visibility": "0",
+        "priority": "45",
+        "colorR": "22",
+        "colorG": "62",
+        "colorB": "164",
+        "altColorR": "138",
+        "altColorG": "158",
+        "altColorB": "209",
+        "useScore": "0",
+        "private": "0",
+        "restrictCount": "0",
+        "restrictList": "",
+        "url": "",
+        "canPack": "1",
+        "bigDataUrl": "/gbdb/hg19/exomeProbesets/truseq-rapid-exome-targeted-regions-manifest-v1-2.bb",
+        "color": "22,62,164",
+        "longLabel": "Illumina - TruSeq Rapid Exome V1.2 Target Regions Regions",
+        "parent": "exomeProbesets off",
+        "shortLabel": "TruSeq Rapid v1.2 T",
+        "track": "truseq-rapid-exome-targeted-regions-manifest-v1-2",
+        "html": ""
+      },
+      "description": "Illumina - TruSeq Rapid Exome V1.2 Target Regions Regions",
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-TSOne_Expanded_BED_v2",
@@ -8629,7 +8883,7 @@
         "html": ""
       },
       "description": "Illumina - TruSight ONE Expanded V2.0 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-TruSight_One_v1",
@@ -8666,7 +8920,7 @@
         "html": ""
       },
       "description": "Illumina - TruSight ONE V1.1 Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-trusight_exome_manifest_a",
@@ -8703,7 +8957,7 @@
         "html": ""
       },
       "description": "Illumina - TruSight Exome Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Twist_Comp_Exome_Target",
@@ -8740,7 +8994,7 @@
         "html": ""
       },
       "description": "Twist - Comprehensive Exome Panel Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Twist_Exome_Target",
@@ -8777,7 +9031,7 @@
         "html": ""
       },
       "description": "Twist - Core Exome Panel Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Twist_Exome_Target2",
@@ -8814,7 +9068,7 @@
         "html": ""
       },
       "description": "Twist - Exome 2.0 Panel Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-Twist_Exome_RefSeq_Targets",
@@ -8851,7 +9105,7 @@
         "html": ""
       },
       "description": "Twist - RefSeq Exome Panel Target Regions",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "trackId": "hg19-abSplice",
@@ -8933,7 +9187,7 @@
         "html": ""
       },
       "description": "gnomAD pext Adipose-Subcutaneous",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextAdipose_Visceral_Omentum_",
@@ -8970,7 +9224,7 @@
         "html": ""
       },
       "description": "gnomAD pext Adipose-Visceral (Omentum)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextAdrenalGland",
@@ -9007,7 +9261,7 @@
         "html": ""
       },
       "description": "gnomAD pext Adrenal Gland",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextArtery_Aorta",
@@ -9044,7 +9298,7 @@
         "html": ""
       },
       "description": "gnomAD pext Artery-Aorta",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextArtery_Coronary",
@@ -9081,7 +9335,7 @@
         "html": ""
       },
       "description": "gnomAD pext Artery-Coronary",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextArtery_Tibial",
@@ -9118,7 +9372,7 @@
         "html": ""
       },
       "description": "gnomAD pext Artery-Tibial",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-avada",
@@ -9196,7 +9450,7 @@
         "html": ""
       },
       "description": "gnomAD pext Bladder",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Amygdala",
@@ -9233,7 +9487,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Amygdala",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Anteriorcingulatecortex_BA24_",
@@ -9270,7 +9524,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Anterior Cingulate Cortex (BA24)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Caudate_basalganglia_",
@@ -9307,7 +9561,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Caudate (basal ganglia)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_CerebellarHemisphere",
@@ -9344,7 +9598,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Cerebellar Hemisphere",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Cerebellum",
@@ -9381,7 +9635,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Cerebellum",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Cortex",
@@ -9418,7 +9672,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Cortex",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_FrontalCortex_BA9_",
@@ -9455,7 +9709,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Frontal Cortex (BA9)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Hippocampus",
@@ -9492,7 +9746,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Hippocampus",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Hypothalamus",
@@ -9529,7 +9783,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Hypothalamus",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Nucleusaccumbens_basalganglia_",
@@ -9566,7 +9820,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Nucleus Accumbens (basal ganglia)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Putamen_basalganglia_",
@@ -9603,7 +9857,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Putamen (basal ganglia)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Spinalcord_cervicalc_1_",
@@ -9640,7 +9894,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Spinal Cord (cervicalc 1)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBrain_Substantianigra",
@@ -9677,7 +9931,7 @@
         "html": ""
       },
       "description": "gnomAD pext Brain-Substantia Nigra",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextBreast_MammaryTissue",
@@ -9714,7 +9968,7 @@
         "html": ""
       },
       "description": "gnomAD pext Breast-Mammary Tissue",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-caddDel",
@@ -9915,7 +10169,7 @@
         "html": ""
       },
       "description": "gnomAD pext Cells-EBV-transformed Lymphocytes",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextCells_Transformedfibroblasts",
@@ -9952,7 +10206,7 @@
         "html": ""
       },
       "description": "gnomAD pext Cells-Transformed Fibroblasts",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextCervix_Ectocervix",
@@ -9989,7 +10243,7 @@
         "html": ""
       },
       "description": "gnomAD pext Cervix-Ectocervix",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextCervix_Endocervix",
@@ -10026,7 +10280,7 @@
         "html": ""
       },
       "description": "gnomAD pext Cervix-Endocervix",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-chm13LiftOver",
@@ -10233,7 +10487,7 @@
         "html": ""
       },
       "description": "gnomAD pext Colon-Sigmoid",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextColon_Transverse",
@@ -10270,7 +10524,7 @@
         "html": ""
       },
       "description": "gnomAD pext Colon-Transverse",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-cosmicMuts",
@@ -10521,7 +10775,7 @@
         "html": ""
       },
       "description": "gnomAD pext Esophagus-Gastroesophageal Junction",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextEsophagus_Mucosa",
@@ -10558,7 +10812,7 @@
         "html": ""
       },
       "description": "gnomAD pext Esophagus-Mucosa",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextEsophagus_Muscularis",
@@ -10595,7 +10849,7 @@
         "html": ""
       },
       "description": "gnomAD pext Esophagus-Muscularis",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextFallopianTube",
@@ -10632,7 +10886,7 @@
         "html": ""
       },
       "description": "gnomAD pext Fallopian Tube",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-genCC",
@@ -10992,7 +11246,7 @@
         "html": ""
       },
       "description": "gnomAD pext Heart-Atrial Appendage",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextHeart_LeftVentricle",
@@ -11029,7 +11283,7 @@
         "html": ""
       },
       "description": "gnomAD pext Heart-Left Ventricle",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-hgmd",
@@ -11155,7 +11409,7 @@
         "html": ""
       },
       "description": "gnomAD pext Kidney-Cortex",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextLiver",
@@ -11192,7 +11446,7 @@
         "html": ""
       },
       "description": "gnomAD pext Liver",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-lrgTranscriptAli",
@@ -11282,7 +11536,7 @@
         "html": ""
       },
       "description": "gnomAD pext Lung",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-mastermind",
@@ -11518,7 +11772,7 @@
         "html": ""
       },
       "description": "gnomAD pext Minor Salivary Gland",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextMuscle_Skeletal",
@@ -11555,7 +11809,7 @@
         "html": ""
       },
       "description": "gnomAD pext Muscle-Skeletal",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextNerve_Tibial",
@@ -11592,7 +11846,7 @@
         "html": ""
       },
       "description": "gnomAD pext Nerve-Tibial",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-orphadata",
@@ -11675,7 +11929,7 @@
         "html": ""
       },
       "description": "gnomAD pext Ovary",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextPancreas",
@@ -11712,7 +11966,7 @@
         "html": ""
       },
       "description": "gnomAD pext Pancreas",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextPituitary",
@@ -11749,7 +12003,7 @@
         "html": ""
       },
       "description": "gnomAD pext Pituitary",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextProstate",
@@ -11786,7 +12040,7 @@
         "html": ""
       },
       "description": "gnomAD pext Prostate",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextSkin_NotSunExposed_Suprapubic_",
@@ -11823,7 +12077,7 @@
         "html": ""
       },
       "description": "gnomAD pext Skin-Not Sun Exposed (Suprapubic)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextSkin_SunExposed_Lowerleg_",
@@ -11860,7 +12114,7 @@
         "html": ""
       },
       "description": "gnomAD pext Skin-Sun Exposed (Lowerleg)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextSmallIntestine_TerminalIleum",
@@ -11897,7 +12151,7 @@
         "html": ""
       },
       "description": "gnomAD pext Small Intestine-Terminal Ileum",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextSpleen",
@@ -11934,7 +12188,7 @@
         "html": ""
       },
       "description": "gnomAD pext Spleen",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextStomach",
@@ -11971,7 +12225,7 @@
         "html": ""
       },
       "description": "gnomAD pext Stomach",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextTestis",
@@ -12008,7 +12262,7 @@
         "html": ""
       },
       "description": "gnomAD pext Testis",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextThyroid",
@@ -12045,7 +12299,7 @@
         "html": ""
       },
       "description": "gnomAD pext Thyroid",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-targetScanMiRnaSitesV72",
@@ -12164,7 +12418,7 @@
         "html": ""
       },
       "description": "gnomAD pext Uterus",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-gnomADPextVagina",
@@ -12201,7 +12455,7 @@
         "html": ""
       },
       "description": "gnomAD pext Vagina",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "trackId": "hg19-vistaEnhancersBb",
@@ -12278,7 +12532,7 @@
         "html": ""
       },
       "description": "gnomAD pext Whole Blood",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -12322,7 +12576,7 @@
         "html": ""
       },
       "description": "Affymetrix Cytoscan CNV and SNP Array Probeset",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -12367,7 +12621,7 @@
         "html": ""
       },
       "description": "Affymetrix Human Exon Array Ambiguous Probes",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -12412,7 +12666,7 @@
         "html": ""
       },
       "description": "Affymetrix Human Exon Array Core Probes",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -12457,7 +12711,7 @@
         "html": ""
       },
       "description": "Affymetrix Human Exon Array Extended Probes",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -12502,7 +12756,7 @@
         "html": ""
       },
       "description": "Affymetrix Human Exon Array Free Probes",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -12547,7 +12801,7 @@
         "html": ""
       },
       "description": "Affymetrix Human Exon Array Full Probes",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -12816,7 +13070,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human CGH Microarray 1x1M AMADID 021529",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -12860,7 +13114,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint HD Human CGH Microarray 1x244K AMADID 014693",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -12904,7 +13158,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint HD Human CGH Microarray 2x105K AMADID 014698",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -12948,7 +13202,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human CGH Microarray 2x400K AMADID 021850",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -12992,7 +13246,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human CGH Microarray 4x180K AMADID 022060",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -13036,7 +13290,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint HD Human CGH Microarray 4x44K AMADID 014950",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -13080,7 +13334,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human CGH Microarray 8x60K AMADID 021924",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -13125,7 +13379,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human CGH+SNP Microarray 2x400K AMADID 028081",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -13170,7 +13424,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human CGH+SNP Microarray 4x180K AMADID 029830",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -13215,7 +13469,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human CGH+SNP Cancer Microarray 4x180K AMADID 030587",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -13259,7 +13513,7 @@
         "html": ""
       },
       "description": "Agilent SurePrint G3 Human High-Resolution Microarray 1x1M AMADID 023642",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -13349,7 +13603,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Adipose",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13393,7 +13647,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Adipose, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13437,7 +13691,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from BT474 Breast Tumor Cell Line",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13481,7 +13735,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from BT474 Breast Tumour Cell Line, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13525,7 +13779,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Brain",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13569,7 +13823,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Brain, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13613,7 +13867,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Breast",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13657,7 +13911,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Breast, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13701,7 +13955,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Colon",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13745,7 +13999,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Colon, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13789,7 +14043,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from HME (Human Mammary Epithelial) Cell Line",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13833,7 +14087,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from HME (Human Mammary Epithelial) Cell Line, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13877,7 +14131,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Heart",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13921,7 +14175,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Heart, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -13965,7 +14219,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Liver",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14009,7 +14263,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Liver, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14053,7 +14307,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Lymph Node",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14097,7 +14351,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Lymph Node, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14141,7 +14395,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from MB-435 Cell Line",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14185,7 +14439,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from MB-435 Cell Line, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14229,7 +14483,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from MCF-7 Breast Adenocarcinoma Cell Line",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14273,7 +14527,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from MCF-7 Breast Adenocarcinoma Cell Line, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14317,7 +14571,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Skeletal Muscle",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14361,7 +14615,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Skeletal Muscle, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14405,7 +14659,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from T-47D Breast Ductal Carcinoma Cell Line",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14449,7 +14703,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from T-47D Breast Ductal Carcinoma Cell Line, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14493,7 +14747,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Testes",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -14537,7 +14791,7 @@
         "html": ""
       },
       "description": "Burge Lab RNA-seq 32mer Reads from Testes, Raw Signal",
-      "category": ["Expression"]
+      "category": ["Uncommon or Specialized tracks", "Expression"]
     },
     {
       "type": "FeatureTrack",
@@ -15618,7 +15872,7 @@
         "html": ""
       },
       "description": "Expression QTL in Adipose_Subcutaneous from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15663,7 +15917,7 @@
         "html": ""
       },
       "description": "Expression QTL in Adipose_Visceral_Omentum from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15708,7 +15962,7 @@
         "html": ""
       },
       "description": "Expression QTL in Adrenal_Gland from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15753,7 +16007,7 @@
         "html": ""
       },
       "description": "Expression QTL in Artery_Aorta from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15798,7 +16052,7 @@
         "html": ""
       },
       "description": "Expression QTL in Artery_Coronary from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15843,7 +16097,7 @@
         "html": ""
       },
       "description": "Expression QTL in Artery_Tibial from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15888,7 +16142,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Anterior_cingulate_cortex_BA24 from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15933,7 +16187,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Caudate_basal_ganglia from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -15978,7 +16232,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Cerebellar_Hemisphere from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16023,7 +16277,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Cerebellum from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16068,7 +16322,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Cortex from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16113,7 +16367,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Frontal_Cortex_BA9 from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16158,7 +16412,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Hippocampus from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16203,7 +16457,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Hypothalamus from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16248,7 +16502,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Nucleus_accumbens_basal_ganglia from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16293,7 +16547,7 @@
         "html": ""
       },
       "description": "Expression QTL in Brain_Putamen_basal_ganglia from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16338,7 +16592,7 @@
         "html": ""
       },
       "description": "Expression QTL in Breast_Mammary_Tissue from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16383,7 +16637,7 @@
         "html": ""
       },
       "description": "Expression QTL in Colon_Sigmoid from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16428,7 +16682,7 @@
         "html": ""
       },
       "description": "Expression QTL in Colon_Transverse from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16473,7 +16727,7 @@
         "html": ""
       },
       "description": "Expression QTL in Esophagus_Gastroesophageal_Junction from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16518,7 +16772,7 @@
         "html": ""
       },
       "description": "Expression QTL in Esophagus_Mucosa from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16563,7 +16817,7 @@
         "html": ""
       },
       "description": "Expression QTL in Esophagus_Muscularis from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16608,7 +16862,7 @@
         "html": ""
       },
       "description": "Expression QTL in Heart_Atrial_Appendage from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16653,7 +16907,7 @@
         "html": ""
       },
       "description": "Expression QTL in Heart_Left_Ventricle from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16698,7 +16952,7 @@
         "html": ""
       },
       "description": "Expression QTL in Liver from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16743,7 +16997,7 @@
         "html": ""
       },
       "description": "Expression QTL in Lung from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16788,7 +17042,7 @@
         "html": ""
       },
       "description": "Expression QTL in Muscle_Skeletal from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16833,7 +17087,7 @@
         "html": ""
       },
       "description": "Expression QTL in Nerve_Tibial from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16878,7 +17132,7 @@
         "html": ""
       },
       "description": "Expression QTL in Ovary from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16923,7 +17177,7 @@
         "html": ""
       },
       "description": "Expression QTL in Pancreas from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -16968,7 +17222,7 @@
         "html": ""
       },
       "description": "Expression QTL in Pituitary from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17013,7 +17267,7 @@
         "html": ""
       },
       "description": "Expression QTL in Prostate from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17058,7 +17312,7 @@
         "html": ""
       },
       "description": "Expression QTL in Skin_Sun_Exposed_Lower_leg from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17103,7 +17357,7 @@
         "html": ""
       },
       "description": "Expression QTL in Skin_Not_Sun_Exposed_Suprapubic from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17148,7 +17402,7 @@
         "html": ""
       },
       "description": "Expression QTL in Small_Intestine_Terminal_Ileum from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17193,7 +17447,7 @@
         "html": ""
       },
       "description": "Expression QTL in Spleen from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17238,7 +17492,7 @@
         "html": ""
       },
       "description": "Expression QTL in Stomach from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17283,7 +17537,7 @@
         "html": ""
       },
       "description": "Expression QTL in Testis from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17328,7 +17582,7 @@
         "html": ""
       },
       "description": "Expression QTL in Thyroid from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17373,7 +17627,7 @@
         "html": ""
       },
       "description": "Expression QTL in Uterus from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17418,7 +17672,7 @@
         "html": ""
       },
       "description": "Expression QTL in Vagina from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17463,7 +17717,7 @@
         "html": ""
       },
       "description": "Expression QTL in Whole_Blood from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17508,7 +17762,7 @@
         "html": ""
       },
       "description": "Expression QTL in Cells_Transformed_fibroblasts from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -17553,7 +17807,7 @@
         "html": ""
       },
       "description": "Expression QTL in Cells_EBV-transformed_lymphocytes from GTEx V6",
-      "category": ["Regulation"]
+      "category": ["Uncommon or Specialized tracks", "Regulation"]
     },
     {
       "type": "FeatureTrack",
@@ -19232,7 +19486,10 @@
         "html": ""
       },
       "description": "lincRNAs from adipose",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19276,7 +19533,10 @@
         "html": ""
       },
       "description": "lincRNAs from adrenal",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19320,7 +19580,10 @@
         "html": ""
       },
       "description": "lincRNAs from brain",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19364,7 +19627,10 @@
         "html": ""
       },
       "description": "lincRNAs from brain_r",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19408,7 +19674,10 @@
         "html": ""
       },
       "description": "lincRNAs from breast",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19452,7 +19721,10 @@
         "html": ""
       },
       "description": "lincRNAs from colon",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19496,7 +19768,10 @@
         "html": ""
       },
       "description": "lincRNAs from foreskin_r",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19540,7 +19815,10 @@
         "html": ""
       },
       "description": "lincRNAs from heart",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19584,7 +19862,10 @@
         "html": ""
       },
       "description": "lincRNAs from kidney",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19628,7 +19909,10 @@
         "html": ""
       },
       "description": "lincRNAs from liver",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19672,7 +19956,10 @@
         "html": ""
       },
       "description": "lincRNAs from lung",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19716,7 +20003,10 @@
         "html": ""
       },
       "description": "lincRNAs from lymphnode",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19760,7 +20050,10 @@
         "html": ""
       },
       "description": "lincRNAs from ovary",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19804,7 +20097,10 @@
         "html": ""
       },
       "description": "lincRNAs from placenta_r",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19848,7 +20144,10 @@
         "html": ""
       },
       "description": "lincRNAs from prostate",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19892,7 +20191,10 @@
         "html": ""
       },
       "description": "lincRNAs from skeletalmuscle",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19936,7 +20238,10 @@
         "html": ""
       },
       "description": "lincRNAs from testes",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -19980,7 +20285,10 @@
         "html": ""
       },
       "description": "lincRNAs from testes_r",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -20024,7 +20332,10 @@
         "html": ""
       },
       "description": "lincRNAs from thyroid",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -20068,7 +20379,10 @@
         "html": ""
       },
       "description": "lincRNAs from whitebloodcell",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -20112,7 +20426,10 @@
         "html": ""
       },
       "description": "lincRNAs from hlf_r1",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -20156,7 +20473,10 @@
         "html": ""
       },
       "description": "lincRNAs from hlf_r2",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -20752,7 +21072,7 @@
         "html": ""
       },
       "description": "ABTutu Genome Variants, 454 exome",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -20798,7 +21118,7 @@
         "html": ""
       },
       "description": "ABTutu Genome Variants, 454 exome indels",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -20844,7 +21164,7 @@
         "html": ""
       },
       "description": "ABTutu Genome Variants, Illumina 7.2X",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -20890,7 +21210,7 @@
         "html": ""
       },
       "description": "ABTutu Genome Variants, SOLiD",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -20937,7 +21257,7 @@
         "html": ""
       },
       "description": "Anonymous Korean individual, AK1 (Genomic Medicine Institute)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -20983,7 +21303,7 @@
         "html": ""
       },
       "description": "Misha Angrist (Personal Genome Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21029,7 +21349,7 @@
         "html": ""
       },
       "description": "George Church (Personal Genome Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21075,7 +21395,7 @@
         "html": ""
       },
       "description": "Henry Louis Gates Jr (Personal Genome Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21121,7 +21441,7 @@
         "html": ""
       },
       "description": "Henry Louis Gates Sr (Personal Genome Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21167,7 +21487,7 @@
         "html": ""
       },
       "description": "Rosalynn Gill (Personal Genome Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21212,7 +21532,7 @@
         "html": ""
       },
       "description": "PUR Trio Father HG00731 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21256,7 +21576,7 @@
         "html": ""
       },
       "description": "PUR HG00731 (Father) indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21301,7 +21621,7 @@
         "html": ""
       },
       "description": "PUR Trio Mother HG00732 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21345,7 +21665,7 @@
         "html": ""
       },
       "description": "PUR HG00732 (Mother) indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21390,7 +21710,7 @@
         "html": ""
       },
       "description": "PUR Trio Daughter HG00733 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21434,7 +21754,7 @@
         "html": ""
       },
       "description": "PUR HG00733 (Daughter) indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21481,7 +21801,7 @@
         "html": ""
       },
       "description": "Anonymous Irish Male",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21527,7 +21847,7 @@
         "html": ""
       },
       "description": "KB1 Genome Variants, 454",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21573,7 +21893,7 @@
         "html": ""
       },
       "description": "KB1 Genome Variants, combination of 454, Illumina, and genotyping",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21619,7 +21939,7 @@
         "html": ""
       },
       "description": "KB1 Genome Variants, Illumina 23.2X",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21665,7 +21985,7 @@
         "html": ""
       },
       "description": "KB1 indels from 454 and Illumina",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21709,7 +22029,7 @@
         "html": ""
       },
       "description": "Marjolein Kriek (Leiden University Medical Centre)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21755,7 +22075,7 @@
         "html": ""
       },
       "description": "Gregory Lucier (Life Technologies)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21801,7 +22121,7 @@
         "html": ""
       },
       "description": "MD8 Genome Variants (all SNPs, 16x exome)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21847,7 +22167,7 @@
         "html": ""
       },
       "description": "MD8 Genome Variants indels",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21891,7 +22211,7 @@
         "html": ""
       },
       "description": "CEU NA06985 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21935,7 +22255,7 @@
         "html": ""
       },
       "description": "CEU NA06985 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -21979,7 +22299,7 @@
         "html": ""
       },
       "description": "CEU NA06994 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22023,7 +22343,7 @@
         "html": ""
       },
       "description": "CEU NA06994 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22067,7 +22387,7 @@
         "html": ""
       },
       "description": "CEU NA07357 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22111,7 +22431,7 @@
         "html": ""
       },
       "description": "CEU NA07357 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22155,7 +22475,7 @@
         "html": ""
       },
       "description": "CEU NA10851 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22199,7 +22519,7 @@
         "html": ""
       },
       "description": "CEU NA10851 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22243,7 +22563,7 @@
         "html": ""
       },
       "description": "CEU NA12004 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22287,7 +22607,7 @@
         "html": ""
       },
       "description": "CEU NA12004 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22331,7 +22651,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12877 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22375,7 +22695,7 @@
         "html": ""
       },
       "description": "CEU NA12877 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22422,7 +22742,7 @@
         "html": ""
       },
       "description": "CEU Trio Daughter NA12878 (1000 Genomes Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22466,7 +22786,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12878 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22510,7 +22830,7 @@
         "html": ""
       },
       "description": "CEU NA12878 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22554,7 +22874,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12879 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22598,7 +22918,7 @@
         "html": ""
       },
       "description": "CEU NA12879 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22642,7 +22962,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12880 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22686,7 +23006,7 @@
         "html": ""
       },
       "description": "CEU NA12880 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22730,7 +23050,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12881 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22774,7 +23094,7 @@
         "html": ""
       },
       "description": "CEU NA12881 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22818,7 +23138,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12882 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22862,7 +23182,7 @@
         "html": ""
       },
       "description": "CEU NA12882 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22906,7 +23226,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12883 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22950,7 +23270,7 @@
         "html": ""
       },
       "description": "CEU NA12883 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -22994,7 +23314,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12884 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23038,7 +23358,7 @@
         "html": ""
       },
       "description": "CEU NA12884 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23082,7 +23402,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12885 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23126,7 +23446,7 @@
         "html": ""
       },
       "description": "CEU NA12885 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23170,7 +23490,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12886 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23214,7 +23534,7 @@
         "html": ""
       },
       "description": "CEU NA12886 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23258,7 +23578,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12887 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23302,7 +23622,7 @@
         "html": ""
       },
       "description": "CEU NA12887 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23346,7 +23666,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12888 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23390,7 +23710,7 @@
         "html": ""
       },
       "description": "CEU NA12888 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23434,7 +23754,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12889 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23478,7 +23798,7 @@
         "html": ""
       },
       "description": "CEU NA12889 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23522,7 +23842,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12890 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23566,7 +23886,7 @@
         "html": ""
       },
       "description": "CEU NA12890 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23613,7 +23933,7 @@
         "html": ""
       },
       "description": "CEU Trio Father NA12891 (1000 Genomes Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23657,7 +23977,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12891 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23701,7 +24021,7 @@
         "html": ""
       },
       "description": "CEU NA12891 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23748,7 +24068,7 @@
         "html": ""
       },
       "description": "CEU Trio Mother NA12892 (1000 Genomes Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23792,7 +24112,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12892 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23836,7 +24156,7 @@
         "html": ""
       },
       "description": "CEU NA12892 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23880,7 +24200,7 @@
         "html": ""
       },
       "description": "CEU pedigree 1463, NA12893 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23924,7 +24244,7 @@
         "html": ""
       },
       "description": "CEU NA12893 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -23968,7 +24288,7 @@
         "html": ""
       },
       "description": "YRI NA18501 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24012,7 +24332,7 @@
         "html": ""
       },
       "description": "YRI NA18501 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24056,7 +24376,7 @@
         "html": ""
       },
       "description": "YRI NA18502 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24100,7 +24420,7 @@
         "html": ""
       },
       "description": "YRI NA18502 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24144,7 +24464,7 @@
         "html": ""
       },
       "description": "YRI NA18504 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24188,7 +24508,7 @@
         "html": ""
       },
       "description": "YRI NA18504 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24232,7 +24552,7 @@
         "html": ""
       },
       "description": "YRI NA18505 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24276,7 +24596,7 @@
         "html": ""
       },
       "description": "YRI NA18505 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24320,7 +24640,7 @@
         "html": ""
       },
       "description": "YRI NA18508 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24364,7 +24684,7 @@
         "html": ""
       },
       "description": "YRI NA18508 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24408,7 +24728,7 @@
         "html": ""
       },
       "description": "YRI NA18517 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24452,7 +24772,7 @@
         "html": ""
       },
       "description": "YRI NA18517 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24496,7 +24816,7 @@
         "html": ""
       },
       "description": "CHB NA18526 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24540,7 +24860,7 @@
         "html": ""
       },
       "description": "CHB NA18526 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24584,7 +24904,7 @@
         "html": ""
       },
       "description": "CHB NA18537 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24628,7 +24948,7 @@
         "html": ""
       },
       "description": "CHB NA18537 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24672,7 +24992,7 @@
         "html": ""
       },
       "description": "CHB NA18555 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24716,7 +25036,7 @@
         "html": ""
       },
       "description": "CHB NA18555 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24760,7 +25080,7 @@
         "html": ""
       },
       "description": "CHB NA18558 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24804,7 +25124,7 @@
         "html": ""
       },
       "description": "CHB NA18558 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24848,7 +25168,7 @@
         "html": ""
       },
       "description": "JPT NA18940 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24892,7 +25212,7 @@
         "html": ""
       },
       "description": "JPT NA18940 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24936,7 +25256,7 @@
         "html": ""
       },
       "description": "JPT NA18942 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -24980,7 +25300,7 @@
         "html": ""
       },
       "description": "JPT NA18942 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25024,7 +25344,7 @@
         "html": ""
       },
       "description": "JPT NA18947 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25068,7 +25388,7 @@
         "html": ""
       },
       "description": "JPT NA18947 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25112,7 +25432,7 @@
         "html": ""
       },
       "description": "JPT NA18956 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25156,7 +25476,7 @@
         "html": ""
       },
       "description": "JPT NA18956 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25200,7 +25520,7 @@
         "html": ""
       },
       "description": "LWK NA19017 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25244,7 +25564,7 @@
         "html": ""
       },
       "description": "LWK NA19017 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25288,7 +25608,7 @@
         "html": ""
       },
       "description": "LWK NA19020 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25332,7 +25652,7 @@
         "html": ""
       },
       "description": "LWK NA19020 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25376,7 +25696,7 @@
         "html": ""
       },
       "description": "LWK NA19025 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25420,7 +25740,7 @@
         "html": ""
       },
       "description": "LWK NA19025 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25464,7 +25784,7 @@
         "html": ""
       },
       "description": "LWK NA19026 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25508,7 +25828,7 @@
         "html": ""
       },
       "description": "LWK NA19026 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25552,7 +25872,7 @@
         "html": ""
       },
       "description": "YRI NA19129 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25596,7 +25916,7 @@
         "html": ""
       },
       "description": "YRI NA19129 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25643,7 +25963,7 @@
         "html": ""
       },
       "description": "YRI Trio Mother NA19238 (1000 Genomes Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25687,7 +26007,7 @@
         "html": ""
       },
       "description": "YRI NA19238 (Mother) (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25731,7 +26051,7 @@
         "html": ""
       },
       "description": "YRI NA19238 (Mother) indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25778,7 +26098,7 @@
         "html": ""
       },
       "description": "YRI Trio Father NA19239 (1000 Genomes Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25822,7 +26142,7 @@
         "html": ""
       },
       "description": "YRI NA19239 (Father) (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25866,7 +26186,7 @@
         "html": ""
       },
       "description": "YRI NA19239 (Father) indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25913,7 +26233,7 @@
         "html": ""
       },
       "description": "YRI Trio Daughter NA19240 (1000 Genomes Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -25957,7 +26277,7 @@
         "html": ""
       },
       "description": "YRI NA19240 (Daughter) (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26001,7 +26321,7 @@
         "html": ""
       },
       "description": "YRI NA19240 (Daughter) indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26045,7 +26365,7 @@
         "html": ""
       },
       "description": "MXL NA19648 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26089,7 +26409,7 @@
         "html": ""
       },
       "description": "MXL NA19648 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26133,7 +26453,7 @@
         "html": ""
       },
       "description": "MXL NA19649 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26177,7 +26497,7 @@
         "html": ""
       },
       "description": "MXL NA19649 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26221,7 +26541,7 @@
         "html": ""
       },
       "description": "MXL NA19669 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26265,7 +26585,7 @@
         "html": ""
       },
       "description": "MXL NA19669 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26309,7 +26629,7 @@
         "html": ""
       },
       "description": "MXL NA19670 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26353,7 +26673,7 @@
         "html": ""
       },
       "description": "MXL NA19670 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26397,7 +26717,7 @@
         "html": ""
       },
       "description": "ASW NA19700 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26441,7 +26761,7 @@
         "html": ""
       },
       "description": "ASW NA19700 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26485,7 +26805,7 @@
         "html": ""
       },
       "description": "ASW NA19701 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26529,7 +26849,7 @@
         "html": ""
       },
       "description": "ASW NA19701 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26573,7 +26893,7 @@
         "html": ""
       },
       "description": "ASW NA19703 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26617,7 +26937,7 @@
         "html": ""
       },
       "description": "ASW NA19703 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26661,7 +26981,7 @@
         "html": ""
       },
       "description": "ASW NA19704 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26705,7 +27025,7 @@
         "html": ""
       },
       "description": "ASW NA19704 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26749,7 +27069,7 @@
         "html": ""
       },
       "description": "MXL NA19735 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26793,7 +27113,7 @@
         "html": ""
       },
       "description": "MXL NA19735 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26837,7 +27157,7 @@
         "html": ""
       },
       "description": "ASW NA19834 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26881,7 +27201,7 @@
         "html": ""
       },
       "description": "ASW NA19834 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26925,7 +27245,7 @@
         "html": ""
       },
       "description": "TSI NA20502 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -26969,7 +27289,7 @@
         "html": ""
       },
       "description": "TSI NA20502 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27013,7 +27333,7 @@
         "html": ""
       },
       "description": "TSI NA20509 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27057,7 +27377,7 @@
         "html": ""
       },
       "description": "TSI NA20509 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27101,7 +27421,7 @@
         "html": ""
       },
       "description": "TSI NA20510 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27145,7 +27465,7 @@
         "html": ""
       },
       "description": "TSI NA20510 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27189,7 +27509,7 @@
         "html": ""
       },
       "description": "TSI NA20511 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27233,7 +27553,7 @@
         "html": ""
       },
       "description": "TSI NA20511 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27277,7 +27597,7 @@
         "html": ""
       },
       "description": "GIH NA20845 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27321,7 +27641,7 @@
         "html": ""
       },
       "description": "GIH NA20845 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27365,7 +27685,7 @@
         "html": ""
       },
       "description": "GIH NA20846 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27409,7 +27729,7 @@
         "html": ""
       },
       "description": "GIH NA20846 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27453,7 +27773,7 @@
         "html": ""
       },
       "description": "GIH NA20847 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27497,7 +27817,7 @@
         "html": ""
       },
       "description": "GIH NA20847 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27541,7 +27861,7 @@
         "html": ""
       },
       "description": "GIH NA20850 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27585,7 +27905,7 @@
         "html": ""
       },
       "description": "GIH NA20850 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27629,7 +27949,7 @@
         "html": ""
       },
       "description": "MKK NA21732 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27673,7 +27993,7 @@
         "html": ""
       },
       "description": "MKK NA21732 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27717,7 +28037,7 @@
         "html": ""
       },
       "description": "MKK NA21733 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27761,7 +28081,7 @@
         "html": ""
       },
       "description": "MKK NA21733 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27805,7 +28125,7 @@
         "html": ""
       },
       "description": "MKK NA21737 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27849,7 +28169,7 @@
         "html": ""
       },
       "description": "MKK NA21737 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27893,7 +28213,7 @@
         "html": ""
       },
       "description": "MKK NA21767 (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27937,7 +28257,7 @@
         "html": ""
       },
       "description": "MKK NA21767 indel (Complete Genomics)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -27983,7 +28303,7 @@
         "html": ""
       },
       "description": "NB1 Genome Variants (all SNPs, 2X genome plus 16x exome)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28029,7 +28349,7 @@
         "html": ""
       },
       "description": "NB1 Genome Variants indels",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28075,7 +28395,7 @@
         "html": ""
       },
       "description": "Stephen Quake (Stanford)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28121,7 +28441,7 @@
         "html": ""
       },
       "description": "Individual from the Extinct Palaeo-Eskimo Saqqaq (Saqqaq Genome Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28167,7 +28487,7 @@
         "html": ""
       },
       "description": "Individual from the Extinct Palaeo-Eskimo Saqqaq, high confidence SNPs",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28214,7 +28534,7 @@
         "html": ""
       },
       "description": "Seong-Jin Kim (SJK, GUMS/KOBIC)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28260,7 +28580,7 @@
         "html": ""
       },
       "description": "TK1 Genome Variants (all SNPs, 16x exome)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28306,7 +28626,7 @@
         "html": ""
       },
       "description": "TK1 Genome Variants indels",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28353,7 +28673,7 @@
         "html": ""
       },
       "description": "J. Craig Venter - Published Method 1, Variant in Original Form (JCVI)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28400,7 +28720,7 @@
         "html": ""
       },
       "description": "James Watson (CSHL)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28447,7 +28767,7 @@
         "html": ""
       },
       "description": "Han Chinese Individual (YanHuang Project)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -28494,7 +28814,7 @@
         "html": ""
       },
       "description": "YRI NA18507 (Illumina Cambridge/Solexa, SNPs called by PSU)",
-      "category": ["Variation and Repeats"]
+      "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
       "type": "FeatureTrack",
@@ -29995,7 +30315,10 @@
         "urlLabel": "AceView Gene Summary:"
       },
       "description": "AceView Gene Models With Alt-Splicing",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -30042,7 +30365,10 @@
         "track": "augustusGene"
       },
       "description": "AUGUSTUS ab initio gene predictions v3.1",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -30223,7 +30549,10 @@
         "track": "geneid"
       },
       "description": "Geneid Gene Predictions",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -30268,7 +30597,10 @@
         "track": "genscan"
       },
       "description": "Genscan Gene Predictions",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -30552,7 +30884,10 @@
         "track": "nscanGene"
       },
       "description": "N-SCAN Gene Predictions",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -30697,7 +31032,10 @@
         "track": "sgpGene"
       },
       "description": "SGP Gene Predictions Using Mouse/Human Homology",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
@@ -30743,7 +31081,10 @@
         "urlLabel": "SIB link:"
       },
       "description": "Swiss Institute of Bioinformatics Gene Predictions from mRNA and ESTs",
-      "category": ["Genes and Gene Predictions"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Genes and Gene Predictions"
+      ]
     },
     {
       "type": "FeatureTrack",
