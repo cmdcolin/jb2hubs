@@ -19,6 +19,7 @@ const specializedParents = new Set([
   'gtexEqtlTissue',
   'gtexCov',
   'gnomadPext',
+  'gdcCancer',
 ])
 const specializedTypes = new Set(['pgSnp'])
 function checkSpecialized({

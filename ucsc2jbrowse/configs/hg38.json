@@ -27,6 +27,28 @@
   ],
   "tracks": [
     {
+      "type": "VariantTrack",
+      "trackId": "hg38-1KGP_3202.Illumina_ensemble_callset.freeze_V1",
+      "name": "30x Illumina WGS SVs (V1)",
+      "assemblyNames": ["hg38"],
+      "category": ["1000 Genomes"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20210124.SV_Illumina_Integration/1KGP_3202.Illumina_ensemble_callset.freeze_V1.vcf.gz"
+      }
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "hg38-1KGP_3202.gatksv_svtools_novelins.freeze_V3.wAF",
+      "name": "30x Illumina WGS SVs (V3)",
+      "assemblyNames": ["hg38"],
+      "category": ["1000 Genomes"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20210124.SV_Illumina_Integration/1KGP_3202.gatksv_svtools_novelins.freeze_V3.wAF.vcf.gz"
+      }
+    },
+    {
       "trackId": "hg38-phyloP447wayBW",
       "name": "Basewise Conservation (phyloP) - 447 phyloP REV",
       "type": "QuantitativeTrack",
@@ -185,7 +207,10 @@
         "html": ""
       },
       "description": "All TCGA Pan-Cancer mutations: 33 TCGA Cancer Projects Summary (Pan-Can 33)",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-alldifficultregions",
@@ -2125,7 +2150,10 @@
         "html": ""
       },
       "description": "Adrenocortical carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-gtexCovAdiposeVisceralOmentum",
@@ -4135,7 +4163,10 @@
         "html": ""
       },
       "description": "Bladder Urothelial Carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-clinGenGeneDisease",
@@ -5583,7 +5614,10 @@
         "html": ""
       },
       "description": "Breast invasive carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-dbVar_common_decipher",
@@ -6371,7 +6405,10 @@
         "html": ""
       },
       "description": "Cervical squamous cell carcinoma and endocervical adenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-dbVar_common_european",
@@ -6982,7 +7019,10 @@
         "html": ""
       },
       "description": "Cholangiocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-unipLocCytopl",
@@ -7568,7 +7608,10 @@
         "html": ""
       },
       "description": "Colon adenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-knownGeneV38",
@@ -7893,7 +7936,10 @@
         "html": ""
       },
       "description": "Lymphoid Neoplasm Diffuse Large B-cell Lymphoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-unipDomain",
@@ -8289,7 +8335,10 @@
         "html": ""
       },
       "description": "Esophageal carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-SeqCap-EZ_MedExomePlusMito_hg19_capture_targets",
@@ -8442,7 +8491,10 @@
         "html": ""
       },
       "description": "Glioblastoma multiforme",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-gnomadConstraint",
@@ -8960,7 +9012,10 @@
         "html": ""
       },
       "description": "Head and Neck squamous cell carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-unipOther",
@@ -9302,7 +9357,10 @@
         "html": ""
       },
       "description": "Kidney renal clear cell carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-unipConflict",
@@ -9455,7 +9513,10 @@
         "html": ""
       },
       "description": "Kidney renal papillary cell carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_Focused_Regions",
@@ -9570,7 +9631,10 @@
         "html": ""
       },
       "description": "Acute Myeloid Leukemia",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V4_Covered",
@@ -9685,7 +9749,10 @@
         "html": ""
       },
       "description": "Brain Lower Grade Glioma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V4_Regions",
@@ -9800,7 +9867,10 @@
         "html": ""
       },
       "description": "Liver hepatocellular carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V5_UTRs_Covered",
@@ -9915,7 +9985,10 @@
         "html": ""
       },
       "description": "Lung adenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V5_UTRs_Regions",
@@ -10030,7 +10103,10 @@
         "html": ""
       },
       "description": "Lung squamous cell carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V6_UTRs_Regions",
@@ -10145,7 +10221,10 @@
         "html": ""
       },
       "description": "Mesothelioma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V6_Covered",
@@ -10260,7 +10339,10 @@
         "html": ""
       },
       "description": "Ovarian serous cystadenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V6_Regions",
@@ -10375,7 +10457,10 @@
         "html": ""
       },
       "description": "Pancreatic adenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V6_COSMIC_Covered",
@@ -10490,7 +10575,10 @@
         "html": ""
       },
       "description": "Pheochromocytoma and Paraganglioma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V6_COSMIC_Regions",
@@ -10605,7 +10693,10 @@
         "html": ""
       },
       "description": "Prostate adenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V6_UTRs_Covered",
@@ -10720,7 +10811,10 @@
         "html": ""
       },
       "description": "Rectum adenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V7_Covered",
@@ -10835,7 +10929,10 @@
         "html": ""
       },
       "description": "Sarcoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Agilent_Human_Exon_V7_Regions",
@@ -10950,7 +11047,10 @@
         "html": ""
       },
       "description": "Skin Cutaneous Melanoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Twist_Comp_Exome_Target",
@@ -11065,7 +11165,10 @@
         "html": ""
       },
       "description": "Stomach adenocarcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Twist_Exome_Target",
@@ -11180,7 +11283,10 @@
         "html": ""
       },
       "description": "Testicular Germ Cell Tumors",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Twist_Exome_Target2",
@@ -11295,7 +11401,10 @@
         "html": ""
       },
       "description": "Thyroid carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-Twist_Exome_RefSeq_Targets",
@@ -11410,7 +11519,10 @@
         "html": ""
       },
       "description": "Thymoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-gtexCovHeartAtrialAppendage",
@@ -11488,7 +11600,10 @@
         "html": ""
       },
       "description": "Uterine Corpus Endometrial Carcinoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-gtexCovHeartLeftVentricle",
@@ -11566,7 +11681,10 @@
         "html": ""
       },
       "description": "Uterine Carcinosarcoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-gtexCovKidneyCortex",
@@ -11644,7 +11762,10 @@
         "html": ""
       },
       "description": "Uveal Melanoma",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-gtexCovKidneyMedulla",
@@ -16155,7 +16276,10 @@
         "html": ""
       },
       "description": "Kidney Chromophobe",
-      "category": ["Phenotypes, Variants, and Literature"]
+      "category": [
+        "Uncommon or Specialized tracks",
+        "Phenotypes, Variants, and Literature"
+      ]
     },
     {
       "trackId": "hg38-kidneyStewartBroadCellType",
