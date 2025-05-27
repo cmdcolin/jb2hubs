@@ -38,7 +38,7 @@ console.log(
       ...config,
       tracks: config.tracks
         .map(t => {
-          const [_asm, ...rest] = t.trackId.split('-')
+          const [, ...rest] = t.trackId.split('-')
           const trackLabelWithoutAssemblyName = rest.join('-')
           const track = tracksDb[trackLabelWithoutAssemblyName]
           if (track) {
@@ -75,8 +75,8 @@ console.log(
         .map(track => ({
           ...track,
           category: checkSpecialized(track)
-            ? ['Uncommon or Specialized tracks', ...(track.category || [])]
-            : [...(track.category || [])],
+            ? ['Uncommon or Specialized tracks', ...(track.category ?? [])]
+            : [...(track.category ?? [])],
         })),
     },
     null,
