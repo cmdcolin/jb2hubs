@@ -25,7 +25,7 @@ isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/010/645/085/GCF_010645085.1
 track assembly
 longLabel Assembly
 shortLabel Assembly
-visibility pack
+visibility hide
 colorByStrand 150,100,30 230,170,40
 color 150,100,30
 altColor 230,170,40
@@ -50,7 +50,7 @@ track gc5Base
 shortLabel GC Percent
 longLabel GC Percent in 5-Base Windows
 group map
-visibility full
+visibility dense
 autoScale Off
 maxHeightPixels 128:36:16
 graphTypeDefault Bar
@@ -148,7 +148,7 @@ visibility pack
 type bigBed
 dragAndDrop subTracks
 allButtonPair on
-dataVersion NCBI Acipenser ruthenus Annotation Release 101 (2020-06-06)
+dataVersion NCBI Acipenser ruthenus Annotation Release 101 (2022-09-28)
 html html/GCF_010645085.1_ASM1064508v1.refSeqComposite
 priority 2
 
@@ -157,7 +157,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -175,7 +175,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -192,7 +192,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -242,7 +242,7 @@ compositeTrack on
 shortLabel CpG Islands
 longLabel CpG Islands (Islands < 300 Bases are Light Green)
 group regulation
-visibility pack
+visibility dense
 type bigBed 4 +
 html html/GCF_010645085.1_ASM1064508v1.cpgIslands
 
@@ -275,7 +275,7 @@ track allGaps
 shortLabel All Gaps
 longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
 group map
-visibility dense
+visibility hide
 type bigBed 3
 bigDataUrl bbi/GCF_010645085.1_ASM1064508v1.allGaps.bb
 html html/GCF_010645085.1_ASM1064508v1.allGaps

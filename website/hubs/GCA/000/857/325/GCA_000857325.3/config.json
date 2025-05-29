@@ -121,6 +121,36 @@
     },
     {
       "metadata": {
+        "track": "ncbiGene",
+        "longLabel": "Gene models submitted to NCBI",
+        "shortLabel": "Gene models",
+        "visibility": "pack",
+        "color": "0,80,150",
+        "altColor": "150,80,0",
+        "colorByStrand": "0,80,150 150,80,0",
+        "bigDataUrl": "bbi/GCA_000857325.3_ViralProj15199.ncbiGene.bb",
+        "type": "bigGenePred",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/857/325/GCA_000857325.3/html/GCA_000857325.3_ViralProj15199.ncbiGene\">html/GCA_000857325.3_ViralProj15199.ncbiGene</a>",
+        "searchIndex": "name",
+        "url": "https://www.ncbi.nlm.nih.gov/gene/?term=$$",
+        "urlLabel": "Entrez gene:",
+        "labelFields": "geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "group": "genes"
+      },
+      "category": ["Genes and Gene Predictions"],
+      "trackId": "GCA_000857325.3-ncbiGene",
+      "description": "Gene models submitted to NCBI",
+      "assemblyNames": ["GCA_000857325.3"],
+      "name": "Gene models",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/857/325/GCA_000857325.3/bbi/GCA_000857325.3_ViralProj15199.ncbiGene.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "cpgIslandExt",
         "parent": "cpgIslands off",
         "shortLabel": "CpG Islands",

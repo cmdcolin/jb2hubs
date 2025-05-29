@@ -90,88 +90,14 @@ html html/GCA_013030995.1_ASM1303099v1.tanDups
     type bigBed 12
 
 track repeatMasker
-compositeTrack on
 shortLabel RepeatMasker
-longLabel Repeating Elements by RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
 group varRep
-visibility dense
-type bigBed 6 +
-colorByStrand 50,50,150 150,50,50
-maxWindowToDraw 10000000
-spectrum on
+bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.bb
+maxWindowToDraw 5000000
 html html/GCA_013030995.1_ASM1303099v1.repeatMasker
-
-    track repeatMaskerSINE
-    parent repeatMasker
-    shortLabel SINE
-    longLabel SINE Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 1
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.SINE.bb
-
-    track repeatMaskerLINE
-    parent repeatMasker
-    shortLabel LINE
-    longLabel LINE Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 2
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.LINE.bb
-
-    track repeatMaskerLTR
-    parent repeatMasker
-    shortLabel LTR
-    longLabel LTR Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 3
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.LTR.bb
-
-    track repeatMaskerDNA
-    parent repeatMasker
-    shortLabel DNA
-    longLabel DNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 4
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.DNA.bb
-
-    track repeatMaskerSimple
-    parent repeatMasker
-    shortLabel Simple
-    longLabel Simple Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 5
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.Simple.bb
-
-    track repeatMaskerLowComplexity
-    parent repeatMasker
-    shortLabel Low Complexity
-    longLabel Low Complexity Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 6
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.Low_complexity.bb
-
-    track repeatMaskerSatellite
-    parent repeatMasker
-    shortLabel Satellite
-    longLabel Satellite Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 7
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.Satellite.bb
-
-    track repeatMaskerRNA
-    parent repeatMasker
-    shortLabel RNA
-    longLabel RNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 8
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.RNA.bb
-
-    track repeatMaskerOther
-    parent repeatMasker
-    shortLabel Other
-    longLabel Other Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 9
-    bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.rmsk.Other.bb
 
 track simpleRepeat
 shortLabel Simple Repeats
@@ -302,8 +228,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainGalGal6
         parent GCA_013030995.1_ASM1303099v1ChainNetViewchain on
         subGroups view=chain species=s000 chainType=c00
-        shortLabel Chicken/galGal6 Chain
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 Chain
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigChain galGal6
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainGalGal6.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainGalGal6Link.bb
@@ -314,8 +240,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainSynGalGal6
         parent GCA_013030995.1_ASM1303099v1ChainNetViewSynTen off
         subGroups view=synten species=s000 chainType=c01
-        shortLabel Chicken/galGal6 synChain
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 synChain
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigChain galGal6
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynGalGal6.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynGalGal6Link.bb
@@ -326,8 +252,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainRBestGalGal6
         parent GCA_013030995.1_ASM1303099v1ChainNetViewRBest off
         subGroups view=rbest species=s000 chainType=c02
-        shortLabel Chicken/galGal6 rbChain
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 rbChain
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigChain galGal6
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestGalGal6.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestGalGal6Link.bb
@@ -338,8 +264,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainLiftOverGalGal6
         parent GCA_013030995.1_ASM1303099v1ChainNetViewLiftOver off
         subGroups view=liftover species=s000 chainType=c03
-        shortLabel Chicken/galGal6 loChain
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 loChain
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigChain galGal6
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverGalGal6.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverGalGal6Link.bb
@@ -350,8 +276,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainHg38
         parent GCA_013030995.1_ASM1303099v1ChainNetViewchain off
         subGroups view=chain species=s001 chainType=c00
-        shortLabel Human/hg38 Chain
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 Chain
+        longLabel hg38/hg38 () Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainHg38.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainHg38Link.bb
@@ -362,8 +288,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainSynHg38
         parent GCA_013030995.1_ASM1303099v1ChainNetViewSynTen off
         subGroups view=synten species=s001 chainType=c01
-        shortLabel Human/hg38 synChain
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 synChain
+        longLabel hg38/hg38 () Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynHg38.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynHg38Link.bb
@@ -374,8 +300,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainRBestHg38
         parent GCA_013030995.1_ASM1303099v1ChainNetViewRBest off
         subGroups view=rbest species=s001 chainType=c02
-        shortLabel Human/hg38 rbChain
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 rbChain
+        longLabel hg38/hg38 () Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestHg38.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestHg38Link.bb
@@ -386,8 +312,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainLiftOverHg38
         parent GCA_013030995.1_ASM1303099v1ChainNetViewLiftOver off
         subGroups view=liftover species=s001 chainType=c03
-        shortLabel Human/hg38 loChain
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 loChain
+        longLabel hg38/hg38 () Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverHg38.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverHg38Link.bb
@@ -398,8 +324,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainSusScr11
         parent GCA_013030995.1_ASM1303099v1ChainNetViewchain off
         subGroups view=chain species=s002 chainType=c00
-        shortLabel Pig/susScr11 Chain
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 Chain
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigChain susScr11
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSusScr11.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSusScr11Link.bb
@@ -410,8 +336,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainSynSusScr11
         parent GCA_013030995.1_ASM1303099v1ChainNetViewSynTen off
         subGroups view=synten species=s002 chainType=c01
-        shortLabel Pig/susScr11 synChain
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 synChain
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigChain susScr11
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynSusScr11.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynSusScr11Link.bb
@@ -422,8 +348,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainRBestSusScr11
         parent GCA_013030995.1_ASM1303099v1ChainNetViewRBest off
         subGroups view=rbest species=s002 chainType=c02
-        shortLabel Pig/susScr11 rbChain
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 rbChain
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigChain susScr11
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestSusScr11.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestSusScr11Link.bb
@@ -434,8 +360,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainLiftOverSusScr11
         parent GCA_013030995.1_ASM1303099v1ChainNetViewLiftOver off
         subGroups view=liftover species=s002 chainType=c03
-        shortLabel Pig/susScr11 loChain
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 loChain
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigChain susScr11
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverSusScr11.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverSusScr11Link.bb
@@ -446,8 +372,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainMm39
         parent GCA_013030995.1_ASM1303099v1ChainNetViewchain off
         subGroups view=chain species=s003 chainType=c00
-        shortLabel Mouse/mm39 Chain
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 Chain
+        longLabel mm39/mm39 () Chained Alignments
         type bigChain mm39
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainMm39.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainMm39Link.bb
@@ -458,8 +384,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainSynMm39
         parent GCA_013030995.1_ASM1303099v1ChainNetViewSynTen off
         subGroups view=synten species=s003 chainType=c01
-        shortLabel Mouse/mm39 synChain
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 synChain
+        longLabel mm39/mm39 () Chained Alignments
         type bigChain mm39
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynMm39.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainSynMm39Link.bb
@@ -470,8 +396,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainRBestMm39
         parent GCA_013030995.1_ASM1303099v1ChainNetViewRBest off
         subGroups view=rbest species=s003 chainType=c02
-        shortLabel Mouse/mm39 rbChain
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 rbChain
+        longLabel mm39/mm39 () Chained Alignments
         type bigChain mm39
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestMm39.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainRBestMm39Link.bb
@@ -482,8 +408,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track chainLiftOverMm39
         parent GCA_013030995.1_ASM1303099v1ChainNetViewLiftOver off
         subGroups view=liftover species=s003 chainType=c03
-        shortLabel Mouse/mm39 loChain
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 loChain
+        longLabel mm39/mm39 () Chained Alignments
         type bigChain mm39
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverMm39.bb
         linkDataUrl bbi/GCA_013030995.1_ASM1303099v1.chainLiftOverMm39Link.bb
@@ -500,8 +426,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track netGalGal6
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s000 chainType=c04
-        shortLabel Chicken/galGal6 mafNet
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 mafNet
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.galGal6.net.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.galGal6.net.summary.bb
@@ -512,8 +438,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track synNetGalGal6
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s000 chainType=c05
-        shortLabel Chicken/galGal6 synNet
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 synNet
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.galGal6.synNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.galGal6.synNet.summary.bb
@@ -524,8 +450,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track rbestNetGalGal6
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s000 chainType=c06
-        shortLabel Chicken/galGal6 rbestNet
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 rbestNet
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.galGal6.rbestNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.galGal6.rbestNet.summary.bb
@@ -536,8 +462,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track liftOverNetGalGal6
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s000 chainType=c07
-        shortLabel Chicken/galGal6 liftOverNet
-        longLabel Chicken/galGal6/galGal6 (Mar. 2018) Chained Alignments
+        shortLabel galGal6 liftOverNet
+        longLabel galGal6/galGal6 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.galGal6.liftOverNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.galGal6.liftOverNet.summary.bb
@@ -548,8 +474,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track netHg38
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s001 chainType=c04
-        shortLabel Human/hg38 mafNet
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 mafNet
+        longLabel hg38/hg38 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.hg38.net.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.hg38.net.summary.bb
@@ -560,8 +486,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track synNetHg38
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s001 chainType=c05
-        shortLabel Human/hg38 synNet
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 synNet
+        longLabel hg38/hg38 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.hg38.synNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.hg38.synNet.summary.bb
@@ -572,8 +498,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track rbestNetHg38
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s001 chainType=c06
-        shortLabel Human/hg38 rbestNet
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 rbestNet
+        longLabel hg38/hg38 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.hg38.rbestNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.hg38.rbestNet.summary.bb
@@ -584,8 +510,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track liftOverNetHg38
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s001 chainType=c07
-        shortLabel Human/hg38 liftOverNet
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
+        shortLabel hg38 liftOverNet
+        longLabel hg38/hg38 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.hg38.liftOverNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.hg38.liftOverNet.summary.bb
@@ -596,8 +522,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track netSusScr11
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s002 chainType=c04
-        shortLabel Pig/susScr11 mafNet
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 mafNet
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.susScr11.net.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.susScr11.net.summary.bb
@@ -608,8 +534,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track synNetSusScr11
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s002 chainType=c05
-        shortLabel Pig/susScr11 synNet
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 synNet
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.susScr11.synNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.susScr11.synNet.summary.bb
@@ -620,8 +546,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track rbestNetSusScr11
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s002 chainType=c06
-        shortLabel Pig/susScr11 rbestNet
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 rbestNet
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.susScr11.rbestNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.susScr11.rbestNet.summary.bb
@@ -632,8 +558,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track liftOverNetSusScr11
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s002 chainType=c07
-        shortLabel Pig/susScr11 liftOverNet
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 liftOverNet
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.susScr11.liftOverNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.susScr11.liftOverNet.summary.bb
@@ -644,8 +570,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track netMm39
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s003 chainType=c04
-        shortLabel Mouse/mm39 mafNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 mafNet
+        longLabel mm39/mm39 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.mm39.net.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.mm39.net.summary.bb
@@ -656,8 +582,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track synNetMm39
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s003 chainType=c05
-        shortLabel Mouse/mm39 synNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 synNet
+        longLabel mm39/mm39 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.mm39.synNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.mm39.synNet.summary.bb
@@ -668,8 +594,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track rbestNetMm39
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s003 chainType=c06
-        shortLabel Mouse/mm39 rbestNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 rbestNet
+        longLabel mm39/mm39 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.mm39.rbestNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.mm39.rbestNet.summary.bb
@@ -680,8 +606,8 @@ html html/GCA_013030995.1_ASM1303099v1.chainNet
         track liftOverNetMm39
         parent GCA_013030995.1_ASM1303099v1MafNetViewnet off
         subGroups view=align species=s003 chainType=c07
-        shortLabel Mouse/mm39 liftOverNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 liftOverNet
+        longLabel mm39/mm39 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_013030995.1_ASM1303099v1.mm39.liftOverNet.bb
         summary bbi/GCA_013030995.1_ASM1303099v1.mm39.liftOverNet.summary.bb

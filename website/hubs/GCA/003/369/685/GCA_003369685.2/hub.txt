@@ -1,6 +1,6 @@
 hub GCA_003369685.2 genome assembly
-shortLabel hybrid cattle (Angus x Brahman F1 Angus haplotype 2018)
-longLabel hybrid cattle (Angus x Brahman F1 Angus haplotype 2018)/Bos indicus x Bos taurus/GCA_003369685.2_UOA_Angus_1 genome assembly
+shortLabel Angus cow (Angus x Brahman F1 Angus haplotype 2018)
+longLabel Angus cow (Angus x Brahman F1 Angus haplotype 2018)/Bos indicus x Bos taurus/GCA_003369685.2_UOA_Angus_1 genome assembly
 useOneFile on
 email hclawson@ucsc.edu
 descriptionUrl html/GCA_003369685.2_UOA_Angus_1.description.html
@@ -8,7 +8,7 @@ descriptionUrl html/GCA_003369685.2_UOA_Angus_1.description.html
 genome GCA_003369685.2
 taxId 30522
 groups groups.txt
-description hybrid cattle (Angus x Brahman F1 Angus haplotype 2018)
+description Angus cow (Angus x Brahman F1 Angus haplotype 2018)
 twoBitPath GCA_003369685.2.2bit
 twoBitBptUrl GCA_003369685.2.2bit.bpt
 chromSizes GCA_003369685.2.chrom.sizes.txt
@@ -178,3 +178,17 @@ searchIndex name
 searchTrix ixIxx/GCA_003369685.2_UOA_Angus_1.xenoRefGene.ix
 html html/GCA_003369685.2_UOA_Angus_1.xenoRefGene
 
+
+track Tiberius
+bigDataUrl contrib/tiberius/tiberius.bigGenePred.bb
+shortLabel Tiberius genes
+longLabel Tiberius ab initio gene prediction
+type bigGenePred
+visibility pack
+color 0,102,204
+noScoreFilter on
+type bigGenePred
+html contrib/tiberius/Tiberius.html
+group genes
+dataVersion Tiberius version 2025-01-07
+baseColorDefault genomicCodons

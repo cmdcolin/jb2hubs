@@ -45,7 +45,7 @@
         "track": "assembly",
         "longLabel": "Assembly",
         "shortLabel": "Assembly",
-        "visibility": "pack",
+        "visibility": "hide",
         "colorByStrand": "150,100,30 230,170,40",
         "color": "150,100,30",
         "altColor": "230,170,40",
@@ -55,7 +55,7 @@
         "searchIndex": "name",
         "searchTrix": "ixIxx/GCA_000003625.1_OryCun2.0.assembly.ix",
         "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
-        "urlLabel": "NCBI Nucleotide database",
+        "urlLabel": "NCBI Nucleotide database:",
         "group": "map"
       },
       "category": ["Mapping and Sequencing"],
@@ -74,7 +74,7 @@
         "track": "gap",
         "longLabel": "AGP gap",
         "shortLabel": "Gap (AGP defined)",
-        "visibility": "dense",
+        "visibility": "hide",
         "color": "0,0,0",
         "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.gap.bb",
         "type": "bigBed 4",
@@ -119,7 +119,7 @@
         "shortLabel": "GC Percent",
         "longLabel": "GC Percent in 5-Base Windows",
         "group": "map",
-        "visibility": "full",
+        "visibility": "dense",
         "autoScale": "Off",
         "maxHeightPixels": "128:36:16",
         "graphTypeDefault": "Bar",
@@ -185,191 +185,25 @@
     },
     {
       "metadata": {
-        "track": "repeatMaskerSINE",
-        "parent": "repeatMasker",
-        "shortLabel": "SINE",
-        "longLabel": "SINE Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "1",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.SINE.bb"
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/html/GCA_000003625.1_OryCun2.0.repeatMasker\">html/GCA_000003625.1_OryCun2.0.repeatMasker</a>"
       },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerSINE",
-      "description": "SINE Repeating Elements by RepeatMasker",
+      "category": ["Variation and Repeats"],
+      "trackId": "GCA_000003625.1-repeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
       "assemblyNames": ["GCA_000003625.1"],
-      "name": "SINE",
+      "name": "RepeatMasker",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.SINE.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerLINE",
-        "parent": "repeatMasker",
-        "shortLabel": "LINE",
-        "longLabel": "LINE Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "2",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.LINE.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerLINE",
-      "description": "LINE Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "LINE",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.LINE.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerLTR",
-        "parent": "repeatMasker",
-        "shortLabel": "LTR",
-        "longLabel": "LTR Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "3",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.LTR.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerLTR",
-      "description": "LTR Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "LTR",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.LTR.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerDNA",
-        "parent": "repeatMasker",
-        "shortLabel": "DNA",
-        "longLabel": "DNA Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "4",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.DNA.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerDNA",
-      "description": "DNA Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "DNA",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.DNA.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerSimple",
-        "parent": "repeatMasker",
-        "shortLabel": "Simple",
-        "longLabel": "Simple Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "5",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.Simple.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerSimple",
-      "description": "Simple Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "Simple",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.Simple.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerLowComplexity",
-        "parent": "repeatMasker",
-        "shortLabel": "Low Complexity",
-        "longLabel": "Low Complexity Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "6",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.Low_complexity.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerLowComplexity",
-      "description": "Low Complexity Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "Low Complexity",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.Low_complexity.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerSatellite",
-        "parent": "repeatMasker",
-        "shortLabel": "Satellite",
-        "longLabel": "Satellite Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "7",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.Satellite.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerSatellite",
-      "description": "Satellite Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "Satellite",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.Satellite.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerRNA",
-        "parent": "repeatMasker",
-        "shortLabel": "RNA",
-        "longLabel": "RNA Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "8",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.RNA.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerRNA",
-      "description": "RNA Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "RNA",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.RNA.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerOther",
-        "parent": "repeatMasker",
-        "shortLabel": "Other",
-        "longLabel": "Other Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "9",
-        "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.rmsk.Other.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCA_000003625.1-repeatMaskerOther",
-      "description": "Other Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCA_000003625.1"],
-      "name": "Other",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.Other.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.rmsk.bb"
       }
     },
     {
@@ -464,7 +298,7 @@
         "shortLabel": "All Gaps",
         "longLabel": "All gaps of unknown nucleotides (N's), including AGP annotated gaps",
         "group": "map",
-        "visibility": "dense",
+        "visibility": "hide",
         "type": "bigBed 3",
         "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.allGaps.bb",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/html/GCA_000003625.1_OryCun2.0.allGaps\">html/GCA_000003625.1_OryCun2.0.allGaps</a>"
@@ -513,6 +347,8 @@
         "color": "180,0,0",
         "type": "bigGenePred",
         "bigDataUrl": "bbi/GCA_000003625.1_OryCun2.0.xenoRefGene.bb",
+        "url": "https://www.ncbi.nlm.nih.gov/nuccore/$$",
+        "urlLabel": "NCBI Nucleotide database:",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName",
         "searchIndex": "name",
@@ -528,6 +364,32 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/bbi/GCA_000003625.1_OryCun2.0.xenoRefGene.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "Tiberius",
+        "bigDataUrl": "contrib/tiberius/tiberius.bigGenePred.bb",
+        "shortLabel": "Tiberius genes",
+        "longLabel": "Tiberius ab initio gene prediction",
+        "type": "bigGenePred",
+        "visibility": "pack",
+        "color": "0,102,204",
+        "noScoreFilter": "on",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/contrib/tiberius/Tiberius.html\">contrib/tiberius/Tiberius.html</a>",
+        "group": "genes",
+        "dataVersion": "Tiberius version 2025-01-07",
+        "baseColorDefault": "genomicCodons"
+      },
+      "category": ["Genes and Gene Predictions"],
+      "trackId": "GCA_000003625.1-Tiberius",
+      "description": "Tiberius ab initio gene prediction",
+      "assemblyNames": ["GCA_000003625.1"],
+      "name": "Tiberius genes",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/003/625/GCA_000003625.1/contrib/tiberius/tiberius.bigGenePred.bb"
       }
     }
   ]

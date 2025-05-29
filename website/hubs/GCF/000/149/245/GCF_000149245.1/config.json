@@ -142,128 +142,25 @@
     },
     {
       "metadata": {
-        "track": "repeatMaskerLINE",
-        "parent": "repeatMasker",
-        "shortLabel": "LINE",
-        "longLabel": "LINE Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "2",
-        "bigDataUrl": "bbi/GCF_000149245.1_CNA3.rmsk.LINE.bb"
+        "track": "repeatMasker",
+        "shortLabel": "RepeatMasker",
+        "longLabel": "RepeatMasker Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "pack",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCF_000149245.1_CNA3.rmsk.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/html/GCF_000149245.1_CNA3.repeatMasker\">html/GCF_000149245.1_CNA3.repeatMasker</a>"
       },
-      "category": ["RepeatMasker"],
-      "trackId": "GCF_000149245.1-repeatMaskerLINE",
-      "description": "LINE Repeating Elements by RepeatMasker",
+      "category": ["Variation and Repeats"],
+      "trackId": "GCF_000149245.1-repeatMasker",
+      "description": "RepeatMasker Repetitive Elements",
       "assemblyNames": ["GCF_000149245.1"],
-      "name": "LINE",
+      "name": "RepeatMasker",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/bbi/GCF_000149245.1_CNA3.rmsk.LINE.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerLTR",
-        "parent": "repeatMasker",
-        "shortLabel": "LTR",
-        "longLabel": "LTR Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "3",
-        "bigDataUrl": "bbi/GCF_000149245.1_CNA3.rmsk.LTR.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCF_000149245.1-repeatMaskerLTR",
-      "description": "LTR Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCF_000149245.1"],
-      "name": "LTR",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/bbi/GCF_000149245.1_CNA3.rmsk.LTR.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerDNA",
-        "parent": "repeatMasker",
-        "shortLabel": "DNA",
-        "longLabel": "DNA Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "4",
-        "bigDataUrl": "bbi/GCF_000149245.1_CNA3.rmsk.DNA.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCF_000149245.1-repeatMaskerDNA",
-      "description": "DNA Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCF_000149245.1"],
-      "name": "DNA",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/bbi/GCF_000149245.1_CNA3.rmsk.DNA.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerSimple",
-        "parent": "repeatMasker",
-        "shortLabel": "Simple",
-        "longLabel": "Simple Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "5",
-        "bigDataUrl": "bbi/GCF_000149245.1_CNA3.rmsk.Simple.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCF_000149245.1-repeatMaskerSimple",
-      "description": "Simple Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCF_000149245.1"],
-      "name": "Simple",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/bbi/GCF_000149245.1_CNA3.rmsk.Simple.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerLowComplexity",
-        "parent": "repeatMasker",
-        "shortLabel": "Low Complexity",
-        "longLabel": "Low Complexity Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "6",
-        "bigDataUrl": "bbi/GCF_000149245.1_CNA3.rmsk.Low_complexity.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCF_000149245.1-repeatMaskerLowComplexity",
-      "description": "Low Complexity Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCF_000149245.1"],
-      "name": "Low Complexity",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/bbi/GCF_000149245.1_CNA3.rmsk.Low_complexity.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "repeatMaskerRNA",
-        "parent": "repeatMasker",
-        "shortLabel": "RNA",
-        "longLabel": "RNA Repeating Elements by RepeatMasker",
-        "type": "bigBed 6 +",
-        "priority": "8",
-        "bigDataUrl": "bbi/GCF_000149245.1_CNA3.rmsk.RNA.bb"
-      },
-      "category": ["RepeatMasker"],
-      "trackId": "GCF_000149245.1-repeatMaskerRNA",
-      "description": "RNA Repeating Elements by RepeatMasker",
-      "assemblyNames": ["GCF_000149245.1"],
-      "name": "RNA",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/bbi/GCF_000149245.1_CNA3.rmsk.RNA.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/149/245/GCF_000149245.1/bbi/GCF_000149245.1_CNA3.rmsk.bb"
       }
     },
     {
@@ -295,7 +192,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -326,7 +223,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -356,7 +253,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",

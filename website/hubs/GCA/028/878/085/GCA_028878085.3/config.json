@@ -2,14 +2,14 @@
   "assemblies": [
     {
       "name": "GCA_028878085.3",
-      "displayName": "siamang (v3 Jambi alternate hap 2024)",
+      "displayName": "siamang gibbon (v3 Jambi alternate hap 2024)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "metadata": {
           "genome": "GCA_028878085.3",
           "taxId": "9590",
           "groups": "groups.txt",
-          "description": "siamang (v3 Jambi alternate hap 2024)",
+          "description": "siamang gibbon (v3 Jambi alternate hap 2024)",
           "twoBitPath": "GCA_028878085.3.2bit",
           "twoBitBptUrl": "GCA_028878085.3.2bit.bpt",
           "chromSizes": "GCA_028878085.3.chrom.sizes.txt",
@@ -346,6 +346,32 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/028/878/085/GCA_028878085.3/bbi/GCA_028878085.3_NHGRI_mSymSyn1-v2.0_alt.xenoRefGene.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "Tiberius",
+        "bigDataUrl": "contrib/tiberius/tiberius.bigGenePred.bb",
+        "shortLabel": "Tiberius genes",
+        "longLabel": "Tiberius ab initio gene prediction",
+        "type": "bigGenePred",
+        "visibility": "pack",
+        "color": "0,102,204",
+        "noScoreFilter": "on",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/028/878/085/GCA_028878085.3/contrib/tiberius/Tiberius.html\">contrib/tiberius/Tiberius.html</a>",
+        "group": "genes",
+        "dataVersion": "Tiberius version 2025-01-07",
+        "baseColorDefault": "genomicCodons"
+      },
+      "category": ["Genes and Gene Predictions"],
+      "trackId": "GCA_028878085.3-Tiberius",
+      "description": "Tiberius ab initio gene prediction",
+      "assemblyNames": ["GCA_028878085.3"],
+      "name": "Tiberius genes",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/028/878/085/GCA_028878085.3/contrib/tiberius/tiberius.bigGenePred.bb"
       }
     }
   ]

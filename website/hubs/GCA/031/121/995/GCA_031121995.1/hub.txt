@@ -62,6 +62,23 @@ type bigWig 0 100
 bigDataUrl bbi/GCA_031121995.1_ASM3112199v1.gc5Base.bw
 html html/GCA_031121995.1_ASM3112199v1.gc5Base
 
+track ncbiGene
+longLabel Gene models submitted to NCBI
+shortLabel Gene models
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCA_031121995.1_ASM3112199v1.ncbiGene.bb
+type bigGenePred
+html html/GCA_031121995.1_ASM3112199v1.ncbiGene
+searchIndex name
+url https://www.ncbi.nlm.nih.gov/gene/?term=$$
+urlLabel Entrez gene:
+labelFields geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
 track cpgIslands
 compositeTrack on
 shortLabel CpG Islands

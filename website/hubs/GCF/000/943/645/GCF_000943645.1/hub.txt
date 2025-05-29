@@ -73,6 +73,23 @@ xrefDataUrl bbi/GCF_000943645.1_ViralProj276005.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCF_000943645.1_ViralProj276005.repeatMasker
 
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000943645.1_ViralProj276005.ncbiGene.bb
+type bigGenePred
+html html/GCF_000943645.1_ViralProj276005.ncbiGene
+searchIndex name
+url https://www.ncbi.nlm.nih.gov/gene/?term=$$
+urlLabel Entrez gene:
+labelFields geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
 track cpgIslands
 compositeTrack on
 shortLabel CpG Islands

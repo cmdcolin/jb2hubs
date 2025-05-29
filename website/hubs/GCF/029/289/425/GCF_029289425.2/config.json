@@ -2,14 +2,14 @@
   "assemblies": [
     {
       "name": "GCF_029289425.2",
-      "displayName": "pygmy chimpanzee (v2 primary hap 2024 refseq)",
+      "displayName": "bonobo (v2 primary hap 2024 refseq)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "metadata": {
           "genome": "GCF_029289425.2",
           "taxId": "9597",
           "groups": "groups.txt",
-          "description": "pygmy chimpanzee (v2 primary hap 2024 refseq)",
+          "description": "bonobo (v2 primary hap 2024 refseq)",
           "twoBitPath": "GCF_029289425.2.2bit",
           "twoBitBptUrl": "GCF_029289425.2.2bit.bpt",
           "chromSizes": "GCF_029289425.2.chrom.sizes.txt",
@@ -516,6 +516,32 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/029/289/425/GCF_029289425.2/bbi/GCF_029289425.2_NHGRI_mPanPan1-v2.0_pri.xenoRefGene.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "Tiberius",
+        "bigDataUrl": "contrib/tiberius/tiberius.bigGenePred.bb",
+        "shortLabel": "Tiberius genes",
+        "longLabel": "Tiberius ab initio gene prediction",
+        "type": "bigGenePred",
+        "visibility": "pack",
+        "color": "0,102,204",
+        "noScoreFilter": "on",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/029/289/425/GCF_029289425.2/contrib/tiberius/Tiberius.html\">contrib/tiberius/Tiberius.html</a>",
+        "group": "genes",
+        "dataVersion": "Tiberius version 2025-01-07",
+        "baseColorDefault": "genomicCodons"
+      },
+      "category": ["Genes and Gene Predictions"],
+      "trackId": "GCF_029289425.2-Tiberius",
+      "description": "Tiberius ab initio gene prediction",
+      "assemblyNames": ["GCF_029289425.2"],
+      "name": "Tiberius genes",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/029/289/425/GCF_029289425.2/contrib/tiberius/tiberius.bigGenePred.bb"
       }
     }
   ]

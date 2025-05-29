@@ -14,8 +14,9 @@
           "twoBitBptUrl": "GCF_001704415.1.2bit.bpt",
           "chromSizes": "GCF_001704415.1.chrom.sizes.txt",
           "chromAliasBb": "GCF_001704415.1.chromAlias.bb",
+          "chromAuthority": "ucsc",
           "organism": "ARS1 Aug. 2016",
-          "defaultPos": "chr1:52467842-52477842",
+          "defaultPos": "NC_030808.1:52467842-52477842",
           "scientificName": "Capra hircus",
           "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.description.html\">html/GCF_001704415.1_ARS1.description.html</a>",
           "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/001/704/415/GCF_001704415.1",
@@ -150,7 +151,6 @@
         "visibility": "pack",
         "group": "varRep",
         "bigDataUrl": "bbi/GCF_001704415.1_ARS1.rmsk.bb",
-        "xrefDataUrl": "bbi/GCF_001704415.1_ARS1.rmsk.align.bb",
         "maxWindowToDraw": "5000000",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.repeatMasker\">html/GCF_001704415.1_ARS1.repeatMasker</a>"
       },
@@ -194,7 +194,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -225,7 +225,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -255,7 +255,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -477,38 +477,6 @@
     },
     {
       "metadata": {
-        "track": "ensGene",
-        "shortLabel": "Ensembl genes",
-        "longLabel": "Ensembl genes 2020_05",
-        "group": "genes",
-        "priority": "40",
-        "visibility": "pack",
-        "color": "150,0,0",
-        "itemRgb": "on",
-        "type": "bigGenePred",
-        "bigDataUrl": "bbi/GCF_001704415.1_ARS1.ensGene.bb",
-        "searchTrix": "ixIxx/GCF_001704415.1_ARS1.ensGene.ix",
-        "searchIndex": "name",
-        "labelFields": "name,name2",
-        "defaultLabelFields": "name2",
-        "baseColorUseCds": "given",
-        "baseColorDefault": "genomicCodons",
-        "labelSeparator": "\" \"",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.ensGene\">html/GCF_001704415.1_ARS1.ensGene</a>"
-      },
-      "category": ["Genes and Gene Predictions"],
-      "trackId": "GCF_001704415.1-ensGene",
-      "description": "Ensembl genes 2020_05",
-      "assemblyNames": ["GCF_001704415.1"],
-      "name": "Ensembl genes",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/bbi/GCF_001704415.1_ARS1.ensGene.bb"
-      }
-    },
-    {
-      "metadata": {
         "track": "chainHg38",
         "parent": "GCF_001704415.1_ARS1ChainNetViewchain on",
         "subGroups": "view=chain species=s000 chainType=c00",
@@ -519,7 +487,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainHg38Link.bb",
         "otherDb": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
+        "priority": "53.865"
       },
       "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_001704415.1-chainHg38",
@@ -544,7 +512,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainSynHg38Link.bb",
         "otherDb": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
+        "priority": "53.865"
       },
       "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_001704415.1-chainSynHg38",
@@ -569,7 +537,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainRBestHg38Link.bb",
         "otherDb": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
+        "priority": "53.865"
       },
       "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_001704415.1-chainRBestHg38",
@@ -594,7 +562,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainLiftOverHg38Link.bb",
         "otherDb": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
+        "priority": "53.865"
       },
       "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_001704415.1-chainLiftOverHg38",
@@ -619,7 +587,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainMm39Link.bb",
         "otherDb": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
+        "priority": "76.129"
       },
       "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_001704415.1-chainMm39",
@@ -644,7 +612,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainSynMm39Link.bb",
         "otherDb": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
+        "priority": "76.129"
       },
       "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_001704415.1-chainSynMm39",
@@ -669,7 +637,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainRBestMm39Link.bb",
         "otherDb": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
+        "priority": "76.129"
       },
       "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_001704415.1-chainRBestMm39",
@@ -694,7 +662,7 @@
         "linkDataUrl": "bbi/GCF_001704415.1_ARS1.chainLiftOverMm39Link.bb",
         "otherDb": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
+        "priority": "76.129"
       },
       "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_001704415.1-chainLiftOverMm39",
@@ -719,7 +687,7 @@
         "summary": "bbi/GCF_001704415.1_ARS1.hg38.net.summary.bb",
         "speciesOrder": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
+        "priority": "53.865"
       },
       "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_001704415.1-netHg38",
@@ -744,7 +712,7 @@
         "summary": "bbi/GCF_001704415.1_ARS1.hg38.synNet.summary.bb",
         "speciesOrder": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
+        "priority": "53.865"
       },
       "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_001704415.1-synNetHg38",
@@ -769,7 +737,7 @@
         "summary": "bbi/GCF_001704415.1_ARS1.hg38.rbestNet.summary.bb",
         "speciesOrder": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
+        "priority": "53.865"
       },
       "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_001704415.1-rbestNetHg38",
@@ -784,31 +752,6 @@
     },
     {
       "metadata": {
-        "track": "liftOverNetHg38",
-        "parent": "GCF_001704415.1_ARS1MafNetViewnet off",
-        "subGroups": "view=align species=s000 chainType=c07",
-        "shortLabel": "Human/hg38 liftOverNet",
-        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
-        "type": "bigMaf",
-        "bigDataUrl": "bbi/GCF_001704415.1_ARS1.hg38.liftOverNet.bb",
-        "summary": "bbi/GCF_001704415.1_ARS1.hg38.liftOverNet.summary.bb",
-        "speciesOrder": "hg38",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "53.984"
-      },
-      "category": ["Chain/Net", "Nets"],
-      "trackId": "GCF_001704415.1-liftOverNetHg38",
-      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
-      "assemblyNames": ["GCF_001704415.1"],
-      "name": "Human/hg38 liftOverNet",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/bbi/GCF_001704415.1_ARS1.hg38.liftOverNet.bb"
-      }
-    },
-    {
-      "metadata": {
         "track": "netMm39",
         "parent": "GCF_001704415.1_ARS1MafNetViewnet off",
         "subGroups": "view=align species=s001 chainType=c04",
@@ -819,7 +762,7 @@
         "summary": "bbi/GCF_001704415.1_ARS1.mm39.net.summary.bb",
         "speciesOrder": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
+        "priority": "76.129"
       },
       "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_001704415.1-netMm39",
@@ -844,7 +787,7 @@
         "summary": "bbi/GCF_001704415.1_ARS1.mm39.synNet.summary.bb",
         "speciesOrder": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
+        "priority": "76.129"
       },
       "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_001704415.1-synNetMm39",
@@ -869,7 +812,7 @@
         "summary": "bbi/GCF_001704415.1_ARS1.mm39.rbestNet.summary.bb",
         "speciesOrder": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
+        "priority": "76.129"
       },
       "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_001704415.1-rbestNetMm39",
@@ -880,31 +823,6 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/bbi/GCF_001704415.1_ARS1.mm39.rbestNet.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "liftOverNetMm39",
-        "parent": "GCF_001704415.1_ARS1MafNetViewnet off",
-        "subGroups": "view=align species=s001 chainType=c07",
-        "shortLabel": "Mouse/mm39 liftOverNet",
-        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
-        "type": "bigMaf",
-        "bigDataUrl": "bbi/GCF_001704415.1_ARS1.mm39.liftOverNet.bb",
-        "summary": "bbi/GCF_001704415.1_ARS1.mm39.liftOverNet.summary.bb",
-        "speciesOrder": "mm39",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/html/GCF_001704415.1_ARS1.chainNet\">html/GCF_001704415.1_ARS1.chainNet</a>",
-        "priority": "76.014"
-      },
-      "category": ["Chain/Net", "Nets"],
-      "trackId": "GCF_001704415.1-liftOverNetMm39",
-      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
-      "assemblyNames": ["GCF_001704415.1"],
-      "name": "Mouse/mm39 liftOverNet",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/001/704/415/GCF_001704415.1/bbi/GCF_001704415.1_ARS1.mm39.liftOverNet.bb"
       }
     }
   ]

@@ -21,6 +21,7 @@ htmlPath html/GCF_011100685.1_UU_Cfam_GSD_1.0.description.html
 blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/011/100/685/GCF_011100685.1
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/011/100/685/GCF_011100685.1
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/011/100/685/GCF_011100685.1
+liftOver.GCF_002263795.3 liftOver/GCF_011100685.1ToGCF_002263795.3.over.chain.gz
 liftOver.hg38 liftOver/GCF_011100685.1ToHg38.over.chain.gz
 
 track assembly
@@ -98,88 +99,14 @@ html html/GCF_011100685.1_UU_Cfam_GSD_1.0.tanDups
     type bigBed 12
 
 track repeatMasker
-compositeTrack on
 shortLabel RepeatMasker
-longLabel Repeating Elements by RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
 group varRep
-visibility dense
-type bigBed 6 +
-colorByStrand 50,50,150 150,50,50
-maxWindowToDraw 10000000
-spectrum on
+bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.bb
+maxWindowToDraw 5000000
 html html/GCF_011100685.1_UU_Cfam_GSD_1.0.repeatMasker
-
-    track repeatMaskerSINE
-    parent repeatMasker
-    shortLabel SINE
-    longLabel SINE Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 1
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.SINE.bb
-
-    track repeatMaskerLINE
-    parent repeatMasker
-    shortLabel LINE
-    longLabel LINE Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 2
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.LINE.bb
-
-    track repeatMaskerLTR
-    parent repeatMasker
-    shortLabel LTR
-    longLabel LTR Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 3
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.LTR.bb
-
-    track repeatMaskerDNA
-    parent repeatMasker
-    shortLabel DNA
-    longLabel DNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 4
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.DNA.bb
-
-    track repeatMaskerSimple
-    parent repeatMasker
-    shortLabel Simple
-    longLabel Simple Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 5
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.Simple.bb
-
-    track repeatMaskerLowComplexity
-    parent repeatMasker
-    shortLabel Low Complexity
-    longLabel Low Complexity Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 6
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.Low_complexity.bb
-
-    track repeatMaskerSatellite
-    parent repeatMasker
-    shortLabel Satellite
-    longLabel Satellite Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 7
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.Satellite.bb
-
-    track repeatMaskerRNA
-    parent repeatMasker
-    shortLabel RNA
-    longLabel RNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 8
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.RNA.bb
-
-    track repeatMaskerOther
-    parent repeatMasker
-    shortLabel Other
-    longLabel Other Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 9
-    bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.rmsk.Other.bb
 
 track repeatModeler
 shortLabel RepeatModeler
@@ -219,7 +146,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -237,7 +164,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -254,7 +181,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -387,112 +314,239 @@ baseColorDefault genomicCodons
 labelSeparator " "
 html html/GCF_011100685.1_UU_Cfam_GSD_1.0.ensGene
 
-##############################################################################
-# hg38 - Human - Homo sapiens - taxId: 9606
-##############################################################################
-track chainNetHg38
+track GCF_011100685.1_UU_Cfam_GSD_1.0ChainNet
 compositeTrack on
-shortLabel Human Chain/Net
-longLabel Human (Dec. 2013 (GRCh38/hg38)), Chain and Net Alignments
-subGroup1 view Views chain=Chain net=Net
+shortLabel Chain/Net
+longLabel Chain alignments to target sequence: GCF_011100685.1_UU_Cfam_GSD_1.0
+subGroup1 view Views chain=Chains synten=Syntenic rbest=Reciprocal_best liftover=Lift_over align=Alignment
+subGroup2 species Assembly s000=hg38 s001=GCF_002263795.3
+subGroup3 chainType chain_type c00=chain c01=syntenic c02=reciprocal_best c03=lift_over c04=chain_align c05=syntenic_align c06=reciprocal_align c07=lift_over_align
 dragAndDrop subTracks
 visibility hide
 group compGeno
-priority 100.1
 color 0,0,0
-altColor 100,50,0
+altColor 255,255,0
 type bed 3
-sortOrder view=+
-matrix 16 91,-114,-31,-123,-114,100,-125,-31,-31,-125,100,-114,-123,-31,-114,91
-chainMinScore 3000
-chainLinearGap medium
-matrixHeader A, C, G, T
-otherDb hg38
+chainLinearGap loose
+chainMinScore 5000
+dimensions dimensionX=chainType dimensionY=species
+sortOrder species=+ view=+ chainType=+
+configurable on
 html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
 
-    track chainNetHg38Viewchain
-    shortLabel Chain
+    track GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewchain
+    shortLabel Chains
     view chain
-    visibility pack
-    parent chainNetHg38
+    visibility dense
+    parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNet
+    spectrum on
+
+    track GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewSynTen
+    shortLabel Syntenic
+    view synten
+    visibility hide
+    parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNet
+    spectrum on
+
+    track GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewRBest
+    shortLabel Reciprocal best
+    view rbest
+    visibility hide
+    parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNet
+    spectrum on
+
+    track GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewLiftOver
+    shortLabel Lift over
+    view liftover
+    visibility hide
+    parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNet
     spectrum on
 
         track chainHg38
-        parent chainNetHg38Viewchain
-        subGroups view=chain
-        shortLabel Human Chain
-        longLabel Human (Dec. 2013 (GRCh38/hg38)) Chained Alignments
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewchain on
+        subGroups view=chain species=s000 chainType=c00
+        shortLabel Human/hg38 Chain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainHg38.bb
         linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainHg38Link.bb
-        priority 1
+        otherDb hg38
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 39.858
 
         track chainSynHg38
-        parent chainNetHg38Viewchain
-        subGroups view=chain
-        shortLabel Human synChain
-        longLabel Human (Dec. 2013 (GRCh38/hg38)) Syntenic Chained Alignments
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewSynTen off
+        subGroups view=synten species=s000 chainType=c01
+        shortLabel Human/hg38 synChain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainSynHg38.bb
         linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainSynHg38Link.bb
-        priority 2
+        otherDb hg38
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 39.858
 
         track chainRBestHg38
-        parent chainNetHg38Viewchain
-        subGroups view=chain
-        shortLabel Human rbChain
-        longLabel Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Chained Alignments
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewRBest off
+        subGroups view=rbest species=s000 chainType=c02
+        shortLabel Human/hg38 rbChain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainRBestHg38.bb
         linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainRBestHg38Link.bb
-        priority 3
+        otherDb hg38
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 39.858
 
         track chainLiftOverHg38
-        parent chainNetHg38Viewchain
-        subGroups view=chain
-        shortLabel Human loChain
-        longLabel Human (Dec. 2013 (GRCh38/hg38)) Lift Over Chained Alignments
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewLiftOver off
+        subGroups view=liftover species=s000 chainType=c03
+        shortLabel Human/hg38 loChain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainLiftOverHg38.bb
         linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainLiftOverHg38Link.bb
-        priority 4
+        otherDb hg38
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 39.858
 
-    track mafNetHg38Viewnet
-    shortLabel Net
-    view net
-    visibility full
-    parent chainNetHg38
+        track chainGCF_002263795.3
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewchain off
+        subGroups view=chain species=s001 chainType=c00
+        shortLabel cattle Chain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 42.521
+
+        track chainSynGCF_002263795.3
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewSynTen off
+        subGroups view=synten species=s001 chainType=c01
+        shortLabel cattle synChain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainSynGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainSynGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 42.521
+
+        track chainRBestGCF_002263795.3
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewRBest off
+        subGroups view=rbest species=s001 chainType=c02
+        shortLabel cattle rbChain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainRBestGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainRBestGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 42.521
+
+        track chainLiftOverGCF_002263795.3
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNetViewLiftOver off
+        subGroups view=liftover species=s001 chainType=c03
+        shortLabel cattle loChain
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigChain GCF_002263795.3
+        bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainLiftOverGCF_002263795.3.bb
+        linkDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.chainLiftOverGCF_002263795.3Link.bb
+        otherDb GCF_002263795.3
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 42.521
+
+    track GCF_011100685.1_UU_Cfam_GSD_1.0MafNetViewnet
+    shortLabel Nets
+    view align
+    visibility hide
+    parent GCF_011100685.1_UU_Cfam_GSD_1.0ChainNet
 
         track netHg38
-        parent mafNetHg38Viewnet
-        subGroups view=net
-        shortLabel Human net
-        longLabel Human (Dec. 2013 (GRCh38/hg38)) Net Alignment
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0MafNetViewnet off
+        subGroups view=align species=s000 chainType=c04
+        shortLabel Human/hg38 mafNet
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.hg38.net.bb
         summary bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.hg38.net.summary.bb
         speciesOrder hg38
-        priority 5
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 39.858
 
         track synNetHg38
-        parent mafNetHg38Viewnet
-        subGroups view=net
-        shortLabel Human synNet
-        longLabel Human (Dec. 2013 (GRCh38/hg38)) Syntenic Net Alignment
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0MafNetViewnet off
+        subGroups view=align species=s000 chainType=c05
+        shortLabel Human/hg38 synNet
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.hg38.synNet.bb
         summary bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.hg38.synNet.summary.bb
         speciesOrder hg38
-        priority 6
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 39.858
 
         track rbestNetHg38
-        parent mafNetHg38Viewnet
-        subGroups view=net
-        shortLabel Human rbestNet
-        longLabel Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Net Alignment
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0MafNetViewnet off
+        subGroups view=align species=s000 chainType=c06
+        shortLabel Human/hg38 rbestNet
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.hg38.rbestNet.bb
         summary bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.hg38.rbestNet.summary.bb
         speciesOrder hg38
-        priority 7
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 39.858
 
+        track netGCF_002263795.3
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0MafNetViewnet off
+        subGroups view=align species=s001 chainType=c04
+        shortLabel cattle mafNet
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.GCF_002263795.3.net.bb
+        summary bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.GCF_002263795.3.net.summary.bb
+        speciesOrder GCF_002263795.3
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 42.521
+
+        track synNetGCF_002263795.3
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0MafNetViewnet off
+        subGroups view=align species=s001 chainType=c05
+        shortLabel cattle synNet
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.GCF_002263795.3.synNet.bb
+        summary bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.GCF_002263795.3.synNet.summary.bb
+        speciesOrder GCF_002263795.3
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 42.521
+
+        track rbestNetGCF_002263795.3
+        parent GCF_011100685.1_UU_Cfam_GSD_1.0MafNetViewnet off
+        subGroups view=align species=s001 chainType=c06
+        shortLabel cattle rbestNet
+        longLabel cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.GCF_002263795.3.rbestNet.bb
+        summary bbi/GCF_011100685.1_UU_Cfam_GSD_1.0.GCF_002263795.3.rbestNet.summary.bb
+        speciesOrder GCF_002263795.3
+        html html/GCF_011100685.1_UU_Cfam_GSD_1.0.chainNet
+        priority 42.521
+
+
+track Tiberius
+bigDataUrl contrib/tiberius/tiberius.bigGenePred.bb
+shortLabel Tiberius genes
+longLabel Tiberius ab initio gene prediction
+type bigGenePred
+visibility pack
+color 0,102,204
+noScoreFilter on
+type bigGenePred
+html contrib/tiberius/Tiberius.html
+group genes
+dataVersion Tiberius version 2025-01-07
+baseColorDefault genomicCodons

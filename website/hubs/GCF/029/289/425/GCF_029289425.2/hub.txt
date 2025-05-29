@@ -1,6 +1,6 @@
 hub GCF_029289425.2 genome assembly
-shortLabel pygmy chimpanzee (v2 primary hap 2024 refseq)
-longLabel pygmy chimpanzee (v2 primary hap 2024 refseq)/Pan paniscus/GCF_029289425.2_NHGRI_mPanPan1-v2.0_pri genome assembly
+shortLabel bonobo (v2 primary hap 2024 refseq)
+longLabel bonobo (v2 primary hap 2024 refseq)/Pan paniscus/GCF_029289425.2_NHGRI_mPanPan1-v2.0_pri genome assembly
 useOneFile on
 email hclawson@ucsc.edu
 descriptionUrl html/GCF_029289425.2_NHGRI_mPanPan1-v2.0_pri.description.html
@@ -8,7 +8,7 @@ descriptionUrl html/GCF_029289425.2_NHGRI_mPanPan1-v2.0_pri.description.html
 genome GCF_029289425.2
 taxId 9597
 groups groups.txt
-description pygmy chimpanzee (v2 primary hap 2024 refseq)
+description bonobo (v2 primary hap 2024 refseq)
 twoBitPath GCF_029289425.2.2bit
 twoBitBptUrl GCF_029289425.2.2bit.bpt
 chromSizes GCF_029289425.2.chrom.sizes.txt
@@ -284,3 +284,17 @@ searchIndex name
 searchTrix ixIxx/GCF_029289425.2_NHGRI_mPanPan1-v2.0_pri.xenoRefGene.ix
 html html/GCF_029289425.2_NHGRI_mPanPan1-v2.0_pri.xenoRefGene
 
+
+track Tiberius
+bigDataUrl contrib/tiberius/tiberius.bigGenePred.bb
+shortLabel Tiberius genes
+longLabel Tiberius ab initio gene prediction
+type bigGenePred
+visibility pack
+color 0,102,204
+noScoreFilter on
+type bigGenePred
+html contrib/tiberius/Tiberius.html
+group genes
+dataVersion Tiberius version 2025-01-07
+baseColorDefault genomicCodons

@@ -30,12 +30,19 @@
           "liftOver.GCF_000767855.1": "liftOver/GCF_002263795.3ToGCF_000767855.1.over.chain.gz",
           "liftOver.GCF_001704415.2": "liftOver/GCF_002263795.3ToGCF_001704415.2.over.chain.gz",
           "liftOver.GCF_002263795.2": "liftOver/GCF_002263795.3ToGCF_002263795.2.over.chain.gz",
+          "liftOver.GCF_011100685.1": "liftOver/GCF_002263795.3ToGCF_011100685.1.over.chain.gz",
           "liftOver.GCF_016699485.2": "liftOver/GCF_002263795.3ToGCF_016699485.2.over.chain.gz",
           "liftOver.GCF_016772045.2": "liftOver/GCF_002263795.3ToGCF_016772045.2.over.chain.gz",
           "liftOver.GCF_019923935.1": "liftOver/GCF_002263795.3ToGCF_019923935.1.over.chain.gz",
+          "liftOver.GCF_027580195.1": "liftOver/GCF_002263795.3ToGCF_027580195.1.over.chain.gz",
+          "liftOver.GCF_028583685.1": "liftOver/GCF_002263795.3ToGCF_028583685.1.over.chain.gz",
+          "liftOver.GCF_950295315.1": "liftOver/GCF_002263795.3ToGCF_950295315.1.over.chain.gz",
+          "liftOver.GCF_964237555.1": "liftOver/GCF_002263795.3ToGCF_964237555.1.over.chain.gz",
           "liftOver.bosTau9": "liftOver/GCF_002263795.3ToBosTau9.over.chain.gz",
+          "liftOver.equCab3": "liftOver/GCF_002263795.3ToEquCab3.over.chain.gz",
           "liftOver.hg38": "liftOver/GCF_002263795.3ToHg38.over.chain.gz",
-          "liftOver.mm39": "liftOver/GCF_002263795.3ToMm39.over.chain.gz"
+          "liftOver.mm39": "liftOver/GCF_002263795.3ToMm39.over.chain.gz",
+          "liftOver.susScr11": "liftOver/GCF_002263795.3ToSusScr11.over.chain.gz"
         },
         "trackId": "GCF_002263795.3-ReferenceSequenceTrack",
         "adapter": {
@@ -227,7 +234,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -258,7 +265,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -288,7 +295,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -910,9 +917,109 @@
     },
     {
       "metadata": {
-        "track": "chainGCA_039881165.1",
+        "track": "chainGCF_027580195.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
         "subGroups": "view=chain species=s004 chainType=c00",
+        "shortLabel": "wild yak Chain",
+        "longLabel": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+        "type": "bigChain GCF_027580195.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_027580195.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_027580195.1Link.bb",
+        "otherDb": "GCF_027580195.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "4.364"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_002263795.3-chainGCF_027580195.1",
+      "description": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "wild yak Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_027580195.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_027580195.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s004 chainType=c01",
+        "shortLabel": "wild yak synChain",
+        "longLabel": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+        "type": "bigChain GCF_027580195.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_027580195.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_027580195.1Link.bb",
+        "otherDb": "GCF_027580195.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "4.364"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_002263795.3-chainSynGCF_027580195.1",
+      "description": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "wild yak synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_027580195.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_027580195.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s004 chainType=c02",
+        "shortLabel": "wild yak rbChain",
+        "longLabel": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+        "type": "bigChain GCF_027580195.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_027580195.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_027580195.1Link.bb",
+        "otherDb": "GCF_027580195.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "4.364"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_002263795.3-chainRBestGCF_027580195.1",
+      "description": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "wild yak rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_027580195.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_027580195.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s004 chainType=c03",
+        "shortLabel": "wild yak loChain",
+        "longLabel": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+        "type": "bigChain GCF_027580195.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_027580195.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_027580195.1Link.bb",
+        "otherDb": "GCF_027580195.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "4.364"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_002263795.3-chainLiftOverGCF_027580195.1",
+      "description": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "wild yak loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_027580195.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainGCA_039881165.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s005 chainType=c00",
         "shortLabel": "zebu cattle Chain",
         "longLabel": "zebu cattle/GCA_039881165.1_ASM3988116v1 (2024-05-29) Chained Alignments",
         "type": "bigChain GCA_039881165.1",
@@ -937,7 +1044,7 @@
       "metadata": {
         "track": "chainSynGCA_039881165.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s004 chainType=c01",
+        "subGroups": "view=synten species=s005 chainType=c01",
         "shortLabel": "zebu cattle synChain",
         "longLabel": "zebu cattle/GCA_039881165.1_ASM3988116v1 (2024-05-29) Chained Alignments",
         "type": "bigChain GCA_039881165.1",
@@ -962,7 +1069,7 @@
       "metadata": {
         "track": "chainRBestGCA_039881165.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s004 chainType=c02",
+        "subGroups": "view=rbest species=s005 chainType=c02",
         "shortLabel": "zebu cattle rbChain",
         "longLabel": "zebu cattle/GCA_039881165.1_ASM3988116v1 (2024-05-29) Chained Alignments",
         "type": "bigChain GCA_039881165.1",
@@ -987,7 +1094,7 @@
       "metadata": {
         "track": "chainLiftOverGCA_039881165.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s004 chainType=c03",
+        "subGroups": "view=liftover species=s005 chainType=c03",
         "shortLabel": "zebu cattle loChain",
         "longLabel": "zebu cattle/GCA_039881165.1_ASM3988116v1 (2024-05-29) Chained Alignments",
         "type": "bigChain GCA_039881165.1",
@@ -1012,7 +1119,7 @@
       "metadata": {
         "track": "chainGCA_005887515.3",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s005 chainType=c00",
+        "subGroups": "view=chain species=s006 chainType=c00",
         "shortLabel": "domestic yak Chain",
         "longLabel": "domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments",
         "type": "bigChain GCA_005887515.3",
@@ -1037,7 +1144,7 @@
       "metadata": {
         "track": "chainSynGCA_005887515.3",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s005 chainType=c01",
+        "subGroups": "view=synten species=s006 chainType=c01",
         "shortLabel": "domestic yak synChain",
         "longLabel": "domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments",
         "type": "bigChain GCA_005887515.3",
@@ -1062,7 +1169,7 @@
       "metadata": {
         "track": "chainRBestGCA_005887515.3",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s005 chainType=c02",
+        "subGroups": "view=rbest species=s006 chainType=c02",
         "shortLabel": "domestic yak rbChain",
         "longLabel": "domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments",
         "type": "bigChain GCA_005887515.3",
@@ -1087,7 +1194,7 @@
       "metadata": {
         "track": "chainLiftOverGCA_005887515.3",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s005 chainType=c03",
+        "subGroups": "view=liftover species=s006 chainType=c03",
         "shortLabel": "domestic yak loChain",
         "longLabel": "domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments",
         "type": "bigChain GCA_005887515.3",
@@ -1112,7 +1219,7 @@
       "metadata": {
         "track": "chainGCF_019923935.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s006 chainType=c00",
+        "subGroups": "view=chain species=s007 chainType=c00",
         "shortLabel": "water buffalo Chain",
         "longLabel": "water buffalo/GCF_019923935.1_NDDB_SH_1 (2021-09-10) Chained Alignments",
         "type": "bigChain GCF_019923935.1",
@@ -1137,7 +1244,7 @@
       "metadata": {
         "track": "chainSynGCF_019923935.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s006 chainType=c01",
+        "subGroups": "view=synten species=s007 chainType=c01",
         "shortLabel": "water buffalo synChain",
         "longLabel": "water buffalo/GCF_019923935.1_NDDB_SH_1 (2021-09-10) Chained Alignments",
         "type": "bigChain GCF_019923935.1",
@@ -1162,7 +1269,7 @@
       "metadata": {
         "track": "chainRBestGCF_019923935.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s006 chainType=c02",
+        "subGroups": "view=rbest species=s007 chainType=c02",
         "shortLabel": "water buffalo rbChain",
         "longLabel": "water buffalo/GCF_019923935.1_NDDB_SH_1 (2021-09-10) Chained Alignments",
         "type": "bigChain GCF_019923935.1",
@@ -1187,7 +1294,7 @@
       "metadata": {
         "track": "chainLiftOverGCF_019923935.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s006 chainType=c03",
+        "subGroups": "view=liftover species=s007 chainType=c03",
         "shortLabel": "water buffalo loChain",
         "longLabel": "water buffalo/GCF_019923935.1_NDDB_SH_1 (2021-09-10) Chained Alignments",
         "type": "bigChain GCF_019923935.1",
@@ -1212,7 +1319,7 @@
       "metadata": {
         "track": "chainGCF_001704415.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s007 chainType=c00",
+        "subGroups": "view=chain species=s008 chainType=c00",
         "shortLabel": "goat Chain",
         "longLabel": "goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments",
         "type": "bigChain GCF_001704415.2",
@@ -1237,7 +1344,7 @@
       "metadata": {
         "track": "chainSynGCF_001704415.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s007 chainType=c01",
+        "subGroups": "view=synten species=s008 chainType=c01",
         "shortLabel": "goat synChain",
         "longLabel": "goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments",
         "type": "bigChain GCF_001704415.2",
@@ -1262,7 +1369,7 @@
       "metadata": {
         "track": "chainRBestGCF_001704415.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s007 chainType=c02",
+        "subGroups": "view=rbest species=s008 chainType=c02",
         "shortLabel": "goat rbChain",
         "longLabel": "goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments",
         "type": "bigChain GCF_001704415.2",
@@ -1287,7 +1394,7 @@
       "metadata": {
         "track": "chainLiftOverGCF_001704415.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s007 chainType=c03",
+        "subGroups": "view=liftover species=s008 chainType=c03",
         "shortLabel": "goat loChain",
         "longLabel": "goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments",
         "type": "bigChain GCF_001704415.2",
@@ -1312,7 +1419,7 @@
       "metadata": {
         "track": "chainGCF_016772045.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s008 chainType=c00",
+        "subGroups": "view=chain species=s009 chainType=c00",
         "shortLabel": "sheep Chain",
         "longLabel": "sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments",
         "type": "bigChain GCF_016772045.2",
@@ -1337,7 +1444,7 @@
       "metadata": {
         "track": "chainSynGCF_016772045.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s008 chainType=c01",
+        "subGroups": "view=synten species=s009 chainType=c01",
         "shortLabel": "sheep synChain",
         "longLabel": "sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments",
         "type": "bigChain GCF_016772045.2",
@@ -1362,7 +1469,7 @@
       "metadata": {
         "track": "chainRBestGCF_016772045.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s008 chainType=c02",
+        "subGroups": "view=rbest species=s009 chainType=c02",
         "shortLabel": "sheep rbChain",
         "longLabel": "sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments",
         "type": "bigChain GCF_016772045.2",
@@ -1387,7 +1494,7 @@
       "metadata": {
         "track": "chainLiftOverGCF_016772045.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s008 chainType=c03",
+        "subGroups": "view=liftover species=s009 chainType=c03",
         "shortLabel": "sheep loChain",
         "longLabel": "sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments",
         "type": "bigChain GCF_016772045.2",
@@ -1410,9 +1517,209 @@
     },
     {
       "metadata": {
+        "track": "chainEquCab3",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s010 chainType=c00",
+        "shortLabel": "Horse/equCab3 Chain",
+        "longLabel": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+        "type": "bigChain equCab3",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainEquCab3.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainEquCab3Link.bb",
+        "otherDb": "equCab3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.464"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_002263795.3-chainEquCab3",
+      "description": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Horse/equCab3 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainEquCab3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynEquCab3",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s010 chainType=c01",
+        "shortLabel": "Horse/equCab3 synChain",
+        "longLabel": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+        "type": "bigChain equCab3",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynEquCab3.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynEquCab3Link.bb",
+        "otherDb": "equCab3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.464"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_002263795.3-chainSynEquCab3",
+      "description": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Horse/equCab3 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSynEquCab3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestEquCab3",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s010 chainType=c02",
+        "shortLabel": "Horse/equCab3 rbChain",
+        "longLabel": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+        "type": "bigChain equCab3",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestEquCab3.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestEquCab3Link.bb",
+        "otherDb": "equCab3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.464"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_002263795.3-chainRBestEquCab3",
+      "description": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Horse/equCab3 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestEquCab3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverEquCab3",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s010 chainType=c03",
+        "shortLabel": "Horse/equCab3 loChain",
+        "longLabel": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+        "type": "bigChain equCab3",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverEquCab3.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverEquCab3Link.bb",
+        "otherDb": "equCab3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.464"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_002263795.3-chainLiftOverEquCab3",
+      "description": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Horse/equCab3 loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverEquCab3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSusScr11",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s011 chainType=c00",
+        "shortLabel": "Pig/susScr11 Chain",
+        "longLabel": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+        "type": "bigChain susScr11",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSusScr11.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSusScr11Link.bb",
+        "otherDb": "susScr11",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.540"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_002263795.3-chainSusScr11",
+      "description": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Pig/susScr11 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSusScr11.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynSusScr11",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s011 chainType=c01",
+        "shortLabel": "Pig/susScr11 synChain",
+        "longLabel": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+        "type": "bigChain susScr11",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynSusScr11.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynSusScr11Link.bb",
+        "otherDb": "susScr11",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.540"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_002263795.3-chainSynSusScr11",
+      "description": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Pig/susScr11 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSynSusScr11.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestSusScr11",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s011 chainType=c02",
+        "shortLabel": "Pig/susScr11 rbChain",
+        "longLabel": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+        "type": "bigChain susScr11",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestSusScr11.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestSusScr11Link.bb",
+        "otherDb": "susScr11",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.540"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_002263795.3-chainRBestSusScr11",
+      "description": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Pig/susScr11 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestSusScr11.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverSusScr11",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s011 chainType=c03",
+        "shortLabel": "Pig/susScr11 loChain",
+        "longLabel": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+        "type": "bigChain susScr11",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverSusScr11.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverSusScr11Link.bb",
+        "otherDb": "susScr11",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.540"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_002263795.3-chainLiftOverSusScr11",
+      "description": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Pig/susScr11 loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverSusScr11.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainGCF_000767855.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s009 chainType=c00",
+        "subGroups": "view=chain species=s012 chainType=c00",
         "shortLabel": "Bactrian camel Chain",
         "longLabel": "Bactrian camel/GCF_000767855.1_Ca_bactrianus_MBC_1.0 (2014-10-23) Chained Alignments",
         "type": "bigChain GCF_000767855.1",
@@ -1437,7 +1744,7 @@
       "metadata": {
         "track": "chainSynGCF_000767855.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s009 chainType=c01",
+        "subGroups": "view=synten species=s012 chainType=c01",
         "shortLabel": "Bactrian camel synChain",
         "longLabel": "Bactrian camel/GCF_000767855.1_Ca_bactrianus_MBC_1.0 (2014-10-23) Chained Alignments",
         "type": "bigChain GCF_000767855.1",
@@ -1462,7 +1769,7 @@
       "metadata": {
         "track": "chainRBestGCF_000767855.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s009 chainType=c02",
+        "subGroups": "view=rbest species=s012 chainType=c02",
         "shortLabel": "Bactrian camel rbChain",
         "longLabel": "Bactrian camel/GCF_000767855.1_Ca_bactrianus_MBC_1.0 (2014-10-23) Chained Alignments",
         "type": "bigChain GCF_000767855.1",
@@ -1487,7 +1794,7 @@
       "metadata": {
         "track": "chainLiftOverGCF_000767855.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s009 chainType=c03",
+        "subGroups": "view=liftover species=s012 chainType=c03",
         "shortLabel": "Bactrian camel loChain",
         "longLabel": "Bactrian camel/GCF_000767855.1_Ca_bactrianus_MBC_1.0 (2014-10-23) Chained Alignments",
         "type": "bigChain GCF_000767855.1",
@@ -1512,7 +1819,7 @@
       "metadata": {
         "track": "chainGCF_000003025.6",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s010 chainType=c00",
+        "subGroups": "view=chain species=s013 chainType=c00",
         "shortLabel": "pig Chain",
         "longLabel": "pig/GCF_000003025.6_Sscrofa11.1 (2017-02-07) Chained Alignments",
         "type": "bigChain GCF_000003025.6",
@@ -1537,7 +1844,7 @@
       "metadata": {
         "track": "chainSynGCF_000003025.6",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s010 chainType=c01",
+        "subGroups": "view=synten species=s013 chainType=c01",
         "shortLabel": "pig synChain",
         "longLabel": "pig/GCF_000003025.6_Sscrofa11.1 (2017-02-07) Chained Alignments",
         "type": "bigChain GCF_000003025.6",
@@ -1562,7 +1869,7 @@
       "metadata": {
         "track": "chainRBestGCF_000003025.6",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s010 chainType=c02",
+        "subGroups": "view=rbest species=s013 chainType=c02",
         "shortLabel": "pig rbChain",
         "longLabel": "pig/GCF_000003025.6_Sscrofa11.1 (2017-02-07) Chained Alignments",
         "type": "bigChain GCF_000003025.6",
@@ -1587,7 +1894,7 @@
       "metadata": {
         "track": "chainLiftOverGCF_000003025.6",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s010 chainType=c03",
+        "subGroups": "view=liftover species=s013 chainType=c03",
         "shortLabel": "pig loChain",
         "longLabel": "pig/GCF_000003025.6_Sscrofa11.1 (2017-02-07) Chained Alignments",
         "type": "bigChain GCF_000003025.6",
@@ -1610,9 +1917,109 @@
     },
     {
       "metadata": {
+        "track": "chainGCF_011100685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s014 chainType=c00",
+        "shortLabel": "dog Chain",
+        "longLabel": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+        "type": "bigChain GCF_011100685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_011100685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_011100685.1Link.bb",
+        "otherDb": "GCF_011100685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "48.607"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_002263795.3-chainGCF_011100685.1",
+      "description": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "dog Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_011100685.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_011100685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s014 chainType=c01",
+        "shortLabel": "dog synChain",
+        "longLabel": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+        "type": "bigChain GCF_011100685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_011100685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_011100685.1Link.bb",
+        "otherDb": "GCF_011100685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "48.607"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_002263795.3-chainSynGCF_011100685.1",
+      "description": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "dog synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_011100685.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_011100685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s014 chainType=c02",
+        "shortLabel": "dog rbChain",
+        "longLabel": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+        "type": "bigChain GCF_011100685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_011100685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_011100685.1Link.bb",
+        "otherDb": "GCF_011100685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "48.607"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_002263795.3-chainRBestGCF_011100685.1",
+      "description": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "dog rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_011100685.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_011100685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s014 chainType=c03",
+        "shortLabel": "dog loChain",
+        "longLabel": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+        "type": "bigChain GCF_011100685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_011100685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_011100685.1Link.bb",
+        "otherDb": "GCF_011100685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "48.607"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_002263795.3-chainLiftOverGCF_011100685.1",
+      "description": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "dog loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_011100685.1.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainHg38",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s011 chainType=c00",
+        "subGroups": "view=chain species=s015 chainType=c00",
         "shortLabel": "Human/hg38 Chain",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
@@ -1637,7 +2044,7 @@
       "metadata": {
         "track": "chainSynHg38",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s011 chainType=c01",
+        "subGroups": "view=synten species=s015 chainType=c01",
         "shortLabel": "Human/hg38 synChain",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
@@ -1662,7 +2069,7 @@
       "metadata": {
         "track": "chainRBestHg38",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s011 chainType=c02",
+        "subGroups": "view=rbest species=s015 chainType=c02",
         "shortLabel": "Human/hg38 rbChain",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
@@ -1687,7 +2094,7 @@
       "metadata": {
         "track": "chainLiftOverHg38",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s011 chainType=c03",
+        "subGroups": "view=liftover species=s015 chainType=c03",
         "shortLabel": "Human/hg38 loChain",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
@@ -1710,9 +2117,209 @@
     },
     {
       "metadata": {
+        "track": "chainGCF_964237555.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s016 chainType=c00",
+        "shortLabel": "rabbit Chain",
+        "longLabel": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+        "type": "bigChain GCF_964237555.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_964237555.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_964237555.1Link.bb",
+        "otherDb": "GCF_964237555.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "56.036"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_002263795.3-chainGCF_964237555.1",
+      "description": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "rabbit Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_964237555.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_964237555.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s016 chainType=c01",
+        "shortLabel": "rabbit synChain",
+        "longLabel": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+        "type": "bigChain GCF_964237555.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_964237555.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_964237555.1Link.bb",
+        "otherDb": "GCF_964237555.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "56.036"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_002263795.3-chainSynGCF_964237555.1",
+      "description": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "rabbit synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_964237555.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_964237555.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s016 chainType=c02",
+        "shortLabel": "rabbit rbChain",
+        "longLabel": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+        "type": "bigChain GCF_964237555.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_964237555.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_964237555.1Link.bb",
+        "otherDb": "GCF_964237555.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "56.036"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_002263795.3-chainRBestGCF_964237555.1",
+      "description": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "rabbit rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_964237555.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_964237555.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s016 chainType=c03",
+        "shortLabel": "rabbit loChain",
+        "longLabel": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+        "type": "bigChain GCF_964237555.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_964237555.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_964237555.1Link.bb",
+        "otherDb": "GCF_964237555.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "56.036"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_002263795.3-chainLiftOverGCF_964237555.1",
+      "description": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "rabbit loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_964237555.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_950295315.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s017 chainType=c00",
+        "shortLabel": "western European hedgehog Chain",
+        "longLabel": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+        "type": "bigChain GCF_950295315.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_950295315.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_950295315.1Link.bb",
+        "otherDb": "GCF_950295315.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "69.486"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_002263795.3-chainGCF_950295315.1",
+      "description": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "western European hedgehog Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_950295315.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_950295315.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s017 chainType=c01",
+        "shortLabel": "western European hedgehog synChain",
+        "longLabel": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+        "type": "bigChain GCF_950295315.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_950295315.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_950295315.1Link.bb",
+        "otherDb": "GCF_950295315.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "69.486"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_002263795.3-chainSynGCF_950295315.1",
+      "description": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "western European hedgehog synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_950295315.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_950295315.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s017 chainType=c02",
+        "shortLabel": "western European hedgehog rbChain",
+        "longLabel": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+        "type": "bigChain GCF_950295315.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_950295315.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_950295315.1Link.bb",
+        "otherDb": "GCF_950295315.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "69.486"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_002263795.3-chainRBestGCF_950295315.1",
+      "description": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "western European hedgehog rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_950295315.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_950295315.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s017 chainType=c03",
+        "shortLabel": "western European hedgehog loChain",
+        "longLabel": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+        "type": "bigChain GCF_950295315.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_950295315.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_950295315.1Link.bb",
+        "otherDb": "GCF_950295315.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "69.486"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_002263795.3-chainLiftOverGCF_950295315.1",
+      "description": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "western European hedgehog loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_950295315.1.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainMm39",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s012 chainType=c00",
+        "subGroups": "view=chain species=s018 chainType=c00",
         "shortLabel": "Mouse/mm39 Chain",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigChain mm39",
@@ -1737,7 +2344,7 @@
       "metadata": {
         "track": "chainSynMm39",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s012 chainType=c01",
+        "subGroups": "view=synten species=s018 chainType=c01",
         "shortLabel": "Mouse/mm39 synChain",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigChain mm39",
@@ -1762,7 +2369,7 @@
       "metadata": {
         "track": "chainRBestMm39",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s012 chainType=c02",
+        "subGroups": "view=rbest species=s018 chainType=c02",
         "shortLabel": "Mouse/mm39 rbChain",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigChain mm39",
@@ -1787,7 +2394,7 @@
       "metadata": {
         "track": "chainLiftOverMm39",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s012 chainType=c03",
+        "subGroups": "view=liftover species=s018 chainType=c03",
         "shortLabel": "Mouse/mm39 loChain",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigChain mm39",
@@ -1810,9 +2417,109 @@
     },
     {
       "metadata": {
+        "track": "chainGCF_028583685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s019 chainType=c00",
+        "shortLabel": "sugar glider Chain",
+        "longLabel": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+        "type": "bigChain GCF_028583685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_028583685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_028583685.1Link.bb",
+        "otherDb": "GCF_028583685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "91.795"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_002263795.3-chainGCF_028583685.1",
+      "description": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "sugar glider Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainGCF_028583685.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_028583685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s019 chainType=c01",
+        "shortLabel": "sugar glider synChain",
+        "longLabel": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+        "type": "bigChain GCF_028583685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_028583685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_028583685.1Link.bb",
+        "otherDb": "GCF_028583685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "91.795"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_002263795.3-chainSynGCF_028583685.1",
+      "description": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "sugar glider synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainSynGCF_028583685.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_028583685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s019 chainType=c02",
+        "shortLabel": "sugar glider rbChain",
+        "longLabel": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+        "type": "bigChain GCF_028583685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_028583685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_028583685.1Link.bb",
+        "otherDb": "GCF_028583685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "91.795"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_002263795.3-chainRBestGCF_028583685.1",
+      "description": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "sugar glider rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainRBestGCF_028583685.1.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_028583685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s019 chainType=c03",
+        "shortLabel": "sugar glider loChain",
+        "longLabel": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+        "type": "bigChain GCF_028583685.1",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_028583685.1.bb",
+        "linkDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_028583685.1Link.bb",
+        "otherDb": "GCF_028583685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "91.795"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_002263795.3-chainLiftOverGCF_028583685.1",
+      "description": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "sugar glider loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.chainLiftOverGCF_028583685.1.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainGCF_016699485.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s013 chainType=c00",
+        "subGroups": "view=chain species=s020 chainType=c00",
         "shortLabel": "chicken white leghorn layer X broiler Chain",
         "longLabel": "chicken white leghorn layer X broiler/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b (2021-01-19) Chained Alignments",
         "type": "bigChain GCF_016699485.2",
@@ -1837,7 +2544,7 @@
       "metadata": {
         "track": "chainSynGCF_016699485.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s013 chainType=c01",
+        "subGroups": "view=synten species=s020 chainType=c01",
         "shortLabel": "chicken white leghorn layer X broiler synChain",
         "longLabel": "chicken white leghorn layer X broiler/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b (2021-01-19) Chained Alignments",
         "type": "bigChain GCF_016699485.2",
@@ -1862,7 +2569,7 @@
       "metadata": {
         "track": "chainRBestGCF_016699485.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s013 chainType=c02",
+        "subGroups": "view=rbest species=s020 chainType=c02",
         "shortLabel": "chicken white leghorn layer X broiler rbChain",
         "longLabel": "chicken white leghorn layer X broiler/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b (2021-01-19) Chained Alignments",
         "type": "bigChain GCF_016699485.2",
@@ -1887,7 +2594,7 @@
       "metadata": {
         "track": "chainLiftOverGCF_016699485.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s013 chainType=c03",
+        "subGroups": "view=liftover species=s020 chainType=c03",
         "shortLabel": "chicken white leghorn layer X broiler loChain",
         "longLabel": "chicken white leghorn layer X broiler/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b (2021-01-19) Chained Alignments",
         "type": "bigChain GCF_016699485.2",
@@ -2210,9 +2917,84 @@
     },
     {
       "metadata": {
-        "track": "netGCA_039881165.1",
+        "track": "netGCF_027580195.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
         "subGroups": "view=align species=s004 chainType=c04",
+        "shortLabel": "wild yak mafNet",
+        "longLabel": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.net.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.net.summary.bb",
+        "speciesOrder": "GCF_027580195.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "4.364"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-netGCF_027580195.1",
+      "description": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "wild yak mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_027580195.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s004 chainType=c05",
+        "shortLabel": "wild yak synNet",
+        "longLabel": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.synNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.synNet.summary.bb",
+        "speciesOrder": "GCF_027580195.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "4.364"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-synNetGCF_027580195.1",
+      "description": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "wild yak synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_027580195.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s004 chainType=c06",
+        "shortLabel": "wild yak rbestNet",
+        "longLabel": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.rbestNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_027580195.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "4.364"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-rbestNetGCF_027580195.1",
+      "description": "wild yak/GCF_027580195.1_NWIPB_WYAK_1.1 (2023-01-09) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "wild yak rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_027580195.1.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netGCA_039881165.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s005 chainType=c04",
         "shortLabel": "zebu cattle mafNet",
         "longLabel": "zebu cattle/GCA_039881165.1_ASM3988116v1 (2024-05-29) Chained Alignments",
         "type": "bigMaf",
@@ -2237,7 +3019,7 @@
       "metadata": {
         "track": "synNetGCA_039881165.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s004 chainType=c05",
+        "subGroups": "view=align species=s005 chainType=c05",
         "shortLabel": "zebu cattle synNet",
         "longLabel": "zebu cattle/GCA_039881165.1_ASM3988116v1 (2024-05-29) Chained Alignments",
         "type": "bigMaf",
@@ -2262,7 +3044,7 @@
       "metadata": {
         "track": "rbestNetGCA_039881165.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s004 chainType=c06",
+        "subGroups": "view=align species=s005 chainType=c06",
         "shortLabel": "zebu cattle rbestNet",
         "longLabel": "zebu cattle/GCA_039881165.1_ASM3988116v1 (2024-05-29) Chained Alignments",
         "type": "bigMaf",
@@ -2287,7 +3069,7 @@
       "metadata": {
         "track": "netGCA_005887515.3",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s005 chainType=c04",
+        "subGroups": "view=align species=s006 chainType=c04",
         "shortLabel": "domestic yak mafNet",
         "longLabel": "domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments",
         "type": "bigMaf",
@@ -2312,7 +3094,7 @@
       "metadata": {
         "track": "synNetGCA_005887515.3",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s005 chainType=c05",
+        "subGroups": "view=align species=s006 chainType=c05",
         "shortLabel": "domestic yak synNet",
         "longLabel": "domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments",
         "type": "bigMaf",
@@ -2337,7 +3119,7 @@
       "metadata": {
         "track": "rbestNetGCA_005887515.3",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s005 chainType=c06",
+        "subGroups": "view=align species=s006 chainType=c06",
         "shortLabel": "domestic yak rbestNet",
         "longLabel": "domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments",
         "type": "bigMaf",
@@ -2362,7 +3144,7 @@
       "metadata": {
         "track": "netGCF_019923935.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s006 chainType=c04",
+        "subGroups": "view=align species=s007 chainType=c04",
         "shortLabel": "water buffalo mafNet",
         "longLabel": "water buffalo/GCF_019923935.1_NDDB_SH_1 (2021-09-10) Chained Alignments",
         "type": "bigMaf",
@@ -2387,7 +3169,7 @@
       "metadata": {
         "track": "synNetGCF_019923935.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s006 chainType=c05",
+        "subGroups": "view=align species=s007 chainType=c05",
         "shortLabel": "water buffalo synNet",
         "longLabel": "water buffalo/GCF_019923935.1_NDDB_SH_1 (2021-09-10) Chained Alignments",
         "type": "bigMaf",
@@ -2412,7 +3194,7 @@
       "metadata": {
         "track": "rbestNetGCF_019923935.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s006 chainType=c06",
+        "subGroups": "view=align species=s007 chainType=c06",
         "shortLabel": "water buffalo rbestNet",
         "longLabel": "water buffalo/GCF_019923935.1_NDDB_SH_1 (2021-09-10) Chained Alignments",
         "type": "bigMaf",
@@ -2437,7 +3219,7 @@
       "metadata": {
         "track": "netGCF_001704415.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s007 chainType=c04",
+        "subGroups": "view=align species=s008 chainType=c04",
         "shortLabel": "goat mafNet",
         "longLabel": "goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments",
         "type": "bigMaf",
@@ -2462,7 +3244,7 @@
       "metadata": {
         "track": "synNetGCF_001704415.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s007 chainType=c05",
+        "subGroups": "view=align species=s008 chainType=c05",
         "shortLabel": "goat synNet",
         "longLabel": "goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments",
         "type": "bigMaf",
@@ -2487,7 +3269,7 @@
       "metadata": {
         "track": "rbestNetGCF_001704415.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s007 chainType=c06",
+        "subGroups": "view=align species=s008 chainType=c06",
         "shortLabel": "goat rbestNet",
         "longLabel": "goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments",
         "type": "bigMaf",
@@ -2512,7 +3294,7 @@
       "metadata": {
         "track": "netGCF_016772045.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s008 chainType=c04",
+        "subGroups": "view=align species=s009 chainType=c04",
         "shortLabel": "sheep mafNet",
         "longLabel": "sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments",
         "type": "bigMaf",
@@ -2537,7 +3319,7 @@
       "metadata": {
         "track": "synNetGCF_016772045.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s008 chainType=c05",
+        "subGroups": "view=align species=s009 chainType=c05",
         "shortLabel": "sheep synNet",
         "longLabel": "sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments",
         "type": "bigMaf",
@@ -2562,7 +3344,7 @@
       "metadata": {
         "track": "rbestNetGCF_016772045.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s008 chainType=c06",
+        "subGroups": "view=align species=s009 chainType=c06",
         "shortLabel": "sheep rbestNet",
         "longLabel": "sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments",
         "type": "bigMaf",
@@ -2585,9 +3367,159 @@
     },
     {
       "metadata": {
+        "track": "netEquCab3",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s010 chainType=c04",
+        "shortLabel": "Horse/equCab3 mafNet",
+        "longLabel": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.net.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.net.summary.bb",
+        "speciesOrder": "equCab3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.464"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-netEquCab3",
+      "description": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Horse/equCab3 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetEquCab3",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s010 chainType=c05",
+        "shortLabel": "Horse/equCab3 synNet",
+        "longLabel": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.synNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.synNet.summary.bb",
+        "speciesOrder": "equCab3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.464"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-synNetEquCab3",
+      "description": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Horse/equCab3 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetEquCab3",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s010 chainType=c06",
+        "shortLabel": "Horse/equCab3 rbestNet",
+        "longLabel": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.rbestNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.rbestNet.summary.bb",
+        "speciesOrder": "equCab3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.464"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-rbestNetEquCab3",
+      "description": "Horse/equCab3/equCab3 (Jan. 2018) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Horse/equCab3 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.equCab3.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netSusScr11",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s011 chainType=c04",
+        "shortLabel": "Pig/susScr11 mafNet",
+        "longLabel": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.net.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.net.summary.bb",
+        "speciesOrder": "susScr11",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.540"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-netSusScr11",
+      "description": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Pig/susScr11 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetSusScr11",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s011 chainType=c05",
+        "shortLabel": "Pig/susScr11 synNet",
+        "longLabel": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.synNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.synNet.summary.bb",
+        "speciesOrder": "susScr11",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.540"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-synNetSusScr11",
+      "description": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Pig/susScr11 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetSusScr11",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s011 chainType=c06",
+        "shortLabel": "Pig/susScr11 rbestNet",
+        "longLabel": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.rbestNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.rbestNet.summary.bb",
+        "speciesOrder": "susScr11",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "43.540"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-rbestNetSusScr11",
+      "description": "Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Pig/susScr11 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.susScr11.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "netGCF_000767855.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s009 chainType=c04",
+        "subGroups": "view=align species=s012 chainType=c04",
         "shortLabel": "Bactrian camel mafNet",
         "longLabel": "Bactrian camel/GCF_000767855.1_Ca_bactrianus_MBC_1.0 (2014-10-23) Chained Alignments",
         "type": "bigMaf",
@@ -2612,7 +3544,7 @@
       "metadata": {
         "track": "synNetGCF_000767855.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s009 chainType=c05",
+        "subGroups": "view=align species=s012 chainType=c05",
         "shortLabel": "Bactrian camel synNet",
         "longLabel": "Bactrian camel/GCF_000767855.1_Ca_bactrianus_MBC_1.0 (2014-10-23) Chained Alignments",
         "type": "bigMaf",
@@ -2637,7 +3569,7 @@
       "metadata": {
         "track": "rbestNetGCF_000767855.1",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s009 chainType=c06",
+        "subGroups": "view=align species=s012 chainType=c06",
         "shortLabel": "Bactrian camel rbestNet",
         "longLabel": "Bactrian camel/GCF_000767855.1_Ca_bactrianus_MBC_1.0 (2014-10-23) Chained Alignments",
         "type": "bigMaf",
@@ -2662,7 +3594,7 @@
       "metadata": {
         "track": "netGCF_000003025.6",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s010 chainType=c04",
+        "subGroups": "view=align species=s013 chainType=c04",
         "shortLabel": "pig mafNet",
         "longLabel": "pig/GCF_000003025.6_Sscrofa11.1 (2017-02-07) Chained Alignments",
         "type": "bigMaf",
@@ -2687,7 +3619,7 @@
       "metadata": {
         "track": "synNetGCF_000003025.6",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s010 chainType=c05",
+        "subGroups": "view=align species=s013 chainType=c05",
         "shortLabel": "pig synNet",
         "longLabel": "pig/GCF_000003025.6_Sscrofa11.1 (2017-02-07) Chained Alignments",
         "type": "bigMaf",
@@ -2712,7 +3644,7 @@
       "metadata": {
         "track": "rbestNetGCF_000003025.6",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s010 chainType=c06",
+        "subGroups": "view=align species=s013 chainType=c06",
         "shortLabel": "pig rbestNet",
         "longLabel": "pig/GCF_000003025.6_Sscrofa11.1 (2017-02-07) Chained Alignments",
         "type": "bigMaf",
@@ -2735,9 +3667,84 @@
     },
     {
       "metadata": {
+        "track": "netGCF_011100685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s014 chainType=c04",
+        "shortLabel": "dog mafNet",
+        "longLabel": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.net.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.net.summary.bb",
+        "speciesOrder": "GCF_011100685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "48.607"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-netGCF_011100685.1",
+      "description": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "dog mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_011100685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s014 chainType=c05",
+        "shortLabel": "dog synNet",
+        "longLabel": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.synNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.synNet.summary.bb",
+        "speciesOrder": "GCF_011100685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "48.607"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-synNetGCF_011100685.1",
+      "description": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "dog synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_011100685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s014 chainType=c06",
+        "shortLabel": "dog rbestNet",
+        "longLabel": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.rbestNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_011100685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "48.607"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-rbestNetGCF_011100685.1",
+      "description": "dog/GCF_011100685.1_UU_Cfam_GSD_1.0 (2020-03-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "dog rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_011100685.1.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "netHg38",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s011 chainType=c04",
+        "subGroups": "view=align species=s015 chainType=c04",
         "shortLabel": "Human/hg38 mafNet",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
@@ -2762,7 +3769,7 @@
       "metadata": {
         "track": "synNetHg38",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s011 chainType=c05",
+        "subGroups": "view=align species=s015 chainType=c05",
         "shortLabel": "Human/hg38 synNet",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
@@ -2787,7 +3794,7 @@
       "metadata": {
         "track": "rbestNetHg38",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s011 chainType=c06",
+        "subGroups": "view=align species=s015 chainType=c06",
         "shortLabel": "Human/hg38 rbestNet",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
@@ -2810,9 +3817,159 @@
     },
     {
       "metadata": {
+        "track": "netGCF_964237555.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s016 chainType=c04",
+        "shortLabel": "rabbit mafNet",
+        "longLabel": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.net.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.net.summary.bb",
+        "speciesOrder": "GCF_964237555.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "56.036"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-netGCF_964237555.1",
+      "description": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "rabbit mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_964237555.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s016 chainType=c05",
+        "shortLabel": "rabbit synNet",
+        "longLabel": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.synNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.synNet.summary.bb",
+        "speciesOrder": "GCF_964237555.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "56.036"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-synNetGCF_964237555.1",
+      "description": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "rabbit synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_964237555.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s016 chainType=c06",
+        "shortLabel": "rabbit rbestNet",
+        "longLabel": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.rbestNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_964237555.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "56.036"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-rbestNetGCF_964237555.1",
+      "description": "rabbit/GCF_964237555.1_mOryCun1.1 (2024-08-31) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "rabbit rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_964237555.1.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netGCF_950295315.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s017 chainType=c04",
+        "shortLabel": "western European hedgehog mafNet",
+        "longLabel": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.net.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.net.summary.bb",
+        "speciesOrder": "GCF_950295315.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "69.486"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-netGCF_950295315.1",
+      "description": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "western European hedgehog mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_950295315.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s017 chainType=c05",
+        "shortLabel": "western European hedgehog synNet",
+        "longLabel": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.synNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.synNet.summary.bb",
+        "speciesOrder": "GCF_950295315.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "69.486"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-synNetGCF_950295315.1",
+      "description": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "western European hedgehog synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_950295315.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s017 chainType=c06",
+        "shortLabel": "western European hedgehog rbestNet",
+        "longLabel": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.rbestNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_950295315.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "69.486"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-rbestNetGCF_950295315.1",
+      "description": "western European hedgehog/GCF_950295315.1_mEriEur2.1 (2023-05-01) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "western European hedgehog rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_950295315.1.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "netMm39",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s012 chainType=c04",
+        "subGroups": "view=align species=s018 chainType=c04",
         "shortLabel": "Mouse/mm39 mafNet",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigMaf",
@@ -2837,7 +3994,7 @@
       "metadata": {
         "track": "synNetMm39",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s012 chainType=c05",
+        "subGroups": "view=align species=s018 chainType=c05",
         "shortLabel": "Mouse/mm39 synNet",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigMaf",
@@ -2862,7 +4019,7 @@
       "metadata": {
         "track": "rbestNetMm39",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s012 chainType=c06",
+        "subGroups": "view=align species=s018 chainType=c06",
         "shortLabel": "Mouse/mm39 rbestNet",
         "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
         "type": "bigMaf",
@@ -2885,9 +4042,84 @@
     },
     {
       "metadata": {
+        "track": "netGCF_028583685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s019 chainType=c04",
+        "shortLabel": "sugar glider mafNet",
+        "longLabel": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.net.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.net.summary.bb",
+        "speciesOrder": "GCF_028583685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "91.795"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-netGCF_028583685.1",
+      "description": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "sugar glider mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_028583685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s019 chainType=c05",
+        "shortLabel": "sugar glider synNet",
+        "longLabel": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.synNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.synNet.summary.bb",
+        "speciesOrder": "GCF_028583685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "91.795"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-synNetGCF_028583685.1",
+      "description": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "sugar glider synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_028583685.1",
+        "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
+        "subGroups": "view=align species=s019 chainType=c06",
+        "shortLabel": "sugar glider rbestNet",
+        "longLabel": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.rbestNet.bb",
+        "summary": "bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.rbestNet.summary.bb",
+        "speciesOrder": "GCF_028583685.1",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/html/GCF_002263795.3_ARS-UCD2.0.chainNet\">html/GCF_002263795.3_ARS-UCD2.0.chainNet</a>",
+        "priority": "91.795"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_002263795.3-rbestNetGCF_028583685.1",
+      "description": "sugar glider/GCF_028583685.1_PetGlider_PUasm1.0 (2023-02-10) Chained Alignments",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "sugar glider rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_028583685.1.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "netGCF_016699485.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s013 chainType=c04",
+        "subGroups": "view=align species=s020 chainType=c04",
         "shortLabel": "chicken white leghorn layer X broiler mafNet",
         "longLabel": "chicken white leghorn layer X broiler/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b (2021-01-19) Chained Alignments",
         "type": "bigMaf",
@@ -2912,7 +4144,7 @@
       "metadata": {
         "track": "synNetGCF_016699485.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s013 chainType=c05",
+        "subGroups": "view=align species=s020 chainType=c05",
         "shortLabel": "chicken white leghorn layer X broiler synNet",
         "longLabel": "chicken white leghorn layer X broiler/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b (2021-01-19) Chained Alignments",
         "type": "bigMaf",
@@ -2937,7 +4169,7 @@
       "metadata": {
         "track": "rbestNetGCF_016699485.2",
         "parent": "GCF_002263795.3_ARS-UCD2.0MafNetViewnet off",
-        "subGroups": "view=align species=s013 chainType=c06",
+        "subGroups": "view=align species=s020 chainType=c06",
         "shortLabel": "chicken white leghorn layer X broiler rbestNet",
         "longLabel": "chicken white leghorn layer X broiler/GCF_016699485.2_bGalGal1.mat.broiler.GRCg7b (2021-01-19) Chained Alignments",
         "type": "bigMaf",
@@ -2956,6 +4188,32 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/bbi/GCF_002263795.3_ARS-UCD2.0.GCF_016699485.2.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "Tiberius",
+        "bigDataUrl": "contrib/tiberius/tiberius.bigGenePred.bb",
+        "shortLabel": "Tiberius genes",
+        "longLabel": "Tiberius ab initio gene prediction",
+        "type": "bigGenePred",
+        "visibility": "pack",
+        "color": "0,102,204",
+        "noScoreFilter": "on",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/contrib/tiberius/Tiberius.html\">contrib/tiberius/Tiberius.html</a>",
+        "group": "genes",
+        "dataVersion": "Tiberius version 2025-01-07",
+        "baseColorDefault": "genomicCodons"
+      },
+      "category": ["Genes and Gene Predictions"],
+      "trackId": "GCF_002263795.3-Tiberius",
+      "description": "Tiberius ab initio gene prediction",
+      "assemblyNames": ["GCF_002263795.3"],
+      "name": "Tiberius genes",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/263/795/GCF_002263795.3/contrib/tiberius/tiberius.bigGenePred.bb"
       }
     }
   ]

@@ -14,7 +14,7 @@ twoBitBptUrl GCF_002201575.1.2bit.bpt
 chromSizes GCF_002201575.1.chrom.sizes.txt
 chromAliasBb GCF_002201575.1.chromAlias.bb
 organism ASM220157v1 Jun. 2017
-defaultPos chrUn_NW_018734349v1:28257307-28267307
+defaultPos NW_018734349.1:28257307-28267307
 scientificName Neomonachus schauinslandi
 htmlPath html/GCF_002201575.1_ASM220157v1.description.html
 blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/201/575/GCF_002201575.1
@@ -93,7 +93,6 @@ type bigRmsk 9 +
 visibility pack
 group varRep
 bigDataUrl bbi/GCF_002201575.1_ASM220157v1.rmsk.bb
-xrefDataUrl bbi/GCF_002201575.1_ASM220157v1.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCF_002201575.1_ASM220157v1.repeatMasker
 
@@ -124,7 +123,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -142,7 +141,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -159,7 +158,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -273,25 +272,6 @@ searchIndex name
 searchTrix ixIxx/GCF_002201575.1_ASM220157v1.xenoRefGene.ix
 html html/GCF_002201575.1_ASM220157v1.xenoRefGene
 
-track ensGene
-shortLabel Ensembl genes
-longLabel Ensembl genes 2020_04
-group genes
-priority 40
-visibility pack
-color 150,0,0
-itemRgb on
-type bigGenePred
-bigDataUrl bbi/GCF_002201575.1_ASM220157v1.ensGene.bb
-searchTrix ixIxx/GCF_002201575.1_ASM220157v1.ensGene.ix
-searchIndex name
-labelFields name,name2
-defaultLabelFields name2
-baseColorUseCds given
-baseColorDefault genomicCodons
-labelSeparator " "
-html html/GCF_002201575.1_ASM220157v1.ensGene
-
 ##############################################################################
 # rn7 - Rat - Rattus norvegicus - taxId: 10116
 ##############################################################################
@@ -400,15 +380,4 @@ html html/GCF_002201575.1_ASM220157v1.chainNet
         summary bbi/GCF_002201575.1_ASM220157v1.rn7.rbestNet.summary.bb
         speciesOrder rn7
         priority 7
-
-        track liftOverNetRn7
-        parent mafNetRn7Viewnet
-        subGroups view=net
-        shortLabel Rat liftOverNet
-        longLabel Rat (Nov. 2020 (mRatBN7.2/rn7)) Lift Over Net Alignment
-        type bigMaf
-        bigDataUrl bbi/GCF_002201575.1_ASM220157v1.rn7.liftOverNet.bb
-        summary bbi/GCF_002201575.1_ASM220157v1.rn7.liftOverNet.summary.bb
-        speciesOrder rn7
-        priority 8
 

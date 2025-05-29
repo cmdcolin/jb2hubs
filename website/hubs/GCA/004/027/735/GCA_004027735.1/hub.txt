@@ -90,80 +90,14 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.tanDups
     type bigBed 12
 
 track repeatMasker
-compositeTrack on
 shortLabel RepeatMasker
-longLabel Repeating Elements by RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
 group varRep
-visibility dense
-type bigBed 6 +
-colorByStrand 50,50,150 150,50,50
-maxWindowToDraw 10000000
-spectrum on
+bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.bb
+maxWindowToDraw 5000000
 html html/GCA_004027735.1_CarPer_v1_BIUU.repeatMasker
-
-    track repeatMaskerSINE
-    parent repeatMasker
-    shortLabel SINE
-    longLabel SINE Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 1
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.SINE.bb
-
-    track repeatMaskerLINE
-    parent repeatMasker
-    shortLabel LINE
-    longLabel LINE Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 2
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.LINE.bb
-
-    track repeatMaskerLTR
-    parent repeatMasker
-    shortLabel LTR
-    longLabel LTR Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 3
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.LTR.bb
-
-    track repeatMaskerDNA
-    parent repeatMasker
-    shortLabel DNA
-    longLabel DNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 4
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.DNA.bb
-
-    track repeatMaskerSimple
-    parent repeatMasker
-    shortLabel Simple
-    longLabel Simple Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 5
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.Simple.bb
-
-    track repeatMaskerLowComplexity
-    parent repeatMasker
-    shortLabel Low Complexity
-    longLabel Low Complexity Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 6
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.Low_complexity.bb
-
-    track repeatMaskerRNA
-    parent repeatMasker
-    shortLabel RNA
-    longLabel RNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 8
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.RNA.bb
-
-    track repeatMaskerOther
-    parent repeatMasker
-    shortLabel Other
-    longLabel Other Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 9
-    bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.rmsk.Other.bb
 
 track simpleRepeat
 shortLabel Simple Repeats
@@ -294,8 +228,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track chainSusScr11
         parent GCA_004027735.1_CarPer_v1_BIUUChainNetViewchain on
         subGroups view=chain species=s000 chainType=c00
-        shortLabel Pig/susScr11 Chain
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 Chain
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigChain susScr11
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainSusScr11.bb
         linkDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainSusScr11Link.bb
@@ -306,8 +240,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track chainSynSusScr11
         parent GCA_004027735.1_CarPer_v1_BIUUChainNetViewSynTen off
         subGroups view=synten species=s000 chainType=c01
-        shortLabel Pig/susScr11 synChain
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 synChain
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigChain susScr11
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainSynSusScr11.bb
         linkDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainSynSusScr11Link.bb
@@ -318,8 +252,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track chainRBestSusScr11
         parent GCA_004027735.1_CarPer_v1_BIUUChainNetViewRBest off
         subGroups view=rbest species=s000 chainType=c02
-        shortLabel Pig/susScr11 rbChain
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 rbChain
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigChain susScr11
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainRBestSusScr11.bb
         linkDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainRBestSusScr11Link.bb
@@ -330,8 +264,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track chainMm39
         parent GCA_004027735.1_CarPer_v1_BIUUChainNetViewchain off
         subGroups view=chain species=s001 chainType=c00
-        shortLabel Mouse/mm39 Chain
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 Chain
+        longLabel mm39/mm39 () Chained Alignments
         type bigChain mm39
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainMm39.bb
         linkDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainMm39Link.bb
@@ -342,8 +276,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track chainSynMm39
         parent GCA_004027735.1_CarPer_v1_BIUUChainNetViewSynTen off
         subGroups view=synten species=s001 chainType=c01
-        shortLabel Mouse/mm39 synChain
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 synChain
+        longLabel mm39/mm39 () Chained Alignments
         type bigChain mm39
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainSynMm39.bb
         linkDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainSynMm39Link.bb
@@ -354,8 +288,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track chainRBestMm39
         parent GCA_004027735.1_CarPer_v1_BIUUChainNetViewRBest off
         subGroups view=rbest species=s001 chainType=c02
-        shortLabel Mouse/mm39 rbChain
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 rbChain
+        longLabel mm39/mm39 () Chained Alignments
         type bigChain mm39
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainRBestMm39.bb
         linkDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.chainRBestMm39Link.bb
@@ -372,8 +306,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track netSusScr11
         parent GCA_004027735.1_CarPer_v1_BIUUMafNetViewnet off
         subGroups view=align species=s000 chainType=c04
-        shortLabel Pig/susScr11 mafNet
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 mafNet
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.susScr11.net.bb
         summary bbi/GCA_004027735.1_CarPer_v1_BIUU.susScr11.net.summary.bb
@@ -384,8 +318,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track synNetSusScr11
         parent GCA_004027735.1_CarPer_v1_BIUUMafNetViewnet off
         subGroups view=align species=s000 chainType=c05
-        shortLabel Pig/susScr11 synNet
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 synNet
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.susScr11.synNet.bb
         summary bbi/GCA_004027735.1_CarPer_v1_BIUU.susScr11.synNet.summary.bb
@@ -396,8 +330,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track rbestNetSusScr11
         parent GCA_004027735.1_CarPer_v1_BIUUMafNetViewnet off
         subGroups view=align species=s000 chainType=c06
-        shortLabel Pig/susScr11 rbestNet
-        longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
+        shortLabel susScr11 rbestNet
+        longLabel susScr11/susScr11 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.susScr11.rbestNet.bb
         summary bbi/GCA_004027735.1_CarPer_v1_BIUU.susScr11.rbestNet.summary.bb
@@ -408,8 +342,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track netMm39
         parent GCA_004027735.1_CarPer_v1_BIUUMafNetViewnet off
         subGroups view=align species=s001 chainType=c04
-        shortLabel Mouse/mm39 mafNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 mafNet
+        longLabel mm39/mm39 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.mm39.net.bb
         summary bbi/GCA_004027735.1_CarPer_v1_BIUU.mm39.net.summary.bb
@@ -420,8 +354,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track synNetMm39
         parent GCA_004027735.1_CarPer_v1_BIUUMafNetViewnet off
         subGroups view=align species=s001 chainType=c05
-        shortLabel Mouse/mm39 synNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 synNet
+        longLabel mm39/mm39 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.mm39.synNet.bb
         summary bbi/GCA_004027735.1_CarPer_v1_BIUU.mm39.synNet.summary.bb
@@ -432,8 +366,8 @@ html html/GCA_004027735.1_CarPer_v1_BIUU.chainNet
         track rbestNetMm39
         parent GCA_004027735.1_CarPer_v1_BIUUMafNetViewnet off
         subGroups view=align species=s001 chainType=c06
-        shortLabel Mouse/mm39 rbestNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
+        shortLabel mm39 rbestNet
+        longLabel mm39/mm39 () Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCA_004027735.1_CarPer_v1_BIUU.mm39.rbestNet.bb
         summary bbi/GCA_004027735.1_CarPer_v1_BIUU.mm39.rbestNet.summary.bb

@@ -13,8 +13,9 @@ twoBitPath GCF_001704415.1.2bit
 twoBitBptUrl GCF_001704415.1.2bit.bpt
 chromSizes GCF_001704415.1.chrom.sizes.txt
 chromAliasBb GCF_001704415.1.chromAlias.bb
+chromAuthority ucsc
 organism ARS1 Aug. 2016
-defaultPos chr1:52467842-52477842
+defaultPos NC_030808.1:52467842-52477842
 scientificName Capra hircus
 htmlPath html/GCF_001704415.1_ARS1.description.html
 blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/001/704/415/GCF_001704415.1
@@ -87,7 +88,6 @@ type bigRmsk 9 +
 visibility pack
 group varRep
 bigDataUrl bbi/GCF_001704415.1_ARS1.rmsk.bb
-xrefDataUrl bbi/GCF_001704415.1_ARS1.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCF_001704415.1_ARS1.repeatMasker
 
@@ -118,7 +118,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -136,7 +136,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -153,7 +153,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -267,25 +267,6 @@ searchIndex name
 searchTrix ixIxx/GCF_001704415.1_ARS1.xenoRefGene.ix
 html html/GCF_001704415.1_ARS1.xenoRefGene
 
-track ensGene
-shortLabel Ensembl genes
-longLabel Ensembl genes 2020_05
-group genes
-priority 40
-visibility pack
-color 150,0,0
-itemRgb on
-type bigGenePred
-bigDataUrl bbi/GCF_001704415.1_ARS1.ensGene.bb
-searchTrix ixIxx/GCF_001704415.1_ARS1.ensGene.ix
-searchIndex name
-labelFields name,name2
-defaultLabelFields name2
-baseColorUseCds given
-baseColorDefault genomicCodons
-labelSeparator " "
-html html/GCF_001704415.1_ARS1.ensGene
-
 track GCF_001704415.1_ARS1ChainNet
 compositeTrack on
 shortLabel Chain/Net
@@ -344,7 +325,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainHg38Link.bb
         otherDb hg38
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
+        priority 53.865
 
         track chainSynHg38
         parent GCF_001704415.1_ARS1ChainNetViewSynTen off
@@ -356,7 +337,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainSynHg38Link.bb
         otherDb hg38
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
+        priority 53.865
 
         track chainRBestHg38
         parent GCF_001704415.1_ARS1ChainNetViewRBest off
@@ -368,7 +349,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainRBestHg38Link.bb
         otherDb hg38
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
+        priority 53.865
 
         track chainLiftOverHg38
         parent GCF_001704415.1_ARS1ChainNetViewLiftOver off
@@ -380,7 +361,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainLiftOverHg38Link.bb
         otherDb hg38
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
+        priority 53.865
 
         track chainMm39
         parent GCF_001704415.1_ARS1ChainNetViewchain off
@@ -392,7 +373,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainMm39Link.bb
         otherDb mm39
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
+        priority 76.129
 
         track chainSynMm39
         parent GCF_001704415.1_ARS1ChainNetViewSynTen off
@@ -404,7 +385,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainSynMm39Link.bb
         otherDb mm39
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
+        priority 76.129
 
         track chainRBestMm39
         parent GCF_001704415.1_ARS1ChainNetViewRBest off
@@ -416,7 +397,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainRBestMm39Link.bb
         otherDb mm39
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
+        priority 76.129
 
         track chainLiftOverMm39
         parent GCF_001704415.1_ARS1ChainNetViewLiftOver off
@@ -428,7 +409,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         linkDataUrl bbi/GCF_001704415.1_ARS1.chainLiftOverMm39Link.bb
         otherDb mm39
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
+        priority 76.129
 
     track GCF_001704415.1_ARS1MafNetViewnet
     shortLabel Nets
@@ -446,7 +427,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         summary bbi/GCF_001704415.1_ARS1.hg38.net.summary.bb
         speciesOrder hg38
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
+        priority 53.865
 
         track synNetHg38
         parent GCF_001704415.1_ARS1MafNetViewnet off
@@ -458,7 +439,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         summary bbi/GCF_001704415.1_ARS1.hg38.synNet.summary.bb
         speciesOrder hg38
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
+        priority 53.865
 
         track rbestNetHg38
         parent GCF_001704415.1_ARS1MafNetViewnet off
@@ -470,19 +451,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         summary bbi/GCF_001704415.1_ARS1.hg38.rbestNet.summary.bb
         speciesOrder hg38
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
-
-        track liftOverNetHg38
-        parent GCF_001704415.1_ARS1MafNetViewnet off
-        subGroups view=align species=s000 chainType=c07
-        shortLabel Human/hg38 liftOverNet
-        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
-        type bigMaf
-        bigDataUrl bbi/GCF_001704415.1_ARS1.hg38.liftOverNet.bb
-        summary bbi/GCF_001704415.1_ARS1.hg38.liftOverNet.summary.bb
-        speciesOrder hg38
-        html html/GCF_001704415.1_ARS1.chainNet
-        priority 53.984
+        priority 53.865
 
         track netMm39
         parent GCF_001704415.1_ARS1MafNetViewnet off
@@ -494,7 +463,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         summary bbi/GCF_001704415.1_ARS1.mm39.net.summary.bb
         speciesOrder mm39
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
+        priority 76.129
 
         track synNetMm39
         parent GCF_001704415.1_ARS1MafNetViewnet off
@@ -506,7 +475,7 @@ html html/GCF_001704415.1_ARS1.chainNet
         summary bbi/GCF_001704415.1_ARS1.mm39.synNet.summary.bb
         speciesOrder mm39
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
+        priority 76.129
 
         track rbestNetMm39
         parent GCF_001704415.1_ARS1MafNetViewnet off
@@ -518,17 +487,5 @@ html html/GCF_001704415.1_ARS1.chainNet
         summary bbi/GCF_001704415.1_ARS1.mm39.rbestNet.summary.bb
         speciesOrder mm39
         html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
-
-        track liftOverNetMm39
-        parent GCF_001704415.1_ARS1MafNetViewnet off
-        subGroups view=align species=s001 chainType=c07
-        shortLabel Mouse/mm39 liftOverNet
-        longLabel Mouse/mm39/mm39 (Jun. 2020) Chained Alignments
-        type bigMaf
-        bigDataUrl bbi/GCF_001704415.1_ARS1.mm39.liftOverNet.bb
-        summary bbi/GCF_001704415.1_ARS1.mm39.liftOverNet.summary.bb
-        speciesOrder mm39
-        html html/GCF_001704415.1_ARS1.chainNet
-        priority 76.014
+        priority 76.129
 

@@ -25,7 +25,7 @@ isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/901/001/165/GCF_901001165.1
 track assembly
 longLabel Assembly
 shortLabel Assembly
-visibility pack
+visibility hide
 colorByStrand 150,100,30 230,170,40
 color 150,100,30
 altColor 230,170,40
@@ -50,7 +50,7 @@ track gc5Base
 shortLabel GC Percent
 longLabel GC Percent in 5-Base Windows
 group map
-visibility full
+visibility dense
 autoScale Off
 maxHeightPixels 128:36:16
 graphTypeDefault Bar
@@ -100,7 +100,7 @@ track repeatModeler
 shortLabel RepeatModeler
 longLabel RepeatModeler Repetitive Elements
 type bigRmsk 9 +
-visibility pack
+visibility hide
 group varRep
 bigDataUrl bbi/GCF_901001165.1_fSalTru1.1.rModel.bb
 xrefDataUrl bbi/GCF_901001165.1_fSalTru1.1.rModel.align.bb
@@ -134,7 +134,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -146,13 +146,30 @@ priority 2
         baseColorDefault genomicCodons
         priority 1
 
+        track ncbiRefSeqCurated
+        color 12,12,120
+        parent refSeqComposite on
+        shortLabel RefSeq Curated
+        longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
+        type bigGenePred
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_901001165.1_fSalTru1.1.ncbiRefSeqCurated.ix
+        idXref ncbiRefSeqLink mrnaAcc name
+        bigDataUrl bbi/GCF_901001165.1_fSalTru1.1.ncbiRefSeqCurated.bb
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 2
+
         track ncbiRefSeqPredicted
         color 12,12,120
         parent refSeqComposite on
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -202,7 +219,7 @@ compositeTrack on
 shortLabel CpG Islands
 longLabel CpG Islands (Islands < 300 Bases are Light Green)
 group regulation
-visibility pack
+visibility dense
 type bigBed 4 +
 html html/GCF_901001165.1_fSalTru1.1.cpgIslands
 
@@ -235,7 +252,7 @@ track allGaps
 shortLabel All Gaps
 longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
 group map
-visibility dense
+visibility hide
 type bigBed 3
 bigDataUrl bbi/GCF_901001165.1_fSalTru1.1.allGaps.bb
 html html/GCF_901001165.1_fSalTru1.1.allGaps
@@ -282,6 +299,6 @@ labelFields name,name2
 defaultLabelFields name2
 baseColorUseCds given
 baseColorDefault genomicCodons
-labelSeperator " "
+labelSeparator " "
 html html/GCF_901001165.1_fSalTru1.1.ensGene
 

@@ -1,6 +1,6 @@
 hub GCF_003369695.1 genome assembly
-shortLabel hybrid cattle (Angus x Brahman F1 Brahman haplotype 2018)
-longLabel hybrid cattle (Angus x Brahman F1 Brahman haplotype 2018)/Bos indicus x Bos taurus/GCF_003369695.1_UOA_Brahman_1 genome assembly
+shortLabel Brahman cow (Angus x Brahman F1 Brahman haplotype 2018)
+longLabel Brahman cow (Angus x Brahman F1 Brahman haplotype 2018)/Bos indicus x Bos taurus/GCF_003369695.1_UOA_Brahman_1 genome assembly
 useOneFile on
 email hclawson@ucsc.edu
 descriptionUrl html/GCF_003369695.1_UOA_Brahman_1.description.html
@@ -8,7 +8,7 @@ descriptionUrl html/GCF_003369695.1_UOA_Brahman_1.description.html
 genome GCF_003369695.1
 taxId 30522
 groups groups.txt
-description hybrid cattle (Angus x Brahman F1 Brahman haplotype 2018)
+description Brahman cow (Angus x Brahman F1 Brahman haplotype 2018)
 twoBitPath GCF_003369695.1.2bit
 twoBitBptUrl GCF_003369695.1.2bit.bpt
 chromSizes GCF_003369695.1.chrom.sizes.txt
@@ -369,3 +369,17 @@ html html/GCF_003369695.1_UOA_Brahman_1.chainNet
         speciesOrder bosTau9
         priority 7
 
+
+track Tiberius
+bigDataUrl contrib/tiberius/tiberius.bigGenePred.bb
+shortLabel Tiberius genes
+longLabel Tiberius ab initio gene prediction
+type bigGenePred
+visibility pack
+color 0,102,204
+noScoreFilter on
+type bigGenePred
+html contrib/tiberius/Tiberius.html
+group genes
+dataVersion Tiberius version 2025-01-07
+baseColorDefault genomicCodons

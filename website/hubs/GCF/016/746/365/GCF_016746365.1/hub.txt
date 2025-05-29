@@ -80,80 +80,14 @@ html html/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.tanDups
     type bigBed 12
 
 track repeatMasker
-compositeTrack on
 shortLabel RepeatMasker
-longLabel Repeating Elements by RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
 group varRep
-visibility dense
-type bigBed 6 +
-colorByStrand 50,50,150 150,50,50
-maxWindowToDraw 10000000
-spectrum on
+bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.bb
+maxWindowToDraw 5000000
 html html/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.repeatMasker
-
-    track repeatMaskerLINE
-    parent repeatMasker
-    shortLabel LINE
-    longLabel LINE Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 2
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.LINE.bb
-
-    track repeatMaskerLTR
-    parent repeatMasker
-    shortLabel LTR
-    longLabel LTR Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 3
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.LTR.bb
-
-    track repeatMaskerDNA
-    parent repeatMasker
-    shortLabel DNA
-    longLabel DNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 4
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.DNA.bb
-
-    track repeatMaskerSimple
-    parent repeatMasker
-    shortLabel Simple
-    longLabel Simple Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 5
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.Simple.bb
-
-    track repeatMaskerLowComplexity
-    parent repeatMasker
-    shortLabel Low Complexity
-    longLabel Low Complexity Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 6
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.Low_complexity.bb
-
-    track repeatMaskerSatellite
-    parent repeatMasker
-    shortLabel Satellite
-    longLabel Satellite Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 7
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.Satellite.bb
-
-    track repeatMaskerRNA
-    parent repeatMasker
-    shortLabel RNA
-    longLabel RNA Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 8
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.RNA.bb
-
-    track repeatMaskerOther
-    parent repeatMasker
-    shortLabel Other
-    longLabel Other Repeating Elements by RepeatMasker
-    type bigBed 6 +
-    priority 9
-    bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.rmsk.Other.bb
 
 track simpleRepeat
 shortLabel Simple Repeats
@@ -182,7 +116,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -194,30 +128,13 @@ priority 2
         baseColorDefault genomicCodons
         priority 1
 
-        track ncbiRefSeqCurated
-        color 12,12,120
-        parent refSeqComposite on
-        shortLabel RefSeq Curated
-        longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
-        type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
-        labelFields name,geneName,geneName2
-        defaultLabelFields geneName2
-        searchIndex name
-        searchTrix ixIxx/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.ncbiRefSeqCurated.ix
-        idXref ncbiRefSeqLink mrnaAcc name
-        bigDataUrl bbi/GCF_016746365.1_Prin_Dyak_Tai18E2_2.0.ncbiRefSeqCurated.bb
-        baseColorUseCds given
-        baseColorDefault genomicCodons
-        priority 2
-
         track ncbiRefSeqPredicted
         color 12,12,120
         parent refSeqComposite on
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name

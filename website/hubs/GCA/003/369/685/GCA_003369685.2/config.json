@@ -2,14 +2,14 @@
   "assemblies": [
     {
       "name": "GCA_003369685.2",
-      "displayName": "hybrid cattle (Angus x Brahman F1 Angus haplotype 2018)",
+      "displayName": "Angus cow (Angus x Brahman F1 Angus haplotype 2018)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "metadata": {
           "genome": "GCA_003369685.2",
           "taxId": "30522",
           "groups": "groups.txt",
-          "description": "hybrid cattle (Angus x Brahman F1 Angus haplotype 2018)",
+          "description": "Angus cow (Angus x Brahman F1 Angus haplotype 2018)",
           "twoBitPath": "GCA_003369685.2.2bit",
           "twoBitBptUrl": "GCA_003369685.2.2bit.bpt",
           "chromSizes": "GCA_003369685.2.chrom.sizes.txt",
@@ -345,6 +345,32 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/369/685/GCA_003369685.2/bbi/GCA_003369685.2_UOA_Angus_1.xenoRefGene.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "Tiberius",
+        "bigDataUrl": "contrib/tiberius/tiberius.bigGenePred.bb",
+        "shortLabel": "Tiberius genes",
+        "longLabel": "Tiberius ab initio gene prediction",
+        "type": "bigGenePred",
+        "visibility": "pack",
+        "color": "0,102,204",
+        "noScoreFilter": "on",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCA/003/369/685/GCA_003369685.2/contrib/tiberius/Tiberius.html\">contrib/tiberius/Tiberius.html</a>",
+        "group": "genes",
+        "dataVersion": "Tiberius version 2025-01-07",
+        "baseColorDefault": "genomicCodons"
+      },
+      "category": ["Genes and Gene Predictions"],
+      "trackId": "GCA_003369685.2-Tiberius",
+      "description": "Tiberius ab initio gene prediction",
+      "assemblyNames": ["GCA_003369685.2"],
+      "name": "Tiberius genes",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/369/685/GCA_003369685.2/contrib/tiberius/tiberius.bigGenePred.bb"
       }
     }
   ]

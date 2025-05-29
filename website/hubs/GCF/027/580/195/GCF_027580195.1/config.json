@@ -22,6 +22,7 @@
           "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/027/580/195/GCF_027580195.1",
           "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/027/580/195/GCF_027580195.1",
           "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/027/580/195/GCF_027580195.1",
+          "liftOver.GCF_002263795.3": "liftOver/GCF_027580195.1ToGCF_002263795.3.over.chain.gz",
           "liftOver.hg38": "liftOver/GCF_027580195.1ToHg38.over.chain.gz"
         },
         "trackId": "GCF_027580195.1-ReferenceSequenceTrack",
@@ -194,7 +195,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -225,7 +226,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -255,7 +256,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -477,21 +478,123 @@
     },
     {
       "metadata": {
+        "track": "chainGCF_002263795.3",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewchain on",
+        "subGroups": "view=chain species=s000 chainType=c00",
+        "shortLabel": "cattle Chain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "1.038"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_027580195.1-chainGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "cattle Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_002263795.3",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s000 chainType=c01",
+        "shortLabel": "cattle synChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainSynGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainSynGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "1.038"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_027580195.1-chainSynGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "cattle synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainSynGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_002263795.3",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s000 chainType=c02",
+        "shortLabel": "cattle rbChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainRBestGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainRBestGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "1.038"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_027580195.1-chainRBestGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "cattle rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainRBestGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_002263795.3",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s000 chainType=c03",
+        "shortLabel": "cattle loChain",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigChain GCF_002263795.3",
+        "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainLiftOverGCF_002263795.3.bb",
+        "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainLiftOverGCF_002263795.3Link.bb",
+        "otherDb": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "1.038"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_027580195.1-chainLiftOverGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "cattle loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainLiftOverGCF_002263795.3.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human Chain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Chained Alignments",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewchain off",
+        "subGroups": "view=chain species=s001 chainType=c00",
+        "shortLabel": "Human/hg38 Chain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainHg38.bb",
         "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainHg38Link.bb",
-        "priority": "1"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "49.477"
       },
-      "category": ["Human Chain/Net", "Chain"],
+      "category": ["Chain/Net", "Chains"],
       "trackId": "GCF_027580195.1-chainHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027580195.1"],
-      "name": "Human Chain",
+      "name": "Human/hg38 Chain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -501,20 +604,22 @@
     {
       "metadata": {
         "track": "chainSynHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human synChain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Chained Alignments",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s001 chainType=c01",
+        "shortLabel": "Human/hg38 synChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainSynHg38.bb",
         "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainSynHg38Link.bb",
-        "priority": "2"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "49.477"
       },
-      "category": ["Human Chain/Net", "Chain"],
+      "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_027580195.1-chainSynHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027580195.1"],
-      "name": "Human synChain",
+      "name": "Human/hg38 synChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -524,20 +629,22 @@
     {
       "metadata": {
         "track": "chainRBestHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human rbChain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Chained Alignments",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s001 chainType=c02",
+        "shortLabel": "Human/hg38 rbChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainRBestHg38.bb",
         "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainRBestHg38Link.bb",
-        "priority": "3"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "49.477"
       },
-      "category": ["Human Chain/Net", "Chain"],
+      "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_027580195.1-chainRBestHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027580195.1"],
-      "name": "Human rbChain",
+      "name": "Human/hg38 rbChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -547,20 +654,22 @@
     {
       "metadata": {
         "track": "chainLiftOverHg38",
-        "parent": "chainNetHg38Viewchain",
-        "subGroups": "view=chain",
-        "shortLabel": "Human loChain",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Lift Over Chained Alignments",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s001 chainType=c03",
+        "shortLabel": "Human/hg38 loChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainLiftOverHg38.bb",
         "linkDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.chainLiftOverHg38Link.bb",
-        "priority": "4"
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "49.477"
       },
-      "category": ["Human Chain/Net", "Chain"],
+      "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_027580195.1-chainLiftOverHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Lift Over Chained Alignments",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027580195.1"],
-      "name": "Human loChain",
+      "name": "Human/hg38 loChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -569,22 +678,98 @@
     },
     {
       "metadata": {
+        "track": "netGCF_002263795.3",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c04",
+        "shortLabel": "cattle mafNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.net.bb",
+        "summary": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.net.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "1.038"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_027580195.1-netGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "cattle mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetGCF_002263795.3",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c05",
+        "shortLabel": "cattle synNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.synNet.bb",
+        "summary": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.synNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "1.038"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_027580195.1-synNetGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "cattle synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetGCF_002263795.3",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c06",
+        "shortLabel": "cattle rbestNet",
+        "longLabel": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.rbestNet.bb",
+        "summary": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.rbestNet.summary.bb",
+        "speciesOrder": "GCF_002263795.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "1.038"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_027580195.1-rbestNetGCF_002263795.3",
+      "description": "cattle/GCF_002263795.3_ARS-UCD2.0 (2023-07-01) Chained Alignments",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "cattle rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.GCF_002263795.3.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "netHg38",
-        "parent": "mafNetHg38Viewnet",
-        "subGroups": "view=net",
-        "shortLabel": "Human net",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Net Alignment",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c04",
+        "shortLabel": "Human/hg38 mafNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
         "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.hg38.net.bb",
         "summary": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.hg38.net.summary.bb",
         "speciesOrder": "hg38",
-        "priority": "5"
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "49.477"
       },
-      "category": ["Human Chain/Net", "Net"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027580195.1-netHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Net Alignment",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027580195.1"],
-      "name": "Human net",
+      "name": "Human/hg38 mafNet",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -594,21 +779,22 @@
     {
       "metadata": {
         "track": "synNetHg38",
-        "parent": "mafNetHg38Viewnet",
-        "subGroups": "view=net",
-        "shortLabel": "Human synNet",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Net Alignment",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c05",
+        "shortLabel": "Human/hg38 synNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
         "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.hg38.synNet.bb",
         "summary": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.hg38.synNet.summary.bb",
         "speciesOrder": "hg38",
-        "priority": "6"
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "49.477"
       },
-      "category": ["Human Chain/Net", "Net"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027580195.1-synNetHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Syntenic Net Alignment",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027580195.1"],
-      "name": "Human synNet",
+      "name": "Human/hg38 synNet",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
@@ -618,25 +804,52 @@
     {
       "metadata": {
         "track": "rbestNetHg38",
-        "parent": "mafNetHg38Viewnet",
-        "subGroups": "view=net",
-        "shortLabel": "Human rbestNet",
-        "longLabel": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Net Alignment",
+        "parent": "GCF_027580195.1_NWIPB_WYAK_1.1MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c06",
+        "shortLabel": "Human/hg38 rbestNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
         "bigDataUrl": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.hg38.rbestNet.bb",
         "summary": "bbi/GCF_027580195.1_NWIPB_WYAK_1.1.hg38.rbestNet.summary.bb",
         "speciesOrder": "hg38",
-        "priority": "7"
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet\">html/GCF_027580195.1_NWIPB_WYAK_1.1.chainNet</a>",
+        "priority": "49.477"
       },
-      "category": ["Human Chain/Net", "Net"],
+      "category": ["Chain/Net", "Nets"],
       "trackId": "GCF_027580195.1-rbestNetHg38",
-      "description": "Human (Dec. 2013 (GRCh38/hg38)) Reciprocal Best Net Alignment",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_027580195.1"],
-      "name": "Human rbestNet",
+      "name": "Human/hg38 rbestNet",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/bbi/GCF_027580195.1_NWIPB_WYAK_1.1.hg38.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "Tiberius",
+        "bigDataUrl": "contrib/tiberius/tiberius.bigGenePred.bb",
+        "shortLabel": "Tiberius genes",
+        "longLabel": "Tiberius ab initio gene prediction",
+        "type": "bigGenePred",
+        "visibility": "pack",
+        "color": "0,102,204",
+        "noScoreFilter": "on",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/contrib/tiberius/Tiberius.html\">contrib/tiberius/Tiberius.html</a>",
+        "group": "genes",
+        "dataVersion": "Tiberius version 2025-01-07",
+        "baseColorDefault": "genomicCodons"
+      },
+      "category": ["Genes and Gene Predictions"],
+      "trackId": "GCF_027580195.1-Tiberius",
+      "description": "Tiberius ab initio gene prediction",
+      "assemblyNames": ["GCF_027580195.1"],
+      "name": "Tiberius genes",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/027/580/195/GCF_027580195.1/contrib/tiberius/tiberius.bigGenePred.bb"
       }
     }
   ]

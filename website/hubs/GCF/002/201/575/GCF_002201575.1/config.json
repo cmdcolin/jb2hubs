@@ -15,7 +15,7 @@
           "chromSizes": "GCF_002201575.1.chrom.sizes.txt",
           "chromAliasBb": "GCF_002201575.1.chromAlias.bb",
           "organism": "ASM220157v1 Jun. 2017",
-          "defaultPos": "chrUn_NW_018734349v1:28257307-28267307",
+          "defaultPos": "NW_018734349.1:28257307-28267307",
           "scientificName": "Neomonachus schauinslandi",
           "htmlPath": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/201/575/GCF_002201575.1/html/GCF_002201575.1_ASM220157v1.description.html\">html/GCF_002201575.1_ASM220157v1.description.html</a>",
           "blat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/201/575/GCF_002201575.1",
@@ -169,7 +169,6 @@
         "visibility": "pack",
         "group": "varRep",
         "bigDataUrl": "bbi/GCF_002201575.1_ASM220157v1.rmsk.bb",
-        "xrefDataUrl": "bbi/GCF_002201575.1_ASM220157v1.rmsk.align.bb",
         "maxWindowToDraw": "5000000",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/201/575/GCF_002201575.1/html/GCF_002201575.1_ASM220157v1.repeatMasker\">html/GCF_002201575.1_ASM220157v1.repeatMasker</a>"
       },
@@ -213,7 +212,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -244,7 +243,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -274,7 +273,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "geneName=\"https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank\" geneName2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -496,38 +495,6 @@
     },
     {
       "metadata": {
-        "track": "ensGene",
-        "shortLabel": "Ensembl genes",
-        "longLabel": "Ensembl genes 2020_04",
-        "group": "genes",
-        "priority": "40",
-        "visibility": "pack",
-        "color": "150,0,0",
-        "itemRgb": "on",
-        "type": "bigGenePred",
-        "bigDataUrl": "bbi/GCF_002201575.1_ASM220157v1.ensGene.bb",
-        "searchTrix": "ixIxx/GCF_002201575.1_ASM220157v1.ensGene.ix",
-        "searchIndex": "name",
-        "labelFields": "name,name2",
-        "defaultLabelFields": "name2",
-        "baseColorUseCds": "given",
-        "baseColorDefault": "genomicCodons",
-        "labelSeparator": "\" \"",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/002/201/575/GCF_002201575.1/html/GCF_002201575.1_ASM220157v1.ensGene\">html/GCF_002201575.1_ASM220157v1.ensGene</a>"
-      },
-      "category": ["Genes and Gene Predictions"],
-      "trackId": "GCF_002201575.1-ensGene",
-      "description": "Ensembl genes 2020_04",
-      "assemblyNames": ["GCF_002201575.1"],
-      "name": "Ensembl genes",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/201/575/GCF_002201575.1/bbi/GCF_002201575.1_ASM220157v1.ensGene.bb"
-      }
-    },
-    {
-      "metadata": {
         "track": "chainRn7",
         "parent": "chainNetRn7Viewchain",
         "subGroups": "view=chain",
@@ -688,30 +655,6 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/201/575/GCF_002201575.1/bbi/GCF_002201575.1_ASM220157v1.rn7.rbestNet.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "liftOverNetRn7",
-        "parent": "mafNetRn7Viewnet",
-        "subGroups": "view=net",
-        "shortLabel": "Rat liftOverNet",
-        "longLabel": "Rat (Nov. 2020 (mRatBN7.2/rn7)) Lift Over Net Alignment",
-        "type": "bigMaf",
-        "bigDataUrl": "bbi/GCF_002201575.1_ASM220157v1.rn7.liftOverNet.bb",
-        "summary": "bbi/GCF_002201575.1_ASM220157v1.rn7.liftOverNet.summary.bb",
-        "speciesOrder": "rn7",
-        "priority": "8"
-      },
-      "category": ["Rat Chain/Net", "Net"],
-      "trackId": "GCF_002201575.1-liftOverNetRn7",
-      "description": "Rat (Nov. 2020 (mRatBN7.2/rn7)) Lift Over Net Alignment",
-      "assemblyNames": ["GCF_002201575.1"],
-      "name": "Rat liftOverNet",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/002/201/575/GCF_002201575.1/bbi/GCF_002201575.1_ASM220157v1.rn7.liftOverNet.bb"
       }
     }
   ]
