@@ -14,9 +14,9 @@ process_file() {
   local second_part=${number:3:3} # Extract next 3 digits: 355
   local third_part=${number:6:3}  # Extract next 3 digits: 755
 
-  local result="hubs2/$prefix/$first_part/$second_part/$third_part/$accession/"
+  local result="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
-  jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - All features" --category "NCBI RefSeq"
+  jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
   if [ -n "$REPROCESS" ]; then
     jbrowse text-index --force --out "$result" --tracks ncbiGff
   else
@@ -28,3 +28,6 @@ export -f process_file
 
 # Run the processing in parallel
 find bgz -name "*.gz" | parallel -j 16 --bar process_file
+
+yarn prettier --log-level error --write ../website/hubs/
+yarn prettier --log-level error --write ../website/hubJson

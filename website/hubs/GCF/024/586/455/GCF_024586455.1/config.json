@@ -495,6 +495,46 @@
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/024/586/455/GCF_024586455.1/bbi/GCF_024586455.1_APGP_CSIRO_Bneo_wtdbg2-racon-allhic-juicebox.fasta_v2.ensGene.bb"
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "ncbiGff",
+      "name": "RefSeq All - GFF",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "GCF_024586455.1_APGP_CSIRO_Bneo_wtdbg2-racon-allhic-juicebox.fasta_v2_genomic.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "GCF_024586455.1_APGP_CSIRO_Bneo_wtdbg2-racon-allhic-juicebox.fasta_v2_genomic.gff.gz.csi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "CSI"
+        }
+      },
+      "category": ["NCBI RefSeq"],
+      "assemblyNames": ["GCF_024586455.1"]
+    }
+  ],
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "GCF_024586455.1-index",
+      "ixFilePath": {
+        "uri": "trix/GCF_024586455.1.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "trix/GCF_024586455.1.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "trix/GCF_024586455.1_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["GCF_024586455.1"]
     }
   ]
 }
