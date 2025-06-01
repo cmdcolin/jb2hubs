@@ -17,7 +17,7 @@ export async function genBed12(sql: string, txtGz: string) {
         'genoName',
         'genoStart',
         'genoEnd',
-        'repName',
+        'name',
         'strand',
         'repFamily',
         'repClass',
