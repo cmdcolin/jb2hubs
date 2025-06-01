@@ -31,7 +31,7 @@ process_gene_tracks() {
 
       # Check if we need to process the file
       need_processing=true
-      if [ -f "${outfile}.gff.gz" ] && [ -f "$hash_file" ]; then
+      if [ -f "${outfile}.gff.gz" ] && [ -f "$hash_file" ] && [ -z "${REPROCESS}" ]; then
         stored_hash=$(cat "$hash_file")
         if [ "$current_hash" = "$stored_hash" ]; then
           # echo "Skipping ${key}: file unchanged"
@@ -41,7 +41,7 @@ process_gene_tracks() {
 
       if [ "$need_processing" = true ]; then
         echo "Processing ${key}: file changed or new"
-        node src/geneLike.ts "${infile}.sql" "${infile}.txt.gz" | sort -k1,1 -k2,2n >"${outfile}.bed"
+        node src/geneLike.ts "${infile}.sql" "${infile}.txt.gz" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($2 >= $3) {temp=$2; $2=$3; $3=temp} print}' | sort -k1,1 -k2,2n >"${outfile}.bed"
         hck -f 13,4 "${outfile}.bed" >${outfile}.isoforms.txt
         node src/fixupIsoforms.ts ${outfile}.isoforms.txt
         ~/bed2gff -t1 --bed ${outfile}.bed --output ${outfile}.gff --isoforms ${outfile}.isoforms.txt

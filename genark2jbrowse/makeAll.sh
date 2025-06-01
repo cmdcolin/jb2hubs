@@ -42,7 +42,7 @@ process_gff_file() {
   # swaps start and end if start > end, could be worth investigating more but a
   # number of NCBI GFF have this
   if [ ! -f "bgz/$filename" ] || [ -n "$REPROCESS" ]; then
-    pigz -dc "$input_file" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($4 >= $5 && $4 != "." && $5 != ".") {temp=$4; $4=$5; $5=temp} print}' >"${input_file%.gz}"
+    pigz -dc "$input_file" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($4 >= $5) {temp=$4; $4=$5; $5=temp} print}' >"${input_file%.gz}"
     jbrowse sort-gff "${input_file%.gz}" | bgzip -@8 >"bgz/$filename"
     tabix -C "bgz/$filename"
     rm "${input_file%.gz}"

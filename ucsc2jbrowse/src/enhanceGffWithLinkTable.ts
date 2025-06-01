@@ -28,18 +28,19 @@ export async function enhanceGffWithLinkTable(
       .toString('utf8')
       .split('\n')
       .filter(f => !!f)
-      .map(r => {
-        const ret = r.split('\t')
-        return [
-          ret[0]!,
-          Object.fromEntries(
-            ret.map((col, idx) => {
-              // console.log({ key: linkCols.colNames[idx]!, col: col.split(',') })
-              return [linkCols.colNames[idx]!, col.split(',')] as const
-            }),
-          ),
-        ] as const
-      }),
+      .map(r => r.split('\t'))
+      .map(
+        ret =>
+          [
+            ret[0]!,
+            Object.fromEntries(
+              ret.map(
+                (col, idx) =>
+                  [linkCols.colNames[idx]!, col.split(',')] as const,
+              ),
+            ),
+          ] as const,
+      ),
   )
 
   for await (const line of rl) {
@@ -55,7 +56,13 @@ export async function enhanceGffWithLinkTable(
           .map(f => f.trim())
           .filter(f => !!f)
           .map(f => f.split('=') as [string, string])
-          .map(([key, val]) => [key.trim(), val.split(',')] as const),
+          .map(
+            ([key, val]) =>
+              [
+                key.trim(),
+                key.trim() === 'description' ? [val] : val.split(','),
+              ] as const,
+          ),
       )
       const ID0 = col9attrs.ID?.[0] ?? ''
       const r0 = Object.fromEntries(

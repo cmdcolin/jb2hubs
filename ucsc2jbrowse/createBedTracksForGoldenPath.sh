@@ -43,7 +43,7 @@ process_assembly() {
 
         # Check if we need to process the file
         need_processing=true
-        if [ -f "${outfile}.bed.gz" ] && [ -f "$hash_file" ]; then
+        if [ -f "${outfile}.bed.gz" ] && [ -f "$hash_file" ] && [ -z "${REPROCESS}" ]; then
           stored_hash=$(cat "$hash_file")
           if [ "$current_hash" = "$stored_hash" ]; then
             # echo "Skipping ${key}: file unchanged"
