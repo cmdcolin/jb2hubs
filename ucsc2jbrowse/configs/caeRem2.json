@@ -307,6 +307,19 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "caeRem2_to_caeRem3.supers_chain",
+      "name": "caeRem2 to caeRem3.supers Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem2"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "caeRem2",
+        "queryAssembly": "caeRem3.supers",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeRem2/liftOver/caeRem2ToCaeRem3.supers.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "caeRem2_to_cb3_chain",
       "name": "caeRem2 to cb3 Chain",
       "category": ["Liftover"],

@@ -1628,6 +1628,71 @@
       },
       "description": "Non-X. tropicalis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro10_to_hg38_chain",
+      "name": "xenTro10 to hg38 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro10"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenTro10",
+        "queryAssembly": "hg38",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToHg38.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro10_to_mm10_chain",
+      "name": "xenTro10 to mm10 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro10"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenTro10",
+        "queryAssembly": "mm10",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm10.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro10_to_mm39_chain",
+      "name": "xenTro10 to mm39 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro10"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenTro10",
+        "queryAssembly": "mm39",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm39.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro10_to_xenTro7_chain",
+      "name": "xenTro10 to xenTro7 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro10"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenTro10",
+        "queryAssembly": "xenTro7",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro7.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro10_to_xenTro9_chain",
+      "name": "xenTro10 to xenTro9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro10"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "xenTro10",
+        "queryAssembly": "xenTro9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro9.over.chain.gz"
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

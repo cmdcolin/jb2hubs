@@ -588,6 +588,71 @@
       },
       "description": "Non-Cow RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bosTau3_to_bosTau4_chain",
+      "name": "bosTau3 to bosTau4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bosTau3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "bosTau3",
+        "queryAssembly": "bosTau4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToBosTau4.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bosTau3_to_hg18_chain",
+      "name": "bosTau3 to hg18 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bosTau3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "bosTau3",
+        "queryAssembly": "hg18",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToHg18.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bosTau3_to_mm8_chain",
+      "name": "bosTau3 to mm8 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bosTau3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "bosTau3",
+        "queryAssembly": "mm8",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToMm8.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bosTau3_to_mm9_chain",
+      "name": "bosTau3 to mm9 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bosTau3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "bosTau3",
+        "queryAssembly": "mm9",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToMm9.over.chain.gz"
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bosTau3_to_rn4_chain",
+      "name": "bosTau3 to rn4 Chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bosTau3"],
+      "adapter": {
+        "type": "ChainAdapter",
+        "targetAssembly": "bosTau3",
+        "queryAssembly": "rn4",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToRn4.over.chain.gz"
+      }
     }
   ]
 }

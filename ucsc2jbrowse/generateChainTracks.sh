@@ -59,11 +59,15 @@ wget -q -O - "https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOv
 
   # Parse the filename to get the source and target assemblies
   # Format is typically sourceToTarget.over.chain.gz (e.g., hg19ToSom1.over.chain.gz)
-  if [[ $filename =~ ^([^T]+)To([^.]+)\.over\.chain\.gz$ ]]; then
+  if [[ $filename =~ ^(.+?)To(.+?)\.over\.chain\.gz$ ]]; then
     source_assembly="${BASH_REMATCH[1]}"
     # Extract target assembly and ensure first letter is lowercase
     target_assembly_orig="${BASH_REMATCH[2]}"
-    target_assembly="$(echo ${target_assembly_orig:0:1} | tr '[:upper:]' '[:lower:]')${target_assembly_orig:1}"
+    if [[ $target_assembly_orig == GCF* || $target_assembly_orig == GCA* ]]; then
+      target_assembly="${target_assembly_orig}"
+    else
+      target_assembly="$(echo ${target_assembly_orig:0:1} | tr '[:upper:]' '[:lower:]')${target_assembly_orig:1}"
+    fi
 
     # Create a track ID and name
     track_id="${source_assembly}_to_${target_assembly}_chain"
