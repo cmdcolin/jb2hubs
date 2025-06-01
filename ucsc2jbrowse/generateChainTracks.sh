@@ -50,7 +50,7 @@ fi
 TEMP_TRACKS_FILE=$(mktemp)
 echo "[]" >"$TEMP_TRACKS_FILE"
 
-echo "Fetching chain files for $SOURCE_ASSEMBLY from UCSC..."
+# echo "Fetching chain files for $SOURCE_ASSEMBLY from UCSC..."
 wget -q -O - "https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOver/" | grep -o 'href="[^"]*"' | sed "s!href=\"\(.*\)\"!https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOver/\1!" | grep -v md5sum | grep .chain.gz | while read p; do
   # echo "Adding liftover tracks to $p"
 
@@ -69,9 +69,22 @@ wget -q -O - "https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOv
       target_assembly="$(echo ${target_assembly_orig:0:1} | tr '[:upper:]' '[:lower:]')${target_assembly_orig:1}"
     fi
 
+    # Read the hubJson2/all.json file to get the common name for the target
+    # assembly if it's an accession
+    common_name=""
+    if [[ $target_assembly_orig == GCF* || $target_assembly_orig == GCA* ]]; then
+      # Get the common name from the all.json file if it exists
+      common_name=$(jq -r --arg acc "$target_assembly_orig" '.[] | select(.accession == $acc) | .commonName' "../website/hubJson2/all.json" | head -n 1)
+      echo $common_name
+    fi
+
     # Create a track ID and name
     track_id="${source_assembly}_to_${target_assembly}_chain"
-    track_name="${source_assembly} to ${target_assembly} Chain"
+    if [ -n "$common_name" ]; then
+      track_name="${source_assembly} to ${common_name} Chain (${target_assembly})"
+    else
+      track_name="${source_assembly} to ${target_assembly} Chain"
+    fi
 
     # Create the JSON for this track
     track_json=$(
@@ -104,7 +117,7 @@ EOF
 done
 
 # Now append all the chain tracks to the config.json file
-echo "Appending chain tracks to $CONFIG_FILE..."
+# echo "Appending chain tracks to $CONFIG_FILE..."
 CHAIN_TRACKS=$(cat "$TEMP_TRACKS_FILE")
 temp_file=$(mktemp)
 jq --argjson chain_tracks "$CHAIN_TRACKS" '.tracks += $chain_tracks' "$CONFIG_FILE" >"$temp_file"
@@ -113,4 +126,4 @@ mv "$temp_file" "$CONFIG_FILE"
 # Clean up temporary file
 rm "$TEMP_TRACKS_FILE"
 
-echo "Chain tracks have been appended to $CONFIG_FILE"
+# echo "Chain tracks have been appended to $CONFIG_FILE"

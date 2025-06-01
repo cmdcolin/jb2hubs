@@ -13,12 +13,12 @@ process_assembly() {
   local DB=$INDIR/$ASM/database
 
   for i in $OUTDIR/*.bed.gz; do
-    echo $i
+    # echo $i
     node src/addBedTabixTrackToConfig.ts $OUTDIR/config.json $i
   done
 
   for i in $OUTDIR/*.gff.gz; do
-    echo $i
+    # echo $i
     node src/addGffTabixTrackToConfig.ts $OUTDIR/config.json $i
   done
 
