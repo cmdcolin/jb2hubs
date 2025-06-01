@@ -21,5 +21,6 @@ done
 ./getFileListing.sh ~/ucscResults/
 
 fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
-yarn prettier --write .
 node src/mergeAll.ts
+
+npx @biomejs/biome format --write ../

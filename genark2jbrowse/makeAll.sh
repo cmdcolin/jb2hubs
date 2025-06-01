@@ -84,5 +84,4 @@ node src/makeHubPagesForWebsite.ts
 node src/makeGenArkExtensions.ts
 
 # Format
-yarn prettier --log-level error --write ../website/hubs/
-yarn prettier --log-level error --write ../website/hubJson
+npx @biomejs/biome format --write ../
