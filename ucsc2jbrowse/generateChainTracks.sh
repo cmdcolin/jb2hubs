@@ -52,7 +52,7 @@ echo "[]" >"$TEMP_TRACKS_FILE"
 
 echo "Fetching chain files for $SOURCE_ASSEMBLY from UCSC..."
 wget -q -O - "https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOver/" | grep -o 'href="[^"]*"' | sed "s!href=\"\(.*\)\"!https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOver/\1!" | grep -v md5sum | grep .chain.gz | while read p; do
-  echo "Adding liftover tracks to $p"
+  # echo "Adding liftover tracks to $p"
 
   # Extract the filename from the URL
   filename=$(basename "$p")
