@@ -13,7 +13,7 @@ const specializedParents = new Set([
   'gdcCancer',
 ])
 const specializedTypes = new Set(['pgSnp'])
-const specializedTracks = new Set(['denisovaMethylation'])
+const specializedGroups = new Set(['denisova', 'neandertal'])
 
 export function checkIfTrackGoesInSpecializedCategory({
   metadata,
@@ -23,6 +23,6 @@ export function checkIfTrackGoesInSpecializedCategory({
   return metadata
     ? specializedTypes.has(`${metadata.type}`.split(' ')[0]!) ||
         specializedParents.has(`${metadata.parent}`.split(' ')[0]!) ||
-        specializedTracks.has(`${metadata.tableName}`.split(' ')[0]!)
+        specializedGroups.has(`${metadata.group}`.split(' ')[0]!)
     : false
 }
