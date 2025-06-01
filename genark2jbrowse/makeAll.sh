@@ -3,10 +3,10 @@
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 
 # Download list of hubs (in json)
-node src/downloadHubList.ts
+time node src/downloadHubList.ts
 
 # Download actual hub.txt files
-node src/downloadHubs.ts
+time node src/downloadHubs.ts
 
 # Write info about assembly from NCBI to ncbi.json in hubs folder
 # Define function to fetch NCBI data
@@ -24,12 +24,15 @@ fetch_ncbi_data() {
 export -f fetch_ncbi_data
 
 # Run the function in parallel
-fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
+echo "Fetch NCBI metadata"
+time fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
 
 # Generate a 'native' jbrowse2 config.json for each hub.txt
-fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
+echo "Generate configs"
+time fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
 
-cat hubJson2/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
+echo "Download NCBI GFF"
+time cat hubJson2/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
 
 # process NCBI GFF
 process_gff_file() {
@@ -38,15 +41,18 @@ process_gff_file() {
 
   # swaps start and end if start > end, could be worth investigating more but a
   # number of NCBI GFF have this
-  pigz -dc "$input_file" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($4 >= $5 && $4 != "." && $5 != ".") {temp=$4; $4=$5; $5=temp} print}' >"${input_file%.gz}"
-  jbrowse sort-gff "${input_file%.gz}" | bgzip -@8 >"bgz/$filename"
-  tabix -C "bgz/$filename"
-  rm "${input_file%.gz}"
+  if [ ! -f "bgz/$filename" ] || [ -n "$REPROCESS" ]; then
+    pigz -dc "$input_file" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($4 >= $5 && $4 != "." && $5 != ".") {temp=$4; $4=$5; $5=temp} print}' >"${input_file%.gz}"
+    jbrowse sort-gff "${input_file%.gz}" | bgzip -@8 >"bgz/$filename"
+    tabix -C "bgz/$filename"
+    rm "${input_file%.gz}"
+  fi
 }
 
 export -f process_gff_file
 
-ls gff/*.gz | parallel --bar -j8 process_gff_file
+echo "Process NCBI GFF"
+time ls gff/*.gz | parallel --bar -j8 process_gff_file
 
 # Export the function to make it available to parallel
 add_track_and_text_index() {
@@ -75,13 +81,15 @@ add_track_and_text_index() {
 export -f add_track_and_text_index
 
 # Load NCBI GFF
-find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
+echo "Load and text index NCBI GFF"
+time find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
 
 # Make routes in website app folder
-node src/makeHubPagesForWebsite.ts
+time node src/makeHubPagesForWebsite.ts
 
 # Add 'extensions' (special tracks)
-node src/makeGenArkExtensions.ts
+time node src/makeGenArkExtensions.ts
 
+sleep 1
 # Format
 npx @biomejs/biome format --write ../
