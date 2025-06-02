@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "droVir1",
+      "displayName": "D. virilis (droVir1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "droVir1-refseq",
+        "metadata": {
+          "description": "July 2004 (Agencourt prelim/droVir1)",
+          "nibPath": "/gbdb/droVir1",
+          "organism": "D. virilis",
+          "defaultPos": "scaffold_6:5128001-5158000",
+          "active": 1,
+          "orderKey": 4125,
+          "genome": "D. virilis",
+          "scientificName": "Drosophila virilis",
+          "htmlPath": "/gbdb/droVir1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Agencourt 12 July 2004",
+          "taxId": 7244
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir1/bigZips/droVir1.2bit",
@@ -412,7 +428,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droVir1_to_dm2_chain",
-      "name": "droVir1 to dm2 Chain",
+      "name": "droVir1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droVir1"],
       "adapter": {

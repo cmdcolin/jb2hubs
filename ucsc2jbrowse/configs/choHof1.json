@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "choHof1",
+      "displayName": "Sloth (choHof1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "choHof1-refseq",
+        "metadata": {
+          "description": "Jul. 2008 (Broad/choHof1)",
+          "nibPath": "/gbdb/choHof1",
+          "organism": "Sloth",
+          "defaultPos": "scaffold_5701:20408-28976",
+          "active": 1,
+          "orderKey": 19460,
+          "genome": "Sloth",
+          "scientificName": "Choloepus hoffmanni",
+          "htmlPath": "/gbdb/choHof1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute choHof1",
+          "taxId": 9358
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/choHof1/bigZips/choHof1.2bit",
@@ -1523,7 +1539,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "choHof1_to_mm10_chain",
-      "name": "choHof1 to mm10 Chain",
+      "name": "choHof1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["choHof1"],
       "adapter": {

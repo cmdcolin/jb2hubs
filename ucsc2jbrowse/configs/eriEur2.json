@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "eriEur2",
+      "displayName": "Hedgehog (eriEur2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "eriEur2-refseq",
+        "metadata": {
+          "description": "May 2012 (EriEur2.0/eriEur2)",
+          "nibPath": "/gbdb/eriEur2",
+          "organism": "Hedgehog",
+          "defaultPos": "JH835538:1253255-1266498",
+          "active": 1,
+          "orderKey": 8314,
+          "genome": "Hedgehog",
+          "scientificName": "Erinaceus europaeus",
+          "htmlPath": "/gbdb/eriEur2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute EriEur2.0",
+          "taxId": 9365
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur2/bigZips/eriEur2.2bit",
@@ -1870,7 +1886,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "eriEur2_to_hg19_chain",
-      "name": "eriEur2 to hg19 Chain",
+      "name": "eriEur2 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["eriEur2"],
       "adapter": {
@@ -1883,7 +1899,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "eriEur2_to_hg38_chain",
-      "name": "eriEur2 to hg38 Chain",
+      "name": "eriEur2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["eriEur2"],
       "adapter": {
@@ -1896,7 +1912,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "eriEur2_to_mm39_chain",
-      "name": "eriEur2 to mm39 Chain",
+      "name": "eriEur2 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["eriEur2"],
       "adapter": {

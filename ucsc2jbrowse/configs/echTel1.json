@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "echTel1",
+      "displayName": "Tenrec (echTel1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "echTel1-refseq",
+        "metadata": {
+          "description": "July 2005 (Broad/echTel1)",
+          "nibPath": "/gbdb/echTel1",
+          "organism": "Tenrec",
+          "defaultPos": "scaffold_287419:9706-28119",
+          "active": 1,
+          "orderKey": 20175,
+          "genome": "Tenrec",
+          "scientificName": "Echinops telfairi",
+          "htmlPath": "/gbdb/echTel1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad July 2005",
+          "taxId": 9371
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/bigZips/echTel1.2bit",
@@ -687,7 +703,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel1_to_echTel2_chain",
-      "name": "echTel1 to echTel2 Chain",
+      "name": "echTel1 to Tenrec (echTel2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel1"],
       "adapter": {
@@ -700,7 +716,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel1_to_hg18_chain",
-      "name": "echTel1 to hg18 Chain",
+      "name": "echTel1 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel1"],
       "adapter": {
@@ -713,7 +729,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel1_to_hg19_chain",
-      "name": "echTel1 to hg19 Chain",
+      "name": "echTel1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel1"],
       "adapter": {
@@ -726,7 +742,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel1_to_mm7_chain",
-      "name": "echTel1 to mm7 Chain",
+      "name": "echTel1 to Mouse (mm7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel1"],
       "adapter": {
@@ -739,7 +755,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel1_to_mm9_chain",
-      "name": "echTel1 to mm9 Chain",
+      "name": "echTel1 to Mouse (mm9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel1"],
       "adapter": {
@@ -752,7 +768,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel1_to_mm10_chain",
-      "name": "echTel1 to mm10 Chain",
+      "name": "echTel1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel1"],
       "adapter": {

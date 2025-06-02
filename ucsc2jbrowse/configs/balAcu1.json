@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "balAcu1",
+      "displayName": "Minke whale (balAcu1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "balAcu1-refseq",
+        "metadata": {
+          "description": "Oct. 2013 (BalAcu1.0/balAcu1)",
+          "nibPath": "/gbdb/balAcu1",
+          "organism": "Minke whale",
+          "defaultPos": "KI537194:1947619-1969416",
+          "active": 1,
+          "orderKey": 13475,
+          "genome": "Minke whale",
+          "scientificName": "Balaenoptera acutorostrata scammoni",
+          "htmlPath": "/gbdb/balAcu1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Korea Ocean Research & Development Institute",
+          "taxId": 310752
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/bigZips/balAcu1.2bit",
@@ -1782,7 +1798,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "balAcu1_to_hg19_chain",
-      "name": "balAcu1 to hg19 Chain",
+      "name": "balAcu1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["balAcu1"],
       "adapter": {
@@ -1795,7 +1811,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "balAcu1_to_hg38_chain",
-      "name": "balAcu1 to hg38 Chain",
+      "name": "balAcu1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["balAcu1"],
       "adapter": {
@@ -1808,7 +1824,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "balAcu1_to_mm10_chain",
-      "name": "balAcu1 to mm10 Chain",
+      "name": "balAcu1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["balAcu1"],
       "adapter": {

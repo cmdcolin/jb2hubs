@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "caeRem3",
+      "displayName": "C. remanei (caeRem3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "caeRem3-refseq",
+        "metadata": {
+          "description": "May 2007 (WUGSC 15.0.1/caeRem3)",
+          "nibPath": "/gbdb/caeRem3",
+          "organism": "C. remanei",
+          "defaultPos": "chrUn:119043304-119068959",
+          "active": 1,
+          "orderKey": 3066,
+          "genome": "C. remanei",
+          "scientificName": "Caenorhabditis remanei",
+          "htmlPath": "/gbdb/caeRem3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Washington University School of Medicine GSC C. remanei 15.0.1",
+          "taxId": 31234
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeRem3/bigZips/caeRem3.2bit",
@@ -955,7 +971,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "caeRem3_to_ce6_chain",
-      "name": "caeRem3 to ce6 Chain",
+      "name": "caeRem3 to C. elegans (ce6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["caeRem3"],
       "adapter": {

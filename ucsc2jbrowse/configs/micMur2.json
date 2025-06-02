@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "micMur2",
+      "displayName": "Mouse lemur (micMur2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "micMur2-refseq",
+        "metadata": {
+          "description": "May 2015 (Mouse lemur/micMur2)",
+          "nibPath": "/gbdb/micMur2",
+          "organism": "Mouse lemur",
+          "defaultPos": "KQ058561v1:1733963-1789196",
+          "active": 1,
+          "orderKey": 13679,
+          "genome": "Mouse lemur",
+          "scientificName": "Microcebus murinus",
+          "htmlPath": "/gbdb/micMur2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute and Baylor College of Medicine Mmur_2.0",
+          "taxId": 30608
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/micMur2/bigZips/micMur2.2bit",
@@ -1741,7 +1757,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "micMur2_to_hg38_chain",
-      "name": "micMur2 to hg38 Chain",
+      "name": "micMur2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["micMur2"],
       "adapter": {
@@ -1754,7 +1770,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "micMur2_to_micMur1_chain",
-      "name": "micMur2 to micMur1 Chain",
+      "name": "micMur2 to Mouse lemur (micMur1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["micMur2"],
       "adapter": {
@@ -1767,7 +1783,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "micMur2_to_tarSyr2_chain",
-      "name": "micMur2 to tarSyr2 Chain",
+      "name": "micMur2 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["micMur2"],
       "adapter": {

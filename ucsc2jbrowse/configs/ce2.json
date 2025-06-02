@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "ce2",
+      "displayName": "C. elegans (ce2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "ce2-refseq",
+        "metadata": {
+          "description": "Mar. 2004 (WS120/ce2)",
+          "nibPath": "/gbdb/ce2/nib",
+          "organism": "C. elegans",
+          "defaultPos": "chrII:14642289-14671631",
+          "active": 1,
+          "orderKey": 3033,
+          "genome": "C. elegans",
+          "scientificName": "Caenorhabditis elegans",
+          "htmlPath": "/gbdb/ce2/html/description.html",
+          "hgNearOk": 1,
+          "hgPbOk": 0,
+          "sourceName": "WormBase v. WS120",
+          "taxId": 6239
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce2/bigZips/ce2.2bit",
@@ -598,7 +614,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ce2_to_ce4_chain",
-      "name": "ce2 to ce4 Chain",
+      "name": "ce2 to C. elegans (ce4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ce2"],
       "adapter": {

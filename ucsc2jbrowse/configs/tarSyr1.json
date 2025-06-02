@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "tarSyr1",
+      "displayName": "Tarsier (tarSyr1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "tarSyr1-refseq",
+        "metadata": {
+          "description": "Aug. 2008 (Broad/tarSyr1)",
+          "nibPath": "/gbdb/tarSyr1",
+          "organism": "Tarsier",
+          "defaultPos": "scaffold_66368:1-3044",
+          "active": 1,
+          "orderKey": 20080,
+          "genome": "Tarsier",
+          "scientificName": "Tarsius syrichta",
+          "htmlPath": "/gbdb/tarSyr1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute tarSyr1 (NCBI project 20335, ABRT000000000)",
+          "taxId": 9478
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/bigZips/tarSyr1.2bit",
@@ -687,7 +703,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "tarSyr1_to_gorGor3_chain",
-      "name": "tarSyr1 to gorGor3 Chain",
+      "name": "tarSyr1 to Gorilla (gorGor3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["tarSyr1"],
       "adapter": {
@@ -700,7 +716,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "tarSyr1_to_mm10_chain",
-      "name": "tarSyr1 to mm10 Chain",
+      "name": "tarSyr1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["tarSyr1"],
       "adapter": {
@@ -713,7 +729,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "tarSyr1_to_tarSyr2_chain",
-      "name": "tarSyr1 to tarSyr2 Chain",
+      "name": "tarSyr1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["tarSyr1"],
       "adapter": {

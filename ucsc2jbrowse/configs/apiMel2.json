@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "apiMel2",
+      "displayName": "A. mellifera (apiMel2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "apiMel2-refseq",
+        "metadata": {
+          "description": "Jan. 2005 (Baylor 2.0/apiMel2)",
+          "nibPath": "/gbdb/apiMel2",
+          "organism": "A. mellifera",
+          "defaultPos": "GroupUn:47426601-47431800",
+          "active": 1,
+          "orderKey": 1052,
+          "genome": "A. mellifera",
+          "scientificName": "Apis mellifera",
+          "htmlPath": "/gbdb/apiMel2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Baylor HGSC Amel_2.0",
+          "taxId": 7460
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/apiMel2/bigZips/apiMel2.2bit",
@@ -1309,7 +1325,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "apiMel2_to_dm2_chain",
-      "name": "apiMel2 to dm2 Chain",
+      "name": "apiMel2 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["apiMel2"],
       "adapter": {

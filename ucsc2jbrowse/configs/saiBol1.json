@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "saiBol1",
+      "displayName": "Squirrel monkey (saiBol1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "saiBol1-refseq",
+        "metadata": {
+          "description": "Oct. 2011 (Broad/saiBol1)",
+          "nibPath": "/gbdb/saiBol1",
+          "organism": "Squirrel monkey",
+          "defaultPos": "JH378122:1872708-1880068",
+          "active": 1,
+          "orderKey": 19725,
+          "genome": "Squirrel monkey",
+          "scientificName": "Saimiri boliviensis",
+          "htmlPath": "/gbdb/saiBol1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad SaiBol1.0 (GCA_000235385.1)",
+          "taxId": 39432
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/saiBol1/bigZips/saiBol1.2bit",
@@ -1828,7 +1844,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "saiBol1_to_hg19_chain",
-      "name": "saiBol1 to hg19 Chain",
+      "name": "saiBol1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["saiBol1"],
       "adapter": {
@@ -1841,7 +1857,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "saiBol1_to_hg38_chain",
-      "name": "saiBol1 to hg38 Chain",
+      "name": "saiBol1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["saiBol1"],
       "adapter": {
@@ -1854,7 +1870,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "saiBol1_to_mm10_chain",
-      "name": "saiBol1 to mm10 Chain",
+      "name": "saiBol1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["saiBol1"],
       "adapter": {
@@ -1867,7 +1883,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "saiBol1_to_tarSyr2_chain",
-      "name": "saiBol1 to tarSyr2 Chain",
+      "name": "saiBol1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["saiBol1"],
       "adapter": {

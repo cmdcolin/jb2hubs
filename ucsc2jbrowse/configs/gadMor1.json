@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "gadMor1",
+      "displayName": "Atlantic cod (gadMor1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "gadMor1-refseq",
+        "metadata": {
+          "description": "May 2010 (Genofisk GadMor_May2010/gadMor1)",
+          "nibPath": "/gbdb/gadMor1",
+          "organism": "Atlantic cod",
+          "defaultPos": "HE567617:3931-7549",
+          "active": 1,
+          "orderKey": 1840,
+          "genome": "Atlantic cod",
+          "scientificName": "Gadus morhua",
+          "htmlPath": "/gbdb/gadMor1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Genofisk GadMor_May2010 (GCA_000231765.1)",
+          "taxId": 8049
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gadMor1/bigZips/gadMor1.2bit",
@@ -1567,7 +1583,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gadMor1_to_fr3_chain",
-      "name": "gadMor1 to fr3 Chain",
+      "name": "gadMor1 to Fugu (fr3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gadMor1"],
       "adapter": {
@@ -1580,7 +1596,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gadMor1_to_hg38_chain",
-      "name": "gadMor1 to hg38 Chain",
+      "name": "gadMor1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gadMor1"],
       "adapter": {
@@ -1593,7 +1609,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gadMor1_to_mm10_chain",
-      "name": "gadMor1 to mm10 Chain",
+      "name": "gadMor1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gadMor1"],
       "adapter": {

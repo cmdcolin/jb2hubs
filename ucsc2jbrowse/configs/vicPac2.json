@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "vicPac2",
+      "displayName": "Alpaca (vicPac2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "vicPac2-refseq",
+        "metadata": {
+          "description": "Mar. 2013 (Vicugna_pacos-2.0.1/vicPac2)",
+          "nibPath": "/gbdb/vicPac2",
+          "organism": "Alpaca",
+          "defaultPos": "KB632466:7430155-7447383",
+          "active": 1,
+          "orderKey": 1350,
+          "genome": "Alpaca",
+          "scientificName": "Vicugna pacos",
+          "htmlPath": "/gbdb/vicPac2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute",
+          "taxId": 30538
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/vicPac2/bigZips/vicPac2.2bit",
@@ -1513,7 +1529,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "vicPac2_to_hg19_chain",
-      "name": "vicPac2 to hg19 Chain",
+      "name": "vicPac2 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["vicPac2"],
       "adapter": {
@@ -1526,7 +1542,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "vicPac2_to_hg38_chain",
-      "name": "vicPac2 to hg38 Chain",
+      "name": "vicPac2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["vicPac2"],
       "adapter": {
@@ -1539,7 +1555,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "vicPac2_to_mm10_chain",
-      "name": "vicPac2 to mm10 Chain",
+      "name": "vicPac2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["vicPac2"],
       "adapter": {

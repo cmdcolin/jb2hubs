@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "calMil1",
+      "displayName": "Elephant shark (calMil1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "calMil1-refseq",
+        "metadata": {
+          "description": "Dec. 2013 (Callorhinchus_milii-6.1.3/calMil1)",
+          "nibPath": "/gbdb/calMil1",
+          "organism": "Elephant shark",
+          "defaultPos": "KI635875:1934002-2090480",
+          "active": 1,
+          "orderKey": 5525,
+          "genome": "Elephant shark",
+          "scientificName": "Callorhinchus milii",
+          "htmlPath": "/gbdb/calMil1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Institute of Molecular and Cell Biology, Singapore",
+          "taxId": 7868
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/calMil1/bigZips/calMil1.2bit",
@@ -1788,7 +1804,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "calMil1_to_rn6_chain",
-      "name": "calMil1 to rn6 Chain",
+      "name": "calMil1 to Rat (rn6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["calMil1"],
       "adapter": {

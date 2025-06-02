@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "hg38",
+      "displayName": "Human (hg38)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "hg38-refseq",
+        "metadata": {
+          "description": "Dec. 2013 (GRCh38/hg38)",
+          "nibPath": "/gbdb/hg38",
+          "organism": "Human",
+          "defaultPos": "chr7:155799529-155812871",
+          "active": 1,
+          "orderKey": 50,
+          "genome": "Human",
+          "scientificName": "Homo sapiens",
+          "htmlPath": "/gbdb/hg38/html/description.html",
+          "hgNearOk": 1,
+          "hgPbOk": 0,
+          "sourceName": "GRCh38 Genome Reference Consortium Human Reference 38 (GCA_000001405.15)",
+          "taxId": 9606
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
@@ -24685,7 +24701,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ailMel1_chain",
-      "name": "hg38 to ailMel1 Chain",
+      "name": "hg38 to Panda (ailMel1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24698,7 +24714,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_allMis1_chain",
-      "name": "hg38 to allMis1 Chain",
+      "name": "hg38 to American alligator (allMis1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24711,7 +24727,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_amaVit1_chain",
-      "name": "hg38 to amaVit1 Chain",
+      "name": "hg38 to amaVit1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24724,7 +24740,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_anaPla1_chain",
-      "name": "hg38 to anaPla1 Chain",
+      "name": "hg38 to anaPla1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24737,7 +24753,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_anoCar2_chain",
-      "name": "hg38 to anoCar2 Chain",
+      "name": "hg38 to Lizard (anoCar2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24750,7 +24766,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_aotNan1_chain",
-      "name": "hg38 to aotNan1 Chain",
+      "name": "hg38 to aotNan1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24763,7 +24779,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_apaSpi1_chain",
-      "name": "hg38 to apaSpi1 Chain",
+      "name": "hg38 to apaSpi1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24776,7 +24792,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_aptMan1_chain",
-      "name": "hg38 to aptMan1 Chain",
+      "name": "hg38 to Brown kiwi (aptMan1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24789,7 +24805,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_aquChr2_chain",
-      "name": "hg38 to aquChr2 Chain",
+      "name": "hg38 to Golden eagle (aquChr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24802,7 +24818,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_araMac1_chain",
-      "name": "hg38 to araMac1 Chain",
+      "name": "hg38 to araMac1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24815,7 +24831,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_astMex1_chain",
-      "name": "hg38 to astMex1 Chain",
+      "name": "hg38 to astMex1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24828,7 +24844,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_balAcu1_chain",
-      "name": "hg38 to balAcu1 Chain",
+      "name": "hg38 to Minke whale (balAcu1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24841,7 +24857,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_bisBis1_chain",
-      "name": "hg38 to bisBis1 Chain",
+      "name": "hg38 to Bison (bisBis1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24854,7 +24870,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_bosTau8_chain",
-      "name": "hg38 to bosTau8 Chain",
+      "name": "hg38 to Cow (bosTau8) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24867,7 +24883,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_bosTau9_chain",
-      "name": "hg38 to bosTau9 Chain",
+      "name": "hg38 to Cow (bosTau9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24880,7 +24896,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_calJac3_chain",
-      "name": "hg38 to calJac3 Chain",
+      "name": "hg38 to Marmoset (calJac3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24893,7 +24909,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_calJac4_chain",
-      "name": "hg38 to calJac4 Chain",
+      "name": "hg38 to Marmoset (calJac4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24906,7 +24922,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_camFer1_chain",
-      "name": "hg38 to camFer1 Chain",
+      "name": "hg38 to camFer1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24919,7 +24935,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_canFam3_chain",
-      "name": "hg38 to canFam3 Chain",
+      "name": "hg38 to Dog (canFam3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24932,7 +24948,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_canFam4_chain",
-      "name": "hg38 to canFam4 Chain",
+      "name": "hg38 to Dog (canFam4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24945,7 +24961,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_canFam5_chain",
-      "name": "hg38 to canFam5 Chain",
+      "name": "hg38 to Dog (canFam5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24958,7 +24974,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_canFam6_chain",
-      "name": "hg38 to canFam6 Chain",
+      "name": "hg38 to Dog (canFam6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24971,7 +24987,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_capHir1_chain",
-      "name": "hg38 to capHir1 Chain",
+      "name": "hg38 to capHir1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24984,7 +25000,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_casCan1_chain",
-      "name": "hg38 to casCan1 Chain",
+      "name": "hg38 to casCan1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -24997,7 +25013,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_cavApe1_chain",
-      "name": "hg38 to cavApe1 Chain",
+      "name": "hg38 to cavApe1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25010,7 +25026,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_cavPor3_chain",
-      "name": "hg38 to cavPor3 Chain",
+      "name": "hg38 to Guinea pig (cavPor3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25023,7 +25039,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ce11_chain",
-      "name": "hg38 to ce11 Chain",
+      "name": "hg38 to C. elegans (ce11) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25036,7 +25052,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_cebCap1_chain",
-      "name": "hg38 to cebCap1 Chain",
+      "name": "hg38 to cebCap1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25049,7 +25065,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_cerAty1_chain",
-      "name": "hg38 to cerAty1 Chain",
+      "name": "hg38 to cerAty1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25062,7 +25078,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_cerSim1_chain",
-      "name": "hg38 to cerSim1 Chain",
+      "name": "hg38 to White rhinoceros (cerSim1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25075,7 +25091,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_cheMyd1_chain",
-      "name": "hg38 to cheMyd1 Chain",
+      "name": "hg38 to cheMyd1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25088,7 +25104,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_chiLan1_chain",
-      "name": "hg38 to chiLan1 Chain",
+      "name": "hg38 to chiLan1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25101,7 +25117,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_chlSab2_chain",
-      "name": "hg38 to chlSab2 Chain",
+      "name": "hg38 to Green monkey (chlSab2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25114,7 +25130,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_chrAsi1_chain",
-      "name": "hg38 to chrAsi1 Chain",
+      "name": "hg38 to chrAsi1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25127,7 +25143,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_chrPic2_chain",
-      "name": "hg38 to chrPic2 Chain",
+      "name": "hg38 to chrPic2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25140,7 +25156,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_colAng1_chain",
-      "name": "hg38 to colAng1 Chain",
+      "name": "hg38 to colAng1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25153,7 +25169,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_colLiv1_chain",
-      "name": "hg38 to colLiv1 Chain",
+      "name": "hg38 to colLiv1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25166,7 +25182,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_conCri1_chain",
-      "name": "hg38 to conCri1 Chain",
+      "name": "hg38 to conCri1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25179,7 +25195,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_criGri1_chain",
-      "name": "hg38 to criGri1 Chain",
+      "name": "hg38 to Chinese hamster (criGri1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25192,7 +25208,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_criGriChoV1_chain",
-      "name": "hg38 to criGriChoV1 Chain",
+      "name": "hg38 to Chinese hamster (criGriChoV1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25205,7 +25221,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_criGriChoV2_chain",
-      "name": "hg38 to criGriChoV2 Chain",
+      "name": "hg38 to Chinese hamster (criGriChoV2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25218,7 +25234,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_danRer10_chain",
-      "name": "hg38 to danRer10 Chain",
+      "name": "hg38 to Zebrafish (danRer10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25231,7 +25247,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_danRer11_chain",
-      "name": "hg38 to danRer11 Chain",
+      "name": "hg38 to Zebrafish (danRer11) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25244,7 +25260,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_dasNov3_chain",
-      "name": "hg38 to dasNov3 Chain",
+      "name": "hg38 to Armadillo (dasNov3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25257,7 +25273,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_dipOrd2_chain",
-      "name": "hg38 to dipOrd2 Chain",
+      "name": "hg38 to dipOrd2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25270,7 +25286,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_echTel2_chain",
-      "name": "hg38 to echTel2 Chain",
+      "name": "hg38 to Tenrec (echTel2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25283,7 +25299,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_eleEdw1_chain",
-      "name": "hg38 to eleEdw1 Chain",
+      "name": "hg38 to eleEdw1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25296,7 +25312,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_enhLutNer1_chain",
-      "name": "hg38 to enhLutNer1 Chain",
+      "name": "hg38 to Southern sea otter (enhLutNer1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25309,7 +25325,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_eptFus1_chain",
-      "name": "hg38 to eptFus1 Chain",
+      "name": "hg38 to eptFus1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25322,7 +25338,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_equCab2_chain",
-      "name": "hg38 to equCab2 Chain",
+      "name": "hg38 to Horse (equCab2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25335,7 +25351,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_equCab3_chain",
-      "name": "hg38 to equCab3 Chain",
+      "name": "hg38 to Horse (equCab3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25348,7 +25364,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_eriEur2_chain",
-      "name": "hg38 to eriEur2 Chain",
+      "name": "hg38 to Hedgehog (eriEur2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25361,7 +25377,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_eulFla1_chain",
-      "name": "hg38 to eulFla1 Chain",
+      "name": "hg38 to eulFla1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25374,7 +25390,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_eulMac1_chain",
-      "name": "hg38 to eulMac1 Chain",
+      "name": "hg38 to eulMac1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25387,7 +25403,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_falChe1_chain",
-      "name": "hg38 to falChe1 Chain",
+      "name": "hg38 to falChe1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25400,7 +25416,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_falPer1_chain",
-      "name": "hg38 to falPer1 Chain",
+      "name": "hg38 to falPer1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25413,7 +25429,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_felCat8_chain",
-      "name": "hg38 to felCat8 Chain",
+      "name": "hg38 to Cat (felCat8) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25426,7 +25442,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_felCat9_chain",
-      "name": "hg38 to felCat9 Chain",
+      "name": "hg38 to Cat (felCat9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25439,7 +25455,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ficAlb1_chain",
-      "name": "hg38 to ficAlb1 Chain",
+      "name": "hg38 to ficAlb1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25452,7 +25468,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ficAlb2_chain",
-      "name": "hg38 to ficAlb2 Chain",
+      "name": "hg38 to ficAlb2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25465,7 +25481,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_fr3_chain",
-      "name": "hg38 to fr3 Chain",
+      "name": "hg38 to Fugu (fr3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25478,7 +25494,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_fukDam1_chain",
-      "name": "hg38 to fukDam1 Chain",
+      "name": "hg38 to fukDam1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25491,7 +25507,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_000152225.2_chain",
-      "name": "hg38 to Cape rock hyrax (Dallas Zoo Isis #01D731 2014) Chain (GCA_000152225.2)",
+      "name": "hg38 to Cape rock hyrax (Dallas Zoo Isis #01D731 2014) (GCA_000152225.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25504,7 +25520,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_004886185.2_chain",
-      "name": "hg38 to dog (Basenji MU ID 185726 2019) Chain (GCA_004886185.2)",
+      "name": "hg38 to dog (Basenji MU ID 185726 2019) (GCA_004886185.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25517,7 +25533,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_005887515.3_chain",
-      "name": "hg38 to domestic yak (maiwa yakHY00 2019) Chain (GCA_005887515.3)",
+      "name": "hg38 to domestic yak (maiwa yakHY00 2019) (GCA_005887515.3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25530,7 +25546,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_008641055.3_chain",
-      "name": "hg38 to dog (German Shepherd Nala 2020) Chain (GCA_008641055.3)",
+      "name": "hg38 to dog (German Shepherd Nala 2020) (GCA_008641055.3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25543,7 +25559,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_009914755.4_chain",
-      "name": "hg38 to GCA_009914755.4 Chain",
+      "name": "hg38 to GCA_009914755.4 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25556,7 +25572,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_011100555.2_chain",
-      "name": "hg38 to white-tufted-ear marmoset (v1.2 2021 genbank) Chain (GCA_011100555.2)",
+      "name": "hg38 to white-tufted-ear marmoset (v1.2 2021 genbank) (GCA_011100555.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25569,7 +25585,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_011100615.1_chain",
-      "name": "hg38 to crab-eating macaque (2020 cy0333) Chain (GCA_011100615.1)",
+      "name": "hg38 to crab-eating macaque (2020 cy0333) (GCA_011100615.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25582,7 +25598,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_013030995.1_chain",
-      "name": "hg38 to swan goose (Tianfu 2020) Chain (GCA_013030995.1)",
+      "name": "hg38 to swan goose (Tianfu 2020) (GCA_013030995.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25595,7 +25611,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_013276365.2_chain",
-      "name": "hg38 to dog (Basenji UNSW-BAS-2019 2021) Chain (GCA_013276365.2)",
+      "name": "hg38 to dog (Basenji UNSW-BAS-2019 2021) (GCA_013276365.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25608,7 +25624,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_018506965.1_chain",
-      "name": "hg38 to human (NA24631.mat 2021) Chain (GCA_018506965.1)",
+      "name": "hg38 to human (NA24631.mat 2021) (GCA_018506965.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25621,7 +25637,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_018852615.2_chain",
-      "name": "hg38 to human (NA24385 HG002 pri mat 2023) Chain (GCA_018852615.2)",
+      "name": "hg38 to human (NA24385 HG002 pri mat 2023) (GCA_018852615.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25634,7 +25650,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_023856395.1_chain",
-      "name": "hg38 to Siberian hamster (SSSS 2022) Chain (GCA_023856395.1)",
+      "name": "hg38 to Siberian hamster (SSSS 2022) (GCA_023856395.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25647,7 +25663,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_024500485.1_chain",
-      "name": "hg38 to Tibetan sand fox (lyu1992 2022) Chain (GCA_024500485.1)",
+      "name": "hg38 to Tibetan sand fox (lyu1992 2022) (GCA_024500485.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25660,7 +25676,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_028583685.1_chain",
-      "name": "hg38 to sugar glider (PSGF00001 2023) Chain (GCA_028583685.1)",
+      "name": "hg38 to sugar glider (PSGF00001 2023) (GCA_028583685.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25673,7 +25689,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_030463245.1_chain",
-      "name": "hg38 to Corsac fox (zsh2022 2023) Chain (GCA_030463245.1)",
+      "name": "hg38 to Corsac fox (zsh2022 2023) (GCA_030463245.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25686,7 +25702,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031010295.1_chain",
-      "name": "hg38 to dog (Cairn Terrier CA611 2023) Chain (GCA_031010295.1)",
+      "name": "hg38 to dog (Cairn Terrier CA611 2023) (GCA_031010295.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25699,7 +25715,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031010635.1_chain",
-      "name": "hg38 to dog (Bernese Mountain Dog OD 2023) Chain (GCA_031010635.1)",
+      "name": "hg38 to dog (Bernese Mountain Dog OD 2023) (GCA_031010635.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25712,7 +25728,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031010765.1_chain",
-      "name": "hg38 to dog (Bernese Mountain Dog BD 2023) Chain (GCA_031010765.1)",
+      "name": "hg38 to dog (Bernese Mountain Dog BD 2023) (GCA_031010765.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25725,7 +25741,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031165255.1_chain",
-      "name": "hg38 to dog (Labrador retriever 2023) Chain (GCA_031165255.1)",
+      "name": "hg38 to dog (Labrador retriever 2023) (GCA_031165255.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25738,7 +25754,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_032313775.1_chain",
-      "name": "hg38 to gray fox (Vermont ataVT051 2023) Chain (GCA_032313775.1)",
+      "name": "hg38 to gray fox (Vermont ataVT051 2023) (GCA_032313775.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25751,7 +25767,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_034620425.1_chain",
-      "name": "hg38 to coyote (coyote_06102 2023) Chain (GCA_034620425.1)",
+      "name": "hg38 to coyote (coyote_06102 2023) (GCA_034620425.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25764,7 +25780,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_040955645.1_chain",
-      "name": "hg38 to African hunting dog (LycPic1hap1 2024) Chain (GCA_040955645.1)",
+      "name": "hg38 to African hunting dog (LycPic1hap1 2024) (GCA_040955645.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25777,7 +25793,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_040955705.1_chain",
-      "name": "hg38 to African hunting dog (LycPic1hap2 2024) Chain (GCA_040955705.1)",
+      "name": "hg38 to African hunting dog (LycPic1hap2 2024) (GCA_040955705.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25790,7 +25806,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_905319845.1_chain",
-      "name": "hg38 to gray wolf (alternate hap 2021) Chain (GCA_905319845.1)",
+      "name": "hg38 to gray wolf (alternate hap 2021) (GCA_905319845.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25803,7 +25819,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_905319855.2_chain",
-      "name": "hg38 to gray wolf (2021) Chain (GCA_905319855.2)",
+      "name": "hg38 to gray wolf (2021) (GCA_905319855.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25816,7 +25832,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_964106825.2_chain",
-      "name": "hg38 to red fox (hap1 2024) Chain (GCA_964106825.2)",
+      "name": "hg38 to red fox (hap1 2024) (GCA_964106825.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25829,7 +25845,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_964106925.2_chain",
-      "name": "hg38 to red fox (hap2 2024) Chain (GCA_964106925.2)",
+      "name": "hg38 to red fox (hap2 2024) (GCA_964106925.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25842,7 +25858,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000164845.4_chain",
-      "name": "hg38 to alpaca (v3.2 Carlotta AHFN-0088 2019 Deakin U) Chain (GCF_000164845.4)",
+      "name": "hg38 to alpaca (v3.2 Carlotta AHFN-0088 2019 Deakin U) (GCF_000164845.4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25855,7 +25871,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000349665.1_chain",
-      "name": "hg38 to golden hamster (Broad 2013 refseq) Chain (GCF_000349665.1)",
+      "name": "hg38 to golden hamster (Broad 2013 refseq) (GCF_000349665.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25868,7 +25884,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000767855.1_chain",
-      "name": "hg38 to Bactrian camel (Alxa 2014 refseq) Chain (GCF_000767855.1)",
+      "name": "hg38 to Bactrian camel (Alxa 2014 refseq) (GCF_000767855.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25881,7 +25897,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000955945.1_chain",
-      "name": "hg38 to sooty mangabey Chain (GCF_000955945.1)",
+      "name": "hg38 to sooty mangabey (GCF_000955945.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25894,7 +25910,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000956065.1_chain",
-      "name": "hg38 to pig-tailed macaque Chain (GCF_000956065.1)",
+      "name": "hg38 to pig-tailed macaque (GCF_000956065.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25907,7 +25923,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_001704415.1_chain",
-      "name": "hg38 to goat (v1 San Clemente 2016 USDA refseq) Chain (GCF_001704415.1)",
+      "name": "hg38 to goat (v1 San Clemente 2016 USDA refseq) (GCF_001704415.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25920,7 +25936,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_002263795.3_chain",
-      "name": "hg38 to cattle (Hereford L1 Dominette 01449 42190680 v2.0 2023 USDA) Chain (GCF_002263795.3)",
+      "name": "hg38 to cattle (Hereford L1 Dominette 01449 42190680 v2.0 2023 USDA) (GCF_002263795.3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25933,7 +25949,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_002742125.1_chain",
-      "name": "hg38 to Rambouillet sheep (Baylor 2017) Chain (GCF_002742125.1)",
+      "name": "hg38 to Rambouillet sheep (Baylor 2017) (GCF_002742125.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25946,7 +25962,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_003121395.1_chain",
-      "name": "hg38 to water buffalo (Mediterranean 2018) Chain (GCF_003121395.1)",
+      "name": "hg38 to water buffalo (Mediterranean 2018) (GCF_003121395.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25959,7 +25975,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_003254725.2_chain",
-      "name": "hg38 to dingo (Sandy 2020 James Cook U) Chain (GCF_003254725.2)",
+      "name": "hg38 to dingo (Sandy 2020 James Cook U) (GCF_003254725.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25972,7 +25988,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_004115215.2_chain",
-      "name": "hg38 to platypus (Pmale09 v4 2020) Chain (GCF_004115215.2)",
+      "name": "hg38 to platypus (Pmale09 v4 2020) (GCF_004115215.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25985,7 +26001,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_008728515.1_chain",
-      "name": "hg38 to olive baboon (2019 UCSF) Chain (GCF_008728515.1)",
+      "name": "hg38 to olive baboon (2019 UCSF) (GCF_008728515.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -25998,7 +26014,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_009762305.2_chain",
-      "name": "hg38 to California sea lion (v2 primary hap 2020) Chain (GCF_009762305.2)",
+      "name": "hg38 to California sea lion (v2 primary hap 2020) (GCF_009762305.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26011,7 +26027,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_009806435.1_chain",
-      "name": "hg38 to rabbit (New Zealand White DNA-2018 2021 refseq) Chain (GCF_009806435.1)",
+      "name": "hg38 to rabbit (New Zealand White DNA-2018 2021 refseq) (GCF_009806435.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26024,7 +26040,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_011100685.1_chain",
-      "name": "hg38 to dog (German shepard Mischka 2020) Chain (GCF_011100685.1)",
+      "name": "hg38 to dog (German shepard Mischka 2020) (GCF_011100685.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26037,7 +26053,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_012559485.2_chain",
-      "name": "hg38 to crab-eating macaque CE1976F Keio U/RIKEN 2021 Chain (GCF_012559485.2)",
+      "name": "hg38 to crab-eating macaque CE1976F Keio U/RIKEN 2021 (GCF_012559485.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26050,7 +26066,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_014441545.1_chain",
-      "name": "hg38 to dog (labrador SID07034 2020) Chain (GCF_014441545.1)",
+      "name": "hg38 to dog (labrador SID07034 2020) (GCF_014441545.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26063,7 +26079,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_016699485.2_chain",
-      "name": "hg38 to chicken white leghorn layer X broiler (v2 broiler haplotype 2021 2021) Chain (GCF_016699485.2)",
+      "name": "hg38 to chicken white leghorn layer X broiler (v2 broiler haplotype 2021 2021) (GCF_016699485.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26076,7 +26092,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_016772045.2_chain",
-      "name": "hg38 to sheep (OAR_USU_Benz2616 2023) Chain (GCF_016772045.2)",
+      "name": "hg38 to sheep (OAR_USU_Benz2616 2023) (GCF_016772045.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26089,7 +26105,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_018345385.1_chain",
-      "name": "hg38 to Arctic fox (Blue_001 2021 refseq) Chain (GCF_018345385.1)",
+      "name": "hg38 to Arctic fox (Blue_001 2021 refseq) (GCF_018345385.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26102,7 +26118,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_018350175.1_chain",
-      "name": "hg38 to domestic cat (Fca126 2021 Texas A&M U) Chain (GCF_018350175.1)",
+      "name": "hg38 to domestic cat (Fca126 2021 Texas A&M U) (GCF_018350175.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26115,7 +26131,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_019923935.1_chain",
-      "name": "hg38 to water buffalo (Murrah 2021) Chain (GCF_019923935.1)",
+      "name": "hg38 to water buffalo (Murrah 2021) (GCF_019923935.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26128,7 +26144,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_030867095.1_chain",
-      "name": "hg38 to American alligator (2023 refseq) Chain (GCF_030867095.1)",
+      "name": "hg38 to American alligator (2023 refseq) (GCF_030867095.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26141,7 +26157,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_905146905.1_chain",
-      "name": "hg38 to raccoon dog (2021) Chain (GCF_905146905.1)",
+      "name": "hg38 to raccoon dog (2021) (GCF_905146905.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26154,7 +26170,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_910594005.1_chain",
-      "name": "hg38 to red deer (2021) Chain (GCF_910594005.1)",
+      "name": "hg38 to red deer (2021) (GCF_910594005.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26167,7 +26183,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_950295315.1_chain",
-      "name": "hg38 to western European hedgehog (primary hap 2023 refseq) Chain (GCF_950295315.1)",
+      "name": "hg38 to western European hedgehog (primary hap 2023 refseq) (GCF_950295315.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26180,7 +26196,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_gadMor1_chain",
-      "name": "hg38 to gadMor1 Chain",
+      "name": "hg38 to Atlantic cod (gadMor1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26193,7 +26209,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_galGal4_chain",
-      "name": "hg38 to galGal4 Chain",
+      "name": "hg38 to Chicken (galGal4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26206,7 +26222,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_galGal5_chain",
-      "name": "hg38 to galGal5 Chain",
+      "name": "hg38 to Chicken (galGal5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26219,7 +26235,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_galGal6_chain",
-      "name": "hg38 to galGal6 Chain",
+      "name": "hg38 to Chicken (galGal6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26232,7 +26248,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_galVar1_chain",
-      "name": "hg38 to galVar1 Chain",
+      "name": "hg38 to Malayan flying lemur (galVar1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26245,7 +26261,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_gasAcu1_chain",
-      "name": "hg38 to gasAcu1 Chain",
+      "name": "hg38 to Stickleback (gasAcu1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26258,7 +26274,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_geoFor1_chain",
-      "name": "hg38 to geoFor1 Chain",
+      "name": "hg38 to Medium ground finch (geoFor1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26271,7 +26287,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_gorGor3_chain",
-      "name": "hg38 to gorGor3 Chain",
+      "name": "hg38 to Gorilla (gorGor3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26284,7 +26300,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_gorGor4_chain",
-      "name": "hg38 to gorGor4 Chain",
+      "name": "hg38 to Gorilla (gorGor4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26297,7 +26313,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_gorGor5_chain",
-      "name": "hg38 to gorGor5 Chain",
+      "name": "hg38 to Gorilla (gorGor5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26310,7 +26326,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_hapBur1_chain",
-      "name": "hg38 to hapBur1 Chain",
+      "name": "hg38 to hapBur1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26323,7 +26339,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_hetGla2_chain",
-      "name": "hg38 to hetGla2 Chain",
+      "name": "hg38 to Naked mole-rat (hetGla2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26336,7 +26352,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_hg19_chain",
-      "name": "hg38 to hg19 Chain",
+      "name": "hg38 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26349,7 +26365,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_hs1_chain",
-      "name": "hg38 to hs1 Chain",
+      "name": "hg38 to Human (hs1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26362,7 +26378,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_jacJac1_chain",
-      "name": "hg38 to jacJac1 Chain",
+      "name": "hg38 to jacJac1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26375,7 +26391,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_latCha1_chain",
-      "name": "hg38 to latCha1 Chain",
+      "name": "hg38 to Coelacanth (latCha1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26388,7 +26404,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_lepOcu1_chain",
-      "name": "hg38 to lepOcu1 Chain",
+      "name": "hg38 to lepOcu1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26401,7 +26417,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_lepWed1_chain",
-      "name": "hg38 to lepWed1 Chain",
+      "name": "hg38 to lepWed1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26414,7 +26430,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_loxAfr3_chain",
-      "name": "hg38 to loxAfr3 Chain",
+      "name": "hg38 to Elephant (loxAfr3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26427,7 +26443,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_macEug2_chain",
-      "name": "hg38 to macEug2 Chain",
+      "name": "hg38 to Wallaby (macEug2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26440,7 +26456,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_macFas5_chain",
-      "name": "hg38 to macFas5 Chain",
+      "name": "hg38 to Crab-eating macaque (macFas5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26453,7 +26469,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_macNem1_chain",
-      "name": "hg38 to macNem1 Chain",
+      "name": "hg38 to macNem1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26466,7 +26482,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_manLeu1_chain",
-      "name": "hg38 to manLeu1 Chain",
+      "name": "hg38 to manLeu1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26479,7 +26495,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_manPen1_chain",
-      "name": "hg38 to manPen1 Chain",
+      "name": "hg38 to Chinese pangolin (manPen1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26492,7 +26508,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_mayZeb1_chain",
-      "name": "hg38 to mayZeb1 Chain",
+      "name": "hg38 to mayZeb1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26505,7 +26521,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_melGal1_chain",
-      "name": "hg38 to melGal1 Chain",
+      "name": "hg38 to Turkey (melGal1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26518,7 +26534,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_melGal5_chain",
-      "name": "hg38 to melGal5 Chain",
+      "name": "hg38 to Turkey (melGal5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26531,7 +26547,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_melUnd1_chain",
-      "name": "hg38 to melUnd1 Chain",
+      "name": "hg38 to Budgerigar (melUnd1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26544,7 +26560,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_mesAur1_chain",
-      "name": "hg38 to mesAur1 Chain",
+      "name": "hg38 to mesAur1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26557,7 +26573,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_micMur1_chain",
-      "name": "hg38 to micMur1 Chain",
+      "name": "hg38 to Mouse lemur (micMur1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26570,7 +26586,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_micMur2_chain",
-      "name": "hg38 to micMur2 Chain",
+      "name": "hg38 to Mouse lemur (micMur2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26583,7 +26599,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_micMur3_chain",
-      "name": "hg38 to micMur3 Chain",
+      "name": "hg38 to micMur3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26596,7 +26612,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_micOch1_chain",
-      "name": "hg38 to micOch1 Chain",
+      "name": "hg38 to micOch1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26609,7 +26625,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_mm10_chain",
-      "name": "hg38 to mm10 Chain",
+      "name": "hg38 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26622,7 +26638,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_mm39_chain",
-      "name": "hg38 to mm39 Chain",
+      "name": "hg38 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26635,7 +26651,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_monDom5_chain",
-      "name": "hg38 to monDom5 Chain",
+      "name": "hg38 to Opossum (monDom5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26648,7 +26664,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_musFur1_chain",
-      "name": "hg38 to musFur1 Chain",
+      "name": "hg38 to Ferret  (musFur1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26661,7 +26677,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_myoDav1_chain",
-      "name": "hg38 to myoDav1 Chain",
+      "name": "hg38 to myoDav1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26674,7 +26690,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_myoLuc2_chain",
-      "name": "hg38 to myoLuc2 Chain",
+      "name": "hg38 to myoLuc2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26687,7 +26703,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_nasLar1_chain",
-      "name": "hg38 to nasLar1 Chain",
+      "name": "hg38 to Proboscis monkey (nasLar1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26700,7 +26716,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_neoBri1_chain",
-      "name": "hg38 to neoBri1 Chain",
+      "name": "hg38 to neoBri1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26713,7 +26729,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_neoSch1_chain",
-      "name": "hg38 to neoSch1 Chain",
+      "name": "hg38 to Hawaiian monk seal (neoSch1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26726,7 +26742,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_nomLeu3_chain",
-      "name": "hg38 to nomLeu3 Chain",
+      "name": "hg38 to Gibbon (nomLeu3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26739,7 +26755,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ochPri3_chain",
-      "name": "hg38 to ochPri3 Chain",
+      "name": "hg38 to Pika (ochPri3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26752,7 +26768,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_octDeg1_chain",
-      "name": "hg38 to octDeg1 Chain",
+      "name": "hg38 to octDeg1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26765,7 +26781,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_odoRosDiv1_chain",
-      "name": "hg38 to odoRosDiv1 Chain",
+      "name": "hg38 to odoRosDiv1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26778,7 +26794,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_orcOrc1_chain",
-      "name": "hg38 to orcOrc1 Chain",
+      "name": "hg38 to orcOrc1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26791,7 +26807,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_oreNil2_chain",
-      "name": "hg38 to oreNil2 Chain",
+      "name": "hg38 to Nile tilapia (oreNil2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26804,7 +26820,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_oreNil3_chain",
-      "name": "hg38 to oreNil3 Chain",
+      "name": "hg38 to oreNil3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26817,7 +26833,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ornAna1_chain",
-      "name": "hg38 to ornAna1 Chain",
+      "name": "hg38 to Platypus (ornAna1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26830,7 +26846,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ornAna2_chain",
-      "name": "hg38 to ornAna2 Chain",
+      "name": "hg38 to Platypus (ornAna2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26843,7 +26859,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_oryAfe1_chain",
-      "name": "hg38 to oryAfe1 Chain",
+      "name": "hg38 to oryAfe1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26856,7 +26872,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_oryCun2_chain",
-      "name": "hg38 to oryCun2 Chain",
+      "name": "hg38 to Rabbit (oryCun2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26869,7 +26885,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_oryLat2_chain",
-      "name": "hg38 to oryLat2 Chain",
+      "name": "hg38 to Medaka (oryLat2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26882,7 +26898,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_otoGar3_chain",
-      "name": "hg38 to otoGar3 Chain",
+      "name": "hg38 to Bushbaby (otoGar3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26895,7 +26911,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_oviAri3_chain",
-      "name": "hg38 to oviAri3 Chain",
+      "name": "hg38 to Sheep (oviAri3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26908,7 +26924,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_oviAri4_chain",
-      "name": "hg38 to oviAri4 Chain",
+      "name": "hg38 to Sheep (oviAri4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26921,7 +26937,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panHod1_chain",
-      "name": "hg38 to panHod1 Chain",
+      "name": "hg38 to panHod1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26934,7 +26950,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panPan1_chain",
-      "name": "hg38 to panPan1 Chain",
+      "name": "hg38 to Bonobo (panPan1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26947,7 +26963,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panPan2_chain",
-      "name": "hg38 to panPan2 Chain",
+      "name": "hg38 to Bonobo (panPan2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26960,7 +26976,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panPan3_chain",
-      "name": "hg38 to panPan3 Chain",
+      "name": "hg38 to Bonobo (panPan3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26973,7 +26989,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panTro3_chain",
-      "name": "hg38 to panTro3 Chain",
+      "name": "hg38 to Chimp (panTro3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26986,7 +27002,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panTro4_chain",
-      "name": "hg38 to panTro4 Chain",
+      "name": "hg38 to Chimp (panTro4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -26999,7 +27015,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panTro5_chain",
-      "name": "hg38 to panTro5 Chain",
+      "name": "hg38 to Chimp (panTro5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27012,7 +27028,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_panTro6_chain",
-      "name": "hg38 to panTro6 Chain",
+      "name": "hg38 to Chimp (panTro6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27025,7 +27041,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_papAnu2_chain",
-      "name": "hg38 to papAnu2 Chain",
+      "name": "hg38 to Baboon (papAnu2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27038,7 +27054,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_papAnu3_chain",
-      "name": "hg38 to papAnu3 Chain",
+      "name": "hg38 to papAnu3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27051,7 +27067,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_papAnu4_chain",
-      "name": "hg38 to papAnu4 Chain",
+      "name": "hg38 to Baboon (papAnu4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27064,7 +27080,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_pelSin1_chain",
-      "name": "hg38 to pelSin1 Chain",
+      "name": "hg38 to pelSin1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27077,7 +27093,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_petMar2_chain",
-      "name": "hg38 to petMar2 Chain",
+      "name": "hg38 to Lamprey (petMar2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27090,7 +27106,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_petMar3_chain",
-      "name": "hg38 to petMar3 Chain",
+      "name": "hg38 to Lamprey (petMar3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27103,7 +27119,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ponAbe2_chain",
-      "name": "hg38 to ponAbe2 Chain",
+      "name": "hg38 to Orangutan (ponAbe2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27116,7 +27132,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_ponAbe3_chain",
-      "name": "hg38 to ponAbe3 Chain",
+      "name": "hg38 to Orangutan (ponAbe3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27129,7 +27145,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_proCoq1_chain",
-      "name": "hg38 to proCoq1 Chain",
+      "name": "hg38 to proCoq1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27142,7 +27158,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_pseHum1_chain",
-      "name": "hg38 to pseHum1 Chain",
+      "name": "hg38 to pseHum1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27155,7 +27171,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_pteAle1_chain",
-      "name": "hg38 to pteAle1 Chain",
+      "name": "hg38 to pteAle1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27168,7 +27184,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_pteVam1_chain",
-      "name": "hg38 to pteVam1 Chain",
+      "name": "hg38 to Megabat (pteVam1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27181,7 +27197,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_punNye1_chain",
-      "name": "hg38 to punNye1 Chain",
+      "name": "hg38 to punNye1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27194,7 +27210,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rheMac2_chain",
-      "name": "hg38 to rheMac2 Chain",
+      "name": "hg38 to Rhesus (rheMac2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27207,7 +27223,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rheMac3_chain",
-      "name": "hg38 to rheMac3 Chain",
+      "name": "hg38 to Rhesus (rheMac3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27220,7 +27236,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rheMac8_chain",
-      "name": "hg38 to rheMac8 Chain",
+      "name": "hg38 to Rhesus (rheMac8) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27233,7 +27249,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rheMac10_chain",
-      "name": "hg38 to rheMac10 Chain",
+      "name": "hg38 to Rhesus (rheMac10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27246,7 +27262,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rhiBie1_chain",
-      "name": "hg38 to rhiBie1 Chain",
+      "name": "hg38 to rhiBie1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27259,7 +27275,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rhiRox1_chain",
-      "name": "hg38 to rhiRox1 Chain",
+      "name": "hg38 to Golden snub-nosed monkey (rhiRox1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27272,7 +27288,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rn4_chain",
-      "name": "hg38 to rn4 Chain",
+      "name": "hg38 to Rat (rn4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27285,7 +27301,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rn5_chain",
-      "name": "hg38 to rn5 Chain",
+      "name": "hg38 to Rat (rn5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27298,7 +27314,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rn6_chain",
-      "name": "hg38 to rn6 Chain",
+      "name": "hg38 to Rat (rn6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27311,7 +27327,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_rn7_chain",
-      "name": "hg38 to rn7 Chain",
+      "name": "hg38 to Rat (rn7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27324,7 +27340,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_saiBol1_chain",
-      "name": "hg38 to saiBol1 Chain",
+      "name": "hg38 to Squirrel monkey (saiBol1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27337,7 +27353,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_sarHar1_chain",
-      "name": "hg38 to sarHar1 Chain",
+      "name": "hg38 to Tasmanian devil (sarHar1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27350,7 +27366,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_sorAra2_chain",
-      "name": "hg38 to sorAra2 Chain",
+      "name": "hg38 to Shrew (sorAra2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27363,7 +27379,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_speTri2_chain",
-      "name": "hg38 to speTri2 Chain",
+      "name": "hg38 to Squirrel (speTri2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27376,7 +27392,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_susScr3_chain",
-      "name": "hg38 to susScr3 Chain",
+      "name": "hg38 to Pig (susScr3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27389,7 +27405,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_susScr11_chain",
-      "name": "hg38 to susScr11 Chain",
+      "name": "hg38 to Pig (susScr11) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27402,7 +27418,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_taeGut2_chain",
-      "name": "hg38 to taeGut2 Chain",
+      "name": "hg38 to Zebra finch (taeGut2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27415,7 +27431,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_takFla1_chain",
-      "name": "hg38 to takFla1 Chain",
+      "name": "hg38 to takFla1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27428,7 +27444,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_tarSyr2_chain",
-      "name": "hg38 to tarSyr2 Chain",
+      "name": "hg38 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27441,7 +27457,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_tetNig2_chain",
-      "name": "hg38 to tetNig2 Chain",
+      "name": "hg38 to Tetraodon (tetNig2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27454,7 +27470,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_thaSir1_chain",
-      "name": "hg38 to thaSir1 Chain",
+      "name": "hg38 to Garter snake (thaSir1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27467,7 +27483,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_triMan1_chain",
-      "name": "hg38 to triMan1 Chain",
+      "name": "hg38 to Manatee (triMan1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27480,7 +27496,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_tupBel1_chain",
-      "name": "hg38 to tupBel1 Chain",
+      "name": "hg38 to Tree shrew (tupBel1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27493,7 +27509,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_tupChi1_chain",
-      "name": "hg38 to tupChi1 Chain",
+      "name": "hg38 to tupChi1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27506,7 +27522,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_turTru2_chain",
-      "name": "hg38 to turTru2 Chain",
+      "name": "hg38 to Dolphin (turTru2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27519,7 +27535,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_vicPac2_chain",
-      "name": "hg38 to vicPac2 Chain",
+      "name": "hg38 to Alpaca (vicPac2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27532,7 +27548,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_xenLae2_chain",
-      "name": "hg38 to xenLae2 Chain",
+      "name": "hg38 to African clawed frog (xenLae2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27545,7 +27561,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_xenTro7_chain",
-      "name": "hg38 to xenTro7 Chain",
+      "name": "hg38 to X. tropicalis (xenTro7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27558,7 +27574,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_xenTro9_chain",
-      "name": "hg38 to xenTro9 Chain",
+      "name": "hg38 to X. tropicalis (xenTro9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27571,7 +27587,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_xenTro10_chain",
-      "name": "hg38 to xenTro10 Chain",
+      "name": "hg38 to X. tropicalis (xenTro10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27584,7 +27600,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_xipMac1_chain",
-      "name": "hg38 to xipMac1 Chain",
+      "name": "hg38 to xipMac1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -27597,7 +27613,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_zonAlb1_chain",
-      "name": "hg38 to zonAlb1 Chain",
+      "name": "hg38 to zonAlb1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38"],
       "adapter": {

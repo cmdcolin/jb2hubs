@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "criGriChoV1",
+      "displayName": "Chinese hamster (criGriChoV1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "criGriChoV1-refseq",
+        "metadata": {
+          "description": "Aug. 2011 (CHO K1 cell line/criGriChoV1)",
+          "nibPath": "/gbdb/criGriChoV1",
+          "organism": "Chinese hamster",
+          "defaultPos": "NW_003613923v1:714339-726966",
+          "active": 1,
+          "orderKey": 3349,
+          "genome": "Chinese hamster",
+          "scientificName": "Cricetulus griseus",
+          "htmlPath": "/gbdb/criGriChoV1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Beijing Genomics Institute",
+          "taxId": 10029
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV1/bigZips/criGriChoV1.2bit",
@@ -1132,7 +1148,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "criGriChoV1_to_criGri1_chain",
-      "name": "criGriChoV1 to criGri1 Chain",
+      "name": "criGriChoV1 to Chinese hamster (criGri1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["criGriChoV1"],
       "adapter": {
@@ -1145,7 +1161,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "criGriChoV1_to_criGriChoV2_chain",
-      "name": "criGriChoV1 to criGriChoV2 Chain",
+      "name": "criGriChoV1 to Chinese hamster (criGriChoV2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["criGriChoV1"],
       "adapter": {
@@ -1158,7 +1174,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "criGriChoV1_to_hg38_chain",
-      "name": "criGriChoV1 to hg38 Chain",
+      "name": "criGriChoV1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["criGriChoV1"],
       "adapter": {
@@ -1171,7 +1187,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "criGriChoV1_to_mm10_chain",
-      "name": "criGriChoV1 to mm10 Chain",
+      "name": "criGriChoV1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["criGriChoV1"],
       "adapter": {

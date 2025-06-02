@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "strPur2",
+      "displayName": "S. purpuratus (strPur2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "strPur2-refseq",
+        "metadata": {
+          "description": "Sep. 2006 (Baylor 2.1/strPur2)",
+          "nibPath": "/gbdb/strPur2",
+          "organism": "S. purpuratus",
+          "defaultPos": "Scaffold1",
+          "active": 1,
+          "orderKey": 19039,
+          "genome": "S. purpuratus",
+          "scientificName": "Strongylocentrotus purpuratus",
+          "htmlPath": "/gbdb/strPur2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Baylor release 3 Spur 2.1",
+          "taxId": 7668
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/bigZips/strPur2.2bit",
@@ -1050,7 +1066,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "strPur2_to_ci2_chain",
-      "name": "strPur2 to ci2 Chain",
+      "name": "strPur2 to C. intestinalis (ci2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["strPur2"],
       "adapter": {
@@ -1063,7 +1079,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "strPur2_to_hg18_chain",
-      "name": "strPur2 to hg18 Chain",
+      "name": "strPur2 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["strPur2"],
       "adapter": {
@@ -1076,7 +1092,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "strPur2_to_strPur1_chain",
-      "name": "strPur2 to strPur1 Chain",
+      "name": "strPur2 to S. purpuratus (strPur1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["strPur2"],
       "adapter": {

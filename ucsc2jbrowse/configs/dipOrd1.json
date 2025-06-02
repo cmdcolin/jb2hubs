@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "dipOrd1",
+      "displayName": "Kangaroo rat (dipOrd1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "dipOrd1-refseq",
+        "metadata": {
+          "description": "Jul. 2008 (Broad/dipOrd1)",
+          "nibPath": "/gbdb/dipOrd1",
+          "organism": "Kangaroo rat",
+          "defaultPos": "scaffold_7358:2192-33995",
+          "active": 1,
+          "orderKey": 11010,
+          "genome": "Kangaroo rat",
+          "scientificName": "Dipodomys ordii",
+          "htmlPath": "/gbdb/dipOrd1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute dipOrd1 (NCBI project 20385, ABRO01000000)",
+          "taxId": 10020
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dipOrd1/bigZips/dipOrd1.2bit",
@@ -1523,7 +1539,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dipOrd1_to_mm10_chain",
-      "name": "dipOrd1 to mm10 Chain",
+      "name": "dipOrd1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dipOrd1"],
       "adapter": {

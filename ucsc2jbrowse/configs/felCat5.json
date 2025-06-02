@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "felCat5",
+      "displayName": "Cat (felCat5)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "felCat5-refseq",
+        "metadata": {
+          "description": "Sep. 2011 (ICGSC Felis_catus 6.2/felCat5)",
+          "nibPath": "/gbdb/felCat5",
+          "organism": "Cat",
+          "defaultPos": "chrA2:53225502-53231571",
+          "active": 1,
+          "orderKey": 3241,
+          "genome": "Cat",
+          "scientificName": "Felis catus",
+          "htmlPath": "/gbdb/felCat5/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "International Cat Genome Sequencing Consortium Felis_catus-6.2 (NCBI project 16726, accession AANG00000000.2, GCA_000181335.2)",
+          "taxId": 9685
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat5/bigZips/felCat5.2bit",
@@ -821,7 +837,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat5_to_felCat4_chain",
-      "name": "felCat5 to felCat4 Chain",
+      "name": "felCat5 to Cat (felCat4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat5"],
       "adapter": {
@@ -834,7 +850,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat5_to_felCat8_chain",
-      "name": "felCat5 to felCat8 Chain",
+      "name": "felCat5 to Cat (felCat8) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat5"],
       "adapter": {
@@ -847,7 +863,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat5_to_felCat9_chain",
-      "name": "felCat5 to felCat9 Chain",
+      "name": "felCat5 to Cat (felCat9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat5"],
       "adapter": {
@@ -860,7 +876,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat5_to_hg19_chain",
-      "name": "felCat5 to hg19 Chain",
+      "name": "felCat5 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat5"],
       "adapter": {
@@ -873,7 +889,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat5_to_mm10_chain",
-      "name": "felCat5 to mm10 Chain",
+      "name": "felCat5 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat5"],
       "adapter": {

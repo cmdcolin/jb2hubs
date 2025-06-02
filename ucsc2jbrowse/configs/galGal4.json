@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "galGal4",
+      "displayName": "Chicken (galGal4)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "galGal4-refseq",
+        "metadata": {
+          "description": "Nov. 2011 (ICGSC Gallus_gallus-4.0/galGal4)",
+          "nibPath": "/gbdb/galGal4",
+          "organism": "Chicken",
+          "defaultPos": "chr1:51849854-51853553",
+          "active": 1,
+          "orderKey": 3315,
+          "genome": "Chicken",
+          "scientificName": "Gallus gallus",
+          "htmlPath": "/gbdb/galGal4/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "ICGSC Gallus_gallus-4.0 (GCA_000002315.2)",
+          "taxId": 9031
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/galGal4/bigZips/galGal4.2bit",
@@ -1014,7 +1030,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_galGal3_chain",
-      "name": "galGal4 to galGal3 Chain",
+      "name": "galGal4 to Chicken (galGal3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1027,7 +1043,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_galGal5_chain",
-      "name": "galGal4 to galGal5 Chain",
+      "name": "galGal4 to Chicken (galGal5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1040,7 +1056,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_galGal6_chain",
-      "name": "galGal4 to galGal6 Chain",
+      "name": "galGal4 to Chicken (galGal6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1053,7 +1069,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_geoFor1_chain",
-      "name": "galGal4 to geoFor1 Chain",
+      "name": "galGal4 to Medium ground finch (geoFor1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1066,7 +1082,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_hg19_chain",
-      "name": "galGal4 to hg19 Chain",
+      "name": "galGal4 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1079,7 +1095,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_hg38_chain",
-      "name": "galGal4 to hg38 Chain",
+      "name": "galGal4 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1092,7 +1108,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_mm10_chain",
-      "name": "galGal4 to mm10 Chain",
+      "name": "galGal4 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1105,7 +1121,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_petMar2_chain",
-      "name": "galGal4 to petMar2 Chain",
+      "name": "galGal4 to Lamprey (petMar2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {
@@ -1118,7 +1134,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal4_to_taeGut2_chain",
-      "name": "galGal4 to taeGut2 Chain",
+      "name": "galGal4 to Zebra finch (taeGut2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal4"],
       "adapter": {

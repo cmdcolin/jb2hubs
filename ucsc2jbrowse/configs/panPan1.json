@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "panPan1",
+      "displayName": "Bonobo (panPan1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "panPan1-refseq",
+        "metadata": {
+          "description": "May 2012 (Max-Planck/panPan1)",
+          "nibPath": "/gbdb/panPan1",
+          "organism": "Bonobo",
+          "defaultPos": "JH649943:63,405-124,886",
+          "active": 1,
+          "orderKey": 2625,
+          "genome": "Bonobo",
+          "scientificName": "Pan paniscus",
+          "htmlPath": "/gbdb/panPan1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Max-Planck Institute panpan1 (GCA_000258655.1)",
+          "taxId": 9597
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/bigZips/panPan1.2bit",
@@ -1000,7 +1016,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panPan1_to_hg18_chain",
-      "name": "panPan1 to hg18 Chain",
+      "name": "panPan1 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panPan1"],
       "adapter": {
@@ -1013,7 +1029,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panPan1_to_hg38_chain",
-      "name": "panPan1 to hg38 Chain",
+      "name": "panPan1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panPan1"],
       "adapter": {
@@ -1026,7 +1042,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panPan1_to_panPan2_chain",
-      "name": "panPan1 to panPan2 Chain",
+      "name": "panPan1 to Bonobo (panPan2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panPan1"],
       "adapter": {
@@ -1039,7 +1055,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panPan1_to_panPan3_chain",
-      "name": "panPan1 to panPan3 Chain",
+      "name": "panPan1 to Bonobo (panPan3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panPan1"],
       "adapter": {
@@ -1052,7 +1068,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panPan1_to_tarSyr2_chain",
-      "name": "panPan1 to tarSyr2 Chain",
+      "name": "panPan1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panPan1"],
       "adapter": {

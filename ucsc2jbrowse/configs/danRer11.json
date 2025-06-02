@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "danRer11",
+      "displayName": "Zebrafish (danRer11)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "danRer11-refseq",
+        "metadata": {
+          "description": "May 2017 (GRCz11/danRer11)",
+          "nibPath": "/gbdb/danRer11",
+          "organism": "Zebrafish",
+          "defaultPos": "chr6:43426669-43433274",
+          "active": 1,
+          "orderKey": 26172,
+          "genome": "Zebrafish",
+          "scientificName": "Danio rerio",
+          "htmlPath": "/gbdb/danRer11/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Genome Reference Consortium Zebrafish Build 11 (GCA_000002035.4)",
+          "taxId": 7955
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer11/bigZips/danRer11.2bit",
@@ -2151,7 +2167,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer11_to_danRer7_chain",
-      "name": "danRer11 to danRer7 Chain",
+      "name": "danRer11 to Zebrafish (danRer7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer11"],
       "adapter": {
@@ -2164,7 +2180,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer11_to_danRer10_chain",
-      "name": "danRer11 to danRer10 Chain",
+      "name": "danRer11 to Zebrafish (danRer10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer11"],
       "adapter": {
@@ -2177,7 +2193,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer11_to_hg38_chain",
-      "name": "danRer11 to hg38 Chain",
+      "name": "danRer11 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer11"],
       "adapter": {
@@ -2190,7 +2206,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer11_to_mm10_chain",
-      "name": "danRer11 to mm10 Chain",
+      "name": "danRer11 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer11"],
       "adapter": {
@@ -2203,7 +2219,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer11_to_mm39_chain",
-      "name": "danRer11 to mm39 Chain",
+      "name": "danRer11 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer11"],
       "adapter": {

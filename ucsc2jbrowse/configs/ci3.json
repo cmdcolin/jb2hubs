@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "ci3",
+      "displayName": "C. intestinalis (ci3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "ci3-refseq",
+        "metadata": {
+          "description": "Apr. 2011 (Kyoto KH/ci3)",
+          "nibPath": "/gbdb/ci3",
+          "organism": "C. intestinalis",
+          "defaultPos": "chr1:5020502-5030501",
+          "active": 1,
+          "orderKey": 3044,
+          "genome": "C. intestinalis",
+          "scientificName": "Ciona intestinalis",
+          "htmlPath": "/gbdb/ci3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Kyoto KH",
+          "taxId": 7719
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci3/bigZips/ci3.2bit",
@@ -1503,7 +1519,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ci3_to_ce11_chain",
-      "name": "ci3 to ce11 Chain",
+      "name": "ci3 to C. elegans (ce11) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ci3"],
       "adapter": {
@@ -1516,7 +1532,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ci3_to_ci2_chain",
-      "name": "ci3 to ci2 Chain",
+      "name": "ci3 to C. intestinalis (ci2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ci3"],
       "adapter": {
@@ -1529,7 +1545,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ci3_to_cioSav2_chain",
-      "name": "ci3 to cioSav2 Chain",
+      "name": "ci3 to cioSav2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ci3"],
       "adapter": {
@@ -1542,7 +1558,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ci3_to_strPur2_chain",
-      "name": "ci3 to strPur2 Chain",
+      "name": "ci3 to S. purpuratus (strPur2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ci3"],
       "adapter": {

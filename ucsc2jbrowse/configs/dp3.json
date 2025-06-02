@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "dp3",
+      "displayName": "D. pseudoobscura (dp3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "dp3-refseq",
+        "metadata": {
+          "description": "Nov. 2004 (FlyBase 1.03/dp3)",
+          "nibPath": "/gbdb/dp3",
+          "organism": "D. pseudoobscura",
+          "defaultPos": "chr4_group3:5603001-5614000",
+          "active": 1,
+          "orderKey": 4094,
+          "genome": "D. pseudoobscura",
+          "scientificName": "Drosophila pseudoobscura",
+          "htmlPath": "/gbdb/dp3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "FlyBase Release 1.03",
+          "taxId": 7237
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/bigZips/dp3.2bit",
@@ -1089,7 +1105,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dp3_to_dm2_chain",
-      "name": "dp3 to dm2 Chain",
+      "name": "dp3 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dp3"],
       "adapter": {
@@ -1102,7 +1118,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dp3_to_dm3_chain",
-      "name": "dp3 to dm3 Chain",
+      "name": "dp3 to D. melanogaster (dm3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dp3"],
       "adapter": {
@@ -1115,7 +1131,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dp3_to_dm6_chain",
-      "name": "dp3 to dm6 Chain",
+      "name": "dp3 to D. melanogaster (dm6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dp3"],
       "adapter": {
@@ -1128,7 +1144,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dp3_to_dp4_chain",
-      "name": "dp3 to dp4 Chain",
+      "name": "dp3 to dp4 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dp3"],
       "adapter": {
@@ -1141,7 +1157,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dp3_to_droPer1_chain",
-      "name": "dp3 to droPer1 Chain",
+      "name": "dp3 to D. persimilis (droPer1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dp3"],
       "adapter": {

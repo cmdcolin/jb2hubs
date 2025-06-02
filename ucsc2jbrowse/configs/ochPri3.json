@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "ochPri3",
+      "displayName": "Pika (ochPri3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "ochPri3-refseq",
+        "metadata": {
+          "description": "May 2012 (OchPri3.0/ochPri3)",
+          "nibPath": "/gbdb/ochPri3",
+          "organism": "Pika",
+          "defaultPos": "JH802138:776400-918286",
+          "active": 1,
+          "orderKey": 16324,
+          "genome": "Pika",
+          "scientificName": "Ochotona princeps",
+          "htmlPath": "/gbdb/ochPri3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute",
+          "taxId": 9978
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri3/bigZips/ochPri3.2bit",
@@ -1738,7 +1754,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ochPri3_to_hg19_chain",
-      "name": "ochPri3 to hg19 Chain",
+      "name": "ochPri3 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ochPri3"],
       "adapter": {
@@ -1751,7 +1767,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ochPri3_to_hg38_chain",
-      "name": "ochPri3 to hg38 Chain",
+      "name": "ochPri3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ochPri3"],
       "adapter": {
@@ -1764,7 +1780,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "ochPri3_to_mm39_chain",
-      "name": "ochPri3 to mm39 Chain",
+      "name": "ochPri3 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["ochPri3"],
       "adapter": {

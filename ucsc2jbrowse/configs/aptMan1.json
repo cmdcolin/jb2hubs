@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "aptMan1",
+      "displayName": "Brown kiwi (aptMan1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "aptMan1-refseq",
+        "metadata": {
+          "description": "Jun. 2015 (MPI-EVA AptMant0/aptMan1)",
+          "nibPath": "/gbdb/aptMan1",
+          "organism": "Brown kiwi",
+          "defaultPos": "NW_013995860v1:31591035-31601034",
+          "active": 1,
+          "orderKey": 2715,
+          "genome": "Brown kiwi",
+          "scientificName": "Apteryx australis",
+          "htmlPath": "/gbdb/aptMan1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Max-Plank Institute for Evolutionary Anthropology AptMant0",
+          "taxId": 202946
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aptMan1/bigZips/aptMan1.2bit",
@@ -1469,7 +1485,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "aptMan1_to_hg38_chain",
-      "name": "aptMan1 to hg38 Chain",
+      "name": "aptMan1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["aptMan1"],
       "adapter": {

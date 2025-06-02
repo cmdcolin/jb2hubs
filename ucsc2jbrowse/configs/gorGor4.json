@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "gorGor4",
+      "displayName": "Gorilla (gorGor4)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "gorGor4-refseq",
+        "metadata": {
+          "description": "Dec 2014 (gorGor4.1/gorGor4)",
+          "nibPath": "/gbdb/gorGor4",
+          "organism": "Gorilla",
+          "defaultPos": "chr5:6996937-7026323",
+          "active": 1,
+          "orderKey": 7682,
+          "genome": "Gorilla",
+          "scientificName": "Gorilla gorilla gorilla",
+          "htmlPath": "/gbdb/gorGor4/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Wellcome Trust Sanger Institute Dec 2014 (NCBI project 31265, GCA_000151905.1)",
+          "taxId": 9595
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor4/bigZips/gorGor4.2bit",
@@ -919,7 +935,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gorGor4_to_gorGor3_chain",
-      "name": "gorGor4 to gorGor3 Chain",
+      "name": "gorGor4 to Gorilla (gorGor3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gorGor4"],
       "adapter": {
@@ -932,7 +948,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gorGor4_to_gorGor5_chain",
-      "name": "gorGor4 to gorGor5 Chain",
+      "name": "gorGor4 to Gorilla (gorGor5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gorGor4"],
       "adapter": {
@@ -945,7 +961,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gorGor4_to_hg18_chain",
-      "name": "gorGor4 to hg18 Chain",
+      "name": "gorGor4 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gorGor4"],
       "adapter": {
@@ -958,7 +974,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gorGor4_to_hg38_chain",
-      "name": "gorGor4 to hg38 Chain",
+      "name": "gorGor4 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gorGor4"],
       "adapter": {
@@ -971,7 +987,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "gorGor4_to_panTro4_chain",
-      "name": "gorGor4 to panTro4 Chain",
+      "name": "gorGor4 to Chimp (panTro4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["gorGor4"],
       "adapter": {

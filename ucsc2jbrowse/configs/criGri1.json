@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "criGri1",
+      "displayName": "Chinese hamster (criGri1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "criGri1-refseq",
+        "metadata": {
+          "description": "Jul. 2013 (C_griseus_v1.0/criGri1)",
+          "nibPath": "/gbdb/criGri1",
+          "organism": "Chinese hamster",
+          "defaultPos": "KE382584:3834159-3887734",
+          "active": 1,
+          "orderKey": 3350,
+          "genome": "Chinese hamster",
+          "scientificName": "Cricetulus griseus",
+          "htmlPath": "/gbdb/criGri1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Beijing Genomics Institution-Shenzhen",
+          "taxId": 10029
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/bigZips/criGri1.2bit",
@@ -931,7 +947,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "criGri1_to_criGriChoV1_chain",
-      "name": "criGri1 to criGriChoV1 Chain",
+      "name": "criGri1 to Chinese hamster (criGriChoV1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["criGri1"],
       "adapter": {
@@ -944,7 +960,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "criGri1_to_criGriChoV2_chain",
-      "name": "criGri1 to criGriChoV2 Chain",
+      "name": "criGri1 to Chinese hamster (criGriChoV2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["criGri1"],
       "adapter": {
@@ -957,7 +973,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "criGri1_to_hg19_chain",
-      "name": "criGri1 to hg19 Chain",
+      "name": "criGri1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["criGri1"],
       "adapter": {

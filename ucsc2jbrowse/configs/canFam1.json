@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "canFam1",
+      "displayName": "Dog (canFam1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "canFam1-refseq",
+        "metadata": {
+          "description": "July 2004 (Broad/canFam1)",
+          "nibPath": "/gbdb/canFam1/nib",
+          "organism": "Dog",
+          "defaultPos": "chr14:10666612-10673232",
+          "active": 1,
+          "orderKey": 4665,
+          "genome": "Dog",
+          "scientificName": "Canis lupus familiaris",
+          "htmlPath": "/gbdb/canFam1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute v. 1.0",
+          "taxId": 9615
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/bigZips/canFam1.2bit",
@@ -507,7 +523,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam1_to_canFam2_chain",
-      "name": "canFam1 to canFam2 Chain",
+      "name": "canFam1 to Dog (canFam2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam1"],
       "adapter": {
@@ -520,7 +536,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam1_to_hg17_chain",
-      "name": "canFam1 to hg17 Chain",
+      "name": "canFam1 to Human (hg17) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam1"],
       "adapter": {
@@ -533,7 +549,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam1_to_mm5_chain",
-      "name": "canFam1 to mm5 Chain",
+      "name": "canFam1 to mm5 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam1"],
       "adapter": {
@@ -546,7 +562,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam1_to_mm6_chain",
-      "name": "canFam1 to mm6 Chain",
+      "name": "canFam1 to mm6 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam1"],
       "adapter": {

@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "speTri2",
+      "displayName": "Squirrel (speTri2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "speTri2-refseq",
+        "metadata": {
+          "description": "Nov. 2011 (Broad/speTri2)",
+          "nibPath": "/gbdb/speTri2",
+          "organism": "Squirrel",
+          "defaultPos": "JH393412:896020-902549",
+          "active": 1,
+          "orderKey": 19714,
+          "genome": "Squirrel",
+          "scientificName": "Spermophilus tridecemlineatus",
+          "htmlPath": "/gbdb/speTri2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute (GCA_000236235.1)",
+          "taxId": 43179
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/speTri2/bigZips/speTri2.2bit",
@@ -1827,7 +1843,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "speTri2_to_hg38_chain",
-      "name": "speTri2 to hg38 Chain",
+      "name": "speTri2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["speTri2"],
       "adapter": {
@@ -1840,7 +1856,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "speTri2_to_mm10_chain",
-      "name": "speTri2 to mm10 Chain",
+      "name": "speTri2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["speTri2"],
       "adapter": {
@@ -1853,7 +1869,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "speTri2_to_mm39_chain",
-      "name": "speTri2 to mm39 Chain",
+      "name": "speTri2 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["speTri2"],
       "adapter": {

@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "petMar3",
+      "displayName": "Lamprey (petMar3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "petMar3-refseq",
+        "metadata": {
+          "description": "Dec. 2017 (Pmar_germline 1.0/petMar3)",
+          "nibPath": "/gbdb/petMar3",
+          "organism": "Lamprey",
+          "defaultPos": "PIZI01000026v1:8,994,639-9,025,694",
+          "active": 1,
+          "orderKey": 12018,
+          "genome": "Lamprey",
+          "scientificName": "Petromyzon marinus",
+          "htmlPath": "/gbdb/petMar3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "University of Kentucky",
+          "taxId": 7757
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/petMar3/bigZips/petMar3.2bit",
@@ -1522,7 +1538,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar3_to_hg38_chain",
-      "name": "petMar3 to hg38 Chain",
+      "name": "petMar3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar3"],
       "adapter": {
@@ -1535,7 +1551,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar3_to_mm10_chain",
-      "name": "petMar3 to mm10 Chain",
+      "name": "petMar3 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar3"],
       "adapter": {
@@ -1548,7 +1564,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar3_to_mm39_chain",
-      "name": "petMar3 to mm39 Chain",
+      "name": "petMar3 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar3"],
       "adapter": {
@@ -1561,7 +1577,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar3_to_petMar1_chain",
-      "name": "petMar3 to petMar1 Chain",
+      "name": "petMar3 to Lamprey (petMar1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar3"],
       "adapter": {
@@ -1574,7 +1590,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar3_to_petMar2_chain",
-      "name": "petMar3 to petMar2 Chain",
+      "name": "petMar3 to Lamprey (petMar2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar3"],
       "adapter": {

@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "dasNov3",
+      "displayName": "Armadillo (dasNov3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "dasNov3-refseq",
+        "metadata": {
+          "description": "Dec. 2011 (Baylor/dasNov3)",
+          "nibPath": "/gbdb/dasNov3",
+          "organism": "Armadillo",
+          "defaultPos": "JH564832:1503619-1555676",
+          "active": 1,
+          "orderKey": 1725,
+          "genome": "Armadillo",
+          "scientificName": "Dasypus novemcinctus",
+          "htmlPath": "/gbdb/dasNov3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Baylor College of Medicine Dasnov3.0 (GCA_000208655.2)",
+          "taxId": 9361
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dasNov3/bigZips/dasNov3.2bit",
@@ -1827,7 +1843,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dasNov3_to_hg38_chain",
-      "name": "dasNov3 to hg38 Chain",
+      "name": "dasNov3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dasNov3"],
       "adapter": {
@@ -1840,7 +1856,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "dasNov3_to_mm10_chain",
-      "name": "dasNov3 to mm10 Chain",
+      "name": "dasNov3 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["dasNov3"],
       "adapter": {

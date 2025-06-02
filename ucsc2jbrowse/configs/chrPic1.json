@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "chrPic1",
+      "displayName": "Painted turtle (chrPic1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "chrPic1-refseq",
+        "metadata": {
+          "description": "Dec. 2011 (v3.0.1/chrPic1)",
+          "nibPath": "/gbdb/chrPic1",
+          "organism": "Painted turtle",
+          "defaultPos": "JH584429:9332958-10048518",
+          "active": 1,
+          "orderKey": 16065,
+          "genome": "Painted turtle",
+          "scientificName": "Chrysemys picta bellii",
+          "htmlPath": "/gbdb/chrPic1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "International Painted Turtle Genome Sequencing Consortium (GCA_000241765.1)",
+          "taxId": 8478
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chrPic1/bigZips/chrPic1.2bit",
@@ -1267,7 +1283,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "chrPic1_to_mm10_chain",
-      "name": "chrPic1 to mm10 Chain",
+      "name": "chrPic1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["chrPic1"],
       "adapter": {

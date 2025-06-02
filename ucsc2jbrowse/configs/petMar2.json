@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "petMar2",
+      "displayName": "Lamprey (petMar2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "petMar2-refseq",
+        "metadata": {
+          "description": "Sep. 2010 (WUGSC 7.0/petMar2)",
+          "nibPath": "/gbdb/petMar2",
+          "organism": "Lamprey",
+          "defaultPos": "GL476334:480870-830419",
+          "active": 1,
+          "orderKey": 12019,
+          "genome": "Lamprey",
+          "scientificName": "Petromyzon marinus",
+          "htmlPath": "/gbdb/petMar2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "GSC Washington University School of Medicine",
+          "taxId": 7757
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/petMar2/bigZips/petMar2.2bit",
@@ -984,7 +1000,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar2_to_braFlo2_chain",
-      "name": "petMar2 to braFlo2 Chain",
+      "name": "petMar2 to braFlo2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar2"],
       "adapter": {
@@ -997,7 +1013,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar2_to_galGal4_chain",
-      "name": "petMar2 to galGal4 Chain",
+      "name": "petMar2 to Chicken (galGal4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar2"],
       "adapter": {
@@ -1010,7 +1026,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar2_to_hg19_chain",
-      "name": "petMar2 to hg19 Chain",
+      "name": "petMar2 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar2"],
       "adapter": {
@@ -1023,7 +1039,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar2_to_hg38_chain",
-      "name": "petMar2 to hg38 Chain",
+      "name": "petMar2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar2"],
       "adapter": {
@@ -1036,7 +1052,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar2_to_mm10_chain",
-      "name": "petMar2 to mm10 Chain",
+      "name": "petMar2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar2"],
       "adapter": {
@@ -1049,7 +1065,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar2_to_monDom5_chain",
-      "name": "petMar2 to monDom5 Chain",
+      "name": "petMar2 to Opossum (monDom5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar2"],
       "adapter": {
@@ -1062,7 +1078,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "petMar2_to_oryLat2_chain",
-      "name": "petMar2 to oryLat2 Chain",
+      "name": "petMar2 to Medaka (oryLat2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["petMar2"],
       "adapter": {

@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "oreNil2",
+      "displayName": "Nile tilapia (oreNil2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "oreNil2-refseq",
+        "metadata": {
+          "description": "Jan. 2011 (Broad oreNil1.1/oreNil2)",
+          "nibPath": "/gbdb/oreNil2",
+          "organism": "Nile tilapia",
+          "defaultPos": "chrLG5:26068730-26095423",
+          "active": 1,
+          "orderKey": 14419,
+          "genome": "Nile tilapia",
+          "scientificName": "Oreochromis niloticus",
+          "htmlPath": "/gbdb/oreNil2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute of MIT and Harvard Orenil1.1 (GCA_000188235.2)",
+          "taxId": 8128
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oreNil2/bigZips/oreNil2.2bit",
@@ -1932,7 +1948,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "oreNil2_to_hg38_chain",
-      "name": "oreNil2 to hg38 Chain",
+      "name": "oreNil2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["oreNil2"],
       "adapter": {
@@ -1945,7 +1961,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "oreNil2_to_mm10_chain",
-      "name": "oreNil2 to mm10 Chain",
+      "name": "oreNil2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["oreNil2"],
       "adapter": {

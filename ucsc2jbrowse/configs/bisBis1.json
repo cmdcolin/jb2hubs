@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "bisBis1",
+      "displayName": "Bison (bisBis1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "bisBis1-refseq",
+        "metadata": {
+          "description": "Oct. 2014 (Bison_UMD1.0/bisBis1)",
+          "nibPath": "/gbdb/bisBis1",
+          "organism": "Bison",
+          "defaultPos": "KN265006v1:10821934-10865801",
+          "active": 1,
+          "orderKey": 2325,
+          "genome": "Bison",
+          "scientificName": "Bison bison bison",
+          "htmlPath": "/gbdb/bisBis1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "U. Maryland",
+          "taxId": 43346
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bisBis1/bigZips/bisBis1.2bit",
@@ -1700,7 +1716,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bisBis1_to_hg38_chain",
-      "name": "bisBis1 to hg38 Chain",
+      "name": "bisBis1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bisBis1"],
       "adapter": {
@@ -1713,7 +1729,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bisBis1_to_mm10_chain",
-      "name": "bisBis1 to mm10 Chain",
+      "name": "bisBis1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bisBis1"],
       "adapter": {

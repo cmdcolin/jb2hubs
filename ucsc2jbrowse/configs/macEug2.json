@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "macEug2",
+      "displayName": "Wallaby (macEug2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "macEug2-refseq",
+        "metadata": {
+          "description": "Sep. 2009 (TWGS Meug_1.1/macEug2)",
+          "nibPath": "/gbdb/macEug2",
+          "organism": "Wallaby",
+          "defaultPos": "GL095587:25,998-40,635",
+          "active": 1,
+          "orderKey": 23019,
+          "genome": "Wallaby",
+          "scientificName": "Macropus eugenii",
+          "htmlPath": "/gbdb/macEug2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "TWGS (NCBI Project ID: 12586, Accession: GCA_000004035.1)",
+          "taxId": 9315
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/macEug2/bigZips/macEug2.2bit",
@@ -1392,7 +1408,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "macEug2_to_hg38_chain",
-      "name": "macEug2 to hg38 Chain",
+      "name": "macEug2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["macEug2"],
       "adapter": {
@@ -1405,7 +1421,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "macEug2_to_mm10_chain",
-      "name": "macEug2 to mm10 Chain",
+      "name": "macEug2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["macEug2"],
       "adapter": {

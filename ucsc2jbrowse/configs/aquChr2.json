@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "aquChr2",
+      "displayName": "Golden eagle (aquChr2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "aquChr2-refseq",
+        "metadata": {
+          "description": "Oct. 2014 (aquChr-1.0.2/aquChr2)",
+          "nibPath": "/gbdb/aquChr2",
+          "organism": "Golden eagle",
+          "defaultPos": "KN265877v1:49183-52524",
+          "active": 1,
+          "orderKey": 7664,
+          "genome": "Golden eagle",
+          "scientificName": "Aquila chrysaetos canadensis",
+          "htmlPath": "/gbdb/aquChr2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "WashU",
+          "taxId": 216574
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/bigZips/aquChr2.2bit",
@@ -1522,7 +1538,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "aquChr2_to_galGal5_chain",
-      "name": "aquChr2 to galGal5 Chain",
+      "name": "aquChr2 to Chicken (galGal5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["aquChr2"],
       "adapter": {
@@ -1535,7 +1551,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "aquChr2_to_hg38_chain",
-      "name": "aquChr2 to hg38 Chain",
+      "name": "aquChr2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["aquChr2"],
       "adapter": {
@@ -1548,7 +1564,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "aquChr2_to_mm10_chain",
-      "name": "aquChr2 to mm10 Chain",
+      "name": "aquChr2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["aquChr2"],
       "adapter": {

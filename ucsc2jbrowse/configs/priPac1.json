@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "priPac1",
+      "displayName": "P. pacificus (priPac1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "priPac1-refseq",
+        "metadata": {
+          "description": "Feb. 2007 (WUGSC 5.0/priPac1)",
+          "nibPath": "/gbdb/priPac1",
+          "organism": "P. pacificus",
+          "defaultPos": "chrUn:64713500-64721000",
+          "active": 1,
+          "orderKey": 16015,
+          "genome": "P. pacificus",
+          "scientificName": "Pristionchus pacificus",
+          "htmlPath": "/gbdb/priPac1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Washington University School of Medicine GSC Pristionchus pacificus 5.0",
+          "taxId": 54126
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/priPac1/bigZips/priPac1.2bit",
@@ -912,7 +928,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "priPac1_to_caePb1_chain",
-      "name": "priPac1 to caePb1 Chain",
+      "name": "priPac1 to C. brenneri (caePb1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["priPac1"],
       "adapter": {
@@ -925,7 +941,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "priPac1_to_caeRem2_chain",
-      "name": "priPac1 to caeRem2 Chain",
+      "name": "priPac1 to C. remanei (caeRem2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["priPac1"],
       "adapter": {
@@ -938,7 +954,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "priPac1_to_cb3_chain",
-      "name": "priPac1 to cb3 Chain",
+      "name": "priPac1 to C. briggsae (cb3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["priPac1"],
       "adapter": {
@@ -951,7 +967,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "priPac1_to_ce4_chain",
-      "name": "priPac1 to ce4 Chain",
+      "name": "priPac1 to C. elegans (ce4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["priPac1"],
       "adapter": {
@@ -964,7 +980,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "priPac1_to_ce6_chain",
-      "name": "priPac1 to ce6 Chain",
+      "name": "priPac1 to C. elegans (ce6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["priPac1"],
       "adapter": {

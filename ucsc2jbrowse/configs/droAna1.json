@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "droAna1",
+      "displayName": "D. ananassae (droAna1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "droAna1-refseq",
+        "metadata": {
+          "description": "July 2004 (TIGR/droAna1)",
+          "nibPath": "/gbdb/droAna1",
+          "organism": "D. ananassae",
+          "defaultPos": "2448876:2700001-2725000",
+          "active": 1,
+          "orderKey": 4015,
+          "genome": "D. ananassae",
+          "scientificName": "Drosophila ananassae",
+          "htmlPath": "/gbdb/droAna1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "TIGR 15 July 2004",
+          "taxId": 7217
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droAna1/bigZips/droAna1.2bit",
@@ -412,7 +428,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droAna1_to_dm2_chain",
-      "name": "droAna1 to dm2 Chain",
+      "name": "droAna1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droAna1"],
       "adapter": {

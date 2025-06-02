@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "aplCal1",
+      "displayName": "Sea hare (aplCal1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "aplCal1-refseq",
+        "metadata": {
+          "description": "Sept. 2008 (Broad 2.0/aplCal1)",
+          "nibPath": "/gbdb/aplCal1",
+          "organism": "Sea hare",
+          "defaultPos": "scaffold_829:133,504-180,407",
+          "active": 1,
+          "orderKey": 19205,
+          "genome": "Sea hare",
+          "scientificName": "Aplysia californica",
+          "htmlPath": "/gbdb/aplCal1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad v. Aplcal2.0",
+          "taxId": 6500
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aplCal1/bigZips/aplCal1.2bit",
@@ -1041,7 +1057,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "aplCal1_to_hg19_chain",
-      "name": "aplCal1 to hg19 Chain",
+      "name": "aplCal1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["aplCal1"],
       "adapter": {

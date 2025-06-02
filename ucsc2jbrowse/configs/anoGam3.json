@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "anoGam3",
+      "displayName": "A. gambiae (anoGam3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "anoGam3-refseq",
+        "metadata": {
+          "description": "Oct. 2006 (AgamP3/anoGam3)",
+          "nibPath": "/gbdb/anoGam3",
+          "organism": "A. gambiae",
+          "defaultPos": "chr2R:6479796-6482329",
+          "active": 1,
+          "orderKey": 1009,
+          "genome": "A. gambiae",
+          "scientificName": "Anopheles gambiae",
+          "htmlPath": "/gbdb/anoGam3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "The International Consortium for the Sequencing of Anopheles Genome",
+          "taxId": 180454
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/bigZips/anoGam3.2bit",
@@ -1549,7 +1565,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "anoGam3_to_anoGam1_chain",
-      "name": "anoGam3 to anoGam1 Chain",
+      "name": "anoGam3 to A. gambiae (anoGam1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["anoGam3"],
       "adapter": {
@@ -1562,7 +1578,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "anoGam3_to_dm6_chain",
-      "name": "anoGam3 to dm6 Chain",
+      "name": "anoGam3 to D. melanogaster (dm6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["anoGam3"],
       "adapter": {

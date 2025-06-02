@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "panTro1",
+      "displayName": "Chimp (panTro1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "panTro1-refseq",
+        "metadata": {
+          "description": "Nov. 2003 (CGSC 1.1/panTro1)",
+          "nibPath": "/gbdb/panTro1/nib",
+          "organism": "Chimp",
+          "defaultPos": "chr6:115705331-115981791",
+          "active": 1,
+          "orderKey": 3330,
+          "genome": "Chimp",
+          "scientificName": "Pan troglodytes",
+          "htmlPath": "/gbdb/panTro1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "CGSC Build 1 Version 1 Arachne assembly",
+          "taxId": 9598
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro1/bigZips/panTro1.2bit",
@@ -548,7 +564,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panTro1_to_hg16_chain",
-      "name": "panTro1 to hg16 Chain",
+      "name": "panTro1 to Human (hg16) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panTro1"],
       "adapter": {
@@ -561,7 +577,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panTro1_to_hg17_chain",
-      "name": "panTro1 to hg17 Chain",
+      "name": "panTro1 to Human (hg17) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panTro1"],
       "adapter": {
@@ -574,7 +590,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panTro1_to_hg18_chain",
-      "name": "panTro1 to hg18 Chain",
+      "name": "panTro1 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panTro1"],
       "adapter": {
@@ -587,7 +603,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panTro1_to_mm6_chain",
-      "name": "panTro1 to mm6 Chain",
+      "name": "panTro1 to mm6 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panTro1"],
       "adapter": {
@@ -600,7 +616,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panTro1_to_mm7_chain",
-      "name": "panTro1 to mm7 Chain",
+      "name": "panTro1 to Mouse (mm7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panTro1"],
       "adapter": {
@@ -613,7 +629,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panTro1_to_mm8_chain",
-      "name": "panTro1 to mm8 Chain",
+      "name": "panTro1 to Mouse (mm8) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panTro1"],
       "adapter": {
@@ -626,7 +642,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "panTro1_to_panTro2_chain",
-      "name": "panTro1 to panTro2 Chain",
+      "name": "panTro1 to Chimp (panTro2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["panTro1"],
       "adapter": {

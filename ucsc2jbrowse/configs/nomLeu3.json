@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "nomLeu3",
+      "displayName": "Gibbon (nomLeu3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "nomLeu3-refseq",
+        "metadata": {
+          "description": "Oct. 2012 (GGSC Nleu3.0/nomLeu3)",
+          "nibPath": "/gbdb/nomLeu3",
+          "organism": "Gibbon",
+          "defaultPos": "chr21:52408339-52415715",
+          "active": 1,
+          "orderKey": 7413,
+          "genome": "Gibbon",
+          "scientificName": "Nomascus leucogenys",
+          "htmlPath": "/gbdb/nomLeu3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Gibbon Genome Sequencing Consortium ",
+          "taxId": 61853
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu3/bigZips/nomLeu3.2bit",
@@ -1832,7 +1848,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu3_to_hg19_chain",
-      "name": "nomLeu3 to hg19 Chain",
+      "name": "nomLeu3 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu3"],
       "adapter": {
@@ -1845,7 +1861,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu3_to_hg38_chain",
-      "name": "nomLeu3 to hg38 Chain",
+      "name": "nomLeu3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu3"],
       "adapter": {
@@ -1858,7 +1874,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu3_to_tarSyr2_chain",
-      "name": "nomLeu3 to tarSyr2 Chain",
+      "name": "nomLeu3 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu3"],
       "adapter": {

@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "bosTau3",
+      "displayName": "Cow (bosTau3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "bosTau3-refseq",
+        "metadata": {
+          "description": "Aug. 2006 (Baylor 3.1/bosTau3)",
+          "nibPath": "/gbdb/bosTau3",
+          "organism": "Cow",
+          "defaultPos": "chr28:550,588-553,344",
+          "active": 1,
+          "orderKey": 3633,
+          "genome": "Cow",
+          "scientificName": "Bos taurus",
+          "htmlPath": "/gbdb/bosTau3/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Baylor Release 3.1",
+          "taxId": 9913
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/bigZips/bosTau3.2bit",
@@ -592,7 +608,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau3_to_bosTau4_chain",
-      "name": "bosTau3 to bosTau4 Chain",
+      "name": "bosTau3 to Cow (bosTau4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau3"],
       "adapter": {
@@ -605,7 +621,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau3_to_hg18_chain",
-      "name": "bosTau3 to hg18 Chain",
+      "name": "bosTau3 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau3"],
       "adapter": {
@@ -618,7 +634,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau3_to_mm8_chain",
-      "name": "bosTau3 to mm8 Chain",
+      "name": "bosTau3 to Mouse (mm8) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau3"],
       "adapter": {
@@ -631,7 +647,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau3_to_mm9_chain",
-      "name": "bosTau3 to mm9 Chain",
+      "name": "bosTau3 to Mouse (mm9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau3"],
       "adapter": {
@@ -644,7 +660,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau3_to_rn4_chain",
-      "name": "bosTau3 to rn4 Chain",
+      "name": "bosTau3 to Rat (rn4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau3"],
       "adapter": {

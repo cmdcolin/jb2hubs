@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "proCap1",
+      "displayName": "Rock hyrax (proCap1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "proCap1-refseq",
+        "metadata": {
+          "description": "Jul. 2008 (Broad/proCap1)",
+          "nibPath": "/gbdb/proCap1",
+          "organism": "Rock hyrax",
+          "defaultPos": "scaffold_15515:19471-24894",
+          "active": 1,
+          "orderKey": 18760,
+          "genome": "Rock hyrax",
+          "scientificName": "Procavia capensis",
+          "htmlPath": "/gbdb/proCap1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute proCap1 (NCBI project 13972, ABRQ01000000)",
+          "taxId": 9813
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/proCap1/bigZips/proCap1.2bit",
@@ -1523,7 +1539,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "proCap1_to_mm10_chain",
-      "name": "proCap1 to mm10 Chain",
+      "name": "proCap1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["proCap1"],
       "adapter": {

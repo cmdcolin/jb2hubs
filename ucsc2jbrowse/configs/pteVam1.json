@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "pteVam1",
+      "displayName": "Megabat (pteVam1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "pteVam1-refseq",
+        "metadata": {
+          "description": "Jul. 2008 (Broad/pteVam1)",
+          "nibPath": "/gbdb/pteVam1",
+          "organism": "Megabat",
+          "defaultPos": "scaffold_8765:35746-39000",
+          "active": 1,
+          "orderKey": 13370,
+          "genome": "Megabat",
+          "scientificName": "Pteropus vampyrus",
+          "htmlPath": "/gbdb/pteVam1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute pteVam1 (NCBI project 20325, ABRP01000000)",
+          "taxId": 132908
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/pteVam1/bigZips/pteVam1.2bit",
@@ -1523,7 +1539,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "pteVam1_to_hg38_chain",
-      "name": "pteVam1 to hg38 Chain",
+      "name": "pteVam1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["pteVam1"],
       "adapter": {
@@ -1536,7 +1552,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "pteVam1_to_mm10_chain",
-      "name": "pteVam1 to mm10 Chain",
+      "name": "pteVam1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["pteVam1"],
       "adapter": {

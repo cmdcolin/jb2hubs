@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "papAnu4",
+      "displayName": "Baboon (papAnu4)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "papAnu4-refseq",
+        "metadata": {
+          "description": "Apr. 2017 (Panu_3.0/papAnu4)",
+          "nibPath": "/gbdb/papAnu4",
+          "organism": "Baboon",
+          "defaultPos": "chr1:106647222-106657040",
+          "active": 1,
+          "orderKey": 2048,
+          "genome": "Baboon",
+          "scientificName": "Papio anubis",
+          "htmlPath": "/gbdb/papAnu4/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Human Genome Sequencing Center",
+          "taxId": 9555
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/bigZips/papAnu4.2bit",
@@ -1837,7 +1853,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "papAnu4_to_hg38_chain",
-      "name": "papAnu4 to hg38 Chain",
+      "name": "papAnu4 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["papAnu4"],
       "adapter": {
@@ -1850,7 +1866,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "papAnu4_to_mm10_chain",
-      "name": "papAnu4 to mm10 Chain",
+      "name": "papAnu4 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["papAnu4"],
       "adapter": {
@@ -1863,7 +1879,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "papAnu4_to_papAnu2_chain",
-      "name": "papAnu4 to papAnu2 Chain",
+      "name": "papAnu4 to Baboon (papAnu2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["papAnu4"],
       "adapter": {
@@ -1876,7 +1892,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "papAnu4_to_papAnu3_chain",
-      "name": "papAnu4 to papAnu3 Chain",
+      "name": "papAnu4 to papAnu3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["papAnu4"],
       "adapter": {

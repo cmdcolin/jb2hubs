@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "droMoj1",
+      "displayName": "D. mojavensis (droMoj1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "droMoj1-refseq",
+        "metadata": {
+          "description": "Aug. 2004 (Agencourt prelim/droMoj1)",
+          "nibPath": "/gbdb/droMoj1",
+          "organism": "D. mojavensis",
+          "defaultPos": "contig_2959:30001-44626",
+          "active": 1,
+          "orderKey": 4080,
+          "genome": "D. mojavensis",
+          "scientificName": "Drosophila mojavensis",
+          "htmlPath": "/gbdb/droMoj1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Agencourt 11 Aug 2004",
+          "taxId": 7230
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droMoj1/bigZips/droMoj1.2bit",
@@ -412,7 +428,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droMoj1_to_dm2_chain",
-      "name": "droMoj1 to dm2 Chain",
+      "name": "droMoj1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droMoj1"],
       "adapter": {

@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "sarHar1",
+      "displayName": "Tasmanian devil (sarHar1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "sarHar1-refseq",
+        "metadata": {
+          "description": "Feb. 2011 (WTSI Devil_ref v7.0/sarHar1)",
+          "nibPath": "/gbdb/sarHar1",
+          "organism": "Tasmanian devil",
+          "defaultPos": "chr4_GL856884_random:746,443-749,687",
+          "active": 1,
+          "orderKey": 20085,
+          "genome": "Tasmanian devil",
+          "scientificName": "Sarcophilus harrisii",
+          "htmlPath": "/gbdb/sarHar1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Wellcome Trust Sanger Institute Devil_ref v7.0 (GCA_000189315.1)",
+          "taxId": 9305
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/bigZips/sarHar1.2bit",
@@ -1836,7 +1852,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "sarHar1_to_hg19_chain",
-      "name": "sarHar1 to hg19 Chain",
+      "name": "sarHar1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["sarHar1"],
       "adapter": {
@@ -1849,7 +1865,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "sarHar1_to_hg38_chain",
-      "name": "sarHar1 to hg38 Chain",
+      "name": "sarHar1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["sarHar1"],
       "adapter": {
@@ -1862,7 +1878,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "sarHar1_to_mm10_chain",
-      "name": "sarHar1 to mm10 Chain",
+      "name": "sarHar1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["sarHar1"],
       "adapter": {

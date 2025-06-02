@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "hetGla1",
+      "displayName": "Naked mole-rat (hetGla1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "hetGla1-refseq",
+        "metadata": {
+          "description": "Jul. 2011 (BGI HetGla_1.0/hetGla1)",
+          "nibPath": "/gbdb/hetGla1",
+          "organism": "Naked mole-rat",
+          "defaultPos": "JH169644:999,819-1,006,151",
+          "active": 1,
+          "orderKey": 14015,
+          "genome": "Naked mole-rat",
+          "scientificName": "Heterocephalus glaber",
+          "htmlPath": "/gbdb/hetGla1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "HetGla_1.0 (NCBI project 68323, accession GCA_000230445.1",
+          "taxId": 10181
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla1/bigZips/hetGla1.2bit",
@@ -595,7 +611,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hetGla1_to_hetGla2_chain",
-      "name": "hetGla1 to hetGla2 Chain",
+      "name": "hetGla1 to Naked mole-rat (hetGla2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hetGla1"],
       "adapter": {
@@ -608,7 +624,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hetGla1_to_mm10_chain",
-      "name": "hetGla1 to mm10 Chain",
+      "name": "hetGla1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hetGla1"],
       "adapter": {

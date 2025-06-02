@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "triMan1",
+      "displayName": "Manatee (triMan1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "triMan1-refseq",
+        "metadata": {
+          "description": "Oct. 2011 (Broad v1.0/triMan1)",
+          "nibPath": "/gbdb/triMan1",
+          "organism": "Manatee",
+          "defaultPos": "JH594607:13029229-13038048",
+          "active": 1,
+          "orderKey": 13075,
+          "genome": "Manatee",
+          "scientificName": "Trichechus manatus latirostris",
+          "htmlPath": "/gbdb/triMan1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad Institute of MIT and Harvard TriManLat1.0 (GCA_000243295.1)",
+          "taxId": 127582
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/triMan1/bigZips/triMan1.2bit",
@@ -1782,7 +1798,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "triMan1_to_hg38_chain",
-      "name": "triMan1 to hg38 Chain",
+      "name": "triMan1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["triMan1"],
       "adapter": {
@@ -1795,7 +1811,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "triMan1_to_mm10_chain",
-      "name": "triMan1 to mm10 Chain",
+      "name": "triMan1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["triMan1"],
       "adapter": {

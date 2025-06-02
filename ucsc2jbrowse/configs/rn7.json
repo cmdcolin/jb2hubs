@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "rn7",
+      "displayName": "Rat (rn7)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "rn7-refseq",
+        "metadata": {
+          "description": "Nov. 2020 (mRatBN7.2/rn7)",
+          "nibPath": "/gbdb/rn7",
+          "organism": "Rat",
+          "defaultPos": "chr1:79348972-79379997",
+          "active": 1,
+          "orderKey": 18019,
+          "genome": "Rat",
+          "scientificName": "Rattus norvegicus",
+          "htmlPath": "/gbdb/rn7/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Wellcome Sanger Institute",
+          "taxId": 10116
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rn7/bigZips/rn7.2bit",
@@ -1821,7 +1837,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "rn7_to_hg38_chain",
-      "name": "rn7 to hg38 Chain",
+      "name": "rn7 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["rn7"],
       "adapter": {
@@ -1834,7 +1850,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "rn7_to_mm10_chain",
-      "name": "rn7 to mm10 Chain",
+      "name": "rn7 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["rn7"],
       "adapter": {
@@ -1847,7 +1863,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "rn7_to_mm39_chain",
-      "name": "rn7 to mm39 Chain",
+      "name": "rn7 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["rn7"],
       "adapter": {
@@ -1860,7 +1876,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "rn7_to_rn5_chain",
-      "name": "rn7 to rn5 Chain",
+      "name": "rn7 to Rat (rn5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["rn7"],
       "adapter": {
@@ -1873,7 +1889,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "rn7_to_rn6_chain",
-      "name": "rn7 to rn6 Chain",
+      "name": "rn7 to Rat (rn6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["rn7"],
       "adapter": {

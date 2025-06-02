@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "felCat8",
+      "displayName": "Cat (felCat8)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "felCat8-refseq",
+        "metadata": {
+          "description": "Nov. 2014 (ICGSC Felis_catus_8.0/felCat8)",
+          "nibPath": "/gbdb/felCat8",
+          "organism": "Cat",
+          "defaultPos": "chrA2:53484451-53597660",
+          "active": 1,
+          "orderKey": 3240,
+          "genome": "Cat",
+          "scientificName": "Felis catus",
+          "htmlPath": "/gbdb/felCat8/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "International Cat Genome Sequencing Consortium",
+          "taxId": 9685
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/bigZips/felCat8.2bit",
@@ -1346,7 +1362,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat8_to_canFam3_chain",
-      "name": "felCat8 to canFam3 Chain",
+      "name": "felCat8 to Dog (canFam3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat8"],
       "adapter": {
@@ -1359,7 +1375,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat8_to_felCat5_chain",
-      "name": "felCat8 to felCat5 Chain",
+      "name": "felCat8 to Cat (felCat5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat8"],
       "adapter": {
@@ -1372,7 +1388,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat8_to_felCat9_chain",
-      "name": "felCat8 to felCat9 Chain",
+      "name": "felCat8 to Cat (felCat9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat8"],
       "adapter": {
@@ -1385,7 +1401,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat8_to_GCF_018350175.1_chain",
-      "name": "felCat8 to domestic cat (Fca126 2021 Texas A&M U) Chain (GCF_018350175.1)",
+      "name": "felCat8 to domestic cat (Fca126 2021 Texas A&M U) (GCF_018350175.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat8"],
       "adapter": {
@@ -1398,7 +1414,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat8_to_hg38_chain",
-      "name": "felCat8 to hg38 Chain",
+      "name": "felCat8 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat8"],
       "adapter": {
@@ -1411,7 +1427,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat8_to_rn6_chain",
-      "name": "felCat8 to rn6 Chain",
+      "name": "felCat8 to Rat (rn6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat8"],
       "adapter": {

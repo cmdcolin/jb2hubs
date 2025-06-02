@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "droSim1",
+      "displayName": "D. simulans (droSim1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "droSim1-refseq",
+        "metadata": {
+          "description": "Apr. 2005 (WUGSC mosaic 1.0/droSim1)",
+          "nibPath": "/gbdb/droSim1",
+          "organism": "D. simulans",
+          "defaultPos": "chr2L:827,150-853,526",
+          "active": 1,
+          "orderKey": 4110,
+          "genome": "D. simulans",
+          "scientificName": "Drosophila simulans",
+          "htmlPath": "/gbdb/droSim1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "WUSTL version 1.0",
+          "taxId": 7240
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/bigZips/droSim1.2bit",
@@ -956,7 +972,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droSim1_to_dm2_chain",
-      "name": "droSim1 to dm2 Chain",
+      "name": "droSim1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droSim1"],
       "adapter": {
@@ -969,7 +985,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droSim1_to_dm3_chain",
-      "name": "droSim1 to dm3 Chain",
+      "name": "droSim1 to D. melanogaster (dm3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droSim1"],
       "adapter": {
@@ -982,7 +998,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droSim1_to_dm6_chain",
-      "name": "droSim1 to dm6 Chain",
+      "name": "droSim1 to D. melanogaster (dm6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droSim1"],
       "adapter": {

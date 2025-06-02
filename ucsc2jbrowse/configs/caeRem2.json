@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "caeRem2",
+      "displayName": "C. remanei (caeRem2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "caeRem2-refseq",
+        "metadata": {
+          "description": "Mar. 2006 (WUGSC 1.0/caeRem2)",
+          "nibPath": "/gbdb/caeRem2",
+          "organism": "C. remanei",
+          "defaultPos": "chrUn:103531185-103538203",
+          "active": 1,
+          "orderKey": 3067,
+          "genome": "C. remanei",
+          "scientificName": "Caenorhabditis remanei",
+          "htmlPath": "/gbdb/caeRem2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Washington University School of Medicine GSC C. remanei 1.0",
+          "taxId": 31234
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeRem2/bigZips/caeRem2.2bit",
@@ -282,7 +298,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "caeRem2_to_caePb1_chain",
-      "name": "caeRem2 to caePb1 Chain",
+      "name": "caeRem2 to C. brenneri (caePb1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["caeRem2"],
       "adapter": {
@@ -295,7 +311,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "caeRem2_to_caeRem3_chain",
-      "name": "caeRem2 to caeRem3 Chain",
+      "name": "caeRem2 to C. remanei (caeRem3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["caeRem2"],
       "adapter": {
@@ -308,7 +324,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "caeRem2_to_caeRem3.supers_chain",
-      "name": "caeRem2 to caeRem3.supers Chain",
+      "name": "caeRem2 to caeRem3.supers liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["caeRem2"],
       "adapter": {
@@ -321,7 +337,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "caeRem2_to_cb3_chain",
-      "name": "caeRem2 to cb3 Chain",
+      "name": "caeRem2 to C. briggsae (cb3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["caeRem2"],
       "adapter": {
@@ -334,7 +350,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "caeRem2_to_ce4_chain",
-      "name": "caeRem2 to ce4 Chain",
+      "name": "caeRem2 to C. elegans (ce4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["caeRem2"],
       "adapter": {
@@ -347,7 +363,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "caeRem2_to_priPac1_chain",
-      "name": "caeRem2 to priPac1 Chain",
+      "name": "caeRem2 to P. pacificus (priPac1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["caeRem2"],
       "adapter": {

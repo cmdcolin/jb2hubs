@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "droGri1",
+      "displayName": "D. grimshawi (droGri1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "droGri1-refseq",
+        "metadata": {
+          "description": "Aug. 2005 (Agencourt prelim/droGri1)",
+          "nibPath": "/gbdb/droGri1",
+          "organism": "D. grimshawi",
+          "defaultPos": "scaffold_24862:854980-869643",
+          "active": 1,
+          "orderKey": 4050,
+          "genome": "D. grimshawi",
+          "scientificName": "Drosophila grimshawi",
+          "htmlPath": "/gbdb/droGri1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Agencourt 1 Aug 2005",
+          "taxId": 7222
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droGri1/bigZips/droGri1.2bit",
@@ -1000,7 +1016,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droGri1_to_dm2_chain",
-      "name": "droGri1 to dm2 Chain",
+      "name": "droGri1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droGri1"],
       "adapter": {

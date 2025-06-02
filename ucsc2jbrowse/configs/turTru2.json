@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "turTru2",
+      "displayName": "Dolphin (turTru2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "turTru2-refseq",
+        "metadata": {
+          "description": "Oct. 2011 (Baylor Ttru_1.4/turTru2)",
+          "nibPath": "/gbdb/turTru2",
+          "organism": "Dolphin",
+          "defaultPos": "JH481929:22304-29703",
+          "active": 1,
+          "orderKey": 4674,
+          "genome": "Dolphin",
+          "scientificName": "Tursiops truncatus",
+          "htmlPath": "/gbdb/turTru2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Baylor College of Medicine Ttru_1.4 (NCBI project 20365, GCA_000151865.2, WGS ABRN02)",
+          "taxId": 9739
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/turTru2/bigZips/turTru2.2bit",
@@ -1472,7 +1488,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "turTru2_to_bosTau7_chain",
-      "name": "turTru2 to bosTau7 Chain",
+      "name": "turTru2 to Cow (bosTau7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["turTru2"],
       "adapter": {
@@ -1485,7 +1501,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "turTru2_to_hg38_chain",
-      "name": "turTru2 to hg38 Chain",
+      "name": "turTru2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["turTru2"],
       "adapter": {
@@ -1498,7 +1514,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "turTru2_to_mm10_chain",
-      "name": "turTru2 to mm10 Chain",
+      "name": "turTru2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["turTru2"],
       "adapter": {
@@ -1511,7 +1527,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "turTru2_to_mm39_chain",
-      "name": "turTru2 to mm39 Chain",
+      "name": "turTru2 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["turTru2"],
       "adapter": {

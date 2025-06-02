@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "allMis1",
+      "displayName": "American alligator (allMis1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "allMis1-refseq",
+        "metadata": {
+          "description": "Aug. 2012 (allMis0.2/allMis1)",
+          "nibPath": "/gbdb/allMis1",
+          "organism": "American alligator",
+          "defaultPos": "JH731472:504271-884586",
+          "active": 1,
+          "orderKey": 1425,
+          "genome": "American alligator",
+          "scientificName": "Alligator mississippiensis",
+          "htmlPath": "/gbdb/allMis1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "International Crocodilian Genomes Working Group",
+          "taxId": 8496
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/allMis1/bigZips/allMis1.2bit",
@@ -1700,7 +1716,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "allMis1_to_hg19_chain",
-      "name": "allMis1 to hg19 Chain",
+      "name": "allMis1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["allMis1"],
       "adapter": {
@@ -1713,7 +1729,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "allMis1_to_hg38_chain",
-      "name": "allMis1 to hg38 Chain",
+      "name": "allMis1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["allMis1"],
       "adapter": {

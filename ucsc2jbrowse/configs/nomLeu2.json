@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "nomLeu2",
+      "displayName": "Gibbon (nomLeu2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "nomLeu2-refseq",
+        "metadata": {
+          "description": "Jun. 2011 (GGSC Nleu1.1/nomLeu2)",
+          "nibPath": "/gbdb/nomLeu2",
+          "organism": "Gibbon",
+          "defaultPos": "GL397298:23130040-23137416",
+          "active": 1,
+          "orderKey": 7414,
+          "genome": "Gibbon",
+          "scientificName": "Nomascus leucogenys",
+          "htmlPath": "/gbdb/nomLeu2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Gibbon Genome Sequencing Consortium Nleu1.1 (NCBI project 13975, GCA_000146795.2, WGS ADFV01)",
+          "taxId": 61853
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu2/bigZips/nomLeu2.2bit",
@@ -592,7 +608,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu2_to_mm10_chain",
-      "name": "nomLeu2 to mm10 Chain",
+      "name": "nomLeu2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu2"],
       "adapter": {
@@ -605,7 +621,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu2_to_nomLeu3_chain",
-      "name": "nomLeu2 to nomLeu3 Chain",
+      "name": "nomLeu2 to Gibbon (nomLeu3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu2"],
       "adapter": {

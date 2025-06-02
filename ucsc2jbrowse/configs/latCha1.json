@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "latCha1",
+      "displayName": "Coelacanth (latCha1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "latCha1-refseq",
+        "metadata": {
+          "description": "Aug. 2011 (Broad/latCha1)",
+          "nibPath": "/gbdb/latCha1",
+          "organism": "Coelacanth",
+          "defaultPos": "JH126819:1630199-1640227",
+          "active": 1,
+          "orderKey": 3610,
+          "genome": "Coelacanth",
+          "scientificName": "Latimeria chalumnae",
+          "htmlPath": "/gbdb/latCha1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad LatCha1 (GCA_000225785.1)",
+          "taxId": 7897
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/latCha1/bigZips/latCha1.2bit",
@@ -1788,7 +1804,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "latCha1_to_fr3_chain",
-      "name": "latCha1 to fr3 Chain",
+      "name": "latCha1 to Fugu (fr3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["latCha1"],
       "adapter": {
@@ -1801,7 +1817,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "latCha1_to_hg38_chain",
-      "name": "latCha1 to hg38 Chain",
+      "name": "latCha1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["latCha1"],
       "adapter": {
@@ -1814,7 +1830,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "latCha1_to_mm10_chain",
-      "name": "latCha1 to mm10 Chain",
+      "name": "latCha1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["latCha1"],
       "adapter": {

@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "nomLeu1",
+      "displayName": "Gibbon (nomLeu1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "nomLeu1-refseq",
+        "metadata": {
+          "description": "Jan. 2010 (GGSC Nleu1.0/nomLeu1)",
+          "nibPath": "/gbdb/nomLeu1",
+          "organism": "Gibbon",
+          "defaultPos": "GL397261:37115599-37125598",
+          "active": 1,
+          "orderKey": 7415,
+          "genome": "Gibbon",
+          "scientificName": "Nomascus leucogenys",
+          "htmlPath": "/gbdb/nomLeu1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "GGSC (NCBI project 13975, accession GCA_000146795.1)",
+          "taxId": 61853
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nomLeu1/bigZips/nomLeu1.2bit",
@@ -467,7 +483,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu1_to_gorGor3_chain",
-      "name": "nomLeu1 to gorGor3 Chain",
+      "name": "nomLeu1 to Gorilla (gorGor3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu1"],
       "adapter": {
@@ -480,7 +496,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu1_to_hg19_chain",
-      "name": "nomLeu1 to hg19 Chain",
+      "name": "nomLeu1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu1"],
       "adapter": {
@@ -493,7 +509,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu1_to_mm10_chain",
-      "name": "nomLeu1 to mm10 Chain",
+      "name": "nomLeu1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu1"],
       "adapter": {
@@ -506,7 +522,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nomLeu1_to_nomLeu2_chain",
-      "name": "nomLeu1 to nomLeu2 Chain",
+      "name": "nomLeu1 to Gibbon (nomLeu2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nomLeu1"],
       "adapter": {

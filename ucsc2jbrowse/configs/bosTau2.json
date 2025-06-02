@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "bosTau2",
+      "displayName": "Cow (bosTau2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "bosTau2-refseq",
+        "metadata": {
+          "description": "Mar. 2005 (Baylor 2.0/bosTau2)",
+          "nibPath": "/gbdb/bosTau2",
+          "organism": "Cow",
+          "defaultPos": "SCAFFOLD10671:4650-8779",
+          "active": 1,
+          "orderKey": 3634,
+          "genome": "Cow",
+          "scientificName": "Bos taurus",
+          "htmlPath": "/gbdb/bosTau2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Baylor Btau_2.0",
+          "taxId": 9913
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau2/bigZips/bosTau2.2bit",
@@ -591,7 +607,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau2_to_bosTau3_chain",
-      "name": "bosTau2 to bosTau3 Chain",
+      "name": "bosTau2 to Cow (bosTau3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau2"],
       "adapter": {
@@ -604,7 +620,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau2_to_hg17_chain",
-      "name": "bosTau2 to hg17 Chain",
+      "name": "bosTau2 to Human (hg17) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau2"],
       "adapter": {
@@ -617,7 +633,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau2_to_hg18_chain",
-      "name": "bosTau2 to hg18 Chain",
+      "name": "bosTau2 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau2"],
       "adapter": {
@@ -630,7 +646,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau2_to_mm7_chain",
-      "name": "bosTau2 to mm7 Chain",
+      "name": "bosTau2 to Mouse (mm7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau2"],
       "adapter": {
@@ -643,7 +659,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau2_to_mm8_chain",
-      "name": "bosTau2 to mm8 Chain",
+      "name": "bosTau2 to Mouse (mm8) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau2"],
       "adapter": {
@@ -656,7 +672,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "bosTau2_to_rn4_chain",
-      "name": "bosTau2 to rn4 Chain",
+      "name": "bosTau2 to Rat (rn4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["bosTau2"],
       "adapter": {

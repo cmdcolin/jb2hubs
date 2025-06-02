@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "nasLar1",
+      "displayName": "Proboscis monkey (nasLar1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "nasLar1-refseq",
+        "metadata": {
+          "description": "Nov. 2014 (Charlie1.0/nasLar1)",
+          "nibPath": "/gbdb/nasLar1",
+          "organism": "Proboscis monkey",
+          "defaultPos": "chrM:1,150-2,550",
+          "active": 1,
+          "orderKey": 16785,
+          "genome": "Proboscis monkey",
+          "scientificName": "Nasalis larvatus",
+          "htmlPath": "/gbdb/nasLar1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Proboscis Monkey Functional Genome Consortium",
+          "taxId": 43780
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/bigZips/nasLar1.2bit",
@@ -1511,7 +1527,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nasLar1_to_hg38_chain",
-      "name": "nasLar1 to hg38 Chain",
+      "name": "nasLar1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nasLar1"],
       "adapter": {
@@ -1524,7 +1540,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "nasLar1_to_tarSyr2_chain",
-      "name": "nasLar1 to tarSyr2 Chain",
+      "name": "nasLar1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["nasLar1"],
       "adapter": {

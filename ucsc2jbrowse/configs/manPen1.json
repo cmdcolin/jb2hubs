@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "manPen1",
+      "displayName": "Chinese pangolin (manPen1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "manPen1-refseq",
+        "metadata": {
+          "description": "Aug 2014 (M_pentadactyla-1.1.1/manPen1)",
+          "nibPath": "/gbdb/manPen1",
+          "organism": "Chinese pangolin",
+          "defaultPos": "KN005617:527189-790783",
+          "active": 1,
+          "orderKey": 3355,
+          "genome": "Chinese pangolin",
+          "scientificName": "Manis pentadactyla",
+          "htmlPath": "/gbdb/manPen1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Washington University (WashU) GCA_000738955.1",
+          "taxId": 143292
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/manPen1/bigZips/manPen1.2bit",
@@ -1517,7 +1533,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "manPen1_to_hg38_chain",
-      "name": "manPen1 to hg38 Chain",
+      "name": "manPen1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["manPen1"],
       "adapter": {
@@ -1530,7 +1546,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "manPen1_to_mm10_chain",
-      "name": "manPen1 to mm10 Chain",
+      "name": "manPen1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["manPen1"],
       "adapter": {
@@ -1543,7 +1559,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "manPen1_to_mm39_chain",
-      "name": "manPen1 to mm39 Chain",
+      "name": "manPen1 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["manPen1"],
       "adapter": {

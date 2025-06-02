@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "thaSir1",
+      "displayName": "Garter snake (thaSir1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "thaSir1-refseq",
+        "metadata": {
+          "description": "Jun. 2015 (Thamnophis_sirtalis-6.0/thaSir1)",
+          "nibPath": "/gbdb/thaSir1",
+          "organism": "Garter snake",
+          "defaultPos": "NW_013657986v1:596051-618240",
+          "active": 1,
+          "orderKey": 7000,
+          "genome": "Garter snake",
+          "scientificName": "Thamnophis sirtalis",
+          "htmlPath": "/gbdb/thaSir1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "The Genome Institute at Washington University School of Medicine (WUGSC)",
+          "taxId": 35019
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/thaSir1/bigZips/thaSir1.2bit",
@@ -1696,7 +1712,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "thaSir1_to_hg38_chain",
-      "name": "thaSir1 to hg38 Chain",
+      "name": "thaSir1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["thaSir1"],
       "adapter": {
@@ -1709,7 +1725,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "thaSir1_to_mm10_chain",
-      "name": "thaSir1 to mm10 Chain",
+      "name": "thaSir1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["thaSir1"],
       "adapter": {

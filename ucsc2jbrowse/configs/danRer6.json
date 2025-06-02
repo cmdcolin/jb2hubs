@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "danRer6",
+      "displayName": "Zebrafish (danRer6)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "danRer6-refseq",
+        "metadata": {
+          "description": "Dec. 2008 (Zv8/danRer6)",
+          "nibPath": "/gbdb/danRer6",
+          "organism": "Zebrafish",
+          "defaultPos": "chr13:25,051,748-25,071,333",
+          "active": 1,
+          "orderKey": 26175,
+          "genome": "Zebrafish",
+          "scientificName": "Danio rerio",
+          "htmlPath": "/gbdb/danRer6/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Wellcome Trust Sanger Institute, Zv8 assembly (CAAK00000000.5)",
+          "taxId": 7955
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer6/bigZips/danRer6.2bit",
@@ -683,7 +699,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_danRer5_chain",
-      "name": "danRer6 to danRer5 Chain",
+      "name": "danRer6 to Zebrafish (danRer5) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {
@@ -696,7 +712,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_danRer7_chain",
-      "name": "danRer6 to danRer7 Chain",
+      "name": "danRer6 to Zebrafish (danRer7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {
@@ -709,7 +725,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_gasAcu1_chain",
-      "name": "danRer6 to gasAcu1 Chain",
+      "name": "danRer6 to Stickleback (gasAcu1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {
@@ -722,7 +738,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_hg19_chain",
-      "name": "danRer6 to hg19 Chain",
+      "name": "danRer6 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {
@@ -735,7 +751,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_mm9_chain",
-      "name": "danRer6 to mm9 Chain",
+      "name": "danRer6 to Mouse (mm9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {
@@ -748,7 +764,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_oryLat2_chain",
-      "name": "danRer6 to oryLat2 Chain",
+      "name": "danRer6 to Medaka (oryLat2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {
@@ -761,7 +777,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_tetNig2_chain",
-      "name": "danRer6 to tetNig2 Chain",
+      "name": "danRer6 to Tetraodon (tetNig2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {
@@ -774,7 +790,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "danRer6_to_xenTro2_chain",
-      "name": "danRer6 to xenTro2 Chain",
+      "name": "danRer6 to X. tropicalis (xenTro2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["danRer6"],
       "adapter": {

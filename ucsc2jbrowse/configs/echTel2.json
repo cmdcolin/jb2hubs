@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "echTel2",
+      "displayName": "Tenrec (echTel2)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "echTel2-refseq",
+        "metadata": {
+          "description": "Nov. 2012 (Broad/echTel2)",
+          "nibPath": "/gbdb/echTel2",
+          "organism": "Tenrec",
+          "defaultPos": "JH980304:37472293-37479623",
+          "active": 1,
+          "orderKey": 20174,
+          "genome": "Tenrec",
+          "scientificName": "Echinops telfairi",
+          "htmlPath": "/gbdb/echTel2/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "Broad/EchTel2.0",
+          "taxId": 9371
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel2/bigZips/echTel2.2bit",
@@ -1738,7 +1754,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel2_to_hg19_chain",
-      "name": "echTel2 to hg19 Chain",
+      "name": "echTel2 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel2"],
       "adapter": {
@@ -1751,7 +1767,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel2_to_hg38_chain",
-      "name": "echTel2 to hg38 Chain",
+      "name": "echTel2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel2"],
       "adapter": {
@@ -1764,7 +1780,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel2_to_mm10_chain",
-      "name": "echTel2 to mm10 Chain",
+      "name": "echTel2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel2"],
       "adapter": {
@@ -1777,7 +1793,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "echTel2_to_mm39_chain",
-      "name": "echTel2 to mm39 Chain",
+      "name": "echTel2 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["echTel2"],
       "adapter": {

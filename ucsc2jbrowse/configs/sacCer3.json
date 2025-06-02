@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "sacCer3",
+      "displayName": "S. cerevisiae (sacCer3)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "sacCer3-refseq",
+        "metadata": {
+          "description": "Apr. 2011 (SacCer_Apr2011/sacCer3)",
+          "nibPath": "/gbdb/sacCer3",
+          "organism": "S. cerevisiae",
+          "defaultPos": "chrIV:765966-775965",
+          "active": 1,
+          "orderKey": 19013,
+          "genome": "S. cerevisiae",
+          "scientificName": "Saccharomyces cerevisiae",
+          "htmlPath": "/gbdb/sacCer3/html/description.html",
+          "hgNearOk": 1,
+          "hgPbOk": 0,
+          "sourceName": "Saccharomyces cerevisiae S288c assembly from Saccharomyces Genome Database (GCA_000146045.2)",
+          "taxId": 559292
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/bigZips/sacCer3.2bit",
@@ -1596,7 +1612,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "sacCer3_to_sacCer1_chain",
-      "name": "sacCer3 to sacCer1 Chain",
+      "name": "sacCer3 to S. cerevisiae (sacCer1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["sacCer3"],
       "adapter": {
@@ -1609,7 +1625,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "sacCer3_to_sacCer2_chain",
-      "name": "sacCer3 to sacCer2 Chain",
+      "name": "sacCer3 to S. cerevisiae (sacCer2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["sacCer3"],
       "adapter": {

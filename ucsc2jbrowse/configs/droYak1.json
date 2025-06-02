@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "droYak1",
+      "displayName": "D. yakuba (droYak1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "droYak1-refseq",
+        "metadata": {
+          "description": "Apr. 2004 (WUGSC 1.0/droYak1)",
+          "nibPath": "/gbdb/droYak1/nib",
+          "organism": "D. yakuba",
+          "defaultPos": "chr2L:827700-845800",
+          "active": 1,
+          "orderKey": 4135,
+          "genome": "D. yakuba",
+          "scientificName": "Drosophila yakuba",
+          "htmlPath": "/gbdb/droYak1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "WUSTL version 1.0",
+          "taxId": 7245
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak1/bigZips/droYak1.2bit",
@@ -369,7 +385,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droYak1_to_dm2_chain",
-      "name": "droYak1 to dm2 Chain",
+      "name": "droYak1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droYak1"],
       "adapter": {
@@ -382,7 +398,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "droYak1_to_droYak2_chain",
-      "name": "droYak1 to droYak2 Chain",
+      "name": "droYak1 to D. yakuba (droYak2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["droYak1"],
       "adapter": {

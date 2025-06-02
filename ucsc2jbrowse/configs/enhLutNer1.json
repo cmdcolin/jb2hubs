@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "enhLutNer1",
+      "displayName": "Southern sea otter (enhLutNer1)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "enhLutNer1-refseq",
+        "metadata": {
+          "description": "Jun. 2019 (ASM641071v1/enhLutNer1)",
+          "nibPath": "/gbdb/enhLutNer1",
+          "organism": "Southern sea otter",
+          "defaultPos": "QQQE01000156v1:7095823-7210817",
+          "active": 1,
+          "orderKey": 19259,
+          "genome": "Southern sea otter",
+          "scientificName": "Enhydra lutris nereis",
+          "htmlPath": "/gbdb/enhLutNer1/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "UCLA",
+          "taxId": 1049777
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/enhLutNer1/bigZips/enhLutNer1.2bit",
@@ -41,7 +57,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "enhLutNer1_to_hg38_chain",
-      "name": "enhLutNer1 to hg38 Chain",
+      "name": "enhLutNer1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["enhLutNer1"],
       "adapter": {
@@ -54,7 +70,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "enhLutNer1_to_mm10_chain",
-      "name": "enhLutNer1 to mm10 Chain",
+      "name": "enhLutNer1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["enhLutNer1"],
       "adapter": {

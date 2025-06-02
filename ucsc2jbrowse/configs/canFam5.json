@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "canFam5",
+      "displayName": "Dog (canFam5)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "canFam5-refseq",
+        "metadata": {
+          "description": "May 2019 (UMICH_Zoey_3.1/canFam5)",
+          "nibPath": "/gbdb/canFam5",
+          "organism": "Dog",
+          "defaultPos": "chr14:8085731-8092195",
+          "active": 1,
+          "orderKey": 4661,
+          "genome": "Dog",
+          "scientificName": "Canis lupus familiaris",
+          "htmlPath": "/gbdb/canFam5/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "University of Michigan",
+          "taxId": 9615
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam5/bigZips/canFam5.2bit",
@@ -1403,7 +1419,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam5_to_canFam3_chain",
-      "name": "canFam5 to canFam3 Chain",
+      "name": "canFam5 to Dog (canFam3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam5"],
       "adapter": {
@@ -1416,7 +1432,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam5_to_canFam4_chain",
-      "name": "canFam5 to canFam4 Chain",
+      "name": "canFam5 to Dog (canFam4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam5"],
       "adapter": {
@@ -1429,7 +1445,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam5_to_canFam6_chain",
-      "name": "canFam5 to canFam6 Chain",
+      "name": "canFam5 to Dog (canFam6) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam5"],
       "adapter": {
@@ -1442,7 +1458,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam5_to_hg38_chain",
-      "name": "canFam5 to hg38 Chain",
+      "name": "canFam5 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam5"],
       "adapter": {
@@ -1455,7 +1471,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam5_to_mm10_chain",
-      "name": "canFam5 to mm10 Chain",
+      "name": "canFam5 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam5"],
       "adapter": {
@@ -1468,7 +1484,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "canFam5_to_mm39_chain",
-      "name": "canFam5 to mm39 Chain",
+      "name": "canFam5 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["canFam5"],
       "adapter": {

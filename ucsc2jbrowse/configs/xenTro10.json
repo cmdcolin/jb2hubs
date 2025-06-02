@@ -2,9 +2,25 @@
   "assemblies": [
     {
       "name": "xenTro10",
+      "displayName": "X. tropicalis (xenTro10)",
       "sequence": {
         "type": "ReferenceSequenceTrack",
         "trackId": "xenTro10-refseq",
+        "metadata": {
+          "description": "Nov. 2019 (UCB_Xtro_10.0/xenTro10)",
+          "nibPath": "/gbdb/xenTro10",
+          "organism": "X. tropicalis",
+          "defaultPos": "chr9:21842126-21855658",
+          "active": 1,
+          "orderKey": 24035,
+          "genome": "X. tropicalis",
+          "scientificName": "Xenopus tropicalis",
+          "htmlPath": "/gbdb/xenTro10/html/description.html",
+          "hgNearOk": 0,
+          "hgPbOk": 0,
+          "sourceName": "University of California, Berkeley",
+          "taxId": 8364
+        },
         "adapter": {
           "type": "TwoBitAdapter",
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/bigZips/xenTro10.2bit",
@@ -1632,7 +1648,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "xenTro10_to_hg38_chain",
-      "name": "xenTro10 to hg38 Chain",
+      "name": "xenTro10 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["xenTro10"],
       "adapter": {
@@ -1645,7 +1661,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "xenTro10_to_mm10_chain",
-      "name": "xenTro10 to mm10 Chain",
+      "name": "xenTro10 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["xenTro10"],
       "adapter": {
@@ -1658,7 +1674,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "xenTro10_to_mm39_chain",
-      "name": "xenTro10 to mm39 Chain",
+      "name": "xenTro10 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["xenTro10"],
       "adapter": {
@@ -1671,7 +1687,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "xenTro10_to_xenTro7_chain",
-      "name": "xenTro10 to xenTro7 Chain",
+      "name": "xenTro10 to X. tropicalis (xenTro7) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["xenTro10"],
       "adapter": {
@@ -1684,7 +1700,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "xenTro10_to_xenTro9_chain",
-      "name": "xenTro10 to xenTro9 Chain",
+      "name": "xenTro10 to X. tropicalis (xenTro9) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["xenTro10"],
       "adapter": {
