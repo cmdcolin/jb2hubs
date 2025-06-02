@@ -4,7 +4,6 @@ export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 export PATH=$(pwd):$PATH
 mkdir -p ~/ucscResults
 
-time ./makeTrackHubConfigs.sh
 time ./createAssemblies.sh ~/ucsc/*
 time ./createTracksJsonForGoldenPath.sh ~/ucsc/*
 time ./createBedTracksForGoldenPath.sh ~/ucsc/*
@@ -13,6 +12,7 @@ time ./createGeneTracksForGoldenPath.sh ~/ucsc/*
 time ./createConfigsForGoldenPath.sh ~/ucsc/*
 time ./textIndexGoldenPath.sh ~/ucscResults/*
 time ./addMetadata.sh ~/ucscResults/*
+time ./makeTrackHubConfigs.sh
 time node src/makeUcscExtensions.ts ~/ucscResults
 
 for i in ~/ucsc/*; do
