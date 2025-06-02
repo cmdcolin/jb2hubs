@@ -10,7 +10,7 @@ interface BigDataTrack {
 
 type BigDataTracksJson = Record<string, BigDataTrack>
 
-const bigDataEntries = readJSON(process.argv[2]!) as BigDataTracksJson
+const bigDataEntries = readJSON(process.argv[2]!)
 const config = readConfig(process.argv[3]!)
 const base = 'https://hgdownload.soe.ucsc.edu'
 const asm0 = config.assemblies[0]!

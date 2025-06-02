@@ -26,7 +26,7 @@ export function replaceLink(s: string) {
 }
 
 export function readConfig(s: string) {
-  return readJSON(s) as JBrowseConfig
+  return readJSON(s)
 }
 
 export function decodeURIComponentNoThrow(uri: string) {

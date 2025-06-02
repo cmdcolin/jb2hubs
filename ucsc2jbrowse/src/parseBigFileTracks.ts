@@ -6,7 +6,7 @@ if (!process.argv[2]) {
   throw new Error(`usage: ${process.argv[0]} ${process.argv[1]} <tracks.json>`)
 }
 
-const tracks = readJSON(process.argv[2]) as Record<string, TrackDbEntry>
+const tracks = readJSON(process.argv[2])
 
 console.log(
   JSON.stringify(

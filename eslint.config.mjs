@@ -56,6 +56,13 @@ export default tseslint.config(
       ],
       'no-underscore-dangle': 0,
       curly: 'error',
+      'no-empty': 'off',
+      'no-console': [
+        'error',
+        {
+          allow: ['error', 'warn'],
+        },
+      ],
       semi: ['error', 'never'],
 
       '@typescript-eslint/restrict-template-expressions': 'off',
@@ -71,7 +78,6 @@ export default tseslint.config(
       '@typescript-eslint/no-unsafe-call': 'off',
       '@typescript-eslint/no-unsafe-return': 'off',
 
-      'no-empty': 'off',
       'import/no-unresolved': 'off',
       'import/no-cycle': 'error',
       'import/extensions': ['error', 'ignorePackages'],
