@@ -73,17 +73,17 @@ wget -q -O - "https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOv
     # assembly if it's an accession
     common_name=""
     if [[ $target_assembly_orig == GCF* || $target_assembly_orig == GCA* ]]; then
-      # Get the common name from the all.json file if it exists
       common_name=$(jq -r --arg acc "$target_assembly_orig" '.[] | select(.accession == $acc) | .commonName' "../website/hubJson2/all.json" | head -n 1)
-      echo $common_name
+    else
+      common_name=$(jq -r --arg assembly "$target_assembly" '.ucscGenomes[$assembly].organism // empty' ~/ucscResults/list.json)
     fi
 
     # Create a track ID and name
     track_id="${source_assembly}_to_${target_assembly}_chain"
     if [ -n "$common_name" ]; then
-      track_name="${source_assembly} to ${common_name} Chain (${target_assembly})"
+      track_name="${source_assembly} to ${common_name} (${target_assembly}) liftOver chain"
     else
-      track_name="${source_assembly} to ${target_assembly} Chain"
+      track_name="${source_assembly} to ${target_assembly} liftOver chain"
     fi
 
     # Create the JSON for this track

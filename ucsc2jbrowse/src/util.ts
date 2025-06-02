@@ -2,8 +2,8 @@ import fs from 'node:fs'
 
 import type { JBrowseConfig } from './types.ts'
 
-export function readJSON(f: string) {
-  return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
+export function readJSON<T>(f: string) {
+  return JSON.parse(fs.readFileSync(f, 'utf8')) as T
 }
 
 export function writeJSON(f: string, d: unknown) {

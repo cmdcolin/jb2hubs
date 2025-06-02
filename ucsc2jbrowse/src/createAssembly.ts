@@ -1,4 +1,7 @@
-const assemblyName = process.argv[2]
+import { readJSON } from './util.ts'
+
+const assemblyName = process.argv[2]!
+const list = process.argv[3]!
 
 const f = (j: string) =>
   `https://hgdownload.soe.ucsc.edu/goldenPath/${assemblyName}/bigZips/${j}`
@@ -24,15 +27,23 @@ try {
   hasCyto = true
 } catch (_e) {}
 
+interface GenomeRecord {
+  organism: string
+}
+
+const metadata = readJSON<{ ucscGenomes: Record<string, GenomeRecord> }>(list)
+  .ucscGenomes[assemblyName]
 console.log(
   JSON.stringify(
     {
       assemblies: [
         {
           name: assemblyName,
+          displayName: `${metadata?.organism} (${assemblyName})`,
           sequence: {
             type: 'ReferenceSequenceTrack',
             trackId: `${assemblyName}-refseq`,
+            metadata,
             adapter: {
               type: 'TwoBitAdapter',
               uri: f(`${assemblyName}.2bit`),

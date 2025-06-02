@@ -16,7 +16,7 @@ time ./addMetadata.sh ~/ucscResults/*
 time node src/makeUcscExtensions.ts ~/ucscResults
 
 for i in ~/ucsc/*; do
-  ./generateChainTracks.sh -a $(basename $i)
+  ./createChainTracks.sh -a $(basename $i)
 done
 time ./getFileListing.sh ~/ucscResults/
 

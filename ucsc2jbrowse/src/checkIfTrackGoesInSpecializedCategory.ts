@@ -11,6 +11,7 @@ const specializedParents = new Set([
   'gtexCov',
   'gnomadPext',
   'gdcCancer',
+  'affyExonProbeset',
 ])
 const specializedTypes = new Set(['pgSnp'])
 const specializedGroups = new Set(['denisova', 'neandertal'])

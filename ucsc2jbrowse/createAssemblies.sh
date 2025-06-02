@@ -12,7 +12,7 @@ process_assembly() {
   local OUTDIR=$OUT/$ASM
   local DB=$INDIR/database
   mkdir -p $OUTDIR
-  node src/createAssembly.ts $ASM >$OUTDIR/config.json
+  node src/createAssembly.ts $ASM $OUT/list.json >$OUTDIR/config.json
 }
 
 export -f process_assembly
