@@ -1,18 +1,17 @@
 import fs from 'fs'
 
-import { generateJBrowseConfigForAssemblyHub } from 'hubtools'
+import { generateJBrowseConfigForAssemblyHub, myfetchtext } from 'hubtools'
 
+const trackDbUrl = process.argv[2]!
+const hubFileText = await myfetchtext(trackDbUrl)
 fs.writeFileSync(
   process.argv[3]!,
   JSON.stringify(
     generateJBrowseConfigForAssemblyHub({
-      hubFileText: fs.readFileSync(process.argv[2]!, 'utf8'),
-      trackDbUrl:
-        'https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/hub.txt',
+      hubFileText,
+      trackDbUrl,
     }),
     null,
     2,
   ),
 )
-
-// TODO:add scoreColumn hack back

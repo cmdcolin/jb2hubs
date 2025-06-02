@@ -4,14 +4,16 @@ export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 export PATH=$(pwd):$PATH
 mkdir -p ~/ucscResults
 curl https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
+curl https://api.genome.ucsc.edu/list/ucscGenomes | jq . >../website/app/ucsc/list.json
 
 : ${OUT:=~/ucsc}
 : ${OUT2:=~/ucscAlt}
 
-curl https://api.genome.ucsc.edu/list/ucscGenomes | jq -r '.ucscGenomes | keys[]' | while
+# non-hub like entries
+cat ~/ucscResults/list.json | jq -r '.ucscGenomes | to_entries[] | select(.value.nibPath | (. != null and startswith("hub:") | not)) | .key' | while
   read p
 do
-  if [ "$p" = "cb1" ] || [ "$p" = "hs1" ]; then
+  if [ "$p" = "cb1" ]; then
     echo "Skipping $p genome"
     continue
   fi
