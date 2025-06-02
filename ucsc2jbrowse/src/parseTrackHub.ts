@@ -7,7 +7,7 @@ const hubFileText = await myfetchtext(trackDbUrl)
 fs.writeFileSync(
   process.argv[3]!,
   JSON.stringify(
-    generateJBrowseConfigForAssemblyHub({
+    await generateJBrowseConfigForAssemblyHub({
       hubFileText,
       trackDbUrl,
     }),

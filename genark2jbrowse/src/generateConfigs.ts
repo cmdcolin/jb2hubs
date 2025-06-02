@@ -22,7 +22,7 @@ const hubFileText = fs.readFileSync(
   'utf8',
 )
 
-const newConfig = generateJBrowseConfigForAssemblyHub({
+const newConfig = await generateJBrowseConfigForAssemblyHub({
   hubFileText,
   trackDbUrl: hubMeta.hubFileLocation,
 })

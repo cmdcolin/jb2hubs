@@ -3,7 +3,19 @@ import { SingleFileHub } from '@gmod/ucsc-hub'
 import { generateHubTracks } from './generateHubTracks.ts'
 import { resolve } from './util.ts'
 
-export function generateJBrowseConfigForAssemblyHub({
+async function hasAliases(url: string) {
+  let hasAliases = false
+  try {
+    const res = await fetch(url)
+    if (!res.ok) {
+      throw new Error('Error fetching chromAlias')
+    }
+    hasAliases = true
+  } catch (_e) {}
+  return hasAliases
+}
+
+export async function generateJBrowseConfigForAssemblyHub({
   hubFileText,
   trackDbUrl,
 }: {
@@ -45,7 +57,10 @@ export function generateJBrowseConfigForAssemblyHub({
         trackId: `${genomeName}-ReferenceSequenceTrack`,
         adapter: sequenceAdapter,
       },
-      ...(chromAliasBb
+      ...(chromAliasBb &&
+      (await hasAliases(
+        resolve(chromAliasBb.replace('.bb', '.txt'), trackDbUrl),
+      ))
         ? {
             refNameAliases: {
               adapter: {
