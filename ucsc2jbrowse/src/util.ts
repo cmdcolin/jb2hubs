@@ -2,6 +2,7 @@ import fs from 'node:fs'
 
 import type { JBrowseConfig } from './types.ts'
 
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
 export function readJSON<T>(f: string) {
   return JSON.parse(fs.readFileSync(f, 'utf8')) as T
 }
@@ -26,7 +27,7 @@ export function replaceLink(s: string) {
 }
 
 export function readConfig(s: string) {
-  return readJSON(s)
+  return readJSON<JBrowseConfig>(s)
 }
 
 export function decodeURIComponentNoThrow(uri: string) {

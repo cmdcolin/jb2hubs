@@ -1,6 +1,8 @@
 import { readConfig, readJSON } from './util.ts'
 
-const tracks = readJSON(process.argv[2]!)
+const tracks = readJSON<
+  Record<string, { tableName: string; url?: string; html?: string }>
+>(process.argv[2]!)
 const config = readConfig(process.argv[3]!)
 
 const a = new Set(

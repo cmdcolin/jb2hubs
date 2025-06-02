@@ -6,7 +6,7 @@ import { readConfig, readJSON, replaceLink, splitOnFirst } from './util.ts'
 import type { TrackDbEntry } from './types.ts'
 
 const config = readConfig(process.argv[2]!)
-const tracksDb = readJSON(process.argv[3]!)
+const tracksDb = readJSON<Record<string, TrackDbEntry>>(process.argv[3]!)
 console.log(
   JSON.stringify(
     {
