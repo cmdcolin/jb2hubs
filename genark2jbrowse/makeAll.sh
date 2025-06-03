@@ -14,7 +14,7 @@ fetch_ncbi_data() {
   local file="$1"
   local dir=$(dirname "$file")
   local id=$(basename "$dir")
-  if [ ! -f "$dir/ncbi.json" ] || [ -n "$REPROCESS" ]; then
+  if [ ! -f "$dir/ncbi.json" ] || [ -n "$REPROCESS_NCBI" ]; then
     echo "$id"
     (esearch -db assembly -query "$id" </dev/null | esummary -mode json) >"$dir/ncbi.json"
     sleep 0.1
@@ -41,7 +41,7 @@ process_gff_file() {
 
   # swaps start and end if start > end, could be worth investigating more but a
   # number of NCBI GFF have this
-  if [ ! -f "bgz/$filename" ] || [ -n "$REPROCESS" ]; then
+  if [ ! -f "bgz/$filename" ] || [ -n "$REPROCESS_BGZ" ]; then
     pigz -dc "$input_file" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($4 >= $5) {temp=$4; $4=$5; $5=temp} print}' >"${input_file%.gz}"
     jbrowse sort-gff "${input_file%.gz}" | bgzip -@8 >"bgz/$filename"
     tabix -C "bgz/$filename"
@@ -71,7 +71,7 @@ add_track_and_text_index() {
   local result="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
   jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
-  if [ -n "$REPROCESS" ]; then
+  if [ -n "$REPROCESS_TEXT" ]; then
     jbrowse text-index --force --out "$result" --tracks ncbiGff
   else
     jbrowse text-index --out "$result" --tracks ncbiGff
