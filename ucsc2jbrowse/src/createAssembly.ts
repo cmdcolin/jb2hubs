@@ -1,4 +1,5 @@
 import { readJSON } from './util.ts'
+import { inflate } from 'pako'
 
 const assemblyName = process.argv[2]!
 const list = process.argv[3]!
@@ -24,7 +25,15 @@ try {
   if (!res.ok) {
     throw new Error('Error fetching cytobands')
   }
-  hasCyto = true
+  const ret = await res.arrayBuffer()
+  const text = inflate(ret)
+  const txt = new TextDecoder().decode(text)
+  const allGneg = txt
+    .split('\n')
+    .map(f => f.trim())
+    .filter(f => !!f)
+    .every(line => line.split('\t')[4] === 'gneg')
+  hasCyto = allGneg ? false : true
 } catch (_e) {}
 
 interface GenomeRecord {
