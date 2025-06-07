@@ -16,7 +16,11 @@ export default function Page({ title, raw }: { title: string; raw: string }) {
       <h1>GenArk hubs - {title}</h1>
       <Suspense>
         <DataTable
-          rows={readJSON(`${process.cwd()}/processedHubJson/${raw}.json`) as Assemblies}
+          rows={
+            readJSON(
+              `${process.cwd()}/processedHubJson/${raw}.json`,
+            ) as Assemblies
+          }
         />
       </Suspense>
     </div>

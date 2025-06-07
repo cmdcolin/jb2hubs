@@ -127,7 +127,7 @@ visibility pack
 type bigBed
 dragAndDrop subTracks
 allButtonPair on
-dataVersion NCBI Zalophus californianus Annotation Release 101 (2020-08-06)
+dataVersion NCBI Zalophus californianus Annotation Release 101 (2022-09-28)
 html html/GCF_009762305.2_mZalCal1.pri.v2.refSeqComposite
 priority 2
 
@@ -136,7 +136,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -154,7 +154,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -171,7 +171,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -355,8 +355,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainCanFam3
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewchain on
         subGroups view=chain species=s000 chainType=c00
-        shortLabel canFam3 Chain
-        longLabel canFam3/canFam3 () Chained Alignments
+        shortLabel Dog/canFam3 Chain
+        longLabel Dog/canFam3/canFam3 (Sep. 2011) Chained Alignments
         type bigChain canFam3
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainCanFam3.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainCanFam3Link.bb
@@ -367,8 +367,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainSynCanFam3
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewSynTen off
         subGroups view=synten species=s000 chainType=c01
-        shortLabel canFam3 synChain
-        longLabel canFam3/canFam3 () Chained Alignments
+        shortLabel Dog/canFam3 synChain
+        longLabel Dog/canFam3/canFam3 (Sep. 2011) Chained Alignments
         type bigChain canFam3
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainSynCanFam3.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainSynCanFam3Link.bb
@@ -379,8 +379,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainRBestCanFam3
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewRBest off
         subGroups view=rbest species=s000 chainType=c02
-        shortLabel canFam3 rbChain
-        longLabel canFam3/canFam3 () Chained Alignments
+        shortLabel Dog/canFam3 rbChain
+        longLabel Dog/canFam3/canFam3 (Sep. 2011) Chained Alignments
         type bigChain canFam3
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainRBestCanFam3.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainRBestCanFam3Link.bb
@@ -391,8 +391,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainLiftOverCanFam3
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewLiftOver off
         subGroups view=liftover species=s000 chainType=c03
-        shortLabel canFam3 loChain
-        longLabel canFam3/canFam3 () Chained Alignments
+        shortLabel Dog/canFam3 loChain
+        longLabel Dog/canFam3/canFam3 (Sep. 2011) Chained Alignments
         type bigChain canFam3
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainLiftOverCanFam3.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainLiftOverCanFam3Link.bb
@@ -403,8 +403,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainHg38
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewchain off
         subGroups view=chain species=s001 chainType=c00
-        shortLabel hg38 Chain
-        longLabel hg38/hg38 () Chained Alignments
+        shortLabel Human/hg38 Chain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainHg38.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainHg38Link.bb
@@ -415,8 +415,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainSynHg38
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewSynTen off
         subGroups view=synten species=s001 chainType=c01
-        shortLabel hg38 synChain
-        longLabel hg38/hg38 () Chained Alignments
+        shortLabel Human/hg38 synChain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainSynHg38.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainSynHg38Link.bb
@@ -427,8 +427,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainRBestHg38
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewRBest off
         subGroups view=rbest species=s001 chainType=c02
-        shortLabel hg38 rbChain
-        longLabel hg38/hg38 () Chained Alignments
+        shortLabel Human/hg38 rbChain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainRBestHg38.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainRBestHg38Link.bb
@@ -439,8 +439,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track chainLiftOverHg38
         parent GCF_009762305.2_mZalCal1.pri.v2ChainNetViewLiftOver off
         subGroups view=liftover species=s001 chainType=c03
-        shortLabel hg38 loChain
-        longLabel hg38/hg38 () Chained Alignments
+        shortLabel Human/hg38 loChain
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainLiftOverHg38.bb
         linkDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.chainLiftOverHg38Link.bb
@@ -457,8 +457,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track netCanFam3
         parent GCF_009762305.2_mZalCal1.pri.v2MafNetViewnet off
         subGroups view=align species=s000 chainType=c04
-        shortLabel canFam3 mafNet
-        longLabel canFam3/canFam3 () Chained Alignments
+        shortLabel Dog/canFam3 mafNet
+        longLabel Dog/canFam3/canFam3 (Sep. 2011) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.canFam3.net.bb
         summary bbi/GCF_009762305.2_mZalCal1.pri.v2.canFam3.net.summary.bb
@@ -469,8 +469,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track synNetCanFam3
         parent GCF_009762305.2_mZalCal1.pri.v2MafNetViewnet off
         subGroups view=align species=s000 chainType=c05
-        shortLabel canFam3 synNet
-        longLabel canFam3/canFam3 () Chained Alignments
+        shortLabel Dog/canFam3 synNet
+        longLabel Dog/canFam3/canFam3 (Sep. 2011) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.canFam3.synNet.bb
         summary bbi/GCF_009762305.2_mZalCal1.pri.v2.canFam3.synNet.summary.bb
@@ -481,8 +481,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track rbestNetCanFam3
         parent GCF_009762305.2_mZalCal1.pri.v2MafNetViewnet off
         subGroups view=align species=s000 chainType=c06
-        shortLabel canFam3 rbestNet
-        longLabel canFam3/canFam3 () Chained Alignments
+        shortLabel Dog/canFam3 rbestNet
+        longLabel Dog/canFam3/canFam3 (Sep. 2011) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.canFam3.rbestNet.bb
         summary bbi/GCF_009762305.2_mZalCal1.pri.v2.canFam3.rbestNet.summary.bb
@@ -493,8 +493,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track netHg38
         parent GCF_009762305.2_mZalCal1.pri.v2MafNetViewnet off
         subGroups view=align species=s001 chainType=c04
-        shortLabel hg38 mafNet
-        longLabel hg38/hg38 () Chained Alignments
+        shortLabel Human/hg38 mafNet
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.hg38.net.bb
         summary bbi/GCF_009762305.2_mZalCal1.pri.v2.hg38.net.summary.bb
@@ -505,8 +505,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track synNetHg38
         parent GCF_009762305.2_mZalCal1.pri.v2MafNetViewnet off
         subGroups view=align species=s001 chainType=c05
-        shortLabel hg38 synNet
-        longLabel hg38/hg38 () Chained Alignments
+        shortLabel Human/hg38 synNet
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.hg38.synNet.bb
         summary bbi/GCF_009762305.2_mZalCal1.pri.v2.hg38.synNet.summary.bb
@@ -517,8 +517,8 @@ html html/GCF_009762305.2_mZalCal1.pri.v2.chainNet
         track rbestNetHg38
         parent GCF_009762305.2_mZalCal1.pri.v2MafNetViewnet off
         subGroups view=align species=s001 chainType=c06
-        shortLabel hg38 rbestNet
-        longLabel hg38/hg38 () Chained Alignments
+        shortLabel Human/hg38 rbestNet
+        longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_009762305.2_mZalCal1.pri.v2.hg38.rbestNet.bb
         summary bbi/GCF_009762305.2_mZalCal1.pri.v2.hg38.rbestNet.summary.bb

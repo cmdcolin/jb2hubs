@@ -235,7 +235,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -266,7 +266,7 @@
         "shortLabel": "RefSeq Curated",
         "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -296,7 +296,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -376,6 +376,34 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/001/635/GCF_000001635.27/bbi/GCF_000001635.27_GRCm39.bigPsl.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqSelect",
+        "parent": "refSeqComposite off",
+        "priority": "7",
+        "type": "bigGenePred",
+        "shortLabel": "RefSeq Select",
+        "longLabel": "NCBI RefSeq/MANE Select: one representative transcript per protein-coding gene",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "color": "20,20,160",
+        "labelFields": "name,geneName,geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000001635.27_GRCm39.ncbiRefSeqSelectCurated.ix",
+        "bigDataUrl": "bbi/GCF_000001635.27_GRCm39.ncbiRefSeqSelectCurated.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons"
+      },
+      "category": ["NCBI RefSeq"],
+      "trackId": "GCF_000001635.27-ncbiRefSeqSelect",
+      "description": "NCBI RefSeq/MANE Select: one representative transcript per protein-coding gene",
+      "assemblyNames": ["GCF_000001635.27"],
+      "name": "RefSeq Select",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/001/635/GCF_000001635.27/bbi/GCF_000001635.27_GRCm39.ncbiRefSeqSelectCurated.bb"
       }
     },
     {
