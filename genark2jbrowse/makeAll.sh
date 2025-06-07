@@ -8,6 +8,9 @@ time node src/downloadHubList.ts
 # Download actual hub.txt files
 time node src/downloadHubs.ts
 
+# Process hubJson
+time node src/processHubJson.ts
+
 # Write info about assembly from NCBI to ncbi.json in hubs folder
 # Define function to fetch NCBI data
 fetch_ncbi_data() {
@@ -32,7 +35,7 @@ echo "Generate configs"
 time fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
 
 echo "Download NCBI GFF"
-time cat hubJson2/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
+time cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
 
 # process NCBI GFF
 process_gff_file() {

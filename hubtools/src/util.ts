@@ -4,12 +4,20 @@ export function resolve(uri: string, baseUri: string | URL) {
   return new URL(uri, baseUri).href
 }
 
-export async function myfetchtext(url: string) {
+export async function myfetch(url: string) {
   const res = await fetch(url)
   if (!res.ok) {
     throw new Error(`HTTP ${res.status} fetching ${url}`)
   }
+  return res
+}
+export async function myfetchtext(url: string) {
+  const res = await myfetch(url)
   return res.text()
+}
+export async function myfetchjson(url: string) {
+  const res = await myfetch(url)
+  return res.json()
 }
 
 export function makeLoc(

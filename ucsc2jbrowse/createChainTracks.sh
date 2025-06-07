@@ -69,11 +69,11 @@ wget -q -O - "https://hgdownload.soe.ucsc.edu/goldenPath/$SOURCE_ASSEMBLY/liftOv
       target_assembly="$(echo ${target_assembly_orig:0:1} | tr '[:upper:]' '[:lower:]')${target_assembly_orig:1}"
     fi
 
-    # Read the hubJson2/all.json file to get the common name for the target
+    # Read the processedHubJson/all.json file to get the common name for the target
     # assembly if it's an accession
     common_name=""
     if [[ $target_assembly_orig == GCF* || $target_assembly_orig == GCA* ]]; then
-      common_name=$(jq -r --arg acc "$target_assembly_orig" '.[] | select(.accession == $acc) | .commonName' "../website/hubJson2/all.json" | head -n 1)
+      common_name=$(jq -r --arg acc "$target_assembly_orig" '.[] | select(.accession == $acc) | .commonName' "../website/processedHubJson/all.json" | head -n 1)
     else
       common_name=$(jq -r --arg assembly "$target_assembly" '.ucscGenomes[$assembly].organism // empty' ~/ucscResults/list.json)
     fi
