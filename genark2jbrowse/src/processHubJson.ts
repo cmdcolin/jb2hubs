@@ -11,7 +11,7 @@ for (const file of files) {
   const source = path.basename(file, '.json')
   if (source !== 'all') {
     entries = entries.concat(
-      (readJSON(file) as { data: UCSCGenArkAssemblyEntry[] }).data.map(t => ({
+      readJSON<{ data: UCSCGenArkAssemblyEntry[] }>(file).data.map(t => ({
         ...t,
         source,
       })),
@@ -25,8 +25,8 @@ for (const file of files) {
     fs.writeFileSync(
       'processedHubJson/' + source + '.json',
       JSON.stringify(
-        (readJSON(file) as { data: UCSCGenArkAssemblyEntry[] }).data.map(
-          entry => parseAssemblyEntry({ entry }),
+        readJSON<{ data: UCSCGenArkAssemblyEntry[] }>(file).data.map(entry =>
+          parseAssemblyEntry({ entry }),
         ),
         null,
         2,

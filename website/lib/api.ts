@@ -1,5 +1,5 @@
 import path from 'path'
-import { readJSON, tryAndReadJSON } from '../app/components/util'
+import { AssemblyData, readJSON, tryAndReadJSON } from '../app/components/util'
 
 function timer<T>(label: string, cb: () => T): T {
   console.time(label)
@@ -10,19 +10,13 @@ function timer<T>(label: string, cb: () => T): T {
 
 let j = 0
 export async function getAccessionById(accession: string) {
-  const [base, rest] = accession.split('_')
-  const [b1, b2, b3] = rest!.match(/.{1,3}/g)!
-  const folder = `hubs/${base}/${b1}/${b2}/${b3}/${accession}`
-
-  console.log(path.join(process.cwd(), folder, 'description.json'))
-  return timer(`getAccessionById ${j++} ${accession}`, () => ({
-    ...readJSON<{ accession: string; scientificName: string }>(
-      path.join(process.cwd(), folder, 'meta.json'),
-    ),
-    ...tryAndReadJSON<{ description: string }>(
-      path.join(process.cwd(), folder, 'description.json'),
-    ),
-  }))
+  return timer(`getAccessionById ${j++} ${accession}`, () =>
+    readJSON<AssemblyData[]>(
+      path.join(process.cwd(), 'processedHubJson', 'all.json'),
+    )
+      .filter(f => !!f)
+      .find(f => f.accession === accession),
+  )
 }
 let i = 0
 export async function getAllAccessions() {

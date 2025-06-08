@@ -1,4 +1,5 @@
 import { Suspense } from 'react'
+import path from 'path'
 
 import Link from 'next/link'
 
@@ -16,11 +17,11 @@ export default function Page({ title, raw }: { title: string; raw: string }) {
       <h1>GenArk hubs - {title}</h1>
       <Suspense>
         <DataTable
-          rows={
+          rows={(
             readJSON(
-              `${process.cwd()}/processedHubJson/${raw}.json`,
+              path.join(process.cwd(), 'processedHubJson', `${raw}.json`),
             ) as Assemblies
-          }
+          ).filter(f => !!f)}
         />
       </Suspense>
     </div>
