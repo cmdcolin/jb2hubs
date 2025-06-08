@@ -20,6 +20,15 @@ export async function tryAndReadJSON<T>(f: string) {
     return {}
   }
 }
+
+export async function tryAndReadText(f: string) {
+  try {
+    return await readFile(f, 'utf8')
+  } catch (e) {
+    return undefined
+  }
+}
+
 export function parseAssembliesListJson({
   data,
 }: {

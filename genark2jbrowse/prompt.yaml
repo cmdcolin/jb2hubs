@@ -1,0 +1,11 @@
+prompt: >
+    Does {name} have a wikipedia page? If you know it definitely does, repond with "VALID: {name}".
+    If it is a relatively obscure species, extract the genus level instead
+    Otherwise respond "INVALID: {reason}"
+
+    Examples:
+    - "Panthera leo" -> "VALID: Panthera leo"
+    - "Canis lupis" -> "CORRECTED: Canis lupus"
+    - "Acanthamoeba lugdunensis" -> "CORRECTED: Acanthamoeba"
+
+    Scientific name to check: $input
