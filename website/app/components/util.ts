@@ -7,12 +7,16 @@ import type { UCSCGenArkAssemblyEntry } from 'hubtools'
 function notEmpty<T>(value: T | null | undefined): value is T {
   return value !== null && value !== undefined
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
 export function readJSON<T>(f: string) {
   return JSON.parse(fs.readFileSync(f, 'utf8')) as T
 }
+
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
 export function tryAndReadJSON<T>(f: string) {
   try {
-    return readJSON(f) as T
+    return readJSON<T>(f)
   } catch (e) {
     return {}
   }

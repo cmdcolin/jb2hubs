@@ -1,5 +1,6 @@
-import fs from 'fs'
 import { execSync } from 'child_process'
+import fs from 'fs'
+
 import slugify from 'slugify'
 
 const model = 'claude-3-haiku'

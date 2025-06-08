@@ -1,7 +1,9 @@
 import path from 'path'
+
+import Link from 'next/link'
+
 import { getAccessionById, getAllAccessions } from '../../../lib/api'
 import { tryAndReadJSON } from '../../components/util'
-import Link from 'next/link'
 
 function Link2({ href }: { href: string }) {
   return <Link href={href}>{href}</Link>
@@ -83,9 +85,6 @@ export default async function Page({
         <div>
           NCBI browser: <Link2 href={ret.ncbiBrowserLink} />
         </div>
-      </div>
-      <div>
-        <h1>Data downloads</h1>
       </div>
     </div>
   )

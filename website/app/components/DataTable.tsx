@@ -2,7 +2,7 @@
 
 import { useMemo } from 'react'
 
-import { Download, Star, X } from 'lucide-react'
+import { Star, X } from 'lucide-react'
 import {
   parseAsBoolean,
   parseAsString,
@@ -13,6 +13,7 @@ import {
 import './table.css'
 
 import type { AssemblyData } from './util'
+
 import Link from 'next/link'
 
 const statusOrder = {
@@ -235,16 +236,19 @@ export default function DataTable({
                   field: 'ucscBrowserLink',
                   title: 'UCSC',
                   sortable: false,
+                  extra: true,
                 },
                 {
                   field: 'igvBrowserLink',
                   title: 'IGV',
                   sortable: false,
+                  extra: true,
                 },
                 {
                   field: 'ncbiBrowserLink',
                   title: 'NCBI GDV',
                   sortable: false,
+                  extra: true,
                 },
                 {
                   field: 'assemblyStatus',
@@ -284,16 +288,6 @@ export default function DataTable({
                   title: 'Taxonomy ID',
                   sortable: true,
                   extra: true,
-                },
-                {
-                  field: 'ucscDataLink',
-                  title: 'UCSC download',
-                  sortable: false,
-                },
-                {
-                  field: 'ncbiLink',
-                  title: 'NCBI portal',
-                  sortable: false,
                 },
               ]
                 .filter(column => showAllColumns || !column.extra)
@@ -351,16 +345,19 @@ export default function DataTable({
                     field: 'ucscBrowserLink',
                     title: 'UCSC',
                     sortable: false,
+                    extra: true,
                   },
                   {
                     field: 'igvBrowserLink',
                     title: 'IGV',
                     sortable: false,
+                    extra: true,
                   },
                   {
                     field: 'ncbiBrowserLink',
                     title: 'NCBI GDV',
                     sortable: false,
+                    extra: true,
                   },
                   {
                     field: 'assemblyStatus',
@@ -401,16 +398,6 @@ export default function DataTable({
                     sortable: true,
                     extra: true,
                   },
-                  {
-                    field: 'ucscDataLink',
-                    title: 'UCSC download',
-                    sortable: false,
-                  },
-                  {
-                    field: 'ncbiLink',
-                    title: 'NCBI portal',
-                    sortable: false,
-                  },
                 ]
                   .filter(column => showAllColumns || !column.extra)
                   .map(column => {
@@ -449,11 +436,6 @@ export default function DataTable({
                             >
                               JBrowse
                             </a>
-                            {showAllColumns ? (
-                              <a download href={row.jbrowseConfig}>
-                                <Download className="w-[1em] h-[1em]" />
-                              </a>
-                            ) : null}
                           </td>
                         )
                       }
@@ -548,32 +530,7 @@ export default function DataTable({
                           </td>
                         )
                       }
-                      case 'ucscDataLink': {
-                        return (
-                          <td key={field}>
-                            <a
-                              target="_blank"
-                              href={row.ucscDataLink}
-                              rel="noopener noreferrer"
-                            >
-                              UCSC
-                            </a>
-                          </td>
-                        )
-                      }
-                      case 'ncbiLink': {
-                        return (
-                          <td key={field}>
-                            <a
-                              rel="noopener noreferrer"
-                              target="_blank"
-                              href={row.ncbiLink}
-                            >
-                              NCBI
-                            </a>
-                          </td>
-                        )
-                      }
+
                       default: {
                         // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
                         return <td key={field}>{String(row[field] ?? '')}</td>

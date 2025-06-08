@@ -1,5 +1,6 @@
 import path from 'path'
-import { AssemblyData, readJSON, tryAndReadJSON } from '../app/components/util'
+
+import { AssemblyData, readJSON } from '../app/components/util.ts'
 
 function timer<T>(label: string, cb: () => T): T {
   console.time(label)
@@ -21,7 +22,7 @@ export async function getAccessionById(accession: string) {
 let i = 0
 export async function getAllAccessions() {
   return timer(`getAllAccessions ${i++}`, () =>
-    readJSON<{ accession: string; speciesName: string }[]>(
+    readJSON<({ accession: string; speciesName: string } | null)[]>(
       path.join(process.cwd(), 'processedHubJson', 'all.json'),
     )
       .filter(f => !!f)
