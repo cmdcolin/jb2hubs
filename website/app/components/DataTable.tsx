@@ -2,6 +2,14 @@
 
 import { useMemo } from 'react'
 
+import {
+  createColumnHelper,
+  flexRender,
+  getCoreRowModel,
+  getSortedRowModel,
+  useReactTable,
+  type SortingState,
+} from '@tanstack/react-table'
 import { Star, X } from 'lucide-react'
 import Link from 'next/link'
 import {
@@ -32,20 +40,21 @@ const filterCategories = {
 }
 
 // List accepted values
-const sortOrder = ['ASC', 'DESC', ''] as const
+const sortOrder = ['asc', 'desc', ''] as const
 
 export default function DataTable({
   rows,
 }: {
   rows: NonNullable<AssemblyData>[]
 }) {
+  const [sortState, setSortState] = useQueryState(
+    'sort',
+    parseAsString.withDefault(''),
+  )
+
   const [sortDirectionPre, setSortDirection] = useQueryState(
     'dir',
     parseAsStringLiteral(sortOrder),
-  )
-  const [sortColumn, setSortColumn] = useQueryState(
-    'sort',
-    parseAsString.withDefault(''),
   )
 
   const [filterOption, setFilterOption] = useQueryState(
@@ -58,7 +67,35 @@ export default function DataTable({
     parseAsBoolean.withDefault(false),
   )
 
-  const sortDirection = sortDirectionPre ?? ''
+  // Convert URL query params to TanStack table sorting state
+  const sorting = useMemo<SortingState>(() => {
+    if (sortState && sortDirectionPre) {
+      return [
+        {
+          id: sortState,
+          desc: sortDirectionPre === 'desc',
+        },
+      ]
+    }
+    return []
+  }, [sortState, sortDirectionPre])
+
+  // Update URL query params when sorting changes
+  const onSortingChange = (updater: any) => {
+    const newSorting = updater instanceof Function ? updater(sorting) : updater
+
+    if (newSorting.length === 0) {
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      setSortState('')
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      setSortDirection('')
+    } else {
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      setSortState(newSorting[0].id)
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      setSortDirection(newSorting[0].desc ? 'desc' : 'asc')
+    }
+  }
 
   const filteredRows = useMemo(() => {
     switch (filterOption) {
@@ -83,61 +120,193 @@ export default function DataTable({
     }
   }, [rows, filterOption])
 
-  const sortedRows = useMemo(() => {
-    return sortDirection
-      ? filteredRows.toSorted((a, b) => {
-          // Special handling for assemblyStatus column
-          const flipper = sortDirection === 'ASC' ? 1 : -1
-          if (sortColumn === 'assemblyStatus') {
-            return (
-              (statusOrder[a.assemblyStatus as keyof typeof statusOrder] -
-                statusOrder[b.assemblyStatus as keyof typeof statusOrder]) *
-              flipper
-            )
-          } else {
-            const aValue = a[sortColumn as keyof AssemblyData] as
-              | string
-              | number
-              | undefined
-            const bValue = b[sortColumn as keyof AssemblyData] as
-              | string
-              | number
-              | undefined
-            return (
-              (typeof aValue === 'number' && typeof bValue === 'number'
-                ? aValue - bValue
-                : String(aValue ?? '').localeCompare(String(bValue ?? ''))) *
-              flipper
-            )
-          }
-        })
-      : filteredRows
-  }, [filteredRows, sortColumn, sortDirection])
+  // Define columns for TanStack Table
+  const columnHelper = createColumnHelper<NonNullable<AssemblyData>>()
 
-  const handleSort = (columnKey: string) => {
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    setSortColumn(columnKey)
-    if (sortColumn === columnKey) {
+  const columns = useMemo(
+    () => [
+      columnHelper.accessor('commonName', {
+        header: () => (
+          <div>
+            <div style={{ float: 'left' }}>Common Name</div>
+            <div style={{ float: 'right' }}>
+              <div>
+                <Star
+                  fill="orange"
+                  strokeWidth={0}
+                  className="w-[1em] h-[1em]"
+                />{' '}
+                == &quot;designated reference&quot;
+              </div>
+              <div>
+                <X stroke="red" className="w-[1em] h-[1em]" /> == &quot;refseq
+                suppressed&quot;
+              </div>
+            </div>
+          </div>
+        ),
+        cell: (info: any) => (
+          <>
+            {info.getValue()}{' '}
+            {info.row.original.ncbiRefSeqCategory === 'reference genome' ? (
+              <Star fill="orange" strokeWidth={0} className="w-[1em] h-[1em]" />
+            ) : null}
+            {info.row.original.suppressed ? (
+              <X stroke="red" className="w-[1em] h-[1em]" />
+            ) : null}
+          </>
+        ),
+        enableSorting: true,
+      }),
+      columnHelper.accessor('jbrowseLink', {
+        header: 'JBrowse',
+        cell: (info: any) => (
+          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+            JBrowse
+          </a>
+        ),
+        enableSorting: false,
+      }),
+      columnHelper.accessor('ucscBrowserLink', {
+        header: 'UCSC',
+        cell: (info: any) => (
+          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+            UCSC
+          </a>
+        ),
+        enableSorting: false,
+        meta: { extra: true },
+      }),
+      columnHelper.accessor('igvBrowserLink', {
+        header: 'IGV',
+        cell: (info: any) => (
+          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+            IGV
+          </a>
+        ),
+        enableSorting: false,
+        meta: { extra: true },
+      }),
+      columnHelper.accessor('ncbiBrowserLink', {
+        header: 'NCBI GDV',
+        cell: (info: any) => (
+          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+            NCBI
+          </a>
+        ),
+        enableSorting: false,
+        meta: { extra: true },
+      }),
+      columnHelper.accessor('assemblyStatus', {
+        header: 'Assembly status',
+        cell: (info: any) => info.getValue(),
+        enableSorting: true,
+        sortingFn: (rowA: any, rowB: any) => {
+          const a =
+            statusOrder[
+              rowA.original.assemblyStatus as keyof typeof statusOrder
+            ] || 999
+          const b =
+            statusOrder[
+              rowB.original.assemblyStatus as keyof typeof statusOrder
+            ] || 999
+          return a - b
+        },
+      }),
+      columnHelper.accessor('submitterOrg', {
+        header: 'Submitter',
+        cell: (info: any) => info.getValue(),
+        enableSorting: false,
+        meta: { extra: true },
+      }),
+      columnHelper.accessor('seqReleaseDate', {
+        header: 'Release date',
+        cell: (info: any) => info.getValue().replace('00:00', ''),
+        enableSorting: true,
+      }),
+      columnHelper.accessor('scientificName', {
+        header: 'Scientific name',
+        cell: (info: any) => (
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+            }}
+          >
+            <div>{info.getValue()}</div>
+          </div>
+        ),
+        enableSorting: true,
+      }),
+      columnHelper.accessor('ncbiAssemblyName', {
+        header: 'NCBI assembly name',
+        cell: (info: any) => info.getValue(),
+        enableSorting: true,
+      }),
+      columnHelper.accessor('accession', {
+        header: 'Accession',
+        cell: (info: any) => (
+          <Link
+            target="_blank"
+            href={`/accession/${info.getValue()}`}
+            rel="noopener noreferrer"
+          >
+            {info.getValue()}
+          </Link>
+        ),
+        enableSorting: true,
+      }),
+      columnHelper.accessor('taxonId', {
+        header: 'Taxonomy ID',
+        cell: (info: any) => (
+          <a
+            href={`https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=${info.getValue()}&lvl=3&p=nuccore&lin=f&keep=1&srchmode=1&unlock`}
+          >
+            {info.getValue()}
+          </a>
+        ),
+        enableSorting: true,
+        meta: { extra: true },
+      }),
+    ],
+    [],
+  )
+
+  // Create table instance
+  const table = useReactTable({
+    data: filteredRows,
+    columns: columns.filter(col => showAllColumns || !(col.meta as any)?.extra),
+    state: {
+      sorting,
+    },
+    onSortingChange,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+  })
+
+  // Function to handle sort
+  const handleSort = (columnId: string) => {
+    if (sortState === columnId) {
       // Toggle direction if already sorting by this column
-      if (sortDirection === 'ASC') {
+      if (sortDirectionPre === 'asc') {
         // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        setSortDirection('DESC')
-      } else if (sortDirection === 'DESC') {
+        setSortDirection('desc')
+      } else if (sortDirectionPre === 'desc') {
         // eslint-disable-next-line @typescript-eslint/no-floating-promises
         setSortDirection('')
+        // eslint-disable-next-line @typescript-eslint/no-floating-promises
+        setSortState('')
       } else {
         // eslint-disable-next-line @typescript-eslint/no-floating-promises
-        setSortDirection('ASC')
+        setSortDirection('asc')
       }
     } else {
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      setSortDirection('ASC')
+      setSortState(columnId)
+      // eslint-disable-next-line @typescript-eslint/no-floating-promises
+      setSortDirection('asc')
     }
   }
-
-  const map = { ASC: '↑', DESC: '↓' }
-  const getSortIndicator = (columnKey: string) =>
-    sortColumn === columnKey ? map[sortDirection as keyof typeof map] : ''
 
   return (
     <>
@@ -201,339 +370,44 @@ export default function DataTable({
       <div>
         <table>
           <thead>
-            <tr>
-              {[
-                {
-                  field: 'commonName',
-                  title: (
-                    <div>
-                      <div style={{ float: 'left' }}>Common Name</div>
-                      <div style={{ float: 'right' }}>
-                        <div>
-                          <Star
-                            fill="orange"
-                            strokeWidth={0}
-                            className="w-[1em] h-[1em]"
-                          />{' '}
-                          == &quot;designated reference&quot;
-                        </div>
-                        <div>
-                          <X stroke="red" className="w-[1em] h-[1em]" /> ==
-                          &quot;refseq suppressed&quot;
-                        </div>
-                      </div>
-                    </div>
-                  ),
-                  sortable: true,
-                },
-                {
-                  field: 'jbrowseLink',
-                  title: 'JBrowse',
-                  sortable: false,
-                },
-                {
-                  field: 'ucscBrowserLink',
-                  title: 'UCSC',
-                  sortable: false,
-                  extra: true,
-                },
-                {
-                  field: 'igvBrowserLink',
-                  title: 'IGV',
-                  sortable: false,
-                  extra: true,
-                },
-                {
-                  field: 'ncbiBrowserLink',
-                  title: 'NCBI GDV',
-                  sortable: false,
-                  extra: true,
-                },
-                {
-                  field: 'assemblyStatus',
-                  title: 'Assembly status',
-                  sortable: true,
-                },
-                {
-                  field: 'submitterOrg',
-                  title: 'Submitter',
-                  sortable: false,
-                  extra: true,
-                },
-                {
-                  field: 'seqReleaseDate',
-                  title: 'Release date',
-                  sortable: true,
-                },
-                {
-                  field: 'scientificName',
-                  title: 'Scientific name',
-                  sortable: true,
-                },
-                {
-                  field: 'ncbiAssemblyName',
-                  title: 'NCBI assembly name',
-                  sortable: true,
-                },
-                {
-                  field: 'accession',
-                  title: 'Accession',
-                  sortable: true,
-                },
-
-                {
-                  field: 'taxonId',
-                  title: 'Taxonomy ID',
-                  sortable: true,
-                  extra: true,
-                },
-              ]
-                .filter(column => showAllColumns || !column.extra)
-                .map(column => (
+            {table.getHeaderGroups().map(headerGroup => (
+              <tr key={headerGroup.id}>
+                {headerGroup.headers.map(header => (
                   <th
-                    key={column.field}
-                    className={column.sortable ? 'cursor-pointer' : ''}
+                    key={header.id}
+                    className={
+                      header.column.getCanSort() ? 'cursor-pointer' : ''
+                    }
                     onClick={
-                      column.sortable
-                        ? () => {
-                            handleSort(column.field)
-                          }
+                      header.column.getCanSort()
+                        ? () => handleSort(header.id)
                         : undefined
                     }
                   >
-                    {column.title}{' '}
-                    {column.sortable ? getSortIndicator(column.field) : ''}
+                    {flexRender(
+                      header.column.columnDef.header,
+                      header.getContext(),
+                    )}{' '}
+                    {header.column.getCanSort()
+                      ? sortState === header.id
+                        ? sortDirectionPre === 'asc'
+                          ? '↑'
+                          : '↓'
+                        : ''
+                      : ''}
                   </th>
                 ))}
-            </tr>
+              </tr>
+            ))}
           </thead>
           <tbody>
-            {sortedRows.map((row, index) => (
-              <tr key={index}>
-                {[
-                  {
-                    field: 'commonName',
-                    title: (
-                      <div>
-                        <div style={{ float: 'left' }}>Common Name</div>
-                        <div style={{ float: 'right' }}>
-                          <div>
-                            <Star
-                              fill="orange"
-                              strokeWidth={0}
-                              className="w-[1em] h-[1em]"
-                            />{' '}
-                            == &quot;designated reference&quot;
-                          </div>
-                          <div>
-                            <X stroke="red" className="w-[1em] h-[1em]" /> ==
-                            &quot;refseq suppressed&quot;
-                          </div>
-                        </div>
-                      </div>
-                    ),
-                    sortable: true,
-                  },
-                  {
-                    field: 'jbrowseLink',
-                    title: 'JBrowse',
-                    sortable: false,
-                  },
-                  {
-                    field: 'ucscBrowserLink',
-                    title: 'UCSC',
-                    sortable: false,
-                    extra: true,
-                  },
-                  {
-                    field: 'igvBrowserLink',
-                    title: 'IGV',
-                    sortable: false,
-                    extra: true,
-                  },
-                  {
-                    field: 'ncbiBrowserLink',
-                    title: 'NCBI GDV',
-                    sortable: false,
-                    extra: true,
-                  },
-                  {
-                    field: 'assemblyStatus',
-                    title: 'Assembly status',
-                    sortable: true,
-                  },
-                  {
-                    field: 'submitterOrg',
-                    title: 'Submitter',
-                    sortable: false,
-                    extra: true,
-                  },
-                  {
-                    field: 'seqReleaseDate',
-                    title: 'Release date',
-                    sortable: true,
-                  },
-                  {
-                    field: 'scientificName',
-                    title: 'Scientific name',
-                    sortable: true,
-                  },
-                  {
-                    field: 'ncbiAssemblyName',
-                    title: 'NCBI assembly name',
-                    sortable: true,
-                  },
-                  {
-                    field: 'accession',
-                    title: 'Accession',
-                    sortable: true,
-                  },
-
-                  {
-                    field: 'taxonId',
-                    title: 'Taxonomy ID',
-                    sortable: true,
-                    extra: true,
-                  },
-                ]
-                  .filter(column => showAllColumns || !column.extra)
-                  .map(column => {
-                    const field = column.field as keyof AssemblyData
-
-                    // Render cell based on column field
-                    switch (field) {
-                      case 'commonName': {
-                        return (
-                          <td key={field}>
-                            {row.commonName}{' '}
-                            {row.ncbiRefSeqCategory === 'reference genome' ? (
-                              <Star
-                                fill="orange"
-                                strokeWidth={0}
-                                className="w-[1em] h-[1em]"
-                              />
-                            ) : null}
-                            {row.suppressed ? (
-                              <X stroke="red" className="w-[1em] h-[1em]" />
-                            ) : null}
-                          </td>
-                        )
-                      }
-
-                      case 'ncbiRefSeqCategory': {
-                        return <td key={field}>{row.ncbiRefSeqCategory}</td>
-                      }
-                      case 'jbrowseLink': {
-                        return (
-                          <td key={field}>
-                            <a
-                              target="_blank"
-                              href={row.jbrowseLink}
-                              rel="noopener noreferrer"
-                            >
-                              JBrowse
-                            </a>
-                          </td>
-                        )
-                      }
-
-                      case 'ucscBrowserLink': {
-                        return (
-                          <td key={field}>
-                            <a
-                              target="_blank"
-                              href={row.ucscBrowserLink}
-                              rel="noopener noreferrer"
-                            >
-                              UCSC
-                            </a>
-                          </td>
-                        )
-                      }
-                      case 'accession': {
-                        return (
-                          <td key={field}>
-                            <Link
-                              target="_blank"
-                              href={`/accession/${row.accession}`}
-                              rel="noopener noreferrer"
-                            >
-                              {row.accession}
-                            </Link>
-                          </td>
-                        )
-                      }
-                      case 'igvBrowserLink': {
-                        return (
-                          <td key={field}>
-                            <a
-                              target="_blank"
-                              href={row.igvBrowserLink}
-                              rel="noopener noreferrer"
-                            >
-                              IGV
-                            </a>
-                          </td>
-                        )
-                      }
-                      case 'ncbiBrowserLink': {
-                        return (
-                          <td key={field}>
-                            <a
-                              target="_blank"
-                              href={row.ncbiBrowserLink}
-                              rel="noopener noreferrer"
-                            >
-                              NCBI
-                            </a>
-                          </td>
-                        )
-                      }
-                      case 'assemblyStatus': {
-                        return <td key={field}>{row.assemblyStatus}</td>
-                      }
-                      case 'submitterOrg': {
-                        return <td key={field}>{row.submitterOrg}</td>
-                      }
-                      case 'seqReleaseDate': {
-                        return (
-                          <td key={field}>
-                            {row.seqReleaseDate.replace('00:00', '')}
-                          </td>
-                        )
-                      }
-                      case 'scientificName': {
-                        return (
-                          <td key={field}>
-                            <div
-                              style={{
-                                display: 'flex',
-                                justifyContent: 'space-between',
-                              }}
-                            >
-                              <div>{row.scientificName}</div>
-                            </div>
-                          </td>
-                        )
-                      }
-                      case 'taxonId': {
-                        return (
-                          <td key={field}>
-                            <a
-                              href={`https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=${row.taxonId}&lvl=3&p=nuccore&lin=f&keep=1&srchmode=1&unlock`}
-                            >
-                              {row.taxonId}
-                            </a>
-                          </td>
-                        )
-                      }
-
-                      default: {
-                        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                        return <td key={field}>{String(row[field] ?? '')}</td>
-                      }
-                    }
-                  })}
+            {table.getRowModel().rows.map(row => (
+              <tr key={row.id}>
+                {row.getVisibleCells().map(cell => (
+                  <td key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
               </tr>
             ))}
           </tbody>
