@@ -7,10 +7,16 @@ import type { UCSCGenArkAssemblyEntry } from 'hubtools'
 function notEmpty<T>(value: T | null | undefined): value is T {
   return value !== null && value !== undefined
 }
-export function readJSON(f: string) {
-  return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
+export function readJSON<T>(f: string) {
+  return JSON.parse(fs.readFileSync(f, 'utf8')) as T
 }
-
+export function tryAndReadJSON<T>(f: string) {
+  try {
+    return readJSON(f) as T
+  } catch (e) {
+    return {}
+  }
+}
 export function parseAssembliesListJson({
   data,
 }: {

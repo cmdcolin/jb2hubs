@@ -13,6 +13,7 @@ import {
 import './table.css'
 
 import type { AssemblyData } from './util'
+import Link from 'next/link'
 
 const statusOrder = {
   'Complete Genome': 1,
@@ -467,6 +468,19 @@ export default function DataTable({
                             >
                               UCSC
                             </a>
+                          </td>
+                        )
+                      }
+                      case 'accession': {
+                        return (
+                          <td key={field}>
+                            <Link
+                              target="_blank"
+                              href={`/accession/${row.accession}`}
+                              rel="noopener noreferrer"
+                            >
+                              {row.accession}
+                            </Link>
                           </td>
                         )
                       }
