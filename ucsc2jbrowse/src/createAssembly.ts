@@ -1,5 +1,6 @@
-import { readJSON } from './util.ts'
 import { inflate } from 'pako'
+
+import { readJSON } from './util.ts'
 
 const assemblyName = process.argv[2]!
 const list = process.argv[3]!

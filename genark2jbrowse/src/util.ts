@@ -1,5 +1,5 @@
-import fs from 'fs'
+import { readFile } from 'fs/promises'
 
-export function readJSON(f: string) {
-  return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
+export async function readJSON<T>(f: string) {
+  return JSON.parse(await readFile(f, 'utf8')) as T
 }

@@ -11,6 +11,9 @@ time node src/downloadHubs.ts
 # Process hubJson
 time node src/processHubJson.ts
 
+# AI descriptions
+time node src/getAutomatedSpeciesDescription.ts
+
 # Write info about assembly from NCBI to ncbi.json in hubs folder
 # Define function to fetch NCBI data
 fetch_ncbi_data() {
@@ -81,11 +84,9 @@ add_track_and_text_index() {
 
   local result="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
-  jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
-  if [ -n "$REPROCESS" ]; then
+  if [ -n "$REPROCESS" ] || [ ! -d "$result/trix" ]; then
+    jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
     jbrowse text-index --force --out "$result" --tracks ncbiGff
-  else
-    jbrowse text-index --out "$result" --tracks ncbiGff
   fi
 }
 
@@ -102,5 +103,6 @@ time node src/makeHubPagesForWebsite.ts
 time node src/makeGenArkExtensions.ts
 
 sleep 1
+
 # Format
 npx @biomejs/biome format --write ../

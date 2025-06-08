@@ -3,6 +3,7 @@ import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import type { Metadata } from 'next'
 
 import './globals.css'
+import Header from './components/Header'
 
 export const metadata: Metadata = {
   title: 'jb2hubs',
@@ -25,7 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NuqsAdapter>{children}</NuqsAdapter>
+        <NuqsAdapter>
+          <Header />
+          {children}
+        </NuqsAdapter>
       </body>
     </html>
   )

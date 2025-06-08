@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { readFile } from 'fs/promises'
 
 import { parseAssemblyEntry } from 'hubtools'
 
@@ -7,10 +8,18 @@ import type { UCSCGenArkAssemblyEntry } from 'hubtools'
 function notEmpty<T>(value: T | null | undefined): value is T {
   return value !== null && value !== undefined
 }
-export function readJSON(f: string) {
-  return JSON.parse(fs.readFileSync(f, 'utf8')) as unknown
+
+export async function readJSON<T>(f: string) {
+  return JSON.parse(await readFile(f, 'utf8')) as T
 }
 
+export async function tryAndReadJSON<T>(f: string) {
+  try {
+    return await readJSON<T>(f)
+  } catch (e) {
+    return {}
+  }
+}
 export function parseAssembliesListJson({
   data,
 }: {

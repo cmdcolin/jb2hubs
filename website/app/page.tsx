@@ -2,11 +2,12 @@ import { hubCategories } from 'hubtools'
 import Link from 'next/link'
 
 import './components/table.css'
+import Container from './components/Container.tsx'
 import list from './ucsc/list.json'
 
 export default function Home() {
   return (
-    <div>
+    <Container>
       <h1>JBrowse 2 browsers for UCSC and GenArk hubs</h1>
       <p>
         This page has JBrowse genome browsers for both main UCSC genomes and the{' '}
@@ -124,6 +125,6 @@ export default function Home() {
         Feel free to contact or report issues to{' '}
         <Link href="https://github.com/cmdcolin/jb2hubs/">Github</Link>
       </div>
-    </div>
+    </Container>
   )
 }

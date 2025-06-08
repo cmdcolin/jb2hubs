@@ -6,6 +6,7 @@ import {
   readJSON,
   writeJSON,
 } from 'hubtools'
+import jsonDiff from 'json-diff'
 
 const metaPath = process.argv[2]!
 const configPath = metaPath.replace('meta.json', 'config.json')
@@ -14,8 +15,10 @@ const hubMeta = readJSON(metaPath) as {
 }
 let oldConfig
 try {
-  oldConfig = readJSON(configPath)
-} catch {}
+  oldConfig = readJSON(configPath) as Record<string, unknown>
+} catch {
+  oldConfig = {} as Record<string, unknown>
+}
 
 const hubFileText = fs.readFileSync(
   metaPath.replace('meta.json', 'hub.txt'),
@@ -28,7 +31,10 @@ const newConfig = await generateJBrowseConfigForAssemblyHub({
 })
 
 if (deepEqual(newConfig, oldConfig)) {
-  console.error('No config generated')
+  console.error('Old config equals new one')
 } else {
+  // console.log(jsonDiff.diffString(newConfig, rest))
+  // this branch currently runs every time, which results in text indexing
+  // running every time
   writeJSON(configPath, newConfig)
 }
