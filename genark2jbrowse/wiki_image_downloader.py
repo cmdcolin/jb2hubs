@@ -79,8 +79,8 @@ def download_image(image_url, filename):
         response = requests.get(image_url, stream=True, headers=HEADERS)
         response.raise_for_status()
         
-        os.makedirs('downloads', exist_ok=True)
-        filepath = os.path.join('downloads', filename)
+        os.makedirs('speciesImages', exist_ok=True)
+        filepath = os.path.join('speciesImages', filename)
         
         with open(filepath, 'wb') as f:
             for chunk in response.iter_content(chunk_size=8192):
@@ -95,7 +95,7 @@ def get_file_extension(url):
     """Extract file extension from URL."""
     parsed_url = urlparse(url)
     path = parsed_url.path
-    return os.path.splitext(path)[1] or '.jpg'
+    return os.path.splitext(path)[1].lower() or '.jpg'
 
 def get_resized_image_url(original_url, max_width):
     """Convert a Wikipedia image URL to a specific width."""
@@ -148,9 +148,6 @@ def main():
     scientific_name = original_name
     
     print(f"Searching for: {scientific_name}")
-    
-    # Use LLM to validate/correct the scientific name
-    print("Validating scientific name with LLM...")
     llm_response = query_llm(scientific_name)
     
     if llm_response:
@@ -196,7 +193,7 @@ def main():
 Can you suggest 2-3 alternative scientific names or common names that might have images on Wikipedia? 
 Just list them separated by commas, nothing else."""
         
-        suggestions = query_llm(suggestion_prompt, args.model)
+        suggestions = query_llm(suggestion_prompt)
         if suggestions:
             print(f"LLM suggests trying: {suggestions}")
         
@@ -229,7 +226,7 @@ Just list them separated by commas, nothing else."""
         filename = args.output
     else:
         # Slugify the name to match slugify npm package behavior
-        safe_name = unicodedata.normalize('NFD', scientific_name.lower())
+        safe_name = unicodedata.normalize('NFD', original_name)
         # Remove non-alphanumeric characters (except spaces) and convert to ASCII
         safe_name = re.sub(r'[^\w\s-]', '', safe_name.encode('ascii', 'ignore').decode('ascii'))
         # Replace spaces with hyphens
@@ -237,16 +234,60 @@ Just list them separated by commas, nothing else."""
         extension = get_file_extension(image_url)
         filename = f"{safe_name}{extension}"
     
-    # Download the image
+    # Download the image and save the image URL to a text file
     print("Downloading image...")
-    filepath = download_image(image_url, filename)
+    txt_filepath = os.path.join('speciesImages', f"{os.path.splitext(filename)[0]}.txt")
     
-    if filepath:
-        print(f"✓ Image downloaded successfully: {filepath}")
-        return 0
-    else:
-        print("Failed to download image")
-        return 1
+    # Save the image URL to a text file
+    try:
+        if image_url:
+            with open(txt_filepath, 'w') as txt_file:
+                txt_file.write(image_url)
+            print(f"✓ Image URL saved to: {txt_filepath}")
+        else:
+            with open(txt_filepath, 'w') as txt_file:
+                txt_file.write('none')
+            print(f"✓ No image URL found, 'none' saved to: {txt_filepath}")
+    except Exception as e:
+        try:
+            # Attempt to write 'none' if the original write failed
+            with open(txt_filepath, 'w') as txt_file:
+                txt_file.write('none')
+            print(f"✓ Error saving image URL, 'none' saved to: {txt_filepath}: {e}")
+        except Exception as inner_e:
+            print(f"✗ Failed to save image URL file: {inner_e}")
+    
+    # Download the actual image file
+    filepath = None
+    if image_url:
+        filepath = download_image(image_url, filename)
+        if filepath:
+            print(f"✓ Image downloaded to: {filepath}")
+        else:
+            print("✗ Failed to download image")
+    
+    # Write the Wikipedia page URL to a separate text file
+    page_url = page_info.get('content_urls', {}).get('desktop', {}).get('page', '')
+    page_txt_filepath = os.path.join('speciesImages', f"{os.path.splitext(filename)[0]}_page.txt")
+    try:
+        if page_url:
+            with open(page_txt_filepath, 'w') as page_txt_file:
+                page_txt_file.write(page_url)
+            print(f"✓ Wikipedia page URL saved to: {page_txt_filepath}")
+        else:
+            with open(page_txt_filepath, 'w') as page_txt_file:
+                page_txt_file.write('none')
+            print(f"✓ No Wikipedia page URL found, 'none' saved to: {page_txt_filepath}")
+    except Exception as e:
+        try:
+            # Attempt to write 'none' if the original write failed
+            with open(page_txt_filepath, 'w') as page_txt_file:
+                page_txt_file.write('none')
+            print(f"✓ Error saving Wikipedia page URL, 'none' saved to: {page_txt_filepath}: {e}")
+        except Exception as inner_e:
+            print(f"✗ Failed to save Wikipedia page URL file: {inner_e}")
+
+    
 
 if __name__ == "__main__":
     sys.exit(main())

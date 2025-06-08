@@ -1,10 +1,11 @@
 import path from 'path'
+import slugify from 'slugify'
 
 import Link from 'next/link'
 
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
 import Container from '../../components/Container.tsx'
-import { tryAndReadJSON } from '../../components/util.ts'
+import { tryAndReadJSON, tryAndReadText } from '../../components/util.ts'
 
 function Link2({
   href,
@@ -46,19 +47,27 @@ export default async function Page({
     throw new Error('accession not found')
   }
 
+  const { scientificName, accession } = ret
   const [base, rest] = id.split('_')
   const [b1, b2, b3] = rest!.match(/.{1,3}/g)!
   const folder = `hubs/${base}/${b1}/${b2}/${b3}/${id}`
   // @ts-expect-error
   const { description } = await tryAndReadJSON<{ description: string }>(
-    path.join(folder, 'description.json'),
+    path.join(process.cwd(), folder, 'description.json'),
   )
-  const { scientificName, accession } = ret
+
+  console.log(
+    path.join(process.cwd(), 'speciesImages', slugify(scientificName) + '.txt'),
+  )
+  const val = await tryAndReadText(
+    path.join(process.cwd(), 'speciesImages', slugify(scientificName) + '.txt'),
+  )
   return (
     <Container>
       <div>
         <h1>{scientificName}</h1>
         <h4>{accession}</h4>
+        {val ? <img src={val} /> : null}
       </div>
       {description ? (
         <div>
