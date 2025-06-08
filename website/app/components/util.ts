@@ -1,4 +1,3 @@
-import fs from 'fs'
 import { readFile } from 'fs/promises'
 
 import { parseAssemblyEntry } from 'hubtools'

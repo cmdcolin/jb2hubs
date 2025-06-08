@@ -1,6 +1,7 @@
 import { execSync } from 'child_process'
-import path from 'path'
 import fs from 'fs'
+import path from 'path'
+
 import slugify from 'slugify'
 
 const all = JSON.parse(

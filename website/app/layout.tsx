@@ -1,9 +1,10 @@
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
+import Header from './components/Header.tsx'
+
 import type { Metadata } from 'next'
 
 import './globals.css'
-import Header from './components/Header'
 
 export const metadata: Metadata = {
   title: 'jb2hubs',

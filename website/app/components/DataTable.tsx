@@ -3,12 +3,12 @@
 import { useMemo } from 'react'
 
 import {
+  type SortingState,
   createColumnHelper,
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
-  type SortingState,
 } from '@tanstack/react-table'
 import { Star, X } from 'lucide-react'
 import Link from 'next/link'
@@ -269,7 +269,7 @@ export default function DataTable({
         meta: { extra: true },
       }),
     ],
-    [],
+    [columnHelper],
   )
 
   // Create table instance
@@ -380,7 +380,9 @@ export default function DataTable({
                     }
                     onClick={
                       header.column.getCanSort()
-                        ? () => handleSort(header.id)
+                        ? () => {
+                            handleSort(header.id)
+                          }
                         : undefined
                     }
                   >
