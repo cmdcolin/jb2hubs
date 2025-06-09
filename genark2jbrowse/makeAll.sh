@@ -84,10 +84,8 @@ add_track_and_text_index() {
 
   local result="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
-  if [ -n "$REPROCESS" ] || [ ! -d "$result/trix" ]; then
-    jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
-    jbrowse text-index --force --out "$result" --tracks ncbiGff
-  fi
+  jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
+  jbrowse text-index --force --out "$result" --tracks ncbiGff
 }
 
 export -f add_track_and_text_index
