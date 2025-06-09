@@ -103,9 +103,7 @@ export default function Home() {
               .map(elt => (
                 <tr key={elt.id}>
                   <td>
-                    <Link href={`/hubs/${elt.id}`} target="_blank">
-                      {elt.id}
-                    </Link>
+                    <Link href={`/hubs/${elt.id}`}>{elt.id}</Link>
                   </td>
                   <td>{elt.description}</td>
                 </tr>

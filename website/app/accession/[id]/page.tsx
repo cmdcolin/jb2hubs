@@ -15,11 +15,7 @@ function Link2({
   href: string
   children: React.ReactNode
 }) {
-  return (
-    <Link target="_blank" href={href}>
-      {children}
-    </Link>
-  )
+  return <Link href={href}>{children}</Link>
 }
 
 export async function generateMetadata({
@@ -65,7 +61,6 @@ export default async function Page({
 
   const val = await tryAndReadText(imgBase + '.txt')
   const source = await tryAndReadText(imgBase + '_page.txt')
-  console.log({ ret })
   return (
     <Container>
       <div className="relative">

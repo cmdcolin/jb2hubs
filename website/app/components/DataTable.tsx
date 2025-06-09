@@ -152,7 +152,6 @@ export default function DataTable({
           <>
             {info.getValue()}{' '}
             <Link
-              target="_blank"
               href={`/accession/${info.row.original.accession}`}
               rel="noopener noreferrer"
             >
@@ -171,18 +170,18 @@ export default function DataTable({
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
         cell: info => (
-          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+          <Link href={info.getValue()} rel="noopener noreferrer">
             JBrowse
-          </a>
+          </Link>
         ),
         enableSorting: false,
       }),
       columnHelper.accessor('ucscBrowserLink', {
         header: 'UCSC',
         cell: info => (
-          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+          <Link href={info.getValue()} rel="noopener noreferrer">
             UCSC
-          </a>
+          </Link>
         ),
         enableSorting: false,
         meta: { extra: true },
@@ -190,9 +189,9 @@ export default function DataTable({
       columnHelper.accessor('igvBrowserLink', {
         header: 'IGV',
         cell: info => (
-          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+          <Link href={info.getValue()} rel="noopener noreferrer">
             IGV
-          </a>
+          </Link>
         ),
         enableSorting: false,
         meta: { extra: true },
@@ -200,9 +199,9 @@ export default function DataTable({
       columnHelper.accessor('ncbiBrowserLink', {
         header: 'NCBI GDV',
         cell: info => (
-          <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
+          <Link href={info.getValue()} rel="noopener noreferrer">
             NCBI
-          </a>
+          </Link>
         ),
         enableSorting: false,
         meta: { extra: true },
