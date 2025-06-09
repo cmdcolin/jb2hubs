@@ -9,6 +9,7 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
+  type Row,
 } from '@tanstack/react-table'
 import { Star, X } from 'lucide-react'
 import Link from 'next/link'
@@ -81,7 +82,9 @@ export default function DataTable({
   }, [sortState, sortDirectionPre])
 
   // Update URL query params when sorting changes
-  const onSortingChange = (updater: any) => {
+  const onSortingChange = (
+    updater: ((state: SortingState) => SortingState) | SortingState,
+  ) => {
     const newSorting = updater instanceof Function ? updater(sorting) : updater
 
     if (newSorting.length === 0) {
@@ -91,9 +94,9 @@ export default function DataTable({
       setSortDirection('')
     } else {
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      setSortState(newSorting[0].id)
+      setSortState(newSorting[0]?.id || '')
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      setSortDirection(newSorting[0].desc ? 'desc' : 'asc')
+      setSortDirection(newSorting[0]?.desc ? 'desc' : 'asc')
     }
   }
 
@@ -145,9 +148,16 @@ export default function DataTable({
             </div>
           </div>
         ),
-        cell: (info: any) => (
+        cell: info => (
           <>
             {info.getValue()}{' '}
+            <Link
+              target="_blank"
+              href={`/accession/${info.row.original.accession}`}
+              rel="noopener noreferrer"
+            >
+              (info)
+            </Link>{' '}
             {info.row.original.ncbiRefSeqCategory === 'reference genome' ? (
               <Star fill="orange" strokeWidth={0} className="w-[1em] h-[1em]" />
             ) : null}
@@ -160,7 +170,7 @@ export default function DataTable({
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: (info: any) => (
+        cell: info => (
           <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
             JBrowse
           </a>
@@ -169,7 +179,7 @@ export default function DataTable({
       }),
       columnHelper.accessor('ucscBrowserLink', {
         header: 'UCSC',
-        cell: (info: any) => (
+        cell: info => (
           <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
             UCSC
           </a>
@@ -179,7 +189,7 @@ export default function DataTable({
       }),
       columnHelper.accessor('igvBrowserLink', {
         header: 'IGV',
-        cell: (info: any) => (
+        cell: info => (
           <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
             IGV
           </a>
@@ -189,7 +199,7 @@ export default function DataTable({
       }),
       columnHelper.accessor('ncbiBrowserLink', {
         header: 'NCBI GDV',
-        cell: (info: any) => (
+        cell: info => (
           <a target="_blank" href={info.getValue()} rel="noopener noreferrer">
             NCBI
           </a>
@@ -199,9 +209,12 @@ export default function DataTable({
       }),
       columnHelper.accessor('assemblyStatus', {
         header: 'Assembly status',
-        cell: (info: any) => info.getValue(),
+        cell: info => info.getValue(),
         enableSorting: true,
-        sortingFn: (rowA: any, rowB: any) => {
+        sortingFn: (
+          rowA: Row<NonNullable<AssemblyData>>,
+          rowB: Row<NonNullable<AssemblyData>>,
+        ) => {
           const a =
             statusOrder[
               rowA.original.assemblyStatus as keyof typeof statusOrder
@@ -215,18 +228,18 @@ export default function DataTable({
       }),
       columnHelper.accessor('submitterOrg', {
         header: 'Submitter',
-        cell: (info: any) => info.getValue(),
+        cell: info => info.getValue(),
         enableSorting: false,
         meta: { extra: true },
       }),
       columnHelper.accessor('seqReleaseDate', {
         header: 'Release date',
-        cell: (info: any) => info.getValue().replace('00:00', ''),
+        cell: info => info.getValue().replace('00:00', ''),
         enableSorting: true,
       }),
       columnHelper.accessor('scientificName', {
         header: 'Scientific name',
-        cell: (info: any) => (
+        cell: info => (
           <div
             style={{
               display: 'flex',
@@ -240,25 +253,17 @@ export default function DataTable({
       }),
       columnHelper.accessor('ncbiAssemblyName', {
         header: 'NCBI assembly name',
-        cell: (info: any) => info.getValue(),
+        cell: info => info.getValue(),
         enableSorting: true,
       }),
       columnHelper.accessor('accession', {
         header: 'Accession',
-        cell: (info: any) => (
-          <Link
-            target="_blank"
-            href={`/accession/${info.getValue()}`}
-            rel="noopener noreferrer"
-          >
-            {info.getValue()}
-          </Link>
-        ),
+        cell: info => info.getValue(),
         enableSorting: true,
       }),
       columnHelper.accessor('taxonId', {
         header: 'Taxonomy ID',
-        cell: (info: any) => (
+        cell: info => (
           <a
             href={`https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Info&id=${info.getValue()}&lvl=3&p=nuccore&lin=f&keep=1&srchmode=1&unlock`}
           >
@@ -275,7 +280,9 @@ export default function DataTable({
   // Create table instance
   const table = useReactTable({
     data: filteredRows,
-    columns: columns.filter(col => showAllColumns || !(col.meta as any)?.extra),
+    columns: columns.filter(
+      col => showAllColumns || !(col.meta as { extra?: boolean })?.extra,
+    ),
     state: {
       sorting,
     },
