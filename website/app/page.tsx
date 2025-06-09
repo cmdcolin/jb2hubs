@@ -8,12 +8,11 @@ import list from './ucsc/list.json'
 export default function Home() {
   return (
     <Container>
-      <h1>JBrowse 2 browsers for UCSC and GenArk hubs</h1>
+      <h1>JBrowse 2 hubs</h1>
       <p>
-        This page has JBrowse genome browsers for both main UCSC genomes and the{' '}
-        <Link href="https://hgdownload.soe.ucsc.edu/hubs/">
-          UCSC GenArk hubs
-        </Link>
+        This page has a variety of data resources focused on data import from
+        UCSC for creating JBrowse 2 genome browsers. For information, see the{' '}
+        <Link href="/about">about</Link> page.
       </p>
       <div>
         <h3>Main UCSC browsers</h3>

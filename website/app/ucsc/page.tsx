@@ -1,15 +1,16 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import Link from 'next/link'
+
 import {
+  type SortingState,
   createColumnHelper,
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
-  type SortingState,
 } from '@tanstack/react-table'
+import Link from 'next/link'
 
 import list from './list.json'
 

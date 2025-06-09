@@ -3,7 +3,7 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   /* config options here */
   output: 'export',
-  basePath: '/jb2hubs',
+  basePath: '/demos/jb2hubs',
   eslint: {
     ignoreDuringBuilds: true,
   },

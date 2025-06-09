@@ -2,8 +2,6 @@ import { Suspense } from 'react'
 
 import path from 'path'
 
-import Link from 'next/link'
-
 import { readJSON } from './util.ts'
 import DataTable from '../components/DataTable.tsx'
 
