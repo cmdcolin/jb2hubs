@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "aws s3 sync --delete out s3://jbrowse.org/demos/jb2hubs/",
+    "deploy": "rclone sync -c -v out jbrowse-data:jbrowse.org/demos/jb2hubs/",
     "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/jb2hubs/*\"",
     "predeploy": "yarn build"
   },
