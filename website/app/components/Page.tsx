@@ -20,7 +20,6 @@ export default async function Page({
 }) {
   return (
     <div>
-      <Link href="/">Home</Link>
       <h1>GenArk hubs - {title}</h1>
       <Suspense>
         <DataTable
