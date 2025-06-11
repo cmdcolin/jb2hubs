@@ -3,13 +3,13 @@
 import { useMemo } from 'react'
 
 import {
+  type Row,
   type SortingState,
   createColumnHelper,
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
-  type Row,
 } from '@tanstack/react-table'
 import { Star, X } from 'lucide-react'
 import Link from 'next/link'
@@ -94,7 +94,7 @@ export default function DataTable({
       setSortDirection('')
     } else {
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
-      setSortState(newSorting[0]?.id || '')
+      setSortState(newSorting[0]?.id ?? '')
       // eslint-disable-next-line @typescript-eslint/no-floating-promises
       setSortDirection(newSorting[0]?.desc ? 'desc' : 'asc')
     }
@@ -280,7 +280,7 @@ export default function DataTable({
   const table = useReactTable({
     data: filteredRows,
     columns: columns.filter(
-      col => showAllColumns || !(col.meta as { extra?: boolean })?.extra,
+      col => showAllColumns || !(col.meta as { extra?: boolean }).extra,
     ),
     state: {
       sorting,

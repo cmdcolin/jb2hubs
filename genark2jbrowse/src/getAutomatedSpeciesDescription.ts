@@ -3,14 +3,21 @@ import fs from 'fs'
 
 import slugify from 'slugify'
 
+import { readJSON } from './util.ts'
+
 const model = 'claude-3-haiku'
-const all = JSON.parse(
-  fs.readFileSync('processedHubJson/all.json', 'utf8'),
-) as ({ accession: string; scientificName: string } | null)[]
+
+interface Entry {
+  accession: string
+  scientificName: string
+}
+type MaybeEntry = Entry | null
 
 fs.mkdirSync('speciesDescriptions', { recursive: true })
 let i = 0
-for (const entry of all.filter(f => !!f)) {
+for (const entry of (
+  await readJSON<MaybeEntry[]>('processedHubJson/all.json')
+).filter(f => !!f)) {
   try {
     const { scientificName, accession } = entry
     const [base, rest] = accession.split('_')
@@ -21,7 +28,7 @@ for (const entry of all.filter(f => !!f)) {
     if (!fs.existsSync(f)) {
       if (!fs.existsSync(f2)) {
         console.log(
-          `Processing ${scientificName} ${accession} (${i++}/${all.length})`,
+          `Processing ${scientificName} ${accession} (${i++}/${(await readJSON<MaybeEntry[]>('processedHubJson/all.json')).length})`,
         )
         const description = execSync(
           `echo "Provide a short scientific description of this species: ${scientificName}" | llm -m ${model}`,
@@ -43,7 +50,7 @@ for (const entry of all.filter(f => !!f)) {
         fs.copyFileSync(f2, f)
       }
     } else {
-      // console.log('Already exists: ', scientificName)
+      console.log('Already exists: ', scientificName)
     }
   } catch (e) {
     console.error(e)
