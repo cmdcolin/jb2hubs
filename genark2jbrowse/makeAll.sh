@@ -11,9 +11,6 @@ time node src/downloadHubs.ts
 # Process hubJson
 time node src/processHubJson.ts
 
-# AI descriptions
-time node src/getAutomatedSpeciesDescription.ts
-
 # Write info about assembly from NCBI to ncbi.json in hubs folder
 # Define function to fetch NCBI data
 fetch_ncbi_data() {
@@ -99,6 +96,9 @@ time node src/makeHubPagesForWebsite.ts
 
 # Add 'extensions' (special tracks)
 time node src/makeGenArkExtensions.ts
+
+# AI descriptions
+time node src/getAutomatedSpeciesDescription.ts
 
 sleep 1
 
