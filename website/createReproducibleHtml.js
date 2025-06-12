@@ -122,7 +122,7 @@ async function processHtmlFile(inputFilePath, outputFilePath) {
 
 processHtmlFile(inputFilePath, outputFilePath)
   .then(() => {
-    console.log('HTML processing completed successfully')
+    // console.log('HTML processing completed successfully')
   })
   .catch(error => {
     console.error('Failed to process HTML:', error)
