@@ -9,8 +9,8 @@ const nextConfig: NextConfig = {
   },
   generateBuildId: () => 'static-build-id',
   webpack: (config, options) => {
-    // Next.js output is not stable when there's no code change and this is a work around
-    console.log(config.output.filename)
+    // Next.js output is not stable when there's no code change and this is a
+    // work around
     config.output.filename = config.output.filename.replace(
       '[chunkhash]',
       '[contenthash]',

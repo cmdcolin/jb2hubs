@@ -1,5 +1,42 @@
 #!/usr/bin/env node
 
+// replaceRandomness function credit @junerd
+// https://github.com/vercel/next.js/discussions/65856#discussioncomment-12667717
+function removeRandomness(el) {
+  const prefix = `[\\"$\\",\\"$1\\",\\"`
+  const suffix = `\\"`
+  const prefixIndexes = []
+  let index = -1
+  do {
+    if (typeof index === 'number') {
+      prefixIndexes.push(index)
+    }
+    index = el.innerHTML.indexOf(prefix, index + 1)
+  } while (index !== -1)
+  prefixIndexes.shift()
+  prefixIndexes.forEach(prefixIndex => {
+    const startIndex = prefixIndex + prefix.length
+    const endIndex = el.innerHTML.indexOf(suffix, startIndex)
+    if (endIndex - startIndex < 2) {
+      return
+    }
+    const randomness = el.innerHTML.substring(startIndex, endIndex)
+    const original = el.innerHTML.substring(
+      prefixIndex,
+      endIndex + suffix.length,
+    )
+    el.innerHTML = el.innerHTML.replace(randomness, 'stable-id')
+
+    const modified = el.innerHTML.substring(
+      prefixIndex,
+      el.innerHTML.indexOf(suffix, startIndex) + suffix.length,
+    )
+    // console.log(
+    //   `👉 Replaced ${original} with ${modified} to stabilize build output`,
+    // )
+  })
+}
+
 /**
  * Example script to demonstrate how to use the stabilizeHtml.js file
  * This script processes an HTML file and removes randomness from it
@@ -22,16 +59,13 @@ const outputFilePath =
   args.length > 1 ? args[1] : inputFilePath.replace('.html', '.stable.html')
 
 // Process the HTML file
-console.log(`Processing HTML file: ${inputFilePath}`)
-console.log(`Output will be saved to: ${outputFilePath}`)
+// console.log(`Processing HTML file: ${inputFilePath}`)
+// console.log(`Output will be saved to: ${outputFilePath}`)
 
 // Import required modules
 const fs = require('fs')
 const path = require('path')
 const { JSDOM } = require('jsdom')
-
-// Import the removeRandomness function from test.js
-const { removeRandomness } = require('./test.js')
 
 /**
  * Processes an HTML file to remove randomness
