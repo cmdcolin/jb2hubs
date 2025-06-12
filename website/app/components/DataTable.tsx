@@ -280,7 +280,8 @@ export default function DataTable({
   const table = useReactTable({
     data: filteredRows,
     columns: columns.filter(
-      col => showAllColumns || !(col.meta as { extra?: boolean }).extra,
+      col =>
+        showAllColumns || !(col.meta as { extra?: boolean } | undefined)?.extra,
     ),
     state: {
       sorting,
