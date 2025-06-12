@@ -5,7 +5,10 @@
   "license": "MIT",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
-  "files": ["src", "dist"],
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
     "clean": "rimraf dist",
     "prebuild": "npm run clean",
@@ -18,7 +21,7 @@
     "node-sql-parser": "^5.2.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.3",
+    "@types/node": "^24.0.1",
     "rimraf": "^6.0.1",
     "tsdown": "^0.12.2",
     "typescript": "^5.8.3"
