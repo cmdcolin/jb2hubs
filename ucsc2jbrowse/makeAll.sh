@@ -4,23 +4,24 @@ export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 export PATH=$(pwd):$PATH
 mkdir -p ~/ucscResults
 
-time ./createAssemblies.sh ~/ucsc/*
-time ./createTracksJsonForGoldenPath.sh ~/ucsc/*
-time ./createBedTracksForGoldenPath.sh ~/ucsc/*
-time ./createRmskTracksForGoldenPath.sh ~/ucsc/*
-time ./createGeneTracksForGoldenPath.sh ~/ucsc/*
-time ./createConfigsForGoldenPath.sh ~/ucsc/*
-time ./textIndexGoldenPath.sh ~/ucscResults/*
-time ./addMetadata.sh ~/ucscResults/*
-time ./makeTrackHubConfigs.sh
-time node src/makeUcscExtensions.ts ~/ucscResults
-
+./createAssemblies.sh ~/ucsc/*
+./createTracksJsonForGoldenPath.sh ~/ucsc/*
+./createBedTracksForGoldenPath.sh ~/ucsc/*
+./createRmskTracksForGoldenPath.sh ~/ucsc/*
+./createGeneTracksForGoldenPath.sh ~/ucsc/*
+./createConfigsForGoldenPath.sh ~/ucsc/*
+./textIndexGoldenPath.sh ~/ucscResults/*
+./addMetadata.sh ~/ucscResults/*
+./makeTrackHubConfigs.sh
+node src/makeUcscExtensions.ts ~/ucscResults
+./downloadNcbiGff.sh
 for i in ~/ucsc/*; do
   ./createChainTracks.sh -a $(basename $i)
 done
-time ./getFileListing.sh ~/ucscResults/
 
-time fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
-time node src/mergeAll.ts
+./getFileListing.sh ~/ucscResults/
+
+fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
+node src/mergeAll.ts
 
 npx @biomejs/biome format --write ../

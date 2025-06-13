@@ -3,13 +3,13 @@
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 
 # Download list of hubs (in json)
-time node src/downloadHubList.ts
+node src/downloadHubList.ts
 
 # Download actual hub.txt files
-time node src/downloadHubs.ts
+node src/downloadHubs.ts
 
 # Process hubJson
-time node src/processHubJson.ts
+node src/processHubJson.ts
 
 # Write info about assembly from NCBI to ncbi.json in hubs folder
 # Define function to fetch NCBI data
@@ -28,11 +28,11 @@ export -f fetch_ncbi_data
 
 # Run the function in parallel
 echo "Fetch NCBI metadata"
-time fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
+fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
 
 # Generate a 'native' jbrowse2 config.json for each hub.txt
 echo "Generate configs"
-time fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
+fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
 
 #  if REDOWNLOAD is defined, then rm -rf gff folder to force redownloading of
 #  all GFF files
@@ -43,7 +43,7 @@ if [ -n "$REDOWNLOAD" ]; then
 fi
 
 echo "Download NCBI GFF"
-time cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
+cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
 
 # process NCBI GFF
 process_gff_file() {
@@ -63,7 +63,7 @@ process_gff_file() {
 export -f process_gff_file
 
 echo "Process NCBI GFF"
-time ls gff/*.gz | parallel --bar -j8 process_gff_file
+ls gff/*.gz | parallel --bar -j8 process_gff_file
 
 # Export the function to make it available to parallel
 add_track_and_text_index() {
@@ -89,16 +89,16 @@ export -f add_track_and_text_index
 
 # Load NCBI GFF
 echo "Load and text index NCBI GFF"
-time find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
+find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
 
 # Make routes in website app folder
-time node src/makeHubPagesForWebsite.ts
+node src/makeHubPagesForWebsite.ts
 
 # Add 'extensions' (special tracks)
-time node src/makeGenArkExtensions.ts
+node src/makeGenArkExtensions.ts
 
 # AI descriptions
-time node src/getAutomatedSpeciesDescription.ts
+node src/getAutomatedSpeciesDescription.ts
 
 sleep 1
 
