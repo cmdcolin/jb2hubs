@@ -14671,6 +14671,46 @@
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hs1/sgdpCopyNumber/GRCh38_kmer_wssd.bb"
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "hs1-ncbiRefSeqGff",
+      "name": "RefSeq All - GFF",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "hs1.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "hs1.gff.gz.csi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "CSI"
+        }
+      },
+      "category": ["NCBI RefSeq"],
+      "assemblyNames": ["hs1"]
+    }
+  ],
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "hs1-index",
+      "ixFilePath": {
+        "uri": "trix/hs1.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "trix/hs1.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "trix/hs1_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["hs1"]
     }
   ]
 }

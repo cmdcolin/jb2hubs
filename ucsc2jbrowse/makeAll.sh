@@ -13,15 +13,22 @@ mkdir -p ~/ucscResults
 ./textIndexGoldenPath.sh ~/ucscResults/*
 ./addMetadata.sh ~/ucscResults/*
 ./makeTrackHubConfigs.sh
+
 node src/makeUcscExtensions.ts ~/ucscResults
+
+echo "Create hs1 GFF file and index"
 ./downloadNcbiGff.sh
-for i in ~/ucsc/*; do
-  ./createChainTracks.sh -a $(basename $i)
-done
 
-./getFileListing.sh ~/ucscResults/
+echo "Create chain tracks"
+find ~/ucsc/* -type d -maxdepth 0 | parallel --bar -I {} './createChainTracks.sh -a $(basename {})'
 
-fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel -I {} 'cp {} configs/$(basename $(dirname {})).json'
+echo "Hashing files"
+find ~/ucscResults/ -type f | grep -v "meta.json" | grep -v "\.hash" | parallel --bar xxh128sum | sort -k2,2 >fileListing.txt
+
+echo "Copying generated configs files into this repo for version control inspection"
+fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'
+
+echo "Merging all configs"
 node src/mergeAll.ts
 
 npx @biomejs/biome format --write ../
