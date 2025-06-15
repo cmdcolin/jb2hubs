@@ -1059,20 +1059,20 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "strPur2_to_strPur1_chain",
-      "name": "strPur2 to S. purpuratus (strPur1) liftOver chain",
+      "trackId": "strPur2_to_ci2_chain",
+      "name": "strPur2 to C. intestinalis (ci2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["strPur2", "strPur1"],
+      "assemblyNames": ["strPur2", "ci2"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "strPur2",
-        "queryAssembly": "strPur1",
+        "queryAssembly": "ci2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToStrPur1.over.chain.gz"
+          "uri": "liftOver/strPur2ToCi2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToStrPur1.over.chain.gz.csi"
+            "uri": "liftOver/strPur2ToCi2.over.pif.gz.csi"
           }
         }
       }
@@ -1088,31 +1088,31 @@
         "targetAssembly": "strPur2",
         "queryAssembly": "hg18",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToHg18.over.chain.gz"
+          "uri": "liftOver/strPur2ToHg18.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToHg18.over.chain.gz.csi"
+            "uri": "liftOver/strPur2ToHg18.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "strPur2_to_ci2_chain",
-      "name": "strPur2 to C. intestinalis (ci2) liftOver chain",
+      "trackId": "strPur2_to_strPur1_chain",
+      "name": "strPur2 to S. purpuratus (strPur1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["strPur2", "ci2"],
+      "assemblyNames": ["strPur2", "strPur1"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "strPur2",
-        "queryAssembly": "ci2",
+        "queryAssembly": "strPur1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToCi2.over.chain.gz"
+          "uri": "liftOver/strPur2ToStrPur1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToCi2.over.chain.gz.csi"
+            "uri": "liftOver/strPur2ToStrPur1.over.pif.gz.csi"
           }
         }
       }

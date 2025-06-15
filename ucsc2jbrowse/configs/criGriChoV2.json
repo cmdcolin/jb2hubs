@@ -1718,31 +1718,11 @@
         "targetAssembly": "criGriChoV2",
         "queryAssembly": "criGri1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGri1.over.chain.gz"
+          "uri": "liftOver/criGriChoV2ToCriGri1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGri1.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "criGriChoV2_to_hg38_chain",
-      "name": "criGriChoV2 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["criGriChoV2", "hg38"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "criGriChoV2",
-        "queryAssembly": "hg38",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToHg38.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/criGriChoV2ToCriGri1.over.pif.gz.csi"
           }
         }
       }
@@ -1758,11 +1738,31 @@
         "targetAssembly": "criGriChoV2",
         "queryAssembly": "criGriChoV1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGriChoV1.over.chain.gz"
+          "uri": "liftOver/criGriChoV2ToCriGriChoV1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGriChoV1.over.chain.gz.csi"
+            "uri": "liftOver/criGriChoV2ToCriGriChoV1.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV2_to_hg38_chain",
+      "name": "criGriChoV2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGriChoV2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/criGriChoV2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGriChoV2ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1778,11 +1778,11 @@
         "targetAssembly": "criGriChoV2",
         "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToMm10.over.chain.gz"
+          "uri": "liftOver/criGriChoV2ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/criGriChoV2ToMm10.over.pif.gz.csi"
           }
         }
       }

@@ -384,26 +384,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "droYak1_to_droYak2_chain",
-      "name": "droYak1 to D. yakuba (droYak2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["droYak1", "droYak2"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "droYak1",
-        "queryAssembly": "droYak2",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak1/liftOver/droYak1ToDroYak2.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak1/liftOver/droYak1ToDroYak2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "droYak1_to_dm2_chain",
       "name": "droYak1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
@@ -413,11 +393,31 @@
         "targetAssembly": "droYak1",
         "queryAssembly": "dm2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak1/liftOver/droYak1ToDm2.over.chain.gz"
+          "uri": "liftOver/droYak1ToDm2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak1/liftOver/droYak1ToDm2.over.chain.gz.csi"
+            "uri": "liftOver/droYak1ToDm2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droYak1_to_droYak2_chain",
+      "name": "droYak1 to D. yakuba (droYak2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droYak1", "droYak2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droYak1",
+        "queryAssembly": "droYak2",
+        "pifGzLocation": {
+          "uri": "liftOver/droYak1ToDroYak2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droYak1ToDroYak2.over.pif.gz.csi"
           }
         }
       }

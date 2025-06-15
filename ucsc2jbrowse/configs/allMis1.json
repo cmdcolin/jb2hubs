@@ -1709,26 +1709,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "allMis1_to_hg38_chain",
-      "name": "allMis1 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["allMis1", "hg38"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "allMis1",
-        "queryAssembly": "hg38",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/allMis1/liftOver/allMis1ToHg38.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/allMis1/liftOver/allMis1ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "allMis1_to_hg19_chain",
       "name": "allMis1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
@@ -1738,11 +1718,31 @@
         "targetAssembly": "allMis1",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/allMis1/liftOver/allMis1ToHg19.over.chain.gz"
+          "uri": "liftOver/allMis1ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/allMis1/liftOver/allMis1ToHg19.over.chain.gz.csi"
+            "uri": "liftOver/allMis1ToHg19.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "allMis1_to_hg38_chain",
+      "name": "allMis1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["allMis1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "allMis1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/allMis1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/allMis1ToHg38.over.pif.gz.csi"
           }
         }
       }

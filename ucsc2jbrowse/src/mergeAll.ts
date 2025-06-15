@@ -5,14 +5,12 @@ import path from 'path'
 import { readConfig } from './util.ts'
 
 const base = 'configs'
-const ret = fs
-  .readdirSync(base)
-  .map(file => readConfig(path.join(base, file)))
-  .map(config => {
-    // @ts-expect-error
-    addRelativeUris(config, config.assemblies[0]!.name)
-    return config
-  })
+const ret = fs.readdirSync(base).map(file => {
+  const config = readConfig(path.join(base, file))
+  // @ts-expect-error
+  addRelativeUris(config, config.assemblies[0]!.name)
+  return config
+})
 
 export function addRelativeUris(
   config: Record<string, unknown> | null,

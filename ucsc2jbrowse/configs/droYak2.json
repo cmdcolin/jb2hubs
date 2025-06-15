@@ -928,26 +928,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "droYak2_to_dm3_chain",
-      "name": "droYak2 to D. melanogaster (dm3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["droYak2", "dm3"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "droYak2",
-        "queryAssembly": "dm3",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak2/liftOver/droYak2ToDm3.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak2/liftOver/droYak2ToDm3.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "droYak2_to_dm2_chain",
       "name": "droYak2 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
@@ -957,11 +937,31 @@
         "targetAssembly": "droYak2",
         "queryAssembly": "dm2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak2/liftOver/droYak2ToDm2.over.chain.gz"
+          "uri": "liftOver/droYak2ToDm2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droYak2/liftOver/droYak2ToDm2.over.chain.gz.csi"
+            "uri": "liftOver/droYak2ToDm2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droYak2_to_dm3_chain",
+      "name": "droYak2 to D. melanogaster (dm3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droYak2", "dm3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droYak2",
+        "queryAssembly": "dm3",
+        "pifGzLocation": {
+          "uri": "liftOver/droYak2ToDm3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droYak2ToDm3.over.pif.gz.csi"
           }
         }
       }

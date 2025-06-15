@@ -2131,11 +2131,11 @@
         "targetAssembly": "felCat9",
         "queryAssembly": "felCat5",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToFelCat5.over.chain.gz"
+          "uri": "liftOver/felCat9ToFelCat5.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToFelCat5.over.chain.gz.csi"
+            "uri": "liftOver/felCat9ToFelCat5.over.pif.gz.csi"
           }
         }
       }
@@ -2151,11 +2151,11 @@
         "targetAssembly": "felCat9",
         "queryAssembly": "felCat8",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToFelCat8.over.chain.gz"
+          "uri": "liftOver/felCat9ToFelCat8.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToFelCat8.over.chain.gz.csi"
+            "uri": "liftOver/felCat9ToFelCat8.over.pif.gz.csi"
           }
         }
       }
@@ -2163,7 +2163,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat9_to_GCF_027475565.1_chain",
-      "name": "felCat9 to cheetah (Ajub_Pintada_27869175 2022) (GCF_027475565.1) liftOver chain",
+      "name": "felCat9 to GCF_027475565.1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat9", "GCF_027475565.1"],
       "adapter": {
@@ -2171,51 +2171,11 @@
         "targetAssembly": "felCat9",
         "queryAssembly": "GCF_027475565.1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToGCF_027475565.1.over.chain.gz"
+          "uri": "liftOver/felCat9ToGCF_027475565.1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToGCF_027475565.1.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "felCat9_to_mm10_chain",
-      "name": "felCat9 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["felCat9", "mm10"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "felCat9",
-        "queryAssembly": "mm10",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToMm10.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToMm10.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "felCat9_to_mm39_chain",
-      "name": "felCat9 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["felCat9", "mm39"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "felCat9",
-        "queryAssembly": "mm39",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToMm39.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToMm39.over.chain.gz.csi"
+            "uri": "liftOver/felCat9ToGCF_027475565.1.over.pif.gz.csi"
           }
         }
       }
@@ -2231,11 +2191,51 @@
         "targetAssembly": "felCat9",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToHg38.over.chain.gz"
+          "uri": "liftOver/felCat9ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat9/liftOver/felCat9ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/felCat9ToHg38.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_mm10_chain",
+      "name": "felCat9 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToMm10.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_mm39_chain",
+      "name": "felCat9 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToMm39.over.pif.gz.csi"
           }
         }
       }

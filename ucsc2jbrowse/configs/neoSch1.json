@@ -1762,11 +1762,11 @@
         "targetAssembly": "neoSch1",
         "queryAssembly": "canFam4",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToCanFam4.over.chain.gz"
+          "uri": "liftOver/neoSch1ToCanFam4.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToCanFam4.over.chain.gz.csi"
+            "uri": "liftOver/neoSch1ToCanFam4.over.pif.gz.csi"
           }
         }
       }
@@ -1782,31 +1782,11 @@
         "targetAssembly": "neoSch1",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToHg38.over.chain.gz"
+          "uri": "liftOver/neoSch1ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "neoSch1_to_mm10_chain",
-      "name": "neoSch1 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["neoSch1", "mm10"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "neoSch1",
-        "queryAssembly": "mm10",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToMm10.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/neoSch1ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1822,51 +1802,31 @@
         "targetAssembly": "neoSch1",
         "queryAssembly": "loxAfr3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToLoxAfr3.over.chain.gz"
+          "uri": "liftOver/neoSch1ToLoxAfr3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToLoxAfr3.over.chain.gz.csi"
+            "uri": "liftOver/neoSch1ToLoxAfr3.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "neoSch1_to_ornAna2_chain",
-      "name": "neoSch1 to Platypus (ornAna2) liftOver chain",
+      "trackId": "neoSch1_to_mm10_chain",
+      "name": "neoSch1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["neoSch1", "ornAna2"],
+      "assemblyNames": ["neoSch1", "mm10"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "neoSch1",
-        "queryAssembly": "ornAna2",
+        "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToOrnAna2.over.chain.gz"
+          "uri": "liftOver/neoSch1ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToOrnAna2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "neoSch1_to_monDom5_chain",
-      "name": "neoSch1 to Opossum (monDom5) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["neoSch1", "monDom5"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "neoSch1",
-        "queryAssembly": "monDom5",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToMonDom5.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToMonDom5.over.chain.gz.csi"
+            "uri": "liftOver/neoSch1ToMm10.over.pif.gz.csi"
           }
         }
       }
@@ -1882,31 +1842,51 @@
         "targetAssembly": "neoSch1",
         "queryAssembly": "mm39",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToMm39.over.chain.gz"
+          "uri": "liftOver/neoSch1ToMm39.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToMm39.over.chain.gz.csi"
+            "uri": "liftOver/neoSch1ToMm39.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "neoSch1_to_rheMac10_chain",
-      "name": "neoSch1 to Rhesus (rheMac10) liftOver chain",
+      "trackId": "neoSch1_to_monDom5_chain",
+      "name": "neoSch1 to Opossum (monDom5) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["neoSch1", "rheMac10"],
+      "assemblyNames": ["neoSch1", "monDom5"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "neoSch1",
-        "queryAssembly": "rheMac10",
+        "queryAssembly": "monDom5",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToRheMac10.over.chain.gz"
+          "uri": "liftOver/neoSch1ToMonDom5.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToRheMac10.over.chain.gz.csi"
+            "uri": "liftOver/neoSch1ToMonDom5.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "neoSch1_to_ornAna2_chain",
+      "name": "neoSch1 to Platypus (ornAna2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["neoSch1", "ornAna2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "neoSch1",
+        "queryAssembly": "ornAna2",
+        "pifGzLocation": {
+          "uri": "liftOver/neoSch1ToOrnAna2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/neoSch1ToOrnAna2.over.pif.gz.csi"
           }
         }
       }
@@ -1922,11 +1902,31 @@
         "targetAssembly": "neoSch1",
         "queryAssembly": "panTro6",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToPanTro6.over.chain.gz"
+          "uri": "liftOver/neoSch1ToPanTro6.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/neoSch1/liftOver/neoSch1ToPanTro6.over.chain.gz.csi"
+            "uri": "liftOver/neoSch1ToPanTro6.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "neoSch1_to_rheMac10_chain",
+      "name": "neoSch1 to Rhesus (rheMac10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["neoSch1", "rheMac10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "neoSch1",
+        "queryAssembly": "rheMac10",
+        "pifGzLocation": {
+          "uri": "liftOver/neoSch1ToRheMac10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/neoSch1ToRheMac10.over.pif.gz.csi"
           }
         }
       }

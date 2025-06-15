@@ -970,26 +970,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "cb3_to_priPac1_chain",
-      "name": "cb3 to P. pacificus (priPac1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cb3", "priPac1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "cb3",
-        "queryAssembly": "priPac1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToPriPac1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToPriPac1.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "cb3_to_caePb1_chain",
       "name": "cb3 to C. brenneri (caePb1) liftOver chain",
       "category": ["Liftover"],
@@ -999,11 +979,11 @@
         "targetAssembly": "cb3",
         "queryAssembly": "caePb1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaePb1.over.chain.gz"
+          "uri": "liftOver/cb3ToCaePb1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaePb1.over.chain.gz.csi"
+            "uri": "liftOver/cb3ToCaePb1.over.pif.gz.csi"
           }
         }
       }
@@ -1019,31 +999,11 @@
         "targetAssembly": "cb3",
         "queryAssembly": "caeRem2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaeRem2.over.chain.gz"
+          "uri": "liftOver/cb3ToCaeRem2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaeRem2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cb3_to_ce6_chain",
-      "name": "cb3 to C. elegans (ce6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cb3", "ce6"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "cb3",
-        "queryAssembly": "ce6",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe6.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe6.over.chain.gz.csi"
+            "uri": "liftOver/cb3ToCaeRem2.over.pif.gz.csi"
           }
         }
       }
@@ -1059,11 +1019,51 @@
         "targetAssembly": "cb3",
         "queryAssembly": "ce4",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe4.over.chain.gz"
+          "uri": "liftOver/cb3ToCe4.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe4.over.chain.gz.csi"
+            "uri": "liftOver/cb3ToCe4.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cb3_to_ce6_chain",
+      "name": "cb3 to C. elegans (ce6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "ce6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "ce6",
+        "pifGzLocation": {
+          "uri": "liftOver/cb3ToCe6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cb3ToCe6.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cb3_to_priPac1_chain",
+      "name": "cb3 to P. pacificus (priPac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "priPac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "priPac1",
+        "pifGzLocation": {
+          "uri": "liftOver/cb3ToPriPac1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cb3ToPriPac1.over.pif.gz.csi"
           }
         }
       }

@@ -297,26 +297,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "caePb1_to_ce4_chain",
-      "name": "caePb1 to C. elegans (ce4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["caePb1", "ce4"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "caePb1",
-        "queryAssembly": "ce4",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCe4.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCe4.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "caePb1_to_caePb2_chain",
       "name": "caePb1 to C. brenneri (caePb2) liftOver chain",
       "category": ["Liftover"],
@@ -326,31 +306,11 @@
         "targetAssembly": "caePb1",
         "queryAssembly": "caePb2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCaePb2.over.chain.gz"
+          "uri": "liftOver/caePb1ToCaePb2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCaePb2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "caePb1_to_priPac1_chain",
-      "name": "caePb1 to P. pacificus (priPac1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["caePb1", "priPac1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "caePb1",
-        "queryAssembly": "priPac1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToPriPac1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToPriPac1.over.chain.gz.csi"
+            "uri": "liftOver/caePb1ToCaePb2.over.pif.gz.csi"
           }
         }
       }
@@ -366,11 +326,11 @@
         "targetAssembly": "caePb1",
         "queryAssembly": "caeRem2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCaeRem2.over.chain.gz"
+          "uri": "liftOver/caePb1ToCaeRem2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCaeRem2.over.chain.gz.csi"
+            "uri": "liftOver/caePb1ToCaeRem2.over.pif.gz.csi"
           }
         }
       }
@@ -386,11 +346,51 @@
         "targetAssembly": "caePb1",
         "queryAssembly": "cb3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCb3.over.chain.gz"
+          "uri": "liftOver/caePb1ToCb3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caePb1/liftOver/caePb1ToCb3.over.chain.gz.csi"
+            "uri": "liftOver/caePb1ToCb3.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb1_to_ce4_chain",
+      "name": "caePb1 to C. elegans (ce4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb1", "ce4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caePb1",
+        "queryAssembly": "ce4",
+        "pifGzLocation": {
+          "uri": "liftOver/caePb1ToCe4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caePb1ToCe4.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb1_to_priPac1_chain",
+      "name": "caePb1 to P. pacificus (priPac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb1", "priPac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caePb1",
+        "queryAssembly": "priPac1",
+        "pifGzLocation": {
+          "uri": "liftOver/caePb1ToPriPac1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caePb1ToPriPac1.over.pif.gz.csi"
           }
         }
       }

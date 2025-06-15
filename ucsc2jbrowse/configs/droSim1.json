@@ -971,26 +971,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "droSim1_to_dm6_chain",
-      "name": "droSim1 to D. melanogaster (dm6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["droSim1", "dm6"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "droSim1",
-        "queryAssembly": "dm6",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm6.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm6.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "droSim1_to_dm2_chain",
       "name": "droSim1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
@@ -1000,11 +980,11 @@
         "targetAssembly": "droSim1",
         "queryAssembly": "dm2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm2.over.chain.gz"
+          "uri": "liftOver/droSim1ToDm2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm2.over.chain.gz.csi"
+            "uri": "liftOver/droSim1ToDm2.over.pif.gz.csi"
           }
         }
       }
@@ -1020,11 +1000,31 @@
         "targetAssembly": "droSim1",
         "queryAssembly": "dm3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm3.over.chain.gz"
+          "uri": "liftOver/droSim1ToDm3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSim1/liftOver/droSim1ToDm3.over.chain.gz.csi"
+            "uri": "liftOver/droSim1ToDm3.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSim1_to_dm6_chain",
+      "name": "droSim1 to D. melanogaster (dm6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSim1", "dm6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droSim1",
+        "queryAssembly": "dm6",
+        "pifGzLocation": {
+          "uri": "liftOver/droSim1ToDm6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droSim1ToDm6.over.pif.gz.csi"
           }
         }
       }

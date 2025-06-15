@@ -1990,7 +1990,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "oviAri4_to_GCF_001704415.2_chain",
-      "name": "oviAri4 to goat (v2 San Clemente 2016 USDA) (GCF_001704415.2) liftOver chain",
+      "name": "oviAri4 to GCF_001704415.2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["oviAri4", "GCF_001704415.2"],
       "adapter": {
@@ -1998,31 +1998,51 @@
         "targetAssembly": "oviAri4",
         "queryAssembly": "GCF_001704415.2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToGCF_001704415.2.over.chain.gz"
+          "uri": "liftOver/oviAri4ToGCF_001704415.2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToGCF_001704415.2.over.chain.gz.csi"
+            "uri": "liftOver/oviAri4ToGCF_001704415.2.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "oviAri4_to_oviAri3_chain",
-      "name": "oviAri4 to Sheep (oviAri3) liftOver chain",
+      "trackId": "oviAri4_to_GCF_002742125.1_chain",
+      "name": "oviAri4 to GCF_002742125.1 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["oviAri4", "oviAri3"],
+      "assemblyNames": ["oviAri4", "GCF_002742125.1"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "oviAri4",
-        "queryAssembly": "oviAri3",
+        "queryAssembly": "GCF_002742125.1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToOviAri3.over.chain.gz"
+          "uri": "liftOver/oviAri4ToGCF_002742125.1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToOviAri3.over.chain.gz.csi"
+            "uri": "liftOver/oviAri4ToGCF_002742125.1.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri4_to_GCF_016772045.1_chain",
+      "name": "oviAri4 to GCF_016772045.1 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri4", "GCF_016772045.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "oviAri4",
+        "queryAssembly": "GCF_016772045.1",
+        "pifGzLocation": {
+          "uri": "liftOver/oviAri4ToGCF_016772045.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/oviAri4ToGCF_016772045.1.over.pif.gz.csi"
           }
         }
       }
@@ -2038,51 +2058,11 @@
         "targetAssembly": "oviAri4",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToHg38.over.chain.gz"
+          "uri": "liftOver/oviAri4ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "oviAri4_to_GCF_016772045.1_chain",
-      "name": "oviAri4 to Rambouillet sheep (U.Idaho 2021) (GCF_016772045.1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["oviAri4", "GCF_016772045.1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "oviAri4",
-        "queryAssembly": "GCF_016772045.1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToGCF_016772045.1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToGCF_016772045.1.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "oviAri4_to_GCF_002742125.1_chain",
-      "name": "oviAri4 to Rambouillet sheep (Baylor 2017) (GCF_002742125.1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["oviAri4", "GCF_002742125.1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "oviAri4",
-        "queryAssembly": "GCF_002742125.1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToGCF_002742125.1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToGCF_002742125.1.over.chain.gz.csi"
+            "uri": "liftOver/oviAri4ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -2098,11 +2078,11 @@
         "targetAssembly": "oviAri4",
         "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToMm10.over.chain.gz"
+          "uri": "liftOver/oviAri4ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/oviAri4ToMm10.over.pif.gz.csi"
           }
         }
       }
@@ -2118,11 +2098,31 @@
         "targetAssembly": "oviAri4",
         "queryAssembly": "mm39",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToMm39.over.chain.gz"
+          "uri": "liftOver/oviAri4ToMm39.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri4/liftOver/oviAri4ToMm39.over.chain.gz.csi"
+            "uri": "liftOver/oviAri4ToMm39.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri4_to_oviAri3_chain",
+      "name": "oviAri4 to Sheep (oviAri3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri4", "oviAri3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "oviAri4",
+        "queryAssembly": "oviAri3",
+        "pifGzLocation": {
+          "uri": "liftOver/oviAri4ToOviAri3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/oviAri4ToOviAri3.over.pif.gz.csi"
           }
         }
       }

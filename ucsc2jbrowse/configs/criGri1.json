@@ -940,26 +940,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "criGri1_to_hg19_chain",
-      "name": "criGri1 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["criGri1", "hg19"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "criGri1",
-        "queryAssembly": "hg19",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToHg19.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToHg19.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "criGri1_to_criGriChoV1_chain",
       "name": "criGri1 to Chinese hamster (criGriChoV1) liftOver chain",
       "category": ["Liftover"],
@@ -969,11 +949,11 @@
         "targetAssembly": "criGri1",
         "queryAssembly": "criGriChoV1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToCriGriChoV1.over.chain.gz"
+          "uri": "liftOver/criGri1ToCriGriChoV1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToCriGriChoV1.over.chain.gz.csi"
+            "uri": "liftOver/criGri1ToCriGriChoV1.over.pif.gz.csi"
           }
         }
       }
@@ -989,11 +969,31 @@
         "targetAssembly": "criGri1",
         "queryAssembly": "criGriChoV2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToCriGriChoV2.over.chain.gz"
+          "uri": "liftOver/criGri1ToCriGriChoV2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGri1/liftOver/criGri1ToCriGriChoV2.over.chain.gz.csi"
+            "uri": "liftOver/criGri1ToCriGriChoV2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGri1_to_hg19_chain",
+      "name": "criGri1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGri1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGri1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/criGri1ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGri1ToHg19.over.pif.gz.csi"
           }
         }
       }

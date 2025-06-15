@@ -1801,6 +1801,26 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "xenLae2_to_hg38_chain",
+      "name": "xenLae2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenLae2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenLae2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/xenLae2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenLae2ToHg38.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "xenLae2_to_mm10_chain",
       "name": "xenLae2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
@@ -1810,11 +1830,11 @@
         "targetAssembly": "xenLae2",
         "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToMm10.over.chain.gz"
+          "uri": "liftOver/xenLae2ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/xenLae2ToMm10.over.pif.gz.csi"
           }
         }
       }
@@ -1830,31 +1850,11 @@
         "targetAssembly": "xenLae2",
         "queryAssembly": "xenTro9",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToXenTro9.over.chain.gz"
+          "uri": "liftOver/xenLae2ToXenTro9.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToXenTro9.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenLae2_to_hg38_chain",
-      "name": "xenLae2 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenLae2", "hg38"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "xenLae2",
-        "queryAssembly": "hg38",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToHg38.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenLae2/liftOver/xenLae2ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/xenLae2ToXenTro9.over.pif.gz.csi"
           }
         }
       }

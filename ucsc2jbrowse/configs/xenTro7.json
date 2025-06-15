@@ -1170,46 +1170,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro7_to_xenTro2_chain",
-      "name": "xenTro7 to X. tropicalis (xenTro2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro7", "xenTro2"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "xenTro7",
-        "queryAssembly": "xenTro2",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro2.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro7_to_rn6_chain",
-      "name": "xenTro7 to Rat (rn6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro7", "rn6"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "xenTro7",
-        "queryAssembly": "rn6",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToRn6.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToRn6.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "xenTro7_to_danRer10_chain",
       "name": "xenTro7 to Zebrafish (danRer10) liftOver chain",
       "category": ["Liftover"],
@@ -1219,11 +1179,11 @@
         "targetAssembly": "xenTro7",
         "queryAssembly": "danRer10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToDanRer10.over.chain.gz"
+          "uri": "liftOver/xenTro7ToDanRer10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToDanRer10.over.chain.gz.csi"
+            "uri": "liftOver/xenTro7ToDanRer10.over.pif.gz.csi"
           }
         }
       }
@@ -1239,51 +1199,11 @@
         "targetAssembly": "xenTro7",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToHg38.over.chain.gz"
+          "uri": "liftOver/xenTro7ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro7_to_xenTro10_chain",
-      "name": "xenTro7 to X. tropicalis (xenTro10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro7", "xenTro10"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "xenTro7",
-        "queryAssembly": "xenTro10",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro10.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro10.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro7_to_xenTro3_chain",
-      "name": "xenTro7 to X. tropicalis (xenTro3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro7", "xenTro3"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "xenTro7",
-        "queryAssembly": "xenTro3",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro3.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro3.over.chain.gz.csi"
+            "uri": "liftOver/xenTro7ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1299,11 +1219,71 @@
         "targetAssembly": "xenTro7",
         "queryAssembly": "nanPar1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToNanPar1.over.chain.gz"
+          "uri": "liftOver/xenTro7ToNanPar1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToNanPar1.over.chain.gz.csi"
+            "uri": "liftOver/xenTro7ToNanPar1.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro7_to_rn6_chain",
+      "name": "xenTro7 to Rat (rn6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro7", "rn6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro7",
+        "queryAssembly": "rn6",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro7ToRn6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro7ToRn6.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro7_to_xenTro2_chain",
+      "name": "xenTro7 to X. tropicalis (xenTro2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro7", "xenTro2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro7",
+        "queryAssembly": "xenTro2",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro7ToXenTro2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro7ToXenTro2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro7_to_xenTro3_chain",
+      "name": "xenTro7 to X. tropicalis (xenTro3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro7", "xenTro3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro7",
+        "queryAssembly": "xenTro3",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro7ToXenTro3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro7ToXenTro3.over.pif.gz.csi"
           }
         }
       }
@@ -1319,11 +1299,31 @@
         "targetAssembly": "xenTro7",
         "queryAssembly": "xenTro9",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro9.over.chain.gz"
+          "uri": "liftOver/xenTro7ToXenTro9.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro7/liftOver/xenTro7ToXenTro9.over.chain.gz.csi"
+            "uri": "liftOver/xenTro7ToXenTro9.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro7_to_xenTro10_chain",
+      "name": "xenTro7 to X. tropicalis (xenTro10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro7", "xenTro10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro7",
+        "queryAssembly": "xenTro10",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro7ToXenTro10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro7ToXenTro10.over.pif.gz.csi"
           }
         }
       }

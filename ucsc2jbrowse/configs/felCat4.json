@@ -658,40 +658,20 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "felCat4_to_felCat8_chain",
-      "name": "felCat4 to Cat (felCat8) liftOver chain",
+      "trackId": "felCat4_to_ailMel1_chain",
+      "name": "felCat4 to Panda (ailMel1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["felCat4", "felCat8"],
+      "assemblyNames": ["felCat4", "ailMel1"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "felCat4",
-        "queryAssembly": "felCat8",
+        "queryAssembly": "ailMel1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToFelCat8.over.chain.gz"
+          "uri": "liftOver/felCat4ToAilMel1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToFelCat8.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "felCat4_to_monDom5_chain",
-      "name": "felCat4 to Opossum (monDom5) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["felCat4", "monDom5"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "felCat4",
-        "queryAssembly": "monDom5",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToMonDom5.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToMonDom5.over.chain.gz.csi"
+            "uri": "liftOver/felCat4ToAilMel1.over.pif.gz.csi"
           }
         }
       }
@@ -707,31 +687,11 @@
         "targetAssembly": "felCat4",
         "queryAssembly": "canFam2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToCanFam2.over.chain.gz"
+          "uri": "liftOver/felCat4ToCanFam2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToCanFam2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "felCat4_to_ailMel1_chain",
-      "name": "felCat4 to Panda (ailMel1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["felCat4", "ailMel1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "felCat4",
-        "queryAssembly": "ailMel1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToAilMel1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToAilMel1.over.chain.gz.csi"
+            "uri": "liftOver/felCat4ToCanFam2.over.pif.gz.csi"
           }
         }
       }
@@ -747,11 +707,11 @@
         "targetAssembly": "felCat4",
         "queryAssembly": "felCat3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToFelCat3.over.chain.gz"
+          "uri": "liftOver/felCat4ToFelCat3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToFelCat3.over.chain.gz.csi"
+            "uri": "liftOver/felCat4ToFelCat3.over.pif.gz.csi"
           }
         }
       }
@@ -767,11 +727,31 @@
         "targetAssembly": "felCat4",
         "queryAssembly": "felCat5",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToFelCat5.over.chain.gz"
+          "uri": "liftOver/felCat4ToFelCat5.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToFelCat5.over.chain.gz.csi"
+            "uri": "liftOver/felCat4ToFelCat5.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat4_to_felCat8_chain",
+      "name": "felCat4 to Cat (felCat8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat4", "felCat8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat4",
+        "queryAssembly": "felCat8",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat4ToFelCat8.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat4ToFelCat8.over.pif.gz.csi"
           }
         }
       }
@@ -787,11 +767,11 @@
         "targetAssembly": "felCat4",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToHg19.over.chain.gz"
+          "uri": "liftOver/felCat4ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToHg19.over.chain.gz.csi"
+            "uri": "liftOver/felCat4ToHg19.over.pif.gz.csi"
           }
         }
       }
@@ -807,11 +787,31 @@
         "targetAssembly": "felCat4",
         "queryAssembly": "mm9",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToMm9.over.chain.gz"
+          "uri": "liftOver/felCat4ToMm9.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat4/liftOver/felCat4ToMm9.over.chain.gz.csi"
+            "uri": "liftOver/felCat4ToMm9.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat4_to_monDom5_chain",
+      "name": "felCat4 to Opossum (monDom5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat4", "monDom5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat4",
+        "queryAssembly": "monDom5",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat4ToMonDom5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat4ToMonDom5.over.pif.gz.csi"
           }
         }
       }

@@ -17728,6 +17728,26 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "hg16_to_galGal2_chain",
+      "name": "hg16 to Chicken (galGal2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg16", "galGal2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg16",
+        "queryAssembly": "galGal2",
+        "pifGzLocation": {
+          "uri": "liftOver/hg16ToGalGal2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg16ToGalGal2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "hg16_to_hg17_chain",
       "name": "hg16 to Human (hg17) liftOver chain",
       "category": ["Liftover"],
@@ -17737,11 +17757,11 @@
         "targetAssembly": "hg16",
         "queryAssembly": "hg17",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg17.over.chain.gz"
+          "uri": "liftOver/hg16ToHg17.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg17.over.chain.gz.csi"
+            "uri": "liftOver/hg16ToHg17.over.pif.gz.csi"
           }
         }
       }
@@ -17757,131 +17777,11 @@
         "targetAssembly": "hg16",
         "queryAssembly": "hg18",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg18.over.chain.gz"
+          "uri": "liftOver/hg16ToHg18.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg18.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "hg16_to_mm4_chain",
-      "name": "hg16 to mm4 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["hg16", "mm4"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "hg16",
-        "queryAssembly": "mm4",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToMm4.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToMm4.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "hg16_to_mm6_chain",
-      "name": "hg16 to mm6 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["hg16", "mm6"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "hg16",
-        "queryAssembly": "mm6",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToMm6.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToMm6.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "hg16_to_rn3_chain",
-      "name": "hg16 to Rat (rn3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["hg16", "rn3"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "hg16",
-        "queryAssembly": "rn3",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToRn3.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToRn3.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "hg16_to_mm5_chain",
-      "name": "hg16 to mm5 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["hg16", "mm5"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "hg16",
-        "queryAssembly": "mm5",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToMm5.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToMm5.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "hg16_to_panTro1_chain",
-      "name": "hg16 to Chimp (panTro1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["hg16", "panTro1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "hg16",
-        "queryAssembly": "panTro1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToPanTro1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToPanTro1.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "hg16_to_hg38_chain",
-      "name": "hg16 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["hg16", "hg38"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "hg16",
-        "queryAssembly": "hg38",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg38.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/hg16ToHg18.over.pif.gz.csi"
           }
         }
       }
@@ -17897,31 +17797,131 @@
         "targetAssembly": "hg16",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg19.over.chain.gz"
+          "uri": "liftOver/hg16ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToHg19.over.chain.gz.csi"
+            "uri": "liftOver/hg16ToHg19.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "hg16_to_galGal2_chain",
-      "name": "hg16 to Chicken (galGal2) liftOver chain",
+      "trackId": "hg16_to_hg38_chain",
+      "name": "hg16 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["hg16", "galGal2"],
+      "assemblyNames": ["hg16", "hg38"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "hg16",
-        "queryAssembly": "galGal2",
+        "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToGalGal2.over.chain.gz"
+          "uri": "liftOver/hg16ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg16/liftOver/hg16ToGalGal2.over.chain.gz.csi"
+            "uri": "liftOver/hg16ToHg38.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg16_to_mm4_chain",
+      "name": "hg16 to mm4 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg16", "mm4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg16",
+        "queryAssembly": "mm4",
+        "pifGzLocation": {
+          "uri": "liftOver/hg16ToMm4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg16ToMm4.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg16_to_mm5_chain",
+      "name": "hg16 to mm5 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg16", "mm5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg16",
+        "queryAssembly": "mm5",
+        "pifGzLocation": {
+          "uri": "liftOver/hg16ToMm5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg16ToMm5.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg16_to_mm6_chain",
+      "name": "hg16 to mm6 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg16", "mm6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg16",
+        "queryAssembly": "mm6",
+        "pifGzLocation": {
+          "uri": "liftOver/hg16ToMm6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg16ToMm6.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg16_to_panTro1_chain",
+      "name": "hg16 to Chimp (panTro1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg16", "panTro1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg16",
+        "queryAssembly": "panTro1",
+        "pifGzLocation": {
+          "uri": "liftOver/hg16ToPanTro1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg16ToPanTro1.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg16_to_rn3_chain",
+      "name": "hg16 to Rat (rn3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg16", "rn3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg16",
+        "queryAssembly": "rn3",
+        "pifGzLocation": {
+          "uri": "liftOver/hg16ToRn3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg16ToRn3.over.pif.gz.csi"
           }
         }
       }

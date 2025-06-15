@@ -705,31 +705,11 @@
         "targetAssembly": "tarSyr1",
         "queryAssembly": "gorGor3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToGorGor3.over.chain.gz"
+          "uri": "liftOver/tarSyr1ToGorGor3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToGorGor3.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "tarSyr1_to_tarSyr2_chain",
-      "name": "tarSyr1 to Tarsier (tarSyr2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["tarSyr1", "tarSyr2"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "tarSyr1",
-        "queryAssembly": "tarSyr2",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToTarSyr2.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToTarSyr2.over.chain.gz.csi"
+            "uri": "liftOver/tarSyr1ToGorGor3.over.pif.gz.csi"
           }
         }
       }
@@ -745,11 +725,31 @@
         "targetAssembly": "tarSyr1",
         "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToMm10.over.chain.gz"
+          "uri": "liftOver/tarSyr1ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/tarSyr1ToMm10.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "tarSyr1_to_tarSyr2_chain",
+      "name": "tarSyr1 to Tarsier (tarSyr2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tarSyr1", "tarSyr2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "tarSyr1",
+        "queryAssembly": "tarSyr2",
+        "pifGzLocation": {
+          "uri": "liftOver/tarSyr1ToTarSyr2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/tarSyr1ToTarSyr2.over.pif.gz.csi"
           }
         }
       }

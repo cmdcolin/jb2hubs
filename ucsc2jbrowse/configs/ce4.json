@@ -786,6 +786,26 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "ce4_to_caePb1_chain",
+      "name": "ce4 to C. brenneri (caePb1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ce4", "caePb1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ce4",
+        "queryAssembly": "caePb1",
+        "pifGzLocation": {
+          "uri": "liftOver/ce4ToCaePb1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ce4ToCaePb1.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "ce4_to_caeRem2_chain",
       "name": "ce4 to C. remanei (caeRem2) liftOver chain",
       "category": ["Liftover"],
@@ -795,71 +815,11 @@
         "targetAssembly": "ce4",
         "queryAssembly": "caeRem2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCaeRem2.over.chain.gz"
+          "uri": "liftOver/ce4ToCaeRem2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCaeRem2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ce4_to_ce10_chain",
-      "name": "ce4 to C. elegans (ce10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ce4", "ce10"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "ce4",
-        "queryAssembly": "ce10",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCe10.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCe10.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ce4_to_ce6_chain",
-      "name": "ce4 to C. elegans (ce6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ce4", "ce6"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "ce4",
-        "queryAssembly": "ce6",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCe6.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCe6.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ce4_to_priPac1_chain",
-      "name": "ce4 to P. pacificus (priPac1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ce4", "priPac1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "ce4",
-        "queryAssembly": "priPac1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToPriPac1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToPriPac1.over.chain.gz.csi"
+            "uri": "liftOver/ce4ToCaeRem2.over.pif.gz.csi"
           }
         }
       }
@@ -875,31 +835,71 @@
         "targetAssembly": "ce4",
         "queryAssembly": "cb3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCb3.over.chain.gz"
+          "uri": "liftOver/ce4ToCb3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCb3.over.chain.gz.csi"
+            "uri": "liftOver/ce4ToCb3.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "ce4_to_caePb1_chain",
-      "name": "ce4 to C. brenneri (caePb1) liftOver chain",
+      "trackId": "ce4_to_ce6_chain",
+      "name": "ce4 to C. elegans (ce6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ce4", "caePb1"],
+      "assemblyNames": ["ce4", "ce6"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ce4",
-        "queryAssembly": "caePb1",
+        "queryAssembly": "ce6",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCaePb1.over.chain.gz"
+          "uri": "liftOver/ce4ToCe6.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce4/liftOver/ce4ToCaePb1.over.chain.gz.csi"
+            "uri": "liftOver/ce4ToCe6.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ce4_to_ce10_chain",
+      "name": "ce4 to C. elegans (ce10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ce4", "ce10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ce4",
+        "queryAssembly": "ce10",
+        "pifGzLocation": {
+          "uri": "liftOver/ce4ToCe10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ce4ToCe10.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ce4_to_priPac1_chain",
+      "name": "ce4 to P. pacificus (priPac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ce4", "priPac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ce4",
+        "queryAssembly": "priPac1",
+        "pifGzLocation": {
+          "uri": "liftOver/ce4ToPriPac1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ce4ToPriPac1.over.pif.gz.csi"
           }
         }
       }

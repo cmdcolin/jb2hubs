@@ -1846,20 +1846,20 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "papAnu4_to_papAnu3_chain",
-      "name": "papAnu4 to papAnu3 liftOver chain",
+      "trackId": "papAnu4_to_hg38_chain",
+      "name": "papAnu4 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["papAnu4", "papAnu3"],
+      "assemblyNames": ["papAnu4", "hg38"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "papAnu4",
-        "queryAssembly": "papAnu3",
+        "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToPapAnu3.over.chain.gz"
+          "uri": "liftOver/papAnu4ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToPapAnu3.over.chain.gz.csi"
+            "uri": "liftOver/papAnu4ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1875,11 +1875,11 @@
         "targetAssembly": "papAnu4",
         "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToMm10.over.chain.gz"
+          "uri": "liftOver/papAnu4ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/papAnu4ToMm10.over.pif.gz.csi"
           }
         }
       }
@@ -1895,31 +1895,31 @@
         "targetAssembly": "papAnu4",
         "queryAssembly": "papAnu2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToPapAnu2.over.chain.gz"
+          "uri": "liftOver/papAnu4ToPapAnu2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToPapAnu2.over.chain.gz.csi"
+            "uri": "liftOver/papAnu4ToPapAnu2.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "papAnu4_to_hg38_chain",
-      "name": "papAnu4 to Human (hg38) liftOver chain",
+      "trackId": "papAnu4_to_papAnu3_chain",
+      "name": "papAnu4 to papAnu3 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["papAnu4", "hg38"],
+      "assemblyNames": ["papAnu4", "papAnu3"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "papAnu4",
-        "queryAssembly": "hg38",
+        "queryAssembly": "papAnu3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToHg38.over.chain.gz"
+          "uri": "liftOver/papAnu4ToPapAnu3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/papAnu4/liftOver/papAnu4ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/papAnu4ToPapAnu3.over.pif.gz.csi"
           }
         }
       }

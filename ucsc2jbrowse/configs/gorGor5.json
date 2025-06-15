@@ -867,11 +867,11 @@
         "targetAssembly": "gorGor5",
         "queryAssembly": "gorGor4",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToGorGor4.over.chain.gz"
+          "uri": "liftOver/gorGor5ToGorGor4.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToGorGor4.over.chain.gz.csi"
+            "uri": "liftOver/gorGor5ToGorGor4.over.pif.gz.csi"
           }
         }
       }
@@ -887,51 +887,11 @@
         "targetAssembly": "gorGor5",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToHg38.over.chain.gz"
+          "uri": "liftOver/gorGor5ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "gorGor5_to_panTro5_chain",
-      "name": "gorGor5 to Chimp (panTro5) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["gorGor5", "panTro5"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "gorGor5",
-        "queryAssembly": "panTro5",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToPanTro5.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToPanTro5.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "gorGor5_to_panTro4_chain",
-      "name": "gorGor5 to Chimp (panTro4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["gorGor5", "panTro4"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "gorGor5",
-        "queryAssembly": "panTro4",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToPanTro4.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToPanTro4.over.chain.gz.csi"
+            "uri": "liftOver/gorGor5ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -947,11 +907,51 @@
         "targetAssembly": "gorGor5",
         "queryAssembly": "panPan2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToPanPan2.over.chain.gz"
+          "uri": "liftOver/gorGor5ToPanPan2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor5/liftOver/gorGor5ToPanPan2.over.chain.gz.csi"
+            "uri": "liftOver/gorGor5ToPanPan2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor5_to_panTro4_chain",
+      "name": "gorGor5 to Chimp (panTro4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor5", "panTro4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor5",
+        "queryAssembly": "panTro4",
+        "pifGzLocation": {
+          "uri": "liftOver/gorGor5ToPanTro4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gorGor5ToPanTro4.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor5_to_panTro5_chain",
+      "name": "gorGor5 to Chimp (panTro5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor5", "panTro5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor5",
+        "queryAssembly": "panTro5",
+        "pifGzLocation": {
+          "uri": "liftOver/gorGor5ToPanTro5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gorGor5ToPanTro5.over.pif.gz.csi"
           }
         }
       }

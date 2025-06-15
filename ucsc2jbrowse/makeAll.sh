@@ -32,7 +32,7 @@ echo "Create hs1 GFF file and index"
 echo "---------------"
 
 echo "Create chain tracks"
-find ~/ucsc/ -maxdepth 1 -mindepth 1 -type d | parallel -j3 --bar './createChainTracks.sh -a $(basename {})'
+find ~/ucsc/ -maxdepth 1 -mindepth 1 -type d | parallel -j3 --bar 'node src/createChainTracks.ts -a $(basename {})'
 echo "---------------"
 
 echo "Hashing files"

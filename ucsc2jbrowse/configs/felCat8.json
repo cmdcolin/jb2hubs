@@ -1361,26 +1361,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "felCat8_to_felCat9_chain",
-      "name": "felCat8 to Cat (felCat9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["felCat8", "felCat9"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "felCat8",
-        "queryAssembly": "felCat9",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToFelCat9.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToFelCat9.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "felCat8_to_canFam3_chain",
       "name": "felCat8 to Dog (canFam3) liftOver chain",
       "category": ["Liftover"],
@@ -1390,11 +1370,11 @@
         "targetAssembly": "felCat8",
         "queryAssembly": "canFam3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToCanFam3.over.chain.gz"
+          "uri": "liftOver/felCat8ToCanFam3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToCanFam3.over.chain.gz.csi"
+            "uri": "liftOver/felCat8ToCanFam3.over.pif.gz.csi"
           }
         }
       }
@@ -1410,11 +1390,31 @@
         "targetAssembly": "felCat8",
         "queryAssembly": "felCat5",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToFelCat5.over.chain.gz"
+          "uri": "liftOver/felCat8ToFelCat5.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToFelCat5.over.chain.gz.csi"
+            "uri": "liftOver/felCat8ToFelCat5.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat8_to_felCat9_chain",
+      "name": "felCat8 to Cat (felCat9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat8", "felCat9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat8",
+        "queryAssembly": "felCat9",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat8ToFelCat9.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat8ToFelCat9.over.pif.gz.csi"
           }
         }
       }
@@ -1422,7 +1422,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "felCat8_to_GCF_018350175.1_chain",
-      "name": "felCat8 to domestic cat (Fca126 2021 Texas A&M U) (GCF_018350175.1) liftOver chain",
+      "name": "felCat8 to GCF_018350175.1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["felCat8", "GCF_018350175.1"],
       "adapter": {
@@ -1430,11 +1430,11 @@
         "targetAssembly": "felCat8",
         "queryAssembly": "GCF_018350175.1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToGCF_018350175.1.over.chain.gz"
+          "uri": "liftOver/felCat8ToGCF_018350175.1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToGCF_018350175.1.over.chain.gz.csi"
+            "uri": "liftOver/felCat8ToGCF_018350175.1.over.pif.gz.csi"
           }
         }
       }
@@ -1450,11 +1450,11 @@
         "targetAssembly": "felCat8",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToHg38.over.chain.gz"
+          "uri": "liftOver/felCat8ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/felCat8ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1470,11 +1470,11 @@
         "targetAssembly": "felCat8",
         "queryAssembly": "rn6",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToRn6.over.chain.gz"
+          "uri": "liftOver/felCat8ToRn6.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat8/liftOver/felCat8ToRn6.over.chain.gz.csi"
+            "uri": "liftOver/felCat8ToRn6.over.pif.gz.csi"
           }
         }
       }

@@ -712,40 +712,20 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "panTro3_to_panTro2_chain",
-      "name": "panTro3 to Chimp (panTro2) liftOver chain",
+      "trackId": "panTro3_to_calJac3_chain",
+      "name": "panTro3 to Marmoset (calJac3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "panTro2"],
+      "assemblyNames": ["panTro3", "calJac3"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "panTro3",
-        "queryAssembly": "panTro2",
+        "queryAssembly": "calJac3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPanTro2.over.chain.gz"
+          "uri": "liftOver/panTro3ToCalJac3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPanTro2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panTro3_to_rheMac2_chain",
-      "name": "panTro3 to Rhesus (rheMac2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "rheMac2"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "panTro3",
-        "queryAssembly": "rheMac2",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToRheMac2.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToRheMac2.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToCalJac3.over.pif.gz.csi"
           }
         }
       }
@@ -761,11 +741,11 @@
         "targetAssembly": "panTro3",
         "queryAssembly": "canFam2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToCanFam2.over.chain.gz"
+          "uri": "liftOver/panTro3ToCanFam2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToCanFam2.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToCanFam2.over.pif.gz.csi"
           }
         }
       }
@@ -781,11 +761,11 @@
         "targetAssembly": "panTro3",
         "queryAssembly": "danRer7",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToDanRer7.over.chain.gz"
+          "uri": "liftOver/panTro3ToDanRer7.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToDanRer7.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToDanRer7.over.pif.gz.csi"
           }
         }
       }
@@ -801,91 +781,11 @@
         "targetAssembly": "panTro3",
         "queryAssembly": "equCab2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToEquCab2.over.chain.gz"
+          "uri": "liftOver/panTro3ToEquCab2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToEquCab2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panTro3_to_mm9_chain",
-      "name": "panTro3 to Mouse (mm9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "mm9"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "panTro3",
-        "queryAssembly": "mm9",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToMm9.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToMm9.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panTro3_to_ponAbe2_chain",
-      "name": "panTro3 to Orangutan (ponAbe2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "ponAbe2"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "panTro3",
-        "queryAssembly": "ponAbe2",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPonAbe2.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPonAbe2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panTro3_to_gorGor3_chain",
-      "name": "panTro3 to Gorilla (gorGor3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "gorGor3"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "panTro3",
-        "queryAssembly": "gorGor3",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToGorGor3.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToGorGor3.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panTro3_to_panTro4_chain",
-      "name": "panTro3 to Chimp (panTro4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "panTro4"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "panTro3",
-        "queryAssembly": "panTro4",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPanTro4.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPanTro4.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToEquCab2.over.pif.gz.csi"
           }
         }
       }
@@ -901,11 +801,31 @@
         "targetAssembly": "panTro3",
         "queryAssembly": "galGal3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToGalGal3.over.chain.gz"
+          "uri": "liftOver/panTro3ToGalGal3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToGalGal3.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToGalGal3.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panTro3_to_gorGor3_chain",
+      "name": "panTro3 to Gorilla (gorGor3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panTro3", "gorGor3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panTro3",
+        "queryAssembly": "gorGor3",
+        "pifGzLocation": {
+          "uri": "liftOver/panTro3ToGorGor3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panTro3ToGorGor3.over.pif.gz.csi"
           }
         }
       }
@@ -921,11 +841,11 @@
         "targetAssembly": "panTro3",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToHg19.over.chain.gz"
+          "uri": "liftOver/panTro3ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToHg19.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToHg19.over.pif.gz.csi"
           }
         }
       }
@@ -941,51 +861,31 @@
         "targetAssembly": "panTro3",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToHg38.over.chain.gz"
+          "uri": "liftOver/panTro3ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToHg38.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "panTro3_to_panTro5_chain",
-      "name": "panTro3 to Chimp (panTro5) liftOver chain",
+      "trackId": "panTro3_to_mm9_chain",
+      "name": "panTro3 to Mouse (mm9) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "panTro5"],
+      "assemblyNames": ["panTro3", "mm9"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "panTro3",
-        "queryAssembly": "panTro5",
+        "queryAssembly": "mm9",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPanTro5.over.chain.gz"
+          "uri": "liftOver/panTro3ToMm9.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToPanTro5.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panTro3_to_calJac3_chain",
-      "name": "panTro3 to Marmoset (calJac3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panTro3", "calJac3"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "panTro3",
-        "queryAssembly": "calJac3",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToCalJac3.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToCalJac3.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToMm9.over.pif.gz.csi"
           }
         }
       }
@@ -1001,11 +901,111 @@
         "targetAssembly": "panTro3",
         "queryAssembly": "monDom5",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToMonDom5.over.chain.gz"
+          "uri": "liftOver/panTro3ToMonDom5.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panTro3/liftOver/panTro3ToMonDom5.over.chain.gz.csi"
+            "uri": "liftOver/panTro3ToMonDom5.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panTro3_to_panTro2_chain",
+      "name": "panTro3 to Chimp (panTro2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panTro3", "panTro2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panTro3",
+        "queryAssembly": "panTro2",
+        "pifGzLocation": {
+          "uri": "liftOver/panTro3ToPanTro2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panTro3ToPanTro2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panTro3_to_panTro4_chain",
+      "name": "panTro3 to Chimp (panTro4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panTro3", "panTro4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panTro3",
+        "queryAssembly": "panTro4",
+        "pifGzLocation": {
+          "uri": "liftOver/panTro3ToPanTro4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panTro3ToPanTro4.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panTro3_to_panTro5_chain",
+      "name": "panTro3 to Chimp (panTro5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panTro3", "panTro5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panTro3",
+        "queryAssembly": "panTro5",
+        "pifGzLocation": {
+          "uri": "liftOver/panTro3ToPanTro5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panTro3ToPanTro5.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panTro3_to_ponAbe2_chain",
+      "name": "panTro3 to Orangutan (ponAbe2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panTro3", "ponAbe2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panTro3",
+        "queryAssembly": "ponAbe2",
+        "pifGzLocation": {
+          "uri": "liftOver/panTro3ToPonAbe2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panTro3ToPonAbe2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panTro3_to_rheMac2_chain",
+      "name": "panTro3 to Rhesus (rheMac2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panTro3", "rheMac2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panTro3",
+        "queryAssembly": "rheMac2",
+        "pifGzLocation": {
+          "uri": "liftOver/panTro3ToRheMac2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panTro3ToRheMac2.over.pif.gz.csi"
           }
         }
       }

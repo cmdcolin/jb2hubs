@@ -1845,26 +1845,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "sarHar1_to_hg38_chain",
-      "name": "sarHar1 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["sarHar1", "hg38"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "sarHar1",
-        "queryAssembly": "hg38",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg38.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "sarHar1_to_hg19_chain",
       "name": "sarHar1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
@@ -1874,11 +1854,31 @@
         "targetAssembly": "sarHar1",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg19.over.chain.gz"
+          "uri": "liftOver/sarHar1ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg19.over.chain.gz.csi"
+            "uri": "liftOver/sarHar1ToHg19.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sarHar1_to_hg38_chain",
+      "name": "sarHar1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sarHar1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sarHar1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/sarHar1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sarHar1ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1894,11 +1894,11 @@
         "targetAssembly": "sarHar1",
         "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToMm10.over.chain.gz"
+          "uri": "liftOver/sarHar1ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/sarHar1ToMm10.over.pif.gz.csi"
           }
         }
       }

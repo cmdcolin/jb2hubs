@@ -1791,26 +1791,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "sorAra2_to_mm10_chain",
-      "name": "sorAra2 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["sorAra2", "mm10"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "sorAra2",
-        "queryAssembly": "mm10",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm10.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm10.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "sorAra2_to_hg19_chain",
       "name": "sorAra2 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
@@ -1820,31 +1800,11 @@
         "targetAssembly": "sorAra2",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg19.over.chain.gz"
+          "uri": "liftOver/sorAra2ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg19.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "sorAra2_to_mm39_chain",
-      "name": "sorAra2 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["sorAra2", "mm39"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "sorAra2",
-        "queryAssembly": "mm39",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm39.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm39.over.chain.gz.csi"
+            "uri": "liftOver/sorAra2ToHg19.over.pif.gz.csi"
           }
         }
       }
@@ -1860,11 +1820,51 @@
         "targetAssembly": "sorAra2",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg38.over.chain.gz"
+          "uri": "liftOver/sorAra2ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/sorAra2ToHg38.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_mm10_chain",
+      "name": "sorAra2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra2ToMm10.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_mm39_chain",
+      "name": "sorAra2 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra2ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra2ToMm39.over.pif.gz.csi"
           }
         }
       }

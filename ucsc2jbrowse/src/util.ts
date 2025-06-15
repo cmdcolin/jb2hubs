@@ -27,7 +27,11 @@ export function replaceLink(s: string) {
 }
 
 export function readConfig(s: string) {
-  return readJSON<JBrowseConfig>(s)
+  try {
+    return readJSON<JBrowseConfig>(s)
+  } catch (e) {
+    throw new Error(`Error reading config: ${s}`, { cause: e })
+  }
 }
 
 export function decodeURIComponentNoThrow(uri: string) {

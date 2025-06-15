@@ -885,26 +885,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "braFlo1_to_petMar1_chain",
-      "name": "braFlo1 to Lamprey (petMar1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["braFlo1", "petMar1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "braFlo1",
-        "queryAssembly": "petMar1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToPetMar1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToPetMar1.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "braFlo1_to_galGal3_chain",
       "name": "braFlo1 to Chicken (galGal3) liftOver chain",
       "category": ["Liftover"],
@@ -914,11 +894,11 @@
         "targetAssembly": "braFlo1",
         "queryAssembly": "galGal3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToGalGal3.over.chain.gz"
+          "uri": "liftOver/braFlo1ToGalGal3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToGalGal3.over.chain.gz.csi"
+            "uri": "liftOver/braFlo1ToGalGal3.over.pif.gz.csi"
           }
         }
       }
@@ -934,11 +914,11 @@
         "targetAssembly": "braFlo1",
         "queryAssembly": "hg18",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToHg18.over.chain.gz"
+          "uri": "liftOver/braFlo1ToHg18.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToHg18.over.chain.gz.csi"
+            "uri": "liftOver/braFlo1ToHg18.over.pif.gz.csi"
           }
         }
       }
@@ -954,11 +934,31 @@
         "targetAssembly": "braFlo1",
         "queryAssembly": "mm9",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToMm9.over.chain.gz"
+          "uri": "liftOver/braFlo1ToMm9.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToMm9.over.chain.gz.csi"
+            "uri": "liftOver/braFlo1ToMm9.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_petMar1_chain",
+      "name": "braFlo1 to Lamprey (petMar1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1", "petMar1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "petMar1",
+        "pifGzLocation": {
+          "uri": "liftOver/braFlo1ToPetMar1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/braFlo1ToPetMar1.over.pif.gz.csi"
           }
         }
       }

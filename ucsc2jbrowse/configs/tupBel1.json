@@ -1571,6 +1571,26 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "tupBel1_to_galVar1_chain",
+      "name": "tupBel1 to Malayan flying lemur (galVar1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tupBel1", "galVar1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "tupBel1",
+        "queryAssembly": "galVar1",
+        "pifGzLocation": {
+          "uri": "liftOver/tupBel1ToGalVar1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/tupBel1ToGalVar1.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "tupBel1_to_hg38_chain",
       "name": "tupBel1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
@@ -1580,71 +1600,11 @@
         "targetAssembly": "tupBel1",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToHg38.over.chain.gz"
+          "uri": "liftOver/tupBel1ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "tupBel1_to_mm10_chain",
-      "name": "tupBel1 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["tupBel1", "mm10"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "tupBel1",
-        "queryAssembly": "mm10",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToMm10.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToMm10.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "tupBel1_to_mm39_chain",
-      "name": "tupBel1 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["tupBel1", "mm39"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "tupBel1",
-        "queryAssembly": "mm39",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToMm39.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToMm39.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "tupBel1_to_tarSyr2_chain",
-      "name": "tupBel1 to Tarsier (tarSyr2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["tupBel1", "tarSyr2"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "tupBel1",
-        "queryAssembly": "tarSyr2",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToTarSyr2.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToTarSyr2.over.chain.gz.csi"
+            "uri": "liftOver/tupBel1ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1660,31 +1620,71 @@
         "targetAssembly": "tupBel1",
         "queryAssembly": "mm9",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToMm9.over.chain.gz"
+          "uri": "liftOver/tupBel1ToMm9.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToMm9.over.chain.gz.csi"
+            "uri": "liftOver/tupBel1ToMm9.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "tupBel1_to_galVar1_chain",
-      "name": "tupBel1 to Malayan flying lemur (galVar1) liftOver chain",
+      "trackId": "tupBel1_to_mm10_chain",
+      "name": "tupBel1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["tupBel1", "galVar1"],
+      "assemblyNames": ["tupBel1", "mm10"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "tupBel1",
-        "queryAssembly": "galVar1",
+        "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToGalVar1.over.chain.gz"
+          "uri": "liftOver/tupBel1ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tupBel1/liftOver/tupBel1ToGalVar1.over.chain.gz.csi"
+            "uri": "liftOver/tupBel1ToMm10.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "tupBel1_to_mm39_chain",
+      "name": "tupBel1 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tupBel1", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "tupBel1",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/tupBel1ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/tupBel1ToMm39.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "tupBel1_to_tarSyr2_chain",
+      "name": "tupBel1 to Tarsier (tarSyr2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tupBel1", "tarSyr2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "tupBel1",
+        "queryAssembly": "tarSyr2",
+        "pifGzLocation": {
+          "uri": "liftOver/tupBel1ToTarSyr2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/tupBel1ToTarSyr2.over.pif.gz.csi"
           }
         }
       }

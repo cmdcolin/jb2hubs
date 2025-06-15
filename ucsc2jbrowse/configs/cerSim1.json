@@ -1791,20 +1791,20 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "cerSim1_to_monDom5_chain",
-      "name": "cerSim1 to Opossum (monDom5) liftOver chain",
+      "trackId": "cerSim1_to_bosTau7_chain",
+      "name": "cerSim1 to Cow (bosTau7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cerSim1", "monDom5"],
+      "assemblyNames": ["cerSim1", "bosTau7"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cerSim1",
-        "queryAssembly": "monDom5",
+        "queryAssembly": "bosTau7",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToMonDom5.over.chain.gz"
+          "uri": "liftOver/cerSim1ToBosTau7.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToMonDom5.over.chain.gz.csi"
+            "uri": "liftOver/cerSim1ToBosTau7.over.pif.gz.csi"
           }
         }
       }
@@ -1820,11 +1820,11 @@
         "targetAssembly": "cerSim1",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToHg19.over.chain.gz"
+          "uri": "liftOver/cerSim1ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToHg19.over.chain.gz.csi"
+            "uri": "liftOver/cerSim1ToHg19.over.pif.gz.csi"
           }
         }
       }
@@ -1840,31 +1840,11 @@
         "targetAssembly": "cerSim1",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToHg38.over.chain.gz"
+          "uri": "liftOver/cerSim1ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToHg38.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cerSim1_to_bosTau7_chain",
-      "name": "cerSim1 to Cow (bosTau7) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cerSim1", "bosTau7"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "cerSim1",
-        "queryAssembly": "bosTau7",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToBosTau7.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToBosTau7.over.chain.gz.csi"
+            "uri": "liftOver/cerSim1ToHg38.over.pif.gz.csi"
           }
         }
       }
@@ -1880,11 +1860,31 @@
         "targetAssembly": "cerSim1",
         "queryAssembly": "mm10",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToMm10.over.chain.gz"
+          "uri": "liftOver/cerSim1ToMm10.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cerSim1/liftOver/cerSim1ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/cerSim1ToMm10.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cerSim1_to_monDom5_chain",
+      "name": "cerSim1 to Opossum (monDom5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cerSim1", "monDom5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cerSim1",
+        "queryAssembly": "monDom5",
+        "pifGzLocation": {
+          "uri": "liftOver/cerSim1ToMonDom5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cerSim1ToMonDom5.over.pif.gz.csi"
           }
         }
       }

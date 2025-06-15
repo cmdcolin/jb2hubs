@@ -1104,46 +1104,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "dp3_to_dm3_chain",
-      "name": "dp3 to D. melanogaster (dm3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dp3", "dm3"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "dp3",
-        "queryAssembly": "dm3",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm3.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm3.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dp3_to_dp4_chain",
-      "name": "dp3 to dp4 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dp3", "dp4"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "dp3",
-        "queryAssembly": "dp4",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDp4.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDp4.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "dp3_to_dm2_chain",
       "name": "dp3 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
@@ -1153,11 +1113,31 @@
         "targetAssembly": "dp3",
         "queryAssembly": "dm2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm2.over.chain.gz"
+          "uri": "liftOver/dp3ToDm2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm2.over.chain.gz.csi"
+            "uri": "liftOver/dp3ToDm2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dp3_to_dm3_chain",
+      "name": "dp3 to D. melanogaster (dm3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dp3", "dm3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dp3",
+        "queryAssembly": "dm3",
+        "pifGzLocation": {
+          "uri": "liftOver/dp3ToDm3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/dp3ToDm3.over.pif.gz.csi"
           }
         }
       }
@@ -1173,11 +1153,31 @@
         "targetAssembly": "dp3",
         "queryAssembly": "dm6",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm6.over.chain.gz"
+          "uri": "liftOver/dp3ToDm6.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDm6.over.chain.gz.csi"
+            "uri": "liftOver/dp3ToDm6.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dp3_to_dp4_chain",
+      "name": "dp3 to dp4 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dp3", "dp4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dp3",
+        "queryAssembly": "dp4",
+        "pifGzLocation": {
+          "uri": "liftOver/dp3ToDp4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/dp3ToDp4.over.pif.gz.csi"
           }
         }
       }
@@ -1193,11 +1193,11 @@
         "targetAssembly": "dp3",
         "queryAssembly": "droPer1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDroPer1.over.chain.gz"
+          "uri": "liftOver/dp3ToDroPer1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dp3/liftOver/dp3ToDroPer1.over.chain.gz.csi"
+            "uri": "liftOver/dp3ToDroPer1.over.pif.gz.csi"
           }
         }
       }

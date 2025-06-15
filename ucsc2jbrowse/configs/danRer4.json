@@ -612,60 +612,20 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "danRer4_to_monDom4_chain",
-      "name": "danRer4 to Opossum (monDom4) liftOver chain",
+      "trackId": "danRer4_to_danRer3_chain",
+      "name": "danRer4 to Zebrafish (danRer3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "monDom4"],
+      "assemblyNames": ["danRer4", "danRer3"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "danRer4",
-        "queryAssembly": "monDom4",
+        "queryAssembly": "danRer3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToMonDom4.over.chain.gz"
+          "uri": "liftOver/danRer4ToDanRer3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToMonDom4.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer4_to_rn4_chain",
-      "name": "danRer4 to Rat (rn4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "rn4"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "danRer4",
-        "queryAssembly": "rn4",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToRn4.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToRn4.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer4_to_fr1_chain",
-      "name": "danRer4 to Fugu (fr1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "fr1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "danRer4",
-        "queryAssembly": "fr1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToFr1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToFr1.over.chain.gz.csi"
+            "uri": "liftOver/danRer4ToDanRer3.over.pif.gz.csi"
           }
         }
       }
@@ -681,11 +641,31 @@
         "targetAssembly": "danRer4",
         "queryAssembly": "danRer5",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToDanRer5.over.chain.gz"
+          "uri": "liftOver/danRer4ToDanRer5.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToDanRer5.over.chain.gz.csi"
+            "uri": "liftOver/danRer4ToDanRer5.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer4_to_fr1_chain",
+      "name": "danRer4 to Fugu (fr1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer4", "fr1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer4",
+        "queryAssembly": "fr1",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer4ToFr1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer4ToFr1.over.pif.gz.csi"
           }
         }
       }
@@ -701,91 +681,11 @@
         "targetAssembly": "danRer4",
         "queryAssembly": "fr2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToFr2.over.chain.gz"
+          "uri": "liftOver/danRer4ToFr2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToFr2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer4_to_gasAcu1_chain",
-      "name": "danRer4 to Stickleback (gasAcu1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "gasAcu1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "danRer4",
-        "queryAssembly": "gasAcu1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToGasAcu1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToGasAcu1.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer4_to_mm8_chain",
-      "name": "danRer4 to Mouse (mm8) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "mm8"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "danRer4",
-        "queryAssembly": "mm8",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToMm8.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToMm8.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer4_to_hg18_chain",
-      "name": "danRer4 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "hg18"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "danRer4",
-        "queryAssembly": "hg18",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToHg18.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToHg18.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer4_to_tetNig1_chain",
-      "name": "danRer4 to Tetraodon (tetNig1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "tetNig1"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "danRer4",
-        "queryAssembly": "tetNig1",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToTetNig1.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToTetNig1.over.chain.gz.csi"
+            "uri": "liftOver/danRer4ToFr2.over.pif.gz.csi"
           }
         }
       }
@@ -801,31 +701,131 @@
         "targetAssembly": "danRer4",
         "queryAssembly": "galGal3",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToGalGal3.over.chain.gz"
+          "uri": "liftOver/danRer4ToGalGal3.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToGalGal3.over.chain.gz.csi"
+            "uri": "liftOver/danRer4ToGalGal3.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "danRer4_to_danRer3_chain",
-      "name": "danRer4 to Zebrafish (danRer3) liftOver chain",
+      "trackId": "danRer4_to_gasAcu1_chain",
+      "name": "danRer4 to Stickleback (gasAcu1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["danRer4", "danRer3"],
+      "assemblyNames": ["danRer4", "gasAcu1"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "danRer4",
-        "queryAssembly": "danRer3",
+        "queryAssembly": "gasAcu1",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToDanRer3.over.chain.gz"
+          "uri": "liftOver/danRer4ToGasAcu1.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToDanRer3.over.chain.gz.csi"
+            "uri": "liftOver/danRer4ToGasAcu1.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer4_to_hg18_chain",
+      "name": "danRer4 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer4", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer4",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer4ToHg18.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer4ToHg18.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer4_to_mm8_chain",
+      "name": "danRer4 to Mouse (mm8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer4", "mm8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer4",
+        "queryAssembly": "mm8",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer4ToMm8.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer4ToMm8.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer4_to_monDom4_chain",
+      "name": "danRer4 to Opossum (monDom4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer4", "monDom4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer4",
+        "queryAssembly": "monDom4",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer4ToMonDom4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer4ToMonDom4.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer4_to_rn4_chain",
+      "name": "danRer4 to Rat (rn4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer4", "rn4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer4",
+        "queryAssembly": "rn4",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer4ToRn4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer4ToRn4.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer4_to_tetNig1_chain",
+      "name": "danRer4 to Tetraodon (tetNig1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer4", "tetNig1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer4",
+        "queryAssembly": "tetNig1",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer4ToTetNig1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer4ToTetNig1.over.pif.gz.csi"
           }
         }
       }
@@ -841,11 +841,11 @@
         "targetAssembly": "danRer4",
         "queryAssembly": "xenTro2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToXenTro2.over.chain.gz"
+          "uri": "liftOver/danRer4ToXenTro2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer4/liftOver/danRer4ToXenTro2.over.chain.gz.csi"
+            "uri": "liftOver/danRer4ToXenTro2.over.pif.gz.csi"
           }
         }
       }

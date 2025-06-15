@@ -1800,31 +1800,11 @@
         "targetAssembly": "balAcu1",
         "queryAssembly": "hg19",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToHg19.over.chain.gz"
+          "uri": "liftOver/balAcu1ToHg19.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToHg19.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "balAcu1_to_mm10_chain",
-      "name": "balAcu1 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["balAcu1", "mm10"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "balAcu1",
-        "queryAssembly": "mm10",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToMm10.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToMm10.over.chain.gz.csi"
+            "uri": "liftOver/balAcu1ToHg19.over.pif.gz.csi"
           }
         }
       }
@@ -1840,11 +1820,31 @@
         "targetAssembly": "balAcu1",
         "queryAssembly": "hg38",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToHg38.over.chain.gz"
+          "uri": "liftOver/balAcu1ToHg38.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/balAcu1/liftOver/balAcu1ToHg38.over.chain.gz.csi"
+            "uri": "liftOver/balAcu1ToHg38.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "balAcu1_to_mm10_chain",
+      "name": "balAcu1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["balAcu1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "balAcu1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/balAcu1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/balAcu1ToMm10.over.pif.gz.csi"
           }
         }
       }

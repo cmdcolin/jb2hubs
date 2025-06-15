@@ -561,40 +561,20 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro1_to_xenTro2_chain",
-      "name": "xenTro1 to X. tropicalis (xenTro2) liftOver chain",
+      "trackId": "xenTro1_to_hg18_chain",
+      "name": "xenTro1 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro1", "xenTro2"],
+      "assemblyNames": ["xenTro1", "hg18"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro1",
-        "queryAssembly": "xenTro2",
+        "queryAssembly": "hg18",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToXenTro2.over.chain.gz"
+          "uri": "liftOver/xenTro1ToHg18.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToXenTro2.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro1_to_mm7_chain",
-      "name": "xenTro1 to Mouse (mm7) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro1", "mm7"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "xenTro1",
-        "queryAssembly": "mm7",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToMm7.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToMm7.over.chain.gz.csi"
+            "uri": "liftOver/xenTro1ToHg18.over.pif.gz.csi"
           }
         }
       }
@@ -610,31 +590,31 @@
         "targetAssembly": "xenTro1",
         "queryAssembly": "mm6",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToMm6.over.chain.gz"
+          "uri": "liftOver/xenTro1ToMm6.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToMm6.over.chain.gz.csi"
+            "uri": "liftOver/xenTro1ToMm6.over.pif.gz.csi"
           }
         }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro1_to_hg18_chain",
-      "name": "xenTro1 to Human (hg18) liftOver chain",
+      "trackId": "xenTro1_to_mm7_chain",
+      "name": "xenTro1 to Mouse (mm7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro1", "hg18"],
+      "assemblyNames": ["xenTro1", "mm7"],
       "adapter": {
         "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro1",
-        "queryAssembly": "hg18",
+        "queryAssembly": "mm7",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToHg18.over.chain.gz"
+          "uri": "liftOver/xenTro1ToMm7.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToHg18.over.chain.gz.csi"
+            "uri": "liftOver/xenTro1ToMm7.over.pif.gz.csi"
           }
         }
       }
@@ -650,11 +630,31 @@
         "targetAssembly": "xenTro1",
         "queryAssembly": "mm8",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToMm8.over.chain.gz"
+          "uri": "liftOver/xenTro1ToMm8.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro1/liftOver/xenTro1ToMm8.over.chain.gz.csi"
+            "uri": "liftOver/xenTro1ToMm8.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro1_to_xenTro2_chain",
+      "name": "xenTro1 to X. tropicalis (xenTro2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro1", "xenTro2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro1",
+        "queryAssembly": "xenTro2",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro1ToXenTro2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro1ToXenTro2.over.pif.gz.csi"
           }
         }
       }

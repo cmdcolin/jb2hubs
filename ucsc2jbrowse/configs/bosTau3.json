@@ -607,46 +607,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "bosTau3_to_mm9_chain",
-      "name": "bosTau3 to Mouse (mm9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["bosTau3", "mm9"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "bosTau3",
-        "queryAssembly": "mm9",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToMm9.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToMm9.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "bosTau3_to_rn4_chain",
-      "name": "bosTau3 to Rat (rn4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["bosTau3", "rn4"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "bosTau3",
-        "queryAssembly": "rn4",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToRn4.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToRn4.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "bosTau3_to_bosTau4_chain",
       "name": "bosTau3 to Cow (bosTau4) liftOver chain",
       "category": ["Liftover"],
@@ -656,11 +616,11 @@
         "targetAssembly": "bosTau3",
         "queryAssembly": "bosTau4",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToBosTau4.over.chain.gz"
+          "uri": "liftOver/bosTau3ToBosTau4.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToBosTau4.over.chain.gz.csi"
+            "uri": "liftOver/bosTau3ToBosTau4.over.pif.gz.csi"
           }
         }
       }
@@ -676,11 +636,11 @@
         "targetAssembly": "bosTau3",
         "queryAssembly": "hg18",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToHg18.over.chain.gz"
+          "uri": "liftOver/bosTau3ToHg18.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToHg18.over.chain.gz.csi"
+            "uri": "liftOver/bosTau3ToHg18.over.pif.gz.csi"
           }
         }
       }
@@ -696,11 +656,51 @@
         "targetAssembly": "bosTau3",
         "queryAssembly": "mm8",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToMm8.over.chain.gz"
+          "uri": "liftOver/bosTau3ToMm8.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bosTau3/liftOver/bosTau3ToMm8.over.chain.gz.csi"
+            "uri": "liftOver/bosTau3ToMm8.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bosTau3_to_mm9_chain",
+      "name": "bosTau3 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bosTau3", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "bosTau3",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "liftOver/bosTau3ToMm9.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/bosTau3ToMm9.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bosTau3_to_rn4_chain",
+      "name": "bosTau3 to Rat (rn4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bosTau3", "rn4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "bosTau3",
+        "queryAssembly": "rn4",
+        "pifGzLocation": {
+          "uri": "liftOver/bosTau3ToRn4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/bosTau3ToRn4.over.pif.gz.csi"
           }
         }
       }

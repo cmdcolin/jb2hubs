@@ -522,26 +522,6 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "canFam1_to_hg17_chain",
-      "name": "canFam1 to Human (hg17) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["canFam1", "hg17"],
-      "adapter": {
-        "type": "PairwiseIndexedPAFAdapter",
-        "targetAssembly": "canFam1",
-        "queryAssembly": "hg17",
-        "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToHg17.over.chain.gz"
-        },
-        "index": {
-          "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToHg17.over.chain.gz.csi"
-          }
-        }
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "canFam1_to_canFam2_chain",
       "name": "canFam1 to Dog (canFam2) liftOver chain",
       "category": ["Liftover"],
@@ -551,11 +531,31 @@
         "targetAssembly": "canFam1",
         "queryAssembly": "canFam2",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToCanFam2.over.chain.gz"
+          "uri": "liftOver/canFam1ToCanFam2.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToCanFam2.over.chain.gz.csi"
+            "uri": "liftOver/canFam1ToCanFam2.over.pif.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam1_to_hg17_chain",
+      "name": "canFam1 to Human (hg17) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam1", "hg17"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam1",
+        "queryAssembly": "hg17",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam1ToHg17.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam1ToHg17.over.pif.gz.csi"
           }
         }
       }
@@ -571,11 +571,11 @@
         "targetAssembly": "canFam1",
         "queryAssembly": "mm5",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm5.over.chain.gz"
+          "uri": "liftOver/canFam1ToMm5.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm5.over.chain.gz.csi"
+            "uri": "liftOver/canFam1ToMm5.over.pif.gz.csi"
           }
         }
       }
@@ -591,11 +591,11 @@
         "targetAssembly": "canFam1",
         "queryAssembly": "mm6",
         "pifGzLocation": {
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm6.over.chain.gz"
+          "uri": "liftOver/canFam1ToMm6.over.pif.gz"
         },
         "index": {
           "location": {
-            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm6.over.chain.gz.csi"
+            "uri": "liftOver/canFam1ToMm6.over.pif.gz.csi"
           }
         }
       }
