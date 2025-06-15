@@ -6,6 +6,7 @@ import Container from './components/Container.tsx'
 import list from './ucsc/list.json'
 
 export default function Home() {
+  const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
   return (
     <Container>
       <h1>JBrowse 2 hubs</h1>
@@ -30,8 +31,7 @@ export default function Home() {
           </thead>
           <tbody>
             {Object.entries(list.ucscGenomes)
-              .sort((a, b) => a[1].orderKey - b[1].orderKey)
-              .slice(0, 10)
+              .filter(([key]) => s.has(key))
               .map(([key, val]) => {
                 return (
                   <tr key={key}>
