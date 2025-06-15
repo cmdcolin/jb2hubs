@@ -1597,54 +1597,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "gorGor6_to_gorGor4_chain",
-      "name": "gorGor6 to Gorilla (gorGor4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["gorGor6"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "gorGor6",
-        "queryAssembly": "gorGor4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToGorGor4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "gorGor6_to_gorGor5_chain",
       "name": "gorGor6 to Gorilla (gorGor5) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["gorGor6"],
+      "assemblyNames": ["gorGor6", "gorGor5"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "gorGor6",
         "queryAssembly": "gorGor5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToGorGor5.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToGorGor5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToGorGor5.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "gorGor6_to_hg19_chain",
-      "name": "gorGor6 to Human (hg19) liftOver chain",
+      "trackId": "gorGor6_to_gorGor4_chain",
+      "name": "gorGor6 to Gorilla (gorGor4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["gorGor6"],
+      "assemblyNames": ["gorGor6", "gorGor4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "gorGor6",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "gorGor6_to_hg38_chain",
-      "name": "gorGor6 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["gorGor6"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "gorGor6",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToHg38.over.chain.gz"
+        "queryAssembly": "gorGor4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToGorGor4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToGorGor4.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1652,12 +1640,19 @@
       "trackId": "gorGor6_to_mm10_chain",
       "name": "gorGor6 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["gorGor6"],
+      "assemblyNames": ["gorGor6", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "gorGor6",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1665,12 +1660,59 @@
       "trackId": "gorGor6_to_mm39_chain",
       "name": "gorGor6 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["gorGor6"],
+      "assemblyNames": ["gorGor6", "mm39"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "gorGor6",
         "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToMm39.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToMm39.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor6_to_hg38_chain",
+      "name": "gorGor6 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor6", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor6",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor6_to_hg19_chain",
+      "name": "gorGor6 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor6", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor6",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/gorGor6/liftOver/gorGor6ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

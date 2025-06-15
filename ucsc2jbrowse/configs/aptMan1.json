@@ -1481,12 +1481,19 @@
       "trackId": "aptMan1_to_hg38_chain",
       "name": "aptMan1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["aptMan1"],
+      "assemblyNames": ["aptMan1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "aptMan1",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aptMan1/liftOver/aptMan1ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aptMan1/liftOver/aptMan1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aptMan1/liftOver/aptMan1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

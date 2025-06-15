@@ -1106,15 +1106,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "anoGam1_to_anoGam3_chain",
-      "name": "anoGam1 to A. gambiae (anoGam3) liftOver chain",
+      "trackId": "anoGam1_to_dm6_chain",
+      "name": "anoGam1 to D. melanogaster (dm6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoGam1"],
+      "assemblyNames": ["anoGam1", "dm6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoGam1",
-        "queryAssembly": "anoGam3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToAnoGam3.over.chain.gz"
+        "queryAssembly": "dm6",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm6.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1122,12 +1129,39 @@
       "trackId": "anoGam1_to_dm2_chain",
       "name": "anoGam1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoGam1"],
+      "assemblyNames": ["anoGam1", "dm2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoGam1",
         "queryAssembly": "dm2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoGam1_to_anoGam3_chain",
+      "name": "anoGam1 to A. gambiae (anoGam3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoGam1", "anoGam3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoGam1",
+        "queryAssembly": "anoGam3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToAnoGam3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToAnoGam3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1135,25 +1169,19 @@
       "trackId": "anoGam1_to_dm3_chain",
       "name": "anoGam1 to D. melanogaster (dm3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoGam1"],
+      "assemblyNames": ["anoGam1", "dm3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoGam1",
         "queryAssembly": "dm3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "anoGam1_to_dm6_chain",
-      "name": "anoGam1 to D. melanogaster (dm6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["anoGam1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "anoGam1",
-        "queryAssembly": "dm6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam1/liftOver/anoGam1ToDm3.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

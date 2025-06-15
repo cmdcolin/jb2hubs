@@ -1797,15 +1797,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "melUnd1_to_geoFor1_chain",
-      "name": "melUnd1 to Medium ground finch (geoFor1) liftOver chain",
+      "trackId": "melUnd1_to_mm10_chain",
+      "name": "melUnd1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["melUnd1"],
+      "assemblyNames": ["melUnd1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "melUnd1",
-        "queryAssembly": "geoFor1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToGeoFor1.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1813,25 +1820,39 @@
       "trackId": "melUnd1_to_hg38_chain",
       "name": "melUnd1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["melUnd1"],
+      "assemblyNames": ["melUnd1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "melUnd1",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "melUnd1_to_mm10_chain",
-      "name": "melUnd1 to Mouse (mm10) liftOver chain",
+      "trackId": "melUnd1_to_geoFor1_chain",
+      "name": "melUnd1 to Medium ground finch (geoFor1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["melUnd1"],
+      "assemblyNames": ["melUnd1", "geoFor1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "melUnd1",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToMm10.over.chain.gz"
+        "queryAssembly": "geoFor1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToGeoFor1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/melUnd1/liftOver/melUnd1ToGeoFor1.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

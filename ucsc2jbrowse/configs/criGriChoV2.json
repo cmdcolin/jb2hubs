@@ -1712,25 +1712,19 @@
       "trackId": "criGriChoV2_to_criGri1_chain",
       "name": "criGriChoV2 to Chinese hamster (criGri1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["criGriChoV2"],
+      "assemblyNames": ["criGriChoV2", "criGri1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "criGriChoV2",
         "queryAssembly": "criGri1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGri1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "criGriChoV2_to_criGriChoV1_chain",
-      "name": "criGriChoV2 to Chinese hamster (criGriChoV1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["criGriChoV2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "criGriChoV2",
-        "queryAssembly": "criGriChoV1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGriChoV1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGri1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGri1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1738,12 +1732,39 @@
       "trackId": "criGriChoV2_to_hg38_chain",
       "name": "criGriChoV2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["criGriChoV2"],
+      "assemblyNames": ["criGriChoV2", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "criGriChoV2",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV2_to_criGriChoV1_chain",
+      "name": "criGriChoV2 to Chinese hamster (criGriChoV1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV2", "criGriChoV1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGriChoV2",
+        "queryAssembly": "criGriChoV1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGriChoV1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToCriGriChoV1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1751,12 +1772,19 @@
       "trackId": "criGriChoV2_to_mm10_chain",
       "name": "criGriChoV2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["criGriChoV2"],
+      "assemblyNames": ["criGriChoV2", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "criGriChoV2",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/criGriChoV2/liftOver/criGriChoV2ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

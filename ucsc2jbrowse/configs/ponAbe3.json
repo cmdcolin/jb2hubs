@@ -1936,15 +1936,42 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "ponAbe3_to_mm10_chain",
+      "name": "ponAbe3 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ponAbe3", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ponAbe3",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToMm10.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "ponAbe3_to_hg19_chain",
       "name": "ponAbe3 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ponAbe3"],
+      "assemblyNames": ["ponAbe3", "hg19"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ponAbe3",
         "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToHg19.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1952,38 +1979,19 @@
       "trackId": "ponAbe3_to_hg38_chain",
       "name": "ponAbe3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ponAbe3"],
+      "assemblyNames": ["ponAbe3", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ponAbe3",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ponAbe3_to_mm10_chain",
-      "name": "ponAbe3 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ponAbe3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ponAbe3",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToMm10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ponAbe3_to_panTro6_chain",
-      "name": "ponAbe3 to Chimp (panTro6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ponAbe3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ponAbe3",
-        "queryAssembly": "panTro6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToPanTro6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1991,12 +1999,39 @@
       "trackId": "ponAbe3_to_ponAbe2_chain",
       "name": "ponAbe3 to Orangutan (ponAbe2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ponAbe3"],
+      "assemblyNames": ["ponAbe3", "ponAbe2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ponAbe3",
         "queryAssembly": "ponAbe2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToPonAbe2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToPonAbe2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToPonAbe2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ponAbe3_to_panTro6_chain",
+      "name": "ponAbe3 to Chimp (panTro6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ponAbe3", "panTro6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ponAbe3",
+        "queryAssembly": "panTro6",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToPanTro6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ponAbe3/liftOver/ponAbe3ToPanTro6.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

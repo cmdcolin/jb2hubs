@@ -1535,12 +1535,19 @@
       "trackId": "proCap1_to_mm10_chain",
       "name": "proCap1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["proCap1"],
+      "assemblyNames": ["proCap1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "proCap1",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/proCap1/liftOver/proCap1ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/proCap1/liftOver/proCap1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/proCap1/liftOver/proCap1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

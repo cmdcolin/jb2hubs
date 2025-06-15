@@ -1059,15 +1059,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "strPur2_to_ci2_chain",
-      "name": "strPur2 to C. intestinalis (ci2) liftOver chain",
+      "trackId": "strPur2_to_strPur1_chain",
+      "name": "strPur2 to S. purpuratus (strPur1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["strPur2"],
+      "assemblyNames": ["strPur2", "strPur1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "strPur2",
-        "queryAssembly": "ci2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToCi2.over.chain.gz"
+        "queryAssembly": "strPur1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToStrPur1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToStrPur1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1075,25 +1082,39 @@
       "trackId": "strPur2_to_hg18_chain",
       "name": "strPur2 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["strPur2"],
+      "assemblyNames": ["strPur2", "hg18"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "strPur2",
         "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToHg18.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToHg18.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "strPur2_to_strPur1_chain",
-      "name": "strPur2 to S. purpuratus (strPur1) liftOver chain",
+      "trackId": "strPur2_to_ci2_chain",
+      "name": "strPur2 to C. intestinalis (ci2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["strPur2"],
+      "assemblyNames": ["strPur2", "ci2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "strPur2",
-        "queryAssembly": "strPur1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToStrPur1.over.chain.gz"
+        "queryAssembly": "ci2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToCi2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur2/liftOver/strPur2ToCi2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

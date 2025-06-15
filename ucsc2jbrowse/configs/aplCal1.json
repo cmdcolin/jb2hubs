@@ -1059,12 +1059,19 @@
       "trackId": "aplCal1_to_hg19_chain",
       "name": "aplCal1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["aplCal1"],
+      "assemblyNames": ["aplCal1", "hg19"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "aplCal1",
         "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aplCal1/liftOver/aplCal1ToHg19.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aplCal1/liftOver/aplCal1ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aplCal1/liftOver/aplCal1ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

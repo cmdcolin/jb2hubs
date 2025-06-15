@@ -480,28 +480,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "ci2_to_ci3_chain",
-      "name": "ci2 to C. intestinalis (ci3) liftOver chain",
+      "trackId": "ci2_to_strPur2_chain",
+      "name": "ci2 to S. purpuratus (strPur2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ci2"],
+      "assemblyNames": ["ci2", "strPur2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ci2",
-        "queryAssembly": "ci3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToCi3.over.chain.gz"
+        "queryAssembly": "strPur2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToStrPur2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToStrPur2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "ci2_to_strPur2_chain",
-      "name": "ci2 to S. purpuratus (strPur2) liftOver chain",
+      "trackId": "ci2_to_ci3_chain",
+      "name": "ci2 to C. intestinalis (ci3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ci2"],
+      "assemblyNames": ["ci2", "ci3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ci2",
-        "queryAssembly": "strPur2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToStrPur2.over.chain.gz"
+        "queryAssembly": "ci3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToCi3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ci2/liftOver/ci2ToCi3.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

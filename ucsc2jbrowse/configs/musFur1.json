@@ -1801,54 +1801,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "musFur1_to_canFam3_chain",
-      "name": "musFur1 to Dog (canFam3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["musFur1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "musFur1",
-        "queryAssembly": "canFam3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToCanFam3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "musFur1_to_hg19_chain",
-      "name": "musFur1 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["musFur1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "musFur1",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "musFur1_to_hg38_chain",
       "name": "musFur1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["musFur1"],
+      "assemblyNames": ["musFur1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "musFur1",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "musFur1_to_lepWed1_chain",
-      "name": "musFur1 to lepWed1 liftOver chain",
+      "trackId": "musFur1_to_canFam3_chain",
+      "name": "musFur1 to Dog (canFam3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["musFur1"],
+      "assemblyNames": ["musFur1", "canFam3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "musFur1",
-        "queryAssembly": "lepWed1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToLepWed1.over.chain.gz"
+        "queryAssembly": "canFam3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToCanFam3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToCanFam3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1856,12 +1844,59 @@
       "trackId": "musFur1_to_odoRosDiv1_chain",
       "name": "musFur1 to odoRosDiv1 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["musFur1"],
+      "assemblyNames": ["musFur1", "odoRosDiv1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "musFur1",
         "queryAssembly": "odoRosDiv1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToOdoRosDiv1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToOdoRosDiv1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToOdoRosDiv1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "musFur1_to_hg19_chain",
+      "name": "musFur1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["musFur1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "musFur1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToHg19.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "musFur1_to_lepWed1_chain",
+      "name": "musFur1 to lepWed1 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["musFur1", "lepWed1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "musFur1",
+        "queryAssembly": "lepWed1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToLepWed1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/musFur1/liftOver/musFur1ToLepWed1.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

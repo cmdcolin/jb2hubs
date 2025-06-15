@@ -478,54 +478,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "danRer3_to_danRer2_chain",
-      "name": "danRer3 to danRer2 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "danRer3",
-        "queryAssembly": "danRer2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToDanRer2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer3_to_danRer4_chain",
-      "name": "danRer3 to Zebrafish (danRer4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "danRer3",
-        "queryAssembly": "danRer4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToDanRer4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "danRer3_to_fr1_chain",
       "name": "danRer3 to Fugu (fr1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
+      "assemblyNames": ["danRer3", "fr1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "danRer3",
         "queryAssembly": "fr1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToFr1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer3_to_hg18_chain",
-      "name": "danRer3 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "danRer3",
-        "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToHg18.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToFr1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToFr1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -533,25 +501,19 @@
       "trackId": "danRer3_to_mm7_chain",
       "name": "danRer3 to Mouse (mm7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
+      "assemblyNames": ["danRer3", "mm7"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "danRer3",
         "queryAssembly": "mm7",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToMm7.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "danRer3_to_mm8_chain",
-      "name": "danRer3 to Mouse (mm8) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "danRer3",
-        "queryAssembly": "mm8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToMm8.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToMm7.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToMm7.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -559,12 +521,19 @@
       "trackId": "danRer3_to_rn4_chain",
       "name": "danRer3 to Rat (rn4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
+      "assemblyNames": ["danRer3", "rn4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "danRer3",
         "queryAssembly": "rn4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToRn4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToRn4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToRn4.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -572,12 +541,99 @@
       "trackId": "danRer3_to_tetNig1_chain",
       "name": "danRer3 to Tetraodon (tetNig1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["danRer3"],
+      "assemblyNames": ["danRer3", "tetNig1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "danRer3",
         "queryAssembly": "tetNig1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToTetNig1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToTetNig1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToTetNig1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer3_to_danRer2_chain",
+      "name": "danRer3 to danRer2 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer3", "danRer2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer3",
+        "queryAssembly": "danRer2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToDanRer2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToDanRer2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer3_to_mm8_chain",
+      "name": "danRer3 to Mouse (mm8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer3", "mm8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer3",
+        "queryAssembly": "mm8",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToMm8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToMm8.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer3_to_danRer4_chain",
+      "name": "danRer3 to Zebrafish (danRer4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer3", "danRer4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer3",
+        "queryAssembly": "danRer4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToDanRer4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToDanRer4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer3_to_hg18_chain",
+      "name": "danRer3 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer3", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer3",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/danRer3/liftOver/danRer3ToHg18.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

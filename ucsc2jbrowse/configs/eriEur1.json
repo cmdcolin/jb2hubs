@@ -696,28 +696,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "eriEur1_to_eriEur2_chain",
-      "name": "eriEur1 to Hedgehog (eriEur2) liftOver chain",
+      "trackId": "eriEur1_to_mm10_chain",
+      "name": "eriEur1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["eriEur1"],
+      "assemblyNames": ["eriEur1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "eriEur1",
-        "queryAssembly": "eriEur2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToEriEur2.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "eriEur1_to_mm10_chain",
-      "name": "eriEur1 to Mouse (mm10) liftOver chain",
+      "trackId": "eriEur1_to_eriEur2_chain",
+      "name": "eriEur1 to Hedgehog (eriEur2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["eriEur1"],
+      "assemblyNames": ["eriEur1", "eriEur2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "eriEur1",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToMm10.over.chain.gz"
+        "queryAssembly": "eriEur2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToEriEur2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/eriEur1/liftOver/eriEur1ToEriEur2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

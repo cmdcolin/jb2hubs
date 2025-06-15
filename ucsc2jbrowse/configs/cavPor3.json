@@ -1934,41 +1934,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_galGal3_chain",
-      "name": "cavPor3 to Chicken (galGal3) liftOver chain",
+      "trackId": "cavPor3_to_mm39_chain",
+      "name": "cavPor3 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
+      "assemblyNames": ["cavPor3", "mm39"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cavPor3",
-        "queryAssembly": "galGal3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToGalGal3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_galVar1_chain",
-      "name": "cavPor3 to Malayan flying lemur (galVar1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cavPor3",
-        "queryAssembly": "galVar1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToGalVar1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_hg18_chain",
-      "name": "cavPor3 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cavPor3",
-        "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg18.over.chain.gz"
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm39.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1976,77 +1957,19 @@
       "trackId": "cavPor3_to_hg19_chain",
       "name": "cavPor3 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
+      "assemblyNames": ["cavPor3", "hg19"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cavPor3",
         "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_hg38_chain",
-      "name": "cavPor3 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cavPor3",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_mm9_chain",
-      "name": "cavPor3 to Mouse (mm9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cavPor3",
-        "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_mm10_chain",
-      "name": "cavPor3 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cavPor3",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_mm39_chain",
-      "name": "cavPor3 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cavPor3",
-        "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm39.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cavPor3_to_monDom4_chain",
-      "name": "cavPor3 to Opossum (monDom4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cavPor3",
-        "queryAssembly": "monDom4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMonDom4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2054,12 +1977,39 @@
       "trackId": "cavPor3_to_oryCun1_chain",
       "name": "cavPor3 to oryCun1 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
+      "assemblyNames": ["cavPor3", "oryCun1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cavPor3",
         "queryAssembly": "oryCun1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToOryCun1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToOryCun1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToOryCun1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cavPor3_to_mm10_chain",
+      "name": "cavPor3 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cavPor3", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cavPor3",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2067,12 +2017,39 @@
       "trackId": "cavPor3_to_oryCun2_chain",
       "name": "cavPor3 to Rabbit (oryCun2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
+      "assemblyNames": ["cavPor3", "oryCun2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cavPor3",
         "queryAssembly": "oryCun2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToOryCun2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToOryCun2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToOryCun2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cavPor3_to_galGal3_chain",
+      "name": "cavPor3 to Chicken (galGal3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cavPor3", "galGal3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cavPor3",
+        "queryAssembly": "galGal3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToGalGal3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToGalGal3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2080,12 +2057,59 @@
       "trackId": "cavPor3_to_rn4_chain",
       "name": "cavPor3 to Rat (rn4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
+      "assemblyNames": ["cavPor3", "rn4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cavPor3",
         "queryAssembly": "rn4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToRn4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToRn4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToRn4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cavPor3_to_monDom4_chain",
+      "name": "cavPor3 to Opossum (monDom4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cavPor3", "monDom4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cavPor3",
+        "queryAssembly": "monDom4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMonDom4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMonDom4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cavPor3_to_hg18_chain",
+      "name": "cavPor3 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cavPor3", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cavPor3",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg18.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2093,12 +2117,79 @@
       "trackId": "cavPor3_to_rn6_chain",
       "name": "cavPor3 to Rat (rn6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cavPor3"],
+      "assemblyNames": ["cavPor3", "rn6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cavPor3",
         "queryAssembly": "rn6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToRn6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToRn6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToRn6.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cavPor3_to_mm9_chain",
+      "name": "cavPor3 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cavPor3", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cavPor3",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToMm9.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cavPor3_to_hg38_chain",
+      "name": "cavPor3 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cavPor3", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cavPor3",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cavPor3_to_galVar1_chain",
+      "name": "cavPor3 to Malayan flying lemur (galVar1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cavPor3", "galVar1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cavPor3",
+        "queryAssembly": "galVar1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToGalVar1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cavPor3/liftOver/cavPor3ToGalVar1.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

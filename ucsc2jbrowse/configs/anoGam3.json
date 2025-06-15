@@ -1558,28 +1558,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "anoGam3_to_anoGam1_chain",
-      "name": "anoGam3 to A. gambiae (anoGam1) liftOver chain",
+      "trackId": "anoGam3_to_dm6_chain",
+      "name": "anoGam3 to D. melanogaster (dm6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoGam3"],
+      "assemblyNames": ["anoGam3", "dm6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoGam3",
-        "queryAssembly": "anoGam1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToAnoGam1.over.chain.gz"
+        "queryAssembly": "dm6",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToDm6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToDm6.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "anoGam3_to_dm6_chain",
-      "name": "anoGam3 to D. melanogaster (dm6) liftOver chain",
+      "trackId": "anoGam3_to_anoGam1_chain",
+      "name": "anoGam3 to A. gambiae (anoGam1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoGam3"],
+      "assemblyNames": ["anoGam3", "anoGam1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoGam3",
-        "queryAssembly": "dm6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToDm6.over.chain.gz"
+        "queryAssembly": "anoGam1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToAnoGam1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoGam3/liftOver/anoGam3ToAnoGam1.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

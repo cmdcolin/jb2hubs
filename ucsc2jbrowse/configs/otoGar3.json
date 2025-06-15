@@ -1836,15 +1836,42 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "otoGar3_to_mm39_chain",
+      "name": "otoGar3 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["otoGar3", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "otoGar3",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm39.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "otoGar3_to_hg38_chain",
       "name": "otoGar3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["otoGar3"],
+      "assemblyNames": ["otoGar3", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "otoGar3",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1852,25 +1879,19 @@
       "trackId": "otoGar3_to_mm10_chain",
       "name": "otoGar3 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["otoGar3"],
+      "assemblyNames": ["otoGar3", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "otoGar3",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "otoGar3_to_mm39_chain",
-      "name": "otoGar3 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["otoGar3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "otoGar3",
-        "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm39.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1878,12 +1899,19 @@
       "trackId": "otoGar3_to_tarSyr2_chain",
       "name": "otoGar3 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["otoGar3"],
+      "assemblyNames": ["otoGar3", "tarSyr2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "otoGar3",
         "queryAssembly": "tarSyr2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToTarSyr2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToTarSyr2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/otoGar3/liftOver/otoGar3ToTarSyr2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

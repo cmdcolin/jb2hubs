@@ -1946,41 +1946,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "chlSab2_to_hg38_chain",
-      "name": "chlSab2 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["chlSab2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "chlSab2",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "chlSab2_to_rheMac2_chain",
-      "name": "chlSab2 to Rhesus (rheMac2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["chlSab2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "chlSab2",
-        "queryAssembly": "rheMac2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "chlSab2_to_rheMac8_chain",
       "name": "chlSab2 to Rhesus (rheMac8) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["chlSab2"],
+      "assemblyNames": ["chlSab2", "rheMac8"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "chlSab2",
         "queryAssembly": "rheMac8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac8.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac8.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1988,12 +1969,59 @@
       "trackId": "chlSab2_to_tarSyr2_chain",
       "name": "chlSab2 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["chlSab2"],
+      "assemblyNames": ["chlSab2", "tarSyr2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "chlSab2",
         "queryAssembly": "tarSyr2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToTarSyr2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToTarSyr2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToTarSyr2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "chlSab2_to_rheMac2_chain",
+      "name": "chlSab2 to Rhesus (rheMac2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["chlSab2", "rheMac2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "chlSab2",
+        "queryAssembly": "rheMac2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToRheMac2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "chlSab2_to_hg38_chain",
+      "name": "chlSab2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["chlSab2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "chlSab2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/chlSab2/liftOver/chlSab2ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

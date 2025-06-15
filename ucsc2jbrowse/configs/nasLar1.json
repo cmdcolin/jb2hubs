@@ -1523,12 +1523,19 @@
       "trackId": "nasLar1_to_hg38_chain",
       "name": "nasLar1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["nasLar1"],
+      "assemblyNames": ["nasLar1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "nasLar1",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1536,12 +1543,19 @@
       "trackId": "nasLar1_to_tarSyr2_chain",
       "name": "nasLar1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["nasLar1"],
+      "assemblyNames": ["nasLar1", "tarSyr2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "nasLar1",
         "queryAssembly": "tarSyr2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToTarSyr2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToTarSyr2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nasLar1/liftOver/nasLar1ToTarSyr2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

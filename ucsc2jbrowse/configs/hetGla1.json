@@ -613,12 +613,19 @@
       "trackId": "hetGla1_to_hetGla2_chain",
       "name": "hetGla1 to Naked mole-rat (hetGla2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["hetGla1"],
+      "assemblyNames": ["hetGla1", "hetGla2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "hetGla1",
         "queryAssembly": "hetGla2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla1/liftOver/hetGla1ToHetGla2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla1/liftOver/hetGla1ToHetGla2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla1/liftOver/hetGla1ToHetGla2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -626,12 +633,19 @@
       "trackId": "hetGla1_to_mm10_chain",
       "name": "hetGla1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["hetGla1"],
+      "assemblyNames": ["hetGla1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "hetGla1",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla1/liftOver/hetGla1ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla1/liftOver/hetGla1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla1/liftOver/hetGla1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

@@ -1018,12 +1018,19 @@
       "trackId": "droGri1_to_dm2_chain",
       "name": "droGri1 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["droGri1"],
+      "assemblyNames": ["droGri1", "dm2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "droGri1",
         "queryAssembly": "dm2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droGri1/liftOver/droGri1ToDm2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droGri1/liftOver/droGri1ToDm2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droGri1/liftOver/droGri1ToDm2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

@@ -1062,12 +1062,19 @@
       "trackId": "droVir2_to_dm2_chain",
       "name": "droVir2 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["droVir2"],
+      "assemblyNames": ["droVir2", "dm2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "droVir2",
         "queryAssembly": "dm2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir2/liftOver/droVir2ToDm2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir2/liftOver/droVir2ToDm2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir2/liftOver/droVir2ToDm2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1075,12 +1082,19 @@
       "trackId": "droVir2_to_dm3_chain",
       "name": "droVir2 to D. melanogaster (dm3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["droVir2"],
+      "assemblyNames": ["droVir2", "dm3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "droVir2",
         "queryAssembly": "dm3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir2/liftOver/droVir2ToDm3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir2/liftOver/droVir2ToDm3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droVir2/liftOver/droVir2ToDm3.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

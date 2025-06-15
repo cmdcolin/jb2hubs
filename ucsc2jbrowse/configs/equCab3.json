@@ -2073,67 +2073,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "equCab3_to_bosTau9_chain",
-      "name": "equCab3 to Cow (bosTau9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["equCab3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "equCab3",
-        "queryAssembly": "bosTau9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToBosTau9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "equCab3_to_equCab2_chain",
-      "name": "equCab3 to Horse (equCab2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["equCab3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "equCab3",
-        "queryAssembly": "equCab2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToEquCab2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "equCab3_to_GCF_002263795.3_chain",
-      "name": "equCab3 to cattle (Hereford L1 Dominette 01449 42190680 v2.0 2023 USDA) (GCF_002263795.3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["equCab3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "equCab3",
-        "queryAssembly": "GCF_002263795.3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToGCF_002263795.3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "equCab3_to_hg38_chain",
-      "name": "equCab3 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["equCab3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "equCab3",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "equCab3_to_mm10_chain",
       "name": "equCab3 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["equCab3"],
+      "assemblyNames": ["equCab3", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "equCab3",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2141,12 +2096,19 @@
       "trackId": "equCab3_to_mm39_chain",
       "name": "equCab3 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["equCab3"],
+      "assemblyNames": ["equCab3", "mm39"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "equCab3",
         "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToMm39.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToMm39.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2154,12 +2116,99 @@
       "trackId": "equCab3_to_rheMac10_chain",
       "name": "equCab3 to Rhesus (rheMac10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["equCab3"],
+      "assemblyNames": ["equCab3", "rheMac10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "equCab3",
         "queryAssembly": "rheMac10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToRheMac10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToRheMac10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToRheMac10.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "equCab3_to_hg38_chain",
+      "name": "equCab3 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["equCab3", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "equCab3",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "equCab3_to_GCF_002263795.3_chain",
+      "name": "equCab3 to cattle (Hereford L1 Dominette 01449 42190680 v2.0 2023 USDA) (GCF_002263795.3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["equCab3", "GCF_002263795.3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "equCab3",
+        "queryAssembly": "GCF_002263795.3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToGCF_002263795.3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToGCF_002263795.3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "equCab3_to_equCab2_chain",
+      "name": "equCab3 to Horse (equCab2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["equCab3", "equCab2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "equCab3",
+        "queryAssembly": "equCab2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToEquCab2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToEquCab2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "equCab3_to_bosTau9_chain",
+      "name": "equCab3 to Cow (bosTau9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["equCab3", "bosTau9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "equCab3",
+        "queryAssembly": "bosTau9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToBosTau9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/equCab3/liftOver/equCab3ToBosTau9.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

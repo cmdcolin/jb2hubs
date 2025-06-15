@@ -1773,41 +1773,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "ce11_to_ce6_chain",
-      "name": "ce11 to C. elegans (ce6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ce11"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ce11",
-        "queryAssembly": "ce6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCe6.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "ce11_to_ce10_chain",
       "name": "ce11 to C. elegans (ce10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ce11"],
+      "assemblyNames": ["ce11", "ce10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ce11",
         "queryAssembly": "ce10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCe10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ce11_to_ci3_chain",
-      "name": "ce11 to C. intestinalis (ci3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ce11"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ce11",
-        "queryAssembly": "ci3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCi3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCe10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCe10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1815,12 +1796,59 @@
       "trackId": "ce11_to_hg38_chain",
       "name": "ce11 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ce11"],
+      "assemblyNames": ["ce11", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ce11",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ce11_to_ci3_chain",
+      "name": "ce11 to C. intestinalis (ci3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ce11", "ci3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ce11",
+        "queryAssembly": "ci3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCi3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCi3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ce11_to_ce6_chain",
+      "name": "ce11 to C. elegans (ce6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ce11", "ce6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ce11",
+        "queryAssembly": "ce6",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCe6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce11/liftOver/ce11ToCe6.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

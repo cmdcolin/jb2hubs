@@ -970,15 +970,42 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "cb3_to_priPac1_chain",
+      "name": "cb3 to P. pacificus (priPac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "priPac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "priPac1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToPriPac1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToPriPac1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "cb3_to_caePb1_chain",
       "name": "cb3 to C. brenneri (caePb1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cb3"],
+      "assemblyNames": ["cb3", "caePb1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cb3",
         "queryAssembly": "caePb1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaePb1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaePb1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaePb1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -986,25 +1013,19 @@
       "trackId": "cb3_to_caeRem2_chain",
       "name": "cb3 to C. remanei (caeRem2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cb3"],
+      "assemblyNames": ["cb3", "caeRem2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cb3",
         "queryAssembly": "caeRem2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaeRem2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "cb3_to_ce4_chain",
-      "name": "cb3 to C. elegans (ce4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["cb3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "cb3",
-        "queryAssembly": "ce4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaeRem2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCaeRem2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1012,25 +1033,39 @@
       "trackId": "cb3_to_ce6_chain",
       "name": "cb3 to C. elegans (ce6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cb3"],
+      "assemblyNames": ["cb3", "ce6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cb3",
         "queryAssembly": "ce6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe6.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "cb3_to_priPac1_chain",
-      "name": "cb3 to P. pacificus (priPac1) liftOver chain",
+      "trackId": "cb3_to_ce4_chain",
+      "name": "cb3 to C. elegans (ce4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["cb3"],
+      "assemblyNames": ["cb3", "ce4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "cb3",
-        "queryAssembly": "priPac1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToPriPac1.over.chain.gz"
+        "queryAssembly": "ce4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/cb3/liftOver/cb3ToCe4.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

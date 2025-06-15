@@ -699,12 +699,19 @@
       "trackId": "ochPri2_to_mm10_chain",
       "name": "ochPri2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ochPri2"],
+      "assemblyNames": ["ochPri2", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ochPri2",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -712,12 +719,19 @@
       "trackId": "ochPri2_to_ochPri3_chain",
       "name": "ochPri2 to Pika (ochPri3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ochPri2"],
+      "assemblyNames": ["ochPri2", "ochPri3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ochPri2",
         "queryAssembly": "ochPri3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToOchPri3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToOchPri3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ochPri2/liftOver/ochPri2ToOchPri3.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

@@ -1837,28 +1837,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "hetGla2_to_hg38_chain",
-      "name": "hetGla2 to Human (hg38) liftOver chain",
+      "trackId": "hetGla2_to_mm10_chain",
+      "name": "hetGla2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["hetGla2"],
+      "assemblyNames": ["hetGla2", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "hetGla2",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToHg38.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "hetGla2_to_mm10_chain",
-      "name": "hetGla2 to Mouse (mm10) liftOver chain",
+      "trackId": "hetGla2_to_hg38_chain",
+      "name": "hetGla2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["hetGla2"],
+      "assemblyNames": ["hetGla2", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "hetGla2",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToMm10.over.chain.gz"
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hetGla2/liftOver/hetGla2ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

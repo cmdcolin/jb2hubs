@@ -1845,28 +1845,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "sarHar1_to_hg19_chain",
-      "name": "sarHar1 to Human (hg19) liftOver chain",
+      "trackId": "sarHar1_to_hg38_chain",
+      "name": "sarHar1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sarHar1"],
+      "assemblyNames": ["sarHar1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sarHar1",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg19.over.chain.gz"
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "sarHar1_to_hg38_chain",
-      "name": "sarHar1 to Human (hg38) liftOver chain",
+      "trackId": "sarHar1_to_hg19_chain",
+      "name": "sarHar1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sarHar1"],
+      "assemblyNames": ["sarHar1", "hg19"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sarHar1",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg38.over.chain.gz"
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1874,12 +1888,19 @@
       "trackId": "sarHar1_to_mm10_chain",
       "name": "sarHar1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sarHar1"],
+      "assemblyNames": ["sarHar1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sarHar1",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sarHar1/liftOver/sarHar1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

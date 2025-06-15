@@ -20,7 +20,9 @@ echo "Create hs1 GFF file and index"
 ./downloadNcbiGff.sh
 
 echo "Create chain tracks"
-find ~/ucsc/* -type d -maxdepth 0 | parallel --bar -I {} './createChainTracks.sh -a $(basename {})'
+for i in ~/ucsc/*; do
+  ./createChainTracks.sh -a $(basename $i)
+done
 
 echo "Hashing files"
 find ~/ucscResults/ -type f | grep -v "meta.json" | grep -v "\.hash" | parallel --bar xxh128sum | sort -k2,2 >fileListing.txt

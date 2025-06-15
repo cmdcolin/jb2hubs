@@ -606,41 +606,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "oviAri1_to_bosTau4_chain",
-      "name": "oviAri1 to Cow (bosTau4) liftOver chain",
+      "trackId": "oviAri1_to_mm39_chain",
+      "name": "oviAri1 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
+      "assemblyNames": ["oviAri1", "mm39"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "oviAri1",
-        "queryAssembly": "bosTau4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToBosTau4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "oviAri1_to_equCab2_chain",
-      "name": "oviAri1 to Horse (equCab2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "oviAri1",
-        "queryAssembly": "equCab2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToEquCab2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "oviAri1_to_GCF_016772045.1_chain",
-      "name": "oviAri1 to Rambouillet sheep (U.Idaho 2021) (GCF_016772045.1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "oviAri1",
-        "queryAssembly": "GCF_016772045.1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToGCF_016772045.1.over.chain.gz"
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm39.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -648,51 +629,39 @@
       "trackId": "oviAri1_to_hg19_chain",
       "name": "oviAri1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
+      "assemblyNames": ["oviAri1", "hg19"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "oviAri1",
         "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToHg19.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "oviAri1_to_mm9_chain",
-      "name": "oviAri1 to Mouse (mm9) liftOver chain",
+      "trackId": "oviAri1_to_GCF_016772045.1_chain",
+      "name": "oviAri1 to Rambouillet sheep (U.Idaho 2021) (GCF_016772045.1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
+      "assemblyNames": ["oviAri1", "GCF_016772045.1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "oviAri1",
-        "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "oviAri1_to_mm10_chain",
-      "name": "oviAri1 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "oviAri1",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "oviAri1_to_mm39_chain",
-      "name": "oviAri1 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "oviAri1",
-        "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm39.over.chain.gz"
+        "queryAssembly": "GCF_016772045.1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToGCF_016772045.1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToGCF_016772045.1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -700,12 +669,59 @@
       "trackId": "oviAri1_to_monDom5_chain",
       "name": "oviAri1 to Opossum (monDom5) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
+      "assemblyNames": ["oviAri1", "monDom5"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "oviAri1",
         "queryAssembly": "monDom5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMonDom5.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMonDom5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMonDom5.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri1_to_mm9_chain",
+      "name": "oviAri1 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri1", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "oviAri1",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm9.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri1_to_equCab2_chain",
+      "name": "oviAri1 to Horse (equCab2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri1", "equCab2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "oviAri1",
+        "queryAssembly": "equCab2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToEquCab2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToEquCab2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -713,12 +729,59 @@
       "trackId": "oviAri1_to_oviAri3_chain",
       "name": "oviAri1 to Sheep (oviAri3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["oviAri1"],
+      "assemblyNames": ["oviAri1", "oviAri3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "oviAri1",
         "queryAssembly": "oviAri3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToOviAri3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToOviAri3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToOviAri3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri1_to_mm10_chain",
+      "name": "oviAri1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "oviAri1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToMm10.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "oviAri1_to_bosTau4_chain",
+      "name": "oviAri1 to Cow (bosTau4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["oviAri1", "bosTau4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "oviAri1",
+        "queryAssembly": "bosTau4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToBosTau4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/oviAri1/liftOver/oviAri1ToBosTau4.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

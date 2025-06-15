@@ -712,12 +712,19 @@
       "trackId": "sacCer1_to_sacCer2_chain",
       "name": "sacCer1 to S. cerevisiae (sacCer2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sacCer1"],
+      "assemblyNames": ["sacCer1", "sacCer2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sacCer1",
         "queryAssembly": "sacCer2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -725,12 +732,19 @@
       "trackId": "sacCer1_to_sacCer3_chain",
       "name": "sacCer1 to S. cerevisiae (sacCer3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sacCer1"],
+      "assemblyNames": ["sacCer1", "sacCer3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sacCer1",
         "queryAssembly": "sacCer3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer1/liftOver/sacCer1ToSacCer3.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

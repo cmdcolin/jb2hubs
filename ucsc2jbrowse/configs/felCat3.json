@@ -787,41 +787,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "felCat3_to_canFam2_chain",
-      "name": "felCat3 to Dog (canFam2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["felCat3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "felCat3",
-        "queryAssembly": "canFam2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToCanFam2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "felCat3_to_felCat4_chain",
-      "name": "felCat3 to Cat (felCat4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["felCat3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "felCat3",
-        "queryAssembly": "felCat4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToFelCat4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "felCat3_to_felCat8_chain",
       "name": "felCat3 to Cat (felCat8) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["felCat3"],
+      "assemblyNames": ["felCat3", "felCat8"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "felCat3",
         "queryAssembly": "felCat8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToFelCat8.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToFelCat8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToFelCat8.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -829,12 +810,39 @@
       "trackId": "felCat3_to_hg18_chain",
       "name": "felCat3 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["felCat3"],
+      "assemblyNames": ["felCat3", "hg18"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "felCat3",
         "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToHg18.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToHg18.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat3_to_felCat4_chain",
+      "name": "felCat3 to Cat (felCat4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat3", "felCat4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat3",
+        "queryAssembly": "felCat4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToFelCat4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToFelCat4.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -842,12 +850,19 @@
       "trackId": "felCat3_to_hg19_chain",
       "name": "felCat3 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["felCat3"],
+      "assemblyNames": ["felCat3", "hg19"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "felCat3",
         "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToHg19.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -855,12 +870,39 @@
       "trackId": "felCat3_to_mm8_chain",
       "name": "felCat3 to Mouse (mm8) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["felCat3"],
+      "assemblyNames": ["felCat3", "mm8"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "felCat3",
         "queryAssembly": "mm8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToMm8.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToMm8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToMm8.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat3_to_canFam2_chain",
+      "name": "felCat3 to Dog (canFam2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat3", "canFam2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat3",
+        "queryAssembly": "canFam2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToCanFam2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/felCat3/liftOver/felCat3ToCanFam2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

@@ -704,158 +704,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_anoCar1_chain",
-      "name": "xenTro2 to Lizard (anoCar1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "anoCar1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToAnoCar1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_anoCar2_chain",
-      "name": "xenTro2 to Lizard (anoCar2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "anoCar2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToAnoCar2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_danRer4_chain",
-      "name": "xenTro2 to Zebrafish (danRer4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "danRer4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "xenTro2_to_danRer6_chain",
       "name": "xenTro2 to Zebrafish (danRer6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
+      "assemblyNames": ["xenTro2", "danRer6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro2",
         "queryAssembly": "danRer6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer6.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_danRer7_chain",
-      "name": "xenTro2 to Zebrafish (danRer7) liftOver chain",
+      "trackId": "xenTro2_to_anoCar1_chain",
+      "name": "xenTro2 to Lizard (anoCar1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
+      "assemblyNames": ["xenTro2", "anoCar1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro2",
-        "queryAssembly": "danRer7",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer7.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_galGal2_chain",
-      "name": "xenTro2 to Chicken (galGal2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "galGal2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToGalGal2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_galGal3_chain",
-      "name": "xenTro2 to Chicken (galGal3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "galGal3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToGalGal3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_hg18_chain",
-      "name": "xenTro2 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToHg18.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_mm8_chain",
-      "name": "xenTro2 to Mouse (mm8) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "mm8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMm8.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_mm9_chain",
-      "name": "xenTro2 to Mouse (mm9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMm9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_monDom4_chain",
-      "name": "xenTro2 to Opossum (monDom4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "monDom4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMonDom4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_monDom5_chain",
-      "name": "xenTro2 to Opossum (monDom5) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro2",
-        "queryAssembly": "monDom5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMonDom5.over.chain.gz"
+        "queryAssembly": "anoCar1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToAnoCar1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToAnoCar1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -863,25 +747,39 @@
       "trackId": "xenTro2_to_rn4_chain",
       "name": "xenTro2 to Rat (rn4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
+      "assemblyNames": ["xenTro2", "rn4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro2",
         "queryAssembly": "rn4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToRn4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToRn4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToRn4.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro2_to_xenTro3_chain",
-      "name": "xenTro2 to X. tropicalis (xenTro3) liftOver chain",
+      "trackId": "xenTro2_to_galGal3_chain",
+      "name": "xenTro2 to Chicken (galGal3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
+      "assemblyNames": ["xenTro2", "galGal3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro2",
-        "queryAssembly": "xenTro3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToXenTro3.over.chain.gz"
+        "queryAssembly": "galGal3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToGalGal3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToGalGal3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -889,12 +787,219 @@
       "trackId": "xenTro2_to_xenTro7_chain",
       "name": "xenTro2 to X. tropicalis (xenTro7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro2"],
+      "assemblyNames": ["xenTro2", "xenTro7"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro2",
         "queryAssembly": "xenTro7",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToXenTro7.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToXenTro7.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToXenTro7.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_danRer4_chain",
+      "name": "xenTro2 to Zebrafish (danRer4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "danRer4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "danRer4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_galGal2_chain",
+      "name": "xenTro2 to Chicken (galGal2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "galGal2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "galGal2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToGalGal2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToGalGal2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_hg18_chain",
+      "name": "xenTro2 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToHg18.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_monDom4_chain",
+      "name": "xenTro2 to Opossum (monDom4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "monDom4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "monDom4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMonDom4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMonDom4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_danRer7_chain",
+      "name": "xenTro2 to Zebrafish (danRer7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "danRer7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "danRer7",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer7.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToDanRer7.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_xenTro3_chain",
+      "name": "xenTro2 to X. tropicalis (xenTro3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "xenTro3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "xenTro3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToXenTro3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToXenTro3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_mm8_chain",
+      "name": "xenTro2 to Mouse (mm8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "mm8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "mm8",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMm8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMm8.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_mm9_chain",
+      "name": "xenTro2 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMm9.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_monDom5_chain",
+      "name": "xenTro2 to Opossum (monDom5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "monDom5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "monDom5",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMonDom5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToMonDom5.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro2_to_anoCar2_chain",
+      "name": "xenTro2 to Lizard (anoCar2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro2", "anoCar2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro2",
+        "queryAssembly": "anoCar2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToAnoCar2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro2/liftOver/xenTro2ToAnoCar2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

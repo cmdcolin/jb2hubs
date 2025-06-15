@@ -795,80 +795,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_anoCar1_chain",
-      "name": "ornAna1 to Lizard (anoCar1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "anoCar1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToAnoCar1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_anoCar2_chain",
-      "name": "ornAna1 to Lizard (anoCar2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "anoCar2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToAnoCar2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_bosTau4_chain",
-      "name": "ornAna1 to Cow (bosTau4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "bosTau4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_bosTau6_chain",
-      "name": "ornAna1 to Cow (bosTau6) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "bosTau6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau6.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "ornAna1_to_bosTau7_chain",
       "name": "ornAna1 to Cow (bosTau7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
+      "assemblyNames": ["ornAna1", "bosTau7"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ornAna1",
         "queryAssembly": "bosTau7",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau7.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_calJac1_chain",
-      "name": "ornAna1 to Marmoset (calJac1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "calJac1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToCalJac1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau7.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau7.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -876,116 +818,19 @@
       "trackId": "ornAna1_to_equCab2_chain",
       "name": "ornAna1 to Horse (equCab2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
+      "assemblyNames": ["ornAna1", "equCab2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ornAna1",
         "queryAssembly": "equCab2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToEquCab2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_galGal3_chain",
-      "name": "ornAna1 to Chicken (galGal3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "galGal3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToGalGal3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_hg18_chain",
-      "name": "ornAna1 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg18.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_hg19_chain",
-      "name": "ornAna1 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_hg38_chain",
-      "name": "ornAna1 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_mm8_chain",
-      "name": "ornAna1 to Mouse (mm8) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "mm8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm8.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_mm9_chain",
-      "name": "ornAna1 to Mouse (mm9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_mm10_chain",
-      "name": "ornAna1 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_monDom4_chain",
-      "name": "ornAna1 to Opossum (monDom4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "ornAna1",
-        "queryAssembly": "monDom4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMonDom4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToEquCab2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToEquCab2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -993,25 +838,259 @@
       "trackId": "ornAna1_to_monDom5_chain",
       "name": "ornAna1 to Opossum (monDom5) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
+      "assemblyNames": ["ornAna1", "monDom5"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ornAna1",
         "queryAssembly": "monDom5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMonDom5.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMonDom5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMonDom5.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "ornAna1_to_ornAna2_chain",
-      "name": "ornAna1 to Platypus (ornAna2) liftOver chain",
+      "trackId": "ornAna1_to_mm10_chain",
+      "name": "ornAna1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
+      "assemblyNames": ["ornAna1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ornAna1",
-        "queryAssembly": "ornAna2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToOrnAna2.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm10.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_anoCar2_chain",
+      "name": "ornAna1 to Lizard (anoCar2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "anoCar2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "anoCar2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToAnoCar2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToAnoCar2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_hg18_chain",
+      "name": "ornAna1 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg18.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_anoCar1_chain",
+      "name": "ornAna1 to Lizard (anoCar1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "anoCar1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "anoCar1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToAnoCar1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToAnoCar1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_mm8_chain",
+      "name": "ornAna1 to Mouse (mm8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "mm8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "mm8",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm8.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_hg38_chain",
+      "name": "ornAna1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_bosTau6_chain",
+      "name": "ornAna1 to Cow (bosTau6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "bosTau6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "bosTau6",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau6.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_mm9_chain",
+      "name": "ornAna1 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMm9.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_monDom4_chain",
+      "name": "ornAna1 to Opossum (monDom4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "monDom4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "monDom4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMonDom4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToMonDom4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_hg19_chain",
+      "name": "ornAna1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToHg19.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_galGal3_chain",
+      "name": "ornAna1 to Chicken (galGal3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "galGal3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "galGal3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToGalGal3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToGalGal3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_bosTau4_chain",
+      "name": "ornAna1 to Cow (bosTau4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "bosTau4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "bosTau4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToBosTau4.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1019,12 +1098,59 @@
       "trackId": "ornAna1_to_ponAbe2_chain",
       "name": "ornAna1 to Orangutan (ponAbe2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ornAna1"],
+      "assemblyNames": ["ornAna1", "ponAbe2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ornAna1",
         "queryAssembly": "ponAbe2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToPonAbe2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToPonAbe2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToPonAbe2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_calJac1_chain",
+      "name": "ornAna1 to Marmoset (calJac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "calJac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "calJac1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToCalJac1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToCalJac1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna1_to_ornAna2_chain",
+      "name": "ornAna1 to Platypus (ornAna2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna1", "ornAna2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna1",
+        "queryAssembly": "ornAna2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToOrnAna2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ornAna1/liftOver/ornAna1ToOrnAna2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

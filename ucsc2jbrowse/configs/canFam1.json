@@ -522,28 +522,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "canFam1_to_canFam2_chain",
-      "name": "canFam1 to Dog (canFam2) liftOver chain",
+      "trackId": "canFam1_to_hg17_chain",
+      "name": "canFam1 to Human (hg17) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["canFam1"],
+      "assemblyNames": ["canFam1", "hg17"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "canFam1",
-        "queryAssembly": "canFam2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToCanFam2.over.chain.gz"
+        "queryAssembly": "hg17",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToHg17.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToHg17.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "canFam1_to_hg17_chain",
-      "name": "canFam1 to Human (hg17) liftOver chain",
+      "trackId": "canFam1_to_canFam2_chain",
+      "name": "canFam1 to Dog (canFam2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["canFam1"],
+      "assemblyNames": ["canFam1", "canFam2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "canFam1",
-        "queryAssembly": "hg17",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToHg17.over.chain.gz"
+        "queryAssembly": "canFam2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToCanFam2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToCanFam2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -551,12 +565,19 @@
       "trackId": "canFam1_to_mm5_chain",
       "name": "canFam1 to mm5 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["canFam1"],
+      "assemblyNames": ["canFam1", "mm5"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "canFam1",
         "queryAssembly": "mm5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm5.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm5.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -564,12 +585,19 @@
       "trackId": "canFam1_to_mm6_chain",
       "name": "canFam1 to mm6 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["canFam1"],
+      "assemblyNames": ["canFam1", "mm6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "canFam1",
         "queryAssembly": "mm6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/canFam1/liftOver/canFam1ToMm6.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

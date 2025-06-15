@@ -699,25 +699,19 @@
       "trackId": "tarSyr1_to_gorGor3_chain",
       "name": "tarSyr1 to Gorilla (gorGor3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["tarSyr1"],
+      "assemblyNames": ["tarSyr1", "gorGor3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "tarSyr1",
         "queryAssembly": "gorGor3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToGorGor3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "tarSyr1_to_mm10_chain",
-      "name": "tarSyr1 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["tarSyr1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "tarSyr1",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToGorGor3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToGorGor3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -725,12 +719,39 @@
       "trackId": "tarSyr1_to_tarSyr2_chain",
       "name": "tarSyr1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["tarSyr1"],
+      "assemblyNames": ["tarSyr1", "tarSyr2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "tarSyr1",
         "queryAssembly": "tarSyr2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToTarSyr2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToTarSyr2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToTarSyr2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "tarSyr1_to_mm10_chain",
+      "name": "tarSyr1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["tarSyr1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "tarSyr1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/tarSyr1/liftOver/tarSyr1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

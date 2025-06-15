@@ -1327,12 +1327,19 @@
       "trackId": "apiMel2_to_dm2_chain",
       "name": "apiMel2 to D. melanogaster (dm2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["apiMel2"],
+      "assemblyNames": ["apiMel2", "dm2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "apiMel2",
         "queryAssembly": "dm2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/apiMel2/liftOver/apiMel2ToDm2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/apiMel2/liftOver/apiMel2ToDm2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/apiMel2/liftOver/apiMel2ToDm2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

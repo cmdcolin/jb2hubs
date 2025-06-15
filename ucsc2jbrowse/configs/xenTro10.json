@@ -1641,41 +1641,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro10_to_hg38_chain",
-      "name": "xenTro10 to Human (hg38) liftOver chain",
+      "trackId": "xenTro10_to_xenTro9_chain",
+      "name": "xenTro10 to X. tropicalis (xenTro9) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro10"],
+      "assemblyNames": ["xenTro10", "xenTro9"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro10",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro10_to_mm10_chain",
-      "name": "xenTro10 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro10"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro10",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "xenTro10_to_mm39_chain",
-      "name": "xenTro10 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["xenTro10"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "xenTro10",
-        "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm39.over.chain.gz"
+        "queryAssembly": "xenTro9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro9.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1683,25 +1664,79 @@
       "trackId": "xenTro10_to_xenTro7_chain",
       "name": "xenTro10 to X. tropicalis (xenTro7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro10"],
+      "assemblyNames": ["xenTro10", "xenTro7"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro10",
         "queryAssembly": "xenTro7",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro7.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro7.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro7.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "xenTro10_to_xenTro9_chain",
-      "name": "xenTro10 to X. tropicalis (xenTro9) liftOver chain",
+      "trackId": "xenTro10_to_mm10_chain",
+      "name": "xenTro10 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["xenTro10"],
+      "assemblyNames": ["xenTro10", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "xenTro10",
-        "queryAssembly": "xenTro9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToXenTro9.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm10.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro10_to_mm39_chain",
+      "name": "xenTro10 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro10", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro10",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToMm39.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro10_to_hg38_chain",
+      "name": "xenTro10 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro10", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro10",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/xenTro10/liftOver/xenTro10ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

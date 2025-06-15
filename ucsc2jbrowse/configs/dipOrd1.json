@@ -1535,12 +1535,19 @@
       "trackId": "dipOrd1_to_mm10_chain",
       "name": "dipOrd1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dipOrd1"],
+      "assemblyNames": ["dipOrd1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dipOrd1",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dipOrd1/liftOver/dipOrd1ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dipOrd1/liftOver/dipOrd1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dipOrd1/liftOver/dipOrd1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

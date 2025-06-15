@@ -885,15 +885,42 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_petMar1_chain",
+      "name": "braFlo1 to Lamprey (petMar1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1", "petMar1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "petMar1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToPetMar1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToPetMar1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "braFlo1_to_galGal3_chain",
       "name": "braFlo1 to Chicken (galGal3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["braFlo1"],
+      "assemblyNames": ["braFlo1", "galGal3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "braFlo1",
         "queryAssembly": "galGal3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToGalGal3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToGalGal3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToGalGal3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -901,12 +928,19 @@
       "trackId": "braFlo1_to_hg18_chain",
       "name": "braFlo1 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["braFlo1"],
+      "assemblyNames": ["braFlo1", "hg18"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "braFlo1",
         "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToHg18.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToHg18.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -914,25 +948,19 @@
       "trackId": "braFlo1_to_mm9_chain",
       "name": "braFlo1 to Mouse (mm9) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["braFlo1"],
+      "assemblyNames": ["braFlo1", "mm9"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "braFlo1",
         "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToMm9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "braFlo1_to_petMar1_chain",
-      "name": "braFlo1 to Lamprey (petMar1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["braFlo1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "braFlo1",
-        "queryAssembly": "petMar1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToPetMar1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/braFlo1/liftOver/braFlo1ToMm9.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

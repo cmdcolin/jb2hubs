@@ -1947,15 +1947,42 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "taeGut2_to_geoFor1_chain",
+      "name": "taeGut2 to Medium ground finch (geoFor1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["taeGut2", "geoFor1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "taeGut2",
+        "queryAssembly": "geoFor1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGeoFor1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGeoFor1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "taeGut2_to_GCA_009819655.1_chain",
       "name": "taeGut2 to blackcap (primary hap 2019 genbank) (GCA_009819655.1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["taeGut2"],
+      "assemblyNames": ["taeGut2", "GCA_009819655.1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "taeGut2",
         "queryAssembly": "GCA_009819655.1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGCA_009819655.1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGCA_009819655.1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGCA_009819655.1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1963,51 +1990,19 @@
       "trackId": "taeGut2_to_galGal4_chain",
       "name": "taeGut2 to Chicken (galGal4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["taeGut2"],
+      "assemblyNames": ["taeGut2", "galGal4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "taeGut2",
         "queryAssembly": "galGal4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGalGal4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "taeGut2_to_geoFor1_chain",
-      "name": "taeGut2 to Medium ground finch (geoFor1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["taeGut2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "taeGut2",
-        "queryAssembly": "geoFor1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGeoFor1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "taeGut2_to_hg19_chain",
-      "name": "taeGut2 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["taeGut2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "taeGut2",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "taeGut2_to_hg38_chain",
-      "name": "taeGut2 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["taeGut2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "taeGut2",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGalGal4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToGalGal4.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2015,12 +2010,59 @@
       "trackId": "taeGut2_to_melGal1_chain",
       "name": "taeGut2 to Turkey (melGal1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["taeGut2"],
+      "assemblyNames": ["taeGut2", "melGal1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "taeGut2",
         "queryAssembly": "melGal1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToMelGal1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToMelGal1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToMelGal1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "taeGut2_to_hg38_chain",
+      "name": "taeGut2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["taeGut2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "taeGut2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "taeGut2_to_hg19_chain",
+      "name": "taeGut2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["taeGut2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "taeGut2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/taeGut2/liftOver/taeGut2ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

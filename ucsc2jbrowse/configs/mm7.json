@@ -1066,15 +1066,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "mm7_to_bosTau2_chain",
-      "name": "mm7 to Cow (bosTau2) liftOver chain",
+      "trackId": "mm7_to_mm8_chain",
+      "name": "mm7 to Mouse (mm8) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
+      "assemblyNames": ["mm7", "mm8"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "mm7",
-        "queryAssembly": "bosTau2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToBosTau2.over.chain.gz"
+        "queryAssembly": "mm8",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm8.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1082,64 +1089,19 @@
       "trackId": "mm7_to_canFam2_chain",
       "name": "mm7 to Dog (canFam2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
+      "assemblyNames": ["mm7", "canFam2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "mm7",
         "queryAssembly": "canFam2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToCanFam2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_danRer3_chain",
-      "name": "mm7 to Zebrafish (danRer3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "danRer3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToDanRer3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_echTel1_chain",
-      "name": "mm7 to Tenrec (echTel1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "echTel1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToEchTel1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_fr1_chain",
-      "name": "mm7 to Fugu (fr1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "fr1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToFr1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_galGal2_chain",
-      "name": "mm7 to Chicken (galGal2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "galGal2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToGalGal2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToCanFam2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToCanFam2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1147,129 +1109,19 @@
       "trackId": "mm7_to_hg17_chain",
       "name": "mm7 to Human (hg17) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
+      "assemblyNames": ["mm7", "hg17"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "mm7",
         "queryAssembly": "hg17",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToHg17.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_hg18_chain",
-      "name": "mm7 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToHg18.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_mm5_chain",
-      "name": "mm7 to mm5 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "mm5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm5.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_mm6_chain",
-      "name": "mm7 to mm6 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "mm6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm6.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_mm8_chain",
-      "name": "mm7 to Mouse (mm8) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "mm8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm8.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_panTro1_chain",
-      "name": "mm7 to Chimp (panTro1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "panTro1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToPanTro1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_rheMac1_chain",
-      "name": "mm7 to rheMac1 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "rheMac1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRheMac1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_rn3_chain",
-      "name": "mm7 to Rat (rn3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "rn3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRn3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_rn4_chain",
-      "name": "mm7 to Rat (rn4) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "rn4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRn4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "mm7_to_tetNig1_chain",
-      "name": "mm7 to Tetraodon (tetNig1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "mm7",
-        "queryAssembly": "tetNig1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToTetNig1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToHg17.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToHg17.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1277,12 +1129,279 @@
       "trackId": "mm7_to_xenTro1_chain",
       "name": "mm7 to X. tropicalis (xenTro1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["mm7"],
+      "assemblyNames": ["mm7", "xenTro1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "mm7",
         "queryAssembly": "xenTro1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToXenTro1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToXenTro1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToXenTro1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_mm6_chain",
+      "name": "mm7 to mm6 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "mm6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "mm6",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm6.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_echTel1_chain",
+      "name": "mm7 to Tenrec (echTel1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "echTel1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "echTel1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToEchTel1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToEchTel1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_rheMac1_chain",
+      "name": "mm7 to rheMac1 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "rheMac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "rheMac1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRheMac1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRheMac1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_danRer3_chain",
+      "name": "mm7 to Zebrafish (danRer3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "danRer3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "danRer3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToDanRer3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToDanRer3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_fr1_chain",
+      "name": "mm7 to Fugu (fr1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "fr1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "fr1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToFr1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToFr1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_mm5_chain",
+      "name": "mm7 to mm5 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "mm5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "mm5",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToMm5.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_galGal2_chain",
+      "name": "mm7 to Chicken (galGal2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "galGal2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "galGal2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToGalGal2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToGalGal2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_rn3_chain",
+      "name": "mm7 to Rat (rn3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "rn3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "rn3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRn3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRn3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_hg18_chain",
+      "name": "mm7 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToHg18.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_bosTau2_chain",
+      "name": "mm7 to Cow (bosTau2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "bosTau2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "bosTau2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToBosTau2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToBosTau2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_panTro1_chain",
+      "name": "mm7 to Chimp (panTro1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "panTro1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "panTro1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToPanTro1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToPanTro1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_rn4_chain",
+      "name": "mm7 to Rat (rn4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "rn4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "rn4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRn4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToRn4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "mm7_to_tetNig1_chain",
+      "name": "mm7 to Tetraodon (tetNig1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm7", "tetNig1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm7",
+        "queryAssembly": "tetNig1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToTetNig1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/mm7/liftOver/mm7ToTetNig1.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

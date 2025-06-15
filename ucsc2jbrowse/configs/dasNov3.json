@@ -1839,12 +1839,19 @@
       "trackId": "dasNov3_to_hg38_chain",
       "name": "dasNov3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dasNov3"],
+      "assemblyNames": ["dasNov3", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dasNov3",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dasNov3/liftOver/dasNov3ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dasNov3/liftOver/dasNov3ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dasNov3/liftOver/dasNov3ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1852,12 +1859,19 @@
       "trackId": "dasNov3_to_mm10_chain",
       "name": "dasNov3 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dasNov3"],
+      "assemblyNames": ["dasNov3", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dasNov3",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dasNov3/liftOver/dasNov3ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dasNov3/liftOver/dasNov3ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dasNov3/liftOver/dasNov3ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

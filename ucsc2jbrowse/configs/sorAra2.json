@@ -1791,41 +1791,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "sorAra2_to_hg19_chain",
-      "name": "sorAra2 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["sorAra2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "sorAra2",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "sorAra2_to_hg38_chain",
-      "name": "sorAra2 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["sorAra2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "sorAra2",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "sorAra2_to_mm10_chain",
       "name": "sorAra2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sorAra2"],
+      "assemblyNames": ["sorAra2", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sorAra2",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm10.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_hg19_chain",
+      "name": "sorAra2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1833,12 +1834,39 @@
       "trackId": "sorAra2_to_mm39_chain",
       "name": "sorAra2 to Mouse (mm39) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sorAra2"],
+      "assemblyNames": ["sorAra2", "mm39"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sorAra2",
         "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm39.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToMm39.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_hg38_chain",
+      "name": "sorAra2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sorAra2/liftOver/sorAra2ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

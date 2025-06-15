@@ -696,41 +696,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "echTel1_to_echTel2_chain",
-      "name": "echTel1 to Tenrec (echTel2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["echTel1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "echTel1",
-        "queryAssembly": "echTel2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToEchTel2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "echTel1_to_hg18_chain",
       "name": "echTel1 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["echTel1"],
+      "assemblyNames": ["echTel1", "hg18"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "echTel1",
         "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToHg18.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "echTel1_to_hg19_chain",
-      "name": "echTel1 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["echTel1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "echTel1",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToHg19.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToHg18.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -738,12 +719,59 @@
       "trackId": "echTel1_to_mm7_chain",
       "name": "echTel1 to Mouse (mm7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["echTel1"],
+      "assemblyNames": ["echTel1", "mm7"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "echTel1",
         "queryAssembly": "mm7",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm7.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm7.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm7.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_hg19_chain",
+      "name": "echTel1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToHg19.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_echTel2_chain",
+      "name": "echTel1 to Tenrec (echTel2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "echTel2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "echTel2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToEchTel2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToEchTel2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -751,12 +779,19 @@
       "trackId": "echTel1_to_mm9_chain",
       "name": "echTel1 to Mouse (mm9) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["echTel1"],
+      "assemblyNames": ["echTel1", "mm9"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "echTel1",
         "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm9.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm9.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -764,12 +799,19 @@
       "trackId": "echTel1_to_mm10_chain",
       "name": "echTel1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["echTel1"],
+      "assemblyNames": ["echTel1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "echTel1",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/echTel1/liftOver/echTel1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

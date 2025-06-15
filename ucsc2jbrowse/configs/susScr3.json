@@ -2082,80 +2082,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "susScr3_to_hg19_chain",
-      "name": "susScr3 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["susScr3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "susScr3",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "susScr3_to_hg38_chain",
       "name": "susScr3 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["susScr3"],
+      "assemblyNames": ["susScr3", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "susScr3",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "susScr3_to_mm10_chain",
-      "name": "susScr3 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["susScr3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "susScr3",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToMm10.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "susScr3_to_mm39_chain",
-      "name": "susScr3 to Mouse (mm39) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["susScr3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "susScr3",
-        "queryAssembly": "mm39",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToMm39.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "susScr3_to_oviAri3_chain",
-      "name": "susScr3 to Sheep (oviAri3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["susScr3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "susScr3",
-        "queryAssembly": "oviAri3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToOviAri3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "susScr3_to_susScr2_chain",
-      "name": "susScr3 to Pig (susScr2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["susScr3"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "susScr3",
-        "queryAssembly": "susScr2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToSusScr2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -2163,12 +2105,119 @@
       "trackId": "susScr3_to_susScr11_chain",
       "name": "susScr3 to Pig (susScr11) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["susScr3"],
+      "assemblyNames": ["susScr3", "susScr11"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "susScr3",
         "queryAssembly": "susScr11",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToSusScr11.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToSusScr11.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToSusScr11.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "susScr3_to_mm39_chain",
+      "name": "susScr3 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["susScr3", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "susScr3",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToMm39.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToMm39.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "susScr3_to_susScr2_chain",
+      "name": "susScr3 to Pig (susScr2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["susScr3", "susScr2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "susScr3",
+        "queryAssembly": "susScr2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToSusScr2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToSusScr2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "susScr3_to_hg19_chain",
+      "name": "susScr3 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["susScr3", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "susScr3",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToHg19.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "susScr3_to_mm10_chain",
+      "name": "susScr3 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["susScr3", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "susScr3",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToMm10.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "susScr3_to_oviAri3_chain",
+      "name": "susScr3 to Sheep (oviAri3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["susScr3", "oviAri3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "susScr3",
+        "queryAssembly": "oviAri3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToOviAri3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/susScr3/liftOver/susScr3ToOviAri3.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

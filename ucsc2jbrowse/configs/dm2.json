@@ -1684,197 +1684,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "dm2_to_anoGam1_chain",
-      "name": "dm2 to A. gambiae (anoGam1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "anoGam1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToAnoGam1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "dm2_to_apiMel2_chain",
       "name": "dm2 to A. mellifera (apiMel2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
+      "assemblyNames": ["dm2", "apiMel2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dm2",
         "queryAssembly": "apiMel2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToApiMel2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_dm3_chain",
-      "name": "dm2 to D. melanogaster (dm3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "dm3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDm3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_dp3_chain",
-      "name": "dm2 to D. pseudoobscura (dp3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "dp3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDp3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_dp4_chain",
-      "name": "dm2 to dp4 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "dp4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDp4.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droAna1_chain",
-      "name": "dm2 to D. ananassae (droAna1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droAna1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droAna2_chain",
-      "name": "dm2 to D. ananassae (droAna2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droAna2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droAna3_chain",
-      "name": "dm2 to droAna3 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droAna3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droEre1_chain",
-      "name": "dm2 to D. erecta (droEre1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droEre1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroEre1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droEre2_chain",
-      "name": "dm2 to droEre2 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droEre2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroEre2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droGri1_chain",
-      "name": "dm2 to D. grimshawi (droGri1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droGri1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroGri1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droGri2_chain",
-      "name": "dm2 to droGri2 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droGri2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroGri2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droMoj1_chain",
-      "name": "dm2 to D. mojavensis (droMoj1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droMoj1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droMoj2_chain",
-      "name": "dm2 to D. mojavensis (droMoj2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droMoj2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droMoj3_chain",
-      "name": "dm2 to droMoj3 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droMoj3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToApiMel2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToApiMel2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1882,12 +1707,19 @@
       "trackId": "dm2_to_droPer1_chain",
       "name": "dm2 to D. persimilis (droPer1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
+      "assemblyNames": ["dm2", "droPer1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dm2",
         "queryAssembly": "droPer1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroPer1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroPer1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroPer1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1895,12 +1727,59 @@
       "trackId": "dm2_to_droSec1_chain",
       "name": "dm2 to D. sechellia (droSec1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
+      "assemblyNames": ["dm2", "droSec1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dm2",
         "queryAssembly": "droSec1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroSec1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroSec1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroSec1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droEre1_chain",
+      "name": "dm2 to D. erecta (droEre1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droEre1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droEre1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroEre1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroEre1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droAna3_chain",
+      "name": "dm2 to droAna3 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droAna3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droAna3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1908,77 +1787,39 @@
       "trackId": "dm2_to_droSim1_chain",
       "name": "dm2 to D. simulans (droSim1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
+      "assemblyNames": ["dm2", "droSim1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dm2",
         "queryAssembly": "droSim1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroSim1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroSim1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroSim1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "dm2_to_droVir1_chain",
-      "name": "dm2 to D. virilis (droVir1) liftOver chain",
+      "trackId": "dm2_to_droMoj3_chain",
+      "name": "dm2 to droMoj3 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
+      "assemblyNames": ["dm2", "droMoj3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dm2",
-        "queryAssembly": "droVir1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droVir2_chain",
-      "name": "dm2 to D. virilis (droVir2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droVir2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droVir3_chain",
-      "name": "dm2 to droVir3 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droVir3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droWil1_chain",
-      "name": "dm2 to droWil1 liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droWil1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroWil1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "dm2_to_droYak1_chain",
-      "name": "dm2 to D. yakuba (droYak1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "dm2",
-        "queryAssembly": "droYak1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroYak1.over.chain.gz"
+        "queryAssembly": "droMoj3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1986,12 +1827,339 @@
       "trackId": "dm2_to_droYak2_chain",
       "name": "dm2 to D. yakuba (droYak2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["dm2"],
+      "assemblyNames": ["dm2", "droYak2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "dm2",
         "queryAssembly": "droYak2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroYak2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroYak2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroYak2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droEre2_chain",
+      "name": "dm2 to droEre2 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droEre2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droEre2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroEre2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroEre2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_dp3_chain",
+      "name": "dm2 to D. pseudoobscura (dp3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "dp3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "dp3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDp3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDp3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_dp4_chain",
+      "name": "dm2 to dp4 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "dp4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "dp4",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDp4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDp4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droVir2_chain",
+      "name": "dm2 to D. virilis (droVir2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droVir2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droVir2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_anoGam1_chain",
+      "name": "dm2 to A. gambiae (anoGam1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "anoGam1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "anoGam1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToAnoGam1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToAnoGam1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droWil1_chain",
+      "name": "dm2 to droWil1 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droWil1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droWil1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroWil1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroWil1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droGri2_chain",
+      "name": "dm2 to droGri2 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droGri2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droGri2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroGri2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroGri2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droGri1_chain",
+      "name": "dm2 to D. grimshawi (droGri1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droGri1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droGri1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroGri1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroGri1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droYak1_chain",
+      "name": "dm2 to D. yakuba (droYak1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droYak1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droYak1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroYak1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroYak1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droAna1_chain",
+      "name": "dm2 to D. ananassae (droAna1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droAna1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droAna1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_dm3_chain",
+      "name": "dm2 to D. melanogaster (dm3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "dm3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "dm3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDm3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDm3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droMoj2_chain",
+      "name": "dm2 to D. mojavensis (droMoj2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droMoj2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droMoj2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droVir3_chain",
+      "name": "dm2 to droVir3 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droVir3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droVir3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droVir1_chain",
+      "name": "dm2 to D. virilis (droVir1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droVir1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droVir1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroVir1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droAna2_chain",
+      "name": "dm2 to D. ananassae (droAna2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droAna2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droAna2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroAna2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm2_to_droMoj1_chain",
+      "name": "dm2 to D. mojavensis (droMoj1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm2", "droMoj1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm2",
+        "queryAssembly": "droMoj1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/dm2/liftOver/dm2ToDroMoj1.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

@@ -1531,15 +1531,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "aquChr2_to_galGal5_chain",
-      "name": "aquChr2 to Chicken (galGal5) liftOver chain",
+      "trackId": "aquChr2_to_mm10_chain",
+      "name": "aquChr2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["aquChr2"],
+      "assemblyNames": ["aquChr2", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "aquChr2",
-        "queryAssembly": "galGal5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToGalGal5.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1547,25 +1554,39 @@
       "trackId": "aquChr2_to_hg38_chain",
       "name": "aquChr2 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["aquChr2"],
+      "assemblyNames": ["aquChr2", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "aquChr2",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "aquChr2_to_mm10_chain",
-      "name": "aquChr2 to Mouse (mm10) liftOver chain",
+      "trackId": "aquChr2_to_galGal5_chain",
+      "name": "aquChr2 to Chicken (galGal5) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["aquChr2"],
+      "assemblyNames": ["aquChr2", "galGal5"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "aquChr2",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToMm10.over.chain.gz"
+        "queryAssembly": "galGal5",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToGalGal5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/aquChr2/liftOver/aquChr2ToGalGal5.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

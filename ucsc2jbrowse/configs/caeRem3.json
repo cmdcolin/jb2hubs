@@ -973,12 +973,19 @@
       "trackId": "caeRem3_to_ce6_chain",
       "name": "caeRem3 to C. elegans (ce6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["caeRem3"],
+      "assemblyNames": ["caeRem3", "ce6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "caeRem3",
         "queryAssembly": "ce6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeRem3/liftOver/caeRem3ToCe6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeRem3/liftOver/caeRem3ToCe6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/caeRem3/liftOver/caeRem3ToCe6.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

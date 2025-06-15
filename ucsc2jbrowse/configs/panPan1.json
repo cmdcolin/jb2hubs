@@ -1009,54 +1009,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "panPan1_to_hg18_chain",
-      "name": "panPan1 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panPan1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "panPan1",
-        "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg18.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panPan1_to_hg38_chain",
-      "name": "panPan1 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panPan1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "panPan1",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "panPan1_to_panPan2_chain",
-      "name": "panPan1 to Bonobo (panPan2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["panPan1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "panPan1",
-        "queryAssembly": "panPan2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "panPan1_to_panPan3_chain",
       "name": "panPan1 to Bonobo (panPan3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["panPan1"],
+      "assemblyNames": ["panPan1", "panPan3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "panPan1",
         "queryAssembly": "panPan3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1064,12 +1032,79 @@
       "trackId": "panPan1_to_tarSyr2_chain",
       "name": "panPan1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["panPan1"],
+      "assemblyNames": ["panPan1", "tarSyr2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "panPan1",
         "queryAssembly": "tarSyr2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToTarSyr2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToTarSyr2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToTarSyr2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_panPan2_chain",
+      "name": "panPan1 to Bonobo (panPan2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1", "panPan2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "panPan2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToPanPan2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_hg38_chain",
+      "name": "panPan1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan1_to_hg18_chain",
+      "name": "panPan1 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan1", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan1",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/panPan1/liftOver/panPan1ToHg18.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

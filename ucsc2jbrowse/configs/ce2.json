@@ -616,12 +616,19 @@
       "trackId": "ce2_to_ce4_chain",
       "name": "ce2 to C. elegans (ce4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["ce2"],
+      "assemblyNames": ["ce2", "ce4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "ce2",
         "queryAssembly": "ce4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce2/liftOver/ce2ToCe4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce2/liftOver/ce2ToCe4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/ce2/liftOver/ce2ToCe4.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

@@ -1843,54 +1843,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "anoCar2_to_galGal3_chain",
-      "name": "anoCar2 to Chicken (galGal3) liftOver chain",
+      "trackId": "anoCar2_to_mm10_chain",
+      "name": "anoCar2 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
+      "assemblyNames": ["anoCar2", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoCar2",
-        "queryAssembly": "galGal3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToGalGal3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "anoCar2_to_gasAcu1_chain",
-      "name": "anoCar2 to Stickleback (gasAcu1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "anoCar2",
-        "queryAssembly": "gasAcu1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToGasAcu1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "anoCar2_to_hg19_chain",
-      "name": "anoCar2 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "anoCar2",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "anoCar2_to_hg38_chain",
-      "name": "anoCar2 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "anoCar2",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToHg38.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1898,25 +1866,19 @@
       "trackId": "anoCar2_to_mm9_chain",
       "name": "anoCar2 to Mouse (mm9) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
+      "assemblyNames": ["anoCar2", "mm9"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoCar2",
         "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToMm9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "anoCar2_to_mm10_chain",
-      "name": "anoCar2 to Mouse (mm10) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "anoCar2",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToMm9.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1924,25 +1886,39 @@
       "trackId": "anoCar2_to_ornAna1_chain",
       "name": "anoCar2 to Platypus (ornAna1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
+      "assemblyNames": ["anoCar2", "ornAna1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoCar2",
         "queryAssembly": "ornAna1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToOrnAna1.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToOrnAna1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToOrnAna1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "anoCar2_to_xenTro2_chain",
-      "name": "anoCar2 to X. tropicalis (xenTro2) liftOver chain",
+      "trackId": "anoCar2_to_gasAcu1_chain",
+      "name": "anoCar2 to Stickleback (gasAcu1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
+      "assemblyNames": ["anoCar2", "gasAcu1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoCar2",
-        "queryAssembly": "xenTro2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro2.over.chain.gz"
+        "queryAssembly": "gasAcu1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToGasAcu1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToGasAcu1.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1950,12 +1926,99 @@
       "trackId": "anoCar2_to_xenTro3_chain",
       "name": "anoCar2 to X. tropicalis (xenTro3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
+      "assemblyNames": ["anoCar2", "xenTro3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoCar2",
         "queryAssembly": "xenTro3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoCar2_to_galGal3_chain",
+      "name": "anoCar2 to Chicken (galGal3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoCar2", "galGal3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoCar2",
+        "queryAssembly": "galGal3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToGalGal3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToGalGal3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoCar2_to_xenTro2_chain",
+      "name": "anoCar2 to X. tropicalis (xenTro2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoCar2", "xenTro2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoCar2",
+        "queryAssembly": "xenTro2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoCar2_to_hg38_chain",
+      "name": "anoCar2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoCar2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoCar2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoCar2_to_hg19_chain",
+      "name": "anoCar2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoCar2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoCar2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1963,12 +2026,19 @@
       "trackId": "anoCar2_to_xenTro9_chain",
       "name": "anoCar2 to X. tropicalis (xenTro9) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["anoCar2"],
+      "assemblyNames": ["anoCar2", "xenTro9"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "anoCar2",
         "queryAssembly": "xenTro9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro9.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/anoCar2/liftOver/anoCar2ToXenTro9.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

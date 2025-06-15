@@ -976,12 +976,19 @@
       "trackId": "strPur1_to_strPur2_chain",
       "name": "strPur1 to S. purpuratus (strPur2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["strPur1"],
+      "assemblyNames": ["strPur1", "strPur2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "strPur1",
         "queryAssembly": "strPur2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur1/liftOver/strPur1ToStrPur2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur1/liftOver/strPur1ToStrPur2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/strPur1/liftOver/strPur1ToStrPur2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

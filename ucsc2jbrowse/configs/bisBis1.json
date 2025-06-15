@@ -1712,12 +1712,19 @@
       "trackId": "bisBis1_to_hg38_chain",
       "name": "bisBis1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["bisBis1"],
+      "assemblyNames": ["bisBis1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "bisBis1",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bisBis1/liftOver/bisBis1ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bisBis1/liftOver/bisBis1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bisBis1/liftOver/bisBis1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1725,12 +1732,19 @@
       "trackId": "bisBis1_to_mm10_chain",
       "name": "bisBis1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["bisBis1"],
+      "assemblyNames": ["bisBis1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "bisBis1",
         "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bisBis1/liftOver/bisBis1ToMm10.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bisBis1/liftOver/bisBis1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/bisBis1/liftOver/bisBis1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

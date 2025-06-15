@@ -1021,41 +1021,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "droSec1_to_dm2_chain",
-      "name": "droSec1 to D. melanogaster (dm2) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["droSec1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "droSec1",
-        "queryAssembly": "dm2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm2.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "droSec1_to_dm3_chain",
-      "name": "droSec1 to D. melanogaster (dm3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["droSec1"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "droSec1",
-        "queryAssembly": "dm3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "droSec1_to_dm6_chain",
       "name": "droSec1 to D. melanogaster (dm6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["droSec1"],
+      "assemblyNames": ["droSec1", "dm6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "droSec1",
         "queryAssembly": "dm6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm6.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1063,12 +1044,59 @@
       "trackId": "droSec1_to_droSim2_chain",
       "name": "droSec1 to droSim2 liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["droSec1"],
+      "assemblyNames": ["droSec1", "droSim2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "droSec1",
         "queryAssembly": "droSim2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDroSim2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDroSim2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDroSim2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSec1_to_dm3_chain",
+      "name": "droSec1 to D. melanogaster (dm3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSec1", "dm3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droSec1",
+        "queryAssembly": "dm3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droSec1_to_dm2_chain",
+      "name": "droSec1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droSec1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droSec1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/droSec1/liftOver/droSec1ToDm2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

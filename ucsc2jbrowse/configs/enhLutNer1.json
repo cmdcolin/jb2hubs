@@ -56,28 +56,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "enhLutNer1_to_hg38_chain",
-      "name": "enhLutNer1 to Human (hg38) liftOver chain",
+      "trackId": "enhLutNer1_to_mm10_chain",
+      "name": "enhLutNer1 to Mouse (mm10) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["enhLutNer1"],
+      "assemblyNames": ["enhLutNer1", "mm10"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "enhLutNer1",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/enhLutNer1/liftOver/enhLutNer1ToHg38.over.chain.gz"
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/enhLutNer1/liftOver/enhLutNer1ToMm10.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/enhLutNer1/liftOver/enhLutNer1ToMm10.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "enhLutNer1_to_mm10_chain",
-      "name": "enhLutNer1 to Mouse (mm10) liftOver chain",
+      "trackId": "enhLutNer1_to_hg38_chain",
+      "name": "enhLutNer1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["enhLutNer1"],
+      "assemblyNames": ["enhLutNer1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "enhLutNer1",
-        "queryAssembly": "mm10",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/enhLutNer1/liftOver/enhLutNer1ToMm10.over.chain.gz"
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/enhLutNer1/liftOver/enhLutNer1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/enhLutNer1/liftOver/enhLutNer1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

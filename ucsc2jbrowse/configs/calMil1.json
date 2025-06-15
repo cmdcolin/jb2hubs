@@ -1800,12 +1800,19 @@
       "trackId": "calMil1_to_rn6_chain",
       "name": "calMil1 to Rat (rn6) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["calMil1"],
+      "assemblyNames": ["calMil1", "rn6"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "calMil1",
         "queryAssembly": "rn6",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/calMil1/liftOver/calMil1ToRn6.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/calMil1/liftOver/calMil1ToRn6.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/calMil1/liftOver/calMil1ToRn6.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

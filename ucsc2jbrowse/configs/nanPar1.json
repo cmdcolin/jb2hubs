@@ -1705,28 +1705,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "nanPar1_to_xenTro7_chain",
-      "name": "nanPar1 to X. tropicalis (xenTro7) liftOver chain",
+      "trackId": "nanPar1_to_xenTro9_chain",
+      "name": "nanPar1 to X. tropicalis (xenTro9) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["nanPar1"],
+      "assemblyNames": ["nanPar1", "xenTro9"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "nanPar1",
-        "queryAssembly": "xenTro7",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro7.over.chain.gz"
+        "queryAssembly": "xenTro9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro9.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "nanPar1_to_xenTro9_chain",
-      "name": "nanPar1 to X. tropicalis (xenTro9) liftOver chain",
+      "trackId": "nanPar1_to_xenTro7_chain",
+      "name": "nanPar1 to X. tropicalis (xenTro7) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["nanPar1"],
+      "assemblyNames": ["nanPar1", "xenTro7"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "nanPar1",
-        "queryAssembly": "xenTro9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro9.over.chain.gz"
+        "queryAssembly": "xenTro7",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro7.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/nanPar1/liftOver/nanPar1ToXenTro7.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

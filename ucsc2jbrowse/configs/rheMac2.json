@@ -743,145 +743,22 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_calJac1_chain",
-      "name": "rheMac2 to Marmoset (calJac1) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "calJac1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToCalJac1.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_calJac3_chain",
-      "name": "rheMac2 to Marmoset (calJac3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "calJac3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToCalJac3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_gorGor3_chain",
-      "name": "rheMac2 to Gorilla (gorGor3) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "gorGor3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToGorGor3.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_hg17_chain",
-      "name": "rheMac2 to Human (hg17) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "hg17",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg17.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_hg18_chain",
-      "name": "rheMac2 to Human (hg18) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "hg18",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg18.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_hg19_chain",
-      "name": "rheMac2 to Human (hg19) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "hg19",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg19.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_hg38_chain",
-      "name": "rheMac2 to Human (hg38) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg38.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
       "trackId": "rheMac2_to_macFas5_chain",
       "name": "rheMac2 to Crab-eating macaque (macFas5) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "macFas5"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
         "queryAssembly": "macFas5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMacFas5.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_mm8_chain",
-      "name": "rheMac2 to Mouse (mm8) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "mm8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMm8.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_mm9_chain",
-      "name": "rheMac2 to Mouse (mm9) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "mm9",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMm9.over.chain.gz"
-      }
-    },
-    {
-      "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_monDom5_chain",
-      "name": "rheMac2 to Opossum (monDom5) liftOver chain",
-      "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
-      "adapter": {
-        "type": "ChainAdapter",
-        "targetAssembly": "rheMac2",
-        "queryAssembly": "monDom5",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMonDom5.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMacFas5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMacFas5.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -889,38 +766,79 @@
       "trackId": "rheMac2_to_panTro2_chain",
       "name": "rheMac2 to Chimp (panTro2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "panTro2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
         "queryAssembly": "panTro2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPanTro2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPanTro2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPanTro2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_panTro3_chain",
-      "name": "rheMac2 to Chimp (panTro3) liftOver chain",
+      "trackId": "rheMac2_to_mm8_chain",
+      "name": "rheMac2 to Mouse (mm8) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "mm8"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
-        "queryAssembly": "panTro3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPanTro3.over.chain.gz"
+        "queryAssembly": "mm8",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMm8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMm8.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_papAnu2_chain",
-      "name": "rheMac2 to Baboon (papAnu2) liftOver chain",
+      "trackId": "rheMac2_to_hg17_chain",
+      "name": "rheMac2 to Human (hg17) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "hg17"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
-        "queryAssembly": "papAnu2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPapAnu2.over.chain.gz"
+        "queryAssembly": "hg17",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg17.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg17.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_mm9_chain",
+      "name": "rheMac2 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMm9.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMm9.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -928,12 +846,39 @@
       "trackId": "rheMac2_to_ponAbe2_chain",
       "name": "rheMac2 to Orangutan (ponAbe2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "ponAbe2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
         "queryAssembly": "ponAbe2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPonAbe2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPonAbe2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPonAbe2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_hg19_chain",
+      "name": "rheMac2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg19.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg19.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -941,25 +886,79 @@
       "trackId": "rheMac2_to_rheMac3_chain",
       "name": "rheMac2 to Rhesus (rheMac3) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "rheMac3"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
         "queryAssembly": "rheMac3",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRheMac3.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRheMac3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRheMac3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "rheMac2_to_rheMac8_chain",
-      "name": "rheMac2 to Rhesus (rheMac8) liftOver chain",
+      "trackId": "rheMac2_to_hg18_chain",
+      "name": "rheMac2 to Human (hg18) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "hg18"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
-        "queryAssembly": "rheMac8",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRheMac8.over.chain.gz"
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg18.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg18.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_papAnu2_chain",
+      "name": "rheMac2 to Baboon (papAnu2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "papAnu2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "papAnu2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPapAnu2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPapAnu2.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_gorGor3_chain",
+      "name": "rheMac2 to Gorilla (gorGor3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "gorGor3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "gorGor3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToGorGor3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToGorGor3.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -967,12 +966,139 @@
       "trackId": "rheMac2_to_rn4_chain",
       "name": "rheMac2 to Rat (rn4) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rheMac2"],
+      "assemblyNames": ["rheMac2", "rn4"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rheMac2",
         "queryAssembly": "rn4",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRn4.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRn4.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRn4.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_hg38_chain",
+      "name": "rheMac2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToHg38.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_calJac1_chain",
+      "name": "rheMac2 to Marmoset (calJac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "calJac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "calJac1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToCalJac1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToCalJac1.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_rheMac8_chain",
+      "name": "rheMac2 to Rhesus (rheMac8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "rheMac8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "rheMac8",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRheMac8.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToRheMac8.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_calJac3_chain",
+      "name": "rheMac2 to Marmoset (calJac3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "calJac3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "calJac3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToCalJac3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToCalJac3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_panTro3_chain",
+      "name": "rheMac2 to Chimp (panTro3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "panTro3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "panTro3",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPanTro3.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToPanTro3.over.chain.gz.csi"
+          }
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac2_to_monDom5_chain",
+      "name": "rheMac2 to Opossum (monDom5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["rheMac2", "monDom5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac2",
+        "queryAssembly": "monDom5",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMonDom5.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rheMac2/liftOver/rheMac2ToMonDom5.over.chain.gz.csi"
+          }
+        }
       }
     }
   ]

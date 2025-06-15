@@ -1611,28 +1611,42 @@
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "sacCer3_to_sacCer1_chain",
-      "name": "sacCer3 to S. cerevisiae (sacCer1) liftOver chain",
+      "trackId": "sacCer3_to_sacCer2_chain",
+      "name": "sacCer3 to S. cerevisiae (sacCer2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sacCer3"],
+      "assemblyNames": ["sacCer3", "sacCer2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sacCer3",
-        "queryAssembly": "sacCer1",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/liftOver/sacCer3ToSacCer1.over.chain.gz"
+        "queryAssembly": "sacCer2",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/liftOver/sacCer3ToSacCer2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/liftOver/sacCer3ToSacCer2.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
       "type": "SyntenyTrack",
-      "trackId": "sacCer3_to_sacCer2_chain",
-      "name": "sacCer3 to S. cerevisiae (sacCer2) liftOver chain",
+      "trackId": "sacCer3_to_sacCer1_chain",
+      "name": "sacCer3 to S. cerevisiae (sacCer1) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["sacCer3"],
+      "assemblyNames": ["sacCer3", "sacCer1"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "sacCer3",
-        "queryAssembly": "sacCer2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/liftOver/sacCer3ToSacCer2.over.chain.gz"
+        "queryAssembly": "sacCer1",
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/liftOver/sacCer3ToSacCer1.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/sacCer3/liftOver/sacCer3ToSacCer1.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],

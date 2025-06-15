@@ -1753,12 +1753,19 @@
       "trackId": "rhiRox1_to_hg38_chain",
       "name": "rhiRox1 to Human (hg38) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rhiRox1"],
+      "assemblyNames": ["rhiRox1", "hg38"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rhiRox1",
         "queryAssembly": "hg38",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rhiRox1/liftOver/rhiRox1ToHg38.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rhiRox1/liftOver/rhiRox1ToHg38.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rhiRox1/liftOver/rhiRox1ToHg38.over.chain.gz.csi"
+          }
+        }
       }
     },
     {
@@ -1766,12 +1773,19 @@
       "trackId": "rhiRox1_to_tarSyr2_chain",
       "name": "rhiRox1 to Tarsier (tarSyr2) liftOver chain",
       "category": ["Liftover"],
-      "assemblyNames": ["rhiRox1"],
+      "assemblyNames": ["rhiRox1", "tarSyr2"],
       "adapter": {
-        "type": "ChainAdapter",
+        "type": "PairwiseIndexedPAFAdapter",
         "targetAssembly": "rhiRox1",
         "queryAssembly": "tarSyr2",
-        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rhiRox1/liftOver/rhiRox1ToTarSyr2.over.chain.gz"
+        "pifGzLocation": {
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rhiRox1/liftOver/rhiRox1ToTarSyr2.over.chain.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/rhiRox1/liftOver/rhiRox1ToTarSyr2.over.chain.gz.csi"
+          }
+        }
       }
     }
   ],
