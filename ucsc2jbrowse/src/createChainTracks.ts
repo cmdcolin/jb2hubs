@@ -16,7 +16,7 @@ interface ChainTrack {
     targetAssembly: string
     queryAssembly: string
     pifGzLocation: { uri: string }
-    index: { location: { uri: string } }
+    index: { location: { uri: string }; indexType?: string }
   }
 }
 
@@ -229,7 +229,10 @@ async function processChainFile(
         targetAssembly: sourceAssembly,
         queryAssembly: targetAssembly,
         pifGzLocation: { uri: `liftOver/${filename2}.pif.gz` },
-        index: { location: { uri: `liftOver/${filename2}.pif.gz.csi` } },
+        index: {
+          location: { uri: `liftOver/${filename2}.pif.gz.csi` },
+          indexType: 'CSI',
+        },
       },
     }
   } catch (error) {
