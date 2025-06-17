@@ -81,5 +81,4 @@ export -f process_gene
 export -f process_gene_tracks
 export OUT
 
-echo "createGeneTracksForGoldenPath"
 parallel -j 24 --bar --will-cite process_gene ::: "$@"

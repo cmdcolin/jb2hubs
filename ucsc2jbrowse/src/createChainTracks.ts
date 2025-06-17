@@ -82,10 +82,10 @@ async function main() {
 
   // Update config file with chain tracks
   const config = readJSON<JBrowseConfig>(configFile)
-  config.tracks = [...config.tracks, ...chainTracks]
-  writeJSON(configFile, config)
-
-  console.log(`Added ${chainTracks.length} chain tracks to ${configFile}`)
+  writeJSON(configFile, {
+    ...config,
+    tracks: [...config.tracks, ...chainTracks],
+  })
 }
 
 /**
@@ -190,12 +190,12 @@ async function processChainFile(
       try {
         const allJson = readJSON<any>('../website/processedHubJson/all.json')
         const assembly = allJson.find(
-          (a: any) => a.accession === targetAssemblyOrig,
+          (a: any) => a?.accession === targetAssemblyOrig,
         )
         commonName = assembly?.commonName || ''
       } catch (error) {
         console.warn(
-          `Warning: Could not read assembly information for ${targetAssemblyOrig}`,
+          `Warning: Could not read assembly information for ${targetAssemblyOrig}: ${error}`,
         )
       }
     } else {

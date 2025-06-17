@@ -633,54 +633,6 @@
       "category": ["Variation and Repeats"]
     },
     {
-      "trackId": "hg38-decipher",
-      "name": "DECIPHER - DECIPHER CNVs",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/decipher/decipherCnv.bb"
-      },
-      "metadata": {
-        "tableName": "decipher",
-        "type": "bigBed 9 +",
-        "visibility": "pack",
-        "priority": "1",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "https://www.deciphergenomics.org/patient/$$",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/decipher/decipherCnv.bb",
-        "filter.size": "0",
-        "filterByRange.size": "on",
-        "filterLimits.size": "2:170487333",
-        "filterValues.pathogenicity": "Benign,Likely Benign,Likely Pathogenic,Pathogenic,Uncertain,Unknown",
-        "filterValues.variant_class": "Amplification,Copy-Number Gain,Deletion,Duplication,Duplication/Trip",
-        "group": "phenDis",
-        "html": "<H2>Description</H2>\n\n<div class=\"warn-note\" style=\"border: 2px solid #9e5900; padding: 5px 20px; background-color: #ffe9cc;\">\n <P><span style=\"font-weight: bold; color: #c70000;\">NOTE:</span><br> \n While the DECIPHER database is \n open to the public, users seeking information about a personal medical or\n genetic condition are urged to consult with a qualified physician for\n diagnosis and for answers to personal questions.\n </P>\n <P>Because the UCSC Genes mappings for CNVs are based on associations from\n RefSeq and UniProt, they are dependent on any interpretations from those\n sources.  Furthermore, because many DECIPHER records refer to multiple gene\n names, or syndromes not tightly mapped to individual genes, the associations\n in this track should be treated with skepticism and any conclusions\n based on them should be carefully scrutinized using independent\n resources.\n </P>\n <p><b>Data Display Agreement Notice</b><br>\n The CNV/SNV data are only available for display in the Browser, and not for bulk\n download.  Access to bulk data may be obtained directly from DECIPHER\n (<a href='https://www.deciphergenomics.org/about/data-sharing' target='_blank'\n >https://www.deciphergenomics.org/about/data-sharing</a>) and is subject to a\n Data Access Agreement, in which the user certifies that no attempt to\n identify individual patients will be undertaken.  The same restrictions\n apply to the public data displayed at UCSC in the UCSC Genome Browser;\n no one is authorized to attempt to identify patients by any means.\n </p>\n <p>These data are made available as soon as possible and may be a\n pre-publication release.  For information on the proper use of DECIPHER\n data, please see <a href='https://www.deciphergenomics.org/about/data-sharing'\n target='_blank'>https://www.deciphergenomics.org/about/data-sharing</a>.\n </p>\n <p>The DECIPHER consortium provides these data in good faith as a research\n tool, but without verifying the accuracy, clinical validity, or utility of\n the data.  The DECIPHER consortium makes no warranty, express or implied,\n nor assumes any legal liability or responsibility for any purpose for\n which the data are used.\n </p>\n</div>\n\n<P>\nThe \n<A HREF=\"https://decipher.sanger.ac.uk\" TARGET=_BLANK>DECIPHER</A>\ndatabase of submicroscopic chromosomal imbalance \ncollects clinical information about chromosomal \nmicrodeletions/duplications/insertions, translocations and inversions, \nand displays this information on the human genome map.\n<p>\nThe <b>CNVs and SNVs</b> tracks show genomic regions of reported cases and their \nassociated phenotype information.  All data have passed the strict\nconsent requirements of the DECIPHER project and are approved for\nunrestricted public release.  Clicking the Patient View ID link\nbrings up a more detailed informational page on the patient at the \nDECIPHER web site.</p>\n\n<p>\nThe <b>Population CNVs</b> track shows common copy-number variants (CNVs) and their\npopulation frequencies, lifted over from the hg19 assembly.</p>\n\n<H2>Display Conventions and Configuration</H2>\n<P>\nThe genomic locations of DECIPHER variants are labeled with the DECIPHER variant descriptions. \n<b>Mouseover</b> on items shows variant details, clinical interpretation, and associated conditions. \nFurther information on each variant is displayed on the details page by a click onto any variant. \n</p>\n\n<P>\nFor the <b>CNVs track</b>, the entries are colored by the <b>type of variant</b>:\n<ul>\n <li><b><font color=\"red\">red</font></b> for loss</li>\n <li><b><font color=\"blue\">blue</font></b> for gain</li>\n <li><b><font color=\"grey\">grey</font></b> for amplification</li>\n</ul>\n</P>\n\n<P>\nA light-to-dark color gradient indicates the <b>clinical significance</b> of each variant, with \nthe lightest shade being benign, to the darkest shade being pathogenic. Detailed information on the \nCNV color code is described <a href=\"https://genome.ucsc.edu/goldenPath/help/hgCnvColoring.html\">here</a>.\nItems can be filtered according to the size of the variant, variant type, and clinical significance \nusing the track <b>Configure</b> options.\n</P>\n \n<P>\nFor the <b>SNVs track</b>, the entries are colored according to the estimated <b>clinical significance</b> \nof the variant:\n<ul>\n <li><b><font color=\"black\">black</font></b> for likely or definitely pathogenic</li>\n <li><b><font color=\"#888\">dark grey</font></b> for uncertain or unknown</li>\n <li><b><font color=\"#c8c8c8\">light grey</font></b> for likely or definitely benign</li>\n </ul>\n</P>\n\n<p>\nFor the <b>Population CNVs track</b>, genomic variants are visually differentiated to facilitate quick and\nclear identification. Variants are colored according to their clinical significance and type:\n</P>\n<ul>\n  <li><font color=\"#FF0000\"><strong>Red</strong></font> - exclusively deletion site. (deletions)</li>\n  <li><font color=\"#0000FF\"><strong>Blue</strong></font> - exclusively duplication site. (duplication)</li>\n  <li><font color=\"#808080\"><strong>Grey</strong></font> - deletions and duplications site. (del/dup)</li>\n</ul>\n\n<P>\nThe Population CNVs track's <b>mouseover</b> tooltip provides the following information\nabout the data:\n</P>\n<ul>\n  <li><strong>Position:</strong> Specifies the chromosomal range of the CNV.</li>\n  <li><strong>Type of CNV:</strong> Indicates if the variation is a loss, gain, or\n      deletions/duplications(del/dup).</li>\n  <li><strong>Frequency of CNV:</strong> Reflects how often the CNV occurs in the sampled\n      population.</li>\n  <li><strong>Number of Observations:</strong> The count of times this CNV was observed in the\n      dataset.</li>\n  <li><strong>Sample Size of Study:</strong> The total number of samples examined.</li>\n</ul>\n\n<H2>Method</H2>\n<P>\nData provided by the DECIPHER project group are imported and processed\nto create a simple BED track to annotate the genomic regions associated\nwith individual patients.\n</P>\n\n\n<H2>Contact</H2>\n<P>\nFor more information on DECIPHER, please contact\n<A HREF=\"mailto:&#99;&#111;n&#116;&#97;c&#116;&#64;&#100;&#101;&#99;&#105;p&#104;&#101;&#114;&#103;&#101;&#110;&#111;&#109;&#105;c&#115;.\n&#111;&#114;g\">\n&#99;&#111;n&#116;&#97;c&#116;&#64;&#100;&#101;&#99;&#105;p&#104;&#101;&#114;&#103;&#101;&#110;&#111;&#109;&#105;c&#115;.\n&#111;&#114;g</A>\n</P>\n\n<h2>Data Access</h2>\n<p>\nThe DECIPHER data access and documentation can be found at\n<a href=\"https://www.deciphergenomics.org/about/downloads\" target=\"_blank\">DECIPHER Downloads</a>.\n</p>\n\n<H2>References</H2>\n<p>\nFirth HV, Richards SM, Bevan AP, Clayton S, Corpas M, Rajan D, Van Vooren S, Moreau Y, Pettett RM,\nCarter NP.\n<a href=\"https://www.cell.com/ajhg/abstract/S0002-9297(09)00107-4\" target=\"_blank\">\nDECIPHER: Database of Chromosomal Imbalance and Phenotype in Humans Using Ensembl Resources</a>.\n<em>Am J Hum Genet</em>. 2009 Apr;84(4):524-33.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/19344873\" target=\"_blank\">19344873</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2667985/\" target=\"_blank\">PMC2667985</a>\n</p>\n",
-        "itemRgb": "on",
-        "longLabel": "DECIPHER CNVs",
-        "mergeSpannedItems": "on",
-        "mouseOverField": "_mouseOvera",
-        "parent": "decipherContainer",
-        "searchIndex": "name",
-        "shortLabel": "DECIPHER CNVs",
-        "tableBrowser": "off knownCanonToDecipher knownToDecipher decipherRaw",
-        "track": "decipher",
-        "urlLabel": "Decipher Patient View:"
-      },
-      "description": "DECIPHER CNVs",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-dgvMerged",
       "name": "DGV Struct Var - DGV Struct Var",
       "type": "FeatureTrack",
@@ -906,43 +858,6 @@
       },
       "description": "gnomAD Predicted Loss of Function Constraint Metrics By Gene (LOEUF and pLI) v2.1.1",
       "category": ["Variation and Repeats"]
-    },
-    {
-      "trackId": "hg38-geneHancerRegElementsDoubleElite",
-      "name": "Reg Elem - GH Reg Elems (DE)",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerRegElementsDoubleElite.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerRegElementsDoubleElite",
-        "type": "bigBed 9 +",
-        "visibility": "1",
-        "priority": "1",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "http://www.genecards.org/Search/Keyword?queryString=$$",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerRegElementsDoubleElite.hg38.bb",
-        "longLabel": "Enhancers and promoters from GeneHancer (Double Elite)",
-        "parent": "ghGeneHancer on",
-        "shortLabel": "GH Reg Elems (DE)",
-        "subGroups": "set=a_ELITE view=a_GH",
-        "track": "geneHancerRegElementsDoubleElite",
-        "html": ""
-      },
-      "description": "Enhancers and promoters from GeneHancer (Double Elite)",
-      "category": ["Regulation"]
     },
     {
       "trackId": "hg38-gnomadGenomesVariantsV4_1",
@@ -1171,45 +1086,6 @@
       },
       "description": "JASPAR CORE 2024 - Predicted Transcription Factor Binding Sites",
       "category": ["Regulation"]
-    },
-    {
-      "trackId": "hg38-lovdShort",
-      "name": "LOVD Variants - LOVD Variants < 50 bp + ins",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/lovd/lovd.hg38.short.bb"
-      },
-      "metadata": {
-        "tableName": "lovdShort",
-        "type": "bigBed 4 +",
-        "visibility": "hide",
-        "priority": "1",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/lovd/lovd.hg38.short.bb",
-        "group": "phenDis",
-        "longLabel": "LOVD: Leiden Open Variation Database, short < 50 bp variants and insertions of any length",
-        "noScoreFilter": "on",
-        "parent": "lovdComp",
-        "shortLabel": "LOVD Variants < 50 bp + ins",
-        "track": "lovdShort",
-        "urls": "id=\"https://varcache.lovd.nl/redirect/$$\"",
-        "html": ""
-      },
-      "description": "LOVD: Leiden Open Variation Database, short < 50 bp variants and insertions of any length",
-      "category": ["Phenotypes, Variants, and Literature"]
     },
     {
       "trackId": "hg38-gnomADPextmean_proportion",
@@ -1781,50 +1657,6 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
-      "trackId": "hg38-spliceAIsnvs",
-      "name": "SpliceAI - SpliceAI SNVs",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/bbi/spliceAIsnvs.bb"
-      },
-      "metadata": {
-        "tableName": "spliceAIsnvs",
-        "type": "bigBed 9 +",
-        "visibility": "1",
-        "priority": "1",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/bbi/spliceAIsnvs.bb",
-        "filter.AIscore": "0.02",
-        "filterLabel.spliceType": "Splice type",
-        "filterLimits.AIscore": "0.02:1",
-        "filterValues.spliceType": "donor_gain|Donor gain,donor_loss|Donor loss,acceptor_gain|Acceptor gain,acceptor_loss|Acceptor loss",
-        "html": "<br><br>\n<b>Important</b>: The SpliceAI data on the UCSC Genome Browser is directly from \nIllumina (See <a href=\"#dataAccess\">Data Access</a> below). However, since SpliceAI refers to the\nalgorithm, and not the computed dataset, the data on the Broad server or other sources may have\nsome differences between them.\n</p>\n<h2>Description</h2>\n<p>\nSpliceAI is an <a href=\"https://github.com/Illumina/SpliceAI\" target=\"_blank\">open-source</a> deep\nlearning splicing prediction algorithm that can predict splicing alterations caused by DNA variations. \nSuch variants may activate nearby cryptic splice sites, leading to abnormal transcript isoforms.\nSpliceAI was developed at Illumina; a \n<a href=\"https://spliceailookup.broadinstitute.org\" target=\"_blank\">lookup tool</a> \nis provided by the Broad institute.\n</p>\n<h3>Why are some variants not scored by SpliceAI?</h3>\n<p>\nSpliceAI only annotates variants within genes defined by the gene\nannotation file. Additionally, SpliceAI does not annotate variants if they are close to chromosome\nends (5kb on either side), deletions of length greater than twice the input parameter -D, or\ninconsistent with the reference fasta file.\n</p>\n\n<h3>What are the differeneces between masked and unmasked tracks?</h3>\n<p>\nThe unmasked tracks include splicing changes corresponding to strengthening annotated splice sites\nand weakening unannotated splice sites, which are typically much less pathogenic than weakening\nannotated splice sites and strengthening unannotated splice sites. The delta scores of such splicing\nchanges are set to 0 in the masked files. We recommend using the unmasked tracks for alternative\nsplicing analysis and masked tracks for variant interpretation.\n</p>\n\n<h2>Display Conventions and Interpretation</h2>\n<p>\nVariants are colored according to Walker et al. 2023 splicing imact:\n</p>\n<ul>\n<li><b><font color=\"#FF8000\">Predicted impact on splicing: Score &gt;&#61; 0.2 </font></b> </li>\n<li><b><font color=\"#808080\">Not informative: Score &lt; 0.2 and &gt; 0.1 </font></b> </li>\n<li><b><font color=\"#0000FF\">No impact on splicing: Score &lt;&#61; 0.1 </font></b> </li>\n</ul>\n</p>\nMouseover on items shows the variant, gene name, type of change (donor gain/loss, acceptor\ngain/loss), location of affected cryptic splice, and spliceAI score. Clicking on any item brings up\na table with this information.\n</p>\n<p>\nThe scores range from 0 to 1 and can be interpreted as the \nprobability of the variant being splice-altering. In the paper, a detailed characterization is \nprovided for 0.2 (high recall), 0.5 (recommended), and 0.8 (high precision) cutoffs.</p>\n\n<h2>Methods</h2>\n<p>\nThe data were downloaded from <a \ntarget=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nThe spliceAI scores are represented in the VCF INFO field as \n<code style=\"background-color: lightgray;\">SpliceAI=G|OR4F5|0.01|0.00|0.00|0.00|-32|49|-40|-31</code> <br><br>\nHere, the pipe-separated fields contain \n<ul>\n  <li>ALT allele</li>\n  <li>Gene name</li>\n  <li>Acceptor gain score</li>\n  <li>Acceptor loss score</li>\n  <li>Donor gain score</li>\n  <li>Donor loss score</li>\n  <li>Relative location of affected cryptic acceptor</li>\n  <li>Relative location of affected acceptor</li>\n  <li>Relative location of affected cryptic donor</li>\n  <li>Relative location of affected donor</li>\n</ul>\n<p>\nSince most of the values are 0 or almost 0, we selected only those variants \nwith a score equal to or greater than 0.02.\n</p>\n<p>\nThe complete processing of this track can be found in the <a target=\"_blank\" \nhref=\"https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/scripts/spliceAI/spliceAI.py\">\nmakedoc</a>.\n</p>\n\n<a name=\"dataAccess\"></a>\n<h2>Data Access</h2>\nThese data are not available for download from the Genome Browser. \nThe raw data can be found directly on\n<a target=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nSee below for a copy of the license restrictions pertaining to these data.\n</p>\n\n<h2>License</h2>\n<p>\nFOR ACADEMIC AND NOT-FOR-PROFIT RESEARCH USE ONLY. The SpliceAI scores are \nmade available by Illumina only for academic or not-for-profit research only. \nBy accessing the SpliceAI data, you acknowledge and agree that you may only \nuse this data for your own personal academic or not-for-profit research only, \nand not for any other purposes. You may not use this data for any for-profit, \nclinical, or other commercial purpose without obtaining a commercial license \nfrom Illumina, Inc.\n</p>\n\n<h2>References</h2>\n<p>\nJaganathan K, Kyriazopoulou Panagiotopoulou S, McRae JF, Darbandi SF, Knowles D, Li YI, Kosmicki JA,\nArbelaez J, Cui W, Schwartz GB <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0092-8674(18)31629-5\" target=\"_blank\">\nPredicting Splicing from Primary Sequence with Deep Learning</a>.\n<em>Cell</em>. 2019 Jan 24;176(3):535-548.e24.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/30661751\" target=\"_blank\">30661751</a>\n</p>\n\n<p>\nWalker LC, Hoya M, Wiggins GAR, Lindy A, Vincent LM, Parsons MT, Canson DM, Bis-Brewer D, Cass A,\nTchourbanov A <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0002-9297(23)00203-3\" target=\"_blank\">\nUsing the ACMG/AMP framework to capture evidence related to predicted and observed impact on\nsplicing: Recommendations from the ClinGen SVI Splicing Subgroup</a>.\n<em>Am J Hum Genet</em>. 2023 Jul 6;110(7):1046-1067.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/37352859\" target=\"_blank\">37352859</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10357475/\" target=\"_blank\">PMC10357475</a>\n</p>\n",
-        "itemRgb": "on",
-        "longLabel": "SpliceAI SNVs (unmasked)",
-        "mouseOver": "<b>Change:</b> $name<br><b>Gene:</b> $gene<br><b>Type of change:</b> $spliceType<br><b>Affected splice location:</b> $relativePos<br><b>Score:</b> $AIscore",
-        "noScoreFilter": "on",
-        "parent": "spliceAI on",
-        "shortLabel": "SpliceAI SNVs",
-        "tableBrowser": "off",
-        "track": "spliceAIsnvs"
-      },
-      "description": "SpliceAI SNVs (unmasked)",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-unipAliSwissprot",
       "name": "UniProt - SwissProt Aln.",
       "type": "FeatureTrack",
@@ -1996,138 +1828,6 @@
       },
       "description": "Single-read mappability with 24-mers",
       "category": ["Mapping and Sequencing"]
-    },
-    {
-      "trackId": "hg38-spliceAIindels",
-      "name": "SpliceAI - SpliceAI indels",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/bbi/spliceAIindels.bb"
-      },
-      "metadata": {
-        "tableName": "spliceAIindels",
-        "type": "bigBed 9 +",
-        "visibility": "1",
-        "priority": "1.1",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/bbi/spliceAIindels.bb",
-        "filter.AIscore": "0.02",
-        "filterLabel.spliceType": "Splice type",
-        "filterLimits.AIscore": "0.02:1",
-        "filterValues.spliceType": "donor_gain|Donor gain,donor_loss|Donor loss,acceptor_gain|Acceptor gain,acceptor_loss|Acceptor loss",
-        "html": "<br><br>\n<b>Important</b>: The SpliceAI data on the UCSC Genome Browser is directly from \nIllumina (See <a href=\"#dataAccess\">Data Access</a> below). However, since SpliceAI refers to the\nalgorithm, and not the computed dataset, the data on the Broad server or other sources may have\nsome differences between them.\n</p>\n<h2>Description</h2>\n<p>\nSpliceAI is an <a href=\"https://github.com/Illumina/SpliceAI\" target=\"_blank\">open-source</a> deep\nlearning splicing prediction algorithm that can predict splicing alterations caused by DNA variations. \nSuch variants may activate nearby cryptic splice sites, leading to abnormal transcript isoforms.\nSpliceAI was developed at Illumina; a \n<a href=\"https://spliceailookup.broadinstitute.org\" target=\"_blank\">lookup tool</a> \nis provided by the Broad institute.\n</p>\n<h3>Why are some variants not scored by SpliceAI?</h3>\n<p>\nSpliceAI only annotates variants within genes defined by the gene\nannotation file. Additionally, SpliceAI does not annotate variants if they are close to chromosome\nends (5kb on either side), deletions of length greater than twice the input parameter -D, or\ninconsistent with the reference fasta file.\n</p>\n\n<h3>What are the differeneces between masked and unmasked tracks?</h3>\n<p>\nThe unmasked tracks include splicing changes corresponding to strengthening annotated splice sites\nand weakening unannotated splice sites, which are typically much less pathogenic than weakening\nannotated splice sites and strengthening unannotated splice sites. The delta scores of such splicing\nchanges are set to 0 in the masked files. We recommend using the unmasked tracks for alternative\nsplicing analysis and masked tracks for variant interpretation.\n</p>\n\n<h2>Display Conventions and Interpretation</h2>\n<p>\nVariants are colored according to Walker et al. 2023 splicing imact:\n</p>\n<ul>\n<li><b><font color=\"#FF8000\">Predicted impact on splicing: Score &gt;&#61; 0.2 </font></b> </li>\n<li><b><font color=\"#808080\">Not informative: Score &lt; 0.2 and &gt; 0.1 </font></b> </li>\n<li><b><font color=\"#0000FF\">No impact on splicing: Score &lt;&#61; 0.1 </font></b> </li>\n</ul>\n</p>\nMouseover on items shows the variant, gene name, type of change (donor gain/loss, acceptor\ngain/loss), location of affected cryptic splice, and spliceAI score. Clicking on any item brings up\na table with this information.\n</p>\n<p>\nThe scores range from 0 to 1 and can be interpreted as the \nprobability of the variant being splice-altering. In the paper, a detailed characterization is \nprovided for 0.2 (high recall), 0.5 (recommended), and 0.8 (high precision) cutoffs.</p>\n\n<h2>Methods</h2>\n<p>\nThe data were downloaded from <a \ntarget=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nThe spliceAI scores are represented in the VCF INFO field as \n<code style=\"background-color: lightgray;\">SpliceAI=G|OR4F5|0.01|0.00|0.00|0.00|-32|49|-40|-31</code> <br><br>\nHere, the pipe-separated fields contain \n<ul>\n  <li>ALT allele</li>\n  <li>Gene name</li>\n  <li>Acceptor gain score</li>\n  <li>Acceptor loss score</li>\n  <li>Donor gain score</li>\n  <li>Donor loss score</li>\n  <li>Relative location of affected cryptic acceptor</li>\n  <li>Relative location of affected acceptor</li>\n  <li>Relative location of affected cryptic donor</li>\n  <li>Relative location of affected donor</li>\n</ul>\n<p>\nSince most of the values are 0 or almost 0, we selected only those variants \nwith a score equal to or greater than 0.02.\n</p>\n<p>\nThe complete processing of this track can be found in the <a target=\"_blank\" \nhref=\"https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/scripts/spliceAI/spliceAI.py\">\nmakedoc</a>.\n</p>\n\n<a name=\"dataAccess\"></a>\n<h2>Data Access</h2>\nThese data are not available for download from the Genome Browser. \nThe raw data can be found directly on\n<a target=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nSee below for a copy of the license restrictions pertaining to these data.\n</p>\n\n<h2>License</h2>\n<p>\nFOR ACADEMIC AND NOT-FOR-PROFIT RESEARCH USE ONLY. The SpliceAI scores are \nmade available by Illumina only for academic or not-for-profit research only. \nBy accessing the SpliceAI data, you acknowledge and agree that you may only \nuse this data for your own personal academic or not-for-profit research only, \nand not for any other purposes. You may not use this data for any for-profit, \nclinical, or other commercial purpose without obtaining a commercial license \nfrom Illumina, Inc.\n</p>\n\n<h2>References</h2>\n<p>\nJaganathan K, Kyriazopoulou Panagiotopoulou S, McRae JF, Darbandi SF, Knowles D, Li YI, Kosmicki JA,\nArbelaez J, Cui W, Schwartz GB <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0092-8674(18)31629-5\" target=\"_blank\">\nPredicting Splicing from Primary Sequence with Deep Learning</a>.\n<em>Cell</em>. 2019 Jan 24;176(3):535-548.e24.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/30661751\" target=\"_blank\">30661751</a>\n</p>\n\n<p>\nWalker LC, Hoya M, Wiggins GAR, Lindy A, Vincent LM, Parsons MT, Canson DM, Bis-Brewer D, Cass A,\nTchourbanov A <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0002-9297(23)00203-3\" target=\"_blank\">\nUsing the ACMG/AMP framework to capture evidence related to predicted and observed impact on\nsplicing: Recommendations from the ClinGen SVI Splicing Subgroup</a>.\n<em>Am J Hum Genet</em>. 2023 Jul 6;110(7):1046-1067.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/37352859\" target=\"_blank\">37352859</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10357475/\" target=\"_blank\">PMC10357475</a>\n</p>\n",
-        "itemRgb": "on",
-        "longLabel": "SpliceAI Indels (unmasked)",
-        "mouseOver": "<b>Change:</b> $name<br><b>Gene:</b> $gene<br><b>Type of change:</b> $spliceType<br><b>Affected splice location:</b> $relativePos<br><b>Score:</b> $AIscore",
-        "noScoreFilter": "on",
-        "parent": "spliceAI on",
-        "shortLabel": "SpliceAI indels",
-        "tableBrowser": "off",
-        "track": "spliceAIindels"
-      },
-      "description": "SpliceAI Indels (unmasked)",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-spliceAIsnvsMasked",
-      "name": "SpliceAI - SpliceAI SNVs (masked)",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/bbi/spliceAIsnvsMasked.bb"
-      },
-      "metadata": {
-        "tableName": "spliceAIsnvsMasked",
-        "type": "bigBed 9 +",
-        "visibility": "1",
-        "priority": "1.2",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/bbi/spliceAIsnvsMasked.bb",
-        "filter.AIscore": "0.02",
-        "filterLabel.spliceType": "Splice type",
-        "filterLimits.AIscore": "0.02:1",
-        "filterValues.spliceType": "donor_gain|Donor gain,donor_loss|Donor loss,acceptor_gain|Acceptor gain,acceptor_loss|Acceptor loss",
-        "html": "<br><br>\n<b>Important</b>: The SpliceAI data on the UCSC Genome Browser is directly from \nIllumina (See <a href=\"#dataAccess\">Data Access</a> below). However, since SpliceAI refers to the\nalgorithm, and not the computed dataset, the data on the Broad server or other sources may have\nsome differences between them.\n</p>\n<h2>Description</h2>\n<p>\nSpliceAI is an <a href=\"https://github.com/Illumina/SpliceAI\" target=\"_blank\">open-source</a> deep\nlearning splicing prediction algorithm that can predict splicing alterations caused by DNA variations. \nSuch variants may activate nearby cryptic splice sites, leading to abnormal transcript isoforms.\nSpliceAI was developed at Illumina; a \n<a href=\"https://spliceailookup.broadinstitute.org\" target=\"_blank\">lookup tool</a> \nis provided by the Broad institute.\n</p>\n<h3>Why are some variants not scored by SpliceAI?</h3>\n<p>\nSpliceAI only annotates variants within genes defined by the gene\nannotation file. Additionally, SpliceAI does not annotate variants if they are close to chromosome\nends (5kb on either side), deletions of length greater than twice the input parameter -D, or\ninconsistent with the reference fasta file.\n</p>\n\n<h3>What are the differeneces between masked and unmasked tracks?</h3>\n<p>\nThe unmasked tracks include splicing changes corresponding to strengthening annotated splice sites\nand weakening unannotated splice sites, which are typically much less pathogenic than weakening\nannotated splice sites and strengthening unannotated splice sites. The delta scores of such splicing\nchanges are set to 0 in the masked files. We recommend using the unmasked tracks for alternative\nsplicing analysis and masked tracks for variant interpretation.\n</p>\n\n<h2>Display Conventions and Interpretation</h2>\n<p>\nVariants are colored according to Walker et al. 2023 splicing imact:\n</p>\n<ul>\n<li><b><font color=\"#FF8000\">Predicted impact on splicing: Score &gt;&#61; 0.2 </font></b> </li>\n<li><b><font color=\"#808080\">Not informative: Score &lt; 0.2 and &gt; 0.1 </font></b> </li>\n<li><b><font color=\"#0000FF\">No impact on splicing: Score &lt;&#61; 0.1 </font></b> </li>\n</ul>\n</p>\nMouseover on items shows the variant, gene name, type of change (donor gain/loss, acceptor\ngain/loss), location of affected cryptic splice, and spliceAI score. Clicking on any item brings up\na table with this information.\n</p>\n<p>\nThe scores range from 0 to 1 and can be interpreted as the \nprobability of the variant being splice-altering. In the paper, a detailed characterization is \nprovided for 0.2 (high recall), 0.5 (recommended), and 0.8 (high precision) cutoffs.</p>\n\n<h2>Methods</h2>\n<p>\nThe data were downloaded from <a \ntarget=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nThe spliceAI scores are represented in the VCF INFO field as \n<code style=\"background-color: lightgray;\">SpliceAI=G|OR4F5|0.01|0.00|0.00|0.00|-32|49|-40|-31</code> <br><br>\nHere, the pipe-separated fields contain \n<ul>\n  <li>ALT allele</li>\n  <li>Gene name</li>\n  <li>Acceptor gain score</li>\n  <li>Acceptor loss score</li>\n  <li>Donor gain score</li>\n  <li>Donor loss score</li>\n  <li>Relative location of affected cryptic acceptor</li>\n  <li>Relative location of affected acceptor</li>\n  <li>Relative location of affected cryptic donor</li>\n  <li>Relative location of affected donor</li>\n</ul>\n<p>\nSince most of the values are 0 or almost 0, we selected only those variants \nwith a score equal to or greater than 0.02.\n</p>\n<p>\nThe complete processing of this track can be found in the <a target=\"_blank\" \nhref=\"https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/scripts/spliceAI/spliceAI.py\">\nmakedoc</a>.\n</p>\n\n<a name=\"dataAccess\"></a>\n<h2>Data Access</h2>\nThese data are not available for download from the Genome Browser. \nThe raw data can be found directly on\n<a target=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nSee below for a copy of the license restrictions pertaining to these data.\n</p>\n\n<h2>License</h2>\n<p>\nFOR ACADEMIC AND NOT-FOR-PROFIT RESEARCH USE ONLY. The SpliceAI scores are \nmade available by Illumina only for academic or not-for-profit research only. \nBy accessing the SpliceAI data, you acknowledge and agree that you may only \nuse this data for your own personal academic or not-for-profit research only, \nand not for any other purposes. You may not use this data for any for-profit, \nclinical, or other commercial purpose without obtaining a commercial license \nfrom Illumina, Inc.\n</p>\n\n<h2>References</h2>\n<p>\nJaganathan K, Kyriazopoulou Panagiotopoulou S, McRae JF, Darbandi SF, Knowles D, Li YI, Kosmicki JA,\nArbelaez J, Cui W, Schwartz GB <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0092-8674(18)31629-5\" target=\"_blank\">\nPredicting Splicing from Primary Sequence with Deep Learning</a>.\n<em>Cell</em>. 2019 Jan 24;176(3):535-548.e24.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/30661751\" target=\"_blank\">30661751</a>\n</p>\n\n<p>\nWalker LC, Hoya M, Wiggins GAR, Lindy A, Vincent LM, Parsons MT, Canson DM, Bis-Brewer D, Cass A,\nTchourbanov A <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0002-9297(23)00203-3\" target=\"_blank\">\nUsing the ACMG/AMP framework to capture evidence related to predicted and observed impact on\nsplicing: Recommendations from the ClinGen SVI Splicing Subgroup</a>.\n<em>Am J Hum Genet</em>. 2023 Jul 6;110(7):1046-1067.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/37352859\" target=\"_blank\">37352859</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10357475/\" target=\"_blank\">PMC10357475</a>\n</p>\n",
-        "itemRgb": "on",
-        "longLabel": "SpliceAI SNVs (masked)",
-        "mouseOver": "<b>Change:</b> $name<br><b>Gene:</b> $gene<br><b>Type of change:</b> $spliceType<br><b>Affected splice location:</b> $relativePos<br><b>Score:</b> $AIscore",
-        "noScoreFilter": "on",
-        "parent": "spliceAI off",
-        "shortLabel": "SpliceAI SNVs (masked)",
-        "tableBrowser": "off",
-        "track": "spliceAIsnvsMasked"
-      },
-      "description": "SpliceAI SNVs (masked)",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-spliceAIindelsMasked",
-      "name": "SpliceAI - SpliceAI indels (masked)",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/bbi/spliceAIindelsMasked.bb"
-      },
-      "metadata": {
-        "tableName": "spliceAIindelsMasked",
-        "type": "bigBed 9 +",
-        "visibility": "1",
-        "priority": "1.3",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/bbi/spliceAIindelsMasked.bb",
-        "filter.AIscore": "0.02",
-        "filterLabel.spliceType": "Splice type",
-        "filterLimits.AIscore": "0.02:1",
-        "filterValues.spliceType": "donor_gain|Donor gain,donor_loss|Donor loss,acceptor_gain|Acceptor gain,acceptor_loss|Acceptor loss",
-        "html": "<br><br>\n<b>Important</b>: The SpliceAI data on the UCSC Genome Browser is directly from \nIllumina (See <a href=\"#dataAccess\">Data Access</a> below). However, since SpliceAI refers to the\nalgorithm, and not the computed dataset, the data on the Broad server or other sources may have\nsome differences between them.\n</p>\n<h2>Description</h2>\n<p>\nSpliceAI is an <a href=\"https://github.com/Illumina/SpliceAI\" target=\"_blank\">open-source</a> deep\nlearning splicing prediction algorithm that can predict splicing alterations caused by DNA variations. \nSuch variants may activate nearby cryptic splice sites, leading to abnormal transcript isoforms.\nSpliceAI was developed at Illumina; a \n<a href=\"https://spliceailookup.broadinstitute.org\" target=\"_blank\">lookup tool</a> \nis provided by the Broad institute.\n</p>\n<h3>Why are some variants not scored by SpliceAI?</h3>\n<p>\nSpliceAI only annotates variants within genes defined by the gene\nannotation file. Additionally, SpliceAI does not annotate variants if they are close to chromosome\nends (5kb on either side), deletions of length greater than twice the input parameter -D, or\ninconsistent with the reference fasta file.\n</p>\n\n<h3>What are the differeneces between masked and unmasked tracks?</h3>\n<p>\nThe unmasked tracks include splicing changes corresponding to strengthening annotated splice sites\nand weakening unannotated splice sites, which are typically much less pathogenic than weakening\nannotated splice sites and strengthening unannotated splice sites. The delta scores of such splicing\nchanges are set to 0 in the masked files. We recommend using the unmasked tracks for alternative\nsplicing analysis and masked tracks for variant interpretation.\n</p>\n\n<h2>Display Conventions and Interpretation</h2>\n<p>\nVariants are colored according to Walker et al. 2023 splicing imact:\n</p>\n<ul>\n<li><b><font color=\"#FF8000\">Predicted impact on splicing: Score &gt;&#61; 0.2 </font></b> </li>\n<li><b><font color=\"#808080\">Not informative: Score &lt; 0.2 and &gt; 0.1 </font></b> </li>\n<li><b><font color=\"#0000FF\">No impact on splicing: Score &lt;&#61; 0.1 </font></b> </li>\n</ul>\n</p>\nMouseover on items shows the variant, gene name, type of change (donor gain/loss, acceptor\ngain/loss), location of affected cryptic splice, and spliceAI score. Clicking on any item brings up\na table with this information.\n</p>\n<p>\nThe scores range from 0 to 1 and can be interpreted as the \nprobability of the variant being splice-altering. In the paper, a detailed characterization is \nprovided for 0.2 (high recall), 0.5 (recommended), and 0.8 (high precision) cutoffs.</p>\n\n<h2>Methods</h2>\n<p>\nThe data were downloaded from <a \ntarget=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nThe spliceAI scores are represented in the VCF INFO field as \n<code style=\"background-color: lightgray;\">SpliceAI=G|OR4F5|0.01|0.00|0.00|0.00|-32|49|-40|-31</code> <br><br>\nHere, the pipe-separated fields contain \n<ul>\n  <li>ALT allele</li>\n  <li>Gene name</li>\n  <li>Acceptor gain score</li>\n  <li>Acceptor loss score</li>\n  <li>Donor gain score</li>\n  <li>Donor loss score</li>\n  <li>Relative location of affected cryptic acceptor</li>\n  <li>Relative location of affected acceptor</li>\n  <li>Relative location of affected cryptic donor</li>\n  <li>Relative location of affected donor</li>\n</ul>\n<p>\nSince most of the values are 0 or almost 0, we selected only those variants \nwith a score equal to or greater than 0.02.\n</p>\n<p>\nThe complete processing of this track can be found in the <a target=\"_blank\" \nhref=\"https://github.com/ucscGenomeBrowser/kent/blob/master/src/hg/makeDb/scripts/spliceAI/spliceAI.py\">\nmakedoc</a>.\n</p>\n\n<a name=\"dataAccess\"></a>\n<h2>Data Access</h2>\nThese data are not available for download from the Genome Browser. \nThe raw data can be found directly on\n<a target=\"_blank\" href=\"https://basespace.illumina.com/s/otSPW8hnhaZR\">Illumina</a>. \nSee below for a copy of the license restrictions pertaining to these data.\n</p>\n\n<h2>License</h2>\n<p>\nFOR ACADEMIC AND NOT-FOR-PROFIT RESEARCH USE ONLY. The SpliceAI scores are \nmade available by Illumina only for academic or not-for-profit research only. \nBy accessing the SpliceAI data, you acknowledge and agree that you may only \nuse this data for your own personal academic or not-for-profit research only, \nand not for any other purposes. You may not use this data for any for-profit, \nclinical, or other commercial purpose without obtaining a commercial license \nfrom Illumina, Inc.\n</p>\n\n<h2>References</h2>\n<p>\nJaganathan K, Kyriazopoulou Panagiotopoulou S, McRae JF, Darbandi SF, Knowles D, Li YI, Kosmicki JA,\nArbelaez J, Cui W, Schwartz GB <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0092-8674(18)31629-5\" target=\"_blank\">\nPredicting Splicing from Primary Sequence with Deep Learning</a>.\n<em>Cell</em>. 2019 Jan 24;176(3):535-548.e24.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/30661751\" target=\"_blank\">30661751</a>\n</p>\n\n<p>\nWalker LC, Hoya M, Wiggins GAR, Lindy A, Vincent LM, Parsons MT, Canson DM, Bis-Brewer D, Cass A,\nTchourbanov A <em>et al</em>.\n<a href=\"https://linkinghub.elsevier.com/retrieve/pii/S0002-9297(23)00203-3\" target=\"_blank\">\nUsing the ACMG/AMP framework to capture evidence related to predicted and observed impact on\nsplicing: Recommendations from the ClinGen SVI Splicing Subgroup</a>.\n<em>Am J Hum Genet</em>. 2023 Jul 6;110(7):1046-1067.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/37352859\" target=\"_blank\">37352859</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10357475/\" target=\"_blank\">PMC10357475</a>\n</p>\n",
-        "itemRgb": "on",
-        "longLabel": "SpliceAI Indels (masked)",
-        "mouseOver": "<b>Change:</b> $name<br><b>Gene:</b> $gene<br><b>Type of change:</b> $spliceType<br><b>Affected splice location:</b> $relativePos<br><b>Score:</b> $AIscore",
-        "noScoreFilter": "on",
-        "parent": "spliceAI off",
-        "shortLabel": "SpliceAI indels (masked)",
-        "tableBrowser": "off",
-        "track": "spliceAIindelsMasked"
-      },
-      "description": "SpliceAI Indels (masked)",
-      "category": ["Phenotypes, Variants, and Literature"]
     },
     {
       "trackId": "hg38-knownGeneV47",
@@ -2811,43 +2511,6 @@
       "category": ["Variation and Repeats"]
     },
     {
-      "trackId": "hg38-geneHancerGenesDoubleElite",
-      "name": "Gene TSS - GH genes TSS (DE)",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerGenesTssDoubleElite.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerGenesDoubleElite",
-        "type": "bigBed 9",
-        "visibility": "3",
-        "priority": "2",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "http://www.genecards.org/cgi-bin/carddisp.pl?gene=$$",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerGenesTssDoubleElite.hg38.bb",
-        "longLabel": "GeneCards genes TSS (Double Elite)",
-        "parent": "ghGeneTss on",
-        "shortLabel": "GH genes TSS (DE)",
-        "subGroups": "set=a_ELITE view=b_TSS",
-        "track": "geneHancerGenesDoubleElite",
-        "html": ""
-      },
-      "description": "GeneCards genes TSS (Double Elite)",
-      "category": ["Regulation"]
-    },
-    {
       "trackId": "hg38-gnomadExomesVariantsV4_1",
       "name": "gnomAD v4.1 - gnomAD v4.1 Exomes",
       "type": "FeatureTrack",
@@ -3144,46 +2807,6 @@
       },
       "description": "JASPAR CORE 2022 - Predicted Transcription Factor Binding Sites",
       "category": ["Regulation"]
-    },
-    {
-      "trackId": "hg38-lovdLong",
-      "name": "LOVD Variants - LOVD Variants >= 50 bp",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/lovd/lovd.hg38.long.bb"
-      },
-      "metadata": {
-        "tableName": "lovdLong",
-        "type": "bigBed 9 +",
-        "visibility": "hide",
-        "priority": "2",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/lovd/lovd.hg38.long.bb",
-        "group": "phenDis",
-        "longLabel": "LOVD: Leiden Open Variation Database Public Variants, long >= 50 bp variants",
-        "mergeSpannedItems": "on",
-        "noScoreFilter": "on",
-        "parent": "lovdComp",
-        "shortLabel": "LOVD Variants >= 50 bp",
-        "track": "lovdLong",
-        "urls": "id=\"https://varcache.lovd.nl/redirect/$$\"",
-        "html": ""
-      },
-      "description": "LOVD: Leiden Open Variation Database Public Variants, long >= 50 bp variants",
-      "category": ["Phenotypes, Variants, and Literature"]
     },
     {
       "trackId": "hg38-alllowmapandsegdupregions",
@@ -4367,47 +3990,6 @@
       "category": ["Variation and Repeats"]
     },
     {
-      "trackId": "hg38-decipherPopulation",
-      "name": "DECIPHER - DECIPHER Population CNVs",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/decipher/population_cnv.bb"
-      },
-      "metadata": {
-        "tableName": "decipherPopulation",
-        "type": "bigBed 9 +",
-        "visibility": "pack",
-        "priority": "3",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/decipher/population_cnv.bb",
-        "filter.sample_size": "0",
-        "filterValues.type": "loss,gain,del/dup",
-        "html": "<H2>Description</H2>\n\n<div class=\"warn-note\" style=\"border: 2px solid #9e5900; padding: 5px 20px; background-color: #ffe9cc;\">\n <P><span style=\"font-weight: bold; color: #c70000;\">NOTE:</span><br> \n While the DECIPHER database is \n open to the public, users seeking information about a personal medical or\n genetic condition are urged to consult with a qualified physician for\n diagnosis and for answers to personal questions.\n </P>\n <P>Because the UCSC Genes mappings for CNVs are based on associations from\n RefSeq and UniProt, they are dependent on any interpretations from those\n sources.  Furthermore, because many DECIPHER records refer to multiple gene\n names, or syndromes not tightly mapped to individual genes, the associations\n in this track should be treated with skepticism and any conclusions\n based on them should be carefully scrutinized using independent\n resources.\n </P>\n <p><b>Data Display Agreement Notice</b><br>\n The CNV/SNV data are only available for display in the Browser, and not for bulk\n download.  Access to bulk data may be obtained directly from DECIPHER\n (<a href='https://www.deciphergenomics.org/about/data-sharing' target='_blank'\n >https://www.deciphergenomics.org/about/data-sharing</a>) and is subject to a\n Data Access Agreement, in which the user certifies that no attempt to\n identify individual patients will be undertaken.  The same restrictions\n apply to the public data displayed at UCSC in the UCSC Genome Browser;\n no one is authorized to attempt to identify patients by any means.\n </p>\n <p>These data are made available as soon as possible and may be a\n pre-publication release.  For information on the proper use of DECIPHER\n data, please see <a href='https://www.deciphergenomics.org/about/data-sharing'\n target='_blank'>https://www.deciphergenomics.org/about/data-sharing</a>.\n </p>\n <p>The DECIPHER consortium provides these data in good faith as a research\n tool, but without verifying the accuracy, clinical validity, or utility of\n the data.  The DECIPHER consortium makes no warranty, express or implied,\n nor assumes any legal liability or responsibility for any purpose for\n which the data are used.\n </p>\n</div>\n\n<P>\nThe \n<A HREF=\"https://decipher.sanger.ac.uk\" TARGET=_BLANK>DECIPHER</A>\ndatabase of submicroscopic chromosomal imbalance \ncollects clinical information about chromosomal \nmicrodeletions/duplications/insertions, translocations and inversions, \nand displays this information on the human genome map.\n<p>\nThe <b>CNVs and SNVs</b> tracks show genomic regions of reported cases and their \nassociated phenotype information.  All data have passed the strict\nconsent requirements of the DECIPHER project and are approved for\nunrestricted public release.  Clicking the Patient View ID link\nbrings up a more detailed informational page on the patient at the \nDECIPHER web site.</p>\n\n<p>\nThe <b>Population CNVs</b> track shows common copy-number variants (CNVs) and their\npopulation frequencies, lifted over from the hg19 assembly.</p>\n\n<H2>Display Conventions and Configuration</H2>\n<P>\nThe genomic locations of DECIPHER variants are labeled with the DECIPHER variant descriptions. \n<b>Mouseover</b> on items shows variant details, clinical interpretation, and associated conditions. \nFurther information on each variant is displayed on the details page by a click onto any variant. \n</p>\n\n<P>\nFor the <b>CNVs track</b>, the entries are colored by the <b>type of variant</b>:\n<ul>\n <li><b><font color=\"red\">red</font></b> for loss</li>\n <li><b><font color=\"blue\">blue</font></b> for gain</li>\n <li><b><font color=\"grey\">grey</font></b> for amplification</li>\n</ul>\n</P>\n\n<P>\nA light-to-dark color gradient indicates the <b>clinical significance</b> of each variant, with \nthe lightest shade being benign, to the darkest shade being pathogenic. Detailed information on the \nCNV color code is described <a href=\"https://genome.ucsc.edu/goldenPath/help/hgCnvColoring.html\">here</a>.\nItems can be filtered according to the size of the variant, variant type, and clinical significance \nusing the track <b>Configure</b> options.\n</P>\n \n<P>\nFor the <b>SNVs track</b>, the entries are colored according to the estimated <b>clinical significance</b> \nof the variant:\n<ul>\n <li><b><font color=\"black\">black</font></b> for likely or definitely pathogenic</li>\n <li><b><font color=\"#888\">dark grey</font></b> for uncertain or unknown</li>\n <li><b><font color=\"#c8c8c8\">light grey</font></b> for likely or definitely benign</li>\n </ul>\n</P>\n\n<p>\nFor the <b>Population CNVs track</b>, genomic variants are visually differentiated to facilitate quick and\nclear identification. Variants are colored according to their clinical significance and type:\n</P>\n<ul>\n  <li><font color=\"#FF0000\"><strong>Red</strong></font> - exclusively deletion site. (deletions)</li>\n  <li><font color=\"#0000FF\"><strong>Blue</strong></font> - exclusively duplication site. (duplication)</li>\n  <li><font color=\"#808080\"><strong>Grey</strong></font> - deletions and duplications site. (del/dup)</li>\n</ul>\n\n<P>\nThe Population CNVs track's <b>mouseover</b> tooltip provides the following information\nabout the data:\n</P>\n<ul>\n  <li><strong>Position:</strong> Specifies the chromosomal range of the CNV.</li>\n  <li><strong>Type of CNV:</strong> Indicates if the variation is a loss, gain, or\n      deletions/duplications(del/dup).</li>\n  <li><strong>Frequency of CNV:</strong> Reflects how often the CNV occurs in the sampled\n      population.</li>\n  <li><strong>Number of Observations:</strong> The count of times this CNV was observed in the\n      dataset.</li>\n  <li><strong>Sample Size of Study:</strong> The total number of samples examined.</li>\n</ul>\n\n<H2>Method</H2>\n<P>\nData provided by the DECIPHER project group are imported and processed\nto create a simple BED track to annotate the genomic regions associated\nwith individual patients.\n</P>\n\n\n<H2>Contact</H2>\n<P>\nFor more information on DECIPHER, please contact\n<A HREF=\"mailto:&#99;&#111;n&#116;&#97;c&#116;&#64;&#100;&#101;&#99;&#105;p&#104;&#101;&#114;&#103;&#101;&#110;&#111;&#109;&#105;c&#115;.\n&#111;&#114;g\">\n&#99;&#111;n&#116;&#97;c&#116;&#64;&#100;&#101;&#99;&#105;p&#104;&#101;&#114;&#103;&#101;&#110;&#111;&#109;&#105;c&#115;.\n&#111;&#114;g</A>\n</P>\n\n<h2>Data Access</h2>\n<p>\nThe DECIPHER data access and documentation can be found at\n<a href=\"https://www.deciphergenomics.org/about/downloads\" target=\"_blank\">DECIPHER Downloads</a>.\n</p>\n\n<H2>References</H2>\n<p>\nFirth HV, Richards SM, Bevan AP, Clayton S, Corpas M, Rajan D, Van Vooren S, Moreau Y, Pettett RM,\nCarter NP.\n<a href=\"https://www.cell.com/ajhg/abstract/S0002-9297(09)00107-4\" target=\"_blank\">\nDECIPHER: Database of Chromosomal Imbalance and Phenotype in Humans Using Ensembl Resources</a>.\n<em>Am J Hum Genet</em>. 2009 Apr;84(4):524-33.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/19344873\" target=\"_blank\">19344873</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2667985/\" target=\"_blank\">PMC2667985</a>\n</p>\n",
-        "longLabel": "DECIPHER: Population CNVs",
-        "mouseOver": "<b>Position</b>: $chrom:${chromStart}-${chromEnd}<br> <b>Type of CNV</b>: $type<br> <b>Frequency of CNV</b>: $frequency<br> <b>Number of Observations</b>: $observations<br> <b>Sample Size of Study</b>: $sample_size<br>",
-        "noScoreFilter": "on",
-        "parent": "decipherContainer",
-        "searchIndex": "name",
-        "shortLabel": "DECIPHER Population CNVs",
-        "track": "decipherPopulation"
-      },
-      "description": "DECIPHER: Population CNVs",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-knownGeneV45",
       "name": "GENCODE Archive - GENCODE V45",
       "type": "FeatureTrack",
@@ -4461,44 +4043,6 @@
         "Uncommon or Specialized tracks",
         "Genes and Gene Predictions"
       ]
-    },
-    {
-      "trackId": "hg38-geneHancerInteractionsDoubleElite",
-      "name": "Interactions - GH Interactions (DE)",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerInteractionsDoubleElite.v2.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerInteractionsDoubleElite",
-        "type": "bigInteract",
-        "visibility": "2",
-        "priority": "3",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=$<geneName>&keywords=$<geneHancerIdentifier>&prefilter=enhancers#enhancers",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerInteractionsDoubleElite.v2.hg38.bb",
-        "longLabel": "Interactions between GeneHancer regulatory elements and genes (Double Elite)",
-        "parent": "ghInteraction on",
-        "shortLabel": "GH Interactions (DE)",
-        "subGroups": "set=a_ELITE view=c_I",
-        "track": "geneHancerInteractionsDoubleElite",
-        "urlLabel": "Interaction in GeneCards",
-        "html": ""
-      },
-      "description": "Interactions between GeneHancer regulatory elements and genes (Double Elite)",
-      "category": ["Regulation"]
     },
     {
       "trackId": "hg38-grcExclusions",
@@ -5824,44 +5368,6 @@
       ]
     },
     {
-      "trackId": "hg38-geneHancerClusteredInteractionsDoubleElite",
-      "name": "Clustered Interactions - GH Clusters (DE)",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerInteractionsDoubleElite.v2.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerClusteredInteractionsDoubleElite",
-        "type": "bigInteract",
-        "visibility": "3",
-        "priority": "4",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=$<geneName>&keywords=$<geneHancerIdentifier>&prefilter=enhancers#enhancers",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerInteractionsDoubleElite.v2.hg38.bb",
-        "longLabel": "Clustered interactions of GeneHancer regulatory elements and genes (Double Elite)",
-        "parent": "ghClusteredInteraction on",
-        "shortLabel": "GH Clusters (DE)",
-        "subGroups": "set=a_ELITE view=d_I",
-        "track": "geneHancerClusteredInteractionsDoubleElite",
-        "urlLabel": "Interaction in GeneCards",
-        "html": ""
-      },
-      "description": "Clustered interactions of GeneHancer regulatory elements and genes (Double Elite)",
-      "category": ["Regulation"]
-    },
-    {
       "trackId": "hg38-highReproRegions",
       "name": "Highly Reproducible Regions - Highly Reproducible Regions",
       "type": "FeatureTrack",
@@ -6575,43 +6081,6 @@
       ]
     },
     {
-      "trackId": "hg38-geneHancerRegElements",
-      "name": "Reg Elem - GH Reg Elems",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerRegElementsAll.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerRegElements",
-        "type": "bigBed 9 +",
-        "visibility": "1",
-        "priority": "5",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "http://www.genecards.org/Search/Keyword?queryString=$$",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerRegElementsAll.hg38.bb",
-        "longLabel": "Enhancers and promoters from GeneHancer",
-        "parent": "ghGeneHancer off",
-        "shortLabel": "GH Reg Elems",
-        "subGroups": "set=b_ALL view=a_GH",
-        "track": "geneHancerRegElements",
-        "html": ""
-      },
-      "description": "Enhancers and promoters from GeneHancer",
-      "category": ["Regulation"]
-    },
-    {
       "trackId": "hg38-snpArrayIllumina850k",
       "name": "Array Probesets - Illumina 850k",
       "type": "FeatureTrack",
@@ -7265,44 +6734,6 @@
       ]
     },
     {
-      "trackId": "hg38-geneHancerGenes",
-      "name": "Gene TSS - GH genes TSS",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerGenesTssAll.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerGenes",
-        "type": "bigBed 9",
-        "visibility": "3",
-        "priority": "6",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "http://www.genecards.org/cgi-bin/carddisp.pl?gene=$$",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerGenesTssAll.hg38.bb",
-        "longLabel": "GH genes TSS",
-        "parent": "ghGeneTss off",
-        "shortLabel": "GH genes TSS",
-        "subGroups": "set=b_ALL view=b_TSS",
-        "track": "geneHancerGenes",
-        "urlLabel": "In GeneCards:",
-        "html": ""
-      },
-      "description": "GH genes TSS",
-      "category": ["Regulation"]
-    },
-    {
       "trackId": "hg38-KAPA_HyperExome_hg38_primary_targets",
       "name": "Exome Probesets - KAPA Hyper T",
       "type": "FeatureTrack",
@@ -7739,44 +7170,6 @@
       ]
     },
     {
-      "trackId": "hg38-geneHancerInteractions",
-      "name": "Interactions - GH Interactions",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerInteractionsAll.v2.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerInteractions",
-        "type": "bigInteract",
-        "visibility": "2",
-        "priority": "7",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=$<geneName>&keywords=$<geneHancerIdentifier>&prefilter=enhancers#enhancers",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerInteractionsAll.v2.hg38.bb",
-        "longLabel": "Interactions between GeneHancer regulatory elements and genes",
-        "parent": "ghInteraction off",
-        "shortLabel": "GH Interactions",
-        "subGroups": "set=b_ALL view=c_I",
-        "track": "geneHancerInteractions",
-        "urlLabel": "Interaction in GeneCards",
-        "html": ""
-      },
-      "description": "Interactions between GeneHancer regulatory elements and genes",
-      "category": ["Regulation"]
-    },
-    {
       "trackId": "hg38-SeqCap-EZ_MedExome_hg38_capture_targets",
       "name": "Exome Probesets - SeqCap EZ Med P",
       "type": "FeatureTrack",
@@ -8103,44 +7496,6 @@
         "Uncommon or Specialized tracks",
         "Genes and Gene Predictions"
       ]
-    },
-    {
-      "trackId": "hg38-geneHancerClusteredInteractions",
-      "name": "Clustered Interactions - GH Clusters",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/geneHancer/geneHancerInteractionsAll.v2.hg38.bb"
-      },
-      "metadata": {
-        "tableName": "geneHancerClusteredInteractions",
-        "type": "bigInteract",
-        "visibility": "3",
-        "priority": "8",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "https://www.genecards.org/cgi-bin/carddisp.pl?gene=$<geneName>&keywords=$<geneHancerIdentifier>&prefilter=enhancers#enhancers",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/geneHancer/geneHancerInteractionsAll.v2.hg38.bb",
-        "longLabel": "Clustered interactions of GeneHancer regulatory elements and genes",
-        "parent": "ghClusteredInteraction off",
-        "shortLabel": "GH Clusters",
-        "subGroups": "set=b_ALL view=d_I",
-        "track": "geneHancerClusteredInteractions",
-        "urlLabel": "Interaction in GeneCards",
-        "html": ""
-      },
-      "description": "Clustered interactions of GeneHancer regulatory elements and genes",
-      "category": ["Regulation"]
     },
     {
       "trackId": "hg38-SeqCap-EZ_MedExome_hg19_empirical_targets",
@@ -14679,90 +14034,6 @@
       "category": ["Single cell"]
     },
     {
-      "trackId": "hg38-cosmicMuts",
-      "name": "COSMIC",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cosmic/cosmic.bb"
-      },
-      "metadata": {
-        "tableName": "cosmicMuts",
-        "type": "bigBed 6 + 3",
-        "visibility": "0",
-        "priority": "100",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "https://cancer.sanger.ac.uk/cosmic/search?q=$$",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/cosmic/cosmic.bb",
-        "dataVersion": "COSMIC v101",
-        "group": "phenDis",
-        "longLabel": "Catalogue of Somatic Mutations in Cancer V101",
-        "noScoreFilter": "on",
-        "pennantIcon": "Updated red ../goldenPath/newsarch.html#013125 \"Updated January 31, 2025\"",
-        "shortLabel": "COSMIC",
-        "track": "cosmicMuts",
-        "urlLabel": "Genomic Mutation ID:",
-        "html": "<h2>Description</h2>\n<p><a href=\"https://cancer.sanger.ac.uk/cosmic/\" target=\"_blank\">COSMIC</a>, \nthe \"Catalogue Of Somatic Mutations In Cancer,\" is an online database of somatic mutations found in \nhuman cancer. Focused exclusively on non-inherited acquired mutations, COSMIC combines information \nfrom a range of sources, curating the described relationships between cancer phenotypes and gene \n(and genomic) mutations. These data are then made available in a number of ways including here in the \nUCSC genome browser, on the COSMIC website with custom analytical tools, or via the\n<a href=\"https://cancer.sanger.ac.uk/cosmic/download\" target=\"_blank\">COSMIC sftp server</a>.\nPublications using COSMIC as a data source may cite our reference below.</p>\n\n<h2>Methods</h2>\n</p>\n<p>The data in COSMIC are curated from a number of high-quality sources and combined into a single\nresource. The sources include:</p>\n\n<ul>\n<li>Peer-reviewed journal articles</li>\n<li><a href=\"https://www.sanger.ac.uk/science/groups/cancer-genome-project\" target=\"_blank\">\nCGP laboratories at the Sanger Institute, UK</a></li>\n<li><a href=\"https://cancergenome.nih.gov/\" target=\"_blank\">TCGA data portal</a></li>\n<li><a href=\"https://dcc.icgc.org\" target=\"_blank\">The ICGC data portal</a></li>\n<li><a href=\"https://p53.iarc.fr/\" target=\"_blank\">IARC p53 database</a></li>\n</ul>\n\n<p>Information on known cancer genes, selected from the <a\nhref=\"https://cancer.sanger.ac.uk/census/\" target=\"_blank\">\nCancer Gene Census</a> is curated manually to maximize its descriptive content. \n\n<p>\nUCSC was provided with the COSMIC annotations directly, and the file was converted to a bigBed\nfor display using the bedToBigBed utility.\n</p>\n\n<h2>Display</h2>\n<ul>\n<li>Dense - Indicate the positions where COSMIC mutations have been annotated in a single horizontal\ntrack.</li>\n<li>Squish - Indicate each mutation, in vertical pileups where appropriate, while minimizing \nscreen space used.</li>\n<li>Pack - Indicate each mutation with Genomic Mutation ID (COSVnnnnn).</li>\n<li>Full - Show each mutation in detail, one per line, with Genomic Mutation ID (COSVnnnnn).</li>\n</ul>\n<p>\nClicking into any item also displays the reference allele, alternate allele, and the\nCosmic legacy mutation identifier (COSNnnnnn). Outlinks can also be found directly to COSMIC\nfor additional information.\n</p>\n\n<h2>Data Access</h2>\n<p>\nThe limited data available to UCSC  can be explored interactively \nwith the <a href=\"https://genome.ucsc.edu/cgi-bin/hgTables\">Table Browser</a>,\nor the <a href=\"https://genome.ucsc.edu/cgi-bin/hgIntegrator\">Data Integrator</a>. For automated analysis, the data may be\nqueried from our <a href=\"/goldenPath/help/api.html\">REST API</a>. Please refer to our\n<a href=\"https://groups.google.com/a/soe.ucsc.edu/forum/#!forum/genome\">mailing list archives</a>\nfor questions, or our <a href=\"/FAQ/FAQdownloads.html#download36\">Data Access FAQ</a> for more\ninformation.</p>\n<p>\nThe complete data can be explored and downloaded via the COSMIC \n<a href=\"https://cancer.sanger.ac.uk/cosmic\" target=\"_blank\">website</a>.\n</p>\n\n<h2>Contacts</h2>\n<p>For further information on COSMIC, or for help with the information provided, please contact\n<A HREF=\"mailto:&#99;&#111;sm&#105;&#99;&#64;&#115;a&#110;g&#101;&#114;.\n&#97;&#99;.\n&#117;&#107;\">\n&#99;&#111;sm&#105;&#99;&#64;&#115;a&#110;g&#101;&#114;.\n&#97;&#99;.\n&#117;&#107;</A>.\n</p>\n\n<h2>References</h2>\n<p>\nForbes SA, Beare D, Boutselakis H, Bamford S, Bindal N, Tate J, Cole CG, Ward S, Dawson E, Ponting L\n<em>et al</em>.\n<a href=\"https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkw1121\" target=\"_blank\">\nCOSMIC: somatic cancer genetics at high-resolution</a>.\n<em>Nucleic Acids Res</em>. 2017 Jan 4;45(D1):D777-D783.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/27899578\" target=\"_blank\">27899578</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5210583/\" target=\"_blank\">PMC5210583</a>\n</p>\n"
-      },
-      "description": "Catalogue of Somatic Mutations in Cancer V101",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-cosmicRegions",
-      "name": "COSMIC Regions",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cosmic/cosMutHg38V82.bb"
-      },
-      "metadata": {
-        "tableName": "cosmicRegions",
-        "type": "bigBed 8 +",
-        "visibility": "0",
-        "priority": "100",
-        "colorR": "200",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "227",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "http://cancer.sanger.ac.uk/cosmic/mutation/overview?id=$$",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/cosmic/cosMutHg38V82.bb",
-        "color": "200, 0, 0",
-        "group": "phenDis",
-        "html": "<h2>Description</h2>\n<p><a href=\"https://cancer.sanger.ac.uk/cosmic/\" target=\"_blank\">COSMIC</a>, \nthe \"Catalogue Of Somatic Mutations In Cancer,\" is an online database of somatic mutations found in \nhuman cancer. Focused exclusively on non-inherited acquired mutations, COSMIC combines information \nfrom a range of sources, curating the described relationships between cancer phenotypes and gene \n(and genomic) mutations. These data are then made available in a number of ways including here in the \nUCSC genome browser, on the COSMIC website with custom analytical tools, or via the\n<a href=\"https://cancer.sanger.ac.uk/cosmic/download\" target=\"_blank\">COSMIC sftp server</a>.\nPublications using COSMIC as a data source may cite our reference below.</p>\n\n<h2>Methods</h2>\n</p>\n<p>The data in COSMIC are curated from a number of high-quality sources and combined into a single\nresource. The sources include:</p>\n\n<ul>\n<li>Peer-reviewed journal articles</li>\n<li><a href=\"https://www.sanger.ac.uk/science/groups/cancer-genome-project\" target=\"_blank\">\nCGP laboratories at the Sanger Institute, UK</a></li>\n<li><a href=\"https://cancergenome.nih.gov/\" target=\"_blank\">TCGA data portal</a></li>\n<li><a href=\"https://dcc.icgc.org\" target=\"_blank\">The ICGC data portal</a></li>\n<li><a href=\"https://p53.iarc.fr/\" target=\"_blank\">IARC p53 database</a></li>\n</ul>\n\n<p>Information on known cancer genes, selected from the <a\nhref=\"https://cancer.sanger.ac.uk/census/\" target=\"_blank\">\nCancer Gene Census</a> is curated manually to maximize its descriptive content. \n\n<p>\nThe data was downloaded from the COSMIC sftp server. It was first converted to a bed file using\nthe UCSC utility cosmicToBed, then converted into a bigBed file using the UCSC utility bedToBigBed.\nThe bigBed file is used to generate the track. \n</p>\n\n<h2>Display</h2>\n<ul>\n<li>Dense - Indicate the positions where COSMIC mutations have been annotated in a single horizontal\ntrack.</li>\n<li>Squish - Indicate each mutation, in vertical pileups where appropriate, while minimizing \nscreen space used.</li>\n<li>Pack - Indicate each mutation with COSMIC identifier (COSMnnnnn).</li>\n<li>Full - Show each mutation in detail, one per line, with COSM identifier (COSMnnnnn).</li>\n</ul>\n\n<h2>Data Access</h2>\n<p>\nDue to licensed material, we do not allow downloads or Table Browser access for the bigBed data. The\nraw data underlying this track can be explored and downloaded via the COSMIC \n<a href=\"https://cancer.sanger.ac.uk/cosmic\" target=\"_blank\">website</a>. The\nCosmicMutantExport.tsv.gz file was converted to a BED file using the <code>cosmicToBed</code>\nutility, and then converted into a bigBed file using the <code>bedToBigBed</code> utility. You can\ndownload these tools from the\n<a href=\"https://hgdownload.soe.ucsc.edu/downloads.html#utilities_downloads\">utilities directory</a>.\n</p>\n\n<h2>Contacts</h2>\n<p>For further information on COSMIC, or for help with the information provided, please contact\n<A HREF=\"mailto:&#99;&#111;sm&#105;&#99;&#64;&#115;a&#110;g&#101;&#114;.\n&#97;&#99;.\n&#117;&#107;\">\n&#99;&#111;sm&#105;&#99;&#64;&#115;a&#110;g&#101;&#114;.\n&#97;&#99;.\n&#117;&#107;</A>.\n</p>\n\n<h2>References</h2>\n<p>\nForbes SA, Beare D, Boutselakis H, Bamford S, Bindal N, Tate J, Cole CG, Ward S, Dawson E, Ponting L\n<em>et al</em>.\n<a href=\"https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkw1121\" target=\"_blank\">\nCOSMIC: somatic cancer genetics at high-resolution</a>.\n<em>Nucleic Acids Res</em>. 2017 Jan 4;45(D1):D777-D783.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/27899578\" target=\"_blank\">27899578</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5210583/\" target=\"_blank\">PMC5210583</a>\n</p>\n",
-        "labelFields": "cosmLabel",
-        "longLabel": "Catalogue of Somatic Mutations in Cancer V82",
-        "mouseOverField": "_mouseOver",
-        "noScoreFilter": "on",
-        "pennantIcon": "snowflake.png ../goldenPath/newsarch.html#091523 \"COSMIC data is now updated on the COSMIC track (not COSMIC Regions). See news archive for details.\"",
-        "searchIndex": "name,cosmLabel",
-        "shortLabel": "COSMIC Regions",
-        "tableBrowser": "off",
-        "track": "cosmicRegions",
-        "urlLabel": "COSMIC ID:"
-      },
-      "description": "Catalogue of Somatic Mutations in Cancer V82",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-crisprAllTargets",
       "name": "CRISPR Targets",
       "type": "FeatureTrack",
@@ -16129,49 +15400,6 @@
       },
       "description": "gnomAD pext Heart-Left Ventricle",
       "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
-    },
-    {
-      "trackId": "hg38-hgmd",
-      "name": "HGMD public",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/bbi/hgmd.bb"
-      },
-      "metadata": {
-        "tableName": "hgmd",
-        "type": "bigBed 9 .",
-        "visibility": "hide",
-        "priority": "100",
-        "colorR": "0",
-        "colorG": "0",
-        "colorB": "0",
-        "altColorR": "127",
-        "altColorG": "127",
-        "altColorB": "127",
-        "useScore": "0",
-        "private": "0",
-        "restrictCount": "0",
-        "restrictList": "",
-        "url": "http://www.hgmd.cf.ac.uk/ac/gene.php?gene=$P&accession=$p",
-        "canPack": "1",
-        "bigDataUrl": "/gbdb/hg38/bbi/hgmd.bb",
-        "group": "phenDis",
-        "itemRgb": "on",
-        "longLabel": "Human Gene Mutation Database - Public Version Dec 2024",
-        "maxItems": "1000",
-        "maxWindowCoverage": "10000000",
-        "mouseOverField": "variantType",
-        "noScoreFilter": "on",
-        "shortLabel": "HGMD public",
-        "tableBrowser": "off hgmd",
-        "track": "hgmd",
-        "urlLabel": "Link to HGMD",
-        "html": "<h2>Description</h2>\n\n<div class=\"warn-note\" style=\"border: 2px solid #9e5900; padding: 5px 20px; background-color: #ffe9cc;\">\n<p><span style=\"font-weight: bold; color: #c70000;\">NOTE:</span><br> \nHGMD public is intended for use primarily by physicians and other\nprofessionals concerned with genetic disorders, by genetics researchers, and\nby advanced students in science and medicine. While the HGMD public database is\nopen to all academic users, users seeking information about a personal medical\nor genetic condition are urged to consult with a qualified physician for\ndiagnosis and for answers to personal questions.</p>\n<p><span style=\"font-weight: bold; color: #c70000;\">DOWNLOADS:</span><br>\nAs requested by Qiagen, this track is not available for download or mirroring but only for limited API queries, see below.\n</p></div>\n\n<p>\nThis track shows the genomic positions of variants in the public version of the\nHuman Gene Mutation Database (<a href=\"https://www.hgmd.cf.ac.uk/ac/index.php\"\ntarget=\"_blank\">HGMD</a>).  \nUCSC does not host any further information and provides only the coordinates of\nmutations.\n</p>\n\n<p>\nTo get details on a mutation (bibliographic reference, phenotype,\ndisease, nucleotide change, etc.), follow the &quot;Link to HGMD&quot; at the top\nof the details page. Mouse over to show the type of variant (substitution, insertion,\ndeletion, regulatory or splice variant). For deletions, only start coordinates are shown\nas the end coordinates have not been provided by HGMD. Insertions are located between the two\nannotated nucleic acids.\n</p>\n\n<p>\nThe HGMD public database is produced at Cardiff University, but is free only\nfor academic use.  Academic users can register for a free account at the\n<a href=\"https://www.hgmd.cf.ac.uk/docs/register.html\" target=_\"blank\">HGMD\nUser Registration</a> page. Download and commercial use requires a license for the <a href=\"https://www.qiagenbioinformatics.com/products/human-gene-mutation-database/\" target=\"_blank\">HGMD Professional</a>\ndatabase, which also contains many mutations not yet added to the public version of HGMD public.\nThe public version is usually 1-2 years behind the professional version.\n</p>\n\n<p>The HGMD database itself does not come with a mapping to genome coordinates,\nbut there is a related product called \"GenomeTrax\" which includes HGMD in the\nUCSC Custom Track format. Contact Qiagen for more information.</p>\n\n<h2>Batch queries</h2>\n<p>Due to license restrictions, the HGMD data is not available for download or for batch queries in the Table Browser. \nHowever, it is available for programmatic access via the <a href=\"https://ga4gh.org/#/beacon\">Global\nAlliance Beacon API</a>, a web service that accepts queries in the form\n(genome, chromosome, position, allele) and returns \"true\" or \"false\" depending on whether there\nis information about this allele in the database. For more details see our \n<a href=\"hgBeacon\">Beacon Server</a>. </p>\n<p>Subscribers of the HGMD database can also download the full database or use the HGMD API to retrieve full details, please contact Qiagen support\nfor further information. Academic or non-profit users may be able to obtain a\nlimited version of HGMD public from Qiagen.</p>\n\n<h2>Display Conventions and Configuration</h2>\n\n<p>\nGenomic locations of HGMD variants are labeled with the gene symbol\nand the accession of the mutation, separated by a colon. All other information\nis shown on the respective HGMD variation page, accessible via the\n&quot;Link to HGMD&quot; at the top of the details page.\n</p>\n\n<p>HGMD variants are originally annotated on RefSeq transcripts. You can show\nall and only those transcripts annotated by HGMD by activating the HGMD\nsubtrack of the track \"NCBI RefSeq\".</p>\n\n<h2>Methods</h2>\n\n<p>\nThe mappings displayed on this track were obtained from Qiagen\nand reformatted at UCSC as a <a href=\"https://genome.ucsc.edu/goldenPath/help/bigBed.html\">bigBed</a> file.\n</p>\n\n<h2>Credits</h2>\n\n<p>\nThanks to HGMD, Frank Schacherer and Rupert Yip from Qiagen for making these data available.\n</p>\n\n<h2>References</h2>\n\n<p>\nStenson PD, Mort M, Ball EV, Shaw K, Phillips A, Cooper DN.\n<a href=\"https://dx.doi.org/10.1007/s00439-013-1358-4\" target=\"_blank\">\nThe Human Gene Mutation Database: building a comprehensive mutation repository for clinical and\nmolecular genetics, diagnostic testing and personalized genomic medicine</a>.\n<em>Hum Genet</em>. 2014 Jan;133(1):1-9.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/24077912\" target=\"_blank\">24077912</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3898141/\" target=\"_blank\">PMC3898141</a>\n</p>\n"
-      },
-      "description": "Human Gene Mutation Database - Public Version Dec 2024",
-      "category": ["Phenotypes, Variants, and Literature"]
     },
     {
       "trackId": "hg38-hgnc",
@@ -26004,7 +25232,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_000152225.2_chain",
-      "name": "hg38 to GCA_000152225.2 liftOver chain",
+      "name": "hg38 to Cape rock hyrax (Dallas Zoo Isis #01D731 2014) (GCA_000152225.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_000152225.2"],
       "adapter": {
@@ -26025,7 +25253,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_004886185.2_chain",
-      "name": "hg38 to GCA_004886185.2 liftOver chain",
+      "name": "hg38 to dog (Basenji MU ID 185726 2019) (GCA_004886185.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_004886185.2"],
       "adapter": {
@@ -26046,7 +25274,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_005887515.3_chain",
-      "name": "hg38 to GCA_005887515.3 liftOver chain",
+      "name": "hg38 to domestic yak (maiwa yakHY00 2019) (GCA_005887515.3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_005887515.3"],
       "adapter": {
@@ -26067,7 +25295,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_008641055.3_chain",
-      "name": "hg38 to GCA_008641055.3 liftOver chain",
+      "name": "hg38 to dog (German Shepherd Nala 2020) (GCA_008641055.3) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_008641055.3"],
       "adapter": {
@@ -26130,7 +25358,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_011100615.1_chain",
-      "name": "hg38 to GCA_011100615.1 liftOver chain",
+      "name": "hg38 to crab-eating macaque (2020 cy0333) (GCA_011100615.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_011100615.1"],
       "adapter": {
@@ -26172,7 +25400,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_013276365.2_chain",
-      "name": "hg38 to GCA_013276365.2 liftOver chain",
+      "name": "hg38 to dog (Basenji UNSW-BAS-2019 2021) (GCA_013276365.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_013276365.2"],
       "adapter": {
@@ -26214,7 +25442,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_018852615.2_chain",
-      "name": "hg38 to GCA_018852615.2 liftOver chain",
+      "name": "hg38 to human (NA24385 HG002 pri mat 2023) (GCA_018852615.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_018852615.2"],
       "adapter": {
@@ -26235,7 +25463,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_023856395.1_chain",
-      "name": "hg38 to GCA_023856395.1 liftOver chain",
+      "name": "hg38 to Siberian hamster (SSSS 2022) (GCA_023856395.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_023856395.1"],
       "adapter": {
@@ -26256,7 +25484,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_024500485.1_chain",
-      "name": "hg38 to GCA_024500485.1 liftOver chain",
+      "name": "hg38 to Tibetan sand fox (lyu1992 2022) (GCA_024500485.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_024500485.1"],
       "adapter": {
@@ -26277,7 +25505,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_028583685.1_chain",
-      "name": "hg38 to GCA_028583685.1 liftOver chain",
+      "name": "hg38 to sugar glider (PSGF00001 2023) (GCA_028583685.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_028583685.1"],
       "adapter": {
@@ -26298,7 +25526,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_030463245.1_chain",
-      "name": "hg38 to GCA_030463245.1 liftOver chain",
+      "name": "hg38 to Corsac fox (zsh2022 2023) (GCA_030463245.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_030463245.1"],
       "adapter": {
@@ -26319,7 +25547,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031010295.1_chain",
-      "name": "hg38 to GCA_031010295.1 liftOver chain",
+      "name": "hg38 to dog (Cairn Terrier CA611 2023) (GCA_031010295.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_031010295.1"],
       "adapter": {
@@ -26340,7 +25568,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031010635.1_chain",
-      "name": "hg38 to GCA_031010635.1 liftOver chain",
+      "name": "hg38 to dog (Bernese Mountain Dog OD 2023) (GCA_031010635.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_031010635.1"],
       "adapter": {
@@ -26361,7 +25589,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031010765.1_chain",
-      "name": "hg38 to GCA_031010765.1 liftOver chain",
+      "name": "hg38 to dog (Bernese Mountain Dog BD 2023) (GCA_031010765.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_031010765.1"],
       "adapter": {
@@ -26382,7 +25610,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_031165255.1_chain",
-      "name": "hg38 to GCA_031165255.1 liftOver chain",
+      "name": "hg38 to dog (Labrador retriever 2023) (GCA_031165255.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_031165255.1"],
       "adapter": {
@@ -26403,7 +25631,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_032313775.1_chain",
-      "name": "hg38 to GCA_032313775.1 liftOver chain",
+      "name": "hg38 to gray fox (Vermont ataVT051 2023) (GCA_032313775.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_032313775.1"],
       "adapter": {
@@ -26424,7 +25652,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCA_034620425.1_chain",
-      "name": "hg38 to GCA_034620425.1 liftOver chain",
+      "name": "hg38 to coyote (coyote_06102 2023) (GCA_034620425.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCA_034620425.1"],
       "adapter": {
@@ -26571,7 +25799,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000164845.4_chain",
-      "name": "hg38 to GCF_000164845.4 liftOver chain",
+      "name": "hg38 to alpaca (v3.2 Carlotta AHFN-0088 2019 Deakin U) (GCF_000164845.4) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_000164845.4"],
       "adapter": {
@@ -26592,7 +25820,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000349665.1_chain",
-      "name": "hg38 to GCF_000349665.1 liftOver chain",
+      "name": "hg38 to golden hamster (Broad 2013 refseq) (GCF_000349665.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_000349665.1"],
       "adapter": {
@@ -26613,7 +25841,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000767855.1_chain",
-      "name": "hg38 to GCF_000767855.1 liftOver chain",
+      "name": "hg38 to Bactrian camel (Alxa 2014 refseq) (GCF_000767855.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_000767855.1"],
       "adapter": {
@@ -26634,7 +25862,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000955945.1_chain",
-      "name": "hg38 to GCF_000955945.1 liftOver chain",
+      "name": "hg38 to sooty mangabey (GCF_000955945.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_000955945.1"],
       "adapter": {
@@ -26655,7 +25883,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_000956065.1_chain",
-      "name": "hg38 to GCF_000956065.1 liftOver chain",
+      "name": "hg38 to pig-tailed macaque (GCF_000956065.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_000956065.1"],
       "adapter": {
@@ -26676,7 +25904,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_001704415.1_chain",
-      "name": "hg38 to GCF_001704415.1 liftOver chain",
+      "name": "hg38 to goat (v1 San Clemente 2016 USDA refseq) (GCF_001704415.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_001704415.1"],
       "adapter": {
@@ -26718,7 +25946,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_002742125.1_chain",
-      "name": "hg38 to GCF_002742125.1 liftOver chain",
+      "name": "hg38 to Rambouillet sheep (Baylor 2017) (GCF_002742125.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_002742125.1"],
       "adapter": {
@@ -26739,7 +25967,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_003121395.1_chain",
-      "name": "hg38 to GCF_003121395.1 liftOver chain",
+      "name": "hg38 to water buffalo (Mediterranean 2018) (GCF_003121395.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_003121395.1"],
       "adapter": {
@@ -26760,7 +25988,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_003254725.2_chain",
-      "name": "hg38 to GCF_003254725.2 liftOver chain",
+      "name": "hg38 to dingo (Sandy 2020 James Cook U) (GCF_003254725.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_003254725.2"],
       "adapter": {
@@ -26802,7 +26030,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_008728515.1_chain",
-      "name": "hg38 to GCF_008728515.1 liftOver chain",
+      "name": "hg38 to olive baboon (2019 UCSF) (GCF_008728515.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_008728515.1"],
       "adapter": {
@@ -26844,7 +26072,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_009806435.1_chain",
-      "name": "hg38 to GCF_009806435.1 liftOver chain",
+      "name": "hg38 to rabbit (New Zealand White DNA-2018 2021 refseq) (GCF_009806435.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_009806435.1"],
       "adapter": {
@@ -26886,7 +26114,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_012559485.2_chain",
-      "name": "hg38 to GCF_012559485.2 liftOver chain",
+      "name": "hg38 to crab-eating macaque CE1976F Keio U/RIKEN 2021 (GCF_012559485.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_012559485.2"],
       "adapter": {
@@ -26949,7 +26177,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_016772045.2_chain",
-      "name": "hg38 to GCF_016772045.2 liftOver chain",
+      "name": "hg38 to sheep (OAR_USU_Benz2616 2023) (GCF_016772045.2) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_016772045.2"],
       "adapter": {
@@ -26970,7 +26198,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_018345385.1_chain",
-      "name": "hg38 to GCF_018345385.1 liftOver chain",
+      "name": "hg38 to Arctic fox (Blue_001 2021 refseq) (GCF_018345385.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_018345385.1"],
       "adapter": {
@@ -26991,7 +26219,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_018350175.1_chain",
-      "name": "hg38 to GCF_018350175.1 liftOver chain",
+      "name": "hg38 to domestic cat (Fca126 2021 Texas A&M U) (GCF_018350175.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_018350175.1"],
       "adapter": {
@@ -27012,7 +26240,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_019923935.1_chain",
-      "name": "hg38 to GCF_019923935.1 liftOver chain",
+      "name": "hg38 to water buffalo (Murrah 2021) (GCF_019923935.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_019923935.1"],
       "adapter": {
@@ -27054,7 +26282,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_905146905.1_chain",
-      "name": "hg38 to GCF_905146905.1 liftOver chain",
+      "name": "hg38 to raccoon dog (2021) (GCF_905146905.1) liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["hg38", "GCF_905146905.1"],
       "adapter": {

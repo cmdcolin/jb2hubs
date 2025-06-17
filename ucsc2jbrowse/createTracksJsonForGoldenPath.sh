@@ -25,5 +25,4 @@ process_assembly() {
 export -f process_assembly
 export OUT
 
-echo "createTracksForGoldenPath"
 parallel --bar --will-cite process_assembly ::: "$@"

@@ -56,5 +56,4 @@ process_rmsk() {
 export -f process_rmsk
 export OUT
 
-echo "createRmskTracksForGoldenPath"
 parallel --bar --will-cite process_rmsk ::: "$@"
