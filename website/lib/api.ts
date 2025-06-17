@@ -2,6 +2,8 @@ import path from 'path'
 
 import { AssemblyData, readJSON } from '../app/components/util.ts'
 
+// uncomment the console.time to see how long various operations take,
+// generally the things i tried so far are fast
 async function timer<T>(label: string, cb: () => Promise<T>): Promise<T> {
   // console.time(label)
   const ret = await cb()

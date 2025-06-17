@@ -7,17 +7,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  generateBuildId: () => 'static-build-id',
-  webpack: (config, options) => {
-    // Next.js output is not stable when there's no code change and this is a
-    // work around
-    config.output.filename = config.output.filename.replace(
-      '[chunkhash]',
-      '[contenthash]',
-    )
-    return config
-  },
-  devIndicators: false,
 }
 
 export default nextConfig
