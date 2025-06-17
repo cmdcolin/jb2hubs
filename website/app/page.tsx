@@ -4,6 +4,7 @@ import Link from 'next/link'
 import './components/table.css'
 import Container from './components/Container.tsx'
 import list from './ucsc/list.json'
+import GenArk from './components/GenArk.tsx'
 
 export default function Home() {
   const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
@@ -68,50 +69,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h3>UCSC GenArk browsers</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>hub&nbsp;gateway</th>
-              <th>description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {hubCategories
-              .filter(f => f.tag === 'main')
-              .map(elt => (
-                <tr key={elt.id}>
-                  <td>
-                    <Link href={`/hubs/${elt.id}`}>{elt.id}</Link>
-                  </td>
-                  <td>{elt.description}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
-
-        <h3>Projects</h3>
-        <p>collections below are subsets of the assemblies above</p>
-        <table>
-          <thead>
-            <tr>
-              <th>hub&nbsp;gateway</th>
-              <th>description</th>
-            </tr>
-          </thead>
-          <tbody>
-            {hubCategories
-              .filter(f => f.tag !== 'main')
-              .map(elt => (
-                <tr key={elt.id}>
-                  <td>
-                    <Link href={`/hubs/${elt.id}`}>{elt.id}</Link>
-                  </td>
-                  <td>{elt.description}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+        <GenArk />
       </div>
 
       <div>
