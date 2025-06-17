@@ -112,12 +112,46 @@ export default function Home() {
               ))}
           </tbody>
         </table>
+      </div>
 
-        <p>To reference these resources in publications, please credit:</p>
+      <div>
         <p>
-          Clawson, H., Lee, B.T., Raney, B.J. et al. GenArk: towards a million
-          UCSC genome browsers. Genome Biol 24, 217 (2023).
-          https://doi.org/10.1186/s13059-023-03057-x
+          To reference this resource, please cite:{' '}
+          <i>
+            JBrowse 2: a modular genome browser with views of synteny and
+            structural variation. Genome Biology (2023).
+            <Link href="https://doi.org/10.1186/s13059-023-02914-z">
+              https://doi.org/10.1186/s13059-023-02914-z
+            </Link>
+          </i>
+        </p>
+        <p>
+          To reference UCSC GenArk resources in publications, please cite:{' '}
+          <i>
+            GenArk: towards a million UCSC genome browsers. Genome Biology
+            (2023).{' '}
+            <Link href="https://doi.org/10.1186/s13059-023-03057-x">
+              https://doi.org/10.1186/s13059-023-03057-x
+            </Link>
+          </i>
+        </p>
+        <p>
+          To reference other UCSC resources and tools, please see this page
+          <Link href="https://genome.ucsc.edu/cite.html">
+            https://genome.ucsc.edu/cite.html
+          </Link>
+        </p>
+        <p>
+          To reference the data for species of the main UCSC genome browse,
+          please see this page:
+          <Link href="https://genome.ucsc.edu/cite.html">
+            https://genome.ucsc.edu/goldenPath/credits.html
+          </Link>
+        </p>
+        <p>
+          And lastly, a big thank you to UCSC for their work and their open
+          licensing of datasources. See https://genome.ucsc.edu/license/ for
+          more info.
         </p>
       </div>
       <div className="mt-20">
