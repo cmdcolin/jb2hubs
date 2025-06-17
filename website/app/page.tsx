@@ -62,6 +62,8 @@ export default function Home() {
           <Link href="/ucsc">
             Click here for full list of main UCSC genome browsers
           </Link>
+          . Note that some tracks/files are not available, see{' '}
+          <Link href="/unavailableTracks">unavailable tracks</Link>
         </p>
       </div>
 
