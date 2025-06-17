@@ -1,9 +1,10 @@
 import fs from 'fs'
 
+import pLimit from 'p-limit'
+
+import { checkIfFileAccessible } from './checkIfFileAccessible.ts'
 import { dedupe } from './dedupe.ts'
 import { readConfig, readJSON } from './util.ts'
-import { checkIfFileAccessible } from './checkIfFileAccessible.ts'
-import pLimit from 'p-limit'
 
 interface BigDataTrack {
   tableName: string

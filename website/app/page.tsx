@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 import Container from './components/Container.tsx'
 import GenArkMainTable from './components/GenArkMainTable.tsx'
-
 import list from './ucsc/list.json'
 
 import './components/table.css'

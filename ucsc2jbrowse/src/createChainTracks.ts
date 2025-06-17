@@ -1,8 +1,10 @@
-import fs from 'fs'
-import path from 'path'
-import os from 'os'
 import { execSync } from 'child_process'
+import fs from 'fs'
+import os from 'os'
+import path from 'path'
+
 import { Command } from 'commander'
+
 import { readJSON, writeJSON } from './util.ts'
 
 interface ChainTrack {
@@ -161,8 +163,8 @@ async function processChainFile(
     )
 
     // Parse the filename to get the source and target assemblies
-    const match = filename.match(/^(.+?)To(.+?)\.over\.chain\.gz$/)
-    if (!match || !match[1] || !match[2]) {
+    const match = /^(.+?)To(.+?)\.over\.chain\.gz$/.exec(filename)
+    if (!match?.[1] || !match[2]) {
       console.warn(`Warning: Could not parse filename format for ${filename}`)
       return null
     }

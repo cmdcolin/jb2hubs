@@ -11,11 +11,11 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import Link from 'next/link'
+import Container from '../components/Container.tsx'
 
 import list from './list.json'
 
 import '../components/table.css'
-import Container from '../components/Container'
 
 export default function UCSC() {
   // Create state for sorting

@@ -1,4 +1,4 @@
-import LoadingMessage from '../components/LoadingMessage'
+import LoadingMessage from '../components/LoadingMessage.tsx'
 
 export default function Loading() {
   return <LoadingMessage />

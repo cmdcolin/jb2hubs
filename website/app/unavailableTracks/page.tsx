@@ -1,8 +1,10 @@
-import path from 'path'
 import fs from 'fs'
-import Link from 'next/link'
+import path from 'path'
+
 import { dedupe } from 'hubtools'
-import Container from '../components/Container'
+import Link from 'next/link'
+
+import Container from '../components/Container.tsx'
 
 export default function Page() {
   const data = fs.readFileSync(
@@ -19,12 +21,12 @@ export default function Page() {
           https://genome.ucsc.edu/license/
         </Link>{' '}
         for more info. Most of these fall under this restriction category:
-        "Certain genome annotation data, mostly on the human genome and in the
-        domain of clinical genetics, have specific restrictions. For some of
+        &quot;Certain genome annotation data, mostly on the human genome and in
+        the domain of clinical genetics, have specific restrictions. For some of
         these, we are not allowed to make the data available. Usually the data
         must be obtained from the source database directly in the original
         format or licensed, rather from UCSC. Examples are HGMD, LOVD, OMIM,
-        Decipher, Genomenon, Genehancer and COSMIC." These generally have
+        Decipher, Genomenon, Genehancer and COSMIC.&quot; These generally have
         re-sharing restrictions and are (currently) unavailable in JBrowse,
         though we may be able to load them. Please get in touch if you are
         interested in seeing them{' '}

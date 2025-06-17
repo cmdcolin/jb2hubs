@@ -1,5 +1,5 @@
-import Container from '../components/Container'
-import GenArk from '../components/GenArk'
+import Container from '../components/Container.tsx'
+import GenArk from '../components/GenArk.tsx'
 
 export default function Page() {
   return (
