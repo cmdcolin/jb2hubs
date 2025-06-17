@@ -11,7 +11,6 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { Star, X } from 'lucide-react'
 import Link from 'next/link'
 import {
   parseAsBoolean,
@@ -133,18 +132,8 @@ export default function DataTable({
           <div>
             <div style={{ float: 'left' }}>Common Name</div>
             <div style={{ float: 'right' }}>
-              <div>
-                <Star
-                  fill="orange"
-                  strokeWidth={0}
-                  className="w-[1em] h-[1em]"
-                />{' '}
-                == &quot;designated reference&quot;
-              </div>
-              <div>
-                <X stroke="red" className="w-[1em] h-[1em]" /> == &quot;refseq
-                suppressed&quot;
-              </div>
+              <div>★ == &quot;designated reference&quot;</div>
+              <div>X == &quot;refseq suppressed&quot;</div>
             </div>
           </div>
         ),
@@ -157,12 +146,10 @@ export default function DataTable({
             >
               (info)
             </Link>{' '}
-            {info.row.original.ncbiRefSeqCategory === 'reference genome' ? (
-              <Star fill="orange" strokeWidth={0} className="w-[1em] h-[1em]" />
-            ) : null}
-            {info.row.original.suppressed ? (
-              <X stroke="red" className="w-[1em] h-[1em]" />
-            ) : null}
+            {info.row.original.ncbiRefSeqCategory === 'reference genome'
+              ? '★'
+              : null}
+            {info.row.original.suppressed ? 'X' : null}
           </>
         ),
         enableSorting: true,

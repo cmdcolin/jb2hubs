@@ -1,10 +1,11 @@
-import { hubCategories } from 'hubtools'
 import Link from 'next/link'
 
-import './components/table.css'
 import Container from './components/Container.tsx'
+import GenArkMainTable from './components/GenArkMainTable.tsx'
+
 import list from './ucsc/list.json'
-import GenArk from './components/GenArk.tsx'
+
+import './components/table.css'
 
 export default function Home() {
   const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
@@ -17,7 +18,7 @@ export default function Home() {
         <Link href="/about">about</Link> page.
       </p>
       <div>
-        <h3>Main UCSC browsers</h3>
+        <h2>Main UCSC browsers</h2>
         <p>Short list:</p>
         <table>
           <thead>
@@ -69,10 +70,17 @@ export default function Home() {
       </div>
 
       <div>
-        <GenArk />
+        <h2>GenArk browsers</h2>
+        <div>
+          We have created JBrowse portals for all the UCSC GenArk browsers,
+          which are trackhubs generated from NCBI assemblies. Please see
+          <Link href="/genark">GenArk</Link>
+        </div>
+        <GenArkMainTable />
       </div>
 
       <div>
+        <h2>Citing resources:</h2>
         <p>
           To reference this resource, please cite:{' '}
           <i>

@@ -15,6 +15,7 @@ import Link from 'next/link'
 import list from './list.json'
 
 import '../components/table.css'
+import Container from '../components/Container'
 
 export default function UCSC() {
   // Create state for sorting
@@ -79,7 +80,7 @@ export default function UCSC() {
   })
 
   return (
-    <div>
+    <Container>
       <h1>Main UCSC browsers</h1>
       <table>
         <thead>
@@ -116,6 +117,6 @@ export default function UCSC() {
           ))}
         </tbody>
       </table>
-    </div>
+    </Container>
   )
 }
