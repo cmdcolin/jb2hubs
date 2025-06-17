@@ -11,9 +11,10 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import Link from 'next/link'
-import Container from '../components/Container.tsx'
 
 import list from './list.json'
+import Container from '../components/Container.tsx'
+
 
 import '../components/table.css'
 

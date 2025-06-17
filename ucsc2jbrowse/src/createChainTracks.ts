@@ -30,7 +30,7 @@ interface JBrowseConfig {
  * Script to generate chain tracks for a specified assembly
  * Downloads chain files, converts to PAF, creates PIF files, and adds to JBrowse config
  */
-async function main() {
+function main() {
   const program = new Command()
 
   program
@@ -65,7 +65,7 @@ async function main() {
   }
 
   // Get list of chain files
-  const chainFiles = await getChainFiles(sourceAssembly)
+  const chainFiles = getChainFiles(sourceAssembly)
 
   if (chainFiles.length === 0) {
     console.log(`No chain files found for ${sourceAssembly}`)
@@ -76,7 +76,7 @@ async function main() {
   const chainTracks: ChainTrack[] = []
 
   for (const chainUrl of chainFiles) {
-    const track = await processChainFile(chainUrl, sourceAssembly, configDir)
+    const track = processChainFile(chainUrl, sourceAssembly, configDir)
     if (track) {
       chainTracks.push(track)
     }
@@ -93,7 +93,7 @@ async function main() {
 /**
  * Get list of chain files for a given assembly
  */
-async function getChainFiles(sourceAssembly: string): Promise<string[]> {
+function getChainFiles(sourceAssembly: string) {
   const url = `https://hgdownload.soe.ucsc.edu/goldenPath/${sourceAssembly}/liftOver/`
 
   try {
@@ -115,11 +115,11 @@ async function getChainFiles(sourceAssembly: string): Promise<string[]> {
 /**
  * Process a single chain file
  */
-async function processChainFile(
+function processChainFile(
   chainUrl: string,
   sourceAssembly: string,
   configDir: string,
-): Promise<ChainTrack | null> {
+) {
   try {
     // Extract the filename from the URL
     const filename = path.basename(chainUrl)
@@ -194,7 +194,7 @@ async function processChainFile(
         const assembly = allJson.find(
           (a: any) => a?.accession === targetAssemblyOrig,
         )
-        commonName = assembly?.commonName || ''
+        commonName = assembly?.commonName ?? ''
       } catch (error) {
         console.warn(
           `Warning: Could not read assembly information for ${targetAssemblyOrig}: ${error}`,
@@ -205,7 +205,7 @@ async function processChainFile(
         const listJson = readJSON<any>(
           path.join(os.homedir(), 'ucscResults', 'list.json'),
         )
-        commonName = listJson.ucscGenomes?.[targetAssembly]?.organism || ''
+        commonName = listJson.ucscGenomes?.[targetAssembly]?.organism ?? ''
       } catch (error) {
         console.warn(
           `Warning: Could not read organism information for ${targetAssembly}`,
@@ -243,8 +243,4 @@ async function processChainFile(
   }
 }
 
-// Run the main function
-main().catch(error => {
-  console.error(`Error: ${error}`)
-  process.exit(1)
-})
+main()

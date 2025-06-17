@@ -1,4 +1,4 @@
-import Container from './Container'
+import Container from './Container.tsx'
 
 export default function LoadingMessage() {
   return (
