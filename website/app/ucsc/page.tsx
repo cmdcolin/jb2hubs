@@ -15,7 +15,6 @@ import Link from 'next/link'
 import list from './list.json'
 import Container from '../components/Container.tsx'
 
-
 import '../components/table.css'
 
 export default function UCSC() {
