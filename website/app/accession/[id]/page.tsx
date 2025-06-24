@@ -7,6 +7,7 @@ import slugify from 'slugify'
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
 import Container from '../../components/Container.tsx'
 import { tryAndReadJSON, tryAndReadText } from '../../components/util.ts'
+import { Metadata } from 'next'
 
 function Link2({
   href,
@@ -22,7 +23,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ id: string }>
-}) {
+}): Promise<Metadata> {
   const { id } = await params
   const ret = await getAccessionById(id)
   if (!ret) {
