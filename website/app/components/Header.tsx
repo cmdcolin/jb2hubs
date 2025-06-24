@@ -1,17 +1,12 @@
 'use client'
 
-import { useRef } from 'react'
+import { useState } from 'react'
 
 import Link from 'next/link'
 
 export default function Header() {
-  const dropdownRef = useRef<HTMLDetailsElement>(null)
+  const [open, setOpen] = useState(false)
 
-  const closeDropdown = () => {
-    if (dropdownRef.current) {
-      dropdownRef.current.open = false
-    }
-  }
   return (
     <div className="navbar">
       <div className="navbar-start">
@@ -20,16 +15,16 @@ export default function Header() {
         </Link>
         <ul className="menu menu-horizontal px-1">
           <li>
-            <details ref={dropdownRef}>
+            <details open={open} onClick={() => setOpen(!open)}>
               <summary>Genomes</summary>
               <ul className="p-2">
                 <li>
-                  <Link href="/ucsc" onClick={closeDropdown}>
+                  <Link href="/ucsc" onClick={() => setOpen(false)}>
                     Main browsers
                   </Link>
                 </li>
                 <li>
-                  <Link href="/genark" onClick={closeDropdown}>
+                  <Link href="/genark" onClick={() => setOpen(false)}>
                     GenArk browsers
                   </Link>
                 </li>
