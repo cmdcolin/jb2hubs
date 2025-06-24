@@ -1822,6 +1822,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "musFur1_to_galGal6_chain",
+      "name": "musFur1 to Chicken (galGal6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["musFur1", "galGal6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "musFur1",
+        "queryAssembly": "galGal6",
+        "pifGzLocation": {
+          "uri": "liftOver/musFur1ToGalGal6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/musFur1ToGalGal6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "musFur1_to_hg19_chain",
       "name": "musFur1 to Human (hg19) liftOver chain",
       "category": ["Liftover"],
@@ -1878,6 +1899,27 @@
         "index": {
           "location": {
             "uri": "liftOver/musFur1ToLepWed1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "musFur1_to_mm10_chain",
+      "name": "musFur1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["musFur1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "musFur1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/musFur1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/musFur1ToMm10.over.pif.gz.csi"
           },
           "indexType": "CSI"
         }

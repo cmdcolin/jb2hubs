@@ -62932,6 +62932,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "mm10_to_musFur1_chain",
+      "name": "mm10 to Ferret  (musFur1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["mm10", "musFur1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm10",
+        "queryAssembly": "musFur1",
+        "pifGzLocation": {
+          "uri": "liftOver/mm10ToMusFur1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/mm10ToMusFur1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "mm10_to_myoLuc2_chain",
       "name": "mm10 to myoLuc2 liftOver chain",
       "category": ["Liftover"],

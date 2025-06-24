@@ -26344,6 +26344,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "hg38_to_GCF_964237555.1_chain",
+      "name": "hg38 to rabbit (primary hap 2024 refseq) (GCF_964237555.1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38", "GCF_964237555.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "GCF_964237555.1",
+        "pifGzLocation": {
+          "uri": "liftOver/hg38ToGCF_964237555.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg38ToGCF_964237555.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "hg38_to_gadMor1_chain",
       "name": "hg38 to Atlantic cod (gadMor1) liftOver chain",
       "category": ["Liftover"],
