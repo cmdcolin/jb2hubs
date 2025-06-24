@@ -18,5 +18,4 @@ export -f process_assembly
 export OUT
 
 # Use GNU parallel to process assemblies in parallel
-echo "createAssemblies"
 parallel --bar process_assembly ::: "$@"

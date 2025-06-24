@@ -52,5 +52,7 @@ fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel --bar -I {} 'cp {
 echo "Merging all configs"
 node src/mergeAll.ts
 
+sort -o blockedFiles.txt blockedFiles.txt
+
 npx @biomejs/biome format --write ../
 echo "Done!"
