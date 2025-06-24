@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo, useState, useEffect } from 'react'
+import { useMemo, useState, useEffect, useRef } from 'react'
 
 import {
   type SortingState,
@@ -17,16 +17,9 @@ import Container from '../components/Container.tsx'
 
 import '../components/table.css'
 
-export default function UCSC() {
-  // Create state for sorting
-  const [sorting, setSorting] = useState<SortingState>([])
-  // State to track selected entry for each organism
-  const [selectedEntries, setSelectedEntries] = useState<
-    Record<string, string>
-  >({})
-
-  // Group data by organism
-  const groupedByOrganism = useMemo(() => {
+// Custom hook to group data by organism
+function useGroupedByOrganism() {
+  return useMemo(() => {
     const grouped: Record<
       string,
       Array<{
@@ -64,39 +57,64 @@ export default function UCSC() {
 
     return grouped
   }, [])
+}
 
-  // Initialize selected entries if not already set
+// Custom hook to initialize and manage selected entries
+function useSelectedEntries(groupedByOrganism: Record<string, any[]> | undefined) {
+  // We use a ref to track whether we've initialized the entries
+  // This prevents re-initializing on every render
+  const initializedRef = useRef(false)
+  const [selectedEntries, setSelectedEntries] = useState<Record<string, string>>({})
+
+  // Initialize selected entries with default values only when groupedByOrganism changes
   useEffect(() => {
-    // Skip if groupedByOrganism is undefined
-    if (!groupedByOrganism) return
-
-    const newSelectedEntries = { ...selectedEntries }
+    // Skip if we don't have data or if we've already initialized
+    if (!groupedByOrganism || initializedRef.current) return
+    
+    // Mark as initialized
+    initializedRef.current = true
+    
+    const newSelectedEntries: Record<string, string> = {}
 
     // Loop through all organisms and set default selections
-    // TypeScript doesn't understand we've already checked groupedByOrganism is defined
-    Object.entries(groupedByOrganism as Record<string, any[]>).forEach(
-      ([organism, entries]) => {
-        if (!newSelectedEntries[organism] && entries && entries.length > 0) {
-          // Select the entry with the lowest orderKey by default
-          const sortedEntries = [...entries].sort(
-            (a, b) => a.orderKey - b.orderKey,
-          )
-          if (sortedEntries.length > 0 && sortedEntries[0]) {
-            newSelectedEntries[organism] = sortedEntries[0].name
-          }
+    Object.entries(groupedByOrganism).forEach(([organism, entries]) => {
+      if (entries && entries.length > 0) {
+        // Select the entry with the lowest orderKey by default
+        const sortedEntries = [...entries].sort(
+          (a, b) => a.orderKey - b.orderKey,
+        )
+        if (sortedEntries.length > 0 && sortedEntries[0]) {
+          newSelectedEntries[organism] = sortedEntries[0].name
         }
-      },
-    )
+      }
+    })
 
-    setSelectedEntries(newSelectedEntries)
-  }, [groupedByOrganism, selectedEntries])
+    // Only set if we have entries to set
+    if (Object.keys(newSelectedEntries).length > 0) {
+      setSelectedEntries(newSelectedEntries)
+    }
+  }, [groupedByOrganism]) // Only depend on groupedByOrganism, not on selectedEntries
 
-  // Transform the grouped data for the table
-  const data = useMemo(() => {
+  // Handle selection change
+  const handleSelectChange = (organism: string, entryName: string) => {
+    setSelectedEntries(prev => ({
+      ...prev,
+      [organism]: entryName,
+    }))
+  }
+
+  return { selectedEntries, handleSelectChange }
+}
+
+// Custom hook to transform data for the table
+function useTableData(
+  groupedByOrganism: Record<string, any[]> | undefined,
+  selectedEntries: Record<string, string>,
+) {
+  return useMemo(() => {
     if (!groupedByOrganism) return []
 
-    // Use type assertion to tell TypeScript that groupedByOrganism is defined
-    return Object.entries(groupedByOrganism as Record<string, any[]>)
+    return Object.entries(groupedByOrganism)
       .map(([organism, entries]) => {
         if (!entries || entries.length === 0) {
           return null // Skip empty entries
@@ -158,14 +176,16 @@ export default function UCSC() {
       orderKey: number
     }>
   }, [groupedByOrganism, selectedEntries])
+}
 
-  // Handle selection change
-  const handleSelectChange = (organism: string, entryName: string) => {
-    setSelectedEntries(prev => ({
-      ...prev,
-      [organism]: entryName,
-    }))
-  }
+export default function UCSC() {
+  // Create state for sorting
+  const [sorting, setSorting] = useState<SortingState>([])
+  
+  // Use our custom hooks
+  const groupedByOrganism = useGroupedByOrganism()
+  const { selectedEntries, handleSelectChange } = useSelectedEntries(groupedByOrganism)
+  const data = useTableData(groupedByOrganism, selectedEntries)
 
   // Define columns for TanStack Table
   const columnHelper = createColumnHelper<(typeof data)[0]>()

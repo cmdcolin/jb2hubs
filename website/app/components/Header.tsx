@@ -4,7 +4,8 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 
 import Link from 'next/link'
 
-// method for tracking open state from https://stackoverflow.com/a/76884775/2129219
+// method for tracking open state from
+// https://stackoverflow.com/a/76884775/2129219
 function GenomesDropdown() {
   const [open, setOpen] = useState(false)
   const detailsRef = useRef<HTMLDetailsElement>(null)
@@ -23,7 +24,7 @@ function GenomesDropdown() {
   }, [onToggleCallback])
   return (
     <details className="dropdown" open={open} ref={detailsRef}>
-      <summary className="btn m-1">Genomes</summary>
+      <summary className="m-1">Genomes</summary>
       <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
         <li>
           <Link href="/ucsc" onClick={() => setOpen(false)}>
