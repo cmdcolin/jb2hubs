@@ -1,8 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.4.1/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
   "linter": {
     "enabled": true,
     "rules": {
@@ -24,7 +21,6 @@
     }
   },
   "files": {
-    "maxSize": 100000000,
-    "ignore": ["website/.next/**"]
+    "maxSize": 100000000
   }
 }
