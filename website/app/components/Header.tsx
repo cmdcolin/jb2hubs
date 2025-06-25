@@ -22,9 +22,27 @@ function GenomesDropdown() {
       detailsRef.current?.removeEventListener('toggle', onToggleCallback)
     }
   }, [onToggleCallback])
+
+  // Add click away listener to close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (detailsRef.current && !detailsRef.current.contains(event.target as Node) && open) {
+        setOpen(false)
+        // Need to manually close the details element since we're bypassing the toggle event
+        if (detailsRef.current) {
+          detailsRef.current.open = false
+        }
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [open])
   return (
-    <details className="dropdown" open={open} ref={detailsRef}>
-      <summary className="m-1">Genomes</summary>
+    <details className="dropdown cursor-pointer" open={open} ref={detailsRef}>
+      <summary>Genomes</summary>
       <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
         <li>
           <Link href="/ucsc" onClick={() => setOpen(false)}>
