@@ -18,10 +18,8 @@ import Container from '../components/Container.tsx'
 import '../components/table.css'
 
 export default function UCSC() {
-  // Create state for sorting
   const [sorting, setSorting] = useState<SortingState>([])
 
-  // Transform the data for the table
   const data = useMemo(() => {
     return Object.entries(list.ucscGenomes).map(([key, val]) => ({
       name: key,
@@ -84,9 +82,9 @@ export default function UCSC() {
       <h1>Main UCSC browsers</h1>
       <table>
         <thead>
-          {table.getHeaderGroups().map(headerGroup => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map(header => (
+          {table.getHeaderGroups().map(group => (
+            <tr key={group.id}>
+              {group.headers.map(header => (
                 <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}

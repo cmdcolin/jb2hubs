@@ -72,7 +72,7 @@ export default function Home() {
         <h2>GenArk browsers</h2>
         <div>
           We have created JBrowse portals for all the UCSC GenArk browsers,
-          which are trackhubs generated from NCBI assemblies. Please see
+          which are trackhubs generated from NCBI assemblies. Please see{' '}
           <Link href="/genark">GenArk</Link>
         </div>
         <GenArkMainTable />
