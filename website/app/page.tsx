@@ -1,19 +1,19 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import Container from './components/Container.tsx'
-import GenArkMainTable from './components/GenArkMainTable.tsx'
-import list from './ucsc/list.json'
+import Container from "./components/Container.tsx";
+import GenArkMainTable from "./components/GenArkMainTable.tsx";
+import list from "./ucsc/list.json";
 
-import './components/table.css'
+import "./components/table.css";
 
 export default function Home() {
-  const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
+  const s = new Set(["hg38", "hg19", "hs1", "mm39", "mm10"]);
   return (
     <Container>
       <h1>JBrowse 2 hubs</h1>
       <p>
         This page has a variety of data resources focused on data import from
-        UCSC for creating JBrowse 2 genome browsers. For information, see the{' '}
+        UCSC for creating JBrowse 2 genome browsers. For information, see the{" "}
         <Link href="/about">about</Link> page.
       </p>
       <div>
@@ -55,16 +55,26 @@ export default function Home() {
                       </Link>
                     </td>
                   </tr>
-                )
+                );
               })}
           </tbody>
         </table>
         <p>
-          <Link href="/ucsc">
-            Click here for full list of main UCSC genome browsers
-          </Link>
-          . Note that some tracks/files are not available, see{' '}
-          <Link href="/unavailableTracks">unavailable tracks</Link>
+          <ul>
+            <li>
+              <Link href="/ucsc">Click here</Link> for a more complete listing
+            </li>
+            <li>
+              <Link href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">
+                Click here
+              </Link>{" "}
+              for single JBrowse 2 instance containing ALL the species. This is
+              the instance you should use if you want to browse synteny datasets
+              that compare different species
+            </li>
+          </ul>
+          Note that some tracks/files are not available, see{" "}
+          <Link href="/unavailableTracks">unavailable tracks</Link>{" "}
         </p>
       </div>
 
@@ -72,7 +82,7 @@ export default function Home() {
         <h2>GenArk browsers</h2>
         <div>
           We have created JBrowse portals for all the UCSC GenArk browsers,
-          which are trackhubs generated from NCBI assemblies. Please see{' '}
+          which are trackhubs generated from NCBI assemblies. Please see{" "}
           <Link href="/genark">GenArk</Link>
         </div>
         <GenArkMainTable />
@@ -81,7 +91,7 @@ export default function Home() {
       <div>
         <h2>Citing resources:</h2>
         <p>
-          To reference this resource, please cite:{' '}
+          To reference this resource, please cite:{" "}
           <i>
             JBrowse 2: a modular genome browser with views of synteny and
             structural variation. Genome Biology (2023).
@@ -91,10 +101,10 @@ export default function Home() {
           </i>
         </p>
         <p>
-          To reference UCSC GenArk resources in publications, please cite:{' '}
+          To reference UCSC GenArk resources in publications, please cite:{" "}
           <i>
             GenArk: towards a million UCSC genome browsers. Genome Biology
-            (2023).{' '}
+            (2023).{" "}
             <Link href="https://doi.org/10.1186/s13059-023-03057-x">
               https://doi.org/10.1186/s13059-023-03057-x
             </Link>
@@ -120,9 +130,9 @@ export default function Home() {
         </p>
       </div>
       <div className="mt-20">
-        Feel free to contact or report issues to{' '}
+        Feel free to contact or report issues to{" "}
         <Link href="https://github.com/cmdcolin/jb2hubs/">Github</Link>
       </div>
     </Container>
-  )
+  );
 }
