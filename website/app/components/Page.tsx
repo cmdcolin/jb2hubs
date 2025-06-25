@@ -3,7 +3,7 @@ import { Suspense } from 'react'
 import path from 'path'
 
 import { readJSON } from './util.ts'
-import DataTable from '../components/DataTable.tsx'
+import DataTable from './DataTable.tsx'
 
 import type { AssemblyData } from './util'
 

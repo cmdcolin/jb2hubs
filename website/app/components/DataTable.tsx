@@ -20,6 +20,7 @@ import {
 } from 'nuqs'
 
 import './table.css'
+import TableOptions from './TableOptions'
 
 import type { AssemblyData } from './util'
 
@@ -31,13 +32,17 @@ const statusOrder = {
   Contig: 4,
 }
 
-const filterCategories = {
-  all: 'All',
-  refseq: 'RefSeq only',
-  genbank: 'GenBank only',
-  designatedReference: 'Designated reference only',
-  hidesuppressed: 'Hide suppressed',
+function OrangeStar() {
+  return <Star fill="orange" strokeWidth={0} className="w-[1em] h-[1em]" />
 }
+
+function RedX() {
+  return <X stroke="red" className="w-[1em] h-[1em]" />
+}
+
+// Import filterCategories from TableOptions
+import { filterCategories } from './TableOptions'
+import { Star, X } from 'lucide-react'
 
 // List accepted values
 const sortOrder = ['asc', 'desc', ''] as const
@@ -130,10 +135,14 @@ export default function DataTable({
       columnHelper.accessor('commonName', {
         header: () => (
           <div>
-            <div style={{ float: 'left' }}>Common Name</div>
-            <div style={{ float: 'right' }}>
-              <div>★ == &quot;designated reference&quot;</div>
-              <div>X == &quot;refseq suppressed&quot;</div>
+            <div className="float-left">Common Name</div>
+            <div className="float-right">
+              <div>
+                <OrangeStar /> == &quot;designated reference&quot;
+              </div>
+              <div>
+                <RedX /> == &quot;refseq suppressed&quot;
+              </div>
             </div>
           </div>
         ),
@@ -146,10 +155,10 @@ export default function DataTable({
             >
               (info)
             </Link>{' '}
-            {info.row.original.ncbiRefSeqCategory === 'reference genome'
-              ? '★'
-              : null}
-            {info.row.original.suppressed ? 'X' : null}
+            {info.row.original.ncbiRefSeqCategory === 'reference genome' ? (
+              <OrangeStar />
+            ) : null}
+            {info.row.original.suppressed ? <RedX /> : null}
           </>
         ),
         enableSorting: true,
@@ -195,7 +204,6 @@ export default function DataTable({
       }),
       columnHelper.accessor('assemblyStatus', {
         header: 'Assembly status',
-        cell: info => info.getValue(),
         enableSorting: true,
         sortingFn: (
           rowA: Row<NonNullable<AssemblyData>>,
@@ -214,7 +222,6 @@ export default function DataTable({
       }),
       columnHelper.accessor('submitterOrg', {
         header: 'Submitter',
-        cell: info => info.getValue(),
         enableSorting: false,
         meta: { extra: true },
       }),
@@ -225,26 +232,14 @@ export default function DataTable({
       }),
       columnHelper.accessor('scientificName', {
         header: 'Scientific name',
-        cell: info => (
-          <div
-            style={{
-              display: 'flex',
-              justifyContent: 'space-between',
-            }}
-          >
-            <div>{info.getValue()}</div>
-          </div>
-        ),
         enableSorting: true,
       }),
       columnHelper.accessor('ncbiAssemblyName', {
         header: 'NCBI assembly name',
-        cell: info => info.getValue(),
         enableSorting: true,
       }),
       columnHelper.accessor('accession', {
         header: 'Accession',
-        cell: info => info.getValue(),
         enableSorting: true,
       }),
       columnHelper.accessor('taxonId', {
@@ -304,62 +299,12 @@ export default function DataTable({
 
   return (
     <>
-      <div>
-        <div>
-          {Object.entries(filterCategories).map(([key, val]) => (
-            <label
-              key={key}
-              style={{
-                marginRight: 15,
-              }}
-            >
-              <input
-                type="radio"
-                name="databaseFilter"
-                value={key}
-                checked={filterOption === key}
-                onChange={() => {
-                  // eslint-disable-next-line @typescript-eslint/no-floating-promises
-                  setFilterOption(key as keyof typeof filterCategories)
-                }}
-              />
-              {val}
-            </label>
-          ))}
-        </div>
-        <div>
-          <label
-            style={{
-              marginRight: '15px',
-            }}
-          >
-            <input
-              type="radio"
-              checked={!showAllColumns}
-              onChange={() => {
-                // eslint-disable-next-line @typescript-eslint/no-floating-promises
-                setShowAllColumns(false)
-              }}
-            />
-            Show essential columns
-          </label>
-          <label
-            style={{
-              marginRight: '15px',
-            }}
-          >
-            <input
-              type="radio"
-              checked={showAllColumns}
-              onChange={() => {
-                // eslint-disable-next-line @typescript-eslint/no-floating-promises
-                setShowAllColumns(true)
-              }}
-            />
-            Show all columns
-          </label>
-        </div>
-      </div>
+      <TableOptions
+        filterOption={filterOption}
+        setFilterOption={setFilterOption}
+        showAllColumns={showAllColumns}
+        setShowAllColumns={setShowAllColumns}
+      />
 
       <div>
         <table>
