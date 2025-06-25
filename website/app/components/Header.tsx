@@ -1,6 +1,7 @@
 import Link from 'next/link'
-import GenomesDropdown from './GenomesDropdown'
-import AboutDropdown from './AboutDropdown'
+
+import AboutDropdown from './AboutDropdown.tsx'
+import GenomesDropdown from './GenomesDropdown.tsx'
 
 export default function Header() {
   return (

@@ -1,5 +1,6 @@
 import path from 'path'
 
+import { Metadata } from 'next'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import slugify from 'slugify'
@@ -7,7 +8,6 @@ import slugify from 'slugify'
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
 import Container from '../../components/Container.tsx'
 import { tryAndReadJSON, tryAndReadText } from '../../components/util.ts'
-import { Metadata } from 'next'
 
 function Link2({
   href,

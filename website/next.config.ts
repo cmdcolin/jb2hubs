@@ -1,3 +1,4 @@
+import MillionLint from '@million/lint'
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
@@ -9,4 +10,4 @@ const nextConfig: NextConfig = {
   },
 }
 
-export default nextConfig
+export default MillionLint.next({ rsc: true })(nextConfig)

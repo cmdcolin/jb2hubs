@@ -1,59 +1,30 @@
 'use client'
-
-import { useCallback, useEffect, useRef, useState } from 'react'
-
 import Link from 'next/link'
 
 // method for tracking open state from
 // https://stackoverflow.com/a/76884775/2129219
 export default function AboutDropdown() {
-  const [open, setOpen] = useState(false)
-  const detailsRef = useRef<HTMLDetailsElement>(null)
-  const onToggleCallback = useCallback(() => {
-    if (detailsRef.current) {
-      setOpen(detailsRef.current.open)
-    }
-  }, [])
-
-  useEffect(() => {
-    detailsRef.current?.addEventListener('toggle', onToggleCallback)
-
-    return () => {
-      detailsRef.current?.removeEventListener('toggle', onToggleCallback)
-    }
-  }, [onToggleCallback])
-
-  // Add click away listener to close dropdown when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        detailsRef.current &&
-        !detailsRef.current.contains(event.target as Node) &&
-        open
-      ) {
-        setOpen(false)
-        // Need to manually close the details element since we're bypassing the toggle event
-        if (detailsRef.current) {
-          detailsRef.current.open = false
-        }
-      }
-    }
-
-    document.addEventListener('mousedown', handleClickOutside)
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [open])
   return (
-    <details className="dropdown cursor-pointer" open={open} ref={detailsRef}>
-      <summary className="m-1 ml-5">Help</summary>
-      <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+    <div className="dropdown dropdown-start">
+      <div tabIndex={0} role="button" className="btn btn-ghost m-1">
+        Help
+      </div>
+      <ul
+        tabIndex={0}
+        className="menu dropdown-content bg-base-200 rounded-box z-1 mt-4 w-52 p-2 shadow-sm"
+      >
         <li>
-          <Link href="/about" onClick={() => setOpen(false)}>
+          <Link
+            href="/about"
+            onClick={() => {
+              // @ts-expect-error
+              document.activeElement.blur()
+            }}
+          >
             About
           </Link>
         </li>
       </ul>
-    </details>
+    </div>
   )
 }
