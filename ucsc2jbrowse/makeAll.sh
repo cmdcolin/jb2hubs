@@ -43,6 +43,9 @@ echo "Create hs1 GFF file and index"
 echo "Create chain tracks"
 find ~/ucsc/ -maxdepth 1 -mindepth 1 -type d | parallel -j3 --bar 'node src/createChainTracks.ts -a $(basename {})'
 
+echo "Create pairwise tracks"
+find ~/ucsc/ -maxdepth 1 -mindepth 1 -type d | parallel -j3 --bar './createPairwiseChainTracks.sh'
+a
 echo "Hashing files"
 find ~/ucscResults/ -type f | grep -v "meta.json" | grep -v "\.hash" | parallel --bar xxh128sum | sort -k2,2 >fileListing.txt
 
