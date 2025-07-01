@@ -91,7 +91,8 @@ while read -r assembly_path; do
   ./createChainTrackPifs.sh liftOver "$assembly" "$UCSC_RESULTS_DIR"
   ./createChainTrackPifs.sh pairwise "$assembly" "$UCSC_RESULTS_DIR"
   log "Updating chain track configs for $assembly..."
-  node src/createChainTracks.ts -a "$assembly" -o "$UCSC_RESULTS_DIR"
+  node src/createChainTracks.ts -a "$assembly" --source liftOver -o "$UCSC_RESULTS_DIR"
+  node src/createChainTracks.ts -a "$assembly" --source vs -o "$UCSC_RESULTS_DIR"
 
 done < <(find "$UCSC_DATA_DIR" -maxdepth 1 -mindepth 1 -type d)
 
@@ -106,8 +107,5 @@ node src/mergeAll.ts
 
 log "Sorting the list of blocked files..."
 sort -o blockedFiles.txt blockedFiles.txt
-
-log "Formatting the codebase..."
-npx @biomejs/biome format --write ../
 
 log "Pipeline finished successfully!"
