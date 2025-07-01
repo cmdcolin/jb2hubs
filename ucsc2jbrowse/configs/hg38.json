@@ -26575,6 +26575,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "hg38_to_gorGor6_chain",
+      "name": "hg38 to Gorilla (gorGor6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["hg38", "gorGor6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "gorGor6",
+        "pifGzLocation": {
+          "uri": "liftOver/hg38ToGorGor6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg38ToGorGor6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "hg38_to_hapBur1_chain",
       "name": "hg38 to hapBur1 liftOver chain",
       "category": ["Liftover"],
