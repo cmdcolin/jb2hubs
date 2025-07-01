@@ -1,61 +1,113 @@
 #!/bin/bash
 
-export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
+#
+# makeAll.sh
+#
+# Main orchestration script to download, process, and configure UCSC data for JBrowse.
+#
+
+set -euo pipefail
+
+# --- Configuration ---
+
+# Set the root directory for UCSC data and results.
+# Can be overridden by setting the environment variable.
+: ${UCSC_DATA_DIR:=~/ucsc}
+: ${UCSC_RESULTS_DIR:=~/ucscResults}
+
+# Ensure the script's path is in the PATH for tool access.
 export PATH=$(pwd):$PATH
-mkdir -p ~/ucscResults
+
+# Suppress Node.js experimental warnings.
+export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
+
+# --- Functions ---
+
+# Logs a message with a timestamp.
+log() {
+  echo "[$(date +'%Y-%m-%d %H:%M:%S')] $1"
+}
+
+# Creates a directory if it doesn't exist.
+# $1: Directory path
+ensure_dir() {
+  mkdir -p "$1"
+}
+
+# --- Main Script ---
+
+log "Starting the UCSC to JBrowse data processing pipeline."
+
+# Create necessary directories.
+ensure_dir "$UCSC_RESULTS_DIR"
+ensure_dir "configs"
+
+# Clear the blocked files list at the start of a run.
 rm -f blockedFiles.txt
-curl -s https://api.genome.ucsc.edu/list/ucscGenomes >~/ucscResults/list.json
-curl -s https://api.genome.ucsc.edu/list/ucscGenomes | jq . >../website/app/ucsc/list.json
 
-echo "Create initial assemblies for golden path"
-./createAssemblies.sh ~/ucsc/*
+log "Fetching latest UCSC genome list..."
+curl -s https://api.genome.ucsc.edu/list/ucscGenomes >"$UCSC_RESULTS_DIR/list.json"
+# Create a copy for the website.
+cp "$UCSC_RESULTS_DIR/list.json" ../website/app/ucsc/list.json
 
-echo "Extract tracks from trackDb for golden path"
-./createTracksJsonForGoldenPath.sh ~/ucsc/*
+log "Creating initial assembly configurations..."
+./createAssemblies.sh "$UCSC_DATA_DIR"/*
 
-echo "Create BED tracks for golden path"
-./createBedTracksForGoldenPath.sh ~/ucsc/*
+log "Extracting track definitions from trackDb..."
+./createTracksJsonForGoldenPath.sh "$UCSC_DATA_DIR"/*
 
-echo "Create repeatmasker tracks for golden path"
-./createRmskTracksForGoldenPath.sh ~/ucsc/*
+log "Creating BED tracks..."
+./createBedTracksForGoldenPath.sh "$UCSC_DATA_DIR"/*
 
-echo "Create gene tracks for golden path"
-./createGeneTracksForGoldenPath.sh ~/ucsc/*
+log "Creating RepeatMasker tracks..."
+./createRmskTracksForGoldenPath.sh "$UCSC_DATA_DIR"/*
 
-echo "Create configs for golden path"
-./createConfigsForGoldenPath.sh ~/ucsc/*
+log "Creating gene tracks..."
+./createGeneTracksForGoldenPath.sh "$UCSC_DATA_DIR"/*
 
-echo "Text indexing"
-./textIndexGoldenPath.sh ~/ucscResults/*
+log "Generating JBrowse track configurations..."
+./createConfigsForGoldenPath.sh "$UCSC_DATA_DIR"/*
 
-echo "Adding metadata to tracks"
-./addMetadata.sh ~/ucscResults/*
+log "Performing text indexing for search..."
+./textIndexGoldenPath.sh "$UCSC_RESULTS_DIR"/*
 
-echo "Creating trackHub configs"
+log "Adding metadata to tracks..."
+./addMetadata.sh "$UCSC_RESULTS_DIR"/*
+
+log "Creating configurations from track hubs..."
 ./makeTrackHubConfigs.sh
 
-echo "Adding non-UCSC 'extension' tracks"
-node src/makeUcscExtensions.ts ~/ucscResults
+log "Adding non-UCSC 'extension' tracks..."
+node src/makeUcscExtensions.ts "$UCSC_RESULTS_DIR"
 
-echo "Create hs1 GFF file and index"
+log "Downloading and processing hs1 GFF..."
 ./downloadNcbiGff.sh
 
-echo "Create chain tracks"
-find ~/ucsc/ -maxdepth 1 -mindepth 1 -type d | parallel -j3 --bar 'node src/createChainTracks.ts -a $(basename {})'
+log "Creating chain track PIFs..."
+# Process both liftOver and pairwise chains for each assembly.
+while read -r assembly_path; do
+  assembly=$(basename "$assembly_path")
+  log "Processing chains for $assembly..."
+  ./createChainTrackPifs.sh liftOver "$assembly" "$UCSC_RESULTS_DIR"
+  ./createChainTrackPifs.sh pairwise "$assembly" "$UCSC_RESULTS_DIR"
+  log "Updating chain track configs for $assembly..."
+  node src/createChainTracks.ts -a "$assembly" -o "$UCSC_RESULTS_DIR"
 
-echo "Create pairwise tracks"
-find ~/ucsc/ -maxdepth 1 -mindepth 1 -type d | parallel -j3 --bar './createPairwiseChainTracks.sh'
-a
-echo "Hashing files"
-find ~/ucscResults/ -type f | grep -v "meta.json" | grep -v "\.hash" | parallel --bar xxh128sum | sort -k2,2 >fileListing.txt
+done < <(find "$UCSC_DATA_DIR" -maxdepth 1 -mindepth 1 -type d)
 
-echo "Copying generated configs files into this repo for version control inspection"
-fd config.json ~/ucscResults/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'
+log "Hashing all output files for integrity checking..."
+find "$UCSC_RESULTS_DIR"/ -type f ! -name "meta.json" ! -name "*.hash" | parallel --bar xxh128sum | sort -k2,2 >fileListing.txt
 
-echo "Merging all configs"
+log "Copying generated config files to the local 'configs' directory..."
+fd config.json "$UCSC_RESULTS_DIR"/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'
+
+log "Merging all assembly configs into a single file..."
 node src/mergeAll.ts
 
+log "Sorting the list of blocked files..."
 sort -o blockedFiles.txt blockedFiles.txt
 
+log "Formatting the codebase..."
 npx @biomejs/biome format --write ../
-echo "Done!"
+
+log "Pipeline finished successfully!"
