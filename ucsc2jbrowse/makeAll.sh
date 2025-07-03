@@ -89,10 +89,10 @@ while read -r assembly_path; do
   assembly=$(basename "$assembly_path")
   log "Processing chains for $assembly..."
   ./createChainTrackPifs.sh liftOver "$assembly" "$UCSC_RESULTS_DIR"
-  ./createChainTrackPifs.sh pairwise "$assembly" "$UCSC_RESULTS_DIR"
+  # ./createChainTrackPifs.sh pairwise "$assembly" "$UCSC_RESULTS_DIR"
   log "Updating chain track configs for $assembly..."
   node src/createChainTracks.ts -a "$assembly" --source liftOver -o "$UCSC_RESULTS_DIR"
-  node src/createChainTracks.ts -a "$assembly" --source vs -o "$UCSC_RESULTS_DIR"
+  # node src/createChainTracks.ts -a "$assembly" --source vs -o "$UCSC_RESULTS_DIR"
 
 done < <(find "$UCSC_DATA_DIR" -maxdepth 1 -mindepth 1 -type d)
 
