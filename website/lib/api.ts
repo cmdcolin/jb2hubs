@@ -31,7 +31,7 @@ export async function getAllAccessions() {
         path.join(process.cwd(), 'processedHubJson', 'all.json'),
       )
     )
-      .filter(f => !!f)
+      .filter(f => !!f && f.accession)
       .map(entry => ({ id: entry.accession })),
   )
 }
