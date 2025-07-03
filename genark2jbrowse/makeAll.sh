@@ -125,7 +125,7 @@ sleep 1 # Small pause
 
 # --- Step 8: Format Codebase ---
 
-echo "Formatting codebase with Biome..."
+echo "Formatting codebase..."
 cd ..
 yarn format
 cd -
