@@ -1,46 +1,54 @@
 import fs from 'fs'
 import zlib from 'zlib'
 
-import { getColNames } from './utils/getColNames.ts'
-import { parseTableLine } from './utils/parseTableLine.ts'
+import { getColNames } from './utils/getColNames'
+import { parseTableLine } from './utils/parseTableLine'
 
-export function parseLineByLine(
-  buffer: Uint8Array,
-  cb: (line: string) => void,
-) {
+/**
+ * Parses a buffer line by line and applies a callback function.
+ * Handles multi-line entries that are split by a backslash.
+ * @param buffer The Uint8Array buffer to parse.
+ * @param cb The callback function to apply to each line.
+ */
+function parseLineByLine(buffer: Uint8Array, cb: (line: string) => void) {
   let blockStart = 0
   const decoder = new TextDecoder('utf8')
+  let currentLine = ''
 
   while (blockStart < buffer.length) {
-    const n = buffer.indexOf(10, blockStart)
-    const b = n === -1 ? buffer.slice(blockStart) : buffer.slice(blockStart, n)
-    blockStart = n + 1
+    const newlineIndex = buffer.indexOf(10, blockStart) // Find newline character (LF)
+    const lineEnd = newlineIndex === -1 ? buffer.length : newlineIndex
+    const lineBuffer = buffer.slice(blockStart, lineEnd)
+    blockStart = lineEnd + 1
 
-    const line = decoder.decode(b).trim()
+    const decodedLine = decoder.decode(lineBuffer).trim()
 
-    // a literal \n in the gene name like Dmel\nt2 was
-    // converted to a newline probably, join with next
-    // line. be mindful also of the carriage return case.
-    // this is a particular oddity with ucsc database dumps
-    if (line.endsWith('\\')) {
-      const n = buffer.indexOf(10, blockStart)
-      const b =
-        n === -1 ? buffer.slice(blockStart) : buffer.slice(blockStart, n)
-
-      const line2 = decoder.decode(b).trim()
-      blockStart = n + 1
-      cb((line + 'n' + line2).replace(/\r/g, '\\r'))
-    } else if (line) {
-      cb(line.replace(/\r/g, '\\r'))
+    if (decodedLine.endsWith('\\')) {
+      // If line ends with a backslash, it's a continuation
+      currentLine += decodedLine.slice(0, -1) + ' ' // Remove backslash and add space
+    } else {
+      // Process the complete line
+      cb((currentLine + decodedLine).replace(/\r/g, '\\r'))
+      currentLine = '' // Reset for next line
     }
+  }
+  // Process any remaining content in currentLine after loop finishes
+  if (currentLine) {
+    cb(currentLine.replace(/\r/g, '\\r'))
   }
 }
 
-export function genBed12(sql: string, txtGz: string) {
-  const cols = getColNames(fs.readFileSync(sql, 'utf8'))
-  const ret = zlib.gunzipSync(fs.readFileSync(txtGz))
+/**
+ * Generates a BED12-like output from a SQL schema file and a gzipped text file.
+ * @param sqlFilePath The path to the SQL schema file.
+ * @param txtGzFilePath The path to the gzipped text file.
+ */
+function generateBed12(sqlFilePath: string, txtGzFilePath: string) {
+  const cols = getColNames(fs.readFileSync(sqlFilePath, 'utf8'))
+  const gzippedContent = fs.readFileSync(txtGzFilePath)
+  const unzippedContent = zlib.gunzipSync(gzippedContent)
 
-  parseLineByLine(ret, line => {
+  parseLineByLine(unzippedContent, line => {
     const {
       chrom,
       txStart,
@@ -54,24 +62,24 @@ export function genBed12(sql: string, txtGz: string) {
       cdsEnd,
       exonEnds,
     } = parseTableLine(line, cols.colNames)
-    const sizes = []
-    let s: any
-    try {
-      s = exonStarts!
-        .split(',')
-        .filter(f => !!f)
-        .map(r => +r - +txStart!)
-    } catch (e) {
-      console.error({ line, exonStarts, p: process.argv })
-      throw e
-    }
-    const e = exonEnds!
-      .split(',')
+
+    const starts = exonStarts
+      ?.split(',')
       .filter(f => !!f)
       .map(r => +r - +txStart!)
-    for (let i = 0; i < s.length; i++) {
-      sizes.push(e[i]! - s[i]!)
+
+    const ends = exonEnds
+      ?.split(',')
+      .filter(f => !!f)
+      .map(r => +r - +txStart!)
+
+    const sizes: number[] = []
+    if (starts && ends) {
+      for (let i = 0; i < starts.length; i++) {
+        sizes.push(ends[i]! - starts[i]!)
+      }
     }
+
     process.stdout.write(
       [
         chrom,
@@ -83,13 +91,20 @@ export function genBed12(sql: string, txtGz: string) {
         cdsStart,
         cdsEnd,
         '0,0,0',
-        s.length,
+        starts?.length || 0,
         sizes.join(','),
-        s.join(','),
+        starts?.join(','),
         name2,
       ].join('\t') + '\n',
     )
   })
 }
 
-genBed12(process.argv[2]!, process.argv[3]!)
+if (require.main === module) {
+  if (process.argv.length !== 4) {
+    console.error('Usage: ts-node geneLike.ts <sqlFile> <txtGzFile>')
+    process.exit(1)
+  }
+
+  generateBed12(process.argv[2], process.argv[3])
+}

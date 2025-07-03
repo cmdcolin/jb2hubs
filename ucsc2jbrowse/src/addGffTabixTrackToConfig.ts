@@ -1,55 +1,58 @@
 import fs from 'fs'
 import path from 'path'
 
-import { readConfig } from './util.ts'
+import { readConfig, writeJSON } from './util'
 
-if (process.argv.length < 3) {
-  throw new Error(
-    `usage: ${process.argv[0]} ${process.argv[1]} <config.json> <file.gff.gz>`,
+/**
+ * Adds a GFF3Tabix track to a JBrowse configuration file.
+ * @param configPath The path to the JBrowse configuration file.
+ * @param gffFilePath The path to the GFF3Tabix file (e.g., 'file.gff.gz').
+ */
+function addGffTabixTrackToConfig(configPath: string, gffFilePath: string) {
+  const config = readConfig(configPath)
+  const gffFileName = path.basename(gffFilePath)
+  const trackId = path.basename(gffFileName, '.gff.gz')
+  const assemblyName = config.assemblies[0]?.name
+
+  if (!assemblyName) {
+    throw new Error('Assembly name not found in config')
+  }
+
+  const newTrack = {
+    type: 'FeatureTrack',
+    trackId: `${assemblyName}-${trackId}`,
+    name: trackId,
+    assemblyNames: [assemblyName],
+    adapter: {
+      type: 'Gff3TabixAdapter',
+      gffGzLocation: { uri: gffFileName },
+      index: {
+        indexType: 'CSI',
+        location: { uri: `${gffFileName}.csi` },
+      },
+    },
+  }
+
+  const existingTrackIndex = config.tracks.findIndex(
+    track => track.trackId === newTrack.trackId,
   )
+
+  if (existingTrackIndex !== -1) {
+    config.tracks[existingTrackIndex] = newTrack
+  } else {
+    config.tracks.push(newTrack)
+  }
+
+  writeJSON(configPath, config)
 }
 
-const config = readConfig(process.argv[2]!)
-const arg = path.basename(process.argv[3]!)
-const base = path.basename(arg, '.gff.gz')
-const asm0 = config.assemblies[0]!
-const n0 = asm0.name
-const trackId = `${n0}-${base}`
+if (require.main === module) {
+  if (process.argv.length !== 4) {
+    console.error(
+      'Usage: ts-node addGffTabixTrackToConfig.ts <config.json> <file.gff.gz>',
+    )
+    process.exit(1)
+  }
 
-const newTrack = {
-  type: 'FeatureTrack',
-  trackId,
-  name: base,
-  assemblyNames: [n0],
-  adapter: {
-    type: 'Gff3TabixAdapter',
-    gffGzLocation: { uri: arg },
-    index: {
-      indexType: 'CSI',
-      location: { uri: arg + '.csi' },
-    },
-  },
+  addGffTabixTrackToConfig(process.argv[2], process.argv[3])
 }
-
-const existingTrackIndex = config.tracks.findIndex(f => f.trackId === trackId)
-
-let updatedTracks
-if (existingTrackIndex >= 0) {
-  updatedTracks = [...config.tracks]
-  updatedTracks[existingTrackIndex] = newTrack
-} else {
-  updatedTracks = [...config.tracks, newTrack]
-}
-
-// Write updated config
-fs.writeFileSync(
-  process.argv[2]!,
-  JSON.stringify(
-    {
-      ...config,
-      tracks: updatedTracks,
-    },
-    null,
-    2,
-  ),
-)

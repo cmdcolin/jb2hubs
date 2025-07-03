@@ -1,42 +1,78 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe } from './dedupe.ts'
-import { readConfig } from './util.ts'
+import { dedupe } from './dedupe'
+import { readConfig, writeJSON } from './util'
+import { JBrowseConfig } from './types'
 
-const base = 'ucscExtensions'
-const ret = fs.readdirSync(base)
-const target = process.argv[2]
+const BASE_EXTENSION_DIR = 'ucscExtensions'
 
-for (const item of ret) {
-  const accession = item.replace('.json', '')
-  const f = `${target}/${accession}/config.json`
+/**
+ * Integrates UCSC extension configurations into existing JBrowse configurations.
+ * It reads JSON files from the 'ucscExtensions' directory, merges them with
+ * the corresponding assembly's config.json, and writes the updated config.
+ * @param targetDir The root directory where assembly configurations are located (e.g., '~/ucscResults').
+ */
+function makeUcscExtensions(targetDir: string) {
+  const extensionFiles = fs.readdirSync(BASE_EXTENSION_DIR)
 
-  // Create directory structure if it doesn't exist
-  const dir = path.dirname(f)
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, {
-      recursive: true,
-    })
+  for (const item of extensionFiles) {
+    const accession = item.replace('.json', '')
+    const configFilePath = path.join(targetDir, accession, 'config.json')
+
+    // Ensure directory structure exists for the target config file
+    const dir = path.dirname(configFilePath)
+    if (!fs.existsSync(dir)) {
+      fs.mkdirSync(dir, { recursive: true })
+    }
+
+    let existingConfig: JBrowseConfig
+    try {
+      existingConfig = readConfig(configFilePath)
+    } catch (e) {
+      console.warn(
+        `Could not read existing config for ${accession}. Creating a new one.`,
+      )
+      existingConfig = { assemblies: [], tracks: [] }
+    }
+
+    const extensionConfig = readConfig(path.join(BASE_EXTENSION_DIR, item))
+
+    // Merge existing and extension configurations
+    const mergedConfig: JBrowseConfig = {
+      ...existingConfig,
+      ...extensionConfig,
+      // Deduplicate tracks by trackId to avoid duplicates
+      tracks: dedupe(
+        [...(extensionConfig.tracks || []), ...(existingConfig.tracks || [])],
+        track => track.trackId,
+      ),
+      // Merge plugins if they exist
+      plugins: dedupe(
+        [...(extensionConfig.plugins || []), ...(existingConfig.plugins || [])],
+        plugin => (plugin as { name: string }).name, // Assuming plugins have a 'name' property
+      ),
+      // Merge aggregateTextSearchAdapters if they exist
+      aggregateTextSearchAdapters: dedupe(
+        [
+          ...(extensionConfig.aggregateTextSearchAdapters || []),
+          ...(existingConfig.aggregateTextSearchAdapters || []),
+        ],
+        adapter =>
+          (adapter as { textSearchAdapterId: string }).textSearchAdapterId, // Assuming adapters have a 'textSearchAdapterId' property
+      ),
+    }
+
+    writeJSON(configFilePath, mergedConfig)
+    console.log(`Updated config file: ${configFilePath}`)
+  }
+}
+
+if (require.main === module) {
+  if (process.argv.length !== 3) {
+    console.error('Usage: ts-node makeUcscExtensions.ts <targetDirectory>')
+    process.exit(1)
   }
 
-  const existingConfig = readConfig(f)
-  const extensionConfig = readConfig(path.join(base, item))
-
-  fs.writeFileSync(
-    f,
-    JSON.stringify(
-      {
-        ...existingConfig,
-        ...extensionConfig,
-        tracks: dedupe(
-          [...extensionConfig.tracks, ...existingConfig.tracks],
-          t => t.trackId,
-        ),
-      },
-      undefined,
-      2,
-    ),
-  )
-  console.log(`Updated config file: ${f}`)
+  makeUcscExtensions(process.argv[2])
 }

@@ -1,19 +1,30 @@
 import fs from 'fs'
 
-import { getColNames } from './utils/getColNames.ts'
+import { getColNames } from './utils/getColNames'
 
-export function genBed(sql: string) {
-  const txt = fs.readFileSync(sql, 'utf8')
-  const cols = getColNames(txt)
+/**
+ * Generates a BED-like header from a SQL file.
+ * @param sqlFilePath The path to the SQL file.
+ */
+function generateBedHeader(sqlFilePath: string) {
+  const fileContent = fs.readFileSync(sqlFilePath, 'utf8')
+  const { colNames } = getColNames(fileContent)
 
-  if (cols.colNames.join(',').startsWith('bin,chrom,chromStart,chromEnd')) {
-    console.log('#' + cols.colNames.slice(1).join('\t'))
-  } else if (cols.colNames.join(',').startsWith('chrom,chromStart,chromEnd')) {
+  if (colNames.join(',').startsWith('bin,chrom,chromStart,chromEnd')) {
+    console.log('#' + colNames.slice(1).join('\t'))
+  } else if (colNames.join(',').startsWith('chrom,chromStart,chromEnd')) {
     console.error('no_bin')
-    console.log('#' + cols.colNames.join('\t'))
+    console.log('#' + colNames.join('\t'))
   } else {
-    throw new Error('unexpected db structure: ' + cols.colNames)
+    throw new Error('Unexpected database structure: ' + colNames.join(','))
   }
 }
 
-genBed(process.argv[2]!)
+if (require.main === module) {
+  if (process.argv.length !== 3) {
+    console.error('Usage: ts-node bedLike.ts <sqlFile>')
+    process.exit(1)
+  }
+
+  generateBedHeader(process.argv[2])
+}
