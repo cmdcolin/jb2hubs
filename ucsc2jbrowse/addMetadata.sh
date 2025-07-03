@@ -1,23 +1,49 @@
 #!/bin/bash
+
+#
+# addMetadata.sh
+#
+# Adds metadata from trackDb.sql to the JBrowse config.json for each assembly.
+#
+
+set -euo pipefail
+
+# --- Configuration ---
+
+# Set the root directory for results.
+# Can be overridden by setting the environment variable.
+: ${OUT:=~/ucscResults}
+
 export LC_ALL=C
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 
-# Set default value for OUT if not already set
-: ${OUT:=~/ucscResults}
+# --- Functions ---
 
-# Function to process a single assembly
+# Processes a single assembly.
+# $1: The assembly directory in the results folder.
 process_assembly() {
-  local INDIR=$1
-  local ASM=$(basename $INDIR)
-  local OUTDIR=$OUT/$ASM
-  local DB=$INDIR/$ASM/database
+  local assembly_dir=$1
+  local assembly_name
+  assembly_name=$(basename "$assembly_dir")
+  local config_file="$assembly_dir/config.json"
+  local tracks_file="$assembly_dir/tracks.json"
+  local temp_config_file="$assembly_dir/tmp.json"
 
-  # add metadata from the tracksDb.sql to the config.json
-  node src/addMetadata.ts $OUTDIR/config.json $OUTDIR/tracks.json >$OUTDIR/tmp.json && mv $OUTDIR/tmp.json $OUTDIR/config.json
+  echo "Adding metadata to $assembly_name..."
+
+  # Add metadata from the tracksDb.sql to the config.json
+  node src/addMetadata.ts "$config_file" "$tracks_file" >"$temp_config_file" && mv "$temp_config_file" "$config_file"
 }
 
 export -f process_assembly
 export OUT
 
-# Run the process_assembly function in parallel for each input directory
+# --- Main Script ---
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <assembly_dir1> [assembly_dir2] ..."
+  exit 1
+fi
+
+# Run the process_assembly function in parallel for each input directory.
 parallel --will-cite process_assembly ::: "$@"

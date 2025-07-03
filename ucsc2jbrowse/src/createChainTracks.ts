@@ -1,10 +1,10 @@
-import { execSync } from 'child_process'
 import fs from 'fs'
 import os from 'os'
 import path from 'path'
 
 import { Command } from 'commander'
 
+import { JBrowseConfig } from './types.ts'
 import { readJSON, writeJSON } from './util.ts'
 
 interface ChainTrack {
@@ -22,13 +22,102 @@ interface ChainTrack {
   }
 }
 
-interface JBrowseConfig {
-  tracks: any[]
+/**
+ * Creates a chain track configuration object from a PIF file.
+ * @param pifFile The name of the PIF file (e.g., 'hg19ToHg38.over.pif.gz').
+ * @param sourceAssembly The source assembly name (e.g., 'hg19').
+ * @param srcDir The source directory for the PIF files (e.g., 'liftOver' or 'vs').
+ * @returns A ChainTrack object or null if parsing fails.
+ */
+function createChainTrackConfig(
+  pifFile: string,
+  sourceAssembly: string,
+  srcDir: string,
+): ChainTrack | null {
+  const filename = path.basename(pifFile)
+  const filenameWithoutExt = filename.replace('.pif.gz', '')
+
+  // Example: hg19ToHg38.over
+  const match = /^(.+?)To(.+?)\.over$/.exec(filenameWithoutExt)
+  if (!match?.[1] || !match[2]) {
+    console.warn(`Warning: Could not parse filename format for ${filename}`)
+    return null
+  }
+
+  const targetAssemblyOrig = match[2]
+  let targetAssembly: string
+
+  // Handle cases like GCF_... or GCA_... accessions
+  if (
+    targetAssemblyOrig.startsWith('GCF') ||
+    targetAssemblyOrig.startsWith('GCA')
+  ) {
+    targetAssembly = targetAssemblyOrig
+  } else {
+    // Convert first letter to lowercase for typical UCSC assembly names
+    targetAssembly =
+      targetAssemblyOrig.charAt(0).toLowerCase() + targetAssemblyOrig.slice(1)
+  }
+
+  let commonName = ''
+  // Try to get common name from processedHubJson/all.json for GCF/GCA accessions
+  if (
+    targetAssemblyOrig.startsWith('GCF') ||
+    targetAssemblyOrig.startsWith('GCA')
+  ) {
+    try {
+      const allJson = readJSON<any>('../website/processedHubJson/all.json')
+      const assembly = allJson.find(
+        (a: any) => a?.accession === targetAssemblyOrig,
+      )
+      commonName = assembly?.commonName ?? ''
+    } catch (error) {
+      console.warn(
+        `Warning: Could not read assembly information for ${targetAssemblyOrig}: ${error}`,
+      )
+    }
+  } else {
+    // Try to get common name from ucscResults/list.json for typical UCSC assemblies
+    try {
+      const listJson = readJSON<any>(
+        path.join(os.homedir(), 'ucscResults', 'list.json'),
+      )
+      commonName = listJson.ucscGenomes?.[targetAssembly]?.organism ?? ''
+    } catch (error) {
+      console.warn(
+        `Warning: Could not read organism information for ${targetAssembly}`,
+      )
+    }
+  }
+
+  const trackId = `${sourceAssembly}_to_${targetAssembly}_chain`
+  const trackName = commonName
+    ? `${sourceAssembly} to ${commonName} (${targetAssembly}) ${srcDir} chain`
+    : `${sourceAssembly} to ${targetAssembly} ${srcDir} chain`
+
+  return {
+    type: 'SyntenyTrack',
+    trackId,
+    name: trackName,
+    category: ['Liftover'],
+    assemblyNames: [sourceAssembly, targetAssembly],
+    adapter: {
+      type: 'PairwiseIndexedPAFAdapter',
+      targetAssembly: sourceAssembly,
+      queryAssembly: targetAssembly,
+      pifGzLocation: { uri: `${srcDir}/${filename}` },
+      index: {
+        location: { uri: `${srcDir}/${filename}.csi` },
+        indexType: 'CSI',
+      },
+    },
+  }
 }
 
 /**
- * Script to generate chain tracks for a specified assembly
- * Downloads chain files, converts to PAF, creates PIF files, and adds to JBrowse config
+ * Main function to update the JBrowse configuration with chain tracks.
+ * It reads PIF files from a specified source directory and adds corresponding
+ * SyntenyTrack entries to the config.json.
  */
 function main() {
   const program = new Command()
@@ -37,7 +126,10 @@ function main() {
     .option(
       '-a, --assembly <assembly>',
       'Source assembly name (e.g., hg19, hg38, mm10)',
-      'hg19',
+    )
+    .option(
+      '-s, --source <source_dir>',
+      'Either liftOver or vs, the source directory for PIF files',
     )
     .option(
       '-o, --output <dir>',
@@ -47,200 +139,61 @@ function main() {
     .parse(process.argv)
 
   const options = program.opts()
-  const sourceAssembly = options.assembly
-  const outDir = options.output
+  const sourceAssembly: string = options.assembly
+  const outDir: string = options.output
+  const srcDir: string = options.source
 
   const configDir = path.join(outDir, sourceAssembly)
   const configFile = path.join(configDir, 'config.json')
 
-  // Create output directories
-  fs.mkdirSync(configDir, { recursive: true })
-  fs.mkdirSync('chains', { recursive: true })
-  fs.mkdirSync('pifs', { recursive: true })
-  fs.mkdirSync(path.join(configDir, 'liftOver'), { recursive: true })
-
-  // Create config file with empty tracks array if it doesn't exist
+  // Ensure config file exists, create with empty tracks array if not
   if (!fs.existsSync(configFile)) {
     writeJSON(configFile, { tracks: [] })
   }
 
-  // Get list of chain files
-  const chainFiles = getChainFiles(sourceAssembly)
-
-  if (chainFiles.length === 0) {
-    console.log(`No chain files found for ${sourceAssembly}`)
+  const pifFilesDir = path.join(configDir, srcDir)
+  if (!fs.existsSync(pifFilesDir)) {
+    console.warn(
+      `PIF files directory not found: ${pifFilesDir}. Skipping track creation.`,
+    )
     return
   }
 
-  // Process chain files
+  const pifFiles = fs
+    .readdirSync(pifFilesDir)
+    .filter(file => file.endsWith('.pif.gz'))
+
+  if (pifFiles.length === 0) {
+    console.log(`No PIF files found in ${pifFilesDir}.`)
+    return
+  }
+
   const chainTracks: ChainTrack[] = []
 
-  for (const chainUrl of chainFiles) {
-    const track = processChainFile(chainUrl, sourceAssembly, configDir)
+  for (const pifFile of pifFiles) {
+    const track = createChainTrackConfig(pifFile, sourceAssembly, srcDir)
     if (track) {
       chainTracks.push(track)
     }
   }
 
-  // Update config file with chain tracks
   const config = readJSON<JBrowseConfig>(configFile)
+  // Deduplicate tracks by trackId to avoid adding duplicates if script is run multiple times
+  const existingTrackIds = new Set(config.tracks.map(t => t.trackId))
+  const uniqueNewTracks = chainTracks.filter(
+    t => !existingTrackIds.has(t.trackId),
+  )
+
   writeJSON(configFile, {
     ...config,
-    tracks: [...config.tracks, ...chainTracks],
+    tracks: [...config.tracks, ...uniqueNewTracks],
   })
+
+  console.log(
+    `Updated ${configFile} with ${uniqueNewTracks.length} new chain tracks.`,
+  )
 }
 
-/**
- * Get list of chain files for a given assembly
- */
-function getChainFiles(sourceAssembly: string) {
-  const url = `https://hgdownload.soe.ucsc.edu/goldenPath/${sourceAssembly}/liftOver/`
-
-  try {
-    // Use execSync to run wget and grep to get chain files
-    const result = execSync(
-      `wget -q -O - "${url}" | grep -o 'href="[^"]*"' | sed "s!href=\\"\\(.*\\)\\"!${url}\\1!" | grep -v md5sum | grep .chain.gz`,
-    )
-      .toString()
-      .trim()
-
-    // Split the result into lines to get individual URLs
-    return result.split('\n')
-  } catch (error) {
-    console.error(`Error fetching chain files: ${error}`)
-    return []
-  }
+if (require.main === module) {
+  main()
 }
-
-/**
- * Process a single chain file
- */
-function processChainFile(
-  chainUrl: string,
-  sourceAssembly: string,
-  configDir: string,
-) {
-  try {
-    // Extract the filename from the URL
-    const filename = path.basename(chainUrl)
-    const filename2 = filename.replace('.chain.gz', '')
-
-    // Download only if the file doesn't exist
-    const chainPath = path.join('chains', filename)
-    if (!fs.existsSync(chainPath)) {
-      console.log(`Downloading ${chainUrl}...`)
-      execSync(
-        `wget -q -O "${chainPath}.tmp" "${chainUrl}" && mv "${chainPath}.tmp" "${chainPath}"`,
-      )
-    }
-
-    // Create pif file if it does not exist
-    const pifPath = path.join('pifs', `${filename2}.pif.gz`)
-    if (!fs.existsSync(pifPath)) {
-      console.log(`Creating PIF file for ${filename}...`)
-      const pafPath = path.join(os.tmpdir(), `${filename}.paf`)
-
-      // Convert chain to PAF
-      execSync(
-        `pigz -dc "${chainPath}" | chain2paf --input /dev/stdin > "${pafPath}"`,
-      )
-
-      // Create PIF file
-      execSync(`jbrowse make-pif "${pafPath}" --csi --out "${pifPath}"`)
-
-      // Clean up temporary PAF file
-      fs.unlinkSync(pafPath)
-    }
-
-    // Copy PIF files to config directory
-    fs.copyFileSync(
-      pifPath,
-      path.join(configDir, 'liftOver', path.basename(pifPath)),
-    )
-    fs.copyFileSync(
-      `${pifPath}.csi`,
-      path.join(configDir, 'liftOver', `${path.basename(pifPath)}.csi`),
-    )
-
-    // Parse the filename to get the source and target assemblies
-    const match = /^(.+?)To(.+?)\.over\.chain\.gz$/.exec(filename)
-    if (!match?.[1] || !match[2]) {
-      console.warn(`Warning: Could not parse filename format for ${filename}`)
-      return null
-    }
-
-    const targetAssemblyOrig = match[2]
-    let targetAssembly: string
-
-    // Ensure first letter is lowercase for target assembly
-    if (
-      targetAssemblyOrig.startsWith('GCF') ||
-      targetAssemblyOrig.startsWith('GCA')
-    ) {
-      targetAssembly = targetAssemblyOrig
-    } else {
-      targetAssembly =
-        targetAssemblyOrig.charAt(0).toLowerCase() + targetAssemblyOrig.slice(1)
-    }
-
-    // Get common name for the target assembly
-    let commonName = ''
-    if (
-      targetAssemblyOrig.startsWith('GCF') ||
-      targetAssemblyOrig.startsWith('GCA')
-    ) {
-      try {
-        const allJson = readJSON<any>('../website/processedHubJson/all.json')
-        const assembly = allJson.find(
-          (a: any) => a?.accession === targetAssemblyOrig,
-        )
-        commonName = assembly?.commonName ?? ''
-      } catch (error) {
-        console.warn(
-          `Warning: Could not read assembly information for ${targetAssemblyOrig}: ${error}`,
-        )
-      }
-    } else {
-      try {
-        const listJson = readJSON<any>(
-          path.join(os.homedir(), 'ucscResults', 'list.json'),
-        )
-        commonName = listJson.ucscGenomes?.[targetAssembly]?.organism ?? ''
-      } catch (error) {
-        console.warn(
-          `Warning: Could not read organism information for ${targetAssembly}`,
-        )
-      }
-    }
-
-    // Create track ID and name
-    const trackId = `${sourceAssembly}_to_${targetAssembly}_chain`
-    const trackName = commonName
-      ? `${sourceAssembly} to ${commonName} (${targetAssembly}) liftOver chain`
-      : `${sourceAssembly} to ${targetAssembly} liftOver chain`
-
-    // Create the track configuration
-    return {
-      type: 'SyntenyTrack',
-      trackId,
-      name: trackName,
-      category: ['Liftover'],
-      assemblyNames: [sourceAssembly, targetAssembly],
-      adapter: {
-        type: 'PairwiseIndexedPAFAdapter',
-        targetAssembly: sourceAssembly,
-        queryAssembly: targetAssembly,
-        pifGzLocation: { uri: `liftOver/${filename2}.pif.gz` },
-        index: {
-          location: { uri: `liftOver/${filename2}.pif.gz.csi` },
-          indexType: 'CSI',
-        },
-      },
-    }
-  } catch (error) {
-    console.error(`Error processing chain file ${chainUrl}: ${error}`)
-    return null
-  }
-}
-
-main()
