@@ -45,9 +45,7 @@ async function downloadWikiImages() {
         // Add a small delay to avoid rate limiting Wikipedia's API
         await new Promise(resolve => setTimeout(resolve, 1000))
       } catch (error) {
-        console.error(
-          `Error downloading image for ${scientificName}: ${error.message}`,
-        )
+        console.error(`Error downloading image for ${scientificName}: ${error}`)
       }
     } else {
       console.log(`Image already found for ${scientificName}.`)

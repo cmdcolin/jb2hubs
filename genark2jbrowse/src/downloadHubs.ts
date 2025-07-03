@@ -107,7 +107,7 @@ async function processHubEntry({
       )
     } catch (error) {
       console.error(
-        `Failed to download or write hub files for ${accession}: ${error.message}`,
+        `Failed to download or write hub files for ${accession}: ${error}`,
       )
     }
   }
@@ -123,6 +123,6 @@ for (const [idx, entry] of allHubEntries.entries()) {
     })
   } catch (e) {
     // Log errors for individual entries but continue processing others
-    console.error(`Error processing entry: ${e.message}`)
+    console.error(`Error processing entry: ${e}`)
   }
 }

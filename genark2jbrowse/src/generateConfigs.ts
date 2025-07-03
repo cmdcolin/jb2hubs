@@ -29,7 +29,7 @@ let hubMeta: { hubFileLocation: string }
 try {
   hubMeta = readJSON(metaPath) as { hubFileLocation: string }
 } catch (error) {
-  console.error(`Error reading meta.json at ${metaPath}: ${error.message}`)
+  console.error(error)
   process.exit(1)
 }
 
@@ -38,9 +38,7 @@ try {
   oldConfig = readJSON(configPath) as Record<string, unknown>
 } catch (error) {
   // It's normal for config.json not to exist on the first run
-  console.warn(
-    `Could not read existing config.json at ${configPath}: ${error.message}`,
-  )
+  console.warn(`Could not read existing config.json at ${configPath}: ${error}`)
 }
 
 let hubFileText: string
@@ -50,7 +48,7 @@ try {
     'utf8',
   )
 } catch (error) {
-  console.error(`Error reading hub.txt for ${metaPath}: ${error.message}`)
+  console.error(`Error reading hub.txt for ${metaPath}: ${error}`)
   process.exit(1)
 }
 

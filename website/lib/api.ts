@@ -1,5 +1,7 @@
 import path from 'path'
 
+import { notEmpty } from 'hubtools'
+
 import { AssemblyData, readJSON } from '../app/components/util.ts'
 
 // uncomment the console.time to see how long various operations take,
@@ -31,7 +33,8 @@ export async function getAllAccessions() {
         path.join(process.cwd(), 'processedHubJson', 'all.json'),
       )
     )
-      .filter(f => !!f && f.accession)
+      .filter(notEmpty)
+      .filter(f => f.accession)
       .map(entry => ({ id: entry.accession })),
   )
 }

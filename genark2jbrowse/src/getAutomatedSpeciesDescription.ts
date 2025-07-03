@@ -78,7 +78,7 @@ async function generateSpeciesDescriptions() {
       }
     } catch (error) {
       console.error(
-        `Error processing ${entry.scientificName} (${entry.accession}): ${error.message}`,
+        `Error processing ${entry.scientificName} (${entry.accession}): ${error}`,
       )
     }
   }

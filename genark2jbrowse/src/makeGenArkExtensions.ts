@@ -59,7 +59,7 @@ function applyGenArkExtensions() {
       console.log(`Updated config file: ${configFilePath}`)
     } catch (error) {
       console.error(
-        `Error processing extension for ${accession} at ${configFilePath}: ${error.message}`,
+        `Error processing extension for ${accession} at ${configFilePath}: ${error}`,
       )
     }
   }

@@ -48,9 +48,10 @@ async function processHubJsonFiles() {
       console.log(`Processed ${sourceCategory}.json`)
 
       // Accumulate all processed entries for the combined 'all.json'
+      // @ts-expect-error
       allProcessedEntries = allProcessedEntries.concat(processedCategoryEntries)
     } catch (error) {
-      console.error(`Error processing file ${file}: ${error.message}`)
+      console.error(error)
     }
   }
 
