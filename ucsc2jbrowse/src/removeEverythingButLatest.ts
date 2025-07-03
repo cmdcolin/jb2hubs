@@ -1,5 +1,6 @@
-import type { JBrowseConfig } from './types.ts'
 import { readConfig, writeJSON } from './util.ts'
+
+import type { JBrowseConfig } from './types.ts'
 
 /**
  * Removes older versions of specific tracks from a JBrowse configuration.

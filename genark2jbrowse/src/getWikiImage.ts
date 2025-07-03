@@ -20,7 +20,7 @@ async function downloadWikiImages() {
   fs.mkdirSync('downloads', { recursive: true })
 
   const allProcessedEntries = (
-    await readJSON<SpeciesEntry[]>('processedHubJson/all.json')
+    await readJSON<(SpeciesEntry | null)[]>('processedHubJson/all.json')
   ).filter((entry): entry is SpeciesEntry => !!entry)
 
   let processedCount = 0

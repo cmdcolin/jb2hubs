@@ -14,7 +14,7 @@ interface JBrowseConfig {
  * and merges them into the main JBrowse 2 config.json for each assembly hub.
  * It ensures that track IDs are deduplicated during the merge.
  */
-async function applyGenArkExtensions() {
+function applyGenArkExtensions() {
   const extensionsDir = 'genArkExtensions'
   const extensionFiles = fs.readdirSync(extensionsDir)
 
@@ -65,4 +65,4 @@ async function applyGenArkExtensions() {
   }
 }
 
-applyGenArkExtensions().catch(console.error)
+applyGenArkExtensions()

@@ -1,8 +1,10 @@
 import pLimit from 'p-limit'
-import type { TrackDbEntry } from './types.ts'
-import { readConfig, readJSON, splitOnFirst, writeJSON } from './util.ts'
+
 import { checkIfFileAccessible } from './checkIfFileAccessible.ts'
 import { dedupe } from './dedupe.ts'
+import { readConfig, readJSON, splitOnFirst, writeJSON } from './util.ts'
+
+import type { TrackDbEntry } from './types.ts'
 
 interface BigDataTrack {
   tableName: string
@@ -18,9 +20,7 @@ type BigDataTracksJson = Record<string, BigDataTrack>
  * @param tracksJsonPath The path to the tracks.json file.
  * @returns A promise that resolves to the parsed big file tracks.
  */
-async function parseBigFileTracks(
-  tracksJsonPath: string,
-): Promise<BigDataTracksJson> {
+function parseBigFileTracks(tracksJsonPath: string): BigDataTracksJson {
   const tracks = readJSON<Record<string, TrackDbEntry>>(tracksJsonPath)
 
   // @ts-expect-error
@@ -152,9 +152,4 @@ if (process.argv.length !== 4) {
 const tracksJsonPath = process.argv[2]!
 const configPath = process.argv[3]!
 
-parseBigFileTracks(tracksJsonPath)
-  .then(bigDataEntries => addBigDataTracks(bigDataEntries, configPath))
-  .catch(error => {
-    console.error('An error occurred:', error)
-    process.exit(1)
-  })
+await addBigDataTracks(parseBigFileTracks(tracksJsonPath), configPath)
