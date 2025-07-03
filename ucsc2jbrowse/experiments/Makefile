@@ -50,13 +50,9 @@ process_gene_tracks:
 		fi; \
 	done
 
-# Pattern rule for bigTracks.json files
-$(OUT)/%/bigTracks.json: $(OUT)/%/tracks.json
-	node src/parseBigFileTracks.ts $< ~/ucsc/$*/$*/database $(dir $@) > $@
-
 # Pattern rule for adding big data tracks to config.json
-$(OUT)/%/config.json: $(OUT)/%/bigTracks.json
-	node src/addBigDataTracks.ts $< $@
+$(OUT)/%/config.json: $(OUT)/%/tracks.json
+	node src/mergeBigFileTracks.ts $< $@
 
 # Main target to process all assemblies
 .PHONY: all

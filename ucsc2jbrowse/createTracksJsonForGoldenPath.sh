@@ -33,8 +33,7 @@ process_assembly() {
     node src/tracksDbLike.ts "$db_dir/trackDb.sql" "$db_dir/trackDb.txt.gz" >"$assembly_results_dir/tracks.json"
 
     # Find bigBed/bigWig files in the tracks.json, these do not have sql db files
-    node src/parseBigFileTracks.ts "$assembly_results_dir/tracks.json" "$db_dir" "$assembly_results_dir" >"$assembly_results_dir/bigTracks.json"
-    node src/addBigDataTracks.ts "$assembly_results_dir/bigTracks.json" "$assembly_results_dir/config.json"
+    node src/mergeBigFileTracks.ts "$assembly_results_dir/tracks.json" "$assembly_results_dir/config.json"
   fi
 }
 
