@@ -1,47 +1,63 @@
-import fs from 'fs'
-import path from 'path'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
 
 import { type UCSCGenArkAssemblyEntry, parseAssemblyEntry } from 'hubtools'
 
 import { readJSON } from './util.ts'
 
-let entries = [] as UCSCGenArkAssemblyEntry[]
-const files = fs.readdirSync('hubJson').map(f => path.join('hubJson', f))
-for (const file of files) {
-  const source = path.basename(file, '.json')
-  if (source !== 'all') {
-    entries = entries.concat(
-      (await readJSON<{ data: UCSCGenArkAssemblyEntry[] }>(file)).data.map(
-        t => ({
-          ...t,
-          source,
-        }),
-      ),
-    )
+/**
+ * Processes raw hub JSON files, parses each assembly entry, and writes
+ * processed JSON files for individual categories and a combined 'all.json'.
+ */
+async function processHubJsonFiles() {
+  let allProcessedEntries: UCSCGenArkAssemblyEntry[] = []
+
+  // Read all files in the 'hubJson' directory
+  const hubJsonFiles = fs
+    .readdirSync('hubJson')
+    .map(f => path.join('hubJson', f))
+
+  // Ensure the output directory exists
+  fs.mkdirSync('processedHubJson', { recursive: true })
+
+  for (const file of hubJsonFiles) {
+    const sourceCategory = path.basename(file, '.json')
+
+    // Skip 'all.json' if it exists, as it's an output file
+    if (sourceCategory === 'all') {
+      continue
+    }
+
+    try {
+      // Read the raw hub JSON data for the current category
+      const rawHubData = await readJSON<{ data: UCSCGenArkAssemblyEntry[] }>(file)
+
+      // Process each entry and add the source category
+      const processedCategoryEntries = rawHubData.data.map(entry => ({
+        ...parseAssemblyEntry({ entry }),
+        source: sourceCategory,
+      }))
+
+      // Write the processed JSON for the current category
+      fs.writeFileSync(
+        `processedHubJson/${sourceCategory}.json`,
+        JSON.stringify(processedCategoryEntries, null, 2),
+      )
+      console.log(`Processed ${sourceCategory}.json`)
+
+      // Accumulate all processed entries for the combined 'all.json'
+      allProcessedEntries = allProcessedEntries.concat(processedCategoryEntries)
+    } catch (error) {
+      console.error(`Error processing file ${file}: ${error.message}`)
+    }
   }
+
+  // Write the combined 'all.json' file
+  fs.writeFileSync(
+    'processedHubJson/all.json',
+    JSON.stringify(allProcessedEntries, null, 2),
+  )
+  console.log('Generated processedHubJson/all.json')
 }
 
-for (const file of files) {
-  const source = path.basename(file, '.json')
-  if (source !== 'all') {
-    fs.writeFileSync(
-      'processedHubJson/' + source + '.json',
-      JSON.stringify(
-        (await readJSON<{ data: UCSCGenArkAssemblyEntry[] }>(file)).data.map(
-          entry => parseAssemblyEntry({ entry }),
-        ),
-        null,
-        2,
-      ),
-    )
-  }
-}
-
-fs.writeFileSync(
-  'processedHubJson/all.json',
-  JSON.stringify(
-    entries.map(entry => parseAssemblyEntry({ entry })),
-    null,
-    2,
-  ),
-)
+processHubJsonFiles().catch(console.error)

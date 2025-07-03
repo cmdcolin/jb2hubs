@@ -1,5 +1,5 @@
-import fs from 'node:fs'
-import path from 'node:path'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
 
 import {
   type UCSCGenArkAssemblyEntry,
@@ -8,7 +8,8 @@ import {
   readJSON,
 } from 'hubtools'
 
-const entries = dedupe(
+// Read all hub JSON files and deduplicate entries based on ucscBrowser field
+const allHubEntries = dedupe(
   fs.readdirSync('hubJson').flatMap(
     f =>
       (
@@ -20,7 +21,13 @@ const entries = dedupe(
   d => d.ucscBrowser,
 )
 
-async function processEntry({
+/**
+ * Processes a single assembly hub entry: downloads its hub.txt and creates a meta.json file.
+ * @param entry - The UCSCGenArkAssemblyEntry object.
+ * @param idx - The current index of the entry in the list.
+ * @param totalEntries - The total number of entries being processed.
+ */
+async function processHubEntry({
   entry,
   idx,
   totalEntries,
@@ -39,55 +46,81 @@ async function processEntry({
     comName,
     ucscBrowser,
   } = entry
-  const ucscAcc = path.basename(ucscBrowser)
-  const accession = ucscAcc.startsWith('GC') ? ucscAcc : refSeq || genBank
-  const [base, rest] = accession.split('_')
-  const [b1, b2, b3] = rest!.match(/.{1,3}/g)!
 
-  const b = `hubs/${base}/${b1}/${b2}/${b3}/${accession}`
-  const metaFile = `${b}/meta.json`
-  const hubFile = `${b}/hub.txt`
+  // Determine the accession ID, preferring ucscBrowser if it starts with 'GC', otherwise refSeq or genBank
+  const ucscAccession = path.basename(ucscBrowser)
+  const accession = ucscAccession.startsWith('GC')
+    ? ucscAccession
+    : refSeq || genBank
 
-  if (!fs.existsSync(hubFile) || process.env.REPROCESS) {
-    console.log(`Processing ${idx}/${totalEntries}:`, entry, metaFile)
+  if (!accession) {
+    console.warn(
+      `Skipping entry ${sciName} due to missing accession identifier.`,
+    )
+    return
+  }
 
+  // Construct the base path for the hub files (e.g., hubs/GCF/000/001/735/GCF_000001735.4)
+  const [basePrefix, restOfAccession] = accession.split('_')
+  const [part1, part2, part3] = restOfAccession!.match(/.{1,3}/g)!
+
+  const hubBasePath = `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
+  const metaFilePath = `${hubBasePath}/meta.json`
+  const hubFilePath = `${hubBasePath}/hub.txt`
+
+  // Only process if hub.txt doesn't exist or if REPROCESS environment variable is set
+  if (!fs.existsSync(hubFilePath) || process.env.REPROCESS) {
+    console.log(`Processing ${idx + 1}/${totalEntries}: ${sciName} (${accession})`)
+
+    // Add a small delay to avoid overwhelming the server
     await new Promise(resolve => setTimeout(resolve, 100))
-    const hubFileLocation = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}/hub.txt`
 
-    fs.mkdirSync(b, {
+    const hubFileDownloadLocation = `https://hgdownload.soe.ucsc.edu/hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}/hub.txt`
+
+    // Create directory recursively if it doesn't exist
+    fs.mkdirSync(hubBasePath, {
       recursive: true,
     })
-    fs.writeFileSync(hubFile, await myfetchtext(hubFileLocation))
-    fs.writeFileSync(
-      metaFile,
-      JSON.stringify(
-        {
-          accession,
-          assembly: asmId,
-          scientificName: sciName,
-          commonName: comName,
-          taxonId: taxId,
-          identical,
-          genBank,
-          refSeq,
-          hubFileLocation,
-        },
-        null,
-        2,
-      ),
-    )
+
+    try {
+      // Download hub.txt and write meta.json
+      fs.writeFileSync(hubFilePath, await myfetchtext(hubFileDownloadLocation))
+      fs.writeFileSync(
+        metaFilePath,
+        JSON.stringify(
+          {
+            accession,
+            assembly: asmId,
+            scientificName: sciName,
+            commonName: comName,
+            taxonId: taxId,
+            identical,
+            genBank,
+            refSeq,
+            hubFileLocation: hubFileDownloadLocation,
+          },
+          null,
+          2,
+        ),
+      )
+    } catch (error) {
+      console.error(
+        `Failed to download or write hub files for ${accession}: ${error.message}`,
+      )
+    }
   }
 }
 
-for (const [idx, entry] of entries.entries()) {
+// Iterate over all hub entries and process them
+for (const [idx, entry] of allHubEntries.entries()) {
   try {
-    await processEntry({
+    await processHubEntry({
       entry,
       idx,
-      totalEntries: entries.length,
+      totalEntries: allHubEntries.length,
     })
   } catch (e) {
-    // some 404 exist in the list, just log and continue
-    console.error(e)
+    // Log errors for individual entries but continue processing others
+    console.error(`Error processing entry: ${e.message}`)
   }
 }

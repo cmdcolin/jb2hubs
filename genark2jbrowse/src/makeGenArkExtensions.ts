@@ -1,51 +1,66 @@
-import fs from 'node:fs'
-import path from 'node:path'
+import * as fs from 'node:fs'
+import * as path from 'node:path'
 
 import { dedupe, readJSON } from 'hubtools'
 
-interface Config {
+interface JBrowseConfig {
   tracks: {
     trackId: string
   }[]
 }
-const b = 'genArkExtensions'
-const ret = fs.readdirSync(b)
-for (const item of ret) {
-  const accession = item.replace('.json', '')
-  const [base, rest] = accession.split('_')
-  const [b1, b2, b3] = rest!.match(/.{1,3}/g)!
-  const f = `hubs/${base}/${b1}/${b2}/${b3}/${accession}/config.json`
 
-  // Create directory structure if it doesn't exist
-  const dir = path.dirname(f)
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, {
-      recursive: true,
-    })
-  }
+/**
+ * This script processes extension configuration files located in 'genArkExtensions/'
+ * and merges them into the main JBrowse 2 config.json for each assembly hub.
+ * It ensures that track IDs are deduplicated during the merge.
+ */
+async function applyGenArkExtensions() {
+  const extensionsDir = 'genArkExtensions'
+  const extensionFiles = fs.readdirSync(extensionsDir)
 
-  // Create backup of existing config file
-  fs.copyFileSync(f, `${f}.bak`)
-  console.log(`Created backup: ${f}.bak`)
+  for (const item of extensionFiles) {
+    const accession = item.replace('.json', '')
+    const [base, rest] = accession.split('_')
+    const [b1, b2, b3] = rest!.match(/.{1,3}/g)!
+    const configFilePath = `hubs/${base}/${b1}/${b2}/${b3}/${accession}/config.json`
 
-  const existingConfig = readJSON(f) as Config
-  const extensionConfig = readJSON(path.join(b, item)) as Config
+    // Ensure the directory structure exists for the config file
+    const configDir = path.dirname(configFilePath)
+    if (!fs.existsSync(configDir)) {
+      fs.mkdirSync(configDir, { recursive: true })
+    }
 
-  // Merge the configs (extension takes precedence)
-  fs.writeFileSync(
-    f,
-    JSON.stringify(
-      {
+    try {
+      // Create a backup of the existing config file before modification
+      const backupFilePath = `${configFilePath}.bak`
+      fs.copyFileSync(configFilePath, backupFilePath)
+      console.log(`Created backup: ${backupFilePath}`)
+
+      const existingConfig = readJSON(configFilePath) as JBrowseConfig
+      const extensionConfig = readJSON(path.join(extensionsDir, item)) as JBrowseConfig
+
+      // Merge the configurations. Extension tracks take precedence and are deduplicated.
+      const mergedConfig = {
         ...existingConfig,
         ...extensionConfig,
         tracks: dedupe(
           [...extensionConfig.tracks, ...existingConfig.tracks],
           t => t.trackId,
         ),
-      },
-      undefined,
-      2,
-    ),
-  )
-  console.log(`Updated config file: ${f}`)
+      }
+
+      // Write the merged configuration back to the config.json file
+      fs.writeFileSync(
+        configFilePath,
+        JSON.stringify(mergedConfig, undefined, 2),
+      )
+      console.log(`Updated config file: ${configFilePath}`)
+    } catch (error) {
+      console.error(
+        `Error processing extension for ${accession} at ${configFilePath}: ${error.message}`,
+      )
+    }
+  }
 }
+
+applyGenArkExtensions().catch(console.error)

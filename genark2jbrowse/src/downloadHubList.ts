@@ -1,7 +1,9 @@
-import fs from 'node:fs'
+import * as fs from 'node:fs'
 
 import { hubCategories, myfetchtext } from 'hubtools'
 
+// Downloads the list of assembly hubs from UCSC and saves them as JSON files
+// in the ../website/hubJson directory.
 for (const { id } of hubCategories) {
   fs.writeFileSync(
     `../website/hubJson/${id}.json`,

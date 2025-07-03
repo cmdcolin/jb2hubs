@@ -1,106 +1,131 @@
 #!/bin/bash
+set -e
 
+# Set NODE_OPTIONS to suppress experimental warnings
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 
-# Download list of hubs (in json)
+# --- Step 1: Download and Process Hub Data ---
+
+echo "Downloading list of hubs..."
 node src/downloadHubList.ts
 
-# Download actual hub.txt files
+echo "Downloading actual hub.txt files..."
 node src/downloadHubs.ts
 
-# Process hubJson
+echo "Processing hub JSON data..."
 node src/processHubJson.ts
 
-# Write info about assembly from NCBI to ncbi.json in hubs folder
-# Define function to fetch NCBI data
+# --- Step 2: Fetch NCBI Metadata ---
+
+# Define function to fetch NCBI assembly metadata for a given file.
+# It checks if ncbi.json exists or if REPROCESS is set to force re-fetching.
 fetch_ncbi_data() {
   local file="$1"
   local dir=$(dirname "$file")
   local id=$(basename "$dir")
   if [ ! -f "$dir/ncbi.json" ] || [ -n "$REPROCESS" ]; then
-    echo "$id"
+    echo "Fetching NCBI data for $id"
+    # Use esearch and esummary to get assembly metadata and save as ncbi.json
     (esearch -db assembly -query "$id" </dev/null | esummary -mode json) >"$dir/ncbi.json"
-    sleep 0.1
+    sleep 0.1 # Small delay to avoid overwhelming the NCBI E-utilities
   fi
 }
 
-export -f fetch_ncbi_data
+export -f fetch_ncbi_data # Export function for use with GNU Parallel
 
-# Run the function in parallel
-echo "Fetch NCBI metadata"
+echo "Fetching NCBI metadata in parallel..."
 fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
 
-# Generate a 'native' jbrowse2 config.json for each hub.txt
-echo "Generate configs"
+# --- Step 3: Generate JBrowse 2 Configurations ---
+
+echo "Generating JBrowse 2 config.json for each hub..."
 fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
 
-#  if REDOWNLOAD is defined, then rm -rf gff folder to force redownloading of
-#  all GFF files
+# --- Step 4: Download NCBI GFF Files ---
+
+# If REDOWNLOAD is defined, remove existing gff folder to force re-download.
 if [ -n "$REDOWNLOAD" ]; then
-  echo "REDOWNLOAD is set, removing gff folder to force redownloading all GFF files"
+  echo "REDOWNLOAD is set. Removing existing 'gff' folder to force re-download of all GFF files."
   rm -rf gff
   mkdir -p gff
 fi
 
-echo "Download NCBI GFF"
+echo "Downloading NCBI GFF files..."
+# Extract NCBI GFF URLs from processed JSON and download them
 cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
 
-# process NCBI GFF
+# --- Step 5: Process NCBI GFF Files ---
+
+# Define function to process a single GFF file.
+# It handles cases where start > end, sorts, bgzips, and tabix indexes the GFF.
 process_gff_file() {
   local input_file="$1"
   local filename=$(basename "$input_file")
+  local output_bgz_file="bgz/$filename"
+  local unzipped_file="${input_file%.gz}"
 
-  # swaps start and end if start > end, could be worth investigating more but a
-  # number of NCBI GFF have this
-  if [ ! -f "bgz/$filename" ] || [ -n "$REPROCESS" ]; then
-    pigz -dc "$input_file" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($4 >= $5) {temp=$4; $4=$5; $5=temp} print}' >"${input_file%.gz}"
-    jbrowse sort-gff "${input_file%.gz}" | bgzip -@8 >"bgz/$filename"
-    tabix -C "bgz/$filename"
-    rm "${input_file%.gz}"
+  # Check if the bgzipped file already exists or if REPROCESS is set
+  if [ ! -f "$output_bgz_file" ] || [ -n "$REPROCESS" ]; then
+    echo "Processing GFF file: $filename"
+    # Decompress, swap start/end if start > end, then recompress and index
+    pigz -dc "$input_file" | awk -F"\t" 'BEGIN{OFS="\t"} {if ($4 >= $5) {temp=$4; $4=$5; $5=temp} print}' >"$unzipped_file"
+    jbrowse sort-gff "$unzipped_file" | bgzip -@8 >"$output_bgz_file"
+    tabix -C "$output_bgz_file"
+    rm "$unzipped_file" # Clean up unzipped file
   fi
 }
 
-export -f process_gff_file
+export -f process_gff_file # Export function for use with GNU Parallel
 
-echo "Process NCBI GFF"
+echo "Processing NCBI GFF files in parallel..."
 ls gff/*.gz | parallel --bar -j8 process_gff_file
 
-# Export the function to make it available to parallel
+# --- Step 6: Add GFF Tracks and Text Index to JBrowse 2 Hubs ---
+
+# Define function to add a GFF track to a JBrowse 2 assembly and create a text index.
 add_track_and_text_index() {
-  local i="$1"
-  local filename=$(basename "$i")
-  local accession=$(echo "$filename" | cut -d'_' -f1,2) # Extract GCF_000896435.1 part
+  local gff_file_path="$1"
+  local filename=$(basename "$gff_file_path")
+  local accession=$(echo "$filename" | cut -d'_' -f1,2) # e.g., GCF_000896435.1
 
-  local prefix=${accession%%_*} # Extract GCF part
-  local number=${accession#*_}  # Extract 964355755.1 part
-  local number=${number%%.*}    # Remove extension if any to get 964355755
+  # Construct the target hub directory path based on accession
+  # Example: hubs/GCF/000/896/435/GCF_000896435.1/
+  local prefix=${accession%%_*}   # GCF
+  local number=${accession#*_}    # 000896435.1
+  local base_number=${number%%.*} # 000896435
 
-  local first_part=${number:0:3}  # Extract first 3 digits: 964
-  local second_part=${number:3:3} # Extract next 3 digits: 355
-  local third_part=${number:6:3}  # Extract next 3 digits: 755
+  local first_part=${base_number:0:3}
+  local second_part=${base_number:3:3}
+  local third_part=${base_number:6:3}
 
-  local result="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
+  local hub_dir="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
-  jbrowse add-track --force "$i" --out "$result" --load copy --indexFile "$i".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
-  jbrowse text-index --force --out "$result" --tracks ncbiGff
+  echo "Adding track and text indexing for $filename to $hub_dir"
+  jbrowse add-track --force "$gff_file_path" --out "$hub_dir" --load copy --indexFile "${gff_file_path}".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
+  jbrowse text-index --force --out "$hub_dir" --tracks ncbiGff
 }
 
-export -f add_track_and_text_index
+export -f add_track_and_text_index # Export function for use with GNU Parallel
 
-# Load NCBI GFF
-echo "Load and text index NCBI GFF"
+echo "Loading and text indexing NCBI GFF tracks in parallel..."
 find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
 
-# Make routes in website app folder
+# --- Step 7: Generate Website Pages and Extensions ---
+
+echo "Making routes in the website app folder..."
 node src/makeHubPagesForWebsite.ts
 
-# Add 'extensions' (special tracks)
+echo "Adding GenArk extensions (special tracks)..."
 node src/makeGenArkExtensions.ts
 
-# AI descriptions
+echo "Generating AI descriptions for species..."
 node src/getAutomatedSpeciesDescription.ts
 
-sleep 1
+sleep 1 # Small pause
 
-# Format
-npx @biomejs/biome format --write ../
+# --- Step 8: Format Codebase ---
+
+echo "Formatting codebase with Biome..."
+cd ..
+yarn format
+cd -
