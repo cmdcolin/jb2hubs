@@ -25,13 +25,9 @@ async function parseTrackHub(trackDbUrl: string, outputFilePath: string) {
   }
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 4) {
-    console.error(
-      'Usage: ts-node parseTrackHub.ts <trackDbUrl> <outputFilePath>',
-    )
-    process.exit(1)
-  }
-
-  void parseTrackHub(process.argv[2], process.argv[3])
+if (process.argv.length !== 4) {
+  console.error('Usage: node parseTrackHub.ts <trackDbUrl> <outputFilePath>')
+  process.exit(1)
 }
+
+await parseTrackHub(process.argv[2]!, process.argv[3]!)

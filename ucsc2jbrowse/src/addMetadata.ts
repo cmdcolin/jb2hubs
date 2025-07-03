@@ -24,6 +24,7 @@ function addMetadata(configPath: string, tracksDbPath: string) {
     .map(track => {
       const [, trackLabelWithoutAssemblyName] = splitOnFirst(track.trackId, '-')
       const trackDbEntry = tracksDb[trackLabelWithoutAssemblyName]
+      const currentCategories = track.category ?? []
 
       if (trackDbEntry) {
         const { settings, html, longLabel, shortLabel, grp } = trackDbEntry
@@ -50,9 +51,10 @@ function addMetadata(configPath: string, tracksDbPath: string) {
             .join(' - '),
           description: longLabel,
           category: [
-            ...(track.category ?? []),
+            ...currentCategories,
             ...(grp
-              ? [categoryMap[grp as keyof typeof categoryMap] ?? grp]
+              ? // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                [categoryMap[grp as keyof typeof categoryMap] ?? grp]
               : []),
           ].filter(f => !!f),
         }
@@ -64,7 +66,7 @@ function addMetadata(configPath: string, tracksDbPath: string) {
     .map(track => ({
       ...track,
       category: checkIfTrackGoesInSpecializedCategory(track)
-        ? ['Uncommon or Specialized tracks', ...(track.category ?? [])]
+        ? ['Uncommon or Specialized tracks'].concat(track.category ?? [])
         : track.category,
     }))
 
@@ -76,11 +78,9 @@ function addMetadata(configPath: string, tracksDbPath: string) {
   writeJSON(configPath, updatedConfig)
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 4) {
-    console.error('Usage: ts-node addMetadata.ts <config.json> <tracksDb.json>')
-    process.exit(1)
-  }
-
-  addMetadata(process.argv[2], process.argv[3])
+if (process.argv.length !== 4) {
+  console.error('Usage: node addMetadata.ts <config.json> <tracksDb.json>')
+  process.exit(1)
 }
+
+addMetadata(process.argv[2]!, process.argv[3]!)

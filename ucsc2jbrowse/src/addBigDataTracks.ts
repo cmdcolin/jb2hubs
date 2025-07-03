@@ -1,4 +1,3 @@
-
 import pLimit from 'p-limit'
 
 import { checkIfFileAccessible } from './checkIfFileAccessible.ts'
@@ -9,7 +8,6 @@ interface BigDataTrack {
   tableName: string
   settings: { bigDataUrl?: string }
 }
-
 
 type BigDataTracksJson = Record<string, BigDataTrack>
 
@@ -110,13 +108,11 @@ async function addBigDataTracks(
   writeJSON(configPath, config)
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 4) {
-    console.error(
-      'Usage: ts-node addBigDataTracks.ts <bigDataEntries.json> <config.json>',
-    )
-    process.exit(1)
-  }
-
-  void addBigDataTracks(process.argv[2], process.argv[3])
+if (process.argv.length !== 4) {
+  console.error(
+    'Usage: node addBigDataTracks.ts <bigDataEntries.json> <config.json>',
+  )
+  process.exit(1)
 }
+
+await addBigDataTracks(process.argv[2]!, process.argv[3]!)

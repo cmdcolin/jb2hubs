@@ -12,10 +12,8 @@ function parseBigFileTracks(tracksJsonPath: string) {
 
   const bigFileTracks = Object.fromEntries(
     Object.entries(tracks)
-      .filter(
-        ([_key, trackEntry]) =>
-          trackEntry.type.startsWith('big') ||
-          trackEntry.type.startsWith('bam'),
+      .filter(([_key, trackEntry]) =>
+        ['big', 'bam'].some(prefix => trackEntry.type.startsWith(prefix)),
       )
       .map(([key, trackEntry]) => {
         // Parse the settings string into an object
@@ -38,11 +36,9 @@ function parseBigFileTracks(tracksJsonPath: string) {
   console.log(JSON.stringify(bigFileTracks, null, 2))
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 3) {
-    console.error('Usage: ts-node parseBigFileTracks.ts <tracks.json>')
-    process.exit(1)
-  }
-
-  parseBigFileTracks(process.argv[2])
+if (process.argv.length !== 3) {
+  console.error('Usage: node parseBigFileTracks.ts <tracks.json>')
+  process.exit(1)
 }
+
+parseBigFileTracks(process.argv[2]!)

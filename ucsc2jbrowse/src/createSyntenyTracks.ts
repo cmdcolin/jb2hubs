@@ -10,13 +10,13 @@ function generateSyntenyCommands() {
 
   if (args.length === 0) {
     console.error(
-      'Usage: ts-node createSyntenyTracks.ts <assembly_name1> [assembly_name2] ...',
+      'Usage: node createSyntenyTracks.ts <assembly_name1> [assembly_name2] ...',
     )
     process.exit(1)
   }
 
   const assemblyNames = args.map(arg => path.basename(arg))
-  const firstAssemblyDir = path.dirname(args[0])
+  const firstAssemblyDir = path.dirname(args[0]!)
 
   console.log(
     '#!/bin/bash\n' +
@@ -54,6 +54,4 @@ function generateSyntenyCommands() {
   console.log(addTrackCommands.join('\n'))
 }
 
-if (require.main === module) {
-  generateSyntenyCommands()
-}
+generateSyntenyCommands()

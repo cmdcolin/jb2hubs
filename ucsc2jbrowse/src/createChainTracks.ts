@@ -126,12 +126,10 @@ function main() {
     .option(
       '-a, --assembly <assembly>',
       'Source assembly name (e.g., hg19, hg38, mm10)',
-      { required: true },
     )
     .option(
       '-s, --source <source_dir>',
       'Either liftOver or vs, the source directory for PIF files',
-      { required: true },
     )
     .option(
       '-o, --output <dir>',

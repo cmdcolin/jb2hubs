@@ -48,6 +48,7 @@ function mergeAllConfigs() {
     // Assuming the first assembly's name can be used as a base for relative URIs
     const assemblyName = config.assemblies[0]?.name
     if (assemblyName) {
+      // @ts-expect-error
       addRelativeUris(config, assemblyName)
     }
     return config
@@ -67,6 +68,4 @@ function mergeAllConfigs() {
   console.log('All configurations merged into ~/ucscResults/all.json')
 }
 
-if (require.main === module) {
-  mergeAllConfigs()
-}
+mergeAllConfigs()

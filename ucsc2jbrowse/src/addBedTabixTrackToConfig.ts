@@ -40,13 +40,11 @@ function addBedTabixTrackToConfig(configPath: string, bedFilePath: string) {
   writeJSON(configPath, config)
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 4) {
-    console.error(
-      'Usage: ts-node addBedTabixTrackToConfig.ts <config.json> <file.bed.gz>',
-    )
-    process.exit(1)
-  }
-
-  addBedTabixTrackToConfig(process.argv[2], process.argv[3])
+if (process.argv.length !== 4) {
+  console.error(
+    'Usage: node addBedTabixTrackToConfig.ts <config.json> <file.bed.gz>',
+  )
+  process.exit(1)
 }
+
+addBedTabixTrackToConfig(process.argv[2]!, process.argv[3]!)

@@ -48,14 +48,14 @@ function makeUcscExtensions(targetDir: string) {
       ),
       // Merge plugins if they exist
       plugins: dedupe(
-        [...extensionConfig.plugins, ...existingConfig.plugins],
+        [...(extensionConfig.plugins ?? []), ...(existingConfig.plugins ?? [])],
         plugin => (plugin as { name: string }).name, // Assuming plugins have a 'name' property
       ),
       // Merge aggregateTextSearchAdapters if they exist
       aggregateTextSearchAdapters: dedupe(
         [
-          ...extensionConfig.aggregateTextSearchAdapters,
-          ...existingConfig.aggregateTextSearchAdapters,
+          ...(extensionConfig.aggregateTextSearchAdapters ?? []),
+          ...(existingConfig.aggregateTextSearchAdapters ?? []),
         ],
         adapter =>
           (adapter as { textSearchAdapterId: string }).textSearchAdapterId, // Assuming adapters have a 'textSearchAdapterId' property
@@ -67,11 +67,9 @@ function makeUcscExtensions(targetDir: string) {
   }
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 3) {
-    console.error('Usage: ts-node makeUcscExtensions.ts <targetDirectory>')
-    process.exit(1)
-  }
-
-  makeUcscExtensions(process.argv[2])
+if (process.argv.length !== 3) {
+  console.error('Usage: node makeUcscExtensions.ts <targetDirectory>')
+  process.exit(1)
 }
+
+makeUcscExtensions(process.argv[2]!)

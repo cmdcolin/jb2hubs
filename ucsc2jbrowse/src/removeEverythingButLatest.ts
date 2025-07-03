@@ -49,11 +49,9 @@ function removeEverythingButLatest(configPath: string) {
   writeJSON(configPath, updatedConfig)
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 3) {
-    console.error('Usage: ts-node removeEverythingButLatest.ts <config.json>')
-    process.exit(1)
-  }
-
-  removeEverythingButLatest(process.argv[2])
+if (process.argv.length !== 3) {
+  console.error('Usage: node removeEverythingButLatest.ts <config.json>')
+  process.exit(1)
 }
+
+removeEverythingButLatest(process.argv[2]!)

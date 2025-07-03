@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "lint": "eslint --report-unused-disable-directives --max-warnings 0",
-    "format": "prettier --write ucsc2jbrowse/src"
+    "format": "PRETTIER_EXPERIMENTAL_CLI=1 prettier --write ."
   },
   "dependencies": {
     "@gmod/ucsc-hub": "^2.0.1",

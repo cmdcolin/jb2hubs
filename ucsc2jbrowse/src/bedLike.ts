@@ -20,11 +20,9 @@ function generateBedHeader(sqlFilePath: string) {
   }
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 3) {
-    console.error('Usage: ts-node bedLike.ts <sqlFile>')
-    process.exit(1)
-  }
-
-  generateBedHeader(process.argv[2])
+if (process.argv.length !== 3) {
+  console.error('Usage: node bedLike.ts <sqlFile>')
+  process.exit(1)
 }
+
+generateBedHeader(process.argv[2]!)

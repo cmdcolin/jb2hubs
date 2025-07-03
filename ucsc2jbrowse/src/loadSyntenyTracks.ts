@@ -14,7 +14,7 @@ async function loadSyntenyTracks() {
 
   if (args.length === 0) {
     console.error(
-      'Usage: ts-node loadSyntenyTracks.ts <assembly_name1> [assembly_name2] ...',
+      'Usage: node loadSyntenyTracks.ts <assembly_name1> [assembly_name2] ...',
     )
     process.exit(1)
   }
@@ -44,6 +44,4 @@ async function loadSyntenyTracks() {
   }
 }
 
-if (require.main === module) {
-  void loadSyntenyTracks()
-}
+await loadSyntenyTracks()

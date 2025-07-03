@@ -45,13 +45,11 @@ function addGffTabixTrackToConfig(configPath: string, gffFilePath: string) {
   writeJSON(configPath, config)
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 4) {
-    console.error(
-      'Usage: ts-node addGffTabixTrackToConfig.ts <config.json> <file.gff.gz>',
-    )
-    process.exit(1)
-  }
-
-  addGffTabixTrackToConfig(process.argv[2], process.argv[3])
+if (process.argv.length !== 4) {
+  console.error(
+    'Usage: node addGffTabixTrackToConfig.ts <config.json> <file.gff.gz>',
+  )
+  process.exit(1)
 }
+
+addGffTabixTrackToConfig(process.argv[2]!, process.argv[3]!)

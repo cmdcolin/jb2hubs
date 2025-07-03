@@ -37,11 +37,9 @@ function checkTracks(tracksFilePath: string, configPath: string) {
   console.log(JSON.stringify(output, null, 2))
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 4) {
-    console.error('Usage: ts-node checkTracks.ts <tracks.json> <config.json>')
-    process.exit(1)
-  }
-
-  checkTracks(process.argv[2], process.argv[3])
+if (process.argv.length !== 4) {
+  console.error('Usage: node checkTracks.ts <tracks.json> <config.json>')
+  process.exit(1)
 }
+
+checkTracks(process.argv[2]!, process.argv[3]!)

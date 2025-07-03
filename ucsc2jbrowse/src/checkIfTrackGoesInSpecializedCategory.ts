@@ -34,13 +34,12 @@ export function checkIfTrackGoesInSpecializedCategory(
     return false
   }
 
-  const trackType = `${metadata.type}`.split(' ')[0]
-  const trackParent = `${metadata.parent}`.split(' ')[0]
-  const trackGroup = `${metadata.group}`.split(' ')[0]
-
+  const trackType = `${metadata.type}`.split(' ')[0]!
+  const trackParent = `${metadata.parent}`.split(' ')[0]!
+  const trackGroup = `${metadata.group}`.split(' ')[0]!
   return (
-    (trackType && specializedTypes.has(trackType)) ??
-    (trackParent && specializedParents.has(trackParent)) ??
-    (trackGroup && specializedGroups.has(trackGroup))
+    specializedTypes.has(trackType) ||
+    specializedParents.has(trackParent) ||
+    specializedGroups.has(trackGroup)
   )
 }

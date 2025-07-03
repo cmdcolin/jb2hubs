@@ -68,11 +68,9 @@ async function processVcfLikeData(sqlFilePath: string, txtGzFilePath: string) {
   }
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 4) {
-    console.error('Usage: ts-node vcfLike.ts <sqlFile> <txtGzFile>')
-    process.exit(1)
-  }
-
-  void processVcfLikeData(process.argv[2], process.argv[3])
+if (process.argv.length !== 4) {
+  console.error('Usage: node vcfLike.ts <sqlFile> <txtGzFile>')
+  process.exit(1)
 }
+
+await processVcfLikeData(process.argv[2]!, process.argv[3]!)

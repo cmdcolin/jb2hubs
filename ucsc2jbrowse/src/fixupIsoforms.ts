@@ -27,11 +27,9 @@ function fixupIsoforms(filePath: string) {
   fs.writeFileSync(filePath, fixedLines.join('\n'))
 }
 
-if (require.main === module) {
-  if (process.argv.length !== 3) {
-    console.error('Usage: ts-node fixupIsoforms.ts <filePath>')
-    process.exit(1)
-  }
-
-  fixupIsoforms(process.argv[2])
+if (process.argv.length !== 3) {
+  console.error('Usage: node fixupIsoforms.ts <filePath>')
+  process.exit(1)
 }
+
+fixupIsoforms(process.argv[2]!)

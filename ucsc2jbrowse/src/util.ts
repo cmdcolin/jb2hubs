@@ -8,7 +8,8 @@ import type { JBrowseConfig } from './types'
  * @returns The parsed JSON object.
  * @template T The expected type of the JSON object.
  */
-export function readJSON(filePath: string): unknown {
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
+export function readJSON<T>(filePath: string): T {
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T
 }
 

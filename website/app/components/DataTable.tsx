@@ -19,6 +19,7 @@ import {
   parseAsStringLiteral,
   useQueryState,
 } from 'nuqs'
+
 import TableOptions, { filterCategories } from './TableOptions.tsx'
 
 import type { AssemblyData } from './util'
