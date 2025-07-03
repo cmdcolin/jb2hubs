@@ -543,46 +543,6 @@
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/003/665/695/GCF_003665695.1/bbi/GCF_003665695.1_Ee_SOAP_WITH_SSPACE.xenoRefGene.bb"
       }
-    },
-    {
-      "type": "FeatureTrack",
-      "trackId": "ncbiGff",
-      "name": "RefSeq All - GFF",
-      "adapter": {
-        "type": "Gff3TabixAdapter",
-        "gffGzLocation": {
-          "uri": "GCF_003665695.1_Ee_SOAP_WITH_SSPACE_genomic.gff.gz",
-          "locationType": "UriLocation"
-        },
-        "index": {
-          "location": {
-            "uri": "GCF_003665695.1_Ee_SOAP_WITH_SSPACE_genomic.gff.gz.csi",
-            "locationType": "UriLocation"
-          },
-          "indexType": "CSI"
-        }
-      },
-      "category": ["NCBI RefSeq"],
-      "assemblyNames": ["GCF_003665695.1"]
-    }
-  ],
-  "aggregateTextSearchAdapters": [
-    {
-      "type": "TrixTextSearchAdapter",
-      "textSearchAdapterId": "GCF_003665695.1-index",
-      "ixFilePath": {
-        "uri": "trix/GCF_003665695.1.ix",
-        "locationType": "UriLocation"
-      },
-      "ixxFilePath": {
-        "uri": "trix/GCF_003665695.1.ixx",
-        "locationType": "UriLocation"
-      },
-      "metaFilePath": {
-        "uri": "trix/GCF_003665695.1_meta.json",
-        "locationType": "UriLocation"
-      },
-      "assemblyNames": ["GCF_003665695.1"]
     }
   ]
 }

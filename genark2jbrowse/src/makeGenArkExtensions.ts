@@ -37,7 +37,9 @@ async function applyGenArkExtensions() {
       console.log(`Created backup: ${backupFilePath}`)
 
       const existingConfig = readJSON(configFilePath) as JBrowseConfig
-      const extensionConfig = readJSON(path.join(extensionsDir, item)) as JBrowseConfig
+      const extensionConfig = readJSON(
+        path.join(extensionsDir, item),
+      ) as JBrowseConfig
 
       // Merge the configurations. Extension tracks take precedence and are deduplicated.
       const mergedConfig = {

@@ -30,7 +30,9 @@ async function processHubJsonFiles() {
 
     try {
       // Read the raw hub JSON data for the current category
-      const rawHubData = await readJSON<{ data: UCSCGenArkAssemblyEntry[] }>(file)
+      const rawHubData = await readJSON<{ data: UCSCGenArkAssemblyEntry[] }>(
+        file,
+      )
 
       // Process each entry and add the source category
       const processedCategoryEntries = rawHubData.data.map(entry => ({

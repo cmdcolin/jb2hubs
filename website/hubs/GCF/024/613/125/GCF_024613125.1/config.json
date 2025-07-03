@@ -420,46 +420,6 @@
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/024/613/125/GCF_024613125.1/bbi/GCF_024613125.1_Pisori2.xenoRefGene.bb"
       }
-    },
-    {
-      "type": "FeatureTrack",
-      "trackId": "ncbiGff",
-      "name": "RefSeq All - GFF",
-      "adapter": {
-        "type": "Gff3TabixAdapter",
-        "gffGzLocation": {
-          "uri": "GCF_024613125.1_Pisori2_genomic.gff.gz",
-          "locationType": "UriLocation"
-        },
-        "index": {
-          "location": {
-            "uri": "GCF_024613125.1_Pisori2_genomic.gff.gz.csi",
-            "locationType": "UriLocation"
-          },
-          "indexType": "CSI"
-        }
-      },
-      "category": ["NCBI RefSeq"],
-      "assemblyNames": ["GCF_024613125.1"]
-    }
-  ],
-  "aggregateTextSearchAdapters": [
-    {
-      "type": "TrixTextSearchAdapter",
-      "textSearchAdapterId": "GCF_024613125.1-index",
-      "ixFilePath": {
-        "uri": "trix/GCF_024613125.1.ix",
-        "locationType": "UriLocation"
-      },
-      "ixxFilePath": {
-        "uri": "trix/GCF_024613125.1.ixx",
-        "locationType": "UriLocation"
-      },
-      "metaFilePath": {
-        "uri": "trix/GCF_024613125.1_meta.json",
-        "locationType": "UriLocation"
-      },
-      "assemblyNames": ["GCF_024613125.1"]
     }
   ]
 }

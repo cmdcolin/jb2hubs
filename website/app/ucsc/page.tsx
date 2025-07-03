@@ -82,8 +82,8 @@ export default function UCSC() {
       <h1>Main UCSC browsers</h1>
       <div>
         <p>
-          This page contains a list of all the &quot;main&quot; genomes from the UCSC
-          genome browser, converted into a format that JBrowse 2 can load
+          This page contains a list of all the &quot;main&quot; genomes from the
+          UCSC genome browser, converted into a format that JBrowse 2 can load
         </p>
         <p>
           <Link href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">

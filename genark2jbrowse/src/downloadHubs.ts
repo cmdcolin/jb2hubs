@@ -70,7 +70,9 @@ async function processHubEntry({
 
   // Only process if hub.txt doesn't exist or if REPROCESS environment variable is set
   if (!fs.existsSync(hubFilePath) || process.env.REPROCESS) {
-    console.log(`Processing ${idx + 1}/${totalEntries}: ${sciName} (${accession})`)
+    console.log(
+      `Processing ${idx + 1}/${totalEntries}: ${sciName} (${accession})`,
+    )
 
     // Add a small delay to avoid overwhelming the server
     await new Promise(resolve => setTimeout(resolve, 100))

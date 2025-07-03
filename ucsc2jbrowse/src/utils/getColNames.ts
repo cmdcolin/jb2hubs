@@ -19,10 +19,7 @@ export function getColNames(sqlContent: string): {
   // @ts-expect-error - The AST type definition might not perfectly match runtime structure
   const createStatement = ast.find(node => node.type === 'create')
 
-  if (
-    !createStatement?.table ||
-    !createStatement.create_definitions
-  ) {
+  if (!createStatement?.table || !createStatement.create_definitions) {
     throw new Error(
       'Invalid SQL content: Could not find a CREATE TABLE statement or its definitions.',
     )
