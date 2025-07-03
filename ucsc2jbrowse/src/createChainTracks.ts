@@ -4,8 +4,8 @@ import path from 'path'
 
 import { Command } from 'commander'
 
-import { readJSON, writeJSON } from './util'
-import { JBrowseConfig } from './types'
+import { JBrowseConfig } from './types.ts'
+import { readJSON, writeJSON } from './util.ts'
 
 interface ChainTrack {
   type: string

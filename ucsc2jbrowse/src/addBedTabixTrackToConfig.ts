@@ -1,7 +1,6 @@
-import fs from 'fs'
 import path from 'path'
 
-import { readConfig, writeJSON } from './util'
+import { readConfig, writeJSON } from './util.ts'
 
 function addBedTabixTrackToConfig(configPath: string, bedFilePath: string) {
   const config = readConfig(configPath)

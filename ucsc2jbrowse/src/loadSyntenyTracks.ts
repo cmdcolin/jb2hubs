@@ -45,5 +45,5 @@ async function loadSyntenyTracks() {
 }
 
 if (require.main === module) {
-  loadSyntenyTracks()
+  void loadSyntenyTracks()
 }

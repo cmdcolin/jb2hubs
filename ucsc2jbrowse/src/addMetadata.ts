@@ -1,15 +1,15 @@
 import { categoryMap } from 'hubtools'
 
-import { checkIfTrackGoesInSpecializedCategory } from './checkIfTrackGoesInSpecializedCategory'
+import { checkIfTrackGoesInSpecializedCategory } from './checkIfTrackGoesInSpecializedCategory.ts'
 import {
   readConfig,
-  writeJSON,
   readJSON,
   replaceLink,
   splitOnFirst,
-} from './util'
+  writeJSON,
+} from './util.ts'
 
-import type { TrackDbEntry, JBrowseConfig } from './types'
+import type { JBrowseConfig, TrackDbEntry } from './types'
 
 /**
  * Adds metadata from a trackDb.json file to a JBrowse configuration's tracks.
@@ -65,7 +65,7 @@ function addMetadata(configPath: string, tracksDbPath: string) {
       ...track,
       category: checkIfTrackGoesInSpecializedCategory(track)
         ? ['Uncommon or Specialized tracks', ...(track.category ?? [])]
-        : [...(track.category ?? [])],
+        : track.category,
     }))
 
   const updatedConfig: JBrowseConfig = {

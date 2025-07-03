@@ -11,6 +11,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
+import { Star, X } from 'lucide-react'
 import Link from 'next/link'
 import {
   parseAsBoolean,
@@ -18,11 +19,11 @@ import {
   parseAsStringLiteral,
   useQueryState,
 } from 'nuqs'
-
-import './table.css'
-import TableOptions from './TableOptions'
+import TableOptions, { filterCategories } from './TableOptions.tsx'
 
 import type { AssemblyData } from './util'
+
+import './table.css'
 
 const statusOrder = {
   'Complete Genome': 1,
@@ -41,8 +42,6 @@ function RedX() {
 }
 
 // Import filterCategories from TableOptions
-import { filterCategories } from './TableOptions'
-import { Star, X } from 'lucide-react'
 
 // List accepted values
 const sortOrder = ['asc', 'desc', ''] as const

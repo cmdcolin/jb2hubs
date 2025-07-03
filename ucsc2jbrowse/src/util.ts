@@ -8,7 +8,7 @@ import type { JBrowseConfig } from './types'
  * @returns The parsed JSON object.
  * @template T The expected type of the JSON object.
  */
-export function readJSON<T>(filePath: string): T {
+export function readJSON(filePath: string): unknown {
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T
 }
 

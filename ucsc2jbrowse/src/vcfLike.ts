@@ -2,8 +2,8 @@ import fs from 'fs'
 import readline from 'readline'
 import zlib from 'zlib'
 
-import { getColNames } from './utils/getColNames'
-import { parseTableLine } from './utils/parseTableLine'
+import { getColNames } from './utils/getColNames.ts'
+import { parseTableLine } from './utils/parseTableLine.ts'
 
 /**
  * Processes a SQL schema file and a gzipped text file to generate a BED-like output
@@ -60,7 +60,7 @@ async function processVcfLikeData(sqlFilePath: string, txtGzFilePath: string) {
         cdsStart,
         cdsEnd,
         '0,0,0',
-        starts?.length || 0,
+        starts?.length ?? 0,
         sizes.join(','),
         starts?.join(','),
       ].join('\t') + '\n',
@@ -74,5 +74,5 @@ if (require.main === module) {
     process.exit(1)
   }
 
-  processVcfLikeData(process.argv[2], process.argv[3])
+  void processVcfLikeData(process.argv[2], process.argv[3])
 }

@@ -20,8 +20,7 @@ export function getColNames(sqlContent: string): {
   const createStatement = ast.find(node => node.type === 'create')
 
   if (
-    !createStatement ||
-    !createStatement.table ||
+    !createStatement?.table ||
     !createStatement.create_definitions
   ) {
     throw new Error(

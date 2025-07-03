@@ -1,6 +1,6 @@
 import fs from 'fs'
 
-import { getColNames } from './utils/getColNames'
+import { getColNames } from './utils/getColNames.ts'
 
 /**
  * Generates a BED-like header from a SQL file.

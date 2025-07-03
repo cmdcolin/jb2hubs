@@ -1,7 +1,6 @@
-import fs from 'fs'
 import path from 'path'
 
-import { readConfig, writeJSON } from './util'
+import { readConfig, writeJSON } from './util.ts'
 
 /**
  * Adds a GFF3Tabix track to a JBrowse configuration file.

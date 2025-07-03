@@ -1,16 +1,15 @@
-import fs from 'fs'
 
 import pLimit from 'p-limit'
 
-import { checkIfFileAccessible } from './checkIfFileAccessible'
-import { dedupe } from './dedupe'
-import { readConfig, writeJSON, readJSON } from './util'
-import { JBrowseConfig } from './types'
+import { checkIfFileAccessible } from './checkIfFileAccessible.ts'
+import { dedupe } from './dedupe.ts'
+import { readConfig, readJSON, writeJSON } from './util.ts'
 
 interface BigDataTrack {
   tableName: string
   settings: { bigDataUrl?: string }
 }
+
 
 type BigDataTracksJson = Record<string, BigDataTrack>
 
@@ -119,5 +118,5 @@ if (require.main === module) {
     process.exit(1)
   }
 
-  addBigDataTracks(process.argv[2], process.argv[3])
+  void addBigDataTracks(process.argv[2], process.argv[3])
 }

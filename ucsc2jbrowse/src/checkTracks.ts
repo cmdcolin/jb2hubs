@@ -1,5 +1,4 @@
-import { readConfig, readJSON, writeJSON } from './util'
-import { JBrowseConfig } from './types'
+import { readConfig, readJSON } from './util.ts'
 
 interface TrackEntry {
   tableName: string

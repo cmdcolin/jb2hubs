@@ -1,5 +1,5 @@
-import { readJSON, splitOnFirst } from './util'
-import { TrackDbEntry } from './types'
+import { TrackDbEntry } from './types.ts'
+import { readJSON, splitOnFirst } from './util.ts'
 
 /**
  * Parses a tracks.json file to extract information about bigData and BAM tracks.

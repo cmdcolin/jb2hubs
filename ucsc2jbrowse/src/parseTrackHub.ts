@@ -33,5 +33,5 @@ if (require.main === module) {
     process.exit(1)
   }
 
-  parseTrackHub(process.argv[2], process.argv[3])
+  void parseTrackHub(process.argv[2], process.argv[3])
 }

@@ -1,8 +1,8 @@
 import fs from 'fs'
 import zlib from 'zlib'
 
-import { getColNames } from './utils/getColNames'
-import { parseTableLine } from './utils/parseTableLine'
+import { getColNames } from './utils/getColNames.ts'
+import { parseTableLine } from './utils/parseTableLine.ts'
 
 /**
  * Parses a buffer line by line and applies a callback function.
@@ -91,7 +91,7 @@ function generateBed12(sqlFilePath: string, txtGzFilePath: string) {
         cdsStart,
         cdsEnd,
         '0,0,0',
-        starts?.length || 0,
+        starts?.length ?? 0,
         sizes.join(','),
         starts?.join(','),
         name2,

@@ -2,8 +2,8 @@ import fs from 'fs'
 import os from 'os'
 import path from 'path'
 
-import { readConfig, writeJSON } from './util'
-import { JBrowseConfig } from './types'
+import { JBrowseConfig } from './types.ts'
+import { readConfig, writeJSON } from './util.ts'
 
 const CONFIGS_BASE_DIR = 'configs'
 
@@ -23,7 +23,7 @@ function addRelativeUris(
         // Recursively call for nested objects
         addRelativeUris(config[key] as Record<string, unknown>, baseUrl)
       } else if (key === 'uri' && typeof config[key] === 'string') {
-        const uri = config[key] as string
+        const uri = config[key]
         // Prepend base URL if the URI is relative
         if (!uri.startsWith('http') && !uri.startsWith('/')) {
           config[key] = `${baseUrl}/${uri}`

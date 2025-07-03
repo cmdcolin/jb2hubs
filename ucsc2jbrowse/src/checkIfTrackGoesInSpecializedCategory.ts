@@ -1,4 +1,4 @@
-import { JBrowseConfig } from './types'
+import { JBrowseConfig } from './types.ts'
 
 const specializedParents = new Set([
   'exomeProbesets',
@@ -39,8 +39,8 @@ export function checkIfTrackGoesInSpecializedCategory(
   const trackGroup = `${metadata.group}`.split(' ')[0]
 
   return (
-    (trackType && specializedTypes.has(trackType)) ||
-    (trackParent && specializedParents.has(trackParent)) ||
+    (trackType && specializedTypes.has(trackType)) ??
+    (trackParent && specializedParents.has(trackParent)) ??
     (trackGroup && specializedGroups.has(trackGroup))
   )
 }

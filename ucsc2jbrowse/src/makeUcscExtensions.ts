@@ -1,9 +1,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
 
-import { dedupe } from './dedupe'
-import { readConfig, writeJSON } from './util'
-import { JBrowseConfig } from './types'
+import { dedupe } from './dedupe.ts'
+import { JBrowseConfig } from './types.ts'
+import { readConfig, writeJSON } from './util.ts'
 
 const BASE_EXTENSION_DIR = 'ucscExtensions'
 
@@ -42,21 +42,20 @@ function makeUcscExtensions(targetDir: string) {
     const mergedConfig: JBrowseConfig = {
       ...existingConfig,
       ...extensionConfig,
-      // Deduplicate tracks by trackId to avoid duplicates
       tracks: dedupe(
-        [...(extensionConfig.tracks || []), ...(existingConfig.tracks || [])],
+        [...extensionConfig.tracks, ...existingConfig.tracks],
         track => track.trackId,
       ),
       // Merge plugins if they exist
       plugins: dedupe(
-        [...(extensionConfig.plugins || []), ...(existingConfig.plugins || [])],
+        [...extensionConfig.plugins, ...existingConfig.plugins],
         plugin => (plugin as { name: string }).name, // Assuming plugins have a 'name' property
       ),
       // Merge aggregateTextSearchAdapters if they exist
       aggregateTextSearchAdapters: dedupe(
         [
-          ...(extensionConfig.aggregateTextSearchAdapters || []),
-          ...(existingConfig.aggregateTextSearchAdapters || []),
+          ...extensionConfig.aggregateTextSearchAdapters,
+          ...existingConfig.aggregateTextSearchAdapters,
         ],
         adapter =>
           (adapter as { textSearchAdapterId: string }).textSearchAdapterId, // Assuming adapters have a 'textSearchAdapterId' property
