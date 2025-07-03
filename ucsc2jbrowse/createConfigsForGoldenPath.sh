@@ -38,10 +38,10 @@ process_assembly() {
   done
 
   # Add metadata from the tracksDb.sql to the config.json
-  node src/addMetadata.ts "$assembly_results_dir/config.json" "$assembly_results_dir/tracks.json" >"$assembly_results_dir/tmp.json" && mv "$assembly_results_dir/tmp.json" "$assembly_results_dir/config.json"
+  node src/addMetadata.ts "$assembly_results_dir/config.json" "$assembly_results_dir/tracks.json"
 
   # Optional: remove older copies of tracks, e.g. older dbSnp, older GENCODE, etc.
-  node src/removeEverythingButLatest.ts "$assembly_results_dir/config.json" >"$assembly_results_dir/tmp.json" && mv "$assembly_results_dir/tmp.json" "$assembly_results_dir/config.json"
+  node src/removeEverythingButLatest.ts "$assembly_results_dir/config.json"
 }
 
 export -f process_assembly
