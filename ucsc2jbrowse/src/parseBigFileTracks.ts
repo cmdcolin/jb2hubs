@@ -1,37 +1,44 @@
+import { TrackDbEntry } from './types.ts'
 import { readJSON, splitOnFirst } from './util.ts'
 
-import type { TrackDbEntry } from './types.ts'
+/**
+ * Parses a tracks.json file to extract information about bigData and BAM tracks.
+ * It filters tracks based on their 'type' (starting with 'big' or 'bam')
+ * and processes their settings string into a key-value object.
+ * @param tracksJsonPath The path to the tracks.json file.
+ */
+function parseBigFileTracks(tracksJsonPath: string) {
+  const tracks = readJSON<Record<string, TrackDbEntry>>(tracksJsonPath)
 
-if (!process.argv[2]) {
-  throw new Error(`usage: ${process.argv[0]} ${process.argv[1]} <tracks.json>`)
+  const bigFileTracks = Object.fromEntries(
+    Object.entries(tracks)
+      .filter(([_key, trackEntry]) =>
+        ['big', 'bam'].some(prefix => trackEntry.type.startsWith(prefix)),
+      )
+      .map(([key, trackEntry]) => {
+        // Parse the settings string into an object
+        const settings = Object.fromEntries(
+          trackEntry.settings
+            .split('\n')
+            .map(settingLine => splitOnFirst(settingLine, ' '))
+            .filter(([settingKey]) => !!settingKey), // Filter out empty keys
+        )
+        return [
+          key,
+          {
+            ...trackEntry,
+            settings,
+          },
+        ]
+      }),
+  )
+
+  console.log(JSON.stringify(bigFileTracks, null, 2))
 }
 
-const tracks = readJSON<Record<string, TrackDbEntry>>(process.argv[2])
+if (process.argv.length !== 3) {
+  console.error('Usage: node parseBigFileTracks.ts <tracks.json>')
+  process.exit(1)
+}
 
-console.log(
-  JSON.stringify(
-    Object.fromEntries(
-      Object.entries(tracks)
-        .filter(
-          ([_key, val]) =>
-            val.type.startsWith('big') || val.type.startsWith('bam'),
-        )
-        .map(([key, val]) => {
-          return [
-            key,
-            {
-              ...val,
-              settings: Object.fromEntries(
-                val.settings
-                  .split('\n')
-                  .map(s => splitOnFirst(s, ' '))
-                  .filter(f => !!f[0]),
-              ),
-            },
-          ]
-        }),
-    ),
-    null,
-    2,
-  ),
-)
+parseBigFileTracks(process.argv[2]!)

@@ -1,65 +1,86 @@
 import { categoryMap } from 'hubtools'
 
 import { checkIfTrackGoesInSpecializedCategory } from './checkIfTrackGoesInSpecializedCategory.ts'
-import { readConfig, readJSON, replaceLink, splitOnFirst } from './util.ts'
+import {
+  readConfig,
+  readJSON,
+  replaceLink,
+  splitOnFirst,
+  writeJSON,
+} from './util.ts'
 
-import type { TrackDbEntry } from './types.ts'
+import type { JBrowseConfig, TrackDbEntry } from './types'
 
-const config = readConfig(process.argv[2]!)
-const tracksDb = readJSON<Record<string, TrackDbEntry>>(process.argv[3]!)
-console.log(
-  JSON.stringify(
-    {
-      ...config,
-      tracks: config.tracks
-        .map(t => {
-          const [, trackLabelWithoutAssemblyName] = splitOnFirst(t.trackId, '-')
-          const track = tracksDb[trackLabelWithoutAssemblyName]
-          if (track) {
-            const { settings, html, longLabel, shortLabel, grp, ...rest } =
-              track
-            const trackMetadata = Object.fromEntries(
-              settings
-                .split('\n')
-                .map(r => splitOnFirst(r, ' '))
-                .filter(([key]) => !!key),
-            )
-            const parentTrackId = trackMetadata.parent
-              ? splitOnFirst(trackMetadata.parent, ' ')[0]
-              : undefined
-            return {
-              ...t,
-              metadata: {
-                ...rest,
-                ...trackMetadata,
-                html: replaceLink(html),
-              },
-              name: [
-                (parentTrackId ? tracksDb[parentTrackId] : undefined)
-                  ?.shortLabel,
-                shortLabel,
-              ]
-                .filter(f => !!f)
-                .join(' - '),
-              description: longLabel,
-              category: [grp]
-                .filter(f => !!f)
-                // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                .map(r => categoryMap[r as keyof typeof categoryMap] ?? r),
-            }
-          } else {
-            console.error('track not found in trackDb', t.trackId)
-            return t
-          }
-        })
-        .map(track => ({
+/**
+ * Adds metadata from a trackDb.json file to a JBrowse configuration's tracks.
+ * @param configPath The path to the JBrowse configuration file.
+ * @param tracksDbPath The path to the tracksDb.json file.
+ */
+function addMetadata(configPath: string, tracksDbPath: string) {
+  const config = readConfig(configPath)
+  const tracksDb = readJSON<Record<string, TrackDbEntry>>(tracksDbPath)
+
+  const updatedTracks = config.tracks
+    .map(track => {
+      const [, trackLabelWithoutAssemblyName] = splitOnFirst(track.trackId, '-')
+      const trackDbEntry = tracksDb[trackLabelWithoutAssemblyName]
+      const currentCategories = track.category ?? []
+
+      if (trackDbEntry) {
+        const { settings, html, longLabel, shortLabel, grp } = trackDbEntry
+        const trackMetadata = Object.fromEntries(
+          settings
+            .split('\n')
+            .map(r => splitOnFirst(r, ' '))
+            .filter(([key]) => !!key),
+        )
+        const parentTrackId = trackMetadata.parent
+          ? splitOnFirst(trackMetadata.parent, ' ')[0]
+          : undefined
+        const parentTrack = parentTrackId ? tracksDb[parentTrackId] : undefined
+
+        return {
           ...track,
-          category: checkIfTrackGoesInSpecializedCategory(track)
-            ? ['Uncommon or Specialized tracks', ...(track.category ?? [])]
-            : [...(track.category ?? [])],
-        })),
-    },
-    null,
-    2,
-  ),
-)
+          metadata: {
+            ...track.metadata,
+            ...trackMetadata,
+            html: replaceLink(html),
+          },
+          name: [parentTrack?.shortLabel, shortLabel]
+            .filter(f => !!f)
+            .join(' - '),
+          description: longLabel,
+          category: [
+            ...currentCategories,
+            ...(grp
+              ? // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                [categoryMap[grp as keyof typeof categoryMap] ?? grp]
+              : []),
+          ].filter(f => !!f),
+        }
+      } else {
+        console.warn('Track not found in trackDb', track.trackId)
+        return track
+      }
+    })
+    .map(track => ({
+      ...track,
+      category: checkIfTrackGoesInSpecializedCategory(track)
+        ? ['Uncommon or Specialized tracks'].concat(track.category ?? [])
+        : track.category,
+    }))
+
+  const updatedConfig: JBrowseConfig = {
+    ...config,
+    tracks: updatedTracks,
+  }
+
+  writeJSON(configPath, updatedConfig)
+}
+
+if (process.argv.length !== 4) {
+  console.error('Usage: node addMetadata.ts <config.json> <tracksDb.json>')
+  process.exit(1)
+}
+
+addMetadata(process.argv[2]!, process.argv[3]!)
