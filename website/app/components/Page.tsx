@@ -18,7 +18,7 @@ export default async function Page({
   raw: string
 }) {
   return (
-    <Container>
+    <Container className="w-7/8">
       <h1>GenArk hubs - {title}</h1>
       <Suspense>
         <DataTable

@@ -1,6 +1,8 @@
 import GenArkMainTable from './GenArkMainTable.tsx'
 import GenArkProjectTable from './GenArkProjectTable.tsx'
 
+import './table.css'
+
 export default function GenArk() {
   return (
     <div>
