@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import { dedupe } from 'hubtools'
-import Link from 'next/link'
+import Link2 from 'next/link'
 
 import Container from '../components/Container.tsx'
 
@@ -17,9 +17,9 @@ export default function Page() {
       <div>
         This is a list of files that are available at UCSC, but which we were
         not able to ping. See{' '}
-        <Link href="https://genome.ucsc.edu/license/">
+        <Link2 href="https://genome.ucsc.edu/license/">
           https://genome.ucsc.edu/license/
-        </Link>{' '}
+        </Link2>{' '}
         for more info. Most of these fall under this restriction category:
         &quot;Certain genome annotation data, mostly on the human genome and in
         the domain of clinical genetics, have specific restrictions. For some of

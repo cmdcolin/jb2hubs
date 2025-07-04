@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link2 from 'next/link'
 
 import Container from '../components/Container.tsx'
 
@@ -10,7 +10,7 @@ export default function About() {
         <p>
           This resource was created by bulk importing UCSC data to create
           annotation-rich JBrowse data resources. We created scripts (
-          <Link href="https://github.com/cmdcolin/jb2hubs/">GitHub</Link>) for
+          <Link2 href="https://github.com/cmdcolin/jb2hubs/">GitHub</Link2>) for
           parsing UCSC MySQL database dumps for the main UCSC genome browser
           sets, and for converting hub.txt files to JBrowse config.json files
           for the GenArk configs

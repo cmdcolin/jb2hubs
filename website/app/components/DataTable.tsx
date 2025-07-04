@@ -12,7 +12,6 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 import { Star, X } from 'lucide-react'
-import Link from 'next/link'
 import {
   parseAsBoolean,
   parseAsString,
@@ -20,6 +19,7 @@ import {
   useQueryState,
 } from 'nuqs'
 
+import Link2 from './Link2.tsx'
 import TableOptions, { filterCategories } from './TableOptions.tsx'
 
 import type { AssemblyData } from './util'
@@ -41,8 +41,6 @@ function OrangeStar() {
 function RedX() {
   return <X stroke="red" className="w-[1em] h-[1em]" />
 }
-
-// Import filterCategories from TableOptions
 
 // List accepted values
 const sortOrder = ['asc', 'desc', ''] as const
@@ -149,12 +147,12 @@ export default function DataTable({
         cell: info => (
           <>
             {info.getValue()}{' '}
-            <Link
+            <Link2
               href={`/accession/${info.row.original.accession}`}
               rel="noopener noreferrer"
             >
               (info)
-            </Link>{' '}
+            </Link2>{' '}
             {info.row.original.ncbiRefSeqCategory === 'reference genome' ? (
               <OrangeStar />
             ) : null}
@@ -166,9 +164,9 @@ export default function DataTable({
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
         cell: info => (
-          <Link href={info.getValue()} rel="noopener noreferrer">
+          <Link2 href={info.getValue()} rel="noopener noreferrer">
             JBrowse
-          </Link>
+          </Link2>
         ),
         enableSorting: false,
       }),

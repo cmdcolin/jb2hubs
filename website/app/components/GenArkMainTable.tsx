@@ -1,5 +1,6 @@
 import { hubCategories } from 'hubtools'
-import Link from 'next/link'
+
+import Link2 from './Link2.tsx'
 
 export default function GenArkMainTable() {
   return (
@@ -16,7 +17,7 @@ export default function GenArkMainTable() {
           .map(elt => (
             <tr key={elt.id}>
               <td>
-                <Link href={`/hubs/${elt.id}`}>{elt.id}</Link>
+                <Link2 href={`/hubs/${elt.id}`}>{elt.id}</Link2>
               </td>
               <td>{elt.description}</td>
             </tr>

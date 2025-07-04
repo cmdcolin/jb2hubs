@@ -10,7 +10,7 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import Link from 'next/link'
+import Link2 from 'next/link'
 
 import list from './list.json'
 import Container from '../components/Container.tsx'
@@ -27,7 +27,7 @@ export default function UCSC() {
       organism: val.organism,
       description: val.description,
       jbrowseLink: `https://jbrowse.org/code/jb2/main/?config=/ucsc/${key}/config.json`,
-      ucscLink: `https://genome.ucsc.edu/cgi-bin/hgTracks?db=${key}`,
+      ucscLink2: `https://genome.ucsc.edu/cgi-bin/hgTracks?db=${key}`,
       orderKey: val.orderKey,
     }))
   }, [])
@@ -55,11 +55,11 @@ export default function UCSC() {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => <Link href={info.getValue()}>JBrowse</Link>,
+        cell: info => <Link2 href={info.getValue()}>JBrowse</Link2>,
       }),
-      columnHelper.accessor('ucscLink', {
+      columnHelper.accessor('ucscLink2', {
         header: 'UCSC',
-        cell: info => <Link href={info.getValue()}>UCSC</Link>,
+        cell: info => <Link2 href={info.getValue()}>UCSC</Link2>,
       }),
     ],
     [columnHelper],
@@ -86,9 +86,9 @@ export default function UCSC() {
           UCSC genome browser, converted into a format that JBrowse 2 can load
         </p>
         <p>
-          <Link href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">
+          <Link2 href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">
             Click here
-          </Link>{' '}
+          </Link2>{' '}
           for single JBrowse 2 instance containing ALL the species. This is the
           instance you should use if you want to browse synteny datasets that
           compare different species
