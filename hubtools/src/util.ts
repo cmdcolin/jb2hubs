@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+import fs from 'fs'
 
 export function resolve(uri: string, baseUri: string | URL) {
   return new URL(uri, baseUri).href

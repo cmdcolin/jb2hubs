@@ -6,6 +6,7 @@ import DataTable from './DataTable.tsx'
 import { readJSON } from './util.ts'
 
 import type { AssemblyData } from './util'
+import UncenteredContainer from './UncenteredContainer.tsx'
 
 type Assemblies = AssemblyData[]
 
@@ -17,7 +18,7 @@ export default async function Page({
   raw: string
 }) {
   return (
-    <div>
+    <UncenteredContainer>
       <h1>GenArk hubs - {title}</h1>
       <Suspense>
         <DataTable
@@ -28,6 +29,6 @@ export default async function Page({
           ).filter(f => !!f)}
         />
       </Suspense>
-    </div>
+    </UncenteredContainer>
   )
 }

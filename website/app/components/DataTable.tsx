@@ -1,5 +1,4 @@
 'use client'
-
 import { useMemo } from 'react'
 
 import {
@@ -26,6 +25,9 @@ import type { AssemblyData } from './util'
 
 import './table.css'
 
+export function notEmpty<T>(value: T | null | undefined): value is T {
+  return value !== null && value !== undefined
+}
 const statusOrder = {
   'Complete Genome': 1,
   'Complete genome': 1,
@@ -45,11 +47,7 @@ function RedX() {
 // List accepted values
 const sortOrder = ['asc', 'desc', ''] as const
 
-export default function DataTable({
-  rows,
-}: {
-  rows: NonNullable<AssemblyData>[]
-}) {
+export default function DataTable({ rows }: { rows: AssemblyData[] }) {
   const [sortState, setSortState] = useQueryState(
     'sort',
     parseAsString.withDefault(''),
@@ -103,24 +101,26 @@ export default function DataTable({
   }
 
   const filteredRows = useMemo(() => {
+    const rows2 = rows.filter(notEmpty).filter(f => f.accession)
+    console.log(rows.find(f => !f.accession))
     switch (filterOption) {
       case 'all': {
-        return rows
+        return rows2
       }
       case 'refseq': {
-        return rows.filter(r => r.ncbiName.startsWith('GCF_'))
+        return rows2.filter(r => r.ncbiName.startsWith('GCF_'))
       }
       case 'genbank': {
-        return rows.filter(r => r.ncbiName.startsWith('GCA_'))
+        return rows2.filter(r => r.ncbiName.startsWith('GCA_'))
       }
       case 'designatedReference': {
-        return rows.filter(r => r.ncbiRefSeqCategory === 'reference genome')
+        return rows2.filter(r => r.ncbiRefSeqCategory === 'reference genome')
       }
       case 'hidesuppressed': {
-        return rows.filter(r => !r.suppressed)
+        return rows2.filter(r => !r.suppressed)
       }
       default: {
-        return rows
+        return rows2
       }
     }
   }, [rows, filterOption])
@@ -199,7 +199,7 @@ export default function DataTable({
       }),
       columnHelper.accessor('seqReleaseDate', {
         header: 'Release date',
-        cell: info => info.getValue().replace('00:00', ''),
+        cell: info => info.getValue()?.replace('00:00', ''),
         enableSorting: true,
       }),
       columnHelper.accessor('scientificName', {

@@ -42,6 +42,53 @@ export default function About() {
           </dd>
         </dl>
       </div>
+
+      <div>
+        <h2>Citing resources:</h2>
+        <p>
+          To reference this resource, please cite:{' '}
+          <i>
+            JBrowse 2: a modular genome browser with views of synteny and
+            structural variation. Genome Biology (2023).
+            <Link2 href="https://doi.org/10.1186/s13059-023-02914-z">
+              https://doi.org/10.1186/s13059-023-02914-z
+            </Link2>
+          </i>
+        </p>
+
+        <p>
+          To reference UCSC GenArk resources in publications, please cite:{' '}
+          <i>
+            GenArk: towards a million UCSC genome browsers. Genome Biology
+            (2023).{' '}
+            <Link2 href="https://doi.org/10.1186/s13059-023-03057-x">
+              https://doi.org/10.1186/s13059-023-03057-x
+            </Link2>
+          </i>
+        </p>
+        <p>
+          To reference other UCSC resources and tools, please see this page
+          <Link2 href="https://genome.ucsc.edu/cite.html">
+            https://genome.ucsc.edu/cite.html
+          </Link2>
+        </p>
+        <p>
+          To reference the data for species of the main UCSC genome browse,
+          please see this page:
+          <Link2 href="https://genome.ucsc.edu/cite.html">
+            https://genome.ucsc.edu/goldenPath/credits.html
+          </Link2>
+        </p>
+        <p>
+          And lastly, a big thank you to UCSC for their work and their open
+          licensing of datasources. See https://genome.ucsc.edu/license/ for
+          more info.
+        </p>
+      </div>
+      <div className="mt-20">
+        Feel free to contact or report issues to{' '}
+        <Link2 href="https://github.com/cmdcolin/jb2hubs/">Github</Link2>
+      </div>
     </Container>
   )
 }

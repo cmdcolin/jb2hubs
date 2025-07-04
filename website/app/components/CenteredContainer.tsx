@@ -1,6 +1,10 @@
 import Breadcrumbs from './Breadcrumbs'
 
-export default function Container({ children }: { children: React.ReactNode }) {
+export default function CenteredContainer({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <div className="lg:w-1/2 m-auto">
       <Breadcrumbs />

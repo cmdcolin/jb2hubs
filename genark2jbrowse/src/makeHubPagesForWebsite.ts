@@ -1,4 +1,4 @@
-import * as fs from 'node:fs'
+import * as fs from 'fs'
 
 /**
  * Capitalizes the first letter of a given string.

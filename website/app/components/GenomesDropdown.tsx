@@ -1,5 +1,6 @@
 'use client'
 import Link2 from 'next/link'
+import { ChevronDown } from 'lucide-react'
 
 // method for tracking open state from
 // https://stackoverflow.com/a/76884775/2129219
@@ -7,7 +8,7 @@ export default function GenomesDropdown() {
   return (
     <div className="dropdown dropdown-start">
       <div tabIndex={0} role="button" className="btn btn-ghost m-1">
-        Genomes
+        Genomes <ChevronDown className="inline-block" />
       </div>
       <ul
         tabIndex={0}

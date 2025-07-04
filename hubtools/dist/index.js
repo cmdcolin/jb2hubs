@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+import fs from 'fs'
 import { SingleFileHub } from '@gmod/ucsc-hub'
 import path from 'path'
 

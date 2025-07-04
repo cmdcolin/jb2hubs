@@ -1,8 +1,12 @@
 import Breadcrumbs from './Breadcrumbs'
 
-export default function Container({ children }: { children: React.ReactNode }) {
+export default function UncenteredContainer({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <div className="lg:w-1/2 m-auto">
+    <div className="lg:w-7/8 m-auto">
       <Breadcrumbs />
       {children}
       <div style={{ height: 300 }} />
