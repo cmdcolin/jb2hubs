@@ -1,5 +1,5 @@
-import GenArkMainTable from './GenArkMainTable'
-import GenArkProjectTable from './GenArkProjectTable'
+import GenArkMainTable from './GenArkMainTable.tsx'
+import GenArkProjectTable from './GenArkProjectTable.tsx'
 
 export default function GenArk() {
   return (

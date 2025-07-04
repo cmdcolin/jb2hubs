@@ -1,6 +1,6 @@
 'use client'
-import Link2 from 'next/link'
 import { ChevronDown } from 'lucide-react'
+import Link2 from 'next/link'
 
 // method for tracking open state from
 // https://stackoverflow.com/a/76884775/2129219

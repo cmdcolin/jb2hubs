@@ -2,15 +2,12 @@
 import { useMemo } from 'react'
 
 import {
-  type Row,
-  type SortingState,
   createColumnHelper,
   flexRender,
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import { Star, X } from 'lucide-react'
 import {
   parseAsBoolean,
   parseAsString,
@@ -19,9 +16,12 @@ import {
 } from 'nuqs'
 
 import Link2 from './Link2.tsx'
+import OrangeStar from './OrangeStar.tsx'
+import RedX from './RedX.tsx'
 import TableOptions, { filterCategories } from './TableOptions.tsx'
 
 import type { AssemblyData } from './util'
+import type { Row, SortingState } from '@tanstack/react-table'
 
 import './table.css'
 
@@ -34,14 +34,6 @@ const statusOrder = {
   Chromosome: 2,
   Scaffold: 3,
   Contig: 4,
-}
-
-function OrangeStar() {
-  return <Star fill="orange" strokeWidth={0} className="w-[1em] h-[1em]" />
-}
-
-function RedX() {
-  return <X stroke="red" className="w-[1em] h-[1em]" />
 }
 
 // List accepted values
@@ -102,7 +94,6 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
 
   const filteredRows = useMemo(() => {
     const rows2 = rows.filter(notEmpty).filter(f => f.accession)
-    console.log(rows.find(f => !f.accession))
     switch (filterOption) {
       case 'all': {
         return rows2
@@ -199,7 +190,7 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
       }),
       columnHelper.accessor('seqReleaseDate', {
         header: 'Release date',
-        cell: info => info.getValue()?.replace('00:00', ''),
+        cell: info => info.getValue().replace('00:00', ''),
         enableSorting: true,
       }),
       columnHelper.accessor('scientificName', {

@@ -1,6 +1,5 @@
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
-import Breadcrumbs from './components/Breadcrumbs.tsx'
 import Header from './components/Header.tsx'
 
 import type { Metadata } from 'next'

@@ -3,10 +3,10 @@ import { Suspense } from 'react'
 import path from 'path'
 
 import DataTable from './DataTable.tsx'
+import Container from './Container.tsx'
 import { readJSON } from './util.ts'
 
 import type { AssemblyData } from './util'
-import UncenteredContainer from './UncenteredContainer.tsx'
 
 type Assemblies = AssemblyData[]
 
@@ -18,7 +18,7 @@ export default async function Page({
   raw: string
 }) {
   return (
-    <UncenteredContainer>
+    <Container>
       <h1>GenArk hubs - {title}</h1>
       <Suspense>
         <DataTable
@@ -29,6 +29,6 @@ export default async function Page({
           ).filter(f => !!f)}
         />
       </Suspense>
-    </UncenteredContainer>
+    </Container>
   )
 }
