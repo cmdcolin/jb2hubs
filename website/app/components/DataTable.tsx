@@ -23,7 +23,8 @@ import './table.css'
 export default function DataTable({ rows }: { rows: AssemblyData[] }) {
   // Custom hooks for table functionality
   const { filterOption, setFilterOption, filteredRows } = useTableFilter(rows)
-  const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } = useTableSort()
+  const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } =
+    useTableSort()
   const { showAllColumns, setShowAllColumns } = useColumnVisibility()
   const { columns } = useTableColumns()
 
@@ -53,7 +54,7 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
 
       <div>
         <table>
-          <TableHeader 
+          <TableHeader
             headerGroups={table.getHeaderGroups()}
             handleSort={handleSort}
             sortState={sortState}

@@ -116,4 +116,3 @@ export function useTableColumns() {
 
   return { columns }
 }
-

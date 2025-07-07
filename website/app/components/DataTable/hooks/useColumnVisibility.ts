@@ -9,4 +9,3 @@ export function useColumnVisibility() {
 
   return { showAllColumns, setShowAllColumns }
 }
-

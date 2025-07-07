@@ -14,4 +14,3 @@ export const statusOrder = {
 
 // List accepted sort direction values
 export const sortOrder = ['asc', 'desc', ''] as const
-
