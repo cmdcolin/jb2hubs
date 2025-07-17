@@ -6,7 +6,7 @@
 # Main orchestration script to download, process, and configure UCSC data for JBrowse.
 #
 
-set -euo pipefail
+# set -euo pipefail
 
 # --- Configuration ---
 
