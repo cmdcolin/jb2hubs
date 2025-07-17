@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import { StyledLink } from './ui/Link'
 
 export default function Link2({
   href,
@@ -9,9 +9,11 @@ export default function Link2({
   children: React.ReactNode
   rel?: string
 }) {
+  const isExternal = href.startsWith('http') || href.startsWith('https')
+  
   return (
-    <Link rel={rel} prefetch={false} href={href}>
+    <StyledLink href={href} rel={rel} external={isExternal}>
       {children}
-    </Link>
+    </StyledLink>
   )
 }

@@ -14,6 +14,9 @@ import Link2 from 'next/link'
 
 import list from './list.json'
 import Container from '../components/Container.tsx'
+import { H1, P } from '../components/ui/Typography'
+import { Table, TableHeader, TableBody, TableRow, TableHeaderCell, TableCell } from '../components/ui/Table'
+import { StyledLink } from '../components/ui/Link'
 
 import '../components/table.css'
 
@@ -55,11 +58,11 @@ export default function UCSC() {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => <Link2 href={info.getValue()}>JBrowse</Link2>,
+        cell: info => <StyledLink href={info.getValue()} external>JBrowse</StyledLink>,
       }),
       columnHelper.accessor('ucscLink2', {
         header: 'UCSC',
-        cell: info => <Link2 href={info.getValue()}>UCSC</Link2>,
+        cell: info => <StyledLink href={info.getValue()} external>UCSC</StyledLink>,
       }),
     ],
     [columnHelper],
@@ -79,27 +82,27 @@ export default function UCSC() {
 
   return (
     <Container>
-      <h1>Main UCSC browsers</h1>
+      <H1>Main UCSC browsers</H1>
       <div>
-        <p>
+        <P>
           This page contains a list of all the &quot;main&quot; genomes from the
           UCSC genome browser, converted into a format that JBrowse 2 can load
-        </p>
-        <p>
-          <Link2 href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">
+        </P>
+        <P>
+          <StyledLink href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json" external>
             Click here
-          </Link2>{' '}
+          </StyledLink>{' '}
           for single JBrowse 2 instance containing ALL the species. This is the
           instance you should use if you want to browse synteny datasets that
           compare different species
-        </p>
+        </P>
       </div>
-      <table>
-        <thead>
+      <Table>
+        <TableHeader>
           {table.getHeaderGroups().map(group => (
-            <tr key={group.id}>
+            <TableRow key={group.id}>
               {group.headers.map(header => (
-                <th
+                <TableHeaderCell
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
                   className={header.column.getCanSort() ? 'cursor-pointer' : ''}
@@ -112,23 +115,23 @@ export default function UCSC() {
                     asc: ' ↑',
                     desc: ' ↓',
                   }[header.column.getIsSorted() as string] ?? ''}
-                </th>
+                </TableHeaderCell>
               ))}
-            </tr>
+            </TableRow>
           ))}
-        </thead>
-        <tbody>
+        </TableHeader>
+        <TableBody>
           {table.getRowModel().rows.map(row => (
-            <tr key={row.id}>
+            <TableRow key={row.id}>
               {row.getVisibleCells().map(cell => (
-                <td key={cell.id}>
+                <TableCell key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </td>
+                </TableCell>
               ))}
-            </tr>
+            </TableRow>
           ))}
-        </tbody>
-      </table>
+        </TableBody>
+      </Table>
     </Container>
   )
 }

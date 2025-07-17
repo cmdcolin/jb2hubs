@@ -5,6 +5,7 @@ import path from 'path'
 import Container from './Container.tsx'
 import DataTable from './DataTable.tsx'
 import { readJSON } from './util.ts'
+import { H1 } from './ui/Typography'
 
 import type { AssemblyData } from './util'
 
@@ -19,7 +20,7 @@ export default async function Page({
 }) {
   return (
     <Container className="w-7/8">
-      <h1>GenArk hubs - {title}</h1>
+      <H1>GenArk hubs - {title}</H1>
       <Suspense>
         <DataTable
           rows={(

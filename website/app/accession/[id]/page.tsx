@@ -5,8 +5,10 @@ import ReactMarkdown from 'react-markdown'
 import slugify from 'slugify'
 
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
-import Link2 from '../../components/Link2.tsx'
 import { tryAndReadJSON, tryAndReadText } from '../../components/util.ts'
+import { H1, H2, H4, Italic } from '../../components/ui/Typography'
+import { UL, LI } from '../../components/ui/List'
+import { StyledLink } from '../../components/ui/Link'
 
 export async function generateMetadata({
   params,

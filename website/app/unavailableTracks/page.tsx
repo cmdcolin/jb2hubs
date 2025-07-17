@@ -2,9 +2,11 @@ import fs from 'fs'
 import path from 'path'
 
 import { dedupe } from 'hubtools'
-import Link2 from 'next/link'
 
 import Container from '../components/Container.tsx'
+import { H3, P } from '../components/ui/Typography'
+import { UL, LI } from '../components/ui/List'
+import { StyledLink } from '../components/ui/Link'
 
 export default function Page() {
   const data = fs.readFileSync(
@@ -13,13 +15,13 @@ export default function Page() {
   )
   return (
     <Container>
-      <h3>Unavailable tracks</h3>
-      <div>
+      <H3>Unavailable tracks</H3>
+      <P>
         This is a list of files that are available at UCSC, but which we were
         not able to ping. See{' '}
-        <Link2 href="https://genome.ucsc.edu/license/">
+        <StyledLink href="https://genome.ucsc.edu/license/" external>
           https://genome.ucsc.edu/license/
-        </Link2>{' '}
+        </StyledLink>{' '}
         for more info. Most of these fall under this restriction category:
         &quot;Certain genome annotation data, mostly on the human genome and in
         the domain of clinical genetics, have specific restrictions. For some of
@@ -30,8 +32,8 @@ export default function Page() {
         re-sharing restrictions and are (currently) unavailable in JBrowse,
         though we may be able to load them. Please get in touch if you are
         interested in seeing them{' '}
-      </div>
-      <ul>
+      </P>
+      <UL>
         {dedupe(
           data
             .split('\n')
@@ -40,9 +42,9 @@ export default function Page() {
         )
           .sort()
           .map(r => (
-            <li key={r}>{r}</li>
+            <LI key={r}>{r}</LI>
           ))}
-      </ul>
+      </UL>
     </Container>
   )
 }
