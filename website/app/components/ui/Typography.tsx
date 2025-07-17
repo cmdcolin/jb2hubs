@@ -29,6 +29,14 @@ export function H3({ children, className = '' }: HeadingProps) {
   )
 }
 
+export function H4({ children, className = '' }: HeadingProps) {
+  return (
+    <h4 className={`text-lg font-medium text-gray-800 dark:text-gray-200 leading-tight ${className}`}>
+      {children}
+    </h4>
+  )
+}
+
 interface TextProps {
   children: ReactNode
   className?: string
