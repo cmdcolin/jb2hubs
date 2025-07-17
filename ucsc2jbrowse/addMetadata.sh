@@ -6,7 +6,7 @@
 # Adds metadata from trackDb.sql to the JBrowse config.json for each assembly.
 #
 
-set -euo pipefail
+# set -euo pipefail
 
 # --- Configuration ---
 
@@ -32,7 +32,8 @@ process_assembly() {
   echo "Adding metadata to $assembly_name..."
 
   # Add metadata from the tracksDb.sql to the config.json
-  node src/addMetadata.ts "$config_file" "$tracks_file" >"$temp_config_file" && mv "$temp_config_file" "$config_file"
+  node src/addMetadata.ts "$config_file" "$tracks_file"
+  #>"$temp_config_file" && mv "$temp_config_file" "$config_file"
 }
 
 export -f process_assembly

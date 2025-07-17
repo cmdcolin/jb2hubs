@@ -1083,6 +1083,69 @@
       },
       "description": "Non-Atlantic cod RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gadMor1_to_fr3_chain",
+      "name": "gadMor1 to Fugu (fr3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gadMor1", "fr3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gadMor1",
+        "queryAssembly": "fr3",
+        "pifGzLocation": {
+          "uri": "liftOver/gadMor1ToFr3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gadMor1ToFr3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gadMor1_to_hg38_chain",
+      "name": "gadMor1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gadMor1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gadMor1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/gadMor1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gadMor1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gadMor1_to_mm10_chain",
+      "name": "gadMor1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gadMor1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gadMor1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/gadMor1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gadMor1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

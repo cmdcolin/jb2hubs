@@ -472,6 +472,48 @@
       },
       "description": "Non-Pika RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ochPri2_to_mm10_chain",
+      "name": "ochPri2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ochPri2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ochPri2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/ochPri2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ochPri2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ochPri2_to_ochPri3_chain",
+      "name": "ochPri2 to Pika (ochPri3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ochPri2", "ochPri3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ochPri2",
+        "queryAssembly": "ochPri3",
+        "pifGzLocation": {
+          "uri": "liftOver/ochPri2ToOchPri3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ochPri2ToOchPri3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

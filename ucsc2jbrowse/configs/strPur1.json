@@ -667,6 +667,27 @@
       },
       "description": "Non-S. purpuratus RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur1_to_strPur2_chain",
+      "name": "strPur1 to S. purpuratus (strPur2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur1", "strPur2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "strPur1",
+        "queryAssembly": "strPur2",
+        "pifGzLocation": {
+          "uri": "liftOver/strPur1ToStrPur2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/strPur1ToStrPur2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

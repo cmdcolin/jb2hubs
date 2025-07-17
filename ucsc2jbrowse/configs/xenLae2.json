@@ -1236,6 +1236,69 @@
       },
       "description": "Non-African clawed frog RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenLae2_to_hg38_chain",
+      "name": "xenLae2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenLae2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenLae2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/xenLae2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenLae2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenLae2_to_mm10_chain",
+      "name": "xenLae2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenLae2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenLae2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/xenLae2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenLae2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenLae2_to_xenTro9_chain",
+      "name": "xenLae2 to X. tropicalis (xenTro9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenLae2", "xenTro9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenLae2",
+        "queryAssembly": "xenTro9",
+        "pifGzLocation": {
+          "uri": "liftOver/xenLae2ToXenTro9.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenLae2ToXenTro9.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

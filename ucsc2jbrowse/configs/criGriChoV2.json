@@ -1171,6 +1171,90 @@
       },
       "description": "Non-Chinese hamster RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV2_to_criGri1_chain",
+      "name": "criGriChoV2 to Chinese hamster (criGri1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV2", "criGri1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGriChoV2",
+        "queryAssembly": "criGri1",
+        "pifGzLocation": {
+          "uri": "liftOver/criGriChoV2ToCriGri1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGriChoV2ToCriGri1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV2_to_criGriChoV1_chain",
+      "name": "criGriChoV2 to Chinese hamster (criGriChoV1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV2", "criGriChoV1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGriChoV2",
+        "queryAssembly": "criGriChoV1",
+        "pifGzLocation": {
+          "uri": "liftOver/criGriChoV2ToCriGriChoV1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGriChoV2ToCriGriChoV1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV2_to_hg38_chain",
+      "name": "criGriChoV2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGriChoV2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/criGriChoV2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGriChoV2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGriChoV2_to_mm10_chain",
+      "name": "criGriChoV2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGriChoV2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGriChoV2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/criGriChoV2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGriChoV2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

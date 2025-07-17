@@ -655,6 +655,69 @@
       },
       "description": "Non-Chinese hamster RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGri1_to_criGriChoV1_chain",
+      "name": "criGri1 to Chinese hamster (criGriChoV1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGri1", "criGriChoV1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGri1",
+        "queryAssembly": "criGriChoV1",
+        "pifGzLocation": {
+          "uri": "liftOver/criGri1ToCriGriChoV1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGri1ToCriGriChoV1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGri1_to_criGriChoV2_chain",
+      "name": "criGri1 to Chinese hamster (criGriChoV2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGri1", "criGriChoV2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGri1",
+        "queryAssembly": "criGriChoV2",
+        "pifGzLocation": {
+          "uri": "liftOver/criGri1ToCriGriChoV2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGri1ToCriGriChoV2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "criGri1_to_hg19_chain",
+      "name": "criGri1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["criGri1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "criGri1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/criGri1ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/criGri1ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

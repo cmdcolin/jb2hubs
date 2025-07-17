@@ -1168,6 +1168,48 @@
       },
       "description": "Non-Garter snake RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "thaSir1_to_hg38_chain",
+      "name": "thaSir1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["thaSir1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "thaSir1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/thaSir1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/thaSir1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "thaSir1_to_mm10_chain",
+      "name": "thaSir1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["thaSir1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "thaSir1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/thaSir1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/thaSir1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

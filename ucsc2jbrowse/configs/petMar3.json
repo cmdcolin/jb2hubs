@@ -1052,6 +1052,111 @@
       },
       "description": "Non-Lamprey RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_hg38_chain",
+      "name": "petMar3 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar3ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar3ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_mm10_chain",
+      "name": "petMar3 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar3ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar3ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_mm39_chain",
+      "name": "petMar3 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar3ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar3ToMm39.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_petMar1_chain",
+      "name": "petMar3 to Lamprey (petMar1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3", "petMar1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "petMar1",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar3ToPetMar1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar3ToPetMar1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar3_to_petMar2_chain",
+      "name": "petMar3 to Lamprey (petMar2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar3", "petMar2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar3",
+        "queryAssembly": "petMar2",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar3ToPetMar2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar3ToPetMar2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

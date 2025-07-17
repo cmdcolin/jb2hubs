@@ -1112,6 +1112,132 @@
       },
       "description": "Non-Bonobo RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan3_to_hg19_chain",
+      "name": "panPan3 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan3", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan3",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan3ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan3ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan3_to_hg38_chain",
+      "name": "panPan3 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan3", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan3",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan3ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan3ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan3_to_mm10_chain",
+      "name": "panPan3 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan3", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan3",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan3ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan3ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan3_to_mm39_chain",
+      "name": "panPan3 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan3", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan3",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan3ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan3ToMm39.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan3_to_panPan1_chain",
+      "name": "panPan3 to Bonobo (panPan1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan3", "panPan1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan3",
+        "queryAssembly": "panPan1",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan3ToPanPan1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan3ToPanPan1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan3_to_panPan2_chain",
+      "name": "panPan3 to Bonobo (panPan2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan3", "panPan2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan3",
+        "queryAssembly": "panPan2",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan3ToPanPan2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan3ToPanPan2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

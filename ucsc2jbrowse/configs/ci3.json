@@ -1067,6 +1067,90 @@
       },
       "description": "Non-C. intestinalis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_ce11_chain",
+      "name": "ci3 to C. elegans (ce11) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3", "ce11"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "ce11",
+        "pifGzLocation": {
+          "uri": "liftOver/ci3ToCe11.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ci3ToCe11.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_ci2_chain",
+      "name": "ci3 to C. intestinalis (ci2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3", "ci2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "ci2",
+        "pifGzLocation": {
+          "uri": "liftOver/ci3ToCi2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ci3ToCi2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_cioSav2_chain",
+      "name": "ci3 to cioSav2 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3", "cioSav2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "cioSav2",
+        "pifGzLocation": {
+          "uri": "liftOver/ci3ToCioSav2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ci3ToCioSav2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ci3_to_strPur2_chain",
+      "name": "ci3 to S. purpuratus (strPur2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ci3", "strPur2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ci3",
+        "queryAssembly": "strPur2",
+        "pifGzLocation": {
+          "uri": "liftOver/ci3ToStrPur2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ci3ToStrPur2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

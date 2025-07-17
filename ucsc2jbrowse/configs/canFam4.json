@@ -37,6 +37,65 @@
   ],
   "tracks": [
     {
+      "type": "VariantTrack",
+      "name": "Dog10k SNPs",
+      "trackId": "dog10k_snps",
+      "assemblyNames": ["canFam4"],
+      "category": ["Dog10k"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "samplesTsvLocation": {
+          "uri": "https://myloveydove.com/dog10k/info.tsv"
+        },
+        "uri": "https://myloveydove.com/dog10k/AutoAndXPAR.SNPs.vqsr99.vcf.gz"
+      }
+    },
+    {
+      "type": "VariantTrack",
+      "name": "Dog10k inversions",
+      "trackId": "dog10k_inversions",
+      "assemblyNames": ["canFam4"],
+      "category": ["Dog10k"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "samplesTsvLocation": {
+          "uri": "https://myloveydove.com/dog10k/info.tsv"
+        },
+        "uri": "https://myloveydove.com/dog10k/SV-genotype-v2.merge.INV.08042022.vcf.gz"
+      }
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "dog10k_sv",
+      "name": "Dog10k SVs (original Dog10k SVs, 2023)",
+      "assemblyNames": ["canFam4"],
+      "category": ["Dog10k"],
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://myloveydove.com/dog10k/SV-genotype-v2.merge.agg_only.08032022.vcf.gz",
+        "samplesTsvLocation": {
+          "uri": "https://myloveydove.com/dog10k/info.tsv"
+        }
+      }
+    },
+    {
+      "type": "VariantTrack",
+      "trackId": "dog10k_sv2",
+      "name": "Dog10k SVs (re-genotyped with Manta+Paragraph, 2025)",
+      "assemblyNames": ["canFam4"],
+      "category": ["Dog10k"],
+      "metadata": {
+        "source": "https://www.biorxiv.org/content/10.1101/2025.03.05.641690v1"
+      },
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://myloveydove.com/dog10k/Dog10k_manta_paragraph.vcf.gz",
+        "samplesTsvLocation": {
+          "uri": "https://myloveydove.com/dog10k/info.tsv"
+        }
+      }
+    },
+    {
       "trackId": "canFam4-ncbiRefSeqOther",
       "name": "NCBI RefSeq - RefSeq Other",
       "type": "FeatureTrack",
@@ -740,6 +799,195 @@
       },
       "description": "Non-Dog RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_canFam3_chain",
+      "name": "canFam4 to Dog (canFam3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "canFam3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "canFam3",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToCanFam3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToCanFam3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_canFam5_chain",
+      "name": "canFam4 to Dog (canFam5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "canFam5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "canFam5",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToCanFam5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToCanFam5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_canFam6_chain",
+      "name": "canFam4 to Dog (canFam6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "canFam6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "canFam6",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToCanFam6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToCanFam6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_GCF_014441545.1_chain",
+      "name": "canFam4 to dog (labrador SID07034 2020) (GCF_014441545.1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "GCF_014441545.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "GCF_014441545.1",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToGCF_014441545.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToGCF_014441545.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_hg38_chain",
+      "name": "canFam4 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_mm10_chain",
+      "name": "canFam4 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_neoSch1_chain",
+      "name": "canFam4 to Hawaiian monk seal (neoSch1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "neoSch1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "neoSch1",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToNeoSch1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToNeoSch1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_panTro6_chain",
+      "name": "canFam4 to Chimp (panTro6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "panTro6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "panTro6",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToPanTro6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToPanTro6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "canFam4_to_rheMac10_chain",
+      "name": "canFam4 to Rhesus (rheMac10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["canFam4", "rheMac10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "canFam4",
+        "queryAssembly": "rheMac10",
+        "pifGzLocation": {
+          "uri": "liftOver/canFam4ToRheMac10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/canFam4ToRheMac10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [
@@ -760,5 +1008,6 @@
       },
       "assemblyNames": ["canFam4"]
     }
-  ]
+  ],
+  "plugins": []
 }

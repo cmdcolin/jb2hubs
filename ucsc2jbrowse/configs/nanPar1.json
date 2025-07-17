@@ -1168,6 +1168,48 @@
       },
       "description": "Non-Tibetan frog RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nanPar1_to_xenTro7_chain",
+      "name": "nanPar1 to X. tropicalis (xenTro7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nanPar1", "xenTro7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nanPar1",
+        "queryAssembly": "xenTro7",
+        "pifGzLocation": {
+          "uri": "liftOver/nanPar1ToXenTro7.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nanPar1ToXenTro7.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nanPar1_to_xenTro9_chain",
+      "name": "nanPar1 to X. tropicalis (xenTro9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nanPar1", "xenTro9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nanPar1",
+        "queryAssembly": "xenTro9",
+        "pifGzLocation": {
+          "uri": "liftOver/nanPar1ToXenTro9.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nanPar1ToXenTro9.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

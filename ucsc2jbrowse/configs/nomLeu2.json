@@ -407,6 +407,48 @@
       },
       "description": "Non-Gibbon RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu2_to_mm10_chain",
+      "name": "nomLeu2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nomLeu2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/nomLeu2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nomLeu2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu2_to_nomLeu3_chain",
+      "name": "nomLeu2 to Gibbon (nomLeu3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu2", "nomLeu3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nomLeu2",
+        "queryAssembly": "nomLeu3",
+        "pifGzLocation": {
+          "uri": "liftOver/nomLeu2ToNomLeu3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nomLeu2ToNomLeu3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

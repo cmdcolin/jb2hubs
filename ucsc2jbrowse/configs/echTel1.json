@@ -472,6 +472,132 @@
       },
       "description": "Non-Tenrec RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_echTel2_chain",
+      "name": "echTel1 to Tenrec (echTel2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "echTel2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "echTel2",
+        "pifGzLocation": {
+          "uri": "liftOver/echTel1ToEchTel2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/echTel1ToEchTel2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_hg18_chain",
+      "name": "echTel1 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "liftOver/echTel1ToHg18.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/echTel1ToHg18.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_hg19_chain",
+      "name": "echTel1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/echTel1ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/echTel1ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_mm10_chain",
+      "name": "echTel1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/echTel1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/echTel1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_mm7_chain",
+      "name": "echTel1 to Mouse (mm7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "mm7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "mm7",
+        "pifGzLocation": {
+          "uri": "liftOver/echTel1ToMm7.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/echTel1ToMm7.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "echTel1_to_mm9_chain",
+      "name": "echTel1 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["echTel1", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "echTel1",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "liftOver/echTel1ToMm9.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/echTel1ToMm9.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

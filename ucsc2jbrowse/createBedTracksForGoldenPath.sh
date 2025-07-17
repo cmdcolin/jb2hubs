@@ -29,7 +29,6 @@ process_assembly() {
   local db_dir="$assembly_data_dir/$assembly_name/database"
 
   if [ -f "$assembly_results_dir/tracks.json" ]; then
-    echo "Creating BED tracks for $assembly_name..."
     # Process each track that matches our types
     jq -r 'to_entries | map(select(.value.type | startswith("bed") or startswith("pgSnp") or startswith("peptideMapping"))) | map(.key) | .[]' "$assembly_results_dir/tracks.json" | while read -r key; do
       # Skip tracks that start with "snp" or "wgEncode" (these are large and numerous)

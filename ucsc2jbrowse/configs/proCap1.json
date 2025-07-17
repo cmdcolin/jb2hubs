@@ -1052,6 +1052,27 @@
       },
       "description": "Non-Rock hyrax RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "proCap1_to_mm10_chain",
+      "name": "proCap1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["proCap1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "proCap1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/proCap1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/proCap1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

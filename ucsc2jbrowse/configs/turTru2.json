@@ -1015,6 +1015,90 @@
       },
       "description": "Non-Dolphin RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "turTru2_to_bosTau7_chain",
+      "name": "turTru2 to Cow (bosTau7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["turTru2", "bosTau7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "turTru2",
+        "queryAssembly": "bosTau7",
+        "pifGzLocation": {
+          "uri": "liftOver/turTru2ToBosTau7.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/turTru2ToBosTau7.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "turTru2_to_hg38_chain",
+      "name": "turTru2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["turTru2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "turTru2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/turTru2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/turTru2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "turTru2_to_mm10_chain",
+      "name": "turTru2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["turTru2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "turTru2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/turTru2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/turTru2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "turTru2_to_mm39_chain",
+      "name": "turTru2 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["turTru2", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "turTru2",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/turTru2ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/turTru2ToMm39.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

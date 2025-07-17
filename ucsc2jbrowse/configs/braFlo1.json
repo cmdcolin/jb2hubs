@@ -597,6 +597,90 @@
       },
       "description": "Non-Lancelet RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_galGal3_chain",
+      "name": "braFlo1 to Chicken (galGal3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1", "galGal3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "galGal3",
+        "pifGzLocation": {
+          "uri": "liftOver/braFlo1ToGalGal3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/braFlo1ToGalGal3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_hg18_chain",
+      "name": "braFlo1 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "liftOver/braFlo1ToHg18.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/braFlo1ToHg18.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_mm9_chain",
+      "name": "braFlo1 to Mouse (mm9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1", "mm9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "mm9",
+        "pifGzLocation": {
+          "uri": "liftOver/braFlo1ToMm9.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/braFlo1ToMm9.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "braFlo1_to_petMar1_chain",
+      "name": "braFlo1 to Lamprey (petMar1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["braFlo1", "petMar1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "braFlo1",
+        "queryAssembly": "petMar1",
+        "pifGzLocation": {
+          "uri": "liftOver/braFlo1ToPetMar1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/braFlo1ToPetMar1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

@@ -676,6 +676,111 @@
       },
       "description": "Non-Gorilla RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_gorGor3_chain",
+      "name": "gorGor4 to Gorilla (gorGor3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4", "gorGor3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "gorGor3",
+        "pifGzLocation": {
+          "uri": "liftOver/gorGor4ToGorGor3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gorGor4ToGorGor3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_gorGor5_chain",
+      "name": "gorGor4 to Gorilla (gorGor5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4", "gorGor5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "gorGor5",
+        "pifGzLocation": {
+          "uri": "liftOver/gorGor4ToGorGor5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gorGor4ToGorGor5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_hg18_chain",
+      "name": "gorGor4 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "liftOver/gorGor4ToHg18.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gorGor4ToHg18.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_hg38_chain",
+      "name": "gorGor4 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/gorGor4ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gorGor4ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "gorGor4_to_panTro4_chain",
+      "name": "gorGor4 to Chimp (panTro4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["gorGor4", "panTro4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "gorGor4",
+        "queryAssembly": "panTro4",
+        "pifGzLocation": {
+          "uri": "liftOver/gorGor4ToPanTro4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/gorGor4ToPanTro4.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

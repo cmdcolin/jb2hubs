@@ -1085,6 +1085,132 @@
       },
       "description": "Non-Platypus RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna2_to_hg38_chain",
+      "name": "ornAna2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/ornAna2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ornAna2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna2_to_neoSch1_chain",
+      "name": "ornAna2 to Hawaiian monk seal (neoSch1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna2", "neoSch1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna2",
+        "queryAssembly": "neoSch1",
+        "pifGzLocation": {
+          "uri": "liftOver/ornAna2ToNeoSch1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ornAna2ToNeoSch1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna2_to_ornAna1_chain",
+      "name": "ornAna2 to Platypus (ornAna1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna2", "ornAna1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna2",
+        "queryAssembly": "ornAna1",
+        "pifGzLocation": {
+          "uri": "liftOver/ornAna2ToOrnAna1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ornAna2ToOrnAna1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna2_to_panTro6_chain",
+      "name": "ornAna2 to Chimp (panTro6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna2", "panTro6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna2",
+        "queryAssembly": "panTro6",
+        "pifGzLocation": {
+          "uri": "liftOver/ornAna2ToPanTro6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ornAna2ToPanTro6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna2_to_rheMac10_chain",
+      "name": "ornAna2 to Rhesus (rheMac10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna2", "rheMac10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna2",
+        "queryAssembly": "rheMac10",
+        "pifGzLocation": {
+          "uri": "liftOver/ornAna2ToRheMac10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ornAna2ToRheMac10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ornAna2_to_rn6_chain",
+      "name": "ornAna2 to Rat (rn6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ornAna2", "rn6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ornAna2",
+        "queryAssembly": "rn6",
+        "pifGzLocation": {
+          "uri": "liftOver/ornAna2ToRn6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ornAna2ToRn6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

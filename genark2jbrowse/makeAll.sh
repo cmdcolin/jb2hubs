@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+# set -e
 
 # Set NODE_OPTIONS to suppress experimental warnings
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"

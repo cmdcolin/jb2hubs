@@ -840,6 +840,90 @@
       },
       "description": "Non-D. persimilis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droPer1_to_dm2_chain",
+      "name": "droPer1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droPer1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droPer1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/droPer1ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droPer1ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droPer1_to_dm3_chain",
+      "name": "droPer1 to D. melanogaster (dm3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droPer1", "dm3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droPer1",
+        "queryAssembly": "dm3",
+        "pifGzLocation": {
+          "uri": "liftOver/droPer1ToDm3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droPer1ToDm3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droPer1_to_dm6_chain",
+      "name": "droPer1 to D. melanogaster (dm6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droPer1", "dm6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droPer1",
+        "queryAssembly": "dm6",
+        "pifGzLocation": {
+          "uri": "liftOver/droPer1ToDm6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droPer1ToDm6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droPer1_to_dp3_chain",
+      "name": "droPer1 to D. pseudoobscura (dp3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droPer1", "dp3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droPer1",
+        "queryAssembly": "dp3",
+        "pifGzLocation": {
+          "uri": "liftOver/droPer1ToDp3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droPer1ToDp3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

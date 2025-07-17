@@ -472,6 +472,48 @@
       },
       "description": "Non-Shrew RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra1_to_mm10_chain",
+      "name": "sorAra1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra1_to_sorAra2_chain",
+      "name": "sorAra1 to Shrew (sorAra2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra1", "sorAra2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra1",
+        "queryAssembly": "sorAra2",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra1ToSorAra2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra1ToSorAra2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

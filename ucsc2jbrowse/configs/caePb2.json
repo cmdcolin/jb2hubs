@@ -654,6 +654,27 @@
       },
       "description": "Non-C. brenneri RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caePb2_to_ce6_chain",
+      "name": "caePb2 to C. elegans (ce6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caePb2", "ce6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caePb2",
+        "queryAssembly": "ce6",
+        "pifGzLocation": {
+          "uri": "liftOver/caePb2ToCe6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caePb2ToCe6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

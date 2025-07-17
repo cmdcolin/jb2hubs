@@ -379,6 +379,111 @@
       },
       "description": "Non-X. tropicalis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro1_to_hg18_chain",
+      "name": "xenTro1 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro1", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro1",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro1ToHg18.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro1ToHg18.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro1_to_mm6_chain",
+      "name": "xenTro1 to mm6 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro1", "mm6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro1",
+        "queryAssembly": "mm6",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro1ToMm6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro1ToMm6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro1_to_mm7_chain",
+      "name": "xenTro1 to Mouse (mm7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro1", "mm7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro1",
+        "queryAssembly": "mm7",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro1ToMm7.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro1ToMm7.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro1_to_mm8_chain",
+      "name": "xenTro1 to Mouse (mm8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro1", "mm8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro1",
+        "queryAssembly": "mm8",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro1ToMm8.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro1ToMm8.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "xenTro1_to_xenTro2_chain",
+      "name": "xenTro1 to X. tropicalis (xenTro2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["xenTro1", "xenTro2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "xenTro1",
+        "queryAssembly": "xenTro2",
+        "pifGzLocation": {
+          "uri": "liftOver/xenTro1ToXenTro2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/xenTro1ToXenTro2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

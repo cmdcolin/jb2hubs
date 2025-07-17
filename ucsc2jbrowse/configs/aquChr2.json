@@ -1052,6 +1052,69 @@
       },
       "description": "Non-Golden eagle RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aquChr2_to_galGal5_chain",
+      "name": "aquChr2 to Chicken (galGal5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aquChr2", "galGal5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "aquChr2",
+        "queryAssembly": "galGal5",
+        "pifGzLocation": {
+          "uri": "liftOver/aquChr2ToGalGal5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/aquChr2ToGalGal5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aquChr2_to_hg38_chain",
+      "name": "aquChr2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aquChr2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "aquChr2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/aquChr2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/aquChr2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aquChr2_to_mm10_chain",
+      "name": "aquChr2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aquChr2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "aquChr2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/aquChr2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/aquChr2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

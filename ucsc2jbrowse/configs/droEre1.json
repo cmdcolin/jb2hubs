@@ -718,6 +718,48 @@
       },
       "description": "Non-D. erecta RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droEre1_to_dm2_chain",
+      "name": "droEre1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droEre1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droEre1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/droEre1ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droEre1ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droEre1_to_dm3_chain",
+      "name": "droEre1 to D. melanogaster (dm3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droEre1", "dm3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droEre1",
+        "queryAssembly": "dm3",
+        "pifGzLocation": {
+          "uri": "liftOver/droEre1ToDm3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droEre1ToDm3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

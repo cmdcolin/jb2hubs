@@ -687,6 +687,27 @@
       },
       "description": "Non-D. grimshawi RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droGri1_to_dm2_chain",
+      "name": "droGri1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droGri1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droGri1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/droGri1ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droGri1ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

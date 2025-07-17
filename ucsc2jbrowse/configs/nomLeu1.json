@@ -337,6 +337,90 @@
       },
       "description": "Non-Gibbon RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_gorGor3_chain",
+      "name": "nomLeu1 to Gorilla (gorGor3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1", "gorGor3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "gorGor3",
+        "pifGzLocation": {
+          "uri": "liftOver/nomLeu1ToGorGor3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nomLeu1ToGorGor3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_hg19_chain",
+      "name": "nomLeu1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/nomLeu1ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nomLeu1ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_mm10_chain",
+      "name": "nomLeu1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/nomLeu1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nomLeu1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "nomLeu1_to_nomLeu2_chain",
+      "name": "nomLeu1 to Gibbon (nomLeu2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["nomLeu1", "nomLeu2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "nomLeu1",
+        "queryAssembly": "nomLeu2",
+        "pifGzLocation": {
+          "uri": "liftOver/nomLeu1ToNomLeu2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/nomLeu1ToNomLeu2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

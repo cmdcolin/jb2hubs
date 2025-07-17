@@ -694,6 +694,153 @@
       },
       "description": "Non-Lamprey RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar2_to_braFlo2_chain",
+      "name": "petMar2 to braFlo2 liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar2", "braFlo2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar2",
+        "queryAssembly": "braFlo2",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar2ToBraFlo2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar2ToBraFlo2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar2_to_galGal4_chain",
+      "name": "petMar2 to Chicken (galGal4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar2", "galGal4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar2",
+        "queryAssembly": "galGal4",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar2ToGalGal4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar2ToGalGal4.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar2_to_hg19_chain",
+      "name": "petMar2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar2ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar2ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar2_to_hg38_chain",
+      "name": "petMar2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar2_to_mm10_chain",
+      "name": "petMar2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar2_to_monDom5_chain",
+      "name": "petMar2 to Opossum (monDom5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar2", "monDom5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar2",
+        "queryAssembly": "monDom5",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar2ToMonDom5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar2ToMonDom5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "petMar2_to_oryLat2_chain",
+      "name": "petMar2 to Medaka (oryLat2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["petMar2", "oryLat2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "petMar2",
+        "queryAssembly": "oryLat2",
+        "pifGzLocation": {
+          "uri": "liftOver/petMar2ToOryLat2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/petMar2ToOryLat2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

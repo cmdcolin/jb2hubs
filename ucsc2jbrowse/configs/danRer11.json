@@ -1520,6 +1520,111 @@
       },
       "description": "Non-Zebrafish RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_danRer10_chain",
+      "name": "danRer11 to Zebrafish (danRer10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11", "danRer10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "danRer10",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer11ToDanRer10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer11ToDanRer10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_danRer7_chain",
+      "name": "danRer11 to Zebrafish (danRer7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11", "danRer7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "danRer7",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer11ToDanRer7.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer11ToDanRer7.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_hg38_chain",
+      "name": "danRer11 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer11ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer11ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_mm10_chain",
+      "name": "danRer11 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer11ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer11ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "danRer11_to_mm39_chain",
+      "name": "danRer11 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["danRer11", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "danRer11",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/danRer11ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/danRer11ToMm39.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

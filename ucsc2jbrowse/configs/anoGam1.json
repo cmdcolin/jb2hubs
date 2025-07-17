@@ -752,6 +752,90 @@
       },
       "description": "Non-A. gambiae RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoGam1_to_anoGam3_chain",
+      "name": "anoGam1 to A. gambiae (anoGam3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoGam1", "anoGam3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoGam1",
+        "queryAssembly": "anoGam3",
+        "pifGzLocation": {
+          "uri": "liftOver/anoGam1ToAnoGam3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/anoGam1ToAnoGam3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoGam1_to_dm2_chain",
+      "name": "anoGam1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoGam1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoGam1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/anoGam1ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/anoGam1ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoGam1_to_dm3_chain",
+      "name": "anoGam1 to D. melanogaster (dm3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoGam1", "dm3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoGam1",
+        "queryAssembly": "dm3",
+        "pifGzLocation": {
+          "uri": "liftOver/anoGam1ToDm3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/anoGam1ToDm3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "anoGam1_to_dm6_chain",
+      "name": "anoGam1 to D. melanogaster (dm6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["anoGam1", "dm6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "anoGam1",
+        "queryAssembly": "dm6",
+        "pifGzLocation": {
+          "uri": "liftOver/anoGam1ToDm6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/anoGam1ToDm6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

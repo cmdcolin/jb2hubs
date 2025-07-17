@@ -1225,6 +1225,48 @@
       },
       "description": "Non-Manatee RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "triMan1_to_hg38_chain",
+      "name": "triMan1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["triMan1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "triMan1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/triMan1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/triMan1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "triMan1_to_mm10_chain",
+      "name": "triMan1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["triMan1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "triMan1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/triMan1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/triMan1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

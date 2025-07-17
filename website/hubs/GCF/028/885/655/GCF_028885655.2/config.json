@@ -523,6 +523,46 @@
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/885/655/GCF_028885655.2/contrib/tiberius/tiberius.bigGenePred.bb"
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "ncbiGff",
+      "name": "RefSeq All - GFF",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "GCF_028885655.2_NHGRI_mPonAbe1-v2.0_pri_genomic.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "GCF_028885655.2_NHGRI_mPonAbe1-v2.0_pri_genomic.gff.gz.csi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "CSI"
+        }
+      },
+      "category": ["NCBI RefSeq"],
+      "assemblyNames": ["GCF_028885655.2"]
+    }
+  ],
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "GCF_028885655.2-index",
+      "ixFilePath": {
+        "uri": "trix/GCF_028885655.2.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "trix/GCF_028885655.2.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "trix/GCF_028885655.2_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["GCF_028885655.2"]
     }
   ]
 }

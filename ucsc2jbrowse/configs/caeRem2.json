@@ -203,6 +203,132 @@
       },
       "description": "Non-C. remanei RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem2_to_caePb1_chain",
+      "name": "caeRem2 to C. brenneri (caePb1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem2", "caePb1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeRem2",
+        "queryAssembly": "caePb1",
+        "pifGzLocation": {
+          "uri": "liftOver/caeRem2ToCaePb1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeRem2ToCaePb1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem2_to_caeRem3_chain",
+      "name": "caeRem2 to C. remanei (caeRem3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem2", "caeRem3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeRem2",
+        "queryAssembly": "caeRem3",
+        "pifGzLocation": {
+          "uri": "liftOver/caeRem2ToCaeRem3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeRem2ToCaeRem3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem2_to_caeRem3.supers_chain",
+      "name": "caeRem2 to caeRem3.supers liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem2", "caeRem3.supers"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeRem2",
+        "queryAssembly": "caeRem3.supers",
+        "pifGzLocation": {
+          "uri": "liftOver/caeRem2ToCaeRem3.supers.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeRem2ToCaeRem3.supers.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem2_to_cb3_chain",
+      "name": "caeRem2 to C. briggsae (cb3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem2", "cb3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeRem2",
+        "queryAssembly": "cb3",
+        "pifGzLocation": {
+          "uri": "liftOver/caeRem2ToCb3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeRem2ToCb3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem2_to_ce4_chain",
+      "name": "caeRem2 to C. elegans (ce4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem2", "ce4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeRem2",
+        "queryAssembly": "ce4",
+        "pifGzLocation": {
+          "uri": "liftOver/caeRem2ToCe4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeRem2ToCe4.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem2_to_priPac1_chain",
+      "name": "caeRem2 to P. pacificus (priPac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem2", "priPac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeRem2",
+        "queryAssembly": "priPac1",
+        "pifGzLocation": {
+          "uri": "liftOver/caeRem2ToPriPac1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeRem2ToPriPac1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

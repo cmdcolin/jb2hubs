@@ -1225,6 +1225,69 @@
       },
       "description": "Non-Minke whale RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "balAcu1_to_hg19_chain",
+      "name": "balAcu1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["balAcu1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "balAcu1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/balAcu1ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/balAcu1ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "balAcu1_to_hg38_chain",
+      "name": "balAcu1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["balAcu1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "balAcu1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/balAcu1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/balAcu1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "balAcu1_to_mm10_chain",
+      "name": "balAcu1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["balAcu1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "balAcu1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/balAcu1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/balAcu1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

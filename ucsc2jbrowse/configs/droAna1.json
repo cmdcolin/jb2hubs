@@ -293,6 +293,27 @@
       },
       "description": "Non-D. ananassae RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droAna1_to_dm2_chain",
+      "name": "droAna1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droAna1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droAna1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/droAna1ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droAna1ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

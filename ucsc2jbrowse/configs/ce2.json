@@ -424,6 +424,27 @@
       },
       "description": "Non-C. elegans RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ce2_to_ce4_chain",
+      "name": "ce2 to C. elegans (ce4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ce2", "ce4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ce2",
+        "queryAssembly": "ce4",
+        "pifGzLocation": {
+          "uri": "liftOver/ce2ToCe4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ce2ToCe4.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

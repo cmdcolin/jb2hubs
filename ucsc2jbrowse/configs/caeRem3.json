@@ -654,6 +654,27 @@
       },
       "description": "Non-C. remanei RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeRem3_to_ce6_chain",
+      "name": "caeRem3 to C. elegans (ce6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeRem3", "ce6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeRem3",
+        "queryAssembly": "ce6",
+        "pifGzLocation": {
+          "uri": "liftOver/caeRem3ToCe6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeRem3ToCe6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

@@ -725,6 +725,69 @@
       },
       "description": "Non-S. purpuratus RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur2_to_ci2_chain",
+      "name": "strPur2 to C. intestinalis (ci2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur2", "ci2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "strPur2",
+        "queryAssembly": "ci2",
+        "pifGzLocation": {
+          "uri": "liftOver/strPur2ToCi2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/strPur2ToCi2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur2_to_hg18_chain",
+      "name": "strPur2 to Human (hg18) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur2", "hg18"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "strPur2",
+        "queryAssembly": "hg18",
+        "pifGzLocation": {
+          "uri": "liftOver/strPur2ToHg18.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/strPur2ToHg18.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "strPur2_to_strPur1_chain",
+      "name": "strPur2 to S. purpuratus (strPur1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["strPur2", "strPur1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "strPur2",
+        "queryAssembly": "strPur1",
+        "pifGzLocation": {
+          "uri": "liftOver/strPur2ToStrPur1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/strPur2ToStrPur1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

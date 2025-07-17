@@ -654,6 +654,111 @@
       },
       "description": "Non-C. briggsae RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cb3_to_caePb1_chain",
+      "name": "cb3 to C. brenneri (caePb1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "caePb1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "caePb1",
+        "pifGzLocation": {
+          "uri": "liftOver/cb3ToCaePb1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cb3ToCaePb1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cb3_to_caeRem2_chain",
+      "name": "cb3 to C. remanei (caeRem2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "caeRem2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "caeRem2",
+        "pifGzLocation": {
+          "uri": "liftOver/cb3ToCaeRem2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cb3ToCaeRem2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cb3_to_ce4_chain",
+      "name": "cb3 to C. elegans (ce4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "ce4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "ce4",
+        "pifGzLocation": {
+          "uri": "liftOver/cb3ToCe4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cb3ToCe4.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cb3_to_ce6_chain",
+      "name": "cb3 to C. elegans (ce6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "ce6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "ce6",
+        "pifGzLocation": {
+          "uri": "liftOver/cb3ToCe6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cb3ToCe6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cb3_to_priPac1_chain",
+      "name": "cb3 to P. pacificus (priPac1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cb3", "priPac1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cb3",
+        "queryAssembly": "priPac1",
+        "pifGzLocation": {
+          "uri": "liftOver/cb3ToPriPac1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cb3ToPriPac1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

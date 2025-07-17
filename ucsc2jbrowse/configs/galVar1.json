@@ -1232,6 +1232,111 @@
       },
       "description": "Non-Malayan flying lemur RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "galVar1_to_cavPor3_chain",
+      "name": "galVar1 to Guinea pig (cavPor3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["galVar1", "cavPor3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "galVar1",
+        "queryAssembly": "cavPor3",
+        "pifGzLocation": {
+          "uri": "liftOver/galVar1ToCavPor3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/galVar1ToCavPor3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "galVar1_to_hg38_chain",
+      "name": "galVar1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["galVar1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "galVar1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/galVar1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/galVar1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "galVar1_to_mm10_chain",
+      "name": "galVar1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["galVar1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "galVar1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/galVar1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/galVar1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "galVar1_to_mm39_chain",
+      "name": "galVar1 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["galVar1", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "galVar1",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/galVar1ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/galVar1ToMm39.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "galVar1_to_tupBel1_chain",
+      "name": "galVar1 to Tree shrew (tupBel1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["galVar1", "tupBel1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "galVar1",
+        "queryAssembly": "tupBel1",
+        "pifGzLocation": {
+          "uri": "liftOver/galVar1ToTupBel1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/galVar1ToTupBel1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

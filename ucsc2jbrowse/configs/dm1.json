@@ -559,6 +559,27 @@
       },
       "description": "Non-D. melanogaster RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dm1_to_dm2_chain",
+      "name": "dm1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dm1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dm1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/dm1ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/dm1ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

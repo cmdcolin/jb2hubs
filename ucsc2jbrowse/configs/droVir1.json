@@ -293,6 +293,27 @@
       },
       "description": "Non-D. virilis RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "droVir1_to_dm2_chain",
+      "name": "droVir1 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["droVir1", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "droVir1",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/droVir1ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/droVir1ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

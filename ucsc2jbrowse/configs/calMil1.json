@@ -1231,6 +1231,27 @@
       },
       "description": "Non-Elephant shark RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "calMil1_to_rn6_chain",
+      "name": "calMil1 to Rat (rn6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["calMil1", "rn6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "calMil1",
+        "queryAssembly": "rn6",
+        "pifGzLocation": {
+          "uri": "liftOver/calMil1ToRn6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/calMil1ToRn6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

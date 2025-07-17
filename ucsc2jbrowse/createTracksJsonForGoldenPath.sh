@@ -29,7 +29,6 @@ process_assembly() {
   local db_dir="$assembly_data_dir/$assembly_name/database"
 
   if [[ -f "$db_dir/trackDb.sql" ]]; then
-    echo "Creating tracks.json for $assembly_name..."
     node src/tracksDbLike.ts "$db_dir/trackDb.sql" "$db_dir/trackDb.txt.gz" >"$assembly_results_dir/tracks.json"
 
     # Find bigBed/bigWig files in the tracks.json, these do not have sql db files

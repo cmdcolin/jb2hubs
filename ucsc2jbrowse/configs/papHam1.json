@@ -862,6 +862,111 @@
       },
       "description": "Non-Baboon RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papHam1_to_calJac3_chain",
+      "name": "papHam1 to Marmoset (calJac3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papHam1", "calJac3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "papHam1",
+        "queryAssembly": "calJac3",
+        "pifGzLocation": {
+          "uri": "liftOver/papHam1ToCalJac3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/papHam1ToCalJac3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papHam1_to_gorGor3_chain",
+      "name": "papHam1 to Gorilla (gorGor3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papHam1", "gorGor3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "papHam1",
+        "queryAssembly": "gorGor3",
+        "pifGzLocation": {
+          "uri": "liftOver/papHam1ToGorGor3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/papHam1ToGorGor3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papHam1_to_macFas5_chain",
+      "name": "papHam1 to Crab-eating macaque (macFas5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papHam1", "macFas5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "papHam1",
+        "queryAssembly": "macFas5",
+        "pifGzLocation": {
+          "uri": "liftOver/papHam1ToMacFas5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/papHam1ToMacFas5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papHam1_to_mm10_chain",
+      "name": "papHam1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papHam1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "papHam1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/papHam1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/papHam1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "papHam1_to_papAnu2_chain",
+      "name": "papHam1 to Baboon (papAnu2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["papHam1", "papAnu2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "papHam1",
+        "queryAssembly": "papAnu2",
+        "pifGzLocation": {
+          "uri": "liftOver/papHam1ToPapAnu2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/papHam1ToPapAnu2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

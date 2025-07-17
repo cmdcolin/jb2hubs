@@ -1256,6 +1256,48 @@
       },
       "description": "Non-Armadillo RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dasNov3_to_hg38_chain",
+      "name": "dasNov3 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dasNov3", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dasNov3",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/dasNov3ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/dasNov3ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "dasNov3_to_mm10_chain",
+      "name": "dasNov3 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["dasNov3", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "dasNov3",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/dasNov3ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/dasNov3ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

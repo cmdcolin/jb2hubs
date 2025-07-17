@@ -904,6 +904,153 @@
       },
       "description": "Non-Bonobo RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan2_to_gorGor5_chain",
+      "name": "panPan2 to Gorilla (gorGor5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan2", "gorGor5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan2",
+        "queryAssembly": "gorGor5",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan2ToGorGor5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan2ToGorGor5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan2_to_hg19_chain",
+      "name": "panPan2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan2ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan2ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan2_to_hg38_chain",
+      "name": "panPan2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan2_to_mm10_chain",
+      "name": "panPan2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan2_to_panPan1_chain",
+      "name": "panPan2 to Bonobo (panPan1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan2", "panPan1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan2",
+        "queryAssembly": "panPan1",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan2ToPanPan1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan2ToPanPan1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan2_to_panPan3_chain",
+      "name": "panPan2 to Bonobo (panPan3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan2", "panPan3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan2",
+        "queryAssembly": "panPan3",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan2ToPanPan3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan2ToPanPan3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "panPan2_to_panTro4_chain",
+      "name": "panPan2 to Chimp (panTro4) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["panPan2", "panTro4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "panPan2",
+        "queryAssembly": "panTro4",
+        "pifGzLocation": {
+          "uri": "liftOver/panPan2ToPanTro4.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/panPan2ToPanTro4.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

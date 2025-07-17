@@ -983,6 +983,132 @@
       },
       "description": "Non-Cat RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat8_to_canFam3_chain",
+      "name": "felCat8 to Dog (canFam3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat8", "canFam3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat8",
+        "queryAssembly": "canFam3",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat8ToCanFam3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat8ToCanFam3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat8_to_felCat5_chain",
+      "name": "felCat8 to Cat (felCat5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat8", "felCat5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat8",
+        "queryAssembly": "felCat5",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat8ToFelCat5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat8ToFelCat5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat8_to_felCat9_chain",
+      "name": "felCat8 to Cat (felCat9) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat8", "felCat9"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat8",
+        "queryAssembly": "felCat9",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat8ToFelCat9.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat8ToFelCat9.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat8_to_GCF_018350175.1_chain",
+      "name": "felCat8 to domestic cat (Fca126 2021 Texas A&M U) (GCF_018350175.1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat8", "GCF_018350175.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat8",
+        "queryAssembly": "GCF_018350175.1",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat8ToGCF_018350175.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat8ToGCF_018350175.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat8_to_hg38_chain",
+      "name": "felCat8 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat8", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat8",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat8ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat8ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat8_to_rn6_chain",
+      "name": "felCat8 to Rat (rn6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat8", "rn6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat8",
+        "queryAssembly": "rn6",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat8ToRn6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat8ToRn6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

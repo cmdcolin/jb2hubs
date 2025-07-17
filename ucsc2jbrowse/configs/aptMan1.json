@@ -1011,6 +1011,27 @@
       },
       "description": "Non-Brown kiwi RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "aptMan1_to_hg38_chain",
+      "name": "aptMan1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["aptMan1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "aptMan1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/aptMan1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/aptMan1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

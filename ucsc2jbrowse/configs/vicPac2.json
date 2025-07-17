@@ -1042,6 +1042,69 @@
       },
       "description": "Non-Alpaca RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac2_to_hg19_chain",
+      "name": "vicPac2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "vicPac2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/vicPac2ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/vicPac2ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac2_to_hg38_chain",
+      "name": "vicPac2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "vicPac2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/vicPac2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/vicPac2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac2_to_mm10_chain",
+      "name": "vicPac2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "vicPac2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/vicPac2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/vicPac2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

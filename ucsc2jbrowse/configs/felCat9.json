@@ -1492,6 +1492,132 @@
       },
       "description": "Non-Cat RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_felCat5_chain",
+      "name": "felCat9 to Cat (felCat5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "felCat5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "felCat5",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToFelCat5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToFelCat5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_felCat8_chain",
+      "name": "felCat9 to Cat (felCat8) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "felCat8"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "felCat8",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToFelCat8.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToFelCat8.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_GCF_027475565.1_chain",
+      "name": "felCat9 to cheetah (Ajub_Pintada_27869175 2022) (GCF_027475565.1) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "GCF_027475565.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "GCF_027475565.1",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToGCF_027475565.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToGCF_027475565.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_hg38_chain",
+      "name": "felCat9 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_mm10_chain",
+      "name": "felCat9 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "felCat9_to_mm39_chain",
+      "name": "felCat9 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["felCat9", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToMm39.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

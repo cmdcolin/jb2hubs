@@ -654,6 +654,27 @@
       },
       "description": "Non-C. japonica RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "caeJap1_to_ce6_chain",
+      "name": "caeJap1 to C. elegans (ce6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["caeJap1", "ce6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "caeJap1",
+        "queryAssembly": "ce6",
+        "pifGzLocation": {
+          "uri": "liftOver/caeJap1ToCe6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/caeJap1ToCe6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

@@ -490,6 +490,48 @@
       },
       "description": "Non-S. cerevisiae RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sacCer1_to_sacCer2_chain",
+      "name": "sacCer1 to S. cerevisiae (sacCer2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sacCer1", "sacCer2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sacCer1",
+        "queryAssembly": "sacCer2",
+        "pifGzLocation": {
+          "uri": "liftOver/sacCer1ToSacCer2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sacCer1ToSacCer2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sacCer1_to_sacCer3_chain",
+      "name": "sacCer1 to S. cerevisiae (sacCer3) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sacCer1", "sacCer3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sacCer1",
+        "queryAssembly": "sacCer3",
+        "pifGzLocation": {
+          "uri": "liftOver/sacCer1ToSacCer3.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sacCer1ToSacCer3.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

@@ -1225,6 +1225,90 @@
       },
       "description": "Non-Shrew RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_hg19_chain",
+      "name": "sorAra2 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra2ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra2ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_hg38_chain",
+      "name": "sorAra2 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra2ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra2ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_mm10_chain",
+      "name": "sorAra2 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra2ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra2ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "sorAra2_to_mm39_chain",
+      "name": "sorAra2 to Mouse (mm39) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["sorAra2", "mm39"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "sorAra2",
+        "queryAssembly": "mm39",
+        "pifGzLocation": {
+          "uri": "liftOver/sorAra2ToMm39.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/sorAra2ToMm39.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

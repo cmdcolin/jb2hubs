@@ -894,6 +894,27 @@
       },
       "description": "Non-A. mellifera RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "apiMel2_to_dm2_chain",
+      "name": "apiMel2 to D. melanogaster (dm2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["apiMel2", "dm2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "apiMel2",
+        "queryAssembly": "dm2",
+        "pifGzLocation": {
+          "uri": "liftOver/apiMel2ToDm2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/apiMel2ToDm2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

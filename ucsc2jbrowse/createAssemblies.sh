@@ -27,7 +27,6 @@ process_assembly() {
   local assembly_results_dir="$OUT/$assembly_name"
 
   mkdir -p "$assembly_results_dir"
-  echo "Creating assembly config for $assembly_name..."
   node src/createAssembly.ts "$assembly_name" "$OUT/list.json" >"$assembly_results_dir/config.json"
 }
 

@@ -51,12 +51,16 @@ function addMetadata(configPath: string, tracksDbPath: string) {
             .join(' - '),
           description: longLabel,
           category: [
-            ...currentCategories,
-            ...(grp
-              ? // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
-                [categoryMap[grp as keyof typeof categoryMap] ?? grp]
-              : []),
-          ].filter(f => !!f),
+            ...new Set(
+              [
+                ...currentCategories,
+                ...(grp
+                  ? // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                    [categoryMap[grp as keyof typeof categoryMap] ?? grp]
+                  : []),
+              ].filter(f => !!f),
+            ),
+          ],
         }
       } else {
         console.warn('Track not found in trackDb', track.trackId)

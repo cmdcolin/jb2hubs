@@ -1208,6 +1208,48 @@
       },
       "description": "Non-Bison RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bisBis1_to_hg38_chain",
+      "name": "bisBis1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bisBis1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "bisBis1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/bisBis1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/bisBis1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "bisBis1_to_mm10_chain",
+      "name": "bisBis1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["bisBis1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "bisBis1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/bisBis1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/bisBis1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

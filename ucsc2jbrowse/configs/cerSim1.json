@@ -1225,6 +1225,111 @@
       },
       "description": "Non-White rhinoceros RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cerSim1_to_bosTau7_chain",
+      "name": "cerSim1 to Cow (bosTau7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cerSim1", "bosTau7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cerSim1",
+        "queryAssembly": "bosTau7",
+        "pifGzLocation": {
+          "uri": "liftOver/cerSim1ToBosTau7.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cerSim1ToBosTau7.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cerSim1_to_hg19_chain",
+      "name": "cerSim1 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cerSim1", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cerSim1",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/cerSim1ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cerSim1ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cerSim1_to_hg38_chain",
+      "name": "cerSim1 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cerSim1", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cerSim1",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/cerSim1ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cerSim1ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cerSim1_to_mm10_chain",
+      "name": "cerSim1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cerSim1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cerSim1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/cerSim1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cerSim1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "cerSim1_to_monDom5_chain",
+      "name": "cerSim1 to Opossum (monDom5) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["cerSim1", "monDom5"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "cerSim1",
+        "queryAssembly": "monDom5",
+        "pifGzLocation": {
+          "uri": "liftOver/cerSim1ToMonDom5.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/cerSim1ToMonDom5.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

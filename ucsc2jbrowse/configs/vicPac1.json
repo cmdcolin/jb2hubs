@@ -472,6 +472,69 @@
       },
       "description": "Non-Alpaca RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac1_to_bosTau7_chain",
+      "name": "vicPac1 to Cow (bosTau7) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac1", "bosTau7"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "vicPac1",
+        "queryAssembly": "bosTau7",
+        "pifGzLocation": {
+          "uri": "liftOver/vicPac1ToBosTau7.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/vicPac1ToBosTau7.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac1_to_mm10_chain",
+      "name": "vicPac1 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac1", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "vicPac1",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/vicPac1ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/vicPac1ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "vicPac1_to_vicPac2_chain",
+      "name": "vicPac1 to Alpaca (vicPac2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["vicPac1", "vicPac2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "vicPac1",
+        "queryAssembly": "vicPac2",
+        "pifGzLocation": {
+          "uri": "liftOver/vicPac1ToVicPac2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/vicPac1ToVicPac2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }

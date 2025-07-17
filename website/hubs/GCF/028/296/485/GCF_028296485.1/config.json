@@ -462,6 +462,46 @@
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/028/296/485/GCF_028296485.1/bbi/GCF_028296485.1_nextdenovo-longstitch-racon4-pilon3.xenoRefGene.bb"
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "ncbiGff",
+      "name": "RefSeq All - GFF",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "GCF_028296485.1_nextdenovo-longstitch-racon4-pilon3_genomic.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "GCF_028296485.1_nextdenovo-longstitch-racon4-pilon3_genomic.gff.gz.csi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "CSI"
+        }
+      },
+      "category": ["NCBI RefSeq"],
+      "assemblyNames": ["GCF_028296485.1"]
+    }
+  ],
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "GCF_028296485.1-index",
+      "ixFilePath": {
+        "uri": "trix/GCF_028296485.1.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "trix/GCF_028296485.1.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "trix/GCF_028296485.1_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["GCF_028296485.1"]
     }
   ]
 }

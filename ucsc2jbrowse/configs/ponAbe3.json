@@ -1361,6 +1361,111 @@
       },
       "description": "Non-Orangutan RefSeq Genes",
       "category": ["Genes and Gene Predictions"]
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ponAbe3_to_hg19_chain",
+      "name": "ponAbe3 to Human (hg19) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ponAbe3", "hg19"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ponAbe3",
+        "queryAssembly": "hg19",
+        "pifGzLocation": {
+          "uri": "liftOver/ponAbe3ToHg19.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ponAbe3ToHg19.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ponAbe3_to_hg38_chain",
+      "name": "ponAbe3 to Human (hg38) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ponAbe3", "hg38"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ponAbe3",
+        "queryAssembly": "hg38",
+        "pifGzLocation": {
+          "uri": "liftOver/ponAbe3ToHg38.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ponAbe3ToHg38.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ponAbe3_to_mm10_chain",
+      "name": "ponAbe3 to Mouse (mm10) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ponAbe3", "mm10"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ponAbe3",
+        "queryAssembly": "mm10",
+        "pifGzLocation": {
+          "uri": "liftOver/ponAbe3ToMm10.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ponAbe3ToMm10.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ponAbe3_to_panTro6_chain",
+      "name": "ponAbe3 to Chimp (panTro6) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ponAbe3", "panTro6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ponAbe3",
+        "queryAssembly": "panTro6",
+        "pifGzLocation": {
+          "uri": "liftOver/ponAbe3ToPanTro6.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ponAbe3ToPanTro6.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "ponAbe3_to_ponAbe2_chain",
+      "name": "ponAbe3 to Orangutan (ponAbe2) liftOver chain",
+      "category": ["Liftover"],
+      "assemblyNames": ["ponAbe3", "ponAbe2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "ponAbe3",
+        "queryAssembly": "ponAbe2",
+        "pifGzLocation": {
+          "uri": "liftOver/ponAbe3ToPonAbe2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/ponAbe3ToPonAbe2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

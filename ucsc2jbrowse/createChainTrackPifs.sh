@@ -136,7 +136,6 @@ create_pif() {
 copy_pif_files() {
   local pif_path="$1"
   local dest_dir="$2"
-  log_info "Copying $(basename "$pif_path") to $dest_dir"
   cp "$pif_path" "$dest_dir/" || log_error "Failed to copy $pif_path"
   cp "$pif_path.csi" "$dest_dir/" || log_error "Failed to copy $pif_path.csi"
 }
