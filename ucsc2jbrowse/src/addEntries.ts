@@ -1,4 +1,4 @@
-import { JBrowseConfig } from './types.ts'
+import type { JBrowseConfig } from './types.ts'
 import { readConfig, writeJSON } from './util.ts'
 
 /**

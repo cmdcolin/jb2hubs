@@ -2,7 +2,7 @@ import fs from 'fs'
 import path from 'path'
 
 import { dedupe } from './dedupe.ts'
-import { JBrowseConfig } from './types.ts'
+import type { JBrowseConfig } from './types.ts'
 import { readConfig, writeJSON } from './util.ts'
 
 const BASE_EXTENSION_DIR = 'ucscExtensions'
