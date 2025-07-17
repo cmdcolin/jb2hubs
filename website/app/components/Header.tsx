@@ -1,5 +1,3 @@
-import AboutDropdown from './AboutDropdown.tsx'
-import GenomesDropdown from './GenomesDropdown.tsx'
 import Logo from '../logo'
 import Link from 'next/link'
 import React from 'react'
@@ -34,8 +32,6 @@ export default function JBrowseNavbar() {
               {item.name}
             </Link>
           ))}
-          <GenomesDropdown />
-          <AboutDropdown />
         </div>
 
         {/* Right side - Social links and search */}
