@@ -71,7 +71,10 @@ interface DescriptionListProps {
   className?: string
 }
 
-export function DL({ children, className = '' }: DescriptionListProps) {
+export function DL({
+  children,
+  className = 'mt-4 mb-4',
+}: DescriptionListProps) {
   return <dl className={className}>{children}</dl>
 }
 

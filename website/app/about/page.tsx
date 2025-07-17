@@ -6,10 +6,10 @@ export default function About() {
   return (
     <Container>
       <div>
-        <H1>About</H1>
+        <H1>About the JBrowse 2 genome hubs</H1>
         <P>
-          This resource was created by bulk importing UCSC data to create
-          annotation-rich JBrowse data resources. We created scripts (
+          The JBrowse 2 genome hubs were created by bulk importing UCSC data to
+          create annotation-rich JBrowse data resources. We created scripts (
           <StyledLink href="https://github.com/cmdcolin/jb2hubs/" external>
             GitHub
           </StyledLink>
@@ -22,8 +22,8 @@ export default function About() {
         <H2>FAQ</H2>
         <DL>
           <DT>
-            Why did you bulk import the UCSC data instead of using UCSC REST
-            API?
+            Why did you bulk import the UCSC data instead of using, for example,
+            the UCSC REST API?
           </DT>
           <DD>
             Using bulk import gives us more control and allows us to create a
@@ -34,8 +34,8 @@ export default function About() {
         </DL>
         <DL>
           <DT>
-            Why did you bulk import the UCSC data instead of using track hubs
-            (hub.txt) files?
+            Why did you bulk import the UCSC data instead of parsing the track
+            hubs (hub.txt) files directly?
           </DT>
           <DD>
             UCSC does not have hub.txt files for their main browsers, like hg19
@@ -75,7 +75,7 @@ export default function About() {
           </Italic>
         </P>
         <P>
-          To reference other UCSC resources and tools, please see this page
+          To reference other UCSC resources and tools, please see this page:{' '}
           <StyledLink href="https://genome.ucsc.edu/cite.html" external>
             https://genome.ucsc.edu/cite.html
           </StyledLink>
@@ -91,9 +91,9 @@ export default function About() {
           </StyledLink>
         </P>
         <P>
-          And lastly, a big thank you to UCSC for their work and their open
-          licensing of datasources. See https://genome.ucsc.edu/license/ for
-          more info.
+          Finally, we want to sincerely thank the UCSC Genome Browser team for
+          their great work and open licensing of data resources. See
+          https://genome.ucsc.edu/license/ for more info.
         </P>
       </div>
       <div className="mt-20">

@@ -19,21 +19,17 @@ export default function Home() {
   const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
   return (
     <Container>
-      <H1>JBrowse 2 hubs</H1>
+      <H1>JBrowse 2 genome hubs</H1>
       <P>
-        This page has a variety of data resources focused on data import from
-        UCSC for creating JBrowse 2 genome browsers. For information, see the{' '}
-        <StyledLink href="/about">about</StyledLink> page.
+        This page has a variety of JBrowse 2 genome browsers created primarily
+        by bulk-loading dtaa from the UCSC Genome Browser. For more information,
+        see the <StyledLink href="/about">about</StyledLink> page.
       </P>
       <div>
         <H2>Main genome browsers</H2>
+
         <P>
-          We bulk-loaded as much data as possible from the UCSC Genome Browser
-          into JBrowse 2 instances to create a native JBrowse 2 experience with
-          rich genome annotations
-        </P>
-        <P>
-          Here is a short list of human and mouse genomes, for more species
+          Here is a short list of human and mouse genomes, for more species{' '}
           <StyledLink href="/ucsc">click here</StyledLink>
         </P>
 
