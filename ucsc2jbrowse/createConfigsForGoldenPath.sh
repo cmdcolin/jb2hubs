@@ -37,9 +37,6 @@ process_assembly() {
     node src/addGffTabixTrackToConfig.ts "$assembly_results_dir/config.json" "$i"
   done
 
-  # Add metadata from the tracksDb.sql to the config.json
-  node src/addMetadata.ts "$assembly_results_dir/config.json" "$assembly_results_dir/tracks.json"
-
   # Optional: remove older copies of tracks, e.g. older dbSnp, older GENCODE, etc.
   node src/removeEverythingButLatest.ts "$assembly_results_dir/config.json"
 }
