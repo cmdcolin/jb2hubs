@@ -5,13 +5,13 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
-import TableOptions from './TableOptions.tsx'
-import TableHeader from './DataTable/components/TableHeader.tsx'
 import TableBody from './DataTable/components/TableBody.tsx'
-import { useTableFilter } from './DataTable/hooks/useTableFilter'
-import { useTableSort } from './DataTable/hooks/useTableSort'
-import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility'
-import { useTableColumns } from './DataTable/hooks/useTableColumns'
+import TableHeader from './DataTable/components/TableHeader.tsx'
+import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility.ts'
+import { useTableColumns } from './DataTable/hooks/useTableColumns.ts'
+import { useTableFilter } from './DataTable/hooks/useTableFilter.ts'
+import { useTableSort } from './DataTable/hooks/useTableSort.ts'
+import TableOptions from './TableOptions.tsx'
 
 import type { AssemblyData } from './util'
 

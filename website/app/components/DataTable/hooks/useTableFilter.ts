@@ -1,9 +1,12 @@
 'use client'
 import { useMemo } from 'react'
+
 import { parseAsStringLiteral, useQueryState } from 'nuqs'
-import { filterCategories } from '../../TableOptions'
-import { notEmpty } from '../utils'
-import type { AssemblyData } from '../../util'
+
+import { filterCategories } from '../../TableOptions.tsx'
+import { notEmpty } from '../utils.ts'
+
+import type { AssemblyData } from '../../util.ts'
 
 export function useTableFilter(rows: AssemblyData[]) {
   const [filterOption, setFilterOption] = useQueryState(

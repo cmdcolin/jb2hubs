@@ -1,7 +1,10 @@
 'use client'
 import { useMemo } from 'react'
+
 import { parseAsString, parseAsStringLiteral, useQueryState } from 'nuqs'
-import { sortOrder } from '../utils'
+
+import { sortOrder } from '../utils.ts'
+
 import type { SortingState } from '@tanstack/react-table'
 
 export function useTableSort() {

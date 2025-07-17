@@ -2,8 +2,9 @@ import fs from 'fs'
 import os from 'os'
 import path from 'path'
 
-import type { JBrowseConfig } from './types.ts'
 import { readConfig, writeJSON } from './util.ts'
+
+import type { JBrowseConfig } from './types.ts'
 
 const CONFIGS_BASE_DIR = 'configs'
 

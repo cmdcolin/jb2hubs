@@ -1,5 +1,6 @@
-import type { JBrowseConfig } from './types.ts'
 import { readConfig, writeJSON } from './util.ts'
+
+import type { JBrowseConfig } from './types.ts'
 
 /**
  * Adds predefined plugins, tracks, and aggregate text search adapters to a JBrowse configuration.

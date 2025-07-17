@@ -1,12 +1,14 @@
 'use client'
 import { useMemo } from 'react'
+
 import { createColumnHelper } from '@tanstack/react-table'
+
 import Link2 from '../../Link2.tsx'
 import OrangeStar from '../../OrangeStar.tsx'
 import RedX from '../../RedX.tsx'
-import { statusOrder } from '../utils'
+import { statusOrder } from '../utils.ts'
 
-import type { AssemblyData } from '../../util'
+import type { AssemblyData } from '../../util.ts'
 import type { Row } from '@tanstack/react-table'
 
 export function useTableColumns() {

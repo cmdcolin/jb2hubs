@@ -5,7 +5,6 @@ import ReactMarkdown from 'react-markdown'
 import slugify from 'slugify'
 
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
-import Container from '../../components/Container.tsx'
 import Link2 from '../../components/Link2.tsx'
 import { tryAndReadJSON, tryAndReadText } from '../../components/util.ts'
 

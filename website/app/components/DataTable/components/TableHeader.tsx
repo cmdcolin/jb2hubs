@@ -1,7 +1,8 @@
 'use client'
 import { flexRender } from '@tanstack/react-table'
-import type { HeaderGroup } from '@tanstack/react-table'
+
 import type { AssemblyData } from '../../util'
+import type { HeaderGroup } from '@tanstack/react-table'
 
 interface TableHeaderProps {
   headerGroups: HeaderGroup<NonNullable<AssemblyData>>[]
