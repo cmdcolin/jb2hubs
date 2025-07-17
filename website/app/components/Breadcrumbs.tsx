@@ -1,7 +1,8 @@
 'use client'
 
-import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+
+import { StyledLink } from './ui/Link.tsx'
 
 export default function Breadcrumbs() {
   const pathname = usePathname()
@@ -11,7 +12,7 @@ export default function Breadcrumbs() {
     <nav className="text-sm breadcrumbs">
       <ul>
         <li>
-          <Link href="/">Home</Link>
+          <StyledLink href="/">Home</StyledLink>
         </li>
         {pathSegments
           .filter(f => f !== 'accession' && f !== 'hubs')
@@ -26,9 +27,11 @@ export default function Breadcrumbs() {
             return (
               <li key={href}>
                 {isLast ? (
-                  <span>{displaySegment}</span>
+                  <span className="inline">{displaySegment}</span>
                 ) : (
-                  <Link href={href}>{displaySegment}</Link>
+                  <StyledLink className="inline" href={href}>
+                    {displaySegment}
+                  </StyledLink>
                 )}
               </li>
             )

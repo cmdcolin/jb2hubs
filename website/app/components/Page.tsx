@@ -4,8 +4,8 @@ import path from 'path'
 
 import Container from './Container.tsx'
 import DataTable from './DataTable.tsx'
+import { H1 } from './ui/Typography.tsx'
 import { readJSON } from './util.ts'
-import { H1 } from './ui/Typography'
 
 import type { AssemblyData } from './util'
 

@@ -1,4 +1,4 @@
-import { StyledLink } from './ui/Link'
+import { StyledLink } from './ui/Link.tsx'
 
 export default function Link2({
   href,
@@ -10,7 +10,7 @@ export default function Link2({
   rel?: string
 }) {
   const isExternal = href.startsWith('http') || href.startsWith('https')
-  
+
   return (
     <StyledLink href={href} rel={rel} external={isExternal}>
       {children}

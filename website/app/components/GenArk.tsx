@@ -2,15 +2,15 @@ import GenArkMainTable from './GenArkMainTable.tsx'
 import GenArkProjectTable from './GenArkProjectTable.tsx'
 
 import './table.css'
+import { H3 } from './ui/Typography.tsx'
 
 export default function GenArk() {
   return (
     <div>
-      <h3>UCSC GenArk browsers</h3>
+      <H3>Species categories: </H3>
       <GenArkMainTable />
 
-      <h3>Projects</h3>
-      <p>collections below are subsets of the assemblies above</p>
+      <H3>Project collections</H3>
       <GenArkProjectTable />
     </div>
   )

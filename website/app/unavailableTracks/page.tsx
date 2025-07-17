@@ -4,9 +4,9 @@ import path from 'path'
 import { dedupe } from 'hubtools'
 
 import Container from '../components/Container.tsx'
-import { H3, P } from '../components/ui/Typography'
-import { UL, LI } from '../components/ui/List'
-import { StyledLink } from '../components/ui/Link'
+import { StyledLink } from '../components/ui/Link.tsx'
+import { LI, UL } from '../components/ui/List.tsx'
+import { H3, P } from '../components/ui/Typography.tsx'
 
 export default function Page() {
   const data = fs.readFileSync(

@@ -7,7 +7,9 @@ interface HeadingProps {
 
 export function H1({ children, className = '' }: HeadingProps) {
   return (
-    <h1 className={`text-4xl font-bold text-gray-900 dark:text-gray-100 leading-tight ${className}`}>
+    <h1
+      className={`text-4xl font-bold text-gray-900 dark:text-gray-100 leading-tight ${className} pb-4 pt-4`}
+    >
       {children}
     </h1>
   )
@@ -15,7 +17,9 @@ export function H1({ children, className = '' }: HeadingProps) {
 
 export function H2({ children, className = '' }: HeadingProps) {
   return (
-    <h2 className={`text-2xl font-semibold text-gray-800 dark:text-gray-200 leading-tight ${className}`}>
+    <h2
+      className={`text-2xl font-semibold text-gray-800 dark:text-gray-200 leading-tight ${className} pb-4 pt-4`}
+    >
       {children}
     </h2>
   )
@@ -23,7 +27,9 @@ export function H2({ children, className = '' }: HeadingProps) {
 
 export function H3({ children, className = '' }: HeadingProps) {
   return (
-    <h3 className={`text-xl font-semibold text-gray-800 dark:text-gray-200 leading-tight ${className}`}>
+    <h3
+      className={`text-xl font-semibold text-gray-800 dark:text-gray-200 leading-tight ${className} pb-2 pt-2`}
+    >
       {children}
     </h3>
   )
@@ -31,7 +37,9 @@ export function H3({ children, className = '' }: HeadingProps) {
 
 export function H4({ children, className = '' }: HeadingProps) {
   return (
-    <h4 className={`text-lg font-medium text-gray-800 dark:text-gray-200 leading-tight ${className}`}>
+    <h4
+      className={`text-lg font-medium text-gray-800 dark:text-gray-200 leading-tight ${className}`}
+    >
       {children}
     </h4>
   )
@@ -44,7 +52,7 @@ interface TextProps {
 
 export function P({ children, className = '' }: TextProps) {
   return (
-    <p className={`text-gray-700 dark:text-gray-300 leading-relaxed ${className}`}>
+    <p className={`text-gray-700 dark:text-gray-300  ${className} pb-2 pt-2`}>
       {children}
     </p>
   )
@@ -64,11 +72,7 @@ interface DescriptionListProps {
 }
 
 export function DL({ children, className = '' }: DescriptionListProps) {
-  return (
-    <dl className={`${className}`}>
-      {children}
-    </dl>
-  )
+  return <dl className={className}>{children}</dl>
 }
 
 export function DT({ children, className = '' }: TextProps) {
@@ -81,7 +85,9 @@ export function DT({ children, className = '' }: TextProps) {
 
 export function DD({ children, className = '' }: TextProps) {
   return (
-    <dd className={`text-gray-700 dark:text-gray-300 leading-relaxed ${className}`}>
+    <dd
+      className={`text-gray-700 dark:text-gray-300 leading-relaxed ${className}`}
+    >
       {children}
     </dd>
   )

@@ -1,6 +1,6 @@
 import Container from '../components/Container.tsx'
-import { H1, H2, P, DL, DT, DD, Italic } from '../components/ui/Typography'
-import { StyledLink } from '../components/ui/Link'
+import { StyledLink } from '../components/ui/Link.tsx'
+import { DD, DL, DT, H1, H2, Italic, P } from '../components/ui/Typography.tsx'
 
 export default function About() {
   return (
@@ -10,10 +10,12 @@ export default function About() {
         <P>
           This resource was created by bulk importing UCSC data to create
           annotation-rich JBrowse data resources. We created scripts (
-          <StyledLink href="https://github.com/cmdcolin/jb2hubs/" external>GitHub</StyledLink>) for
-          parsing UCSC MySQL database dumps for the main UCSC genome browser
-          sets, and for converting hub.txt files to JBrowse config.json files
-          for the GenArk configs
+          <StyledLink href="https://github.com/cmdcolin/jb2hubs/" external>
+            GitHub
+          </StyledLink>
+          ) for parsing UCSC MySQL database dumps for the main UCSC genome
+          browser sets, and for converting hub.txt files to JBrowse config.json
+          files for the GenArk configs
         </P>
       </div>
       <div>
@@ -50,7 +52,10 @@ export default function About() {
           <Italic>
             JBrowse 2: a modular genome browser with views of synteny and
             structural variation. Genome Biology (2023).
-            <StyledLink href="https://doi.org/10.1186/s13059-023-02914-z" external>
+            <StyledLink
+              href="https://doi.org/10.1186/s13059-023-02914-z"
+              external
+            >
               https://doi.org/10.1186/s13059-023-02914-z
             </StyledLink>
           </Italic>
@@ -61,7 +66,10 @@ export default function About() {
           <Italic>
             GenArk: towards a million UCSC genome browsers. Genome Biology
             (2023).{' '}
-            <StyledLink href="https://doi.org/10.1186/s13059-023-03057-x" external>
+            <StyledLink
+              href="https://doi.org/10.1186/s13059-023-03057-x"
+              external
+            >
               https://doi.org/10.1186/s13059-023-03057-x
             </StyledLink>
           </Italic>
@@ -75,7 +83,10 @@ export default function About() {
         <P>
           To reference the data for species of the main UCSC genome browse,
           please see this page:
-          <StyledLink href="https://genome.ucsc.edu/goldenPath/credits.html" external>
+          <StyledLink
+            href="https://genome.ucsc.edu/goldenPath/credits.html"
+            external
+          >
             https://genome.ucsc.edu/goldenPath/credits.html
           </StyledLink>
         </P>
@@ -87,7 +98,9 @@ export default function About() {
       </div>
       <div className="mt-20">
         Feel free to contact or report issues to{' '}
-        <StyledLink href="https://github.com/cmdcolin/jb2hubs/" external>Github</StyledLink>
+        <StyledLink href="https://github.com/cmdcolin/jb2hubs/" external>
+          Github
+        </StyledLink>
       </div>
     </Container>
   )

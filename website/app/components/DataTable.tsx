@@ -8,7 +8,7 @@ import {
 import TableBody from './DataTable/components/TableBody.tsx'
 import TableHeader from './DataTable/components/TableHeader.tsx'
 import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility.ts'
-import { useTableColumns } from './DataTable/hooks/useTableColumns.ts'
+import { useTableColumns } from './DataTable/hooks/useTableColumns.tsx'
 import { useTableFilter } from './DataTable/hooks/useTableFilter.ts'
 import { useTableSort } from './DataTable/hooks/useTableSort.ts'
 import TableOptions from './TableOptions.tsx'

@@ -1,10 +1,17 @@
 import Container from './components/Container.tsx'
 import GenArk from './components/GenArk.tsx'
+import { StyledLink } from './components/ui/Link.tsx'
+import { LI, UL } from './components/ui/List.tsx'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+} from './components/ui/Table.tsx'
+import { H1, H2, P } from './components/ui/Typography.tsx'
 import list from './ucsc/list.json'
-import { H1, H2, P } from './components/ui/Typography'
-import { StyledLink } from './components/ui/Link'
-import { Table, TableHeader, TableBody, TableRow, TableHeaderCell, TableCell } from './components/ui/Table'
-import { UL, LI } from './components/ui/List'
 
 import './components/table.css'
 
@@ -66,10 +73,14 @@ export default function Home() {
         <P>
           <UL>
             <LI>
-              <StyledLink href="/ucsc">Click here</StyledLink> for a more complete listing
+              <StyledLink href="/ucsc">Click here</StyledLink> for a more
+              complete listing
             </LI>
             <LI>
-              <StyledLink href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json" external>
+              <StyledLink
+                href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
+                external
+              >
                 Click here
               </StyledLink>{' '}
               for single JBrowse 2 instance containing ALL the species. This is
@@ -77,17 +88,21 @@ export default function Home() {
               that compare different species
             </LI>
           </UL>
-          Note that some tracks/files are not available, see{' '}
-          <StyledLink href="/unavailableTracks">unavailable tracks</StyledLink>{' '}
+          <P>
+            Note that some tracks/files are not available, see{' '}
+            <StyledLink href="/unavailableTracks">
+              unavailable tracks
+            </StyledLink>
+            .
+          </P>
         </P>
       </div>
 
       <div>
         <H2>GenArk browsers</H2>
-        <div>
-          We have created JBrowse portals for all the UCSC GenArk browsers,
-          which are trackhubs generated from NCBI assemblies.
-        </div>
+        <P>
+          We created JBrowse portals based on the UCSC GenArk browser resources
+        </P>
         <GenArk />
       </div>
     </Container>

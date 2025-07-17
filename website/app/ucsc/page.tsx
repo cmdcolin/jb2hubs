@@ -10,13 +10,19 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
-import Link2 from 'next/link'
 
 import list from './list.json'
 import Container from '../components/Container.tsx'
-import { H1, P } from '../components/ui/Typography'
-import { Table, TableHeader, TableBody, TableRow, TableHeaderCell, TableCell } from '../components/ui/Table'
-import { StyledLink } from '../components/ui/Link'
+import { StyledLink } from '../components/ui/Link.tsx'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+} from '../components/ui/Table.tsx'
+import { H1, P } from '../components/ui/Typography.tsx'
 
 import '../components/table.css'
 
@@ -58,11 +64,19 @@ export default function UCSC() {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => <StyledLink href={info.getValue()} external>JBrowse</StyledLink>,
+        cell: info => (
+          <StyledLink href={info.getValue()} external>
+            JBrowse
+          </StyledLink>
+        ),
       }),
       columnHelper.accessor('ucscLink2', {
         header: 'UCSC',
-        cell: info => <StyledLink href={info.getValue()} external>UCSC</StyledLink>,
+        cell: info => (
+          <StyledLink href={info.getValue()} external>
+            UCSC
+          </StyledLink>
+        ),
       }),
     ],
     [columnHelper],
@@ -89,12 +103,13 @@ export default function UCSC() {
           UCSC genome browser, converted into a format that JBrowse 2 can load
         </P>
         <P>
-          <StyledLink href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json" external>
+          <StyledLink
+            href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
+            external
+          >
             Click here
           </StyledLink>{' '}
-          for single JBrowse 2 instance containing ALL the species. This is the
-          instance you should use if you want to browse synteny datasets that
-          compare different species
+          for single JBrowse 2 instance containing ALL the species
         </P>
       </div>
       <Table>

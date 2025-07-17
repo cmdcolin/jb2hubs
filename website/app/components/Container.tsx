@@ -2,7 +2,7 @@ import Breadcrumbs from './Breadcrumbs.tsx'
 
 export default function Container({
   children,
-  className = 'w-1/2',
+  className = 'w-full px-4 sm:px-6 md:px-8 lg:w-1/2 lg:px-0',
 }: {
   className?: string
   children: React.ReactNode
