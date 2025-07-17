@@ -96,7 +96,7 @@ export default function UCSC() {
 
   return (
     <Container>
-      <H1>Main UCSC browsers</H1>
+      <H1>Main genome browsers</H1>
       <div>
         <P>
           This page contains a list of all the &quot;main&quot; genomes from the

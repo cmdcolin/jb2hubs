@@ -26,8 +26,17 @@ export default function Home() {
         <StyledLink href="/about">about</StyledLink> page.
       </P>
       <div>
-        <H2>Main UCSC browsers</H2>
-        <P>Short list:</P>
+        <H2>Main genome browsers</H2>
+        <P>
+          We bulk-loaded as much data as possible from the UCSC Genome Browser
+          into JBrowse 2 instances to create a native JBrowse 2 experience with
+          rich genome annotations
+        </P>
+        <P>
+          Here is a short list of human and mouse genomes, for more species
+          <StyledLink href="/ucsc">click here</StyledLink>
+        </P>
+
         <Table>
           <TableHeader>
             <TableRow>
@@ -77,19 +86,15 @@ export default function Home() {
               complete listing
             </LI>
             <LI>
-              <StyledLink
-                href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
-                external
-              >
+              <StyledLink href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">
                 Click here
               </StyledLink>{' '}
-              for single JBrowse 2 instance containing ALL the species. This is
-              the instance you should use if you want to browse synteny datasets
-              that compare different species
+              for single JBrowse 2 instance containing ALL the species
             </LI>
           </UL>
           <P>
-            Note that some tracks/files are not available, see{' '}
+            Note that some tracks that are available at UCSC are not yet
+            available here, see{' '}
             <StyledLink href="/unavailableTracks">
               unavailable tracks
             </StyledLink>
@@ -101,7 +106,9 @@ export default function Home() {
       <div>
         <H2>GenArk browsers</H2>
         <P>
-          We created JBrowse portals based on the UCSC GenArk browser resources
+          We also created JBrowse 2 instances based on the UCSC GenArk browser
+          resources, which is an effort to create genome browsers for numerous
+          plant, animal, and microbial species. See more below
         </P>
         <GenArk />
       </div>

@@ -7,7 +7,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'JBrowse 2 hubs',
+  title: 'JBrowse 2 genome browser hubs',
   description: 'JBrowse 2 genome browser hubs',
   icons: {
     icon: [

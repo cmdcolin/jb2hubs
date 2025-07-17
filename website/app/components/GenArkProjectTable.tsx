@@ -1,5 +1,6 @@
 import { hubCategories } from 'hubtools'
-import Link2 from 'next/link'
+
+import { StyledLink } from './ui/Link.tsx'
 
 export default function GenArkProjectTable() {
   return (
@@ -16,7 +17,7 @@ export default function GenArkProjectTable() {
           .map(elt => (
             <tr key={elt.id}>
               <td>
-                <Link2 href={`/hubs/${elt.id}`}>{elt.id}</Link2>
+                <StyledLink href={`/hubs/${elt.id}`}>{elt.id}</StyledLink>
               </td>
               <td>{elt.description}</td>
             </tr>
