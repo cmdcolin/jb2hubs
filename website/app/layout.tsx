@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: '/demos/jb2hubs/favicon.svg',
+        url: '/jb2hubs/favicon.svg',
         type: 'image/svg+xml',
       },
     ],

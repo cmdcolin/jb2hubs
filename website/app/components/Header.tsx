@@ -11,7 +11,7 @@ export default function JBrowseNavbar() {
     { name: 'Docs', href: 'https://jbrowse.org/jb2/docs' },
     { name: 'Blog', href: 'https://jbrowse.org/jb2/blog' },
     { name: 'Download', href: 'https://jbrowse.org/jb2/download' },
-    { name: 'Plugins', href: 'https://jbrowse.org/jb2/plugins' },
+    { name: 'Plugins', href: 'https://jbrowse.org/jb2/plugin_store' },
     { name: 'Features', href: 'https://jbrowse.org/jb2/features' },
     { name: 'Gallery', href: 'https://jbrowse.org/jb2/gallery' },
     { name: 'Demos', href: 'https://jbrowse.org/jb2/demos' },

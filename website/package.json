@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "rclone sync -c -v out jbrowse-data:jbrowse.org/demos/jb2hubs/",
-    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/demos/jb2hubs/*\"",
+    "deploy": "rclone sync -c -v out jbrowse-data:jbrowse.org/jb2hubs/",
+    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/jb2hubs/*\"",
     "predeploy": "yarn build"
   },
   "dependencies": {
