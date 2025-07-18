@@ -58,9 +58,15 @@ export default async function Page({
       <div className="w-full px-4 sm:px-6 md:px-8 lg:w-1/2 lg:px-0">
         <div className="relative">
           <H1>{scientificName}</H1>
-          <H4>Accession: {ret.accession}</H4>
-          <H4>Assembly name: {ret.ncbiAssemblyName}</H4>
-          <H4>Common name: {ret.commonName}</H4>
+          <div>
+            <H4>Accession:</H4> {ret.accession}
+          </div>
+          <div>
+            <H4>Assembly name:</H4> {ret.ncbiAssemblyName}
+          </div>
+          <div>
+            <H4>Common name:</H4> {ret.commonName}
+          </div>
 
           {val ? (
             <div className="float-right ml-6 mb-4 max-w-xs">

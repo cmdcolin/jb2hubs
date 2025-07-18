@@ -8,7 +8,7 @@ interface HeadingProps {
 export function H1({ children, className = '' }: HeadingProps) {
   return (
     <h1
-      className={`text-4xl font-normal text-gray-900 dark:text-gray-100 leading-tight ${className} pb-4 pt-4`}
+      className={`text-4xl font-normal text-gray-900 dark:text-gray-100 leading-tight ${className} pb-4 pt-4 mt-10`}
     >
       {children}
     </h1>
@@ -38,7 +38,7 @@ export function H3({ children, className = '' }: HeadingProps) {
 export function H4({ children, className = '' }: HeadingProps) {
   return (
     <h4
-      className={`text-lg font-medium text-gray-800 dark:text-gray-200 leading-tight ${className}`}
+      className={`inline text-lg font-medium text-gray-800 dark:text-gray-200 leading-tight ${className}`}
     >
       {children}
     </h4>

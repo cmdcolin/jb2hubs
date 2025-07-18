@@ -3,13 +3,13 @@ import { useMemo } from 'react'
 
 import { createColumnHelper } from '@tanstack/react-table'
 
-import Link2 from '../../Link2.tsx'
 import OrangeStar from '../../OrangeStar.tsx'
 import RedX from '../../RedX.tsx'
 import { statusOrder } from '../utils.ts'
 
 import type { AssemblyData } from '../../util.ts'
 import type { Row } from '@tanstack/react-table'
+import { StyledLink } from '../../ui/Link.tsx'
 
 export function useTableColumns() {
   const columnHelper = createColumnHelper<NonNullable<AssemblyData>>()
@@ -33,12 +33,12 @@ export function useTableColumns() {
         cell: info => (
           <>
             {info.getValue()}{' '}
-            <Link2
+            <StyledLink
               href={`/accession/${info.row.original.accession}`}
               rel="noopener noreferrer"
             >
               (info)
-            </Link2>{' '}
+            </StyledLink>{' '}
             {info.row.original.ncbiRefSeqCategory === 'reference genome' ? (
               <OrangeStar />
             ) : null}
@@ -49,11 +49,7 @@ export function useTableColumns() {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => (
-          <Link2 href={info.getValue()} rel="noopener noreferrer">
-            JBrowse
-          </Link2>
-        ),
+        cell: info => <StyledLink href={info.getValue()}>JBrowse</StyledLink>,
         enableSorting: false,
       }),
 
