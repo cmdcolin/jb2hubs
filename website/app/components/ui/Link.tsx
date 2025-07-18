@@ -18,7 +18,7 @@ export function StyledLink({
   external = false,
 }: StyledLinkProps) {
   const baseStyles =
-    'text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 hover:underline transition-colors duration-200 font-medium'
+    'text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-[#25c2a0] hover:underline transition-colors duration-200 font-medium'
 
   const externalStyles = external ? 'inline-flex items-center gap-1' : ''
 

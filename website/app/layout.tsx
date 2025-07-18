@@ -1,4 +1,5 @@
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
+import { Roboto } from 'next/font/google'
 
 import Header from './components/Header.tsx'
 
@@ -19,13 +20,16 @@ export const metadata: Metadata = {
   },
 }
 
+const roboto = Roboto({
+  subsets: ['latin'],
+})
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={roboto.className}>
       <body>
         <NuqsAdapter>
           <Header />
