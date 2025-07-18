@@ -12,7 +12,7 @@ export default function Link2({
   const isExternal = href.startsWith('http') || href.startsWith('https')
 
   return (
-    <StyledLink href={href} rel={rel} external={isExternal}>
+    <StyledLink href={href} rel={rel}={isExternal}>
       {children}
     </StyledLink>
   )

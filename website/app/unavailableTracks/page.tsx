@@ -19,7 +19,7 @@ export default function Page() {
       <P>
         This is a list of files that are available at UCSC, but which we were
         not able to ping. See{' '}
-        <StyledLink href="https://genome.ucsc.edu/license/" external>
+        <StyledLink href="https://genome.ucsc.edu/license/">
           https://genome.ucsc.edu/license/
         </StyledLink>{' '}
         for more info. Most of these fall under this restriction category:

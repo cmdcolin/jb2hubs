@@ -64,19 +64,11 @@ export default function UCSC() {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => (
-          <StyledLink href={info.getValue()} external>
-            JBrowse
-          </StyledLink>
-        ),
+        cell: info => <StyledLink href={info.getValue()}>JBrowse</StyledLink>,
       }),
       columnHelper.accessor('ucscLink2', {
         header: 'UCSC',
-        cell: info => (
-          <StyledLink href={info.getValue()} external>
-            UCSC
-          </StyledLink>
-        ),
+        cell: info => <StyledLink href={info.getValue()}>UCSC</StyledLink>,
       }),
     ],
     [columnHelper],
@@ -103,10 +95,7 @@ export default function UCSC() {
           UCSC genome browser, converted into a format that JBrowse 2 can load
         </P>
         <P>
-          <StyledLink
-            href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
-            external
-          >
+          <StyledLink href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">
             Click here
           </StyledLink>{' '}
           for single JBrowse 2 instance containing ALL the species

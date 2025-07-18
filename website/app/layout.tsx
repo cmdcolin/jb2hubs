@@ -1,5 +1,5 @@
-import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import { Roboto } from 'next/font/google'
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 
 import Header from './components/Header.tsx'
 

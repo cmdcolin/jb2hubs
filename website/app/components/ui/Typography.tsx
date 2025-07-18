@@ -8,7 +8,7 @@ interface HeadingProps {
 export function H1({ children, className = '' }: HeadingProps) {
   return (
     <h1
-      className={`text-4xl font-bold text-gray-900 dark:text-gray-100 leading-tight ${className} pb-4 pt-4`}
+      className={`text-4xl font-normal text-gray-900 dark:text-gray-100 leading-tight ${className} pb-4 pt-4`}
     >
       {children}
     </h1>

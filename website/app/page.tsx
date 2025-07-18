@@ -57,7 +57,6 @@ export default function Home() {
                     <TableCell>
                       <StyledLink
                         href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/${key}/config.json`}
-                        external
                       >
                         JBrowse
                       </StyledLink>
@@ -65,7 +64,6 @@ export default function Home() {
                     <TableCell>
                       <StyledLink
                         href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=${key}`}
-                        external
                       >
                         UCSC
                       </StyledLink>

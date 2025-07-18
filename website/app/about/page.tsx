@@ -10,7 +10,7 @@ export default function About() {
         <P>
           The JBrowse 2 genome hubs were created by bulk importing UCSC data to
           create annotation-rich JBrowse data resources. We created scripts (
-          <StyledLink href="https://github.com/cmdcolin/jb2hubs/" external>
+          <StyledLink href="https://github.com/cmdcolin/jb2hubs/">
             GitHub
           </StyledLink>
           ) for parsing UCSC MySQL database dumps for the main UCSC genome
@@ -52,10 +52,7 @@ export default function About() {
           <Italic>
             JBrowse 2: a modular genome browser with views of synteny and
             structural variation. Genome Biology (2023).
-            <StyledLink
-              href="https://doi.org/10.1186/s13059-023-02914-z"
-              external
-            >
+            <StyledLink href="https://doi.org/10.1186/s13059-023-02914-z">
               https://doi.org/10.1186/s13059-023-02914-z
             </StyledLink>
           </Italic>
@@ -66,27 +63,21 @@ export default function About() {
           <Italic>
             GenArk: towards a million UCSC genome browsers. Genome Biology
             (2023).{' '}
-            <StyledLink
-              href="https://doi.org/10.1186/s13059-023-03057-x"
-              external
-            >
+            <StyledLink href="https://doi.org/10.1186/s13059-023-03057-x">
               https://doi.org/10.1186/s13059-023-03057-x
             </StyledLink>
           </Italic>
         </P>
         <P>
           To reference other UCSC resources and tools, please see this page:{' '}
-          <StyledLink href="https://genome.ucsc.edu/cite.html" external>
+          <StyledLink href="https://genome.ucsc.edu/cite.html">
             https://genome.ucsc.edu/cite.html
           </StyledLink>
         </P>
         <P>
           To reference the data for species of the main UCSC genome browse,
           please see this page:
-          <StyledLink
-            href="https://genome.ucsc.edu/goldenPath/credits.html"
-            external
-          >
+          <StyledLink href="https://genome.ucsc.edu/goldenPath/credits.html">
             https://genome.ucsc.edu/goldenPath/credits.html
           </StyledLink>
         </P>
@@ -98,7 +89,7 @@ export default function About() {
       </div>
       <div className="mt-20">
         Feel free to contact or report issues to{' '}
-        <StyledLink href="https://github.com/cmdcolin/jb2hubs/" external>
+        <StyledLink href="https://github.com/cmdcolin/jb2hubs/">
           Github
         </StyledLink>
       </div>

@@ -28,4 +28,3 @@ export function OL({ children, className = '' }: ListProps) {
 export function LI({ children, className = '' }: ListProps) {
   return <li className={className}>{children}</li>
 }
-
