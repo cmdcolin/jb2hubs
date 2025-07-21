@@ -1,0 +1,141 @@
+hub GCF_940143175.1 genome assembly
+shortLabel Erysipelothrix amsterdamensis (2022)
+longLabel Erysipelothrix amsterdamensis (2022)/Erysipelothrix amsterdamensis/GCF_940143175.1_A18Y020d genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_940143175.1_A18Y020d.description.html
+
+genome GCF_940143175.1
+taxId 2929157
+groups groups.txt
+description Erysipelothrix amsterdamensis (2022)
+twoBitPath GCF_940143175.1.2bit
+twoBitBptUrl GCF_940143175.1.2bit.bpt
+chromSizes GCF_940143175.1.chrom.sizes.txt
+chromAliasBb GCF_940143175.1.chromAlias.bb
+organism A18Y020d Jun. 2022
+defaultPos NZ_OW659496.1:636237-646237
+scientificName Erysipelothrix amsterdamensis
+htmlPath html/GCF_940143175.1_A18Y020d.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/940/143/175/GCF_940143175.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/940/143/175/GCF_940143175.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/940/143/175/GCF_940143175.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_940143175.1_A18Y020d.assembly.bb
+type bigBed 6
+html html/GCF_940143175.1_A18Y020d.assembly
+searchIndex name
+searchTrix ixIxx/GCF_940143175.1_A18Y020d.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_940143175.1_A18Y020d.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_940143175.1_A18Y020d.gc5Base.bw
+html html/GCF_940143175.1_A18Y020d.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCF_940143175.1_A18Y020d.tanDups
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCF_940143175.1_A18Y020d.tandemDups.bb
+    type bigBed 12
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_940143175.1_A18Y020d.simpleRepeat.bb
+html html/GCF_940143175.1_A18Y020d.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_940143175.1_A18Y020d.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_940143175.1_A18Y020d.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_940143175.1_A18Y020d.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_940143175.1_A18Y020d.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_940143175.1_A18Y020d.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_940143175.1_A18Y020d.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_940143175.1_A18Y020d.windowMasker.bb
+html html/GCF_940143175.1_A18Y020d.windowMasker
+

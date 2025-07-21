@@ -1,0 +1,160 @@
+hub GCF_900476375.1 genome assembly
+shortLabel Lucifera butyrica (LUCI 2018)
+longLabel Lucifera butyrica (LUCI 2018)/Lucifera butyrica/GCF_900476375.1_Lucifera_butyrica genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_900476375.1_Lucifera_butyrica.description.html
+
+genome GCF_900476375.1
+taxId 1351585
+groups groups.txt
+description Lucifera butyrica (LUCI 2018)
+twoBitPath GCF_900476375.1.2bit
+twoBitBptUrl GCF_900476375.1.2bit.bpt
+chromSizes GCF_900476375.1.chrom.sizes.txt
+chromAliasBb GCF_900476375.1.chromAlias.bb
+organism Lucifera_butyrica Nov. 2018
+defaultPos NZ_UPPP01000061.1:90263-100263
+scientificName Lucifera butyrica
+htmlPath html/GCF_900476375.1_Lucifera_butyrica.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/900/476/375/GCF_900476375.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/900/476/375/GCF_900476375.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/900/476/375/GCF_900476375.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.assembly.bb
+type bigBed 6
+html html/GCF_900476375.1_Lucifera_butyrica.assembly
+searchIndex name
+searchTrix ixIxx/GCF_900476375.1_Lucifera_butyrica.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track gap
+longLabel AGP gap
+shortLabel Gap (AGP defined)
+visibility hide
+color 0,0,0
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.gap.bb
+type bigBed 4
+group map
+html html/GCF_900476375.1_Lucifera_butyrica.gap
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.gc5Base.bw
+html html/GCF_900476375.1_Lucifera_butyrica.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCF_900476375.1_Lucifera_butyrica.tanDups
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.tandemDups.bb
+    type bigBed 12
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.simpleRepeat.bb
+html html/GCF_900476375.1_Lucifera_butyrica.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_900476375.1_Lucifera_butyrica.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_900476375.1_Lucifera_butyrica.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_900476375.1_Lucifera_butyrica.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.windowMasker.bb
+html html/GCF_900476375.1_Lucifera_butyrica.windowMasker
+
+track allGaps
+shortLabel All Gaps
+longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
+group map
+visibility hide
+type bigBed 3
+bigDataUrl bbi/GCF_900476375.1_Lucifera_butyrica.allGaps.bb
+html html/GCF_900476375.1_Lucifera_butyrica.allGaps
+

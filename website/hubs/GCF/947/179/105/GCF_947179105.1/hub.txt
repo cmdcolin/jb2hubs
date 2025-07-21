@@ -1,0 +1,141 @@
+hub GCF_947179105.1 genome assembly
+shortLabel Commensalibacter communis (2023)
+longLabel Commensalibacter communis (2023)/Commensalibacter communis/GCF_947179105.1_R-83493 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_947179105.1_R-83493.description.html
+
+genome GCF_947179105.1
+taxId 2972786
+groups groups.txt
+description Commensalibacter communis (2023)
+twoBitPath GCF_947179105.1.2bit
+twoBitBptUrl GCF_947179105.1.2bit.bpt
+chromSizes GCF_947179105.1.chrom.sizes.txt
+chromAliasBb GCF_947179105.1.chromAlias.bb
+organism R-83493 Jan. 2023
+defaultPos NZ_CAMXCK010000001.1:327487-337487
+scientificName Commensalibacter communis
+htmlPath html/GCF_947179105.1_R-83493.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/947/179/105/GCF_947179105.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/947/179/105/GCF_947179105.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/947/179/105/GCF_947179105.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_947179105.1_R-83493.assembly.bb
+type bigBed 6
+html html/GCF_947179105.1_R-83493.assembly
+searchIndex name
+searchTrix ixIxx/GCF_947179105.1_R-83493.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_947179105.1_R-83493.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_947179105.1_R-83493.gc5Base.bw
+html html/GCF_947179105.1_R-83493.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCF_947179105.1_R-83493.tanDups
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCF_947179105.1_R-83493.tandemDups.bb
+    type bigBed 12
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_947179105.1_R-83493.simpleRepeat.bb
+html html/GCF_947179105.1_R-83493.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_947179105.1_R-83493.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_947179105.1_R-83493.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_947179105.1_R-83493.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_947179105.1_R-83493.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_947179105.1_R-83493.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_947179105.1_R-83493.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_947179105.1_R-83493.windowMasker.bb
+html html/GCF_947179105.1_R-83493.windowMasker
+
