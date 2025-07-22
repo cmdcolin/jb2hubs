@@ -50,7 +50,10 @@ export default function Home() {
               .map(([key, val]) => {
                 return (
                   <TableRow key={key}>
-                    <TableCell>{key}</TableCell>
+                    <TableCell>
+                      {key} (<StyledLink href={`/ucsc/${key}`}>info</StyledLink>
+                      )
+                    </TableCell>
                     <TableCell>{val.scientificName}</TableCell>
                     <TableCell>{val.organism}</TableCell>
                     <TableCell>{val.description}</TableCell>

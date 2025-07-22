@@ -48,7 +48,12 @@ export default function UCSC() {
     () => [
       columnHelper.accessor('name', {
         header: 'Name',
-        cell: info => info.getValue(),
+        cell: info => (
+          <div>
+            {info.getValue()} (
+            <StyledLink href={`/ucsc/${info.getValue()}`}>info</StyledLink>)
+          </div>
+        ),
       }),
       columnHelper.accessor('scientificName', {
         header: 'Scientific name',
