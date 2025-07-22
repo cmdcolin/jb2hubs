@@ -118,8 +118,8 @@ node src/makeHubPagesForWebsite.ts
 echo "Adding GenArk extensions (special tracks)..."
 node src/makeGenArkExtensions.ts
 
-echo "Generating AI descriptions for species..."
-node src/getAutomatedSpeciesDescription.ts
+# echo "Generating AI descriptions for species..."
+# node src/getAutomatedSpeciesDescription.ts
 
 sleep 1 # Small pause
 
