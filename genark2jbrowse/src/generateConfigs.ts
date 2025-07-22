@@ -62,6 +62,6 @@ const newConfig = await generateJBrowseConfigForAssemblyHub({
 if (deepEqual(newConfig, oldConfig)) {
   console.log(`Config for ${metaPath} is unchanged. Skipping write.`)
 } else {
-  console.log(`Config for ${metaPath} has changed. Writing new config.json.`)
+  // console.log(`Config for ${metaPath} has changed. Writing new config.json.`)
   writeJSON(configPath, newConfig)
 }
