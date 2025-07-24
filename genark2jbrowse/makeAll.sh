@@ -33,8 +33,8 @@ fetch_ncbi_data() {
 
 export -f fetch_ncbi_data # Export function for use with GNU Parallel
 
-echo "Fetching NCBI metadata in parallel..."
-fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
+echo "Fetching NCBI metadata..."
+fd meta.json hubs | parallel -j2 --bar fetch_ncbi_data {}
 
 # --- Step 3: Generate JBrowse 2 Configurations ---
 
@@ -52,7 +52,7 @@ fi
 
 echo "Downloading NCBI GFF files..."
 # Extract NCBI GFF URLs from processed JSON and download them
-cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar "wget -nc -q {} -P gff"
+cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar 'filename=$(basename "{}"); [ ! -f "gff/$filename" ] && wget -nc -q {} -P gff'
 
 # --- Step 5: Process NCBI GFF Files ---
 
@@ -100,9 +100,39 @@ add_track_and_text_index() {
 
   local hub_dir="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
-  echo "Adding track and text indexing for $filename to $hub_dir"
   jbrowse add-track --force "$gff_file_path" --out "$hub_dir" --load copy --indexFile "${gff_file_path}".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
-  jbrowse text-index --force --out "$hub_dir" --tracks ncbiGff
+
+  # Check if trix folder exists
+  if [ -d "$hub_dir/trix" ]; then
+    # Add JSON snippet to config.json using jq
+    local config_file="$hub_dir/config.json"
+    local temp_file=$(mktemp)
+
+    jq --arg accession "$accession" '. + {
+      "aggregateTextSearchAdapters": [
+        {
+          "type": "TrixTextSearchAdapter",
+          "textSearchAdapterId": ($accession + "-index"),
+          "ixFilePath": {
+            "uri": ("trix/" + $accession + ".ix"),
+            "locationType": "UriLocation"
+          },
+          "ixxFilePath": {
+            "uri": ("trix/" + $accession + ".ixx"),
+            "locationType": "UriLocation"
+          },
+          "metaFilePath": {
+            "uri": ("trix/" + $accession + "_meta.json"),
+            "locationType": "UriLocation"
+          },
+          "assemblyNames": [$accession]
+        }
+      ]
+    }' "$config_file" >"$temp_file" && mv "$temp_file" "$config_file"
+  else
+    echo "Trix folder does not exist for $accession, running jbrowse text-index"
+    jbrowse text-index --force --out "$hub_dir" --tracks ncbiGff
+  fi
 }
 
 export -f add_track_and_text_index # Export function for use with GNU Parallel

@@ -1,0 +1,167 @@
+hub GCF_000426905.1 genome assembly
+shortLabel Dolichospermum circinale (AWQC131C 2013)
+longLabel Dolichospermum circinale (AWQC131C 2013)/Dolichospermum circinale AWQC131C/GCF_000426905.1_Dcir131C genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_000426905.1_Dcir131C.description.html
+
+genome GCF_000426905.1
+taxId 398007
+groups groups.txt
+description Dolichospermum circinale (AWQC131C 2013)
+twoBitPath GCF_000426905.1.2bit
+twoBitBptUrl GCF_000426905.1.2bit.bpt
+chromSizes GCF_000426905.1.chrom.sizes.txt
+chromAliasBb GCF_000426905.1.chromAlias.bb
+organism Dcir131C Jul. 2013
+defaultPos NZ_KE384588.1:84755-94755
+scientificName Dolichospermum circinale AWQC131C
+htmlPath html/GCF_000426905.1_Dcir131C.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/426/905/GCF_000426905.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/426/905/GCF_000426905.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/426/905/GCF_000426905.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.assembly.bb
+type bigBed 6
+html html/GCF_000426905.1_Dcir131C.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000426905.1_Dcir131C.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track gap
+longLabel AGP gap
+shortLabel Gap (AGP defined)
+visibility hide
+color 0,0,0
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.gap.bb
+type bigBed 4
+group map
+html html/GCF_000426905.1_Dcir131C.gap
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.gc5Base.bw
+html html/GCF_000426905.1_Dcir131C.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCF_000426905.1_Dcir131C.tanDups
+
+    track gapOverlap
+    parent tanDups on
+    shortLabel Gap Overlaps
+    longLabel Paired exactly identical sequence on each side of a gap
+    bigDataUrl bbi/GCF_000426905.1_Dcir131C.gapOverlap.bb
+    type bigBed 12
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCF_000426905.1_Dcir131C.tandemDups.bb
+    type bigBed 12
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.simpleRepeat.bb
+html html/GCF_000426905.1_Dcir131C.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_000426905.1_Dcir131C.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000426905.1_Dcir131C.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000426905.1_Dcir131C.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000426905.1_Dcir131C.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000426905.1_Dcir131C.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.windowMasker.bb
+html html/GCF_000426905.1_Dcir131C.windowMasker
+
+track allGaps
+shortLabel All Gaps
+longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
+group map
+visibility hide
+type bigBed 3
+bigDataUrl bbi/GCF_000426905.1_Dcir131C.allGaps.bb
+html html/GCF_000426905.1_Dcir131C.allGaps
+
