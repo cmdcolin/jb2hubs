@@ -55,7 +55,7 @@ process_assembly() {
 
         if [ "$need_processing" = true ]; then
           node src/rmskLike.ts "${infile}.sql" "${infile}.txt.gz" >"${outfile}.tmp"
-          ./sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
+          ./sortIfNeeded.sh "${outfile}.tmp" | bgzip -@2 >"${outfile}.bed.gz"
           tabix -p bed -C "${outfile}.bed.gz"
           rm -f "${outfile}.tmp"
           echo "$current_hash" >"$hash_file"

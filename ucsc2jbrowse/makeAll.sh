@@ -97,10 +97,10 @@ while read -r assembly_path; do
 done < <(find "$UCSC_DATA_DIR" -maxdepth 1 -mindepth 1 -type d)
 
 log "Hashing all output files for integrity checking..."
-find "$UCSC_RESULTS_DIR"/ -type f ! -name "meta.json" ! -name "*.xxh" | parallel --bar ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
+find "$UCSC_RESULTS_DIR"/ -type f ! -name "meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel --bar ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
 
 log "Copying generated config files to the local 'configs' directory..."
-fd config.json "$UCSC_RESULTS_DIR"/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'
+fd "config.json$" "$UCSC_RESULTS_DIR"/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'
 
 log "Merging all assembly configs into a single file..."
 node src/mergeAll.ts

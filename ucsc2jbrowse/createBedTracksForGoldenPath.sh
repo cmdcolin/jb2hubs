@@ -64,7 +64,7 @@ process_assembly() {
           else
             (echo "$header" && pigz -dc "${infile}.txt.gz" | hck -Ld$'\t' -f2-) >"${outfile}.tmp"
           fi
-          ./sortIfNeeded.sh "${outfile}.tmp" | bgzip -@8 >"${outfile}.bed.gz"
+          ./sortIfNeeded.sh "${outfile}.tmp" | bgzip -@2 >"${outfile}.bed.gz"
           tabix -p bed -C "${outfile}.bed.gz"
           echo "$current_hash" >"$hash_file"
           rm -f "${outfile}.tmp"
