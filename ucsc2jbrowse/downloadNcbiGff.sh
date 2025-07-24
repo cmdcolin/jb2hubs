@@ -21,7 +21,7 @@ if [ ! -f hs1.gff.gz.csi ]; then
   echo "Downloading and processing hs1 GFF..."
   datasets download genome accession GCF_009914755.1 --include gff3,seq-report
   unzip ncbi_dataset.zip
-  jbrowse sort-gff ncbi_dataset/data/GCF_009914755.1/genomic.gff | bgzip -@8 >hs1.gff.gz
+  jbrowse sort-gff ncbi_dataset/data/GCF_009914755.1/genomic.gff | bgzip -@2 >hs1.gff.gz
   tabix -C hs1.gff.gz
 fi
 
