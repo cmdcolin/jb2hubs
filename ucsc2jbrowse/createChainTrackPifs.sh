@@ -154,6 +154,13 @@ process_chain_file() {
   readarray -t paths < <(generate_file_paths "$filename" "$ext_to_remove")
   local chain_path="${paths[0]}"
   local pif_path="${paths[1]}"
+  local pif_filename
+  pif_filename=$(basename "$pif_path")
+
+  if [[ -f "$dest_dir/$pif_filename" && -f "$dest_dir/$pif_filename.csi" ]]; then
+    log_info "PIF file $pif_filename and its index already exist in destination, skipping"
+    return
+  fi
 
   download_file "$file_url" "$chain_path"
   create_pif "$chain_path" "$pif_path"
