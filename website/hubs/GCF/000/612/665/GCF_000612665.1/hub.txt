@@ -1,0 +1,160 @@
+hub GCF_000612665.1 genome assembly
+shortLabel Neobacillus dielmonensis (2014)
+longLabel Neobacillus dielmonensis (2014)/Neobacillus dielmonensis/GCF_000612665.1_FF4 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_000612665.1_FF4.description.html
+
+genome GCF_000612665.1
+taxId 1347369
+groups groups.txt
+description Neobacillus dielmonensis (2014)
+twoBitPath GCF_000612665.1.2bit
+twoBitBptUrl GCF_000612665.1.2bit.bpt
+chromSizes GCF_000612665.1.chrom.sizes.txt
+chromAliasBb GCF_000612665.1.chromAlias.bb
+organism FF4 Mar. 2014
+defaultPos NZ_HG942076.1:99248-109248
+scientificName Neobacillus dielmonensis
+htmlPath html/GCF_000612665.1_FF4.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/612/665/GCF_000612665.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/612/665/GCF_000612665.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/612/665/GCF_000612665.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000612665.1_FF4.assembly.bb
+type bigBed 6
+html html/GCF_000612665.1_FF4.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000612665.1_FF4.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track gap
+longLabel AGP gap
+shortLabel Gap (AGP defined)
+visibility hide
+color 0,0,0
+bigDataUrl bbi/GCF_000612665.1_FF4.gap.bb
+type bigBed 4
+group map
+html html/GCF_000612665.1_FF4.gap
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000612665.1_FF4.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000612665.1_FF4.gc5Base.bw
+html html/GCF_000612665.1_FF4.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCF_000612665.1_FF4.tanDups
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCF_000612665.1_FF4.tandemDups.bb
+    type bigBed 12
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000612665.1_FF4.simpleRepeat.bb
+html html/GCF_000612665.1_FF4.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000612665.1_FF4.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_000612665.1_FF4.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000612665.1_FF4.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000612665.1_FF4.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000612665.1_FF4.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000612665.1_FF4.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000612665.1_FF4.windowMasker.bb
+html html/GCF_000612665.1_FF4.windowMasker
+
+track allGaps
+shortLabel All Gaps
+longLabel All gaps of unknown nucleotides (N's), including AGP annotated gaps
+group map
+visibility hide
+type bigBed 3
+bigDataUrl bbi/GCF_000612665.1_FF4.allGaps.bb
+html html/GCF_000612665.1_FF4.allGaps
+
