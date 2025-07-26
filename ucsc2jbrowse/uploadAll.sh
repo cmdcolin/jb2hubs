@@ -10,7 +10,7 @@ set -euo pipefail
 
 # --- Configuration ---
 
-: ${UCSC_RESULTS_DIR:=~/ucscResults}
+: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
 
 # --- Main Script ---
 

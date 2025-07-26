@@ -10,7 +10,7 @@ set -euo pipefail
 
 # --- Configuration ---
 
-: ${UCSC_RESULTS_DIR:=~/ucscResults}
+: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
 
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 export PATH=$(pwd):$PATH
@@ -27,7 +27,7 @@ fi
 # Process hub-like entries
 cat "$UCSC_RESULTS_DIR/list.json" | jq -r '.ucscGenomes | to_entries[] | select(.value.nibPath | (. != null and startswith("hub:"))) | .key' | while read -r assembly; do
   echo "Processing track hub for $assembly..."
-  local outdir="$UCSC_RESULTS_DIR/$assembly"
+  outdir="$UCSC_RESULTS_DIR/$assembly"
   mkdir -p "$outdir"
   node src/parseTrackHub.ts "https://hgdownload.soe.ucsc.edu/gbdb/$assembly/hubs/public/hub.txt" "$outdir/config.json"
 done

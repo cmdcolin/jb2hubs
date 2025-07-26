@@ -10,7 +10,7 @@ set -euo pipefail
 
 # --- Configuration ---
 
-: ${OUT:=~/ucscResults}
+: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
 
 export LC_ALL=C
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
@@ -29,7 +29,7 @@ process_assembly() {
 }
 
 export -f process_assembly
-export OUT
+export UCSC_RESULTS_DIR
 
 # --- Main Script ---
 

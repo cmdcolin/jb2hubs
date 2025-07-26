@@ -12,7 +12,7 @@ set -euo pipefail
 
 # Set the root directory for results.
 # Can be overridden by setting the environment variable.
-: ${OUT:=~/ucscResults}
+: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
 
 export LC_ALL=C
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
@@ -25,9 +25,7 @@ process_assembly() {
   local assembly_data_dir=$1
   local assembly_name
   assembly_name=$(basename "$assembly_data_dir")
-  local assembly_results_dir="$OUT/$assembly_name"
-
-  echo "Creating configs for $assembly_name..."
+  local assembly_results_dir="$UCSC_RESULTS_DIR/$assembly_name"
 
   for i in "$assembly_results_dir"/*.bed.gz; do
     node src/addBedTabixTrackToConfig.ts "$assembly_results_dir/config.json" "$i"
@@ -42,7 +40,7 @@ process_assembly() {
 }
 
 export -f process_assembly
-export OUT
+export UCSC_RESULTS_DIR
 
 # --- Main Script ---
 
