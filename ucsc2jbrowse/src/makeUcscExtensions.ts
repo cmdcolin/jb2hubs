@@ -12,7 +12,7 @@ const BASE_EXTENSION_DIR = 'ucscExtensions'
  * Integrates UCSC extension configurations into existing JBrowse configurations.
  * It reads JSON files from the 'ucscExtensions' directory, merges them with
  * the corresponding assembly's config.json, and writes the updated config.
- * @param targetDir The root directory where assembly configurations are located (e.g., UCSC_RESULTS_DIR or '/mnt/sdb/cdiesh/ucscResults').
+ * @param targetDir The root directory where assembly configurations are located (e.g., UCSC_RESULTS_DIR).
  */
 function makeUcscExtensions(targetDir: string) {
   const extensionFiles = fs.readdirSync(BASE_EXTENSION_DIR)

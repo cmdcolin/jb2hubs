@@ -8,7 +8,7 @@
 # Usage: ./createChainTrackPifs.sh <source> <assembly> [outdir]
 #   source:   'liftOver' or 'pairwise'. This determines the URL and directory structure.
 #   assembly: The assembly name (e.g., hg38).
-#   outdir:   The root output directory for all assemblies. Defaults to UCSC_RESULTS_DIR or /mnt/sdb/cdiesh/ucscResults.
+#   outdir:   The root output directory for all assemblies. Defaults to UCSC_RESULTS_DIR or ~/ucscResults.
 #
 
 set -euo pipefail
@@ -36,7 +36,7 @@ usage() {
   echo "Usage: $0 <source> <assembly> [outdir]"
   echo "  source:   'liftOver' or 'pairwise'"
   echo "  assembly: The assembly name (e.g., hg38)"
-  echo "  outdir:   Root output directory. Defaults to UCSC_RESULTS_DIR or /mnt/sdb/cdiesh/ucscResults"
+  echo "  outdir:   Root output directory. Defaults to UCSC_RESULTS_DIR or ~/ucscResults"
   exit 1
 }
 
@@ -44,7 +44,7 @@ usage() {
 setup_config() {
   SOURCE=${1:-}
   ASSEMBLY=${2:-}
-  OUTDIR=${3:-"${UCSC_RESULTS_DIR:-/mnt/sdb/cdiesh/ucscResults}"}
+  OUTDIR=${3:-"${UCSC_RESULTS_DIR:-~/ucscResults}"}
 
   if [[ -z "$SOURCE" || -z "$ASSEMBLY" ]]; then
     usage

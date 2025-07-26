@@ -12,8 +12,8 @@
 
 # Set the root directory for UCSC data and results.
 # Can be overridden by setting the environment variable.
-: ${UCSC_DATA_DIR:=/mnt/sdb/cdiesh/ucsc}
-: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
+: ${UCSC_DATA_DIR:=~/ucsc}
+: ${UCSC_RESULTS_DIR:=~/ucscResults}
 export TMPDIR=/mnt/sdb/cdiesh/tmp
 
 # Ensure the script's path is in the PATH for tool access.

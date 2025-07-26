@@ -80,7 +80,7 @@ function createChainTrackConfig(
   } else {
     // Try to get common name from ucscResults/list.json for typical UCSC assemblies
     try {
-      const ucscResultsDir = process.env.UCSC_RESULTS_DIR || '/mnt/sdb/cdiesh/ucscResults'
+      const ucscResultsDir = process.env.UCSC_RESULTS_DIR
       const listJson = readJSON<any>(
         path.join(ucscResultsDir, 'list.json'),
       )
@@ -136,7 +136,7 @@ function main() {
     .option(
       '-o, --output <dir>',
       'Output directory',
-      process.env.UCSC_RESULTS_DIR || '/mnt/sdb/cdiesh/ucscResults',
+      process.env.UCSC_RESULTS_DIR
     )
     .parse(process.argv)
 
