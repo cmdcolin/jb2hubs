@@ -12,9 +12,9 @@ set -euo pipefail
 
 # Set the root directory for UCSC data and results.
 # Can be overridden by setting the environment variable.
-: ${UCSC_DATA_DIR:=/mnt/sdb/cdiesh/ucsc}
-: ${UCSC_ALT_DATA_DIR:=/mnt/sdb/cdiesh/ucscAlt}
-: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
+: ${UCSC_DATA_DIR:=~/ucsc}
+: ${UCSC_ALT_DATA_DIR:=~/ucscAlt}
+: ${UCSC_RESULTS_DIR:=~/ucscResults}
 
 # Suppress Node.js experimental warnings.
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
