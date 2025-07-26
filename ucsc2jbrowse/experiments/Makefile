@@ -1,6 +1,6 @@
 # UCSC to JBrowse conversion Makefile
 # Default output directory
-OUT ?= $(HOME)/ucscResults
+OUT ?= /mnt/sdb/cdiesh/ucscResults
 # Set locale
 export LC_ALL=C
 export NODE_OPTIONS=--no-warnings=ExperimentalWarning
@@ -9,10 +9,10 @@ export NODE_OPTIONS=--no-warnings=ExperimentalWarning
 JOBS ?= 12
 
 # List of assemblies (to be provided as arguments)
-ASSEMBLIES ?= $(wildcard ~/ucsc/*)
+ASSEMBLIES ?= $(wildcard /mnt/sdb/cdiesh/ucsc/*)
 
 # Pattern rule for tracks.json files
-$(OUT)/%/tracks.json: ~/ucsc/%/%/database/trackDb.sql ~/ucsc/%/%/database/trackDb.txt.gz
+$(OUT)/%/tracks.json: /mnt/sdb/cdiesh/ucsc/%/%/database/trackDb.sql /mnt/sdb/cdiesh/ucsc/%/%/database/trackDb.txt.gz
 	@mkdir -p $(dir $@)
 	node src/tracksDbLike.ts $< $(word 2,$^) > $@
 
@@ -23,7 +23,7 @@ gene_tracks: $(foreach asm,$(notdir $(ASSEMBLIES)),$(OUT)/$(asm)/gene_tracks.don
 # Pattern rule for gene tracks processing for each assembly
 $(OUT)/%/gene_tracks.done: $(OUT)/%/tracks.json
 	@mkdir -p $(dir $@)
-	$(MAKE) -j $(JOBS) process_gene_tracks TRACKS_JSON=$< DBDIR=~/ucsc/$*/$$*/database OUTDIR=$(dir $@)
+	$(MAKE) -j $(JOBS) process_gene_tracks TRACKS_JSON=$< DBDIR=/mnt/sdb/cdiesh/ucsc/$*/$$*/database OUTDIR=$(dir $@)
 	touch $@
 
 # Process gene tracks from tracks.json
@@ -78,7 +78,7 @@ help:
 	@echo "  help            Display this help message"
 	@echo ""
 	@echo "Variables:"
-	@echo "  ASSEMBLIES      List of assembly directories (default: ~/ucsc/*)"
-	@echo "  OUT             Output directory (default: ~/ucscResults)"
+	@echo "  ASSEMBLIES      List of assembly directories (default: /mnt/sdb/cdiesh/ucsc/*)"
+	@echo "  OUT             Output directory (default: /mnt/sdb/cdiesh/ucscResults)"
 	@echo "  JOBS            Number of parallel jobs (default: 12)"
 

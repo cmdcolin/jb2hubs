@@ -12,7 +12,7 @@ set -euo pipefail
 
 # Set the root directory for results.
 # Can be overridden by setting the environment variable.
-: ${OUT:=~/ucscResults}
+: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
 
 export LC_ALL=C
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
@@ -83,17 +83,16 @@ process_assembly() {
   local assembly_data_dir=$1
   local assembly_name
   assembly_name=$(basename "$assembly_data_dir")
-  local assembly_results_dir="$OUT/$assembly_name"
+  local assembly_results_dir="$UCSC_RESULTS_DIR/$assembly_name"
   local db_dir="$assembly_data_dir/$assembly_name/database"
 
   mkdir -p "$assembly_results_dir"
-  echo "Creating gene tracks for $assembly_name..."
   process_gene_tracks "$assembly_results_dir/tracks.json" "$db_dir" "$assembly_results_dir"
 }
 
 export -f process_assembly
 export -f process_gene_tracks
-export OUT
+export UCSC_RESULTS_DIR
 
 # --- Main Script ---
 

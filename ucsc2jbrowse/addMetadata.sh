@@ -12,7 +12,7 @@
 
 # Set the root directory for results.
 # Can be overridden by setting the environment variable.
-: ${OUT:=~/ucscResults}
+: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
 
 export LC_ALL=C
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
@@ -29,15 +29,14 @@ process_assembly() {
   local tracks_file="$assembly_dir/tracks.json"
   local temp_config_file="$assembly_dir/tmp.json"
 
-  echo "Adding metadata to $assembly_name..."
+  # echo "Adding metadata to $assembly_name..."
 
   # Add metadata from the tracksDb.sql to the config.json
   node src/addMetadata.ts "$config_file" "$tracks_file"
-  #>"$temp_config_file" && mv "$temp_config_file" "$config_file"
 }
 
 export -f process_assembly
-export OUT
+export UCSC_RESULTS_DIR
 
 # --- Main Script ---
 

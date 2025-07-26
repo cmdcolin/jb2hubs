@@ -65,8 +65,9 @@ function mergeAllConfigs() {
     plugins: [],
   }
 
-  writeJSON(path.join(os.homedir(), 'ucscResults', 'all.json'), mergedConfig)
-  console.log('All configurations merged into ~/ucscResults/all.json')
+  const ucscResultsDir = process.env.UCSC_RESULTS_DIR || '/mnt/sdb/cdiesh/ucscResults'
+  writeJSON(path.join(ucscResultsDir, 'all.json'), mergedConfig)
+  console.log(`All configurations merged into ${ucscResultsDir}/all.json`)
 }
 
 mergeAllConfigs()

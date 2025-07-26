@@ -80,8 +80,9 @@ function createChainTrackConfig(
   } else {
     // Try to get common name from ucscResults/list.json for typical UCSC assemblies
     try {
+      const ucscResultsDir = process.env.UCSC_RESULTS_DIR || '/mnt/sdb/cdiesh/ucscResults'
       const listJson = readJSON<any>(
-        path.join(os.homedir(), 'ucscResults', 'list.json'),
+        path.join(ucscResultsDir, 'list.json'),
       )
       commonName = listJson.ucscGenomes?.[targetAssembly]?.organism ?? ''
     } catch (error) {
@@ -135,7 +136,7 @@ function main() {
     .option(
       '-o, --output <dir>',
       'Output directory',
-      path.join(os.homedir(), 'ucscResults'),
+      process.env.UCSC_RESULTS_DIR || '/mnt/sdb/cdiesh/ucscResults',
     )
     .parse(process.argv)
 
@@ -154,10 +155,8 @@ function main() {
 
   const pifFilesDir = path.join(configDir, srcDir)
   if (!fs.existsSync(pifFilesDir)) {
-    console.warn(
-      `PIF files directory not found: ${pifFilesDir}. Skipping track creation.`,
-    )
-    return
+    console.log(`Creating PIF files directory: ${pifFilesDir}`)
+    fs.mkdirSync(pifFilesDir, { recursive: true })
   }
 
   const pifFiles = fs

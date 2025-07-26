@@ -12,7 +12,7 @@ set -euo pipefail
 
 # Set the root directory for results.
 # Can be overridden by setting the environment variable.
-: ${OUT:=~/ucscResults}
+: ${UCSC_RESULTS_DIR:=/mnt/sdb/cdiesh/ucscResults}
 
 export LC_ALL=C
 
@@ -24,14 +24,14 @@ process_assembly() {
   local assembly_data_dir=$1
   local assembly_name
   assembly_name=$(basename "$assembly_data_dir")
-  local assembly_results_dir="$OUT/$assembly_name"
+  local assembly_results_dir="$UCSC_RESULTS_DIR/$assembly_name"
 
   mkdir -p "$assembly_results_dir"
-  node src/createAssembly.ts "$assembly_name" "$OUT/list.json" >"$assembly_results_dir/config.json"
+  node src/createAssembly.ts "$assembly_name" "$UCSC_RESULTS_DIR/list.json" >"$assembly_results_dir/config.json"
 }
 
 export -f process_assembly
-export OUT
+export UCSC_RESULTS_DIR
 
 # --- Main Script ---
 
