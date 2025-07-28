@@ -8,7 +8,7 @@ import type { TrackDbEntry } from './types.ts'
 
 interface BigDataTrack {
   tableName: string
-  settings: { bigDataUrl?: string }
+  settings: { bigDataUrl?: string; type: string }
 }
 
 type BigDataTracksJson = Record<string, BigDataTrack>
@@ -73,7 +73,7 @@ async function addBigDataTracks(
       Object.values(bigDataEntries).map(entry =>
         limit(async () => {
           const { settings, tableName } = entry
-          const { bigDataUrl } = settings
+          const { type, bigDataUrl } = settings
           const trackId = `${assemblyName}-${tableName}`
 
           if (!bigDataUrl || bigDataUrl.includes('fantom')) {
@@ -91,15 +91,30 @@ async function addBigDataTracks(
             if (!fileAccessible) {
               return undefined
             }
-            return {
-              trackId,
-              name: tableName,
-              type: 'FeatureTrack',
-              assemblyNames: [assemblyName],
-              adapter: {
-                type: 'BigBedAdapter',
-                uri,
-              },
+            if (type === 'bigMaf') {
+              return {
+                trackId,
+                name: tableName,
+                type: 'MafTrack',
+                assemblyNames: [assemblyName],
+                adapter: {
+                  type: 'BigMafAdapter',
+                  bigBedLocation: {
+                    uri: bigDataUrl,
+                  },
+                },
+              }
+            } else {
+              return {
+                trackId,
+                name: tableName,
+                type: 'FeatureTrack',
+                assemblyNames: [assemblyName],
+                adapter: {
+                  type: 'BigBedAdapter',
+                  uri,
+                },
+              }
             }
           } else if (bigDataUrl.endsWith('.bam')) {
             if (!sequenceAdapter) {

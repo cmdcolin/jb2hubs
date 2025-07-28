@@ -310,11 +310,13 @@
     {
       "trackId": "galGal6-netGCF_016699485.2",
       "name": "Net - Chicken net",
-      "type": "FeatureTrack",
+      "type": "MafTrack",
       "assemblyNames": ["galGal6"],
       "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.net.bb"
+        "type": "BigMafAdapter",
+        "bigBedLocation": {
+          "uri": "/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.net.bb"
+        }
       },
       "metadata": {
         "bigDataUrl": "/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.net.bb",
@@ -449,11 +451,13 @@
     {
       "trackId": "galGal6-rbestNetGCF_016699485.2",
       "name": "Net - Chicken rbestNet",
-      "type": "FeatureTrack",
+      "type": "MafTrack",
       "assemblyNames": ["galGal6"],
       "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.rbestNet.bb"
+        "type": "BigMafAdapter",
+        "bigBedLocation": {
+          "uri": "/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.rbestNet.bb"
+        }
       },
       "metadata": {
         "bigDataUrl": "/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.rbestNet.bb",
@@ -534,11 +538,13 @@
     {
       "trackId": "galGal6-synNetGCF_016699485.2",
       "name": "Net - Chicken synNet",
-      "type": "FeatureTrack",
+      "type": "MafTrack",
       "assemblyNames": ["galGal6"],
       "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.synNet.bb"
+        "type": "BigMafAdapter",
+        "bigBedLocation": {
+          "uri": "/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.synNet.bb"
+        }
       },
       "metadata": {
         "bigDataUrl": "/gbdb/galGal6/bbi/chainNet/galGal6.GCF_016699485.2.synNet.bb",
@@ -1708,7 +1714,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal6_to_galGal4_chain",
-      "name": "galGal6 to Chicken (galGal4) liftOver chain",
+      "name": "galGal6 to galGal4 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal6", "galGal4"],
       "adapter": {
@@ -1729,7 +1735,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal6_to_galGal5_chain",
-      "name": "galGal6 to Chicken (galGal5) liftOver chain",
+      "name": "galGal6 to galGal5 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal6", "galGal5"],
       "adapter": {
@@ -1750,7 +1756,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal6_to_hg38_chain",
-      "name": "galGal6 to Human (hg38) liftOver chain",
+      "name": "galGal6 to hg38 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal6", "hg38"],
       "adapter": {
@@ -1771,7 +1777,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal6_to_mm10_chain",
-      "name": "galGal6 to Mouse (mm10) liftOver chain",
+      "name": "galGal6 to mm10 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal6", "mm10"],
       "adapter": {
@@ -1792,7 +1798,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal6_to_mm39_chain",
-      "name": "galGal6 to Mouse (mm39) liftOver chain",
+      "name": "galGal6 to mm39 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal6", "mm39"],
       "adapter": {
@@ -1813,7 +1819,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal6_to_monDom5_chain",
-      "name": "galGal6 to Opossum (monDom5) liftOver chain",
+      "name": "galGal6 to monDom5 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal6", "monDom5"],
       "adapter": {
@@ -1834,7 +1840,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "galGal6_to_musFur1_chain",
-      "name": "galGal6 to Ferret  (musFur1) liftOver chain",
+      "name": "galGal6 to musFur1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["galGal6", "musFur1"],
       "adapter": {

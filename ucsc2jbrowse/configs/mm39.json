@@ -810,11 +810,13 @@
     {
       "trackId": "mm39-netGCF_003668045.3",
       "name": "Nets - Chinese hamster mafNet",
-      "type": "FeatureTrack",
+      "type": "MafTrack",
       "assemblyNames": ["mm39"],
       "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/mm39/bbi/chainNet/mm39.GCF_003668045.3.net.bb"
+        "type": "BigMafAdapter",
+        "bigBedLocation": {
+          "uri": "/gbdb/mm39/bbi/chainNet/mm39.GCF_003668045.3.net.bb"
+        }
       },
       "metadata": {
         "bigDataUrl": "/gbdb/mm39/bbi/chainNet/mm39.GCF_003668045.3.net.bb",
@@ -1949,7 +1951,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_bosTau9_chain",
-      "name": "mm39 to Cow (bosTau9) liftOver chain",
+      "name": "mm39 to bosTau9 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "bosTau9"],
       "adapter": {
@@ -1970,7 +1972,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_calJac4_chain",
-      "name": "mm39 to Marmoset (calJac4) liftOver chain",
+      "name": "mm39 to calJac4 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "calJac4"],
       "adapter": {
@@ -1991,7 +1993,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_canFam3_chain",
-      "name": "mm39 to Dog (canFam3) liftOver chain",
+      "name": "mm39 to canFam3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "canFam3"],
       "adapter": {
@@ -2012,7 +2014,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_canFam5_chain",
-      "name": "mm39 to Dog (canFam5) liftOver chain",
+      "name": "mm39 to canFam5 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "canFam5"],
       "adapter": {
@@ -2033,7 +2035,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_canFam6_chain",
-      "name": "mm39 to Dog (canFam6) liftOver chain",
+      "name": "mm39 to canFam6 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "canFam6"],
       "adapter": {
@@ -2054,7 +2056,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_cavPor3_chain",
-      "name": "mm39 to Guinea pig (cavPor3) liftOver chain",
+      "name": "mm39 to cavPor3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "cavPor3"],
       "adapter": {
@@ -2075,7 +2077,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_danRer11_chain",
-      "name": "mm39 to Zebrafish (danRer11) liftOver chain",
+      "name": "mm39 to danRer11 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "danRer11"],
       "adapter": {
@@ -2096,7 +2098,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_echTel2_chain",
-      "name": "mm39 to Tenrec (echTel2) liftOver chain",
+      "name": "mm39 to echTel2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "echTel2"],
       "adapter": {
@@ -2117,7 +2119,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_equCab3_chain",
-      "name": "mm39 to Horse (equCab3) liftOver chain",
+      "name": "mm39 to equCab3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "equCab3"],
       "adapter": {
@@ -2138,7 +2140,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_eriEur2_chain",
-      "name": "mm39 to Hedgehog (eriEur2) liftOver chain",
+      "name": "mm39 to eriEur2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "eriEur2"],
       "adapter": {
@@ -2159,7 +2161,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_felCat9_chain",
-      "name": "mm39 to Cat (felCat9) liftOver chain",
+      "name": "mm39 to felCat9 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "felCat9"],
       "adapter": {
@@ -2873,7 +2875,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_galGal6_chain",
-      "name": "mm39 to Chicken (galGal6) liftOver chain",
+      "name": "mm39 to galGal6 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "galGal6"],
       "adapter": {
@@ -2894,7 +2896,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_galVar1_chain",
-      "name": "mm39 to Malayan flying lemur (galVar1) liftOver chain",
+      "name": "mm39 to galVar1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "galVar1"],
       "adapter": {
@@ -2915,7 +2917,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_gorGor6_chain",
-      "name": "mm39 to Gorilla (gorGor6) liftOver chain",
+      "name": "mm39 to gorGor6 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "gorGor6"],
       "adapter": {
@@ -2936,7 +2938,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_hg38_chain",
-      "name": "mm39 to Human (hg38) liftOver chain",
+      "name": "mm39 to hg38 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "hg38"],
       "adapter": {
@@ -2957,7 +2959,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_loxAfr3_chain",
-      "name": "mm39 to Elephant (loxAfr3) liftOver chain",
+      "name": "mm39 to loxAfr3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "loxAfr3"],
       "adapter": {
@@ -2978,7 +2980,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_manPen1_chain",
-      "name": "mm39 to Chinese pangolin (manPen1) liftOver chain",
+      "name": "mm39 to manPen1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "manPen1"],
       "adapter": {
@@ -2999,7 +3001,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_mm10_chain",
-      "name": "mm39 to Mouse (mm10) liftOver chain",
+      "name": "mm39 to mm10 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "mm10"],
       "adapter": {
@@ -3020,7 +3022,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_mm9_chain",
-      "name": "mm39 to Mouse (mm9) liftOver chain",
+      "name": "mm39 to mm9 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "mm9"],
       "adapter": {
@@ -3041,7 +3043,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_monDom5_chain",
-      "name": "mm39 to Opossum (monDom5) liftOver chain",
+      "name": "mm39 to monDom5 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "monDom5"],
       "adapter": {
@@ -3062,7 +3064,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_neoSch1_chain",
-      "name": "mm39 to Hawaiian monk seal (neoSch1) liftOver chain",
+      "name": "mm39 to neoSch1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "neoSch1"],
       "adapter": {
@@ -3083,7 +3085,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_ochPri3_chain",
-      "name": "mm39 to Pika (ochPri3) liftOver chain",
+      "name": "mm39 to ochPri3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "ochPri3"],
       "adapter": {
@@ -3104,7 +3106,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_oryCun2_chain",
-      "name": "mm39 to Rabbit (oryCun2) liftOver chain",
+      "name": "mm39 to oryCun2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "oryCun2"],
       "adapter": {
@@ -3125,7 +3127,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_otoGar3_chain",
-      "name": "mm39 to Bushbaby (otoGar3) liftOver chain",
+      "name": "mm39 to otoGar3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "otoGar3"],
       "adapter": {
@@ -3146,7 +3148,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_oviAri1_chain",
-      "name": "mm39 to Sheep (oviAri1) liftOver chain",
+      "name": "mm39 to oviAri1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "oviAri1"],
       "adapter": {
@@ -3167,7 +3169,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_oviAri4_chain",
-      "name": "mm39 to Sheep (oviAri4) liftOver chain",
+      "name": "mm39 to oviAri4 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "oviAri4"],
       "adapter": {
@@ -3188,7 +3190,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_panPan3_chain",
-      "name": "mm39 to Bonobo (panPan3) liftOver chain",
+      "name": "mm39 to panPan3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "panPan3"],
       "adapter": {
@@ -3209,7 +3211,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_panTro6_chain",
-      "name": "mm39 to Chimp (panTro6) liftOver chain",
+      "name": "mm39 to panTro6 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "panTro6"],
       "adapter": {
@@ -3230,7 +3232,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_petMar3_chain",
-      "name": "mm39 to Lamprey (petMar3) liftOver chain",
+      "name": "mm39 to petMar3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "petMar3"],
       "adapter": {
@@ -3251,7 +3253,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_rheMac10_chain",
-      "name": "mm39 to Rhesus (rheMac10) liftOver chain",
+      "name": "mm39 to rheMac10 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "rheMac10"],
       "adapter": {
@@ -3272,7 +3274,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_rn6_chain",
-      "name": "mm39 to Rat (rn6) liftOver chain",
+      "name": "mm39 to rn6 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "rn6"],
       "adapter": {
@@ -3293,7 +3295,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_rn7_chain",
-      "name": "mm39 to Rat (rn7) liftOver chain",
+      "name": "mm39 to rn7 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "rn7"],
       "adapter": {
@@ -3314,7 +3316,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_sorAra2_chain",
-      "name": "mm39 to Shrew (sorAra2) liftOver chain",
+      "name": "mm39 to sorAra2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "sorAra2"],
       "adapter": {
@@ -3335,7 +3337,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_speTri2_chain",
-      "name": "mm39 to Squirrel (speTri2) liftOver chain",
+      "name": "mm39 to speTri2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "speTri2"],
       "adapter": {
@@ -3356,7 +3358,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_susScr11_chain",
-      "name": "mm39 to Pig (susScr11) liftOver chain",
+      "name": "mm39 to susScr11 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "susScr11"],
       "adapter": {
@@ -3377,7 +3379,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_susScr3_chain",
-      "name": "mm39 to Pig (susScr3) liftOver chain",
+      "name": "mm39 to susScr3 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "susScr3"],
       "adapter": {
@@ -3398,7 +3400,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_tarSyr2_chain",
-      "name": "mm39 to Tarsier (tarSyr2) liftOver chain",
+      "name": "mm39 to tarSyr2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "tarSyr2"],
       "adapter": {
@@ -3419,7 +3421,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_tupBel1_chain",
-      "name": "mm39 to Tree shrew (tupBel1) liftOver chain",
+      "name": "mm39 to tupBel1 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "tupBel1"],
       "adapter": {
@@ -3440,7 +3442,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_turTru2_chain",
-      "name": "mm39 to Dolphin (turTru2) liftOver chain",
+      "name": "mm39 to turTru2 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "turTru2"],
       "adapter": {
@@ -3461,7 +3463,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_xenTro10_chain",
-      "name": "mm39 to X. tropicalis (xenTro10) liftOver chain",
+      "name": "mm39 to xenTro10 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "xenTro10"],
       "adapter": {
@@ -3482,7 +3484,7 @@
     {
       "type": "SyntenyTrack",
       "trackId": "mm39_to_xenTro9_chain",
-      "name": "mm39 to X. tropicalis (xenTro9) liftOver chain",
+      "name": "mm39 to xenTro9 liftOver chain",
       "category": ["Liftover"],
       "assemblyNames": ["mm39", "xenTro9"],
       "adapter": {
