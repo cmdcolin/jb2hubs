@@ -50,7 +50,7 @@ export default async function Page({
         <UL>
           <LI>
             <StyledLink
-              href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/${id}/config.json`}
+              href={`https://jbrowse.org/code/jb2/main/?config=https://jbrowse.org/ucsc/${id}/config.json`}
             >
               JBrowse
             </StyledLink>
