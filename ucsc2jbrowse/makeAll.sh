@@ -107,7 +107,9 @@ log "Merging all assembly configs into a single file..."
 node src/mergeAll.ts
 
 log "Sorting the list of blocked files..."
-sort -o blockedFiles.txt blockedFiles.txt
+if [ -f blockedFiles.txt ]; then
+  sort blockedFiles.txt >blockedFiles.txt.tmp && mv blockedFiles.txt.tmp blockedFiles.txt
+fi
 
 echo "Formatting codebase..."
 cd ..

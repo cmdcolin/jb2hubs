@@ -55,8 +55,8 @@ setup_config() {
   fi
 
   # Define directories
-  CHAINS_DIR="chains"
-  PIFS_DIR="pifs"
+  CHAINS_DIR="/mnt/sdb/cdiesh/chains"
+  PIFS_DIR="/mnt/sdb/cdiesh/pifs"
   CONFIG_DIR="$OUTDIR/$ASSEMBLY"
 
   log_info "Setting up directories for $SOURCE processing of $ASSEMBLY"
