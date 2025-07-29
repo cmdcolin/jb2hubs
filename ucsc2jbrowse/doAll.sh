@@ -8,5 +8,6 @@
 
 set -euo pipefail
 
+export UCSC_RESULTS_DIR=~/ucscResults
 ./downloadAll.sh
 ./makeAll.sh
