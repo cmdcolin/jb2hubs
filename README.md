@@ -2,7 +2,7 @@
 
 This is a portal that creates JBrowse 2 links to UCSC track hubs
 
-https://cmdcolin.github.io/jb2hubs
+https://jbrowse.org/jb2hubs
 
 ## Pre-requisites
 
@@ -10,8 +10,8 @@ https://cmdcolin.github.io/jb2hubs
   build, copy to ~/bed2gff)
 - hck
 - fdfind aka fd
-- node.js
-- yarn
+- node.js, yarn, and npm install -g @jbrowse/cli
+- rclone
 
 ## Preparing GenArk hubs
 
@@ -28,8 +28,7 @@ yarn
 ```bash
 cd ucsc2jbrowse
 yarn
-./downloadAll.sh
-./makeAll.sh
+./doAll.sh
 # optionally review git diff
 ./uploadAll.sh
 ```
@@ -44,6 +43,7 @@ yarn deploy
 
 ## Note
 
-This repo was written with the aid of Claude and avante.nvim
+This repo was written with the aid of AI tools including Claude and avante.nvim
 
-Big thank you as well to UCSC team for their data sharing and more!
+A huge thank you to UCSC team for their generous data sharing policy and work on
+these resources
