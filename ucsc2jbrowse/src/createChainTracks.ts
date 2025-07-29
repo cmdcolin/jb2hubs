@@ -1,5 +1,4 @@
 import fs from 'fs'
-import os from 'os'
 import path from 'path'
 
 import { Command } from 'commander'
@@ -30,11 +29,15 @@ interface ChainTrack {
  * @param srcDir The source directory for the PIF files (e.g., 'liftOver' or 'vs').
  * @returns A ChainTrack object or null if parsing fails.
  */
-function createChainTrackConfig(
-  pifFile: string,
-  sourceAssembly: string,
-  srcDir: string,
-): ChainTrack | null {
+function createChainTrackConfig({
+  pifFile,
+  sourceAssembly,
+  srcDir,
+}: {
+  pifFile: string
+  sourceAssembly: string
+  srcDir: string
+}): ChainTrack | null {
   const filename = path.basename(pifFile)
   const filenameWithoutExt = filename.replace('.pif.gz', '')
 
@@ -93,16 +96,16 @@ function createChainTrackConfig(
     }
   }
 
-  const trackId = `${sourceAssembly}_to_${targetAssembly}_chain`
+  const trackId = `${sourceAssembly}_to_${targetAssembly}_${srcDir}`
   const trackName = commonName
-    ? `${sourceAssembly} to ${commonName} (${targetAssembly}) ${srcDir} chain`
-    : `${sourceAssembly} to ${targetAssembly} ${srcDir} chain`
+    ? `${sourceAssembly} to ${commonName} (${targetAssembly}) ${srcDir}`
+    : `${sourceAssembly} to ${targetAssembly} ${srcDir}`
 
   return {
     type: 'SyntenyTrack',
     trackId,
     name: trackName,
-    category: ['Liftover'],
+    category: ['Pairwise alignments', srcDir],
     assemblyNames: [sourceAssembly, targetAssembly],
     adapter: {
       type: 'PairwiseIndexedPAFAdapter',
@@ -172,7 +175,11 @@ function main() {
   const chainTracks: ChainTrack[] = []
 
   for (const pifFile of pifFiles) {
-    const track = createChainTrackConfig(pifFile, sourceAssembly, srcDir)
+    const track = createChainTrackConfig({
+      pifFile,
+      sourceAssembly,
+      srcDir,
+    })
     if (track) {
       chainTracks.push(track)
     }

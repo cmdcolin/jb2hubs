@@ -14,6 +14,7 @@
 # Can be overridden by setting the environment variable.
 : ${UCSC_DATA_DIR:=~/ucsc}
 : ${UCSC_RESULTS_DIR:=~/ucscResults}
+export UCSC_RESULTS_DIR
 export TMPDIR=/mnt/sdb/cdiesh/tmp
 
 # Ensure the script's path is in the PATH for tool access.
