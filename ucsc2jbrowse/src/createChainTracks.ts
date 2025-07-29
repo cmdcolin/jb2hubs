@@ -81,7 +81,9 @@ function createChainTrackConfig(
     // Try to get common name from ucscResults/list.json for typical UCSC assemblies
     try {
       const ucscResultsDir = process.env.UCSC_RESULTS_DIR
-      console.warn('WTF')
+      if (!ucscResultsDir) {
+        throw new Error('No UCSC_RESULTS_DIR env defined')
+      }
       const listJson = readJSON<any>(path.join(ucscResultsDir, 'list.json'))
       commonName = listJson.ucscGenomes?.[targetAssembly]?.organism ?? ''
     } catch (error) {
