@@ -46,6 +46,12 @@ const metadata = readJSON<{ ucscGenomes: Record<string, GenomeRecord> }>(list)
 console.log(
   JSON.stringify(
     {
+      plugins: [
+        {
+          name: 'MafViewer',
+          url: 'https://unpkg.com/jbrowse-plugin-mafviewer/dist/jbrowse-plugin-mafviewer.umd.production.min.js',
+        },
+      ],
       assemblies: [
         {
           name: assemblyName,
