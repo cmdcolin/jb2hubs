@@ -8,7 +8,26 @@ import type { TrackDbEntry } from './types.ts'
 
 interface BigDataTrack {
   tableName: string
-  settings: { bigDataUrl?: string; type: string }
+  settings: {
+    bigDataUrl?: string
+    type: string
+    speciesLabels?: string
+  }
+}
+
+function parseSpeciesString(str: string) {
+  const regex = /(\w+)="([^"]+)"/g
+  const result = []
+  let match
+
+  while ((match = regex.exec(str)) !== null) {
+    result.push({
+      id: match[1],
+      label: match[2] || match[1],
+    })
+  }
+
+  return result
 }
 
 type BigDataTracksJson = Record<string, BigDataTrack>
@@ -73,7 +92,7 @@ async function addBigDataTracks(
       Object.values(bigDataEntries).map(entry =>
         limit(async () => {
           const { settings, tableName } = entry
-          const { type, bigDataUrl } = settings
+          const { type, speciesLabels, bigDataUrl } = settings
           const trackId = `${assemblyName}-${tableName}`
 
           if (!bigDataUrl || bigDataUrl.includes('fantom')) {
@@ -84,7 +103,11 @@ async function addBigDataTracks(
             ? bigDataUrl
             : `${baseUrl}${bigDataUrl}`
 
-          if (bigDataUrl.endsWith('.bb') || bigDataUrl.endsWith('.bigBed')) {
+          if (
+            bigDataUrl.endsWith('.bb') ||
+            bigDataUrl.endsWith('.bigBed') ||
+            bigDataUrl.endsWith('.bigMaf')
+          ) {
             const fileAccessible = await checkIfFileAccessible({
               url: bigDataUrl,
             })
@@ -92,6 +115,10 @@ async function addBigDataTracks(
               return undefined
             }
             if (type === 'bigMaf') {
+              const samples = speciesLabels
+                ? parseSpeciesString(speciesLabels)
+                : []
+              console.log({ samples })
               return {
                 trackId,
                 name: tableName,
@@ -99,6 +126,7 @@ async function addBigDataTracks(
                 assemblyNames: [assemblyName],
                 adapter: {
                   type: 'BigMafAdapter',
+                  samples,
                   bigBedLocation: {
                     uri: bigDataUrl,
                   },

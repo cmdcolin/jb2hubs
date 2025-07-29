@@ -34,6 +34,7 @@ function addMetadata(configPath: string, tracksDbPath: string) {
             .map(r => splitOnFirst(r, ' '))
             .filter(([key]) => !!key),
         )
+
         const parentTrackId = trackMetadata.parent
           ? splitOnFirst(trackMetadata.parent, ' ')[0]
           : undefined
@@ -63,7 +64,7 @@ function addMetadata(configPath: string, tracksDbPath: string) {
           ],
         }
       } else {
-        console.warn('Track not found in trackDb', track.trackId)
+        // console.warn('Track not found in trackDb', track.trackId)
         return track
       }
     })
