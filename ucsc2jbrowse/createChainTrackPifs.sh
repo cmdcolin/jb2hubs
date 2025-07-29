@@ -3,10 +3,10 @@
 # createChainTrackPifs.sh
 #
 # Downloads chain files and converts them to PIF (Pairwise Indexed PAF) format.
-# This script can handle two different sources for chain files: 'liftOver' and 'pairwise'.
+# This script can handle two different sources for chain files: 'liftOver' and 'vs'.
 #
 # Usage: ./createChainTrackPifs.sh <source> <assembly> [outdir]
-#   source:   'liftOver' or 'pairwise'. This determines the URL and directory structure.
+#   source:   'liftOver' or 'vs'. This determines the URL and directory structure.
 #   assembly: The assembly name (e.g., hg38).
 #   outdir:   The root output directory for all assemblies. Defaults to UCSC_RESULTS_DIR or ~/ucscResults.
 #
@@ -34,7 +34,7 @@ log_error() {
 # Prints usage information and exits.
 usage() {
   echo "Usage: $0 <source> <assembly> [outdir]"
-  echo "  source:   'liftOver' or 'pairwise'"
+  echo "  source:   'liftOver' or 'vs'"
   echo "  assembly: The assembly name (e.g., hg38)"
   echo "  outdir:   Root output directory. Defaults to UCSC_RESULTS_DIR or ~/ucscResults"
   exit 1
@@ -50,8 +50,8 @@ setup_config() {
     usage
   fi
 
-  if [[ "$SOURCE" != "liftOver" && "$SOURCE" != "pairwise" ]]; then
-    log_error "Invalid source '$SOURCE'. Must be 'liftOver' or 'pairwise'."
+  if [[ "$SOURCE" != "liftOver" && "$SOURCE" != "vs" ]]; then
+    log_error "Invalid source '$SOURCE'. Must be 'liftOver' or 'vs'."
   fi
 
   # Define directories
@@ -59,7 +59,7 @@ setup_config() {
   PIFS_DIR="/mnt/sdb/cdiesh/pifs"
   CONFIG_DIR="$OUTDIR/$ASSEMBLY"
 
-  log_info "Setting up directories for $SOURCE processing of $ASSEMBLY"
+  # log_info "Setting up directories for $SOURCE processing of $ASSEMBLY"
   mkdir -p "$CHAINS_DIR" "$PIFS_DIR" "$CONFIG_DIR"
 }
 
@@ -125,8 +125,6 @@ create_pif() {
     fi
 
     rm "$paf_path"
-  else
-    log_info "PIF file $(basename "$pif_path") already exists, skipping creation"
   fi
 }
 
@@ -158,7 +156,7 @@ process_chain_file() {
   pif_filename=$(basename "$pif_path")
 
   if [[ -f "$dest_dir/$pif_filename" && -f "$dest_dir/$pif_filename.csi" ]]; then
-    log_info "PIF file $pif_filename and its index already exist in destination, skipping"
+    # log_info "PIF file $pif_filename and its index already exist in destination, skipping"
     return
   fi
 
@@ -192,13 +190,13 @@ process_liftover() {
   done
 }
 
-# Processes pairwise chain files
-process_pairwise() {
-  local pairwise_dir="$CONFIG_DIR/vs"
-  mkdir -p "$pairwise_dir"
+# Processes vs chain files
+process_vs() {
+  local vs_dir="$CONFIG_DIR/vs"
+  mkdir -p "$vs_dir"
 
   local base_url="https://hgdownload.soe.ucsc.edu/goldenPath/$ASSEMBLY"
-  log_info "Processing pairwise chains for $ASSEMBLY from $base_url"
+  # log_info "Processing vs chains for $ASSEMBLY from $base_url"
 
   # Get 'vs*' subdirectories
   local subdirs
@@ -210,7 +208,7 @@ process_pairwise() {
 
   echo "$subdirs" | while read -r subdir; do
     local subdir_url="$base_url/$subdir"
-    log_info "Processing subdirectory: $subdir"
+    # log_info "Processing subdirectory: $subdir"
 
     # Get '*.all.chain.gz' files from the subdirectory
     local files
@@ -219,7 +217,7 @@ process_pairwise() {
     echo "$files" | while read -r file; do
       [[ -n "$file" ]] || continue
       local file_url="$subdir_url/$file"
-      process_chain_file "$file_url" "$file" '\.all\.chain\.gz' "$pairwise_dir"
+      process_chain_file "$file_url" "$file" '\.all\.chain\.gz' "$vs_dir"
     done
   done
 }
@@ -232,11 +230,11 @@ process_chains() {
   liftOver)
     process_liftover
     ;;
-  pairwise)
-    process_pairwise
+  vs)
+    process_vs
     ;;
   *)
-    log_error "Invalid source '$SOURCE'. Must be 'liftOver' or 'pairwise'."
+    log_error "Invalid source '$SOURCE'. Must be 'liftOver' or 'vs'."
     ;;
   esac
 }

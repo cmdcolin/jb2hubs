@@ -1206,6 +1206,27 @@
           "indexType": "CSI"
         }
       }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "rheMac8_to_calJac3_vs",
+      "name": "rheMac8 to Marmoset (calJac3) vs",
+      "category": ["Pairwise alignments", "vs"],
+      "assemblyNames": ["rheMac8", "calJac3"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rheMac8",
+        "queryAssembly": "calJac3",
+        "pifGzLocation": {
+          "uri": "vs/rheMac8.calJac3.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "vs/rheMac8.calJac3.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ],
   "aggregateTextSearchAdapters": [

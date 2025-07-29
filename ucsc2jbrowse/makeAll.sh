@@ -86,20 +86,10 @@ log "Downloading and processing hs1 GFF..."
 ./downloadNcbiGff.sh
 
 log "Creating chain track PIFs..."
-# Process both liftOver and pairwise chains for each assembly.
-while read -r assembly_path; do
-  assembly=$(basename "$assembly_path")
-  log "Processing chains for $assembly..."
-  ./createChainTrackPifs.sh liftOver "$assembly" "$UCSC_RESULTS_DIR"
-  ./createChainTrackPifs.sh pairwise "$assembly" "$UCSC_RESULTS_DIR"
-  log "Updating chain track configs for $assembly..."
-  node src/createChainTracks.ts -a "$assembly" --source liftOver -o "$UCSC_RESULTS_DIR"
-  node src/createChainTracks.ts -a "$assembly" --source pairwise -o "$UCSC_RESULTS_DIR"
-
-done < <(find "$UCSC_DATA_DIR" -maxdepth 1 -mindepth 1 -type d)
+./makePifs.sh
 
 log "Hashing all output files for integrity checking..."
-find "$UCSC_RESULTS_DIR"/ -type f ! -name "meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel --bar ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
+find "$UCSC_RESULTS_DIR"/ -type f ! -name "*meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel --bar ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
 
 log "Copying generated config files to the local 'configs' directory..."
 fd "config.json$" "$UCSC_RESULTS_DIR"/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'

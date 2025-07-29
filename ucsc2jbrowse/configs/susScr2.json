@@ -666,6 +666,48 @@
           "indexType": "CSI"
         }
       }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "susScr2_to_bosTau4_vs",
+      "name": "susScr2 to Cow (bosTau4) vs",
+      "category": ["Pairwise alignments", "vs"],
+      "assemblyNames": ["susScr2", "bosTau4"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "susScr2",
+        "queryAssembly": "bosTau4",
+        "pifGzLocation": {
+          "uri": "vs/susScr2.bosTau4.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "vs/susScr2.bosTau4.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "susScr2_to_bosTau6_vs",
+      "name": "susScr2 to Cow (bosTau6) vs",
+      "category": ["Pairwise alignments", "vs"],
+      "assemblyNames": ["susScr2", "bosTau6"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "susScr2",
+        "queryAssembly": "bosTau6",
+        "pifGzLocation": {
+          "uri": "vs/susScr2.bosTau6.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "vs/susScr2.bosTau6.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
     }
   ]
 }
