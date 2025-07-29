@@ -24,7 +24,7 @@ interface ChainTrack {
 
 /**
  * Creates a chain track configuration object from a PIF file.
- * @param pifFile The name of the PIF file (e.g., 'hg19ToHg38.over.pif.gz').
+ * @param pifFile The name of the PIF file (e.g., 'hg19ToHg38.over.pif.gz' or 'hg19.hg38.pif.gz').
  * @param sourceAssembly The source assembly name (e.g., 'hg19').
  * @param srcDir The source directory for the PIF files (e.g., 'liftOver' or 'vs').
  * @returns A ChainTrack object or null if parsing fails.
@@ -41,11 +41,15 @@ function createChainTrackConfig({
   const filename = path.basename(pifFile)
   const filenameWithoutExt = filename.replace('.pif.gz', '')
 
-  // Example: hg19ToHg38.over
-  const match = /^(.+?)To(.+?)\.over$/.exec(filenameWithoutExt)
+  // Example: hg19ToHg38.over or hg19.hg38.all
+  let match = /^(.+?)To(.+?)\.over$/.exec(filenameWithoutExt)
   if (!match?.[1] || !match[2]) {
-    console.warn(`Warning: Could not parse filename format for ${filename}`)
-    return null
+    // Try alternative format: hg19.hg38.all
+    match = /^(.+?)\.(.+?)$/.exec(filenameWithoutExt)
+    if (!match?.[1] || !match[2]) {
+      console.warn(`Warning: Could not parse filename format for ${filename}`)
+      return null
+    }
   }
 
   const targetAssemblyOrig = match[2]
@@ -196,10 +200,6 @@ function main() {
     ...config,
     tracks: [...config.tracks, ...uniqueNewTracks],
   })
-
-  console.log(
-    `Updated ${configFile} with ${uniqueNewTracks.length} new chain tracks.`,
-  )
 }
 
 main()
