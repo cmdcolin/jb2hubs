@@ -244,7 +244,6 @@ process_chains() {
 main() {
   setup_config "$@"
   process_chains
-  log_info "Finished processing $SOURCE chains for $ASSEMBLY"
 }
 
 # Run main function with all arguments
