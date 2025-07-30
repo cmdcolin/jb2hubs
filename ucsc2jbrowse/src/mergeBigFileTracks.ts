@@ -118,7 +118,6 @@ async function addBigDataTracks(
               const samples = speciesLabels
                 ? parseSpeciesString(speciesLabels)
                 : []
-              console.log({ samples })
               return {
                 trackId,
                 name: tableName,
