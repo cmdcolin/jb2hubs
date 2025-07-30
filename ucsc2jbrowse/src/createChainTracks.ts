@@ -172,7 +172,7 @@ function main() {
     .filter(file => file.endsWith('.pif.gz'))
 
   if (pifFiles.length === 0) {
-    console.log(`No PIF files found in ${pifFilesDir}.`)
+    console.log(`No PIF files found in ${pifFilesDir}`)
     return
   }
 
