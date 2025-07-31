@@ -51,7 +51,12 @@ console.log(
           name: 'MafViewer',
           url: 'https://unpkg.com/jbrowse-plugin-mafviewer/dist/jbrowse-plugin-mafviewer.umd.production.min.js',
         },
+        {
+          name: 'Hubs',
+          url: 'https://unpkg.com/@cmdcolin/jbrowse-plugin-hubs/dist/jbrowse-plugin-hubs.umd.production.min.js',
+        },
       ],
+
       assemblies: [
         {
           name: assemblyName,
