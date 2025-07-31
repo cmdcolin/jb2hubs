@@ -6,4 +6,7 @@ rclone sync -c -v --exclude "*.hash" --exclude "*.xxh" --exclude "*meta.json" --
 
 # Invalidate the CloudFront cache for the '/hubs/*' path.
 # This ensures that users get the latest content from S3.
-# aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths "/hubs/*"
+aws cloudfront create-invalidation --distribution-id E13LGELJOT4GQO --paths "/hubs/*"
+
+# Save processed hub json, which is used for desktop
+aws s3 sync processedHubJson s3://jbrowse.org/processedHubJson/

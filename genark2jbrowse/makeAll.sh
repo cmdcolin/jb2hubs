@@ -52,7 +52,7 @@ fi
 
 echo "Downloading NCBI GFF files..."
 # Extract NCBI GFF URLs from processed JSON and download them
-cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar 'filename=$(basename "{}"); [ ! -f "gff/$filename" ] && wget -nc -q {} -P gff'
+cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j4 --bar 'filename=$(basename "{}"); [ ! -f "gff/$filename" ] && wget -nc -q {} -P gff'
 
 # --- Step 5: Process NCBI GFF Files ---
 
