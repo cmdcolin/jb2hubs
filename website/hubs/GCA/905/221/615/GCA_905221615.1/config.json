@@ -397,5 +397,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/221/615/GCA_905221615.1/bbi/GCA_905221615.1_Stri_CCMP2592.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905221615.1",
+          "loc": "CAJNDT010000001.1:1336576-1346576"
+        }
+      }
+    ]
+  }
 }

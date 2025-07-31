@@ -397,5 +397,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/010/365/825/GCA_010365825.1/bbi/GCA_010365825.1_OtuSun1.0.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_010365825.1",
+          "loc": "MU001491.1:27070272-27080272"
+        }
+      }
+    ]
+  }
 }

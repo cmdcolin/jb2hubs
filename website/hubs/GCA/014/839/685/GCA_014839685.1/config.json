@@ -461,5 +461,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/014/839/685/GCA_014839685.1/bbi/GCA_014839685.1_fAnaAna1.pri.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_014839685.1",
+          "loc": "CM026065.1:14459526-14469526"
+        }
+      }
+    ]
+  }
 }

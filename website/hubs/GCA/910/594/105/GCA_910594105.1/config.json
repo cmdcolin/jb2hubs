@@ -389,5 +389,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/910/594/105/GCA_910594105.1/bbi/GCA_910594105.1_Tae_Kariega_v1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_910594105.1",
+          "loc": "OU343178.1:288208322-288218322"
+        }
+      }
+    ]
+  }
 }

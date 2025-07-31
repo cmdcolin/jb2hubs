@@ -278,6 +278,28 @@
       "assemblyNames": ["GCF_003012345.1"]
     }
   ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCF_003012345.1",
+          "loc": "NZ_PVRV01000020.1:320994-330994"
+        }
+      }
+    ]
+  },
   "aggregateTextSearchAdapters": [
     {
       "type": "TrixTextSearchAdapter",

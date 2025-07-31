@@ -395,5 +395,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/900/519/115/GCA_900519115.1/bbi/GCA_900519115.1_Bgt_genome_v3.16.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_900519115.1",
+          "loc": "LR026992.1:6573874-6583874"
+        }
+      }
+    ]
+  }
 }

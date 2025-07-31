@@ -398,5 +398,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/902/806/625/GCA_902806625.1/bbi/GCA_902806625.1_Camarhynchus_parvulus_V1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_902806625.1",
+          "loc": "LR761570.1:50746909-50756909"
+        }
+      }
+    ]
+  }
 }

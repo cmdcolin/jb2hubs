@@ -299,5 +299,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/900/963/505/GCA_900963505.1/bbi/GCA_900963505.1_fEcheNa1.1_alternate_haplotype.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_900963505.1",
+          "loc": "CAAHFP010001388.1:3413511-3423511"
+        }
+      }
+    ]
+  }
 }

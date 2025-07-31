@@ -380,5 +380,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/900/324/465/GCA_900324465.3/bbi/GCA_900324465.3_fAnaTes1.3.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_900324465.3",
+          "loc": "LR132053.1:11428342-11438342"
+        }
+      }
+    ]
+  }
 }

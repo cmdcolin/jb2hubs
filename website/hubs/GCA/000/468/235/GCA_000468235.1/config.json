@@ -225,5 +225,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/468/235/GCA_000468235.1/bbi/GCA_000468235.1_Legionella_pneumophila_Leg01_16.windowMasker.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000468235.1",
+          "loc": "AWQT01000066.1:16166-26166"
+        }
+      }
+    ]
+  }
 }

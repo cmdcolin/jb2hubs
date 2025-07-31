@@ -547,5 +547,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/243/295/GCA_000243295.1/bbi/GCA_000243295.1_TriManLat1.0.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000243295.1",
+          "loc": "JH594607.1:15314155-15324155"
+        }
+      }
+    ]
+  }
 }

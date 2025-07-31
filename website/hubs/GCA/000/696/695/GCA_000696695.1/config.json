@@ -485,5 +485,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/696/695/GCA_000696695.1/bbi/GCA_000696695.1_Burgud.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000696695.1",
+          "loc": "KK949850.1:1429662-1439662"
+        }
+      }
+    ]
+  }
 }

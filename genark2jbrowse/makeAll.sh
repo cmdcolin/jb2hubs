@@ -16,7 +16,6 @@ echo "Processing hub JSON data..."
 node src/processHubJson.ts
 
 # --- Step 2: Fetch NCBI Metadata ---
-
 # Define function to fetch NCBI assembly metadata for a given file.
 # It checks if ncbi.json exists or if REPROCESS is set to force re-fetching.
 fetch_ncbi_data() {
@@ -34,7 +33,7 @@ fetch_ncbi_data() {
 export -f fetch_ncbi_data # Export function for use with GNU Parallel
 
 echo "Fetching NCBI metadata..."
-fd meta.json hubs | parallel -j2 --bar fetch_ncbi_data {}
+fd meta.json hubs | parallel -j4 --bar fetch_ncbi_data {}
 
 # --- Step 3: Generate JBrowse 2 Configurations ---
 
@@ -50,10 +49,21 @@ if [ -n "$REDOWNLOAD" ]; then
   mkdir -p gff
 fi
 
+# Define function to download a single NCBI GFF file.
+download_ncbi_gff() {
+  local url="$1"
+  local filename=$(basename "$url")
+  if [ ! -f "gff/$filename" ]; then
+    echo "Downloading GFF file: $filename"
+    wget -nc -q "$url" -P gff
+  fi
+}
+
+export -f download_ncbi_gff # Export function for use with GNU Parallel
+
 echo "Downloading NCBI GFF files..."
 # Extract NCBI GFF URLs from processed JSON and download them
-cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j4 --bar 'filename=$(basename "{}"); [ ! -f "gff/$filename" ] && wget -nc -q {} -P gff'
-
+cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j4 --bar download_ncbi_gff
 # --- Step 5: Process NCBI GFF Files ---
 
 # Define function to process a single GFF file.

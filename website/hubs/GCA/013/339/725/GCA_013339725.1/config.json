@@ -387,5 +387,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/013/339/725/GCA_013339725.1/bbi/GCA_013339725.1_BIME_Rmic_1.3.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_013339725.1",
+          "loc": "CM023459.1:108381400-108391400"
+        }
+      }
+    ]
+  }
 }

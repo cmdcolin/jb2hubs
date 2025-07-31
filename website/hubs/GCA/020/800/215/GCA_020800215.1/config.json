@@ -354,5 +354,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/020/800/215/GCA_020800215.1/bbi/GCA_020800215.1_PR-102_v3_p.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_020800215.1",
+          "loc": "JAICDV010000001.1:2046006-2056006"
+        }
+      }
+    ]
+  }
 }

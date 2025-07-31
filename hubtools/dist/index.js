@@ -295,6 +295,7 @@ async function generateJBrowseConfigForAssemblyHub({
     const { data } = genome
     const { twoBitPath, chromSizes, htmlPath, chromAliasBb } = data
     const genomeName = genome.name
+    const defaultPos = genome.data.defaultPos
     const shortLabel = data.description
     if (!twoBitPath) throw new Error('No twoBitPath')
     if (!chromSizes) throw new Error('No chromSizes')
@@ -342,6 +343,32 @@ async function generateJBrowseConfigForAssemblyHub({
         assemblyName: genomeName,
         sequenceAdapter,
       }),
+      ...(defaultPos
+        ? {
+            defaultSession: {
+              widgets: {
+                hierarchicalTrackSelector: {
+                  id: 'hierarchicalTrackSelector',
+                  type: 'HierarchicalTrackSelectorWidget',
+                  view: 'initialView',
+                },
+              },
+              activeWidgets: {
+                hierarchicalTrackSelector: 'hierarchicalTrackSelector',
+              },
+              views: [
+                {
+                  type: 'LinearGenomeView',
+                  id: 'initialView',
+                  init: {
+                    assembly: asm.name,
+                    loc: defaultPos,
+                  },
+                },
+              ],
+            },
+          }
+        : {}),
     }
   }
   throw new Error('not a single file hub')

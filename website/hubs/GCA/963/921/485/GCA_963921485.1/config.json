@@ -302,5 +302,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/963/921/485/GCA_963921485.1/bbi/GCA_963921485.1_norwegian_landrace.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_963921485.1",
+          "loc": "OY997208.1:96828645-96838645"
+        }
+      }
+    ]
+  }
 }

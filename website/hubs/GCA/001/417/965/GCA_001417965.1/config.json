@@ -494,5 +494,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/001/417/965/GCA_001417965.1/bbi/GCA_001417965.1_Aiptasia_genome_1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_001417965.1",
+          "loc": "LJWW01000002.1:781167-791167"
+        }
+      }
+    ]
+  }
 }

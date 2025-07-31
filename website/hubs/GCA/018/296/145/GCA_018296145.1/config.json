@@ -519,5 +519,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/018/296/145/GCA_018296145.1/bbi/GCA_018296145.1_Otsh_v2.0.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_018296145.1",
+          "loc": "CM031199.1:31933967-31943967"
+        }
+      }
+    ]
+  }
 }

@@ -339,5 +339,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/020/510/985/GCA_020510985.1/bbi/GCA_020510985.1_fPhoLeu1.pri.augustus.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_020510985.1",
+          "loc": "CM035837.1:167078695-167088695"
+        }
+      }
+    ]
+  }
 }

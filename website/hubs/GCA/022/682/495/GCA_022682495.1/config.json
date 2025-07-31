@@ -488,5 +488,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/022/682/495/GCA_022682495.1/bbi/GCA_022682495.1_HLdesRot8A.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_022682495.1",
+          "loc": "CM040288.1:70752720-70762720"
+        }
+      }
+    ]
+  }
 }

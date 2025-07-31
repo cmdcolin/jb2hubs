@@ -389,5 +389,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/964/188/415/GCA_964188415.1/bbi/GCA_964188415.1_fProPar1.1_alternate_haplotype.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_964188415.1",
+          "loc": "OZ077167.1:30206658-30216658"
+        }
+      }
+    ]
+  }
 }

@@ -325,5 +325,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/026/979/555/GCA_026979555.1/bbi/GCA_026979555.1_bVidCha1_purged_dups_haplotype.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_026979555.1",
+          "loc": "JAPVRA010001639.1:220034-230034"
+        }
+      }
+    ]
+  }
 }

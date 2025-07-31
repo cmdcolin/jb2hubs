@@ -467,5 +467,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/004/115/265/GCA_004115265.2/bbi/GCA_004115265.2_mRhiFer1_v1.p.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_004115265.2",
+          "loc": "CM014226.1:41644459-41654459"
+        }
+      }
+    ]
+  }
 }

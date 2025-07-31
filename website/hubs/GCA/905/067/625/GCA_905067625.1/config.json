@@ -355,5 +355,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/067/625/GCA_905067625.1/bbi/GCA_905067625.1_Bgtriticale_THUN12_genome_v1_2.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905067625.1",
+          "loc": "LR898476.1:6575173-6585173"
+        }
+      }
+    ]
+  }
 }

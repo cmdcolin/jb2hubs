@@ -319,5 +319,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/907/166/925/GCA_907166925.1/bbi/GCA_907166925.1_wheat_cv_fielder_v1_assembly.augustus.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_907166925.1",
+          "loc": "OU015728.1:287047042-287057042"
+        }
+      }
+    ]
+  }
 }

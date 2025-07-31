@@ -375,5 +375,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/017/916/305/GCA_017916305.1/bbi/GCA_017916305.1_LU_Lenr_1.0.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_017916305.1",
+          "loc": "CM030611.1:910072-920072"
+        }
+      }
+    ]
+  }
 }

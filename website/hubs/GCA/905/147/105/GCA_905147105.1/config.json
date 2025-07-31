@@ -496,5 +496,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/147/105/GCA_905147105.1/bbi/GCA_905147105.1_ilPieBrab1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905147105.1",
+          "loc": "LR989932.1:7862489-7872489"
+        }
+      }
+    ]
+  }
 }

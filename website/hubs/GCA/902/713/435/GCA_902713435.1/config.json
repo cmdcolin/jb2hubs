@@ -398,5 +398,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/902/713/435/GCA_902713435.1/bbi/GCA_902713435.1_fAciRut3.1_paternal_haplotype.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_902713435.1",
+          "loc": "CACTIF010000164.1:35008483-35018483"
+        }
+      }
+    ]
+  }
 }

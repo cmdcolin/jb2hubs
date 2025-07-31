@@ -400,5 +400,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/910/591/455/GCA_910591455.2/bbi/GCA_910591455.2_fPhoGun1.2.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_910591455.2",
+          "loc": "OU342804.1:10560167-10570167"
+        }
+      }
+    ]
+  }
 }

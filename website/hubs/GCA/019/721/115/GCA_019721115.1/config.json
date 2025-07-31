@@ -431,5 +431,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/019/721/115/GCA_019721115.1/bbi/GCA_019721115.1_AMEX_1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_019721115.1",
+          "loc": "CM033892.1:44657250-44667250"
+        }
+      }
+    ]
+  }
 }
