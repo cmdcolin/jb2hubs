@@ -80,6 +80,7 @@ declare function generateJBrowseConfigForAssemblyHub({
 }): Promise<{
   defaultSession?:
     | {
+        name: string
         widgets: {
           hierarchicalTrackSelector: {
             id: string

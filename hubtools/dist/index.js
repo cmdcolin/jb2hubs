@@ -346,6 +346,7 @@ async function generateJBrowseConfigForAssemblyHub({
       ...(defaultPos
         ? {
             defaultSession: {
+              name: asm.name,
               widgets: {
                 hierarchicalTrackSelector: {
                   id: 'hierarchicalTrackSelector',
