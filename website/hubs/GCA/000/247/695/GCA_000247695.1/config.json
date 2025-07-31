@@ -515,5 +515,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/247/695/GCA_000247695.1/bbi/GCA_000247695.1_HetGla_female_1.0.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000247695.1",
+          "loc": "JH602043.1:26295283-26305283"
+        }
+      }
+    ]
+  }
 }

@@ -322,5 +322,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/010/993/595/GCA_010993595.1/bbi/GCA_010993595.1_kPetMar1.alt.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_010993595.1",
+          "loc": "JAAIYF010000370.1:1041792-1051792"
+        }
+      }
+    ]
+  }
 }

@@ -366,5 +366,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/022/749/735/GCA_022749735.1/bbi/GCA_022749735.1_fSemPul1.0.a.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_022749735.1",
+          "loc": "JAKSZR010000001.1:9186307-9196307"
+        }
+      }
+    ]
+  }
 }

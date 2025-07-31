@@ -331,5 +331,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/903/995/115/GCA_903995115.1/bbi/GCA_903995115.1_Adeanei_nanopore_chromosomes.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_903995115.1",
+          "loc": "LR877145.1:500885-510885"
+        }
+      }
+    ]
+  }
 }

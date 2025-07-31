@@ -377,5 +377,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/022/674/325/GCA_022674325.1/bbi/GCA_022674325.1_ASM2267432v1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_022674325.1",
+          "loc": "CP053120.1:12306979-12316979"
+        }
+      }
+    ]
+  }
 }

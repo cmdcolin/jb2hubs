@@ -356,5 +356,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/907/165/275/GCA_907165275.1/bbi/GCA_907165275.1_ilZygFili1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_907165275.1",
+          "loc": "OU015649.1:5367164-5377164"
+        }
+      }
+    ]
+  }
 }

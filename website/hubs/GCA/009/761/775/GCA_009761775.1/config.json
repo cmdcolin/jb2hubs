@@ -346,5 +346,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/009/761/775/GCA_009761775.1/bbi/GCA_009761775.1_UNIPI_FiCari_1.0.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_009761775.1",
+          "loc": "CM019743.1:10211655-10221655"
+        }
+      }
+    ]
+  }
 }

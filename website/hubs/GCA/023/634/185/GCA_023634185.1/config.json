@@ -301,5 +301,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/023/634/185/GCA_023634185.1/bbi/GCA_023634185.1_bFalPer1.alt.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_023634185.1",
+          "loc": "JAMOAS010000076.1:2474014-2484014"
+        }
+      }
+    ]
+  }
 }

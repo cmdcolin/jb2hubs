@@ -768,5 +768,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/015/832/495/GCA_015832495.2/contrib/tiberius/tiberius.bigGenePred.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_015832495.2",
+          "loc": "JADEYB020000024.1:44556012-44566012"
+        }
+      }
+    ]
+  }
 }

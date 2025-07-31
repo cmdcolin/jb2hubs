@@ -301,5 +301,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/963/082/445/GCA_963082445.1/bbi/GCA_963082445.1_bNesMay2.1_alternate_haplotype.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_963082445.1",
+          "loc": "CAUJAQ010000214.1:3564030-3574030"
+        }
+      }
+    ]
+  }
 }

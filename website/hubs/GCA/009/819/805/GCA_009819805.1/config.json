@@ -300,5 +300,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/009/819/805/GCA_009819805.1/bbi/GCA_009819805.1_bPhoRub2.alt.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_009819805.1",
+          "loc": "WNML01001767.1:2359317-2369317"
+        }
+      }
+    ]
+  }
 }

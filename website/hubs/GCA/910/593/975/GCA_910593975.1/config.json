@@ -367,5 +367,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/910/593/975/GCA_910593975.1/bbi/GCA_910593975.1_Zm-B104-REFERENCE-CORTEVA-1.0.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_910593975.1",
+          "loc": "OU343067.1:102609017-102619017"
+        }
+      }
+    ]
+  }
 }

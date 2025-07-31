@@ -391,5 +391,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/949/987/555/GCA_949987555.1/bbi/GCA_949987555.1_fBorAnt1.1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_949987555.1",
+          "loc": "OX465204.1:20569304-20579304"
+        }
+      }
+    ]
+  }
 }

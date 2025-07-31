@@ -368,5 +368,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/030/463/565/GCA_030463565.1/bbi/GCA_030463565.1_bPelCri1.pri.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_030463565.1",
+          "loc": "CM060000.1:75976059-75986059"
+        }
+      }
+    ]
+  }
 }

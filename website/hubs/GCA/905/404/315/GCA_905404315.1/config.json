@@ -476,5 +476,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/404/315/GCA_905404315.1/bbi/GCA_905404315.1_ilLepSina1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905404315.1",
+          "loc": "FR990153.1:12184177-12194177"
+        }
+      }
+    ]
+  }
 }

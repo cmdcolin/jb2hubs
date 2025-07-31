@@ -356,5 +356,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/147/785/GCA_905147785.1/bbi/GCA_905147785.1_ilThyBati1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905147785.1",
+          "loc": "LR990485.1:5031939-5041939"
+        }
+      }
+    ]
+  }
 }

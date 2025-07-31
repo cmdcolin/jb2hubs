@@ -355,5 +355,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/147/765/GCA_905147765.2/bbi/GCA_905147765.2_ilVanAtal1.2.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905147765.2",
+          "loc": "LR990549.1:5483365-5493365"
+        }
+      }
+    ]
+  }
 }

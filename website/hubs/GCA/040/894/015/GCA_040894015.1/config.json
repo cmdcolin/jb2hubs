@@ -533,5 +533,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/040/894/015/GCA_040894015.1/bbi/GCA_040894015.1_aEngPut4.paternal.xenTro10.rbestNet.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_040894015.1",
+          "loc": "CM082094.1:101338699-101348699"
+        }
+      }
+    ]
+  }
 }

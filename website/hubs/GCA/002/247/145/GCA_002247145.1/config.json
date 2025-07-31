@@ -322,5 +322,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/002/247/145/GCA_002247145.1/bbi/GCA_002247145.1_Plurivora_assembly_v1.fn.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_002247145.1",
+          "loc": "NMPK01000001.1:98165-108165"
+        }
+      }
+    ]
+  }
 }

@@ -346,5 +346,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/012/275/275/GCA_012275275.1/bbi/GCA_012275275.1_bMelUnd1.pat.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_012275275.1",
+          "loc": "JAAVWH010000001.1:80533206-80543206"
+        }
+      }
+    ]
+  }
 }

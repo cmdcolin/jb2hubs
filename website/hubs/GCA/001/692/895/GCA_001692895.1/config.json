@@ -396,5 +396,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/001/692/895/GCA_001692895.1/bbi/GCA_001692895.1_Cenococcum_geophilum_1.58_v2.0.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_001692895.1",
+          "loc": "KV748176.1:2136158-2146158"
+        }
+      }
+    ]
+  }
 }

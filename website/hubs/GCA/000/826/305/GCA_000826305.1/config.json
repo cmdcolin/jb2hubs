@@ -365,5 +365,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/826/305/GCA_000826305.1/bbi/GCA_000826305.1_Acanthamoeba_healyi.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000826305.1",
+          "loc": "CDFA01025757.1:187908-197908"
+        }
+      }
+    ]
+  }
 }

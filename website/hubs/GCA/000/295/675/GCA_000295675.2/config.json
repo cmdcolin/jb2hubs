@@ -300,5 +300,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/295/675/GCA_000295675.2/bbi/GCA_000295675.2_oxytricha_jrb310_mac_pacbio.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000295675.2",
+          "loc": "AMCR02008082.1:22007-32007"
+        }
+      }
+    ]
+  }
 }

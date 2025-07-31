@@ -368,5 +368,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/965/113/315/GCA_965113315.1/bbi/GCA_965113315.1_rPodVau1.hap1.1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_965113315.1",
+          "loc": "OZ220363.1:47300985-47310985"
+        }
+      }
+    ]
+  }
 }

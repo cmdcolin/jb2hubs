@@ -520,5 +520,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/011/762/505/GCA_011762505.1/bbi/HLTOGAannotVsHg38v1.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_011762505.1",
+          "loc": "CM022251.1:55705521-55715521"
+        }
+      }
+    ]
+  }
 }

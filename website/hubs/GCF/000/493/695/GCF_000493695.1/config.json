@@ -492,5 +492,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/493/695/GCF_000493695.1/bbi/GCF_000493695.1_BalAcu1.0.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCF_000493695.1",
+          "loc": "NW_006724458.1:17149386-17159386"
+        }
+      }
+    ]
+  }
 }

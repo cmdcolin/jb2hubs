@@ -371,5 +371,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/028/885/525/GCA_028885525.1/bbi/GCA_028885525.1_NHGRI_mPonPyg2-v1.1-hic.freeze_alt.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_028885525.1",
+          "loc": "CM054607.1:75394437-75404437"
+        }
+      }
+    ]
+  }
 }

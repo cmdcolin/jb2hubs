@@ -444,5 +444,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/904/849/725/GCA_904849725.1/bbi/GCA_904849725.1_MorexV3_pseudomolecules_assembly.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_904849725.1",
+          "loc": "LR890097.1:221861910-221871910"
+        }
+      }
+    ]
+  }
 }

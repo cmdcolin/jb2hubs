@@ -476,5 +476,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/220/565/GCA_905220565.1/bbi/GCA_905220565.1_ilMelCinx1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905220565.1",
+          "loc": "HG992209.1:7555980-7565980"
+        }
+      }
+    ]
+  }
 }

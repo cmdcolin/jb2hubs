@@ -347,5 +347,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/009/764/475/GCA_009764475.1/bbi/GCA_009764475.1_sPriPec2.pri.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_009764475.1",
+          "loc": "CM019855.1:49989638-49999638"
+        }
+      }
+    ]
+  }
 }

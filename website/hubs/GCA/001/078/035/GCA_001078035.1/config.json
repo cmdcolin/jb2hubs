@@ -331,5 +331,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/001/078/035/GCA_001078035.1/bbi/GCA_001078035.1_ECIIIL.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_001078035.1",
+          "loc": "LFTZ01000015.1:83315-93315"
+        }
+      }
+    ]
+  }
 }

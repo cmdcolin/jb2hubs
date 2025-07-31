@@ -344,5 +344,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/048/772/825/GCA_048772825.1/bbi/GCA_048772825.1_mCalLat2.hap2.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_048772825.1",
+          "loc": "CM109864.1:70599065-70609065"
+        }
+      }
+    ]
+  }
 }

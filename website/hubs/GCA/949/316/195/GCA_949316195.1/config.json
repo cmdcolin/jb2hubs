@@ -301,5 +301,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/949/316/195/GCA_949316195.1/bbi/GCA_949316195.1_fPlaFle2.1_alternate_haplotype.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_949316195.1",
+          "loc": "CASGFX010000057.1:1776417-1786417"
+        }
+      }
+    ]
+  }
 }

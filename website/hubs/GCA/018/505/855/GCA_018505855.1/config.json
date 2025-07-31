@@ -527,5 +527,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/018/505/855/GCA_018505855.1/bbi/GCA_018505855.1_HG02055.alt.pat.f1_v2.hg38.rbestNet.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_018505855.1",
+          "loc": "JAHEPK010000017.1:39475036-39485036"
+        }
+      }
+    ]
+  }
 }

@@ -364,5 +364,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/004/024/565/GCA_004024565.1/bbi/GCA_004024565.1_ZalCal_v1_BIUU.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_004024565.1",
+          "loc": "PISZ01000001.1:491706-501706"
+        }
+      }
+    ]
+  }
 }

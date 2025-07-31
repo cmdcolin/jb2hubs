@@ -365,5 +365,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/902/148/825/GCA_902148825.1/bbi/GCA_902148825.1_fSphaOr1.1_alternate_haplotype.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_902148825.1",
+          "loc": "CABFVO010001289.1:540960-550960"
+        }
+      }
+    ]
+  }
 }

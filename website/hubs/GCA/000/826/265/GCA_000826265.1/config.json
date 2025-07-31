@@ -365,5 +365,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/826/265/GCA_000826265.1/bbi/GCA_000826265.1_Acanthamoeba_culbertsoni_genome_assembly.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000826265.1",
+          "loc": "CDFF01071297.1:52979-62979"
+        }
+      }
+    ]
+  }
 }

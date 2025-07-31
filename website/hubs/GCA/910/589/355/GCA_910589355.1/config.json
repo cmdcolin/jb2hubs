@@ -356,5 +356,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/910/589/355/GCA_910589355.1/bbi/GCA_910589355.1_ilParStra1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_910589355.1",
+          "loc": "OU342457.1:7387122-7397122"
+        }
+      }
+    ]
+  }
 }

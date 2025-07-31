@@ -409,5 +409,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/002/880/775/GCA_002880775.3/bbi/GCA_002880775.3_Susie_PABv2.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_002880775.3",
+          "loc": "CM009262.2:75971234-75981234"
+        }
+      }
+    ]
+  }
 }

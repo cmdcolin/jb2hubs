@@ -376,5 +376,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/475/445/GCA_905475445.1/bbi/GCA_905475445.1_ilOchPlec1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905475445.1",
+          "loc": "FR997721.1:9660142-9670142"
+        }
+      }
+    ]
+  }
 }

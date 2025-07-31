@@ -367,5 +367,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/030/015/355/GCA_030015355.1/bbi/GCA_030015355.1_fTriRos1.hap2.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_030015355.1",
+          "loc": "JASDDW010000001.1:27452331-27462331"
+        }
+      }
+    ]
+  }
 }

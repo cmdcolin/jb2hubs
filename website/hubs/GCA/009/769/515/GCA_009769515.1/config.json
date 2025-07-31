@@ -300,5 +300,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/009/769/515/GCA_009769515.1/bbi/GCA_009769515.1_fCycLum1.alt.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_009769515.1",
+          "loc": "WNND01000317.1:1578046-1588046"
+        }
+      }
+    ]
+  }
 }

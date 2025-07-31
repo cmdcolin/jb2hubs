@@ -356,5 +356,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/907/165/245/GCA_907165245.1/bbi/GCA_907165245.1_ilHabPyri1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_907165245.1",
+          "loc": "OU015585.1:7914097-7924097"
+        }
+      }
+    ]
+  }
 }

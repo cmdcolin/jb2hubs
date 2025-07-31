@@ -344,5 +344,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/004/026/725/GCA_004026725.1/bbi/GCA_004026725.1_OnyTor_v1_BIUU.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_004026725.1",
+          "loc": "PVIT010000001.1:124108-134108"
+        }
+      }
+    ]
+  }
 }

@@ -356,5 +356,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/147/175/GCA_905147175.1/bbi/GCA_905147175.1_ilAglUrti1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905147175.1",
+          "loc": "LR989982.1:5711244-5721244"
+        }
+      }
+    ]
+  }
 }

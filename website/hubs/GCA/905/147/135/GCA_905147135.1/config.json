@@ -376,5 +376,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/147/135/GCA_905147135.1/bbi/GCA_905147135.1_ilBlaLact1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905147135.1",
+          "loc": "LR990039.1:11810392-11820392"
+        }
+      }
+    ]
+  }
 }

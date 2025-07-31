@@ -376,5 +376,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/475/405/GCA_905475405.1/bbi/GCA_905475405.1_ilSchCost1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905475405.1",
+          "loc": "FR997825.1:9156334-9166334"
+        }
+      }
+    ]
+  }
 }

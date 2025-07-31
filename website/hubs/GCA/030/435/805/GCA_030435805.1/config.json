@@ -444,5 +444,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/030/435/805/GCA_030435805.1/bbi/GCA_030435805.1_mMusLut2.pri.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_030435805.1",
+          "loc": "CM059626.1:96701631-96711631"
+        }
+      }
+    ]
+  }
 }

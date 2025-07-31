@@ -365,5 +365,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/001/485/885/GCA_001485885.1/bbi/GCA_001485885.1_Heliconius_melpomene_aglaope.09-246.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_001485885.1",
+          "loc": "FAQM01000005.1:4403-13211"
+        }
+      }
+    ]
+  }
 }

@@ -442,5 +442,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/003/660/325/GCA_003660325.2/bbi/GCA_003660325.2_Oct15_3.7Mb_N50_Jamaican_Lion_Assembly.GCF_900626175.2.rbestNet.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_003660325.2",
+          "loc": "QVPT02000001.1:10874359-10884359"
+        }
+      }
+    ]
+  }
 }

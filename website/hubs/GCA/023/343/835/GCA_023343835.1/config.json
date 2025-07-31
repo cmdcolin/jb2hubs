@@ -420,5 +420,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/023/343/835/GCA_023343835.1/bbi/GCA_023343835.1_bLagMut1_primary.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_023343835.1",
+          "loc": "CM041476.1:64969174-64979174"
+        }
+      }
+    ]
+  }
 }

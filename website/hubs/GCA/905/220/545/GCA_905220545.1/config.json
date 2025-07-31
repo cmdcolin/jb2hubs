@@ -376,5 +376,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/905/220/545/GCA_905220545.1/bbi/GCA_905220545.1_ilMelAtha1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_905220545.1",
+          "loc": "HG992176.1:8744623-8754623"
+        }
+      }
+    ]
+  }
 }

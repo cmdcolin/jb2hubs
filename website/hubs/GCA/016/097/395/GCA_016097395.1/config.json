@@ -302,5 +302,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/016/097/395/GCA_016097395.1/bbi/GCA_016097395.1_Ncaninum_LIV.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_016097395.1",
+          "loc": "CM027897.1:3621610-3631610"
+        }
+      }
+    ]
+  }
 }

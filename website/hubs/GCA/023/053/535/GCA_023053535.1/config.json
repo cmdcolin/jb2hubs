@@ -323,5 +323,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/023/053/535/GCA_023053535.1/bbi/GCA_023053535.1_dmAquExim1.0.a.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_023053535.1",
+          "loc": "JALIGV010000001.1:15110390-15120390"
+        }
+      }
+    ]
+  }
 }

@@ -78,6 +78,28 @@ declare function generateJBrowseConfigForAssemblyHub({
   hubFileText: string
   trackDbUrl: string
 }): Promise<{
+  defaultSession?:
+    | {
+        widgets: {
+          hierarchicalTrackSelector: {
+            id: string
+            type: string
+            view: string
+          }
+        }
+        activeWidgets: {
+          hierarchicalTrackSelector: string
+        }
+        views: {
+          type: string
+          id: string
+          init: {
+            assembly: string
+            loc: string
+          }
+        }[]
+      }
+    | undefined
   assemblies: {
     refNameAliases?:
       | {

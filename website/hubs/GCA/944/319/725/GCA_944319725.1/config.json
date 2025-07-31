@@ -344,5 +344,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/944/319/725/GCA_944319725.1/bbi/GCA_944319725.1_Naked_mole-rat_paternal.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_944319725.1",
+          "loc": "OX090970.1:48601808-48611808"
+        }
+      }
+    ]
+  }
 }

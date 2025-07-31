@@ -464,5 +464,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/026/419/915/GCA_026419915.1/bbi/GCA_026419915.1_bHarHar1_primary_haplotype.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_026419915.1",
+          "loc": "CM048743.1:39017199-39027199"
+        }
+      }
+    ]
+  }
 }

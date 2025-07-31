@@ -391,5 +391,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/048/126/745/GCA_048126745.1/bbi/GCA_048126745.1_DamDam1_v1.mat.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_048126745.1",
+          "loc": "CM106756.1:48923970-48933970"
+        }
+      }
+    ]
+  }
 }

@@ -547,5 +547,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/365/465/GCA_000365465.3/bbi/GCA_000365465.3_Ptep_3.0.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000365465.3",
+          "loc": "ML633212.1:2534752-2544752"
+        }
+      }
+    ]
+  }
 }

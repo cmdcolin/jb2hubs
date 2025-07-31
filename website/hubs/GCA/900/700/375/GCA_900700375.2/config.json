@@ -379,5 +379,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/900/700/375/GCA_900700375.2/bbi/GCA_900700375.2_fDenClu1.2.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_900700375.2",
+          "loc": "LR535813.1:14057159-14067159"
+        }
+      }
+    ]
+  }
 }

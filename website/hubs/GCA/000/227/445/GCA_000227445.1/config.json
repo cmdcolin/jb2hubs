@@ -280,5 +280,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/227/445/GCA_000227445.1/bbi/GCA_000227445.1_Legassy_V2.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000227445.1",
+          "loc": "AFSA01000001.1:9609-19609"
+        }
+      }
+    ]
+  }
 }

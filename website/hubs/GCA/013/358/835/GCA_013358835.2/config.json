@@ -377,5 +377,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/013/358/835/GCA_013358835.2/bbi/GCA_013358835.2_BIME_Iper_1.3.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_013358835.2",
+          "loc": "JABSTQ010010963.1:1634281-1644281"
+        }
+      }
+    ]
+  }
 }

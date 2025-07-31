@@ -443,5 +443,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/910/596/095/GCA_910596095.1/bbi/GCA_910596095.1_fThuMac1.1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_910596095.1",
+          "loc": "OU343191.1:13667582-13677582"
+        }
+      }
+    ]
+  }
 }

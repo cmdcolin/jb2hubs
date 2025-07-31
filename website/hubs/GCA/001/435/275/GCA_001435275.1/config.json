@@ -278,5 +278,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/001/435/275/GCA_001435275.1/bbi/GCA_001435275.1_ASM143527v1.allGaps.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_001435275.1",
+          "loc": "AZGG01000001.1:77518-87518"
+        }
+      }
+    ]
+  }
 }

@@ -325,5 +325,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/019/802/505/GCA_019802505.1/bbi/GCA_019802505.1_Lin1PacBio.ctg.fa.r3p3_pilon_3_oneline.fasta.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_019802505.1",
+          "loc": "JAFMOC010000007.1:5222337-5232337"
+        }
+      }
+    ]
+  }
 }

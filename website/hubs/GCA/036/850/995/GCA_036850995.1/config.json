@@ -391,5 +391,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/036/850/995/GCA_036850995.1/bbi/GCA_036850995.1_mSacLep1_pri_phased_curated.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_036850995.1",
+          "loc": "CM072134.1:130912170-130922170"
+        }
+      }
+    ]
+  }
 }

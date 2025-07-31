@@ -343,5 +343,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/001/687/265/GCA_001687265.1/bbi/GCA_001687265.1_Brassica_juncea_var_tumida_T84-66_v1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_001687265.1",
+          "loc": "CM007197.1:27855702-27865702"
+        }
+      }
+    ]
+  }
 }

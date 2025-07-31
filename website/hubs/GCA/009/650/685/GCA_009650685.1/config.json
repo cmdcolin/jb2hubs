@@ -332,5 +332,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/009/650/685/GCA_009650685.1/bbi/GCA_009650685.1_Cryp_gatt_MF34.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_009650685.1",
+          "loc": "CM018871.1:734760-744760"
+        }
+      }
+    ]
+  }
 }

@@ -367,5 +367,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/030/448/965/GCA_030448965.1/bbi/GCA_030448965.1_fSalBra1.hap1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_030448965.1",
+          "loc": "JASKUO010000001.1:33979561-33989561"
+        }
+      }
+    ]
+  }
 }

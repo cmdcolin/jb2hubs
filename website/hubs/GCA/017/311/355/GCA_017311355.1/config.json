@@ -281,5 +281,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/017/311/355/GCA_017311355.1/bbi/GCA_017311355.1_CVASU_Gayal_001.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_017311355.1",
+          "loc": "JAFDUV010215364.1:63625-73625"
+        }
+      }
+    ]
+  }
 }

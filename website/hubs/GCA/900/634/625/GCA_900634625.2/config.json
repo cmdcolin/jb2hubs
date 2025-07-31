@@ -379,5 +379,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/900/634/625/GCA_900634625.2/bbi/GCA_900634625.2_fParRan2.2.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_900634625.2",
+          "loc": "LR131970.1:15567974-15577974"
+        }
+      }
+    ]
+  }
 }

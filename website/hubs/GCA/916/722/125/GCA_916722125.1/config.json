@@ -332,5 +332,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/916/722/125/GCA_916722125.1/bbi/GCA_916722125.1_LMJFC_annotationDEFINITIVO.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_916722125.1",
+          "loc": "OU755570.1:916000-926000"
+        }
+      }
+    ]
+  }
 }

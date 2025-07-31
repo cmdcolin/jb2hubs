@@ -494,5 +494,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/902/500/255/GCA_902500255.1/bbi/GCA_902500255.1_fThaAma1.1.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_902500255.1",
+          "loc": "LR722966.1:58487653-58497653"
+        }
+      }
+    ]
+  }
 }

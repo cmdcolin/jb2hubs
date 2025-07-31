@@ -353,5 +353,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/900/029/915/GCA_900029915.1/bbi/GCA_900029915.1_F._proliferatum_NRRL62905_version_1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_900029915.1",
+          "loc": "FCQG01000001.1:746231-756231"
+        }
+      }
+    ]
+  }
 }

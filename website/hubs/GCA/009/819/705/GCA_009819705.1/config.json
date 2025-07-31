@@ -475,5 +475,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/009/819/705/GCA_009819705.1/bbi/GCA_009819705.1_fHipHip1.pri.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_009819705.1",
+          "loc": "CM020192.1:10891862-10901862"
+        }
+      }
+    ]
+  }
 }

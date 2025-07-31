@@ -496,5 +496,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/017/976/425/GCA_017976425.1/bbi/GCA_017976425.1_fToxJac2.pri.ensGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_017976425.1",
+          "loc": "CM030680.1:10954048-10964048"
+        }
+      }
+    ]
+  }
 }

@@ -342,5 +342,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/001/443/585/GCA_001443585.1/bbi/GCA_001443585.1_aciJub1.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_001443585.1",
+          "loc": "LLWD01000124.1:4348689-4358689"
+        }
+      }
+    ]
+  }
 }

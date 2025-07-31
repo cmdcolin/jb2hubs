@@ -332,5 +332,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/948/099/385/GCA_948099385.2/bbi/GCA_948099385.2_Fh240107Braker.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_948099385.2",
+          "loc": "CANUEZ050000047.1:18918346-18928346"
+        }
+      }
+    ]
+  }
 }

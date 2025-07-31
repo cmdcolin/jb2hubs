@@ -345,5 +345,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/000/438/535/GCA_000438535.1/bbi/GCA_000438535.1_LeiAma1.0.xenoRefGene.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_000438535.1",
+          "loc": "KE391414.1:57106-67106"
+        }
+      }
+    ]
+  }
 }

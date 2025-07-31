@@ -298,5 +298,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCA/900/103/655/GCA_900103655.1/bbi/GCA_900103655.1_IMG-taxon_2597490363_annotated_assembly.allGaps.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "GCA_900103655.1",
+          "loc": "FMXC01000001.1:78685-88685"
+        }
+      }
+    ]
+  }
 }
