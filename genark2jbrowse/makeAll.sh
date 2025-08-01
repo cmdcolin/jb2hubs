@@ -33,7 +33,7 @@ fetch_ncbi_data() {
 export -f fetch_ncbi_data # Export function for use with GNU Parallel
 
 echo "Fetching NCBI metadata..."
-fd meta.json hubs | parallel -j4 --bar fetch_ncbi_data {}
+fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
 
 # --- Step 3: Generate JBrowse 2 Configurations ---
 
@@ -63,7 +63,7 @@ export -f download_ncbi_gff # Export function for use with GNU Parallel
 
 echo "Downloading NCBI GFF files..."
 # Extract NCBI GFF URLs from processed JSON and download them
-cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j4 --bar download_ncbi_gff
+cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar download_ncbi_gff
 # --- Step 5: Process NCBI GFF Files ---
 
 # Define function to process a single GFF file.
