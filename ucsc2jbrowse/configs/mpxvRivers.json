@@ -302,5 +302,28 @@
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/mpxvRivers/bbi/GCF_014621545.1_ASM1462154v1.windowMasker.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "name": "mpxvRivers",
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "mpxvRivers",
+          "loc": "NC_063383.1:65,736-75,736"
+        }
+      }
+    ]
+  }
 }

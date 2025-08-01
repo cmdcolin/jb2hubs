@@ -14672,5 +14672,28 @@
         "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hs1/sgdpCopyNumber/GRCh38_kmer_wssd.bb"
       }
     }
-  ]
+  ],
+  "defaultSession": {
+    "name": "hs1",
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "initialView"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    },
+    "views": [
+      {
+        "type": "LinearGenomeView",
+        "id": "initialView",
+        "init": {
+          "assembly": "hs1",
+          "loc": "chr9:145458455-145495201"
+        }
+      }
+    ]
+  }
 }
