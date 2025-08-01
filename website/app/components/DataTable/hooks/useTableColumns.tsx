@@ -5,11 +5,11 @@ import { createColumnHelper } from '@tanstack/react-table'
 
 import OrangeStar from '../../OrangeStar.tsx'
 import RedX from '../../RedX.tsx'
+import { StyledLink } from '../../ui/Link.tsx'
 import { statusOrder } from '../utils.ts'
 
 import type { AssemblyData } from '../../util.ts'
 import type { Row } from '@tanstack/react-table'
-import { StyledLink } from '../../ui/Link.tsx'
 
 export function useTableColumns() {
   const columnHelper = createColumnHelper<NonNullable<AssemblyData>>()

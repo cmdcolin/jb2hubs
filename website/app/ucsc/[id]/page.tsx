@@ -1,13 +1,9 @@
-import path from 'path'
-
 import { Metadata } from 'next'
-import slugify from 'slugify'
 
+import Container from '../../components/Container.tsx'
 import { StyledLink } from '../../components/ui/Link.tsx'
 import { LI, UL } from '../../components/ui/List.tsx'
 import { H1, H2, H4 } from '../../components/ui/Typography.tsx'
-import Container from '../../components/Container.tsx'
-
 import list from '../list.json'
 
 export async function generateMetadata({
@@ -81,7 +77,7 @@ export default async function Page({
   )
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   return Object.keys(list.ucscGenomes).map(id => ({
     id,
   }))

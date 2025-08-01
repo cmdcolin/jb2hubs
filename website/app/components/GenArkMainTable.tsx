@@ -1,5 +1,6 @@
 import { hubCategories } from 'hubtools'
-import { StyledLink } from './ui/Link'
+
+import { StyledLink } from './ui/Link.tsx'
 
 export default function GenArkMainTable() {
   return (
