@@ -23,7 +23,7 @@ function parseSpeciesString(str: string) {
   while ((match = regex.exec(str)) !== null) {
     result.push({
       id: match[1],
-      label: match[2] || match[1],
+      label: match[2] ?? match[1],
     })
   }
 

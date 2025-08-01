@@ -4367,7 +4367,7 @@ rimraf@^6.0.1:
     glob "^11.0.0"
     package-json-from-dist "^1.0.0"
 
-rolldown-plugin-dts@^0.14.0:
+rolldown-plugin-dts@^0.14.3:
   version "0.14.3"
   resolved "https://registry.yarnpkg.com/rolldown-plugin-dts/-/rolldown-plugin-dts-0.14.3.tgz#132cd9bd689558c7826c446101a3af62e065b0c2"
   integrity sha512-LsUPsPV2XpACe5wikxQzYBD0qg4nyxwUkLos5oF8v8qVO9jPpH6GRg2S5ZUELFry04Ab58C9Tibbi7dEbVLp2w==
@@ -4381,7 +4381,7 @@ rolldown-plugin-dts@^0.14.0:
     dts-resolver "^2.1.1"
     get-tsconfig "^4.10.1"
 
-rolldown@^1.0.0-beta.28:
+rolldown@^1.0.0-beta.30:
   version "1.0.0-beta.30"
   resolved "https://registry.yarnpkg.com/rolldown/-/rolldown-1.0.0-beta.30.tgz#8cc51550098bfeb832bbcdc3e2d9b43446586488"
   integrity sha512-H/LmDTUPlm65hWOTjXvd1k0qrGinNi8LrG3JsHVm6Oit7STg0upBmgoG5PZUHbAnGTHr0MLoLyzjmH261lIqSg==
@@ -4916,6 +4916,11 @@ tr46@^5.1.0:
   dependencies:
     punycode "^2.3.1"
 
+tree-kill@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/tree-kill/-/tree-kill-1.2.2.tgz#4ca09a9092c88b73a7cdc5e8a01b507b0790a0cc"
+  integrity sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==
+
 trim-lines@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/trim-lines/-/trim-lines-3.0.1.tgz#d802e332a07df861c48802c04321017b1bd87338"
@@ -4949,9 +4954,9 @@ tsconfig-paths@^3.15.0:
     strip-bom "^3.0.0"
 
 tsdown@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/tsdown/-/tsdown-0.13.0.tgz#c58ea828e3b3d06e052ce33b6acee9f3409f626e"
-  integrity sha512-+1ZqbLIYDAiNxtAvq9RsTg55PRvaMxGmtvRFBW2J+i4GfDKiyHAkxez1eB3EPvHG1Z917nsf2madsSeblJS3GA==
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/tsdown/-/tsdown-0.13.1.tgz#fd6d88333d6b8515c24637478f4a6fc6a1e60938"
+  integrity sha512-+rdxvqZvRKh+OwuupdQmJ2XAM31gLsdqcoo1O3aIlaD+MEXw5OaCRaCalg5wA+0nNk97f0GJliGZyUi0QlcCmQ==
   dependencies:
     ansis "^4.1.0"
     cac "^6.7.14"
@@ -4960,11 +4965,12 @@ tsdown@^0.13.0:
     diff "^8.0.2"
     empathic "^2.0.0"
     hookable "^5.5.3"
-    rolldown "^1.0.0-beta.28"
-    rolldown-plugin-dts "^0.14.0"
+    rolldown "^1.0.0-beta.30"
+    rolldown-plugin-dts "^0.14.3"
     semver "^7.7.2"
     tinyexec "^1.0.1"
     tinyglobby "^0.2.14"
+    tree-kill "^1.2.2"
     unconfig "^7.3.2"
 
 tslib@^2.1.0, tslib@^2.4.0, tslib@^2.8.0:
