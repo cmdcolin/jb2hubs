@@ -12,6 +12,7 @@ https://jbrowse.org/jb2hubs
 - fdfind aka fd
 - node.js, yarn, and npm install -g @jbrowse/cli
 - rclone
+- ncbi "datasets" cli
 
 ## Preparing GenArk hubs
 
