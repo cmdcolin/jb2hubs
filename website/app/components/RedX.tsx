@@ -1,5 +1,6 @@
 import { X } from 'lucide-react'
+import styles from './RedX.module.css'
 
 export default function RedX() {
-  return <X stroke="red" className="w-[1em] h-[1em] inline" />
+  return <X stroke="red" className={styles.redX} />
 }
