@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "fd html out| parallel \"node createReproducibleHtml.js {} {}\"",
     "start": "next start",
     "lint": "next lint",
     "deploy": "rclone sync -c -v out jbrowse-data:jbrowse.org/jb2hubs/",
