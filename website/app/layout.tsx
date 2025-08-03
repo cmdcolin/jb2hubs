@@ -4,6 +4,7 @@ import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import Header from './components/Header.tsx'
 
 import type { Metadata } from 'next'
+import './global.css'
 
 export const metadata: Metadata = {
   title: 'JBrowse 2 genome browser hubs',

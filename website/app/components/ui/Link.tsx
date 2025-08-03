@@ -1,5 +1,7 @@
 import { ReactNode } from 'react'
+
 import Link from 'next/link'
+
 import styles from './Link.module.css'
 
 interface StyledLinkProps {

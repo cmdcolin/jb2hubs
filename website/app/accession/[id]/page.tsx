@@ -3,13 +3,13 @@ import path from 'path'
 import { Metadata } from 'next'
 import slugify from 'slugify'
 
+import styles from './page.module.css'
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
 import Container from '../../components/Container.tsx'
 import { StyledLink } from '../../components/ui/Link.tsx'
 import { LI, UL } from '../../components/ui/List.tsx'
 import { H1, H2, H4 } from '../../components/ui/Typography.tsx'
 import { tryAndReadText } from '../../components/util.ts'
-import styles from './page.module.css'
 
 export async function generateMetadata({
   params,
@@ -124,7 +124,7 @@ export default async function Page({
   )
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const posts = getAllAccessions()
   return posts.map(post => ({
     id: post.id,

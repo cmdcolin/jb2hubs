@@ -1,7 +1,7 @@
+import styles from './page.module.css'
 import Container from '../components/Container.tsx'
 import { StyledLink } from '../components/ui/Link.tsx'
 import { DD, DL, DT, H1, H2, Italic, P } from '../components/ui/Typography.tsx'
-import styles from './page.module.css'
 
 export default function About() {
   return (

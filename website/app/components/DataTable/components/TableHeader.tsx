@@ -1,5 +1,6 @@
 'use client'
 import { flexRender } from '@tanstack/react-table'
+
 import styles from './TableHeader.module.css'
 
 import type { AssemblyData } from '../../util'

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+
 import styles from './Typography.module.css'
 
 interface HeadingProps {
@@ -40,10 +41,7 @@ interface DescriptionListProps {
   className?: string
 }
 
-export function DL({
-  children,
-  className = '',
-}: DescriptionListProps) {
+export function DL({ children, className = '' }: DescriptionListProps) {
   return <dl className={`${styles.dl} ${className}`}>{children}</dl>
 }
 

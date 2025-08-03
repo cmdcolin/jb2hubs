@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+
 import styles from './Table.module.css'
 
 interface TableProps {
@@ -11,7 +12,9 @@ export function Table({ children, className = '' }: TableProps) {
 }
 
 export function TableHeader({ children, className = '' }: TableProps) {
-  return <thead className={`${styles.tableHeader} ${className}`}>{children}</thead>
+  return (
+    <thead className={`${styles.tableHeader} ${className}`}>{children}</thead>
+  )
 }
 
 export function TableBody({ children, className = '' }: TableProps) {
