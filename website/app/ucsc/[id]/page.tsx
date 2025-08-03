@@ -31,13 +31,13 @@ export default async function Page({
         <H1>{ret.scientificName}</H1>
 
         <div>
-          <H4>Description:</H4> {ret.description}
+          <b>Description:</b> {ret.description}
         </div>
         <div>
-          <H4>Assembly name:</H4> {id}
+          <b>Assembly name:</b> {id}
         </div>
         <div>
-          <H4>Common name:</H4> {ret.organism}
+          <b>Common name:</b> {ret.organism}
         </div>
       </div>
 

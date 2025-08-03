@@ -9,14 +9,6 @@ import './global.css'
 export const metadata: Metadata = {
   title: 'JBrowse 2 genome browser hubs',
   description: 'JBrowse 2 genome browser hubs',
-  icons: {
-    icon: [
-      {
-        url: '/jb2hubs/favicon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-  },
 }
 const roboto = Roboto({
   subsets: ['latin'],
