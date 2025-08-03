@@ -1,4 +1,4 @@
-import { readFile } from 'fs/promises'
+import fs from 'fs'
 
 import { parseAssemblyEntry } from 'hubtools'
 
@@ -8,8 +8,9 @@ function notEmpty<T>(value: T | null | undefined): value is T {
   return value !== null && value !== undefined
 }
 
-export async function readJSON<T>(f: string) {
-  return JSON.parse(await readFile(f, 'utf8')) as T
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
+export function readJSON<T>(f: string) {
+  return JSON.parse(fs.readFileSync(f, 'utf8')) as T
 }
 
 export async function tryAndReadJSON<T>(f: string) {
@@ -20,9 +21,9 @@ export async function tryAndReadJSON<T>(f: string) {
   }
 }
 
-export async function tryAndReadText(f: string) {
+export function tryAndReadText(f: string) {
   try {
-    return await readFile(f, 'utf8')
+    return fs.readFileSync(f, 'utf8')
   } catch (e) {
     return undefined
   }

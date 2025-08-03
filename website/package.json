@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "fd html out| parallel \"node createReproducibleHtml.js {} {}\"",
     "start": "next start",
     "lint": "next lint",
     "deploy": "rclone sync -c -v out jbrowse-data:jbrowse.org/jb2hubs/",
@@ -12,25 +13,15 @@
     "predeploy": "yarn build"
   },
   "dependencies": {
-    "@biomejs/biome": "^2.0.5",
     "@gmod/ucsc-hub": "^2.0.1",
-    "@jbrowse/core": "^3.6.3",
-    "@tailwindcss/postcss": "^4.1.10",
     "@tanstack/react-table": "^8.21.3",
-    "eslint": "^9.29.0",
-    "eslint-config-next": "^15.3.0",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-unicorn": "^60.0.0",
-    "gh-pages": "^6.3.0",
     "hubtools": "^1.0.0",
     "jsdom": "^26.1.0",
     "lucide-react": "^0.532.0",
-    "next": "^15.4.1",
+    "modern-normalize": "^3.0.1",
+    "next": "next",
     "nuqs": "^2.4.3",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-markdown": "^10.1.0",
-    "style-to-js": "^1.1.17",
-    "tailwindcss": "^4.1.10"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }

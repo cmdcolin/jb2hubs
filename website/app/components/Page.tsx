@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 
 import path from 'path'
 
-import Container from './Container.tsx'
+import Container2 from './Container2.tsx'
 import DataTable from './DataTable.tsx'
 import { H1 } from './ui/Typography.tsx'
 import { readJSON } from './util.ts'
@@ -19,17 +19,15 @@ export default async function Page({
   raw: string
 }) {
   return (
-    <Container className="w-7/8">
+    <Container2>
       <H1>GenArk hubs - {title}</H1>
       <Suspense>
         <DataTable
-          rows={(
-            await readJSON<Assemblies>(
-              path.join(process.cwd(), 'processedHubJson', `${raw}.json`),
-            )
+          rows={readJSON<Assemblies>(
+            path.join(process.cwd(), 'processedHubJson', `${raw}.json`),
           ).filter(f => !!f)}
         />
       </Suspense>
-    </Container>
+    </Container2>
   )
 }

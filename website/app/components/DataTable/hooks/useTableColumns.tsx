@@ -7,6 +7,7 @@ import OrangeStar from '../../OrangeStar.tsx'
 import RedX from '../../RedX.tsx'
 import { StyledLink } from '../../ui/Link.tsx'
 import { statusOrder } from '../utils.ts'
+import styles from './useTableColumns.module.css'
 
 import type { AssemblyData } from '../../util.ts'
 import type { Row } from '@tanstack/react-table'
@@ -19,8 +20,8 @@ export function useTableColumns() {
       columnHelper.accessor('commonName', {
         header: () => (
           <div>
-            <div className="float-left">Common Name</div>
-            <div className="float-right">
+            <div className={styles.floatLeft}>Common Name</div>
+            <div className={styles.floatRight}>
               <div>
                 <OrangeStar /> == &quot;designated reference&quot;
               </div>
@@ -57,7 +58,7 @@ export function useTableColumns() {
         header: 'Assembly status',
         enableSorting: true,
         cell: info => (
-          <div className="whitespace-nowrap">{info.getValue()}</div>
+          <div className={styles.whitespaceNowrap}>{info.getValue()}</div>
         ),
         sortingFn: (
           rowA: Row<NonNullable<AssemblyData>>,
@@ -74,11 +75,7 @@ export function useTableColumns() {
           return a - b
         },
       }),
-      columnHelper.accessor('submitterOrg', {
-        header: 'Submitter',
-        enableSorting: false,
-        meta: { extra: true },
-      }),
+
       columnHelper.accessor('seqReleaseDate', {
         header: 'Release date',
         cell: info => info.getValue().replace('00:00', ''),
@@ -106,6 +103,11 @@ export function useTableColumns() {
           </a>
         ),
         enableSorting: true,
+        meta: { extra: true },
+      }),
+      columnHelper.accessor('submitterOrg', {
+        header: 'Submitter',
+        enableSorting: false,
         meta: { extra: true },
       }),
     ],

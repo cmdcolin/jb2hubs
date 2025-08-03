@@ -1,7 +1,7 @@
 import Breadcrumbs from './Breadcrumbs.tsx'
-import styles from './Container.module.css'
+import styles from './Container2.module.css'
 
-export default function Container({
+export default function Container2({
   children,
   className,
 }: {

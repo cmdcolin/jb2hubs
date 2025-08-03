@@ -1,3 +1,4 @@
+import styles from './page.module.css'
 import Container from '../components/Container.tsx'
 import { StyledLink } from '../components/ui/Link.tsx'
 import { DD, DL, DT, H1, H2, Italic, P } from '../components/ui/Typography.tsx'
@@ -87,7 +88,7 @@ export default function About() {
           https://genome.ucsc.edu/license/ for more info.
         </P>
       </div>
-      <div className="mt-20">
+      <div className={styles.contact}>
         Feel free to contact or report issues to{' '}
         <StyledLink href="https://github.com/cmdcolin/jb2hubs/">
           Github

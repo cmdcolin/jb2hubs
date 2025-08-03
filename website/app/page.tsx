@@ -76,7 +76,7 @@ export default function Home() {
               })}
           </TableBody>
         </Table>
-        <P>
+        <>
           <UL>
             <LI>
               <StyledLink href="/ucsc">Click here</StyledLink> for a more
@@ -97,7 +97,7 @@ export default function Home() {
             </StyledLink>
             .
           </P>
-        </P>
+        </>
       </div>
 
       <div>

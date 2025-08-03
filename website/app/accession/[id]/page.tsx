@@ -3,6 +3,7 @@ import path from 'path'
 import { Metadata } from 'next'
 import slugify from 'slugify'
 
+import styles from './page.module.css'
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
 import Container from '../../components/Container.tsx'
 import { StyledLink } from '../../components/ui/Link.tsx'
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>
 }): Promise<Metadata> {
   const { id } = await params
-  const ret = await getAccessionById(id)
+  const ret = getAccessionById(id)
   if (!ret) {
     throw new Error(`${id} not found`)
   }
@@ -31,7 +32,7 @@ export default async function Page({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  const ret = await getAccessionById(id)
+  const ret = getAccessionById(id)
   if (!ret) {
     throw new Error('accession not found')
   }
@@ -43,26 +44,26 @@ export default async function Page({
     slugify(scientificName),
   )
 
-  const val = await tryAndReadText(imgBase + '.txt')
-  const source = await tryAndReadText(imgBase + '_page.txt')
+  const val = tryAndReadText(imgBase + '.txt')
+  const source = tryAndReadText(imgBase + '_page.txt')
   return (
     <Container>
-      <div className="relative">
+      <div className={styles.relative}>
         <H1>{scientificName}</H1>
         <div>
-          <H4>Accession:</H4> {ret.accession}
+          <b>Accession:</b> {ret.accession}
         </div>
         <div>
-          <H4>Assembly name:</H4> {ret.ncbiAssemblyName}
+          <b>Assembly name:</b> {ret.ncbiAssemblyName}
         </div>
         <div>
-          <H4>Common name:</H4> {ret.commonName}
+          <b>Common name:</b> {ret.commonName}
         </div>
 
         {val ? (
-          <div className="float-right ml-6 mb-4 max-w-xs">
-            <figure className="m-0">
-              <img src={val} className="max-w-full" />
+          <div className={styles.imageContainer}>
+            <figure className={styles.figure}>
+              <img src={val} className={styles.image} />
               <figcaption>
                 {source ? (
                   <StyledLink href={source}>(source)</StyledLink>
@@ -79,16 +80,18 @@ export default async function Page({
         <H2>Genome browsers</H2>
         <UL>
           <LI>
-            <StyledLink href={ret.jbrowseLink}>JBrowse </StyledLink>
+            <StyledLink href={ret.jbrowseLink}>JBrowse</StyledLink>
           </LI>
           <LI>
             <StyledLink href={ret.igvBrowserLink}>IGV.js</StyledLink>
           </LI>
           <LI>
-            <StyledLink href={ret.ncbiBrowserLink}>NCBI GDV</StyledLink>
+            <StyledLink href={ret.ncbiBrowserLink}>
+              NCBI browser (GDV)
+            </StyledLink>
           </LI>
           <LI>
-            <StyledLink href={ret.ucscBrowserLink}>UCSC</StyledLink>
+            <StyledLink href={ret.ucscBrowserLink}>UCSC browser</StyledLink>
           </LI>
         </UL>
       </div>
@@ -96,7 +99,7 @@ export default async function Page({
         <H2>Portals/data downloads</H2>
         <UL>
           <LI>
-            <StyledLink href={ret.ucscDataLink}>UCSC hub folder</StyledLink>
+            <StyledLink href={ret.ucscDataLink}>UCSC data folder</StyledLink>
           </LI>
           <LI>
             <StyledLink href={ret.ncbiLink}>NCBI assembly page</StyledLink>
@@ -105,7 +108,7 @@ export default async function Page({
             <StyledLink
               href={`https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${ret.taxonId}/`}
             >
-              NCBI datasets taxonomy page
+              NCBI taxonomy page
             </StyledLink>
           </LI>
           <LI>
@@ -121,8 +124,8 @@ export default async function Page({
   )
 }
 
-export async function generateStaticParams() {
-  const posts = await getAllAccessions()
+export function generateStaticParams() {
+  const posts = getAllAccessions()
   return posts.map(post => ({
     id: post.id,
   }))

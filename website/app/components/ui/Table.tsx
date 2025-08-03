@@ -1,25 +1,19 @@
 import { ReactNode } from 'react'
 
+import styles from './Table.module.css'
+
 interface TableProps {
   children: ReactNode
   className?: string
 }
 
 export function Table({ children, className = '' }: TableProps) {
-  return (
-    <table
-      className={`border-collapse border border-gray-300 dark:border-gray-600 ${className}`}
-    >
-      {children}
-    </table>
-  )
+  return <table className={`${styles.table} ${className}`}>{children}</table>
 }
 
 export function TableHeader({ children, className = '' }: TableProps) {
   return (
-    <thead className={`bg-gray-50 dark:bg-gray-800 ${className}`}>
-      {children}
-    </thead>
+    <thead className={`${styles.tableHeader} ${className}`}>{children}</thead>
   )
 }
 
@@ -28,13 +22,7 @@ export function TableBody({ children, className = '' }: TableProps) {
 }
 
 export function TableRow({ children, className = '' }: TableProps) {
-  return (
-    <tr
-      className={`hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors ${className}`}
-    >
-      {children}
-    </tr>
-  )
+  return <tr className={`${styles.tableRow} ${className}`}>{children}</tr>
 }
 
 export function TableHeaderCell({
@@ -43,21 +31,12 @@ export function TableHeaderCell({
   onClick,
 }: TableProps & { onClick?: (event: unknown) => void }) {
   return (
-    <th
-      onClick={onClick}
-      className={`border border-gray-300 dark:border-gray-600 px-2 py-1 text-left font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 ${className}`}
-    >
+    <th onClick={onClick} className={`${styles.tableHeaderCell} ${className}`}>
       {children}
     </th>
   )
 }
 
 export function TableCell({ children, className = '' }: TableProps) {
-  return (
-    <td
-      className={`border border-gray-300 dark:border-gray-600 px-2 py-1 text-gray-900 dark:text-gray-100 ${className}`}
-    >
-      {children}
-    </td>
-  )
+  return <td className={`${styles.tableCell} ${className}`}>{children}</td>
 }

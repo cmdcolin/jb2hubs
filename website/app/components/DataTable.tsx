@@ -17,18 +17,13 @@ import type { AssemblyData } from './util'
 
 import './table.css'
 
-/**
- * DataTable component displays genome assembly data in a sortable, filterable table
- */
 export default function DataTable({ rows }: { rows: AssemblyData[] }) {
-  // Custom hooks for table functionality
   const { filterOption, setFilterOption, filteredRows } = useTableFilter(rows)
   const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } =
     useTableSort()
   const { showAllColumns, setShowAllColumns } = useColumnVisibility()
   const { columns } = useTableColumns()
 
-  // Create table instance
   const table = useReactTable({
     data: filteredRows,
     columns: columns.filter(
