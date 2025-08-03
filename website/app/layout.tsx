@@ -5,8 +5,6 @@ import Header from './components/Header.tsx'
 
 import type { Metadata } from 'next'
 
-import './globals.css'
-
 export const metadata: Metadata = {
   title: 'JBrowse 2 genome browser hubs',
   description: 'JBrowse 2 genome browser hubs',
@@ -19,7 +17,6 @@ export const metadata: Metadata = {
     ],
   },
 }
-
 const roboto = Roboto({
   subsets: ['latin'],
 })

@@ -1,5 +1,6 @@
 'use client'
 import { flexRender } from '@tanstack/react-table'
+import styles from './TableHeader.module.css'
 
 import type { AssemblyData } from '../../util'
 import type { HeaderGroup } from '@tanstack/react-table'
@@ -24,7 +25,7 @@ export default function TableHeader({
           {headerGroup.headers.map(header => (
             <th
               key={header.id}
-              className={header.column.getCanSort() ? 'cursor-pointer' : ''}
+              className={header.column.getCanSort() ? styles.cursorPointer : ''}
               onClick={
                 header.column.getCanSort()
                   ? () => {

@@ -1,0 +1,71 @@
+.styledLink {
+  color: #2563eb;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+  font-weight: 400;
+}
+.styledLink:hover {
+  color: #1d4ed8;
+  text-decoration-line: underline;
+}
+.buttonLink {
+  display: inline-block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+.primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+.primary:hover {
+  background-color: #1d4ed8;
+}
+.secondary {
+  background-color: #4b5563;
+  color: #ffffff;
+}
+.secondary:hover {
+  background-color: #374151;
+}
+.outline {
+  border: 1px solid #2563eb;
+  color: #2563eb;
+}
+.outline:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+:global(.dark) .styledLink {
+  color: #60a5fa;
+}
+:global(.dark) .styledLink:hover {
+  color: #25c2a0;
+}
+:global(.dark) .primary {
+  background-color: #3b82f6;
+}
+:global(.dark) .primary:hover {
+  background-color: #2563eb;
+}
+:global(.dark) .secondary {
+  background-color: #6b7280;
+}
+:global(.dark) .secondary:hover {
+  background-color: #4b5563;
+}
+:global(.dark) .outline {
+  border-color: #60a5fa;
+  color: #60a5fa;
+}
+:global(.dark) .outline:hover {
+  background-color: #60a5fa;
+  color: #111827;
+}

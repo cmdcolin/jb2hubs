@@ -9,6 +9,7 @@ import { StyledLink } from '../../components/ui/Link.tsx'
 import { LI, UL } from '../../components/ui/List.tsx'
 import { H1, H2, H4 } from '../../components/ui/Typography.tsx'
 import { tryAndReadText } from '../../components/util.ts'
+import styles from './page.module.css'
 
 export async function generateMetadata({
   params,
@@ -47,7 +48,7 @@ export default async function Page({
   const source = tryAndReadText(imgBase + '_page.txt')
   return (
     <Container>
-      <div className="relative">
+      <div className={styles.relative}>
         <H1>{scientificName}</H1>
         <div>
           <H4>Accession:</H4> {ret.accession}
@@ -60,9 +61,9 @@ export default async function Page({
         </div>
 
         {val ? (
-          <div className="float-right ml-6 mb-4 max-w-xs">
-            <figure className="m-0">
-              <img src={val} className="max-w-full" />
+          <div className={styles.imageContainer}>
+            <figure className={styles.figure}>
+              <img src={val} className={styles.image} />
               <figcaption>
                 {source ? (
                   <StyledLink href={source}>(source)</StyledLink>
