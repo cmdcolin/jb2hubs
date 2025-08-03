@@ -51,13 +51,13 @@ export default async function Page({
       <div className={styles.relative}>
         <H1>{scientificName}</H1>
         <div>
-          <H4>Accession:</H4> {ret.accession}
+          <b>Accession:</b> {ret.accession}
         </div>
         <div>
-          <H4>Assembly name:</H4> {ret.ncbiAssemblyName}
+          <b>Assembly name:</b> {ret.ncbiAssemblyName}
         </div>
         <div>
-          <H4>Common name:</H4> {ret.commonName}
+          <b>Common name:</b> {ret.commonName}
         </div>
 
         {val ? (
