@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "fd html out| parallel \"node createReproducibleHtml.js {} {}\"",
     "start": "next start",
     "lint": "next lint",
     "deploy": "rclone sync -c -v out jbrowse-data:jbrowse.org/jb2hubs/",
@@ -15,6 +16,7 @@
     "@gmod/ucsc-hub": "^2.0.1",
     "@tanstack/react-table": "^8.21.3",
     "hubtools": "^1.0.0",
+    "jsdom": "^26.1.0",
     "lucide-react": "^0.532.0",
     "modern-normalize": "^3.0.1",
     "next": "next",
