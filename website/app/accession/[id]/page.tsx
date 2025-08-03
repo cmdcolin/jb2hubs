@@ -16,7 +16,7 @@ export async function generateMetadata({
   params: Promise<{ id: string }>
 }): Promise<Metadata> {
   const { id } = await params
-  const ret = await getAccessionById(id)
+  const ret = getAccessionById(id)
   if (!ret) {
     throw new Error(`${id} not found`)
   }
@@ -31,7 +31,7 @@ export default async function Page({
   params: Promise<{ id: string }>
 }) {
   const { id } = await params
-  const ret = await getAccessionById(id)
+  const ret = getAccessionById(id)
   if (!ret) {
     throw new Error('accession not found')
   }
@@ -43,8 +43,8 @@ export default async function Page({
     slugify(scientificName),
   )
 
-  const val = await tryAndReadText(imgBase + '.txt')
-  const source = await tryAndReadText(imgBase + '_page.txt')
+  const val = tryAndReadText(imgBase + '.txt')
+  const source = tryAndReadText(imgBase + '_page.txt')
   return (
     <Container>
       <div className="relative">
@@ -79,16 +79,18 @@ export default async function Page({
         <H2>Genome browsers</H2>
         <UL>
           <LI>
-            <StyledLink href={ret.jbrowseLink}>JBrowse </StyledLink>
+            <StyledLink href={ret.jbrowseLink}>JBrowse</StyledLink>
           </LI>
           <LI>
             <StyledLink href={ret.igvBrowserLink}>IGV.js</StyledLink>
           </LI>
           <LI>
-            <StyledLink href={ret.ncbiBrowserLink}>NCBI GDV</StyledLink>
+            <StyledLink href={ret.ncbiBrowserLink}>
+              NCBI browser (GDV)
+            </StyledLink>
           </LI>
           <LI>
-            <StyledLink href={ret.ucscBrowserLink}>UCSC</StyledLink>
+            <StyledLink href={ret.ucscBrowserLink}>UCSC browser</StyledLink>
           </LI>
         </UL>
       </div>
@@ -96,7 +98,7 @@ export default async function Page({
         <H2>Portals/data downloads</H2>
         <UL>
           <LI>
-            <StyledLink href={ret.ucscDataLink}>UCSC hub folder</StyledLink>
+            <StyledLink href={ret.ucscDataLink}>UCSC data folder</StyledLink>
           </LI>
           <LI>
             <StyledLink href={ret.ncbiLink}>NCBI assembly page</StyledLink>
@@ -105,7 +107,7 @@ export default async function Page({
             <StyledLink
               href={`https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${ret.taxonId}/`}
             >
-              NCBI datasets taxonomy page
+              NCBI taxonomy page
             </StyledLink>
           </LI>
           <LI>
@@ -122,7 +124,7 @@ export default async function Page({
 }
 
 export async function generateStaticParams() {
-  const posts = await getAllAccessions()
+  const posts = getAllAccessions()
   return posts.map(post => ({
     id: post.id,
   }))

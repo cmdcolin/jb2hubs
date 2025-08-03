@@ -9,6 +9,7 @@ export default tseslint.config(
     ignores: [
       '**/dist/',
       'eslint.config.mjs',
+      'website/next-env.d.ts',
       'website/out/**/*',
       'website/.next/**/*',
       'website/postcss.config.mjs',

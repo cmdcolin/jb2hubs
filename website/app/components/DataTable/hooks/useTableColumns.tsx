@@ -74,11 +74,7 @@ export function useTableColumns() {
           return a - b
         },
       }),
-      columnHelper.accessor('submitterOrg', {
-        header: 'Submitter',
-        enableSorting: false,
-        meta: { extra: true },
-      }),
+
       columnHelper.accessor('seqReleaseDate', {
         header: 'Release date',
         cell: info => info.getValue().replace('00:00', ''),
@@ -106,6 +102,11 @@ export function useTableColumns() {
           </a>
         ),
         enableSorting: true,
+        meta: { extra: true },
+      }),
+      columnHelper.accessor('submitterOrg', {
+        header: 'Submitter',
+        enableSorting: false,
         meta: { extra: true },
       }),
     ],
