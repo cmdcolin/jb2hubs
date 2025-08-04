@@ -11,13 +11,7 @@ import type { AssemblyData } from './util'
 
 type Assemblies = AssemblyData[]
 
-export default async function Page({
-  title,
-  raw,
-}: {
-  title: string
-  raw: string
-}) {
+export default function Page({ title, raw }: { title: string; raw: string }) {
   return (
     <Container2>
       <H1>GenArk hubs - {title}</H1>

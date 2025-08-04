@@ -11,7 +11,7 @@ import { LI, UL } from '../../components/ui/List.tsx'
 import { H1, H2 } from '../../components/ui/Typography.tsx'
 import { tryAndReadText } from '../../components/util.ts'
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: Promise<{ id: string }>
