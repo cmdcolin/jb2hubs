@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Container from '../../components/Container.tsx'
 import { StyledLink } from '../../components/ui/Link.tsx'
 import { LI, UL } from '../../components/ui/List.tsx'
-import { H1, H2, H4 } from '../../components/ui/Typography.tsx'
+import { H1, H2 } from '../../components/ui/Typography.tsx'
 import list from '../list.json'
 
 export async function generateMetadata({

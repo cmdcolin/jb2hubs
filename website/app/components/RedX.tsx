@@ -1,4 +1,5 @@
 import { X } from 'lucide-react'
+
 import styles from './RedX.module.css'
 
 export default function RedX() {

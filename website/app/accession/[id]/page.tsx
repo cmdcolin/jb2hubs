@@ -8,10 +8,10 @@ import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
 import Container from '../../components/Container.tsx'
 import { StyledLink } from '../../components/ui/Link.tsx'
 import { LI, UL } from '../../components/ui/List.tsx'
-import { H1, H2, H4 } from '../../components/ui/Typography.tsx'
+import { H1, H2 } from '../../components/ui/Typography.tsx'
 import { tryAndReadText } from '../../components/util.ts'
 
-export async function generateMetadata({
+export function generateMetadata({
   params,
 }: {
   params: Promise<{ id: string }>
