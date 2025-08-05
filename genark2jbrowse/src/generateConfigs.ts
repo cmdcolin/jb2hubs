@@ -38,7 +38,9 @@ try {
   oldConfig = readJSON(configPath) as Record<string, unknown>
 } catch (error) {
   // It's normal for config.json not to exist on the first run
-  console.warn(`Could not read existing config.json at ${configPath}: ${error}`)
+  console.warn(
+    `Could not read existing config.json at ${configPath}, will create new one (${error})`,
+  )
 }
 
 let hubFileText: string
