@@ -7,12 +7,13 @@ import OrangeStar from '../../OrangeStar.tsx'
 import RedX from '../../RedX.tsx'
 import { StyledLink } from '../../ui/Link.tsx'
 import { statusOrder } from '../utils.ts'
+import { highlightText } from '../utils/highlightText.tsx'
 import styles from './useTableColumns.module.css'
 
 import type { AssemblyData } from '../../util.ts'
 import type { Row } from '@tanstack/react-table'
 
-export function useTableColumns() {
+export function useTableColumns({ searchQuery = '' }: { searchQuery?: string } = {}) {
   const columnHelper = createColumnHelper<NonNullable<AssemblyData>>()
 
   const columns = useMemo(
@@ -33,7 +34,7 @@ export function useTableColumns() {
         ),
         cell: info => (
           <>
-            {info.getValue()}{' '}
+            {highlightText(info.getValue() || '', searchQuery)}{' '}
             <StyledLink
               href={`/accession/${info.row.original.accession}`}
               rel="noopener noreferrer"
@@ -83,10 +84,12 @@ export function useTableColumns() {
       }),
       columnHelper.accessor('scientificName', {
         header: 'Scientific name',
+        cell: info => highlightText(info.getValue() || '', searchQuery),
         enableSorting: true,
       }),
       columnHelper.accessor('ncbiAssemblyName', {
         header: 'NCBI assembly name',
+        cell: info => highlightText(info.getValue() || '', searchQuery),
         enableSorting: true,
       }),
       columnHelper.accessor('accession', {
@@ -111,7 +114,7 @@ export function useTableColumns() {
         meta: { extra: true },
       }),
     ],
-    [columnHelper],
+    [columnHelper, searchQuery],
   )
 
   return { columns }

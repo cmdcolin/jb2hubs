@@ -6,12 +6,14 @@ import {
   getSortedRowModel,
   useReactTable,
 } from '@tanstack/react-table'
+import { Search } from 'lucide-react'
 
 import TableBody from './DataTable/components/TableBody.tsx'
 import TableHeader from './DataTable/components/TableHeader.tsx'
 import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility.ts'
 import { useTableColumns } from './DataTable/hooks/useTableColumns.tsx'
-import { useTableFilter } from './DataTable/hooks/useTableFilter.ts'
+import { useCategoryFilter } from './DataTable/hooks/useCategoryFilter.ts'
+import { useSearchFilter } from './DataTable/hooks/useSearchFilter.ts'
 import { useTableSort } from './DataTable/hooks/useTableSort.ts'
 import TableOptions from './TableOptions.tsx'
 
@@ -25,11 +27,15 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
     pageIndex: 0,
     pageSize: 200,
   })
-  const { filterOption, setFilterOption, filteredRows } = useTableFilter(rows)
+  // Apply category filter first
+  const { filterOption, setFilterOption, filteredRows: categoryFilteredRows } = useCategoryFilter(rows)
+  
+  // Then apply search filter to the category-filtered results
+  const { searchQuery, setSearchQuery, filteredRows } = useSearchFilter(categoryFilteredRows)
   const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } =
     useTableSort()
   const { showAllColumns, setShowAllColumns } = useColumnVisibility()
-  const { columns } = useTableColumns()
+  const { columns } = useTableColumns({ searchQuery })
 
   const table = useReactTable({
     data: filteredRows,
@@ -50,6 +56,29 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
 
   return (
     <>
+      <div className={styles.searchContainer}>
+        <div className={styles.searchInputWrapper}>
+          <Search className={styles.searchIcon} size={16} />
+          <input
+            type="text"
+            placeholder="Search by common name, scientific name, or NCBI assembly name..."
+            value={searchQuery}
+            onChange={e => setSearchQuery(e.target.value)}
+            className={styles.searchInput}
+          />
+          {searchQuery && (
+            <button
+              type="button"
+              onClick={() => setSearchQuery('')}
+              className={styles.clearButton}
+              aria-label="Clear search"
+            >
+              ×
+            </button>
+          )}
+        </div>
+      </div>
+
       <TableOptions
         filterOption={filterOption}
         setFilterOption={setFilterOption}
