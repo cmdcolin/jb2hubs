@@ -10,7 +10,7 @@
     "sync:hubs": "rclone sync -c -v out jbrowse-data:jbrowse.org/jb2hubs/",
     "sync:json": "rclone sync -c -v processedHubJson jbrowse-data:jbrowse.org/processedHubJson",
     "deploy": "yarn sync:hubs && yarn sync:json",
-    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E13LGELJOT4GQO --paths \"/jb2hubs/*\"",
+    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E12EBG02P68TDO --paths \"/*\"",
     "predeploy": "yarn build"
   },
   "dependencies": {
