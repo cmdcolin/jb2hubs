@@ -7,6 +7,29 @@ function getHubBasePath(accession: string): string {
   return `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
 }
 
+function processSpeciesName(speciesName: string): string {
+  return speciesName
+    .replace(/\s+=\s.*$/, '') // Remove anything after " = "
+    .replace(/\s+-\s.*$/, '') // Remove anything after " - "
+    .replace(/\s+\d+\s*$/, '') // Remove trailing numbers
+    .replace(/\s+(str\.|strain).*$/i, '') // Remove anything after "str." or "strain"
+    .replace(/\s+var\..*$/i, '') // Remove anything after "var."
+    .replace(/\s+sp\..*$/i, '') // Remove anything after "sp."
+    .replace(/\s+bv\..*$/i, '') // Remove anything after "bv."
+    .replace(/\s+subsp\..*$/i, '') // Remove anything after "sp."
+    .replace(/\s+serovar.*$/i, '') // Remove anything after "serovar"
+    .replace(/\s+biovar.*$/i, '') // Remove anything after "biovar"
+    .replace(/\s+cf.*$/i, '') // Remove anything after "cf"
+    .replace(/\s+f\..*$/i, '') // Remove anything after "f."
+    .replace(/\s+type.*$/i, '') // Remove anything after "type"
+    .replace(/\s+ATCC.*$/i, '') // Remove anything after "ATCC"
+    .replace(/\s+GI\/.*$/i, '') // Remove anything after "GI/"
+    .replace(/\s+HU\/.*$/i, '') // Remove anything after "GI/"
+    .replace(/\s+\S*:.*$/, '') // Remove last word if it contains a colon
+    .replace(/\s+[A-Z0-9\-]+$/, '') // Remove last word if it's all capital letters and numbers
+    .trim()
+}
+
 async function getWikipediaMainImage(pageTitle: string, lang = 'en') {
   const apiUrl = `https://${lang}.wikipedia.org/w/api.php`
 
@@ -54,9 +77,10 @@ async function getWikipediaMainImage(pageTitle: string, lang = 'en') {
 async function processSpeciesImage(scientificName: string, accession: string) {
   const hubBasePath = getHubBasePath(accession)
   const filePath = path.join(hubBasePath, `image.json`)
+  const processedName = processSpeciesName(processSpeciesName(scientificName))
 
   try {
-    const imageUrl = await getWikipediaMainImage(scientificName)
+    const imageUrl = await getWikipediaMainImage(processedName)
     if (!imageUrl) {
       throw new Error('No image URL detected in response')
     }
@@ -65,26 +89,30 @@ async function processSpeciesImage(scientificName: string, accession: string) {
       JSON.stringify(
         {
           imageUrl,
-          pageUrl: `https://wikipedia.org/wiki/${scientificName}`,
+          pageUrl: `https://wikipedia.org/wiki/${processedName}`,
         },
         null,
         2,
       ),
     )
-    console.log(`Found image for `, scientificName)
+
+    // console.log(
+    //   `Found image for: "${scientificName}" (used string "${processedName}")`,
+    // )
   } catch (e) {
-    console.log(`${e}`)
-    fs.writeFileSync(
-      filePath,
-      JSON.stringify(
-        {
-          imageUrl: 'none',
-          pageUrl: 'none',
-        },
-        null,
-        2,
-      ),
-    )
+    // if (processedName.split(' ').length > 2) {
+    //   const firstTwoWords = processedName.split(' ').slice(0, 2).join(' ')
+    //   console.log('Retrying: ', { processedName, firstTwoWords })
+    //   await processSpeciesImage(firstTwoWords, accession)
+    //   console.log('Retry success', { firstTwoWords })
+    //   return
+    // }
+    if (scientificName !== processedName) {
+      console.log(`${e}`, { scientificName, processedName })
+    } else {
+      console.log(`${e}`)
+    }
+    fs.writeFileSync(filePath + '.notfound', 'none')
   }
 }
 
