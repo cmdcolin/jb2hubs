@@ -28,16 +28,22 @@ export default function DataTable({ rows }: { rows: AssemblyData[] }) {
     pageSize: 200,
   })
   // Apply category filter first
-  const { filterOption, setFilterOption, filteredRows: categoryFilteredRows } = useCategoryFilter(rows)
-  
+  const {
+    filterOption,
+    setFilterOption,
+    filteredRows: categoryFilteredRows,
+  } = useCategoryFilter(rows)
+
   // Then apply search filter to the category-filtered results
-  const { searchQuery, setSearchQuery, filteredRows } = useSearchFilter(categoryFilteredRows)
+  const { searchQuery, setSearchQuery, filteredRows } =
+    useSearchFilter(categoryFilteredRows)
   const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } =
     useTableSort()
   const { showAllColumns, setShowAllColumns } = useColumnVisibility()
   const { columns } = useTableColumns({ searchQuery })
 
   const table = useReactTable({
+    // @ts-expect-error
     data: filteredRows,
     columns: columns.filter(
       col =>

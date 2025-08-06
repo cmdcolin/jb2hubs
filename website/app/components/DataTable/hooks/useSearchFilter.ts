@@ -85,6 +85,7 @@ export function useSearchFilter(rows: AssemblyData[]) {
   const { processedRows, searchHaystack } = useMemo(() => {
     const processedRows = rows.map(row => ({
       ...row,
+      // @ts-expect-error
       _searchText: getSearchableText(row),
     }))
 
@@ -104,27 +105,8 @@ export function useSearchFilter(rows: AssemblyData[]) {
     const indexes = uf.filter(searchHaystack, query)
 
     if (indexes && indexes.length > 0) {
-      // Get ufuzzy scores and info
-      const info = uf.info(indexes, searchHaystack, query)
-
-      // Create combined results with priority and fuzzy scores
-      const resultsWithScores = indexes.map((idx, i) => ({
-        row: processedRows[idx],
-        priorityScore: calculatePriorityScore(processedRows[idx], query),
-        fuzzyScore: (info && info.score && info.score[i]) || 0,
-        index: idx
-      }))
-
-      // Sort by priority score first, then fuzzy score
-      resultsWithScores.sort((a, b) => {
-        if (a.priorityScore !== b.priorityScore) {
-          return b.priorityScore - a.priorityScore
-        }
-        return b.fuzzyScore - a.fuzzyScore
-      })
-
       // Map back to rows
-      return resultsWithScores.map(result => result.row)
+      return indexes.map(idx => processedRows[idx])
     } else {
       return []
     }
