@@ -79,7 +79,9 @@ async function processSpeciesImage(scientificName: string, accession: string) {
         2,
       ),
     )
-    console.log(`Found image for `, scientificName)
+    console.log(
+      `Found image for: "${scientificName} (used string "${processedName}")`,
+    )
   } catch (e) {
     console.log(`${e}`)
     fs.writeFileSync(
