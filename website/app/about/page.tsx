@@ -7,7 +7,7 @@ export default function About() {
   return (
     <Container>
       <div>
-        <H1>About the JBrowse 2 genome hubs</H1>
+        <H2>About</H2>
         <P>
           The JBrowse 2 genome hubs were created by bulk importing UCSC data to
           create annotation-rich JBrowse data resources. We created scripts (

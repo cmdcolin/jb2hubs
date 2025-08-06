@@ -2,7 +2,6 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   output: 'export',
-  basePath: '/jb2hubs',
   trailingSlash: true,
   generateBuildId: () => 'static-build-id',
   webpack: config => {

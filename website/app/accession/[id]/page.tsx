@@ -1,7 +1,6 @@
 import path from 'path'
 
 import { Metadata } from 'next'
-import slugify from 'slugify'
 
 import styles from './page.module.css'
 import { getAccessionById, getAllAccessions } from '../../../lib/api.ts'
@@ -9,7 +8,7 @@ import Container from '../../components/Container.tsx'
 import { StyledLink } from '../../components/ui/Link.tsx'
 import { LI, UL } from '../../components/ui/List.tsx'
 import { H1, H2 } from '../../components/ui/Typography.tsx'
-import { tryAndReadText } from '../../components/util.ts'
+import { tryAndReadJSON } from '../../components/util.ts'
 
 export async function generateMetadata({
   params,
@@ -41,10 +40,11 @@ export default async function Page({
   const [basePrefix, restOfAccession] = accession.split('_')
   const [part1, part2, part3] = restOfAccession!.match(/.{1,3}/g)!
   const hubBasePath = `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
-  const b = path.join(process.cwd(), hubBasePath)
-  const val = tryAndReadText(path.join(b, 'image.txt'))
-  const source = tryAndReadText(path.join(b, 'page.txt'))
-  console.log({ b, val, source })
+  console.log('wtf', path.join(process.cwd(), hubBasePath, 'image.json'))
+
+  const { imageUrl, pageUrl } = await tryAndReadJSON<any>(
+    path.join(process.cwd(), hubBasePath, 'image.json'),
+  )
   return (
     <Container>
       <div className={styles.relative}>
@@ -59,13 +59,13 @@ export default async function Page({
           <b>Common name:</b> {ret.commonName}
         </div>
 
-        {val ? (
+        {imageUrl ? (
           <div className={styles.imageContainer}>
             <figure className={styles.figure}>
-              <img src={val} className={styles.image} />
+              <img src={imageUrl} className={styles.image} />
               <figcaption>
-                {source ? (
-                  <StyledLink href={source}>(source)</StyledLink>
+                {pageUrl ? (
+                  <StyledLink href={pageUrl}>(source)</StyledLink>
                 ) : (
                   'no link'
                 )}

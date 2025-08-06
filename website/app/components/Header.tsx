@@ -4,27 +4,21 @@ import Link from 'next/link'
 
 import Logo from '../logo.tsx'
 import styles from './Header.module.css'
+import { ExternalLink } from 'lucide-react'
 
 export default function JBrowseNavbar() {
   const navItems = [
     { name: 'Genomes', href: '/' },
-    { name: 'Docs', href: 'https://jbrowse.org/jb2/docs' },
-    { name: 'Blog', href: 'https://jbrowse.org/jb2/blog' },
-    { name: 'Download', href: 'https://jbrowse.org/jb2/download' },
-    { name: 'Plugins', href: 'https://jbrowse.org/jb2/plugin_store' },
-    { name: 'Features', href: 'https://jbrowse.org/jb2/features' },
-    { name: 'Gallery', href: 'https://jbrowse.org/jb2/gallery' },
-    { name: 'Demos', href: 'https://jbrowse.org/jb2/demos' },
-    { name: 'Contact', href: 'https://jbrowse.org/jb2/contact' },
+    { name: 'About', href: '/about' },
   ]
 
   return (
     <nav className={styles.nav}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <Link href={'https://jbrowse.org/jb2/'} className={styles.logoLink}>
+          <Link href={'/'} className={styles.logoLink}>
             <Logo alt="logo" width={30.8} height={32} className={styles.logo} />
-            <b className={styles.logoText}>JBrowse</b>
+            <b className={styles.logoText}>JBrowse 2 Genomes</b>
           </Link>
           {navItems.map(item => (
             <Link key={item.name} href={item.href} className={styles.navLink}>
@@ -35,6 +29,17 @@ export default function JBrowseNavbar() {
 
         {/* Right side - Social links and search */}
         <div className={styles.right}>
+          <Link href="https://jbrowse.org/jb2" style={{ marginLeft: 20 }}>
+            Looking for the JBrowse 2 homepage?
+            <ExternalLink
+              style={{
+                marginLeft: 10,
+                display: 'inline',
+                width: '1em',
+                height: '1em',
+              }}
+            />
+          </Link>
           {/* GitHub icon */}
           <Link
             href="https://github.com/GMOD/jbrowse-component"
