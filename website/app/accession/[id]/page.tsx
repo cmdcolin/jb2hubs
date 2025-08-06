@@ -40,7 +40,6 @@ export default async function Page({
   const [basePrefix, restOfAccession] = accession.split('_')
   const [part1, part2, part3] = restOfAccession!.match(/.{1,3}/g)!
   const hubBasePath = `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
-  console.log('wtf', path.join(process.cwd(), hubBasePath, 'image.json'))
 
   const { imageUrl, pageUrl } = await tryAndReadJSON<any>(
     path.join(process.cwd(), hubBasePath, 'image.json'),
@@ -124,8 +123,8 @@ export default async function Page({
 }
 
 export function generateStaticParams() {
-  const posts = getAllAccessions()
-  return posts.map(post => ({
+  const ids = getAllAccessions()
+  return ids.map(post => ({
     id: post.id,
   }))
 }
