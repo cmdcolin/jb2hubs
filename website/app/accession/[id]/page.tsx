@@ -41,7 +41,6 @@ export default async function Page({
   const [basePrefix, restOfAccession] = accession.split('_')
   const [part1, part2, part3] = restOfAccession!.match(/.{1,3}/g)!
   const hubBasePath = `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
-  console.log('wtf', path.join(process.cwd(), hubBasePath, 'image.json'))
 
   const { imageUrl, pageUrl } = await tryAndReadJSON<{
     imageUrl?: string
