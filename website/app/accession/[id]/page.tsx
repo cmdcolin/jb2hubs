@@ -37,15 +37,14 @@ export default async function Page({
     throw new Error('accession not found')
   }
 
-  const { scientificName } = ret
-  const imgBase = path.join(
-    process.cwd(),
-    'speciesImages',
-    slugify(scientificName),
-  )
-
-  const val = tryAndReadText(imgBase + '.txt')
-  const source = tryAndReadText(imgBase + '_page.txt')
+  const { accession, scientificName } = ret
+  const [basePrefix, restOfAccession] = accession.split('_')
+  const [part1, part2, part3] = restOfAccession!.match(/.{1,3}/g)!
+  const hubBasePath = `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
+  const b = path.join(process.cwd(), hubBasePath)
+  const val = tryAndReadText(path.join(b, 'image.txt'))
+  const source = tryAndReadText(path.join(b, 'page.txt'))
+  console.log({ b, val, source })
   return (
     <Container>
       <div className={styles.relative}>
