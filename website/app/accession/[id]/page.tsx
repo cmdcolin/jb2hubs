@@ -42,9 +42,10 @@ export default async function Page({
   const hubBasePath = `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
   console.log('wtf', path.join(process.cwd(), hubBasePath, 'image.json'))
 
-  const { imageUrl, pageUrl } = await tryAndReadJSON<Record<string, unknown>>(
-    path.join(process.cwd(), hubBasePath, 'image.json'),
-  )
+  const res = await tryAndReadJSON<{
+    imageUrl?: string
+    pageUrl?: string
+  }>(path.join(process.cwd(), hubBasePath, 'image.json'))
   return (
     <Container>
       <div className={styles.relative}>
@@ -59,13 +60,13 @@ export default async function Page({
           <b>Common name:</b> {ret.commonName}
         </div>
 
-        {imageUrl ? (
+        {res ? (
           <div className={styles.imageContainer}>
             <figure className={styles.figure}>
-              <img src={imageUrl} className={styles.image} />
+              <img src={res.imageUrl} className={styles.image} />
               <figcaption>
-                {pageUrl ? (
-                  <StyledLink href={pageUrl}>(source)</StyledLink>
+                {res.pageUrl ? (
+                  <StyledLink href={res.pageUrl}>(source)</StyledLink>
                 ) : (
                   'no link'
                 )}

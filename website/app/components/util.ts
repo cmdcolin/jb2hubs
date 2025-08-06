@@ -17,7 +17,7 @@ export async function tryAndReadJSON<T>(f: string) {
   try {
     return await readJSON<T>(f)
   } catch (e) {
-    return {} as Record<string, unknown>
+    return undefined
   }
 }
 
