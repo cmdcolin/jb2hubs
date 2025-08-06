@@ -62,22 +62,28 @@ async function processSpeciesImage(scientificName: string, accession: string) {
     }
     fs.writeFileSync(
       filePath,
-      JSON.stringify({
-        imageUrl,
-        pageUrl: `https://wikipedia.org/wiki/${scientificName}`,
-      }),
+      JSON.stringify(
+        {
+          imageUrl,
+          pageUrl: `https://wikipedia.org/wiki/${scientificName}`,
+        },
+        null,
+        2,
+      ),
     )
+    console.log(`Found image for `, scientificName)
   } catch (e) {
-    console.error(
-      'No image found on the Wikipedia page for ' + scientificName,
-      e,
-    )
+    console.log(`${e}`)
     fs.writeFileSync(
       filePath,
-      JSON.stringify({
-        imageUrl: 'none',
-        pageUrl: 'none',
-      }),
+      JSON.stringify(
+        {
+          imageUrl: 'none',
+          pageUrl: 'none',
+        },
+        null,
+        2,
+      ),
     )
   }
 }
