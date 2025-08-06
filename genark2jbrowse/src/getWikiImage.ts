@@ -7,6 +7,13 @@ function getHubBasePath(accession: string): string {
   return `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
 }
 
+function processSpeciesName(speciesName: string): string {
+  return speciesName
+    .replace(/\s+\d+\s*$/, '') // Remove trailing numbers
+    .replace(/\s+(str\.|strain).*$/i, '') // Remove anything after "str." or "strain"
+    .trim()
+}
+
 async function getWikipediaMainImage(pageTitle: string, lang = 'en') {
   const apiUrl = `https://${lang}.wikipedia.org/w/api.php`
 
@@ -56,7 +63,8 @@ async function processSpeciesImage(scientificName: string, accession: string) {
   const filePath = path.join(hubBasePath, `image.json`)
 
   try {
-    const imageUrl = await getWikipediaMainImage(scientificName)
+    const processedName = processSpeciesName(scientificName)
+    const imageUrl = await getWikipediaMainImage(processedName)
     if (!imageUrl) {
       throw new Error('No image URL detected in response')
     }
@@ -65,7 +73,7 @@ async function processSpeciesImage(scientificName: string, accession: string) {
       JSON.stringify(
         {
           imageUrl,
-          pageUrl: `https://wikipedia.org/wiki/${scientificName}`,
+          pageUrl: `https://wikipedia.org/wiki/${processedName}`,
         },
         null,
         2,
