@@ -15,6 +15,7 @@ async function processHubJsonFiles() {
   // Read all files in the 'hubJson' directory
   const hubJsonFiles = fs
     .readdirSync('hubJson')
+    .filter(f => f.endsWith('.json'))
     .map(f => path.join('hubJson', f))
 
   // Ensure the output directory exists

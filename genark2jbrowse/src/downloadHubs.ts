@@ -10,14 +10,17 @@ import {
 
 // Read all hub JSON files and deduplicate entries based on ucscBrowser field
 const allHubEntries = dedupe(
-  fs.readdirSync('hubJson').flatMap(
-    f =>
-      (
-        readJSON(`hubJson/${f}`) as {
-          data: UCSCGenArkAssemblyEntry[]
-        }
-      ).data,
-  ),
+  fs
+    .readdirSync('hubJson')
+    .filter(f => f.endsWith('.json'))
+    .flatMap(
+      f =>
+        (
+          readJSON(`hubJson/${f}`) as {
+            data: UCSCGenArkAssemblyEntry[]
+          }
+        ).data,
+    ),
   d => d.ucscBrowser,
 )
 

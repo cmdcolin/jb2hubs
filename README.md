@@ -2,45 +2,16 @@
 
 This is a portal that creates JBrowse 2 links to UCSC track hubs
 
-https://jbrowse.org/jb2hubs
+https://genomes.jbrowse.org
 
-## Pre-requisites
+## What is in this repo
 
-- Custom fork of bed2gff https://github.com/cmdcolin/bed2gff/ (clone, cargo
-  build, copy to ~/bed2gff)
-- hck
-- fdfind aka fd
-- node.js, yarn, and npm install -g @jbrowse/cli
-- rclone
-- ncbi "datasets" cli
-
-## Preparing GenArk hubs
-
-```bash
-cd genark2jbrowse
-yarn
-./makeAll.sh
-# optionally review git diff
-./uploadAll.sh
-```
-
-## Preparing UCSC hubs
-
-```bash
-cd ucsc2jbrowse
-yarn
-./doAll.sh
-# optionally review git diff
-./uploadAll.sh
-```
-
-## Deploy website
-
-```bash
-cd website
-yarn
-yarn deploy
-```
+- Scripts that ingest the UCSC goldenPath database dumps, and converts them into
+  jbrowse configs (the ucsc2jbrowse folder)
+- Scripts that convert the UCSC GenArk hubs, and converts them into jbrowse
+  configs (the genark2jbrowse folder)
+- Astro-based website for statically generating lots of pages (the website
+  folder)
 
 ## Note
 

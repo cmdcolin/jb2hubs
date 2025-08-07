@@ -26,7 +26,7 @@ function processSpeciesName(speciesName: string): string {
     .replace(/\s+GI\/.*$/i, '') // Remove anything after "GI/"
     .replace(/\s+HU\/.*$/i, '') // Remove anything after "GI/"
     .replace(/\s+\S*:.*$/, '') // Remove last word if it contains a colon
-    .replace(/\s+[A-Z0-9\-]+$/, '') // Remove last word if it's all capital letters and numbers
+    .replace(/\s+[A-Z0-9\-\.]+$/, '') // Remove last word if it's all capital letters and numbers
     .trim()
 }
 
