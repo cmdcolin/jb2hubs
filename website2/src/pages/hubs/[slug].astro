@@ -1,15 +1,21 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import Container2 from '../../components/Container2.astro';
-import DataTable from '../../components/DataTable.jsx';
-
-const allHubs = await Astro.glob('../../../../website/processedHubJson/*.json');
+import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx';
 
 export async function getStaticPaths() {
-  return allHubs.map((file) => {
-    const slug = file.file.split('/').pop().replace('.json', '');
-    return { params: { slug }, props: { rows: file.default } };
-  });
+  const modules = import.meta.glob('../../../../website/processedHubJson/*.json');
+  const paths = await Promise.all(
+    Object.entries(modules).map(async ([filepath, resolver]) => {
+      const { default: data } = await resolver();
+      const slug = filepath.split('/').pop().replace('.json', '');
+      return {
+        params: { slug },
+        props: { rows: data },
+      };
+    })
+  );
+  return paths;
 }
 
 const { slug } = Astro.params;
@@ -21,6 +27,6 @@ const title = slug.charAt(0).toUpperCase() + slug.slice(1);
 <Layout>
   <Container2>
     <h1>GenArk hubs - {title}</h1>
-    <DataTable rows={rows} client:load />
+    <ClientOnlyDataTable rows={rows} client:load />
   </Container2>
 </Layout>

@@ -23,13 +23,12 @@ const getSearchableText = (row) => {
 }
 
 export function useSearchFilter(rows) {
-  const [searchQuery, setSearchQuery] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('search') || '';
-    }
-    return '';
-  });
+  const [searchQuery, setSearchQuery] = useState('');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setSearchQuery(params.get('search') || '');
+  }, []);
 
   // Local state for immediate UI responsiveness
   const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery)

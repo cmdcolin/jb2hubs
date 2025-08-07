@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 
 export function useColumnVisibility() {
-  const [showAllColumns, setShowAllColumns] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('show') === 'true';
-    }
-    return false;
-  });
+  const [showAllColumns, setShowAllColumns] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setShowAllColumns(params.get('show') === 'true');
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

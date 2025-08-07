@@ -1,0 +1,13 @@
+---
+const { className, ...props } = Astro.props;
+---
+<td class={`tableCell ${className}`} {...props}>
+  <slot />
+</td>
+
+<style>
+.tableCell {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+</style>

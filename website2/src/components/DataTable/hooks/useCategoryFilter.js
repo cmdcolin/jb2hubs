@@ -4,14 +4,13 @@ import { filterCategories } from '../utils/filterCategories.js'
 import { notEmpty } from '../utils.js'
 
 export function useCategoryFilter(rows) {
-  const [filterOption, setFilterOption] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      const filter = params.get('filter');
-      return filterCategories[filter] ? filter : 'all';
-    }
-    return 'all';
-  });
+  const [filterOption, setFilterOption] = useState('all');
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const filter = params.get('filter');
+    setFilterOption(filterCategories[filter] ? filter : 'all');
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

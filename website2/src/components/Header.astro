@@ -1,6 +1,6 @@
 ---
 import Logo from '../logo.astro';
-import { ExternalLink } from 'lucide-react';
+
 
 const navItems = [
     { name: 'Genomes', href: '/' },
@@ -25,7 +25,11 @@ const navItems = [
         <div class="right">
             <a href="https://jbrowse.org/jb2" style="margin-left: 20px;">
                 Looking for the JBrowse 2 homepage?
-                <ExternalLink style={{ marginLeft: 10, display: 'inline', width: '1em', height: '1em' }} />
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 10px; display: inline;">
+  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+  <polyline points="15 3 21 3 21 9"></polyline>
+  <line x1="10" x2="21" y1="14" y2="3"></line>
+</svg>
             </a>
             <a href="https://github.com/GMOD/jbrowse-component" class="socialLink">
                 <svg class="icon" fill="currentColor" viewBox="0 0 24 24">

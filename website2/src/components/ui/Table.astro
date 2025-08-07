@@ -1,53 +1,13 @@
 ---
-const { className, onClick, ...props } = Astro.props;
+const { className, ...props } = Astro.props;
 ---
-
 <table class={`table ${className}`} {...props}>
   <slot />
 </table>
-
-<thead class={`tableHeader ${className}`} {...props}>
-    <slot />
-</thead>
-
-<tbody class={className} {...props}>
-    <slot />
-</tbody>
-
-<tr class={`tableRow ${className}`} {...props}>
-    <slot />
-</tr>
-
-<th onClick={onClick} class={`tableHeaderCell ${className}`} {...props}>
-    <slot />
-</th>
-
-<td class={`tableCell ${className}`} {...props}>
-    <slot />
-</td>
 
 <style>
 .table {
     width: 100%;
     border-collapse: collapse;
-}
-
-.tableHeader {
-    background-color: #f8f9fa;
-}
-
-.tableRow:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.tableHeaderCell {
-    padding: 0.75rem;
-    text-align: left;
-    border-bottom: 2px solid #dee2e6;
-}
-
-.tableCell {
-    padding: 0.75rem;
-    border-bottom: 1px solid #dee2e6;
 }
 </style>

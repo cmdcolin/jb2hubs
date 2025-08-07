@@ -3,22 +3,15 @@ import { useMemo, useState, useEffect } from 'react'
 import { sortOrder } from '../utils.js'
 
 export function useTableSort() {
-  const [sortState, setSortState] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      return params.get('sort') || '';
-    }
-    return '';
-  });
+  const [sortState, setSortState] = useState('');
+  const [sortDirectionPre, setSortDirection] = useState('');
 
-  const [sortDirectionPre, setSortDirection] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const params = new URLSearchParams(window.location.search);
-      const dir = params.get('dir');
-      return sortOrder.includes(dir) ? dir : '';
-    }
-    return '';
-  });
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setSortState(params.get('sort') || '');
+    const dir = params.get('dir');
+    setSortDirection(sortOrder.includes(dir) ? dir : '');
+  }, []);
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

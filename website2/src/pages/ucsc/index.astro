@@ -4,7 +4,9 @@ import Container from '../../components/Container.astro';
 import StyledLink from '../../components/ui/StyledLink.astro';
 import H1 from '../../components/ui/H1.astro';
 import P from '../../components/ui/P.astro';
-const list = (await Astro.glob('../../src/data/ucsc/list.json'))[0].default;
+import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx';
+
+const list = (await Astro.glob('../../list.json'))[0].default;
 
 import '../../components/table.css';
 ---
@@ -24,6 +26,6 @@ import '../../components/table.css';
         for single JBrowse 2 instance containing ALL the species
       </P>
     </div>
-    <UCSCTable client:load list={list} />
+    <ClientOnlyDataTable list={list} client:load />
   </Container>
 </Layout>

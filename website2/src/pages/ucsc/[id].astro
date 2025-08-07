@@ -6,16 +6,17 @@ import UL from '../../components/ui/UL.astro';
 import LI from '../../components/ui/LI.astro';
 import H1 from '../../components/ui/H1.astro';
 import H2 from '../../components/ui/H2.astro';
-const list = (await Astro.glob('../../src/data/ucsc/list.json'))[0].default;
-
 export async function getStaticPaths() {
+  const modules = import.meta.glob('../../list.json');
+  const { default: list } = await modules['../../list.json']();
   return Object.keys(list.ucscGenomes).map((id) => ({
     params: { id },
+    props: { ret: list.ucscGenomes[id] },
   }));
 }
 
 const { id } = Astro.params;
-const ret = list.ucscGenomes[id];
+const { ret } = Astro.props;
 
 const title = id;
 ---

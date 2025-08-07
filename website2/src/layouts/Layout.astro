@@ -18,10 +18,8 @@ const { frontmatter } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<ViewTransitions />
 		<SEO
-			title={frontmatter.title ?? 'JBrowse 2 genome browser hubs'}
-			description={
-				frontmatter.description ?? 'JBrowse 2 genome browser hubs'
-			}
+			title={frontmatter?.title ?? 'JBrowse 2 genome browser hubs'}
+			description={frontmatter?.description ?? 'JBrowse 2 genome browser hubs'}
 		/>
 	</head>
 	<body>
