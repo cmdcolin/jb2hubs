@@ -14,19 +14,7 @@ export function useTableColumns({ searchQuery = '' } = {}) {
   const columns = useMemo(
     () => [
       columnHelper.accessor('commonName', {
-        header: () => (
-          <div>
-            <div className={styles.floatLeft}>Common Name</div>
-            <div className={styles.floatRight}>
-              <div>
-                <OrangeStar /> == &quot;designated reference&quot;
-              </div>
-              <div>
-                <RedX /> == &quot;refseq suppressed&quot;
-              </div>
-            </div>
-          </div>
-        ),
+        header: 'Common Name',
         cell: info => (
           <>
             {highlightText(info.getValue() || '', searchQuery)}{' '}
