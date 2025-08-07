@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container from '../../components/Container.astro';
+---
+
+<Layout>
+  <Container>
+  <h1>Demos</h1>
+      <div>
+        <figure style={{margin:0}}>
+          <img style={{width:'100%',height:'auto'}} width={1526} height={625} src="/1.png"/>
+          <figcaption>
+            This figure shows the alignment between the Human 'hg38' and T2T 'hs1' genomes. This is similar to Fig 5c from the paper announcing the T2T genome: <a href="https://www.science.org/doi/10.1126/science.abl3533#F5">"A complete reference genome improves analysis of human genetic variation"</a> 
+            (<a href="https://jbrowse.org/code/jb2/main/?config=https%3A%2F%2Fjbrowse.org%2Fucsc%2Fhg38%2Fconfig.json&session=share-W3XFlqsIKe&password=fKYm4">link to jbrowse session</a>)
+          </figcaption>
+        </figure>
+      </div>
+  </Container>
+</Layout>
