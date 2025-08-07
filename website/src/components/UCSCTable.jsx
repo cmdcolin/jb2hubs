@@ -8,7 +8,6 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
-import { a } from './ui/react-wrappers/Link.jsx'
 import {
   Table,
   TableBody,
@@ -42,8 +41,7 @@ export default function UCSCTable({ list }) {
         header: 'Name',
         cell: info => (
           <div>
-            {info.getValue()} (
-            <a href={`/ucsc/${info.getValue()}`}>info</a>)
+            {info.getValue()} (<a href={`/ucsc/${info.getValue()}`}>info</a>)
           </div>
         ),
       }),
