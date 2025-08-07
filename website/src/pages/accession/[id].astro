@@ -44,10 +44,8 @@ const [basePrefix, restOfAccession] = accession.split('_')
 const [part1, part2, part3] = restOfAccession.match(/.{1,3}/g)
 const hubBasePath = `../hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}/image.json`
 
-
 const { imageUrl, pageUrl } =
-  (await tryAndReadJSON(path.join(process.cwd(), hubBasePath))) ||
-  {}
+  (await tryAndReadJSON(path.join(process.cwd(), hubBasePath))) || {}
 ---
 
 <Layout>
@@ -127,7 +125,7 @@ const { imageUrl, pageUrl } =
       </UL>
     </div>
   </Container2>
-  </Layout>
+</Layout>
 
 <style>
   .relative {
@@ -149,5 +147,3 @@ const { imageUrl, pageUrl } =
     max-width: 100%;
   }
 </style>
-
-
