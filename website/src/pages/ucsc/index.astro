@@ -1,0 +1,29 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Container from '../../components/Container.astro'
+import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx'
+import list from '../../list.json'
+
+import '../../components/table.css'
+---
+
+<Layout>
+  <Container>
+    <h1>Main genome browsers</h1>
+    <div>
+      <p>
+        This page contains a list of all the &quot;main&quot; genomes from the
+        UCSC genome browser, converted into a format that JBrowse 2 can load
+      </p>
+      <p>
+        <a
+          href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
+        >
+          Click here
+        </a>{' '}
+        for a single JBrowse 2 instance containing ALL the species
+      </p>
+    </div>
+    <ClientOnlyDataTable list={list} client:load />
+  </Container>
+</Layout>

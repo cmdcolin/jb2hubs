@@ -1,0 +1,67 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Container from '../../components/Container.astro'
+import list from '../../list.json'
+
+export async function getStaticPaths() {
+  return Object.keys(list.ucscGenomes).map(id => ({
+    params: { id },
+    props: { ret: list.ucscGenomes[id] },
+  }))
+}
+
+const { id } = Astro.params
+const { ret } = Astro.props
+
+const title = id
+---
+
+<Layout title={title}>
+  <Container>
+    <div class="relative">
+      <h1>{ret.scientificName}</h1>
+
+      <div>
+        <b>Description:</b>
+        {ret.description}
+      </div>
+      <div>
+        <b>Assembly name:</b>
+        {id}
+      </div>
+      <div>
+        <b>Common name:</b>
+        {ret.organism}
+      </div>
+    </div>
+
+    <div>
+      <h2>Genome browsers</h2>
+      <ul>
+        <li>
+          <a
+            href={`https://jbrowse.org/code/jb2/main/?config=https://jbrowse.org/ucsc/${id}/config.json`}
+          >
+            JBrowse
+          </a>
+        </li>
+        <li>
+          <a href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=${id}`}>
+            UCSC
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>Portals/data downloads</h2>
+      <ul>
+        <li>
+          <a href={`https://genome.ucsc.edu/cgi-bin/hgGateway?db=${id}`}>
+            UCSC assembly info
+          </a>
+        </li>
+      </ul>
+    </div>
+  </Container>
+</Layout>

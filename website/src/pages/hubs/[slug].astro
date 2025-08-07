@@ -1,0 +1,34 @@
+---
+import Layout from '../../layouts/Layout.astro'
+import Container2 from '../../components/Container2.astro'
+import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx'
+
+export async function getStaticPaths() {
+  const modules = import.meta.glob('../../../processedHubJson/*.json')
+  const paths = await Promise.all(
+    Object.entries(modules).map(async ([filepath, resolver]) => {
+      const { default: data } = await resolver()
+      const slug = filepath.split('/').pop().replace('.json', '')
+      return slug !== 'all'
+        ? {
+            params: { slug },
+            props: { rows: data },
+          }
+        : undefined
+    }),
+  )
+  return paths.filter(f => !!f)
+}
+
+const { slug } = Astro.params
+const { rows } = Astro.props
+
+const title = slug.charAt(0).toUpperCase() + slug.slice(1)
+---
+
+<Layout>
+  <Container2>
+    <h1>GenArk hubs - {title}</h1>
+    <ClientOnlyDataTable rows={rows} client:load />
+  </Container2>
+</Layout>

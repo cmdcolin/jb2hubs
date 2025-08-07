@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Container from '../components/Container.astro'
+import GenArk from '../components/GenArk.astro'
+import Table from '../components/ui/Table.astro'
+import TableBody from '../components/ui/TableBody.astro'
+import TableCell from '../components/ui/TableCell.astro'
+import TableHeader from '../components/ui/TableHeader.astro'
+import TableHeaderCell from '../components/ui/TableHeaderCell.astro'
+import TableRow from '../components/ui/TableRow.astro'
+import list from '../list.json'
+
+import '../components/table.css'
+
+const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
+---
+
+<Layout>
+  <Container>
+    <h1>JBrowse 2 genome hubs</h1>
+    <p>
+      This page has a variety of JBrowse 2 genome browsers created primarily by
+      bulk-loading data from the UCSC Genome Browser. For more information, see
+      the <a href="/about">about</a> page.
+    </p>
+    <div>
+      <h2>Main genome browsers</h2>
+
+      <p>
+        Here is a short list of human and mouse genomes, for more species{' '}
+        <a href="/ucsc">click here</a>
+      </p>
+
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell>Name</TableHeaderCell>
+            <TableHeaderCell>Scientific name</TableHeaderCell>
+            <TableHeaderCell>Organism</TableHeaderCell>
+            <TableHeaderCell>Description</TableHeaderCell>
+            <TableHeaderCell>JBrowse</TableHeaderCell>
+            <TableHeaderCell>UCSC</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {
+            Object.entries(list.ucscGenomes)
+              .filter(([key]) => s.has(key))
+              .map(([key, val]) => (
+                <TableRow key={key}>
+                  <TableCell>
+                    {key} (<a href={`/ucsc/${key}`}>info</a>)
+                  </TableCell>
+                  <TableCell>{val.scientificName}</TableCell>
+                  <TableCell>{val.organism}</TableCell>
+                  <TableCell>{val.description}</TableCell>
+                  <TableCell>
+                    <a
+                      href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/${key}/config.json`}
+                    >
+                      JBrowse
+                    </a>
+                  </TableCell>
+                  <TableCell>
+                    <a
+                      href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=${key}`}
+                    >
+                      UCSC
+                    </a>
+                  </TableCell>
+                </TableRow>
+              ))
+          }
+        </TableBody>
+      </Table>
+      <>
+        <ul>
+          <li>
+            <a href="/ucsc">Click here</a> for a more complete listing
+          </li>
+          <li>
+            <a
+              href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
+            >
+              Click here
+            </a>{' '}
+            for a single JBrowse 2 instance containing ALL the species
+          </li>
+        </ul>
+        <p>
+          Note that some tracks that are available at UCSC are not yet available
+          here, see{' '}
+          <a href="/unavailableTracks"> unavailable tracks </a>
+          .
+        </p>
+      </>
+    </div>
+
+    <div>
+      <h2>GenArk browsers</h2>
+      <p>
+        We also created JBrowse 2 instances based on the UCSC GenArk browser
+        resources, which is an effort to create genome browsers for numerous
+        plant, animal, and microbial species. See more below
+      </p>
+      <GenArk />
+    </div>
+  </Container>
+</Layout>
