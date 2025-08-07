@@ -1,0 +1,18 @@
+---
+const { href, rel, className, ...props } = Astro.props;
+---
+
+<a href={href} rel={rel} class={`styledLink ${className}`} {...props}>
+  <slot />
+</a>
+
+<style>
+.styledLink {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.styledLink:hover {
+    text-decoration: underline;
+}
+</style>

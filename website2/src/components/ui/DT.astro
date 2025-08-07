@@ -1,0 +1,12 @@
+---
+const { className, ...props } = Astro.props;
+---
+<dt class={`dt ${className}`} {...props}>
+  <slot />
+</dt>
+
+<style>
+.dt {
+    font-weight: bold;
+}
+</style>
