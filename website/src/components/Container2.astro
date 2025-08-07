@@ -17,7 +17,13 @@ const { className } = Astro.props
   }
 
   .content {
-    max-width: 90%;
+    max-width: 100%; /* Default for mobile */
     margin: 0 auto;
+  }
+
+  @media (min-width: 768px) { /* Adjust breakpoint as needed */
+    .content {
+      max-width: 90%;
+    }
   }
 </style>
