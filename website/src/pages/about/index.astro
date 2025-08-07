@@ -2,10 +2,6 @@
 import Layout from '../../layouts/Layout.astro'
 import Container from '../../components/Container.astro'
 import SelfLink from '../../components/SelfLink'
-import Italic from '../../components/ui/Italic.astro'
-import DL from '../../components/ui/DL.astro'
-import DT from '../../components/ui/DT.astro'
-import DD from '../../components/ui/DD.astro'
 ---
 
 <Layout>
@@ -14,9 +10,9 @@ import DD from '../../components/ui/DD.astro'
       <h2>About</h2>
       <p>
         The JBrowse 2 genome hubs were created by bulk importing UCSC data to
-        create annotation-rich JBrowse data resources. We created scripts
-        for parsing UCSC MySQL database dumps for the main UCSC genome browser
-        sets, and for converting hub.txt files to JBrowse config.json files for the
+        create annotation-rich JBrowse data resources. We created scripts for
+        parsing UCSC MySQL database dumps for the main UCSC genome browser sets,
+        and for converting hub.txt files to JBrowse config.json files for the
         GenArk configs
       </p>
     </div>
@@ -24,74 +20,80 @@ import DD from '../../components/ui/DD.astro'
     <div>
       <h2>Citing resources</h2>
       <p>
-        To reference this resource, please cite:{' '}
-        <Italic>
+        If you use these resources in your publication, please consider citing:
+      </p>
+      <ul>
+        <li>
           JBrowse 2: a modular genome browser with views of synteny and
           structural variation. Genome Biology (2023).
           <SelfLink href="https://doi.org/10.1186/s13059-023-02914-z" />
-        </Italic>
-      </p>
+        </li>
 
-      <p>
-        To reference UCSC GenArk resources in publications, please cite:{' '}
-        <Italic>
-          GenArk: towards a million UCSC genome browsers. Genome Biology (2023).{
-            ' '
-          }
-          <SelfLink href="https://doi.org/10.1186/s13059-023-03057-x" />
-        </Italic>
-      </p>
+        <li>
+          GenArk: towards a million UCSC genome browsers. Genome Biology (2023). <SelfLink
+            href="https://doi.org/10.1186/s13059-023-03057-x"
+          />
+        </li>
+      </ul>
     </div>
     <div>
       <h2>Further resources</h2>
-      <p>
-        To reference other UCSC resources and tools, please see this page:{' '}
-        <SelfLink href="https://genome.ucsc.edu/cite.html" />
-      </p>
-      <p>
-        To reference the data for species of the main UCSC genome browse, please
-        see this page:
-        <SelfLink href="https://genome.ucsc.edu/goldenpath/credits.html" />
-      </p>
-      <p
-        >For information about the licensing of data and code resources from
-        UCSC see <SelfLink href="https://genome.ucsc.edu/license/" /></p
-      >
-      <p>
-        Finally, we want to sincerely thank the UCSC Genome Browser team for
-        their great work and open licensing of data resources
-      </p>
+      <ul>
+        <li>
+          Further citations for UCSC resources:{' '}
+          <SelfLink href="https://genome.ucsc.edu/cite.html" />
+        </li>
+        <li>
+          Credits for individual UCSC species:
+          <SelfLink href="https://genome.ucsc.edu/goldenpath/credits.html" />
+        </li>
+        <li>
+          License of UCSC data and resources: <SelfLink
+            href="https://genome.ucsc.edu/license/"
+          />
+        </li>
+      </ul>
     </div>
+
     <div>
       <div>
         <h2>FAQ</h2>
-        <DL>
-          <DT> Why not use the UCSC REST ApI? </DT>
-          <DD>
+        <dl>
+          <dt>Why not use the UCSC REST API?</dt>
+          <dd>
             Using bulk import gives us more control and allows us to create a
             native JBrowse 2 experience instead of designing an extensive
-            compatibility layer. The UCSC REST ApI is rate limited and also not
+            compatibility layer. The UCSC REST API is rate limited and also not
             comprehensive for all the types of data we want to access
-          </DD>
-        </DL>
-        <DL>
-          <DT> Why note parse the track hub (hub.txt) files directly? </DT>
-          <DD>
+          </dd>
+        </dl>
+        <dl>
+          <dt>Why not parse the track hub (hub.txt) files directly?</dt>
+          <dd>
             UCSC does not have hub.txt files for their main browsers, like hg19
             and hg38, so adding a bulk import process was the easiest way to
             make browsers with access to their datasets
-          </DD>
-        </DL>
+          </dd>
+        </dl>
+      </div>
+      <div>
+        <h2>Thanks!</h2>
+        <p>
+          We want to sincerely thank the UCSC Genome Browser team for their
+          great work and open licensing of data resources
+        </p>
       </div>
       <h2>Contact</h2>
       <p>
-      Feel free to contact or report issues, the main github repo for this project is here{' '}
+        Feel free to contact or report issues, the main github repo for this
+        project is here{' '}
         <SelfLink href="https://github.com/cmdcolin/jb2hubs/" />
       </p>
-      <p
-        >More contact info here <SelfLink href="https://jbrowse.org/jb2/contact/"/>
+      <p>
+        More contact info here <SelfLink
+          href="https://jbrowse.org/jb2/contact/"
+        />
       </p>
     </div>
   </Container>
 </Layout>
-

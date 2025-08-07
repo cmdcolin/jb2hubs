@@ -1,11 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Container from '../../components/Container.astro'
-import H1 from '../../components/ui/H1.astro'
-import H2 from '../../components/ui/H2.astro'
-import UL from '../../components/ui/UL.astro'
-import LI from '../../components/ui/LI.astro'
-import a from '../../components/ui/a.astro'
 import { loadAccessionMap, tryAndReadJSON } from '../../utils/accessionData.js'
 import path from 'path'
 
@@ -51,7 +46,7 @@ const { imageUrl, pageUrl } =
 <Layout>
   <Container>
     <div>
-      <H1>{scientificName}</H1>
+      <h1>{scientificName}</h1>
       <div>
         <b>Accession:</b>
         {ret.accession}
@@ -71,11 +66,7 @@ const { imageUrl, pageUrl } =
             <figure class="figure">
               <img src={imageUrl} class="image" />
               <figcaption>
-                {pageUrl ? (
-                  <a href={pageUrl}>(source)</a>
-                ) : (
-                  'no link'
-                )}
+                {pageUrl ? <a href={pageUrl}>(source)</a> : 'no link'}
               </figcaption>
             </figure>
           </div>
@@ -83,53 +74,51 @@ const { imageUrl, pageUrl } =
       }
     </div>
     <div>
-      <H2>Genome browsers</H2>
-      <UL>
-        <LI>
+      <h2>Genome browsers</h2>
+      <ul>
+        <li>
           <a href={jbrowseLink}>JBrowse</a>
-        </LI>
-        <LI>
+        </li>
+        <li>
           <a href={igvBrowserLink}>IGV.js</a>
-        </LI>
-        <LI>
+        </li>
+        <li>
           <a href={ncbiBrowserLink}> NCBI browser (GDV) </a>
-        </LI>
-        <LI>
+        </li>
+        <li>
           <a href={ucscBrowserLink}>UCSC browser</a>
-        </LI>
-      </UL>
+        </li>
+      </ul>
     </div>
     <div>
-      <H2>Portals/data downloads</H2>
-      <UL>
-        <LI>
+      <h2>Portals/data downloads</h2>
+      <ul>
+        <li>
           <a href={ucscDataLink}>UCSC data folder</a>
-        </LI>
-        <LI>
+        </li>
+        <li>
           <a href={ncbiLink}>NCBI assembly page</a>
-        </LI>
-        <LI>
+        </li>
+        <li>
           <a
             href={`https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${taxonId}/`}
           >
             NCBI taxonomy page
           </a>
-        </LI>
-        <LI>
+        </li>
+        <li>
           <a
             href={`https://www.google.com/search?q=${encodeURIComponent(scientificName)}`}
           >
             Google AI overview
           </a>
-        </LI>
-      </UL>
+        </li>
+      </ul>
     </div>
   </Container>
 </Layout>
 
 <style>
-
-
   .imageContainer {
     float: right;
     margin-left: 1.5rem;

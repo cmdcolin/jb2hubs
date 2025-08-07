@@ -4,20 +4,20 @@ import Container2 from '../../components/Container2.astro'
 import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx'
 
 export async function getStaticPaths() {
-  const modules = import.meta.glob(
-    '../../../processedHubJson/*.json',
-  )
+  const modules = import.meta.glob('../../../processedHubJson/*.json')
   const paths = await Promise.all(
     Object.entries(modules).map(async ([filepath, resolver]) => {
       const { default: data } = await resolver()
       const slug = filepath.split('/').pop().replace('.json', '')
-      return slug!=='all'?{
-        params: { slug },
-        props: { rows: data },
-      }:undefined
+      return slug !== 'all'
+        ? {
+            params: { slug },
+            props: { rows: data },
+          }
+        : undefined
     }),
   )
-  return paths.filter(f=>!!f)
+  return paths.filter(f => !!f)
 }
 
 const { slug } = Astro.params
