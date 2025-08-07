@@ -44,7 +44,6 @@ const [basePrefix, restOfAccession] = accession.split('_')
 const [part1, part2, part3] = restOfAccession.match(/.{1,3}/g)
 const hubBasePath = `../hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}/image.json`
 
-console.log('wtf',path.join(process.cwd(), hubBasePath))
 
 const { imageUrl, pageUrl } =
   (await tryAndReadJSON(path.join(process.cwd(), hubBasePath))) ||
@@ -85,7 +84,6 @@ const { imageUrl, pageUrl } =
         ) : null
       }
     </div>
-
     <div>
       <H2>Genome browsers</H2>
       <UL>
@@ -129,4 +127,27 @@ const { imageUrl, pageUrl } =
       </UL>
     </div>
   </Container2>
-</Layout>
+  </Layout>
+
+<style>
+  .relative {
+    position: relative;
+  }
+
+  .imageContainer {
+    float: right;
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    max-width: 20rem;
+  }
+
+  .figure {
+    margin: 0;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+</style>
+
+
