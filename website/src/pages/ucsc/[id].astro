@@ -1,24 +1,24 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import Container from '../../components/Container.astro';
-import StyledLink from '../../components/ui/StyledLink.astro';
-import UL from '../../components/ui/UL.astro';
-import LI from '../../components/ui/LI.astro';
-import H1 from '../../components/ui/H1.astro';
-import H2 from '../../components/ui/H2.astro';
-import list from '../../list.json';
+import Layout from '../../layouts/Layout.astro'
+import Container from '../../components/Container.astro'
+import StyledLink from '../../components/ui/StyledLink.astro'
+import UL from '../../components/ui/UL.astro'
+import LI from '../../components/ui/LI.astro'
+import H1 from '../../components/ui/H1.astro'
+import H2 from '../../components/ui/H2.astro'
+import list from '../../list.json'
 
 export async function getStaticPaths() {
-  return Object.keys(list.ucscGenomes).map((id) => ({
+  return Object.keys(list.ucscGenomes).map(id => ({
     params: { id },
     props: { ret: list.ucscGenomes[id] },
-  }));
+  }))
 }
 
-const { id } = Astro.params;
-const { ret } = Astro.props;
+const { id } = Astro.params
+const { ret } = Astro.props
 
-const title = id;
+const title = id
 ---
 
 <Layout title={title}>
@@ -27,13 +27,16 @@ const title = id;
       <H1>{ret.scientificName}</H1>
 
       <div>
-        <b>Description:</b> {ret.description}
+        <b>Description:</b>
+        {ret.description}
       </div>
       <div>
-        <b>Assembly name:</b> {id}
+        <b>Assembly name:</b>
+        {id}
       </div>
       <div>
-        <b>Common name:</b> {ret.organism}
+        <b>Common name:</b>
+        {ret.organism}
       </div>
     </div>
 

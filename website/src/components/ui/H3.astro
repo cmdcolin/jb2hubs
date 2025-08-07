@@ -1,14 +1,15 @@
 ---
-const { className, ...props } = Astro.props;
+const { className, ...props } = Astro.props
 ---
+
 <h3 class={`h3 ${className}`} {...props}>
   <slot />
 </h3>
 
 <style>
-.h3 {
+  .h3 {
     font-size: 1.75rem;
     font-weight: bold;
     margin-bottom: 1rem;
-}
+  }
 </style>

@@ -1,12 +1,13 @@
 ---
-const { className, ...props } = Astro.props;
+const { className, ...props } = Astro.props
 ---
+
 <dl class={`dl ${className}`} {...props}>
   <slot />
 </dl>
 
 <style>
-.dl {
+  .dl {
     margin-bottom: 1rem;
-}
+  }
 </style>

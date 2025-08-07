@@ -1,12 +1,13 @@
 ---
-const { className, ...props } = Astro.props;
+const { className, ...props } = Astro.props
 ---
+
 <i class={`italic ${className}`} {...props}>
   <slot />
 </i>
 
 <style>
-.italic {
+  .italic {
     font-style: italic;
-}
+  }
 </style>

@@ -1,12 +1,13 @@
 ---
-const { className, ...props } = Astro.props;
+const { className, ...props } = Astro.props
 ---
+
 <dd class={`dd ${className}`} {...props}>
   <slot />
 </dd>
 
 <style>
-.dd {
+  .dd {
     margin-left: 20px;
-}
+  }
 </style>

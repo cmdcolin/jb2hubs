@@ -1,6 +1,7 @@
 ---
-const { className, ...props } = Astro.props;
+const { className, ...props } = Astro.props
 ---
+
 <tbody class={className} {...props}>
   <slot />
 </tbody>

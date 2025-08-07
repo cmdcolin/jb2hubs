@@ -1,5 +1,5 @@
 ---
-const { href, className, variant = 'primary', ...props } = Astro.props;
+const { href, className, variant = 'primary', ...props } = Astro.props
 ---
 
 <a href={href} class={`buttonLink ${variant} ${className}`} {...props}>
@@ -7,7 +7,7 @@ const { href, className, variant = 'primary', ...props } = Astro.props;
 </a>
 
 <style>
-.buttonLink {
+  .buttonLink {
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
@@ -15,16 +15,16 @@ const { href, className, variant = 'primary', ...props } = Astro.props;
     color: #fff;
     background-color: #007bff;
     border: 1px solid #007bff;
-}
+  }
 
-.buttonLink.secondary {
+  .buttonLink.secondary {
     background-color: #6c757d;
     border-color: #6c757d;
-}
+  }
 
-.buttonLink.outline {
+  .buttonLink.outline {
     color: #007bff;
     background-color: transparent;
     border-color: #007bff;
-}
+  }
 </style>

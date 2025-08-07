@@ -1,13 +1,14 @@
 ---
-const { className, ...props } = Astro.props;
+const { className, ...props } = Astro.props
 ---
+
 <table class={`table ${className}`} {...props}>
   <slot />
 </table>
 
 <style>
-.table {
+  .table {
     width: 100%;
     border-collapse: collapse;
-}
+  }
 </style>

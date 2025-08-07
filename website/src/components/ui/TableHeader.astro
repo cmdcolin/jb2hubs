@@ -1,12 +1,13 @@
 ---
-const { className, ...props } = Astro.props;
+const { className, ...props } = Astro.props
 ---
+
 <thead class={`tableHeader ${className}`} {...props}>
   <slot />
 </thead>
 
 <style>
-.tableHeader {
+  .tableHeader {
     background-color: #f8f9fa;
-}
+  }
 </style>
