@@ -1,0 +1,78 @@
+.searchHighlight {
+  background-color: yellow;
+}
+
+.searchContainer {
+  margin-bottom: 1rem;
+}
+
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.5rem;
+  color: #666;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.clearButton {
+  position: absolute;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.paginationButton {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.paginationButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  margin: 0 0.5rem;
+}
+
+.pageSizeSelector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageSizeSelect {
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.rowCount {
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}

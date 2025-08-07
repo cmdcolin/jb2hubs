@@ -1,0 +1,31 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { SEO } from 'astro-seo';
+
+import type { Props } from '@astrojs/starlight/props';
+
+import Header from '../components/Header.astro';
+
+const { frontmatter } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
+		<SEO
+			title={frontmatter?.title ?? 'JBrowse 2 genome browser hubs'}
+			description={frontmatter?.description ?? 'JBrowse 2 genome browser hubs'}
+		/>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<slot />
+		</main>
+	</body>
+</html>

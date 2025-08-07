@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Container2 from '../../components/Container2.astro';
+import H1 from '../../components/ui/H1.astro';
+import H2 from '../../components/ui/H2.astro';
+import UL from '../../components/ui/UL.astro';
+import LI from '../../components/ui/LI.astro';
+import StyledLink from '../../components/ui/StyledLink.astro';
+import { loadAccessionMap, tryAndReadJSON } from '../../utils/accessionData.js';
+import path from 'path';
+
+export async function getStaticPaths() {
+  const accessions = loadAccessionMap();
+  return [...accessions.keys()]
+    .filter(r => !!r)
+    .map(r => ({ params: { id: r } }));
+}
+
+const { id } = Astro.params;
+const ret = loadAccessionMap().get(id as string);
+
+if (!ret) {
+  // Astro handles 404s for paths not returned by getStaticPaths
+  // For direct access, you might want a custom 404 page or redirect
+  // For now, we'll just show a message.
+  throw new Error(`Accession not found: ${id}`);
+}
+
+const { accession, scientificName, ncbiAssemblyName, commonName, jbrowseLink, igvBrowserLink, ncbiBrowserLink, ucscBrowserLink, ucscDataLink, ncbiLink, taxonId } = ret;
+
+const [basePrefix, restOfAccession] = accession.split('_');
+const [part1, part2, part3] = restOfAccession.match(/.{1,3}/g);
+const hubBasePath = `processedHubJson/${basePrefix}/${part1}/${part2}/${part3}/${accession}`;
+
+const { imageUrl, pageUrl } = await tryAndReadJSON(path.join(process.cwd(), hubBasePath, 'image.json')) || {};
+
+---
+
+<Layout>
+  <Container2>
+    <div>
+      <H1>{scientificName}</H1>
+      <div>
+        <b>Accession:</b> {ret.accession}
+      </div>
+      <div>
+        <b>Assembly name:</b> {ret.ncbiAssemblyName}
+      </div>
+      <div>
+        <b>Common name:</b> {ret.commonName}
+      </div>
+
+      {imageUrl ? (
+        <div class="imageContainer">
+          <figure class="figure">
+            <img src={imageUrl} class="image" />
+            <figcaption>
+              {pageUrl ? (
+                <StyledLink href={pageUrl}>(source)</StyledLink>
+              ) : (
+                'no link'
+              )}
+            </figcaption>
+          </figure>
+        </div>
+      ) : null}
+    </div>
+
+    <div>
+      <H2>Genome browsers</H2>
+      <UL>
+        <LI>
+          <StyledLink href={jbrowseLink}>JBrowse</StyledLink>
+        </LI>
+        <LI>
+          <StyledLink href={igvBrowserLink}>IGV.js</StyledLink>
+        </LI>
+        <LI>
+          <StyledLink href={ncbiBrowserLink}>
+            NCBI browser (GDV)
+          </StyledLink>
+        </LI>
+        <LI>
+          <StyledLink href={ucscBrowserLink}>UCSC browser</StyledLink>
+        </LI>
+      </UL>
+    </div>
+    <div>
+      <H2>Portals/data downloads</H2>
+      <UL>
+        <LI>
+          <StyledLink href={ucscDataLink}>UCSC data folder</StyledLink>
+        </LI>
+        <LI>
+          <StyledLink href={ncbiLink}>NCBI assembly page</StyledLink>
+        </LI>
+        <LI>
+          <StyledLink
+            href={`https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${taxonId}/`}
+          >
+            NCBI taxonomy page
+          </StyledLink>
+        </LI>
+        <LI>
+          <StyledLink
+            href={`https://www.google.com/search?q=${encodeURIComponent(scientificName)}`}
+          >
+            Google AI overview
+          </StyledLink>
+        </LI>
+      </UL>
+    </div>
+  </Container2>
+</Layout>
