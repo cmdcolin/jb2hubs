@@ -8,7 +8,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
-import { StyledLink } from './ui/react-wrappers/Link.jsx'
+import { a } from './ui/react-wrappers/Link.jsx'
 import {
   Table,
   TableBody,
@@ -43,7 +43,7 @@ export default function UCSCTable({ list }) {
         cell: info => (
           <div>
             {info.getValue()} (
-            <StyledLink href={`/ucsc/${info.getValue()}`}>info</StyledLink>)
+            <a href={`/ucsc/${info.getValue()}`}>info</a>)
           </div>
         ),
       }),
@@ -61,11 +61,11 @@ export default function UCSCTable({ list }) {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => <StyledLink href={info.getValue()}>JBrowse</StyledLink>,
+        cell: info => <a href={info.getValue()}>JBrowse</a>,
       }),
       columnHelper.accessor('ucscLink2', {
         header: 'UCSC',
-        cell: info => <StyledLink href={info.getValue()}>UCSC</StyledLink>,
+        cell: info => <a href={info.getValue()}>UCSC</a>,
       }),
     ],
     [columnHelper],

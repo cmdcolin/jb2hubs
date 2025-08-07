@@ -1,6 +1,6 @@
 ---
 import { hubCategories } from 'hubtools'
-import StyledLink from './ui/StyledLink.astro'
+import a from './ui/a.astro'
 ---
 
 <table>
@@ -17,7 +17,7 @@ import StyledLink from './ui/StyledLink.astro'
         .map(elt => (
           <tr key={elt.id}>
             <td>
-              <StyledLink href={`/hubs/${elt.id}`}>{elt.id}</StyledLink>
+              <a href={`/hubs/${elt.id}`}>{elt.id}</a>
             </td>
             <td>{elt.description}</td>
           </tr>

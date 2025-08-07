@@ -4,7 +4,6 @@ import { createColumnHelper } from '@tanstack/react-table'
 
 import OrangeStar from '../../OrangeStar.jsx'
 import RedX from '../../RedX.jsx'
-import { StyledLink } from '../../ui/react-wrappers/Link.jsx'
 import { statusOrder } from '../utils.js'
 import { highlightText } from '../utils/highlightText.jsx'
 import styles from './useTableColumns.module.css'
@@ -31,12 +30,7 @@ export function useTableColumns({ searchQuery = '' } = {}) {
         cell: info => (
           <>
             {highlightText(info.getValue() || '', searchQuery)}{' '}
-            <StyledLink
-              href={`/accession/${info.row.original.accession}`}
-              rel="noopener noreferrer"
-            >
-              (info)
-            </StyledLink>{' '}
+            <a href={`/accession/${info.row.original.accession}`}>(info)</a>{' '}
             {info.row.original.ncbiRefSeqCategory === 'reference genome' ? (
               <OrangeStar />
             ) : null}
@@ -47,7 +41,7 @@ export function useTableColumns({ searchQuery = '' } = {}) {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => <StyledLink href={info.getValue()}>JBrowse</StyledLink>,
+        cell: info => <a href={info.getValue()}>JBrowse</a>,
         enableSorting: false,
       }),
 

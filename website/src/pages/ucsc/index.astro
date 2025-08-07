@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Container from '../../components/Container.astro'
-import StyledLink from '../../components/ui/StyledLink.astro'
+import a from '../../components/ui/a.astro'
 import H1 from '../../components/ui/H1.astro'
 import P from '../../components/ui/P.astro'
 import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx'
@@ -19,11 +19,11 @@ import '../../components/table.css'
         UCSC genome browser, converted into a format that JBrowse 2 can load
       </P>
       <P>
-        <StyledLink
+        <a
           href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
         >
           Click here
-        </StyledLink>{' '}
+        </a>{' '}
         for single JBrowse 2 instance containing ALL the species
       </P>
     </div>

@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Container from '../../components/Container.astro'
-import StyledLink from '../../components/ui/StyledLink.astro'
+import a from '../../components/ui/a.astro'
 import UL from '../../components/ui/UL.astro'
 import LI from '../../components/ui/LI.astro'
 import H1 from '../../components/ui/H1.astro'
@@ -44,18 +44,18 @@ const title = id
       <H2>Genome browsers</H2>
       <UL>
         <LI>
-          <StyledLink
+          <a
             href={`https://jbrowse.org/code/jb2/main/?config=https://jbrowse.org/ucsc/${id}/config.json`}
           >
             JBrowse
-          </StyledLink>
+          </a>
         </LI>
         <LI>
-          <StyledLink
+          <a
             href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=${id}`}
           >
             UCSC
-          </StyledLink>
+          </a>
         </LI>
       </UL>
     </div>
@@ -64,11 +64,11 @@ const title = id
       <H2>Portals/data downloads</H2>
       <UL>
         <LI>
-          <StyledLink
+          <a
             href={`https://genome.ucsc.edu/cgi-bin/hgGateway?db=${id}`}
           >
             UCSC assembly info
-          </StyledLink>
+          </a>
         </LI>
       </UL>
     </div>

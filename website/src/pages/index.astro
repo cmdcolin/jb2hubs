@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import Container from '../components/Container.astro'
 import GenArk from '../components/GenArk.astro'
-import StyledLink from '../components/ui/StyledLink.astro'
+import a from '../components/ui/a.astro'
 import UL from '../components/ui/UL.astro'
 import LI from '../components/ui/LI.astro'
 import Table from '../components/ui/Table.astro'
@@ -27,14 +27,14 @@ const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
     <P>
       This page has a variety of JBrowse 2 genome browsers created primarily by
       bulk-loading dtaa from the UCSC Genome Browser. For more information, see
-      the <StyledLink href="/about">about</StyledLink> page.
+      the <a href="/about">about</a> page.
     </P>
     <div>
       <H2>Main genome browsers</H2>
 
       <P>
         Here is a short list of human and mouse genomes, for more species{' '}
-        <StyledLink href="/ucsc">click here</StyledLink>
+        <a href="/ucsc">click here</a>
       </P>
 
       <Table>
@@ -55,24 +55,24 @@ const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
               .map(([key, val]) => (
                 <TableRow key={key}>
                   <TableCell>
-                    {key} (<StyledLink href={`/ucsc/${key}`}>info</StyledLink>)
+                    {key} (<a href={`/ucsc/${key}`}>info</a>)
                   </TableCell>
                   <TableCell>{val.scientificName}</TableCell>
                   <TableCell>{val.organism}</TableCell>
                   <TableCell>{val.description}</TableCell>
                   <TableCell>
-                    <StyledLink
+                    <a
                       href={`https://jbrowse.org/code/jb2/main/?config=/ucsc/${key}/config.json`}
                     >
                       JBrowse
-                    </StyledLink>
+                    </a>
                   </TableCell>
                   <TableCell>
-                    <StyledLink
+                    <a
                       href={`https://genome.ucsc.edu/cgi-bin/hgTracks?db=${key}`}
                     >
                       UCSC
-                    </StyledLink>
+                    </a>
                   </TableCell>
                 </TableRow>
               ))
@@ -82,24 +82,24 @@ const s = new Set(['hg38', 'hg19', 'hs1', 'mm39', 'mm10'])
       <>
         <UL>
           <LI>
-            <StyledLink href="/ucsc">Click here</StyledLink> for a more complete
+            <a href="/ucsc">Click here</a> for a more complete
             listing
           </LI>
           <LI>
-            <StyledLink
+            <a
               href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json"
             >
               Click here
-            </StyledLink>{' '}
+            </a>{' '}
             for single JBrowse 2 instance containing ALL the species
           </LI>
         </UL>
         <P>
           Note that some tracks that are available at UCSC are not yet available
           here, see{' '}
-          <StyledLink href="/unavailableTracks">
+          <a href="/unavailableTracks">
             unavailable tracks
-          </StyledLink>
+          </a>
           .
         </P>
       </>

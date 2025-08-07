@@ -2,7 +2,7 @@
 import Layout from '../../layouts/Layout.astro'
 import { dedupe } from 'hubtools'
 import Container from '../../components/Container.astro'
-import StyledLink from '../../components/ui/StyledLink.astro'
+import a from '../../components/ui/a.astro'
 import UL from '../../components/ui/UL.astro'
 import LI from '../../components/ui/LI.astro'
 import H3 from '../../components/ui/H3.astro'
@@ -26,9 +26,9 @@ const dedupedFiles = []
     <H3>Unavailable tracks</H3>
     <P>
       This is a list of files that are available at UCSC, but which we were not
-      able to ping. See <StyledLink href="https://genome.ucsc.edu/license/">
+      able to ping. See <a href="https://genome.ucsc.edu/license/">
         https://genome.ucsc.edu/license/
-      </StyledLink> for more info. Most of these fall under this restriction category:
+      </a> for more info. Most of these fall under this restriction category:
       "Certain genome annotation data, mostly on the human genome and in the domain
       of clinical genetics, have specific restrictions. For some of these, we are
       not allowed to make the data available. Usually the data must be obtained from

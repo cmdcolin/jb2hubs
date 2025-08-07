@@ -5,7 +5,7 @@ import H1 from '../../components/ui/H1.astro'
 import H2 from '../../components/ui/H2.astro'
 import UL from '../../components/ui/UL.astro'
 import LI from '../../components/ui/LI.astro'
-import StyledLink from '../../components/ui/StyledLink.astro'
+import a from '../../components/ui/a.astro'
 import { loadAccessionMap, tryAndReadJSON } from '../../utils/accessionData.js'
 import path from 'path'
 
@@ -72,7 +72,7 @@ const { imageUrl, pageUrl } =
               <img src={imageUrl} class="image" />
               <figcaption>
                 {pageUrl ? (
-                  <StyledLink href={pageUrl}>(source)</StyledLink>
+                  <a href={pageUrl}>(source)</a>
                 ) : (
                   'no link'
                 )}
@@ -86,16 +86,16 @@ const { imageUrl, pageUrl } =
       <H2>Genome browsers</H2>
       <UL>
         <LI>
-          <StyledLink href={jbrowseLink}>JBrowse</StyledLink>
+          <a href={jbrowseLink}>JBrowse</a>
         </LI>
         <LI>
-          <StyledLink href={igvBrowserLink}>IGV.js</StyledLink>
+          <a href={igvBrowserLink}>IGV.js</a>
         </LI>
         <LI>
-          <StyledLink href={ncbiBrowserLink}> NCBI browser (GDV) </StyledLink>
+          <a href={ncbiBrowserLink}> NCBI browser (GDV) </a>
         </LI>
         <LI>
-          <StyledLink href={ucscBrowserLink}>UCSC browser</StyledLink>
+          <a href={ucscBrowserLink}>UCSC browser</a>
         </LI>
       </UL>
     </div>
@@ -103,24 +103,24 @@ const { imageUrl, pageUrl } =
       <H2>Portals/data downloads</H2>
       <UL>
         <LI>
-          <StyledLink href={ucscDataLink}>UCSC data folder</StyledLink>
+          <a href={ucscDataLink}>UCSC data folder</a>
         </LI>
         <LI>
-          <StyledLink href={ncbiLink}>NCBI assembly page</StyledLink>
+          <a href={ncbiLink}>NCBI assembly page</a>
         </LI>
         <LI>
-          <StyledLink
+          <a
             href={`https://www.ncbi.nlm.nih.gov/datasets/taxonomy/${taxonId}/`}
           >
             NCBI taxonomy page
-          </StyledLink>
+          </a>
         </LI>
         <LI>
-          <StyledLink
+          <a
             href={`https://www.google.com/search?q=${encodeURIComponent(scientificName)}`}
           >
             Google AI overview
-          </StyledLink>
+          </a>
         </LI>
       </UL>
     </div>
