@@ -1,10 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Container from '../../components/Container.astro'
-import a2 from '../../components/ui/a2.astro'
-import H1 from '../../components/ui/H1.astro'
-import H2 from '../../components/ui/H2.astro'
-import P from '../../components/ui/P.astro'
+import SelfLink from '../../components/SelfLink'
 import Italic from '../../components/ui/Italic.astro'
 import DL from '../../components/ui/DL.astro'
 import DT from '../../components/ui/DT.astro'
@@ -14,67 +11,66 @@ import DD from '../../components/ui/DD.astro'
 <Layout>
   <Container>
     <div>
-      <H2>About</H2>
-      <P>
+      <h2>About</h2>
+      <p>
         The JBrowse 2 genome hubs were created by bulk importing UCSC data to
-        create annotation-rich JBrowse data resources. We created scripts (
-        <a2 href="https://github.com/cmdcolin/jb2hubs/" />
-        ) for parsing UCSC MySQL database dumps for the main UCSC genome browser
+        create annotation-rich JBrowse data resources. We created scripts
+        for parsing UCSC MySQL database dumps for the main UCSC genome browser
         sets, and for converting hub.txt files to JBrowse config.json files for the
         GenArk configs
-      </P>
+      </p>
     </div>
 
     <div>
-      <H2>Citing resources</H2>
-      <P>
+      <h2>Citing resources</h2>
+      <p>
         To reference this resource, please cite:{' '}
         <Italic>
           JBrowse 2: a modular genome browser with views of synteny and
           structural variation. Genome Biology (2023).
-          <a2 href="https://doi.org/10.1186/s13059-023-02914-z" />
+          <SelfLink href="https://doi.org/10.1186/s13059-023-02914-z" />
         </Italic>
-      </P>
+      </p>
 
-      <P>
+      <p>
         To reference UCSC GenArk resources in publications, please cite:{' '}
         <Italic>
           GenArk: towards a million UCSC genome browsers. Genome Biology (2023).{
             ' '
           }
-          <a2 href="https://doi.org/10.1186/s13059-023-03057-x" />
+          <SelfLink href="https://doi.org/10.1186/s13059-023-03057-x" />
         </Italic>
-      </P>
+      </p>
     </div>
     <div>
-      <H2>Further resources</H2>
-      <P>
+      <h2>Further resources</h2>
+      <p>
         To reference other UCSC resources and tools, please see this page:{' '}
-        <a2 href="https://genome.ucsc.edu/cite.html" />
-      </P>
-      <P>
+        <SelfLink href="https://genome.ucsc.edu/cite.html" />
+      </p>
+      <p>
         To reference the data for species of the main UCSC genome browse, please
         see this page:
-        <a2 href="https://genome.ucsc.edu/goldenPath/credits.html" />
-      </P>
-      <P
+        <SelfLink href="https://genome.ucsc.edu/goldenpath/credits.html" />
+      </p>
+      <p
         >For information about the licensing of data and code resources from
-        UCSC see <a2 href="https://genome.ucsc.edu/license/" /></P
+        UCSC see <SelfLink href="https://genome.ucsc.edu/license/" /></p
       >
-      <P>
+      <p>
         Finally, we want to sincerely thank the UCSC Genome Browser team for
         their great work and open licensing of data resources
-      </P>
+      </p>
     </div>
     <div>
       <div>
-        <H2>FAQ</H2>
+        <h2>FAQ</h2>
         <DL>
-          <DT> Why not use the UCSC REST API? </DT>
+          <DT> Why not use the UCSC REST ApI? </DT>
           <DD>
             Using bulk import gives us more control and allows us to create a
             native JBrowse 2 experience instead of designing an extensive
-            compatibility layer. The UCSC REST API is rate limited and also not
+            compatibility layer. The UCSC REST ApI is rate limited and also not
             comprehensive for all the types of data we want to access
           </DD>
         </DL>
@@ -87,26 +83,15 @@ import DD from '../../components/ui/DD.astro'
           </DD>
         </DL>
       </div>
-      <H2>Contact</H2>
-      <P>
-        Feel free to contact or report issues see{' '}
-        <a2 href="https://github.com/cmdcolin/jb2hubs/" />
-      </P>
-      <P
-        >More contact info here <a2
-          href="https://jbrowse.org/jb2/contact/"
-        /></P
-      >
+      <h2>Contact</h2>
+      <p>
+      Feel free to contact or report issues, the main github repo for this project is here{' '}
+        <SelfLink href="https://github.com/cmdcolin/jb2hubs/" />
+      </p>
+      <p
+        >More contact info here <SelfLink href="https://jbrowse.org/jb2/contact/"/>
+      </p>
     </div>
   </Container>
 </Layout>
 
-<style>
-  .contact {
-    margin-top: 2rem;
-    padding-top: 1rem;
-    border-top: 1px solid #eee;
-    font-size: 0.9rem;
-    color: #666;
-  }
-</style>

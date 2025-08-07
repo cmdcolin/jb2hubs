@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro'
-import Container2 from '../../components/Container2.astro'
+import Container from '../../components/Container.astro'
 import H1 from '../../components/ui/H1.astro'
 import H2 from '../../components/ui/H2.astro'
 import UL from '../../components/ui/UL.astro'
@@ -49,7 +49,7 @@ const { imageUrl, pageUrl } =
 ---
 
 <Layout>
-  <Container2>
+  <Container>
     <div>
       <H1>{scientificName}</H1>
       <div>
@@ -124,13 +124,11 @@ const { imageUrl, pageUrl } =
         </LI>
       </UL>
     </div>
-  </Container2>
+  </Container>
 </Layout>
 
 <style>
-  .relative {
-    position: relative;
-  }
+
 
   .imageContainer {
     float: right;

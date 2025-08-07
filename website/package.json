@@ -4,10 +4,16 @@
   "private": true,
   "version": "0.0.1",
   "scripts": {
+    "clean": "rm -rf dist",
+    "prebuild": "yarn clean",
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "sync": "aws s3 sync dist s3://genomes.jbrowse.org/ --size-only",
+    "deploy": "yarn sync",
+    "postdeploy": "AWS_PAGER=\"\" aws cloudfront  create-invalidation --distribution-id E12EBG02P68TDO --paths \"/*\"",
+    "predeploy": "yarn build"
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",

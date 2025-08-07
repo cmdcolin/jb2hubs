@@ -5,19 +5,19 @@ import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx'
 
 export async function getStaticPaths() {
   const modules = import.meta.glob(
-    '../../../../website/processedHubJson/*.json',
+    '../../../processedHubJson/*.json',
   )
   const paths = await Promise.all(
     Object.entries(modules).map(async ([filepath, resolver]) => {
       const { default: data } = await resolver()
       const slug = filepath.split('/').pop().replace('.json', '')
-      return {
+      return slug!=='all'?{
         params: { slug },
         props: { rows: data },
-      }
+      }:undefined
     }),
   )
-  return paths
+  return paths.filter(f=>!!f)
 }
 
 const { slug } = Astro.params
