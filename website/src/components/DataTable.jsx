@@ -4,6 +4,7 @@ import {
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
+  flexRender,
 } from '@tanstack/react-table'
 import { Search } from 'lucide-react'
 
@@ -19,6 +20,7 @@ import TableOptions from './TableOptions.jsx'
 import styles from './DataTable.module.css'
 
 export default function DataTable({ rows }) {
+  console.log({ rows })
   const [pagination, setPagination] = useState({
     pageIndex: 0,
     pageSize: 200,
@@ -87,13 +89,39 @@ export default function DataTable({ rows }) {
 
       <div>
         <table className={styles.dataTable}>
-          <TableHeader
-            headerGroups={table.getHeaderGroups()}
-            handleSort={handleSort}
-            sortState={sortState}
-            sortDirectionPre={sortDirectionPre}
-          />
-          <TableBody rows={table.getRowModel().rows} />
+          <thead>
+            {table.getHeaderGroups().map(group => (
+              <tr key={group.id}>
+                {group.headers.map(header => (
+                  <th
+                    key={header.id}
+                    onClick={header.column.getToggleSortingHandler()}
+                    className={header.column.getCanSort() ? 'cursor-pointer' : ''}
+                  >
+                    {flexRender(
+                      header.column.columnDef.header,
+                      header.getContext(),
+                    )}
+                    {{
+                      asc: ' ↑',
+                      desc: ' ↓',
+                    }[header.column.getIsSorted()] ?? ''}
+                  </th>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map(row => (
+              <tr key={row.id}>
+                {row.getVisibleCells().map(cell => (
+                  <td key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
 

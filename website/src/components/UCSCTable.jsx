@@ -6,18 +6,12 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
+  flexRender,
 } from '@tanstack/react-table'
 
 import list from '../list.json'
 import Container from './ui/react-wrappers/Container.jsx'
 import StyledLink from './ui/react-wrappers/StyledLink.jsx'
-import Table from './ui/react-wrappers/Table.jsx'
-import TableBody from './ui/react-wrappers/TableBody.jsx'
-import TableCell from './ui/react-wrappers/TableCell.jsx'
-import TableHeader from './ui/react-wrappers/TableHeader.jsx'
-import TableHeaderCell from './ui/react-wrappers/TableHeaderCell.jsx'
-import TableRow from './ui/react-wrappers/TableRow.jsx'
-
 
 import tableStyles from './table.module.css'
 
@@ -101,12 +95,12 @@ export default function UCSCTable() {
           for single JBrowse 2 instance containing ALL the species
         </p>
       </div>
-      <Table className={tableStyles.ucscTable}>
-        <TableHeader>
+      <table className={tableStyles.ucscTable}>
+        <thead>
           {table.getHeaderGroups().map(group => (
-            <TableRow key={group.id}>
+            <tr key={group.id}>
               {group.headers.map(header => (
-                <TableHeaderCell
+                <th
                   key={header.id}
                   onClick={header.column.getToggleSortingHandler()}
                   className={header.column.getCanSort() ? 'cursor-pointer' : ''}
@@ -119,23 +113,23 @@ export default function UCSCTable() {
                     asc: ' ↑',
                     desc: ' ↓',
                   }[header.column.getIsSorted()] ?? ''}
-                </TableHeaderCell>
+                </th>
               ))}
-            </TableRow>
+            </tr>
           ))}
-        </TableHeader>
-        <TableBody>
+        </thead>
+        <tbody>
           {table.getRowModel().rows.map(row => (
-            <TableRow key={row.id}>
+            <tr key={row.id}>
               {row.getVisibleCells().map(cell => (
-                <TableCell key={cell.id}>
+                <td key={cell.id}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </TableCell>
+                </td>
               ))}
-            </TableRow>
+            </tr>
           ))}
-        </TableBody>
-      </Table>
+        </tbody>
+      </table>
     </Container>
   )
 }
