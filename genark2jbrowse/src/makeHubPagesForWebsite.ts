@@ -6,7 +6,7 @@ import * as fs from 'fs'
  * @returns The string with its first letter capitalized.
  */
 function capitalizeFirstLetter(val: string): string {
-  return String(val).charAt(0).toUpperCase() + String(val).slice(1)
+  return val.charAt(0).toUpperCase() + val.slice(1)
 }
 
 // Define the categories for which hub pages need to be created.
