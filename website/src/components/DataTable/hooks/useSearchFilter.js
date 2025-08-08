@@ -18,8 +18,9 @@ const getSearchableText = row => {
   const commonName = row.commonName ?? ''
   const scientificName = row.scientificName ?? ''
   const ncbiAssemblyName = row.ncbiAssemblyName ?? ''
+  const accession = row.accession ?? ''
 
-  return `${commonName} ${scientificName} ${ncbiAssemblyName}`
+  return `${commonName} ${scientificName} ${ncbiAssemblyName} ${accession}`
 }
 
 export function useSearchFilter(rows) {

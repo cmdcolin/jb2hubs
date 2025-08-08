@@ -45,7 +45,7 @@ const { imageUrl, pageUrl } =
   (await tryAndReadJSON(path.join(process.cwd(), hubBasePath))) || {}
 ---
 
-<Layout>
+<Layout frontmatter={{ title: scientificName }}>
   <Container>
     <div>
       <h1>{scientificName}</h1>

@@ -62,7 +62,7 @@ export default function DataTable({ rows }) {
           <Search className={styles.searchIcon} size={16} />
           <input
             type="text"
-            placeholder="Search by common name, scientific name, or NCBI assembly name..."
+            placeholder="Search by common name, scientific name, NCBI assembly name, or accession number..."
             value={searchQuery}
             onChange={e => setSearchQuery(e.target.value)}
             className={styles.searchInput}
