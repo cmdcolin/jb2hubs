@@ -2864,6 +2864,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "mm39_to_GCF_036323735.1_liftOver",
+      "name": "mm39 to Norway rat (BN/NHsdMcwi 2024 refseq) (GCF_036323735.1) liftOver",
+      "category": ["Pairwise alignments", "liftOver"],
+      "assemblyNames": ["mm39", "GCF_036323735.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "mm39",
+        "queryAssembly": "GCF_036323735.1",
+        "pifGzLocation": {
+          "uri": "liftOver/mm39ToGCF_036323735.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/mm39ToGCF_036323735.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "mm39_to_GCF_900094665.2_liftOver",
       "name": "mm39 to Ryukyu mouse (v2 2017) (GCF_900094665.2) liftOver",
       "category": ["Pairwise alignments", "liftOver"],

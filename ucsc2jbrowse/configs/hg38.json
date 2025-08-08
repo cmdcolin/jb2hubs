@@ -19660,6 +19660,48 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "hg38_to_GCF_036323735.1_liftOver",
+      "name": "hg38 to Norway rat (BN/NHsdMcwi 2024 refseq) (GCF_036323735.1) liftOver",
+      "category": ["Pairwise alignments", "liftOver"],
+      "assemblyNames": ["hg38", "GCF_036323735.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "GCF_036323735.1",
+        "pifGzLocation": {
+          "uri": "liftOver/hg38ToGCF_036323735.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg38ToGCF_036323735.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
+      "trackId": "hg38_to_GCF_037993035.2_liftOver",
+      "name": "hg38 to crab-eating macaque (v1.1 582-1 2024) (GCF_037993035.2) liftOver",
+      "category": ["Pairwise alignments", "liftOver"],
+      "assemblyNames": ["hg38", "GCF_037993035.2"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "hg38",
+        "queryAssembly": "GCF_037993035.2",
+        "pifGzLocation": {
+          "uri": "liftOver/hg38ToGCF_037993035.2.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/hg38ToGCF_037993035.2.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "hg38_to_GCF_905146905.1_liftOver",
       "name": "hg38 to raccoon dog (2021) (GCF_905146905.1) liftOver",
       "category": ["Pairwise alignments", "liftOver"],

@@ -1560,6 +1560,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "felCat9_to_GCF_018350175.1_liftOver",
+      "name": "felCat9 to domestic cat (Fca126 2021 Texas A&M U) (GCF_018350175.1) liftOver",
+      "category": ["Pairwise alignments", "liftOver"],
+      "assemblyNames": ["felCat9", "GCF_018350175.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "felCat9",
+        "queryAssembly": "GCF_018350175.1",
+        "pifGzLocation": {
+          "uri": "liftOver/felCat9ToGCF_018350175.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/felCat9ToGCF_018350175.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "felCat9_to_GCF_027475565.1_liftOver",
       "name": "felCat9 to cheetah (Ajub_Pintada_27869175 2022) (GCF_027475565.1) liftOver",
       "category": ["Pairwise alignments", "liftOver"],
