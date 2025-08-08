@@ -1,4 +1,5 @@
 import * as fs from 'fs'
+import { hubCategories } from 'hubtools'
 
 /**
  * Capitalizes the first letter of a given string.
@@ -8,34 +9,13 @@ import * as fs from 'fs'
 function capitalizeFirstLetter(val: string): string {
   return val.charAt(0).toUpperCase() + val.slice(1)
 }
-
-// Define the categories for which hub pages need to be created.
-const hubCategories = [
-  'primates',
-  'mammals',
-  'birds',
-  'fish',
-  'vertebrate',
-  'invertebrate',
-  'fungi',
-  'plants',
-  'viral',
-  'bacteria',
-  'VGP',
-  'CCGP',
-  'HPRC',
-  'BRC',
-  'globalReference',
-  'legacy',
-]
-
 /**
  * Generates Next.js page files for each hub category.
  * These pages will display hub information on the website.
  */
 function generateHubPages() {
-  for (const category of hubCategories) {
-    const dirPath = `../website/app/hubs/${category}/`
+  for (const { id } of hubCategories) {
+    const dirPath = `../website/app/hubs/${id}/`
     const filePath = `${dirPath}page.tsx`
 
     // Create directory recursively if it doesn't exist
@@ -44,8 +24,8 @@ function generateHubPages() {
     // Content for the page.tsx file
     const fileContent = `import Page from '../../components/Page.tsx'
 
-export default function ${capitalizeFirstLetter(category)}() {
-  return <Page title="${capitalizeFirstLetter(category)}" raw="${category}" />
+export default function ${capitalizeFirstLetter(id)}() {
+  return <Page title="${capitalizeFirstLetter(id)}" raw="${id}" />
 }`
 
     // Write the file content to the page.tsx file

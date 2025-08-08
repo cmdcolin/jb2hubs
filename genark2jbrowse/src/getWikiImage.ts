@@ -2,14 +2,20 @@ import * as fs from 'fs'
 import * as path from 'path'
 
 function getHubBasePath(accession: string): string {
-  const [basePrefix, restOfAccession] = accession.split('_')
-  const [part1, part2, part3] = restOfAccession!.match(/.{1,3}/g)!
-  return `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
+  try {
+    const [basePrefix, restOfAccession] = accession.split('_')
+    const [part1, part2, part3] = restOfAccession!.match(/.{1,3}/g)!
+    return `hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}`
+  } catch (e) {
+    console.error(e, { accession })
+    throw e
+  }
 }
 
 function processSpeciesName(speciesName: string): string {
   return speciesName
     .replace(/\s+=\s.*$/, '') // Remove anything after " = "
+    .replace(/^Candidatus\s+/i, '') // Remove "Candidatus" at the beginning
     .replace(/\s+-\s.*$/, '') // Remove anything after " - "
     .replace(/\s+\d+\s*$/, '') // Remove trailing numbers
     .replace(/\s+(str\.|strain).*$/i, '') // Remove anything after "str." or "strain"
@@ -26,7 +32,7 @@ function processSpeciesName(speciesName: string): string {
     .replace(/\s+GI\/.*$/i, '') // Remove anything after "GI/"
     .replace(/\s+HU\/.*$/i, '') // Remove anything after "GI/"
     .replace(/\s+\S*:.*$/, '') // Remove last word if it contains a colon
-    .replace(/\s+[A-Z0-9-\.]+$/, '') // Remove last word if it's all capital letters and numbers
+    .replace(/\s+[A-Z0-9\-.]+$/, '') // Remove last word if it's all capital letters, numbers, dashes, or dots
     .trim()
 }
 
@@ -96,21 +102,42 @@ async function processSpeciesImage(scientificName: string, accession: string) {
       ),
     )
 
-    // console.log(
-    //   `Found image for: "${scientificName}" (used string "${processedName}")`,
-    // )
+    console.log(
+      `Found image for: "${scientificName}" (used string "${processedName}")`,
+    )
   } catch (e) {
-    // if (processedName.split(' ').length > 2) {
-    //   const firstTwoWords = processedName.split(' ').slice(0, 2).join(' ')
-    //   console.log('Retrying: ', { processedName, firstTwoWords })
-    //   await processSpeciesImage(firstTwoWords, accession)
-    //   console.log('Retry success', { firstTwoWords })
-    //   return
-    // }
+    if (processedName.split(' ').length > 2) {
+      const words = processedName.split(' ')
+      if (
+        words.length >= 2 &&
+        words[words.length - 1] === words[words.length - 2]
+      ) {
+        const deduplicatedName = words.slice(0, -1).join(' ')
+        try {
+          const imageUrl = await getWikipediaMainImage(deduplicatedName)
+          if (imageUrl) {
+            fs.writeFileSync(
+              filePath,
+              JSON.stringify(
+                {
+                  imageUrl,
+                  pageUrl: `https://wikipedia.org/wiki/${deduplicatedName}`,
+                },
+                null,
+                2,
+              ),
+            )
+            return
+          }
+        } catch (retryError) {
+          // If retry fails, continue with original error handling
+        }
+      }
+    }
     if (scientificName !== processedName) {
-      console.log(`${e}`, { scientificName, processedName })
+      // console.log(`${e}`, { scientificName, processedName })
     } else {
-      console.log(`${e}`)
+      // console.log(`${e}`)
     }
     fs.writeFileSync(filePath + '.notfound', 'none')
   }
@@ -119,4 +146,8 @@ async function processSpeciesImage(scientificName: string, accession: string) {
 const scientificName = process.argv[2]!
 const accession = process.argv[3]!
 
-await processSpeciesImage(scientificName, accession)
+if (accession && accession !== 'null') {
+  await processSpeciesImage(scientificName, accession)
+} else {
+  // console.error('No accession?', { accession, scientificName })
+}

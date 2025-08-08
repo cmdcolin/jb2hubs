@@ -50,6 +50,11 @@ export const hubCategories = [
     tag: 'main',
   },
   {
+    id: 'archaea',
+    description: 'NCBI archaea genomes',
+    tag: 'main',
+  },
+  {
     id: 'VGP',
     description: 'Vertebrate Genome Project',
     tag: 'other',

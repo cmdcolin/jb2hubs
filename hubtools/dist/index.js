@@ -429,6 +429,11 @@ const hubCategories = [
     tag: 'main',
   },
   {
+    id: 'archaea',
+    description: 'NCBI archaea genomes',
+    tag: 'main',
+  },
+  {
     id: 'VGP',
     description: 'Vertebrate Genome Project',
     tag: 'other',
@@ -514,7 +519,7 @@ function parseAssemblyEntry({ entry }) {
     commonName: comName || '',
     taxonId: taxId || '',
     assemblyStatus,
-    jbrowseLink: `https://jbrowse.org/code/jb2/main/?config=https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
+    jbrowseLink: `https://jbrowse.org/code/jb2/main/?config=/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
     jbrowseConfig: `https://jbrowse.org/hubs/genark/${base}/${b1}/${b2}/${b3}/${accession}/config.json`,
     ncbiGff: `https://ftp.ncbi.nlm.nih.gov/genomes/all/${base}/${b1}/${b2}/${b3}/${asmId}/${asmId}_genomic.gff.gz`,
     ncbiLink: `https://www.ncbi.nlm.nih.gov/assembly/${accession}`,
