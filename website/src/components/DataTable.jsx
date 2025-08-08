@@ -18,6 +18,7 @@ import { useTableSort } from './DataTable/hooks/useTableSort.js'
 import TableOptions from './TableOptions.jsx'
 
 import styles from './DataTable.module.css'
+import '../styles/common-table.css'
 
 export default function DataTable({ rows }) {
   console.log({ rows })
@@ -88,7 +89,7 @@ export default function DataTable({ rows }) {
       />
 
       <div>
-        <table className={styles.dataTable}>
+        <table>
           <thead>
             {table.getHeaderGroups().map(group => (
               <tr key={group.id}>
@@ -96,7 +97,9 @@ export default function DataTable({ rows }) {
                   <th
                     key={header.id}
                     onClick={header.column.getToggleSortingHandler()}
-                    className={header.column.getCanSort() ? 'cursor-pointer' : ''}
+                    className={
+                      header.column.getCanSort() ? 'cursor-pointer' : ''
+                    }
                   >
                     {flexRender(
                       header.column.columnDef.header,
@@ -191,3 +194,4 @@ export default function DataTable({ rows }) {
     </>
   )
 }
+
