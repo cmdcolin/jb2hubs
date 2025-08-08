@@ -35,9 +35,8 @@ const {
   ucscDataLink,
   ncbiLink,
   taxonId,
-  } = ret
+} = ret
 
-  console.log(ret)
 
 const [basePrefix, restOfAccession] = accession.split('_')
 const [part1, part2, part3] = restOfAccession.match(/.{1,3}/g)
@@ -63,16 +62,20 @@ const { imageUrl, pageUrl } =
         <b>Common name:</b>
         {ret.commonName}
       </div>
-      {ret.ncbiRefSeqCategory === 'reference genome' ? (
-        <div>
-          <b>Status:</b> Designated Reference <OrangeStar client:load/>
-        </div>
-      ) : null}
-      {ret.suppressed ? (
-        <div>
-          <b>Status:</b> RefSeq Suppressed <RedX client:load/>
-        </div>
-      ) : null}
+      {
+        ret.ncbiRefSeqCategory === 'reference genome' ? (
+          <div>
+            <b>Status:</b> Designated Reference <OrangeStar client:load />
+          </div>
+        ) : null
+      }
+      {
+        ret.suppressed ? (
+          <div>
+            <b>Status:</b> RefSeq Suppressed <RedX client:load />
+          </div>
+        ) : null
+      }
 
       {
         imageUrl ? (

@@ -8,8 +8,9 @@
 
 .searchInputWrapper {
   position: relative;
-  display: flex;
+  display: inline-flex; /* Change to inline-flex */
   align-items: center;
+  max-width: 300px; /* Match max-width of input */
 }
 
 .searchIcon {
@@ -19,9 +20,12 @@
 }
 
 .searchInput {
-  width: 500px;
-  padding: 0.5rem 0.5rem 0.5rem 2rem;
-  border: 1px solid #ccc;
+  padding: 0.5rem 2.5rem 0.5rem 2rem; /* Increased right padding for clear button */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 0.25rem; /* Add back border-radius */
+  background-color: #fff; /* White background */
+  max-width: 300px; /* Keep max-width */
+  margin-right: auto;
 }
 
 .clearButton {
@@ -74,4 +78,14 @@
   margin-left: 1rem;
   font-size: 0.9rem;
   color: #666;
+}
+
+.dataTable {
+  border-collapse: collapse;
+}
+
+.dataTable th,
+.dataTable td {
+  border: 1px solid #aaa;
+  padding: 5px;
 }

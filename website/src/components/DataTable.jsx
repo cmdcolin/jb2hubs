@@ -16,7 +16,6 @@ import { useSearchFilter } from './DataTable/hooks/useSearchFilter.js'
 import { useTableSort } from './DataTable/hooks/useTableSort.js'
 import TableOptions from './TableOptions.jsx'
 
-import './table.css'
 import styles from './DataTable.module.css'
 
 export default function DataTable({ rows }) {
@@ -87,7 +86,7 @@ export default function DataTable({ rows }) {
       />
 
       <div>
-        <table>
+        <table className={styles.dataTable}>
           <TableHeader
             headerGroups={table.getHeaderGroups()}
             handleSort={handleSort}

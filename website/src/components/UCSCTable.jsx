@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 import {
   createColumnHelper,
@@ -8,16 +8,20 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
-} from './ui/react-wrappers/Table.jsx'
+import list from '../list.json'
+import Container from './ui/react-wrappers/Container.jsx'
+import StyledLink from './ui/react-wrappers/StyledLink.jsx'
+import Table from './ui/react-wrappers/Table.jsx'
+import TableBody from './ui/react-wrappers/TableBody.jsx'
+import TableCell from './ui/react-wrappers/TableCell.jsx'
+import TableHeader from './ui/react-wrappers/TableHeader.jsx'
+import TableHeaderCell from './ui/react-wrappers/TableHeaderCell.jsx'
+import TableRow from './ui/react-wrappers/TableRow.jsx'
 
-export default function UCSCTable({ list }) {
+
+import tableStyles from './table.module.css'
+
+export default function UCSCTable() {
   const [sorting, setSorting] = useState([])
 
   const data = useMemo(() => {
@@ -26,7 +30,7 @@ export default function UCSCTable({ list }) {
       scientificName: val.scientificName,
       organism: val.organism,
       description: val.description,
-      jbrowseLink: `https://jbrowse.org/code/jb2/main/?config=/ucsc/${key}/config.json`,
+      jbrowseLink: `https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/${key}/config.json`,
       ucscLink2: `https://genome.ucsc.edu/cgi-bin/hgTracks?db=${key}`,
       orderKey: val.orderKey,
     }))
@@ -41,7 +45,8 @@ export default function UCSCTable({ list }) {
         header: 'Name',
         cell: info => (
           <div>
-            {info.getValue()} (<a href={`/ucsc/${info.getValue()}`}>info</a>)
+            {info.getValue()} (
+            <StyledLink href={`/ucsc/${info.getValue()}`}>info</StyledLink>)
           </div>
         ),
       }),
@@ -59,11 +64,11 @@ export default function UCSCTable({ list }) {
       }),
       columnHelper.accessor('jbrowseLink', {
         header: 'JBrowse',
-        cell: info => <a href={info.getValue()}>JBrowse</a>,
+        cell: info => <StyledLink href={info.getValue()}>JBrowse</StyledLink>,
       }),
       columnHelper.accessor('ucscLink2', {
         header: 'UCSC',
-        cell: info => <a href={info.getValue()}>UCSC</a>,
+        cell: info => <StyledLink href={info.getValue()}>UCSC</StyledLink>,
       }),
     ],
     [columnHelper],
@@ -82,40 +87,55 @@ export default function UCSCTable({ list }) {
   })
 
   return (
-    <Table>
-      <TableHeader>
-        {table.getHeaderGroups().map(group => (
-          <TableRow key={group.id}>
-            {group.headers.map(header => (
-              <TableHeaderCell
-                key={header.id}
-                onClick={header.column.getToggleSortingHandler()}
-                className={header.column.getCanSort() ? 'cursor-pointer' : ''}
-              >
-                {flexRender(
-                  header.column.columnDef.header,
-                  header.getContext(),
-                )}
-                {{
-                  asc: ' ↑',
-                  desc: ' ↓',
-                }[header.column.getIsSorted()] ?? ''}
-              </TableHeaderCell>
-            ))}
-          </TableRow>
-        ))}
-      </TableHeader>
-      <TableBody>
-        {table.getRowModel().rows.map(row => (
-          <TableRow key={row.id}>
-            {row.getVisibleCells().map(cell => (
-              <TableCell key={cell.id}>
-                {flexRender(cell.column.columnDef.cell, cell.getContext())}
-              </TableCell>
-            ))}
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <Container>
+      <h1>Main genome browsers</h1>
+      <div>
+        <p>
+          This page contains a list of all the &quot;main&quot; genomes from the
+          UCSC genome browser, converted into a format that JBrowse 2 can load
+        </p>
+        <p>
+          <StyledLink href="https://jbrowse.org/code/jb2/frozen_tracks4/?config=/ucsc/all.json">
+            Click here
+          </StyledLink>{' '}
+          for single JBrowse 2 instance containing ALL the species
+        </p>
+      </div>
+      <Table className={tableStyles.ucscTable}>
+        <TableHeader>
+          {table.getHeaderGroups().map(group => (
+            <TableRow key={group.id}>
+              {group.headers.map(header => (
+                <TableHeaderCell
+                  key={header.id}
+                  onClick={header.column.getToggleSortingHandler()}
+                  className={header.column.getCanSort() ? 'cursor-pointer' : ''}
+                >
+                  {flexRender(
+                    header.column.columnDef.header,
+                    header.getContext(),
+                  )}
+                  {{
+                    asc: ' ↑',
+                    desc: ' ↓',
+                  }[header.column.getIsSorted()] ?? ''}
+                </TableHeaderCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableHeader>
+        <TableBody>
+          {table.getRowModel().rows.map(row => (
+            <TableRow key={row.id}>
+              {row.getVisibleCells().map(cell => (
+                <TableCell key={cell.id}>
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                </TableCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </Container>
   )
 }

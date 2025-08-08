@@ -6,11 +6,7 @@ import styles from './OrangeStar.module.css'
 export default function OrangeStar() {
   return (
     <Tooltip text="designated reference">
-      <Star
-        fill="orange"
-        strokeWidth={0}
-        className={styles.orangeStar}
-      />
+      <Star fill="orange" strokeWidth={0} className={styles.orangeStar} />
     </Tooltip>
   )
 }
