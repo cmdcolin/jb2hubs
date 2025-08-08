@@ -2,7 +2,6 @@ import React, { useMemo, useState } from 'react'
 
 import {
   createColumnHelper,
-  flexRender,
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
@@ -13,7 +12,7 @@ import list from '../list.json'
 import Container from './ui/react-wrappers/Container.jsx'
 import StyledLink from './ui/react-wrappers/StyledLink.jsx'
 
-import tableStyles from './table.module.css'
+import '../styles/common-table.css'
 
 export default function UCSCTable() {
   const [sorting, setSorting] = useState([])
@@ -95,7 +94,7 @@ export default function UCSCTable() {
           for single JBrowse 2 instance containing ALL the species
         </p>
       </div>
-      <table className={tableStyles.ucscTable}>
+      <table>
         <thead>
           {table.getHeaderGroups().map(group => (
             <tr key={group.id}>

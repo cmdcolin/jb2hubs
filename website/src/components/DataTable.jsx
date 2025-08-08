@@ -21,7 +21,6 @@ import styles from './DataTable.module.css'
 import '../styles/common-table.css'
 
 export default function DataTable({ rows }) {
-  console.log({ rows })
   const [pagination, setPagination] = useState({
     pageIndex: 0,
     pageSize: 200,
@@ -194,4 +193,3 @@ export default function DataTable({ rows }) {
     </>
   )
 }
-

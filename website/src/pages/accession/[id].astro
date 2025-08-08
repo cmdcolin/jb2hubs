@@ -37,7 +37,6 @@ const {
   taxonId,
 } = ret
 
-
 const [basePrefix, restOfAccession] = accession.split('_')
 const [part1, part2, part3] = restOfAccession.match(/.{1,3}/g)
 const hubBasePath = `../hubs/${basePrefix}/${part1}/${part2}/${part3}/${accession}/image.json`
