@@ -26,11 +26,12 @@ let accessionMap = null
  */
 export function loadAccessionMap() {
   if (accessionMap === null) {
-    const filePath = path.join(process.cwd(), 'processedHubJson', 'all.json')
-    const fileContent = fs.readFileSync(filePath, 'utf-8')
-    const data = JSON.parse(fileContent)
     accessionMap = new Map(
-      data.filter(f => !!f && f.accession).map(f => [f.accession, f]),
+      JSON.parse(
+        fs.readFileSync(path.join('processedHubJson', 'all.json'), 'utf-8'),
+      )
+        .filter(f => !!f && f.accession)
+        .map(f => [f.accession, f]),
     )
   }
   return accessionMap
@@ -42,10 +43,9 @@ export function loadAccessionMap() {
  * @param {string} filePath
  * @returns {Promise<T | null>}
  */
-export async function tryAndReadJSON(filePath) {
+export function tryAndReadJSON(filePath) {
   try {
-    const fileContent = await fs.promises.readFile(filePath, 'utf-8')
-    return JSON.parse(fileContent)
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8'))
   } catch (error) {
     // console.error(`Error reading or parsing JSON from ${filePath}:`, error);
     return null

@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { filterCategories } from '../utils/filterCategories.js'
 import { notEmpty } from '../utils.js'

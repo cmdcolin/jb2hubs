@@ -15,9 +15,9 @@ const uf = new uFuzzy({
 
 // Pre-computed search strings for better performance
 const getSearchableText = row => {
-  const commonName = row.commonName || ''
-  const scientificName = row.scientificName || ''
-  const ncbiAssemblyName = row.ncbiAssemblyName || ''
+  const commonName = row.commonName ?? ''
+  const scientificName = row.scientificName ?? ''
+  const ncbiAssemblyName = row.ncbiAssemblyName ?? ''
 
   return `${commonName} ${scientificName} ${ncbiAssemblyName}`
 }
@@ -27,7 +27,7 @@ export function useSearchFilter(rows) {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
-    setSearchQuery(params.get('search') || '')
+    setSearchQuery(params.get('search') ?? '')
   }, [])
 
   // Local state for immediate UI responsiveness
@@ -41,7 +41,9 @@ export function useSearchFilter(rows) {
       }
     }, 300)
 
-    return () => clearTimeout(timeoutId)
+    return () => {
+      clearTimeout(timeoutId)
+    }
   }, [localSearchQuery, searchQuery, setSearchQuery])
 
   // Update local state when URL changes

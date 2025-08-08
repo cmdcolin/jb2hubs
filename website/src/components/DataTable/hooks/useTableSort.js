@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 import { sortOrder } from '../utils.js'
 
@@ -8,7 +8,7 @@ export function useTableSort() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
-    setSortState(params.get('sort') || '')
+    setSortState(params.get('sort') ?? '')
     const dir = params.get('dir')
     setSortDirection(sortOrder.includes(dir) ? dir : '')
   }, [])

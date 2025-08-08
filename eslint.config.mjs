@@ -3,17 +3,11 @@ import eslint from '@eslint/js'
 import eslintPluginReact from 'eslint-plugin-react'
 import eslintPluginReactHooks from 'eslint-plugin-react-hooks'
 import tseslint from 'typescript-eslint'
+import globals from 'globals'
 
 export default tseslint.config(
   {
-    ignores: [
-      '**/dist/',
-      'eslint.config.mjs',
-      'website/next-env.d.ts',
-      'website/out/**/*',
-      'website/.next/**/*',
-      'website/postcss.config.mjs',
-    ],
+    ignores: ['**/dist/', 'eslint.config.mjs', 'website/.astro/**/*'],
   },
 
   {
@@ -29,6 +23,16 @@ export default tseslint.config(
     settings: {
       react: {
         version: 'detect',
+      },
+    },
+  },
+
+  // Browser globals for website folder
+  {
+    files: ['website/**/*'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
       },
     },
   },
