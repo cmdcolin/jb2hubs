@@ -16,6 +16,17 @@ const { frontmatter } = Astro.props
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D9CD3J2V31"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+
+      gtag('config', 'G-D9CD3J2V31')
+    </script>
     <SEO
       title={frontmatter?.title ?? 'JBrowse 2 genome browser hubs'}
       description={frontmatter?.description ?? 'JBrowse 2 genome browser hubs'}
