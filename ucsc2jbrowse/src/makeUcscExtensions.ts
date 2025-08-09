@@ -44,8 +44,14 @@ function makeUcscExtensions(targetDir: string) {
     const mergedConfig: JBrowseConfig = {
       ...existingConfig,
       ...extensionConfig,
+      assemblies: [
+        {
+          ...existingConfig.assemblies[0]!,
+          ...(extensionConfig.assemblies?.[0] ?? {}),
+        },
+      ],
       tracks: dedupe(
-        [...extensionConfig.tracks, ...existingConfig.tracks],
+        [...(extensionConfig.tracks ?? []), ...existingConfig.tracks],
         track => track.trackId,
       ),
       // Merge plugins if they exist
