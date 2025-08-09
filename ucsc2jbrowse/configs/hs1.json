@@ -193,7 +193,7 @@
         "color": "32,32,32",
         "longLabel": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
         "skipEmptyFields": "on",
-        "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
+        "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"https://www.informatics.jax.org//marker/$$\""
       },
       "category": ["NCBI RefSeq"],
       "trackId": "hs1-ncbiRefSeqOther",
@@ -707,7 +707,7 @@
         "denseCoverage": "0",
         "scoreFilterMax": "100",
         "longLabel": "CRISPR/Cas9 -NGG Targets, whole genome",
-        "url": "http://crispor.tefor.net/crispor.py?org=$D&pos=$S:${&pam=NGG",
+        "url": "http://crispor.gi.ucsc.edu/crispor.py?org=$D&pos=$S:${&pam=NGG",
         "mouseOverField": "_mouseOver"
       },
       "category": ["Genes and Gene Predictions"],
@@ -744,6 +744,29 @@
     },
     {
       "metadata": {
+        "track": "cytoBand",
+        "type": "bigBed 4 +",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/cytoBand.html\">cytoBand.html</a>",
+        "visibility": "hide",
+        "shortLabel": "Cytobands (Ideogram)",
+        "group": "map",
+        "searchIndex": "name,name2",
+        "bigDataUrl": "/gbdb/hs1/cytoBandMapped/cytoBandMapped.bb",
+        "longLabel": "Cytobands Mapped from hg38/GRCh38"
+      },
+      "category": ["Mapping and Sequencing"],
+      "trackId": "hs1-cytoBand",
+      "description": "Cytobands Mapped from hg38/GRCh38",
+      "assemblyNames": ["hs1"],
+      "name": "Cytobands (Ideogram)",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hs1/cytoBandMapped/cytoBandMapped.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "dbSNP155",
         "type": "vcfTabix",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/dbSNP155.html\">dbSNP155.html</a>",
@@ -751,6 +774,7 @@
         "group": "varRep",
         "maxWindowToDraw": "3000000",
         "hapClusterEnabled": "false",
+        "tableBrowser": "noGenome",
         "bigDataUrl": "/gbdb/hs1/dbSNP155/chm13v2.0_dbSNPv155.vcf.gz",
         "longLabel": "dbSNP 155 (lifted)"
       },

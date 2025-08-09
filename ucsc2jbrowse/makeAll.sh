@@ -50,7 +50,7 @@ rm -f blockedFiles.txt
 log "Fetching latest UCSC genome list..."
 curl -s https://api.genome.ucsc.edu/list/ucscGenomes >"$UCSC_RESULTS_DIR/list.json"
 # Create a copy for the website.
-cp "$UCSC_RESULTS_DIR/list.json" ../website/app/ucsc/list.json
+cp "$UCSC_RESULTS_DIR/list.json" ../website/src/list.json
 
 log "Creating initial assembly configurations..."
 ./createAssemblies.sh "$UCSC_DATA_DIR"/*

@@ -5,15 +5,18 @@ import { readJSON } from './util.ts'
 const assemblyName = process.argv[2]!
 const list = process.argv[3]!
 
-const f = (j: string) =>
+const getBigDataLink = (j: string) =>
   `https://hgdownload.soe.ucsc.edu/goldenPath/${assemblyName}/bigZips/${j}`
 
-const g = () =>
+const getCytoBandLink = () =>
+  `https://hgdownload.soe.ucsc.edu/goldenPath/${assemblyName}/database/cytoBand.txt.gz`
+
+const getCytoBandIdeoLink = () =>
   `https://hgdownload.soe.ucsc.edu/goldenPath/${assemblyName}/database/cytoBandIdeo.txt.gz`
 
 let hasAliases = false
 try {
-  const res = await fetch(f(`${assemblyName}.chromAlias.txt`))
+  const res = await fetch(getBigDataLink(`${assemblyName}.chromAlias.txt`))
   if (!res.ok) {
     throw new Error('Error fetching chromAlias')
   }
@@ -22,19 +25,32 @@ try {
 
 let hasCyto = false
 try {
-  const res = await fetch(g())
+  const res = await fetch(getCytoBandLink())
   if (!res.ok) {
-    throw new Error('Error fetching cytobands')
+    const ideoRes = await fetch(getCytoBandIdeoLink())
+    if (!ideoRes.ok) {
+      throw new Error('Error fetching cytobands')
+    }
+    const ret = await ideoRes.arrayBuffer()
+    const text = inflate(ret)
+    const txt = new TextDecoder().decode(text)
+    const allGneg = txt
+      .split('\n')
+      .map(f => f.trim())
+      .filter(f => !!f)
+      .every(line => line.split('\t')[4] === 'gneg')
+    hasCyto = allGneg ? false : true
+  } else {
+    const ret = await res.arrayBuffer()
+    const text = inflate(ret)
+    const txt = new TextDecoder().decode(text)
+    const allGneg = txt
+      .split('\n')
+      .map(f => f.trim())
+      .filter(f => !!f)
+      .every(line => line.split('\t')[4] === 'gneg')
+    hasCyto = allGneg ? false : true
   }
-  const ret = await res.arrayBuffer()
-  const text = inflate(ret)
-  const txt = new TextDecoder().decode(text)
-  const allGneg = txt
-    .split('\n')
-    .map(f => f.trim())
-    .filter(f => !!f)
-    .every(line => line.split('\t')[4] === 'gneg')
-  hasCyto = allGneg ? false : true
 } catch (_e) {}
 
 interface GenomeRecord {
@@ -67,8 +83,8 @@ console.log(
             metadata,
             adapter: {
               type: 'TwoBitAdapter',
-              uri: f(`${assemblyName}.2bit`),
-              chromSizes: f(`${assemblyName}.chrom.sizes`),
+              uri: getBigDataLink(`${assemblyName}.2bit`),
+              chromSizes: getBigDataLink(`${assemblyName}.chrom.sizes`),
             },
           },
           ...(hasAliases
@@ -76,7 +92,7 @@ console.log(
                 refNameAliases: {
                   adapter: {
                     type: 'RefNameAliasAdapter',
-                    uri: f(`${assemblyName}.chromAlias.txt`),
+                    uri: getBigDataLink(`${assemblyName}.chromAlias.txt`),
                   },
                 },
               }
@@ -86,7 +102,7 @@ console.log(
                 cytobands: {
                   adapter: {
                     type: 'CytobandAdapter',
-                    uri: g(),
+                    uri: getCytoBandLink(),
                   },
                 },
               }
