@@ -1,5 +1,5 @@
 export interface JBrowseConfig {
-  tracks: {
+  tracks?: {
     category?: string[]
     metadata?: Record<string, unknown>
     trackId: string

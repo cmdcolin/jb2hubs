@@ -26,9 +26,9 @@ const specializedGroups = new Set(['denisova', 'neandertal'])
  * @param track The track object, potentially containing metadata.
  * @returns True if the track should be in the specialized category, false otherwise.
  */
-export function checkIfTrackGoesInSpecializedCategory(
-  track: JBrowseConfig['tracks'][number],
-): boolean {
+export function checkIfTrackGoesInSpecializedCategory(track: {
+  metadata?: Record<string, unknown> | undefined
+}): boolean {
   const metadata = track.metadata
   if (!metadata) {
     return false

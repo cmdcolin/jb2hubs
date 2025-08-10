@@ -191,14 +191,14 @@ function main() {
 
   const config = readJSON<JBrowseConfig>(configFile)
   // Deduplicate tracks by trackId to avoid adding duplicates if script is run multiple times
-  const existingTrackIds = new Set(config.tracks.map(t => t.trackId))
+  const existingTrackIds = new Set(config.tracks?.map(t => t.trackId) ?? [])
   const uniqueNewTracks = chainTracks.filter(
     t => !existingTrackIds.has(t.trackId),
   )
 
   writeJSON(configFile, {
     ...config,
-    tracks: [...config.tracks, ...uniqueNewTracks],
+    tracks: [...(config.tracks ?? []), ...uniqueNewTracks],
   })
 }
 

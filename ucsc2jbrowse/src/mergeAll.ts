@@ -56,7 +56,7 @@ function mergeAllConfigs() {
 
   const mergedConfig: JBrowseConfig = {
     assemblies: allConfigs.flatMap(config => config.assemblies),
-    tracks: allConfigs.flatMap(config => config.tracks),
+    tracks: allConfigs.flatMap(config => config.tracks ?? []),
     aggregateTextSearchAdapters: allConfigs.flatMap(
       config => config.aggregateTextSearchAdapters ?? [],
     ),
