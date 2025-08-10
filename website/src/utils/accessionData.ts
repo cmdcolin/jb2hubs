@@ -19,18 +19,18 @@ import path from 'path'
  */
 
 export interface AssemblyData {
-  accession: string;
-  scientificName: string;
-  ncbiAssemblyName: string;
-  commonName: string;
-  jbrowseLink: string;
-  igvBrowserLink: string;
-  ncbiBrowserLink: string;
-  ucscBrowserLink: string;
-  ucscDataLink: string;
-  ncbiLink: string;
-  taxonId: number;
-  [key: string]: any; // Allow other properties
+  accession: string
+  scientificName: string
+  ncbiAssemblyName: string
+  commonName: string
+  jbrowseLink: string
+  igvBrowserLink: string
+  ncbiBrowserLink: string
+  ucscBrowserLink: string
+  ucscDataLink: string
+  ncbiLink: string
+  taxonId: number
+  [key: string]: any // Allow other properties
 }
 
 let accessionMap: Map<string, AssemblyData> | null = null
@@ -40,15 +40,13 @@ let accessionMap: Map<string, AssemblyData> | null = null
  * @returns {Map<string, AssemblyData>}
  */
 export function loadAccessionMap(): Map<string, AssemblyData> {
-  if (accessionMap === null) {
-    accessionMap = new Map(
-      JSON.parse(
-        fs.readFileSync(path.join('processedHubJson', 'all.json'), 'utf-8'),
-      )
-        .filter((f: AssemblyData) => !!f && f.accession)
-        .map((f: AssemblyData) => [f.accession, f]),
+  accessionMap ??= new Map(
+    JSON.parse(
+      fs.readFileSync(path.join('processedHubJson', 'all.json'), 'utf-8'),
     )
-  }
+      .filter((f: AssemblyData) => f.accession)
+      .map((f: AssemblyData) => [f.accession, f]),
+  )
   return accessionMap
 }
 
@@ -58,6 +56,7 @@ export function loadAccessionMap(): Map<string, AssemblyData> {
  * @param {string} filePath
  * @returns {Promise<T | null>}
  */
+// eslint-disable-next-line @typescript-eslint/no-unnecessary-type-parameters
 export function tryAndReadJSON<T>(filePath: string): T | null {
   try {
     return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as T

@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { filterCategories } from './DataTable/utils/filterCategories.js'
+import { filterCategories } from './DataTable/utils/filterCategories.ts'
 
 interface TableOptionsProps {
-  filterOption: string;
-  setFilterOption: (option: string) => void;
-  showAllColumns: boolean;
-  setShowAllColumns: (show: boolean) => void;
+  filterOption: string
+  setFilterOption: (option: string) => void
+  showAllColumns: boolean
+  setShowAllColumns: (show: boolean) => void
 }
 
 export default function TableOptions({

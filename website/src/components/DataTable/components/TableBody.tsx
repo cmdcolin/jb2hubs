@@ -1,7 +1,9 @@
-import { Row, flexRender } from '@tanstack/react-table'
+import { flexRender } from '@tanstack/react-table'
+
+import type { Row } from '@tanstack/react-table'
 
 interface TableBodyProps<TData> {
-  rows: Row<TData>[];
+  rows: Row<TData>[]
 }
 
 export default function TableBody<TData>({ rows }: TableBodyProps<TData>) {

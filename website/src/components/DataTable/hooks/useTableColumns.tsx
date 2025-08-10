@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 
-import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
+import { createColumnHelper } from '@tanstack/react-table'
 
 import styles from './useTableColumns.module.css'
 import OrangeStar from '../../OrangeStar.tsx'
@@ -10,21 +10,25 @@ import { statusOrder } from '../utils.ts'
 
 // Define the shape of the row data
 export interface RowData {
-  commonName: string;
-  accession: string;
-  ncbiRefSeqCategory: string;
-  suppressed: boolean;
-  jbrowseLink: string;
-  assemblyStatus: string;
-  seqReleaseDate: string;
-  scientificName: string;
-  ncbiAssemblyName: string;
-  taxonId: string;
-  submitterOrg: string;
-  _searchText?: string; // Add _searchText
+  commonName: string
+  accession: string
+  ncbiRefSeqCategory: string
+  suppressed: boolean
+  jbrowseLink: string
+  assemblyStatus: string
+  seqReleaseDate: string
+  scientificName: string
+  ncbiAssemblyName: string
+  taxonId: string
+  submitterOrg: string
+  _searchText?: string // Add _searchText
 }
 
-export function useTableColumns({ searchQuery = '' }: { searchQuery?: string }) {
+export function useTableColumns({
+  searchQuery = '',
+}: {
+  searchQuery?: string
+}) {
   const columnHelper = createColumnHelper<RowData>()
 
   const columns = useMemo(

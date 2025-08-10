@@ -1,7 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Container2 from '../../components/Container2.astro'
-import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.jsx'
+import ClientOnlyDataTable from '../../components/ClientOnlyDataTable.tsx'
 
 export async function getStaticPaths() {
   const modules = import.meta.glob('../../../processedHubJson/*.json')

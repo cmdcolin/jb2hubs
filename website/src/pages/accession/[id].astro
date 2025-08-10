@@ -1,9 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro'
 import Container from '../../components/Container.astro'
-import OrangeStar from '../../components/OrangeStar.jsx'
-import RedX from '../../components/RedX.jsx'
-import { loadAccessionMap, tryAndReadJSON } from '../../utils/accessionData.js'
+import OrangeStar from '../../components/OrangeStar.tsx'
+import RedX from '../../components/RedX.tsx'
+import { loadAccessionMap, tryAndReadJSON } from '../../utils/accessionData.ts'
 import path from 'path'
 
 export async function getStaticPaths() {

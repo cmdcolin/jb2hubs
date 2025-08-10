@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react'
 
 import {
-  SortingState,
   createColumnHelper,
   flexRender,
   getCoreRowModel,
@@ -12,6 +11,8 @@ import {
 import list from '../list.json'
 import Container from './ui/react-wrappers/Container.tsx'
 import StyledLink from './ui/react-wrappers/StyledLink.tsx'
+
+import type { SortingState } from '@tanstack/react-table'
 
 import '../styles/common-table.css'
 

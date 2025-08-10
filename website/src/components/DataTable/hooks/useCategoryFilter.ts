@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import { RowData } from './useTableColumns.tsx'
 import { filterCategories } from '../utils/filterCategories.ts'
 import { notEmpty } from '../utils.ts'
+
+import type { RowData } from './useTableColumns.tsx'
 
 export function useCategoryFilter(rows: RowData[]) {
   const [filterOption, setFilterOption] = useState('all')
@@ -11,7 +12,7 @@ export function useCategoryFilter(rows: RowData[]) {
     const params = new URLSearchParams(window.location.search)
     const filter = params.get('filter')
     // Ensure filter is a string before passing it to setFilterOption
-    setFilterOption(filterCategories[filter!] ? (filter!) : 'all')
+    setFilterOption(filterCategories[filter!] ? filter! : 'all')
   }, [])
 
   useEffect(() => {
@@ -19,8 +20,7 @@ export function useCategoryFilter(rows: RowData[]) {
       const params = new URLSearchParams(window.location.search)
       if (filterOption && filterOption !== 'all') {
         params.set('filter', filterOption)
-      }
-      else {
+      } else {
         params.delete('filter')
       }
       window.history.replaceState(

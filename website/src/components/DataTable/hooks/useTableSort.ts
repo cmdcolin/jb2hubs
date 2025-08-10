@@ -1,18 +1,20 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import { SortDirection, SortingState } from '@tanstack/react-table'
-
 import { sortOrder } from '../utils.ts'
+
+import type { SortDirection, SortingState } from '@tanstack/react-table'
 
 export function useTableSort() {
   const [sortState, setSortState] = useState('')
-  const [sortDirectionPre, setSortDirection] = useState<SortDirection | ''>( '')
+  const [sortDirectionPre, setSortDirection] = useState<SortDirection | ''>('')
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
     setSortState(params.get('sort') ?? '')
     const dir = params.get('dir')
-    setSortDirection(sortOrder.includes(dir as SortDirection) ? (dir as SortDirection) : '')
+    setSortDirection(
+      sortOrder.includes(dir as SortDirection) ? (dir as SortDirection) : '',
+    )
   }, [])
 
   useEffect(() => {
@@ -51,7 +53,8 @@ export function useTableSort() {
 
   // Update URL query params when sorting changes
   const onSortingChange = (updater: any) => {
-    const newSorting = typeof updater === 'function' ? updater(sorting) : updater
+    const newSorting =
+      typeof updater === 'function' ? updater(sorting) : updater
 
     if (newSorting.length === 0) {
       setSortState('')

@@ -1,7 +1,7 @@
 import React from 'react'
 
 interface SelfLinkProps {
-  href: string;
+  href: string
 }
 
 export default function SelfLink({ href }: SelfLinkProps) {

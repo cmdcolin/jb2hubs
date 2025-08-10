@@ -1,12 +1,14 @@
-import { HeaderGroup, SortDirection, flexRender  } from '@tanstack/react-table'
+import { flexRender } from '@tanstack/react-table'
 
 import styles from './TableHeader.module.css'
 
+import type { HeaderGroup, SortDirection } from '@tanstack/react-table'
+
 interface TableHeaderProps<TData> {
-  headerGroups: HeaderGroup<TData>[];
-  handleSort: (id: string) => void;
-  sortState: string;
-  sortDirectionPre: SortDirection | false | ''; // Allow empty string
+  headerGroups: HeaderGroup<TData>[]
+  handleSort: (id: string) => void
+  sortState: string
+  sortDirectionPre: SortDirection | false | '' // Allow empty string
 }
 
 export default function TableHeader<TData>({

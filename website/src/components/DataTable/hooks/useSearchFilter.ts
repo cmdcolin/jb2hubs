@@ -2,11 +2,11 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import uFuzzy from '@leeoniya/ufuzzy'
 
-import { RowData } from './useTableColumns.tsx'
+import type { RowData } from './useTableColumns.tsx'
 
 // Define a new interface that extends RowData and includes _searchText
 interface SearchableRowData extends RowData {
-  _searchText: string;
+  _searchText: string
 }
 
 // Configure ufuzzy for optimal performance
@@ -22,11 +22,7 @@ const uf = new uFuzzy({
 
 // Pre-computed search strings for better performance
 const getSearchableText = (row: RowData): string => {
-  const commonName = row.commonName ?? ''
-  const scientificName = row.scientificName ?? ''
-  const ncbiAssemblyName = row.ncbiAssemblyName ?? ''
-  const accession = row.accession ?? ''
-
+  const { commonName, scientificName, ncbiAssemblyName, accession } = row
   return `${commonName} ${scientificName} ${ncbiAssemblyName} ${accession}`
 }
 
@@ -81,19 +77,17 @@ export function useSearchFilter(rows: RowData[]) {
     // Use ufuzzy for fuzzy search
     const indexes = uf.filter(searchHaystack, query)
 
-    if (indexes && indexes.length > 0) {
-      // Map back to rows and filter out any undefined results
-      return indexes
-        .map(idx => processedRows[idx])
+    // Map back to rows and filter out any undefined results
+    return (
+      indexes
+        ?.map(idx => processedRows[idx])
         .filter((row): row is SearchableRowData => row !== undefined)
         .map((row): RowData => {
           // Destructure to remove _searchText before returning as RowData
           const { _searchText, ...rest } = row
           return rest
-        })
-    } else {
-      return []
-    }
+        }) || []
+    )
   }, [rows, processedRows, searchHaystack, searchQuery])
 
   const handleSearchChange = useCallback((value: string) => {
