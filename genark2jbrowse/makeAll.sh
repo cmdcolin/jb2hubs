@@ -42,20 +42,17 @@ fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
 
 # --- Step 4: Download NCBI GFF Files ---
 
-# If REDOWNLOAD is defined, remove existing gff folder to force re-download.
-if [ -n "$REDOWNLOAD" ]; then
-  echo "REDOWNLOAD is set. Removing existing 'gff' folder to force re-download of all GFF files."
-  rm -rf gff
-  mkdir -p gff
-fi
-
 # Define function to download a single NCBI GFF file.
 download_ncbi_gff() {
   local url="$1"
   local filename=$(basename "$url")
-  if [ ! -f "gff/$filename" ]; then
+  if [ ! -f "gff/$filename" ] || [ -n "$REDOWNLOAD" ]; then
     echo "Downloading GFF file: $filename"
-    wget -nc -q "$url" -P gff
+    if [ -n "$REDOWNLOAD" ]; then
+      wget -N -q "$url" -P gff
+    else
+      wget -nc -q "$url" -P gff
+    fi
   fi
 }
 
@@ -64,6 +61,7 @@ export -f download_ncbi_gff # Export function for use with GNU Parallel
 echo "Downloading NCBI GFF files..."
 # Extract NCBI GFF URLs from processed JSON and download them
 cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar download_ncbi_gff
+
 # --- Step 5: Process NCBI GFF Files ---
 
 # Define function to process a single GFF file.
@@ -149,11 +147,6 @@ export -f add_track_and_text_index # Export function for use with GNU Parallel
 
 echo "Loading and text indexing NCBI GFF tracks in parallel..."
 find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
-
-# --- Step 7: Generate Website Pages and Extensions ---
-
-echo "Making routes in the website app folder..."
-node src/makeHubPagesForWebsite.ts
 
 echo "Adding GenArk extensions (special tracks)..."
 node src/makeGenArkExtensions.ts
