@@ -39,7 +39,7 @@ export default function DataTable({ rows }: TableProps) {
   const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } =
     useTableSort()
   const { showAllColumns, setShowAllColumns } = useColumnVisibility()
-  const { columns } = useTableColumns({ searchQuery })
+  const { columns } = useTableColumns({ searchQuery, showAllColumns })
   const table = useReactTable({
     data: filteredRows,
     columns,

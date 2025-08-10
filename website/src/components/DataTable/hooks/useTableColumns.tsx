@@ -26,13 +26,15 @@ export interface RowData {
 
 export function useTableColumns({
   searchQuery = '',
+  showAllColumns,
 }: {
   searchQuery?: string
+  showAllColumns: boolean
 }) {
   const columnHelper = createColumnHelper<RowData>()
 
-  const columns = useMemo(
-    () => [
+  const columns = useMemo(() => {
+    const allColumns = [
       columnHelper.accessor('commonName', {
         header: 'Common Name',
         cell: info => (
@@ -100,9 +102,12 @@ export function useTableColumns({
         enableSorting: false,
         meta: { extra: true },
       }),
-    ],
-    [columnHelper, searchQuery],
-  )
+    ]
+    if (showAllColumns) {
+      return allColumns
+    }
+    return allColumns.filter(col => !(col as any).meta?.extra)
+  }, [columnHelper, searchQuery, showAllColumns])
 
   return { columns }
 }
