@@ -81,12 +81,13 @@ export function useSearchFilter(rows: RowData[]) {
     return (
       indexes
         ?.map(idx => processedRows[idx])
+        // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
         .filter((row): row is SearchableRowData => row !== undefined)
         .map((row): RowData => {
           // Destructure to remove _searchText before returning as RowData
           const { _searchText, ...rest } = row
           return rest
-        }) || []
+        }) ?? []
     )
   }, [rows, processedRows, searchHaystack, searchQuery])
 
