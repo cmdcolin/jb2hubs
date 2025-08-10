@@ -1,10 +1,12 @@
-import { useMemo } from 'react';
-import { createColumnHelper, ColumnDef } from '@tanstack/react-table';
-import OrangeStar from '../../OrangeStar.tsx';
-import RedX from '../../RedX.tsx';
-import { statusOrder } from '../utils.ts';
-import { highlightText } from '../utils/highlightText.tsx';
-import styles from './useTableColumns.module.css';
+import { useMemo } from 'react'
+
+import { ColumnDef, createColumnHelper } from '@tanstack/react-table'
+
+import styles from './useTableColumns.module.css'
+import OrangeStar from '../../OrangeStar.tsx'
+import RedX from '../../RedX.tsx'
+import { highlightText } from '../utils/highlightText.tsx'
+import { statusOrder } from '../utils.ts'
 
 // Define the shape of the row data
 export interface RowData {
@@ -23,7 +25,7 @@ export interface RowData {
 }
 
 export function useTableColumns({ searchQuery = '' }: { searchQuery?: string }) {
-  const columnHelper = createColumnHelper<RowData>();
+  const columnHelper = createColumnHelper<RowData>()
 
   const columns = useMemo(
     () => [
@@ -53,9 +55,9 @@ export function useTableColumns({ searchQuery = '' }: { searchQuery?: string }) 
           <div className={styles.whitespaceNowrap}>{info.getValue()}</div>
         ),
         sortingFn: (rowA, rowB) => {
-          const a = statusOrder[rowA.original.assemblyStatus] || 999;
-          const b = statusOrder[rowB.original.assemblyStatus] || 999;
-          return a - b;
+          const a = statusOrder[rowA.original.assemblyStatus] || 999
+          const b = statusOrder[rowB.original.assemblyStatus] || 999
+          return a - b
         },
       }),
       columnHelper.accessor('seqReleaseDate', {
@@ -96,7 +98,7 @@ export function useTableColumns({ searchQuery = '' }: { searchQuery?: string }) 
       }),
     ],
     [columnHelper, searchQuery],
-  );
+  )
 
-  return { columns };
+  return { columns }
 }

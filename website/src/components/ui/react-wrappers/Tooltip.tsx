@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
-import {
-  useFloating,
-  autoUpdate,
-  offset,
-  flip,
-  shift,
-  useHover,
-  useFocus,
-  useDismiss,
-  useRole,
-  useInteractions,
-  FloatingPortal,
-} from '@floating-ui/react';
+import React, { useState } from 'react'
 
-import styles from './Tooltip.module.css';
+import {
+  FloatingPortal,
+  autoUpdate,
+  flip,
+  offset,
+  shift,
+  useDismiss,
+  useFloating,
+  useFocus,
+  useHover,
+  useInteractions,
+  useRole,
+} from '@floating-ui/react'
+
+import styles from './Tooltip.module.css'
 
 interface TooltipProps {
   children: React.ReactNode;
@@ -21,26 +22,26 @@ interface TooltipProps {
 }
 
 export default function Tooltip({ children, text }: TooltipProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
     onOpenChange: setIsOpen,
     middleware: [offset(5), flip(), shift()],
     whileElementsMounted: autoUpdate,
-  });
+  })
 
-  const hover = useHover(context, { move: false });
-  const focus = useFocus(context);
-  const dismiss = useDismiss(context);
-  const role = useRole(context, { role: 'tooltip' });
+  const hover = useHover(context, { move: false })
+  const focus = useFocus(context)
+  const dismiss = useDismiss(context)
+  const role = useRole(context, { role: 'tooltip' })
 
   const { getReferenceProps, getFloatingProps } = useInteractions([
     hover,
     focus,
     dismiss,
     role,
-  ]);
+  ])
 
   return (
     <>
@@ -64,5 +65,5 @@ export default function Tooltip({ children, text }: TooltipProps) {
         )}
       </FloatingPortal>
     </>
-  );
+  )
 }

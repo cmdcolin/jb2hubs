@@ -1,5 +1,5 @@
 export function notEmpty<TValue>(value: TValue | null | undefined): value is TValue {
-  return value !== null && value !== undefined;
+  return value !== null && value !== undefined
 }
 
 export const statusOrder: Record<string, number> = {
@@ -8,7 +8,7 @@ export const statusOrder: Record<string, number> = {
   Chromosome: 2,
   Scaffold: 3,
   Contig: 4,
-};
+}
 
 // List accepted sort direction values
-export const sortOrder: ('asc' | 'desc' | '')[] = ['asc', 'desc', ''];
+export const sortOrder: ('asc' | 'desc' | '')[] = ['asc', 'desc', '']

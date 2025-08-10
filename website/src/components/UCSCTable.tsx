@@ -1,38 +1,39 @@
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState } from 'react'
+
 import {
+  SortingState,
   createColumnHelper,
+  flexRender,
   getCoreRowModel,
   getSortedRowModel,
   useReactTable,
-  flexRender,
-  SortingState,
-} from '@tanstack/react-table';
+} from '@tanstack/react-table'
 
-import list from '../list.json';
-import Container from './ui/react-wrappers/Container.tsx';
-import StyledLink from './ui/react-wrappers/StyledLink.tsx';
+import list from '../list.json'
+import Container from './ui/react-wrappers/Container.tsx'
+import StyledLink from './ui/react-wrappers/StyledLink.tsx'
 
-import '../styles/common-table.css';
+import '../styles/common-table.css'
 
 interface UCSCGenome {
-  scientificName: string;
-  organism: string;
-  description: string;
-  orderKey: number;
+  scientificName: string
+  organism: string
+  description: string
+  orderKey: number
 }
 
 interface RowData {
-  name: string;
-  scientificName: string;
-  organism: string;
-  description: string;
-  jbrowseLink: string;
-  ucscLink2: string;
-  orderKey: number;
+  name: string
+  scientificName: string
+  organism: string
+  description: string
+  jbrowseLink: string
+  ucscLink2: string
+  orderKey: number
 }
 
 export default function UCSCTable() {
-  const [sorting, setSorting] = useState<SortingState>([]);
+  const [sorting, setSorting] = useState<SortingState>([])
 
   const data = useMemo(() => {
     return Object.entries(list.ucscGenomes as Record<string, UCSCGenome>).map(
@@ -45,11 +46,11 @@ export default function UCSCTable() {
         ucscLink2: `https://genome.ucsc.edu/cgi-bin/hgTracks?db=${key}`,
         orderKey: val.orderKey,
       }),
-    );
-  }, []);
+    )
+  }, [])
 
   // Define columns for TanStack Table
-  const columnHelper = createColumnHelper<RowData>();
+  const columnHelper = createColumnHelper<RowData>()
 
   const columns = useMemo(
     () => [
@@ -57,8 +58,8 @@ export default function UCSCTable() {
         header: 'Name',
         cell: info => (
           <div>
-            {info.getValue()}{' '}
-            (<StyledLink href={`/ucsc/${info.getValue()}`}>info</StyledLink>)
+            {info.getValue()} (
+            <StyledLink href={`/ucsc/${info.getValue()}`}>info</StyledLink>)
           </div>
         ),
       }),
@@ -84,7 +85,7 @@ export default function UCSCTable() {
       }),
     ],
     [columnHelper],
-  );
+  )
 
   // Create table instance
   const table = useReactTable({
@@ -96,7 +97,7 @@ export default function UCSCTable() {
     onSortingChange: setSorting,
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
-  });
+  })
 
   return (
     <Container>
@@ -149,5 +150,5 @@ export default function UCSCTable() {
         </tbody>
       </table>
     </Container>
-  );
+  )
 }

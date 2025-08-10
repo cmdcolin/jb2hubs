@@ -1,22 +1,22 @@
-import React from 'react';
+import React from 'react'
 
-import styles from '../../DataTable.module.css';
+import styles from '../../DataTable.module.css'
 
 export function highlightText(text: string, query: string): React.ReactNode {
-  if (!query || !text) return text;
+  if (!query || !text) {return text}
 
-  const queryLower = query.toLowerCase().trim();
-  const textLower = text.toLowerCase();
+  const queryLower = query.toLowerCase().trim()
+  const textLower = text.toLowerCase()
 
   // Find the position of the match
-  const index = textLower.indexOf(queryLower);
+  const index = textLower.indexOf(queryLower)
 
-  if (index === -1) return text;
+  if (index === -1) {return text}
 
   // Split the text into parts: before, match, after
-  const beforeMatch = text.substring(0, index);
-  const match = text.substring(index, index + query.length);
-  const afterMatch = text.substring(index + query.length);
+  const beforeMatch = text.substring(0, index)
+  const match = text.substring(index, index + query.length)
+  const afterMatch = text.substring(index + query.length)
 
   return (
     <>
@@ -24,5 +24,5 @@ export function highlightText(text: string, query: string): React.ReactNode {
       <mark className={styles.searchHighlight}>{match}</mark>
       {highlightText(afterMatch, query)}
     </>
-  );
+  )
 }

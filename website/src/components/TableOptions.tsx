@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import { filterCategories } from './DataTable/utils/filterCategories.js';
+import { filterCategories } from './DataTable/utils/filterCategories.js'
 
 interface TableOptionsProps {
   filterOption: string;
@@ -31,7 +31,7 @@ export default function TableOptions({
               value={key}
               checked={filterOption === key}
               onChange={() => {
-                setFilterOption(key);
+                setFilterOption(key)
               }}
             />
             {val}
@@ -48,7 +48,7 @@ export default function TableOptions({
             type="radio"
             checked={!showAllColumns}
             onChange={() => {
-              setShowAllColumns(false);
+              setShowAllColumns(false)
             }}
           />
           Show essential columns
@@ -62,12 +62,12 @@ export default function TableOptions({
             type="radio"
             checked={showAllColumns}
             onChange={() => {
-              setShowAllColumns(true);
+              setShowAllColumns(true)
             }}
           />
           Show all columns
         </label>
       </div>
     </div>
-  );
+  )
 }

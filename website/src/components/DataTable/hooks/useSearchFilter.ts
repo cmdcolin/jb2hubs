@@ -1,6 +1,8 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import uFuzzy from '@leeoniya/ufuzzy';
-import { RowData } from './useTableColumns.tsx';
+import { useCallback, useEffect, useMemo, useState } from 'react'
+
+import uFuzzy from '@leeoniya/ufuzzy'
+
+import { RowData } from './useTableColumns.tsx'
 
 // Define a new interface that extends RowData and includes _searchText
 interface SearchableRowData extends RowData {
@@ -16,68 +18,68 @@ const uf = new uFuzzy({
   intraDel: 0, // allow deletions
   interLft: 0, // no left leeway
   interRgt: 0, // no right leeway
-});
+})
 
 // Pre-computed search strings for better performance
 const getSearchableText = (row: RowData): string => {
-  const commonName = row.commonName ?? '';
-  const scientificName = row.scientificName ?? '';
-  const ncbiAssemblyName = row.ncbiAssemblyName ?? '';
-  const accession = row.accession ?? '';
+  const commonName = row.commonName ?? ''
+  const scientificName = row.scientificName ?? ''
+  const ncbiAssemblyName = row.ncbiAssemblyName ?? ''
+  const accession = row.accession ?? ''
 
-  return `${commonName} ${scientificName} ${ncbiAssemblyName} ${accession}`;
-};
+  return `${commonName} ${scientificName} ${ncbiAssemblyName} ${accession}`
+}
 
 export function useSearchFilter(rows: RowData[]) {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState('')
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    setSearchQuery(params.get('search') ?? '');
-  }, []);
+    const params = new URLSearchParams(window.location.search)
+    setSearchQuery(params.get('search') ?? '')
+  }, [])
 
   // Local state for immediate UI responsiveness
-  const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery);
+  const [localSearchQuery, setLocalSearchQuery] = useState(searchQuery)
 
   // Debounce search query updates
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (localSearchQuery !== searchQuery) {
-        setSearchQuery(localSearchQuery);
+        setSearchQuery(localSearchQuery)
       }
-    }, 300);
+    }, 300)
 
     return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [localSearchQuery, searchQuery, setSearchQuery]);
+      clearTimeout(timeoutId)
+    }
+  }, [localSearchQuery, searchQuery, setSearchQuery])
 
   // Update local state when URL changes
   useEffect(() => {
-    setLocalSearchQuery(searchQuery);
-  }, [searchQuery]);
+    setLocalSearchQuery(searchQuery)
+  }, [searchQuery])
 
   // Memoize processed rows and search haystack for better performance
   const { processedRows, searchHaystack } = useMemo(() => {
     const processedRows: SearchableRowData[] = rows.map(row => ({
       ...row,
       _searchText: getSearchableText(row),
-    }));
+    }))
 
-    const searchHaystack = processedRows.map(row => row._searchText);
+    const searchHaystack = processedRows.map(row => row._searchText)
 
-    return { processedRows, searchHaystack };
-  }, [rows]);
+    return { processedRows, searchHaystack }
+  }, [rows])
 
   const filteredRows = useMemo(() => {
     // If no search query, return all rows
-    const query = searchQuery.trim();
+    const query = searchQuery.trim()
     if (!query) {
-      return rows;
+      return rows
     }
 
     // Use ufuzzy for fuzzy search
-    const indexes = uf.filter(searchHaystack, query);
+    const indexes = uf.filter(searchHaystack, query)
 
     if (indexes && indexes.length > 0) {
       // Map back to rows and filter out any undefined results
@@ -86,21 +88,21 @@ export function useSearchFilter(rows: RowData[]) {
         .filter((row): row is SearchableRowData => row !== undefined)
         .map((row): RowData => {
           // Destructure to remove _searchText before returning as RowData
-          const { _searchText, ...rest } = row;
-          return rest;
-        });
+          const { _searchText, ...rest } = row
+          return rest
+        })
     } else {
-      return [];
+      return []
     }
-  }, [rows, processedRows, searchHaystack, searchQuery]);
+  }, [rows, processedRows, searchHaystack, searchQuery])
 
   const handleSearchChange = useCallback((value: string) => {
-    setLocalSearchQuery(value);
-  }, []);
+    setLocalSearchQuery(value)
+  }, [])
 
   return {
     searchQuery: localSearchQuery,
     setSearchQuery: handleSearchChange,
     filteredRows,
-  };
+  }
 }

@@ -4,4 +4,4 @@ export const filterCategories: Record<string, string> = {
   genbank: 'GenBank only',
   designatedReference: 'Designated reference only',
   hidesuppressed: 'Hide suppressed',
-};
+}

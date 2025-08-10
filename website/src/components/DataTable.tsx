@@ -1,26 +1,27 @@
-import { useState } from 'react';
+import { useState } from 'react'
+
 import {
+  PaginationState,
+  SortingState,
+  flexRender,
   getCoreRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
-  flexRender,
-  SortingState,
-  PaginationState,
-} from '@tanstack/react-table';
-import { Search } from 'lucide-react';
+} from '@tanstack/react-table'
+import { Search } from 'lucide-react'
 
-import TableBody from './DataTable/components/TableBody.tsx';
-import TableHeader from './DataTable/components/TableHeader.tsx';
-import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility.ts';
-import { useTableColumns, RowData } from './DataTable/hooks/useTableColumns.tsx';
-import { useCategoryFilter } from './DataTable/hooks/useCategoryFilter.ts';
-import { useSearchFilter } from './DataTable/hooks/useSearchFilter.ts';
-import { useTableSort } from './DataTable/hooks/useTableSort.ts';
-import TableOptions from './TableOptions.tsx';
+import TableBody from './DataTable/components/TableBody.tsx'
+import TableHeader from './DataTable/components/TableHeader.tsx'
+import { useCategoryFilter } from './DataTable/hooks/useCategoryFilter.ts'
+import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility.ts'
+import { useSearchFilter } from './DataTable/hooks/useSearchFilter.ts'
+import { RowData, useTableColumns } from './DataTable/hooks/useTableColumns.tsx'
+import { useTableSort } from './DataTable/hooks/useTableSort.ts'
+import styles from './DataTable.module.css'
+import TableOptions from './TableOptions.tsx'
 
-import styles from './DataTable.module.css';
-import '../styles/common-table.css';
+import '../styles/common-table.css'
 
 export interface TableProps {
   rows: RowData[];
@@ -30,21 +31,21 @@ export default function DataTable({ rows }: TableProps) {
   const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 200,
-  });
+  })
   // Apply category filter first
   const {
     filterOption,
     setFilterOption,
     filteredRows: categoryFilteredRows,
-  } = useCategoryFilter(rows);
+  } = useCategoryFilter(rows)
 
   // Then apply search filter to the category-filtered results
   const { searchQuery, setSearchQuery, filteredRows } =
-    useSearchFilter(categoryFilteredRows);
+    useSearchFilter(categoryFilteredRows)
   const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } =
-    useTableSort();
-  const { showAllColumns, setShowAllColumns } = useColumnVisibility();
-  const { columns } = useTableColumns({ searchQuery });
+    useTableSort()
+  const { showAllColumns, setShowAllColumns } = useColumnVisibility()
+  const { columns } = useTableColumns({ searchQuery })
 
   const table = useReactTable({
     data: filteredRows,
@@ -58,7 +59,7 @@ export default function DataTable({ rows }: TableProps) {
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
-  });
+  })
 
   return (
     <>
@@ -69,13 +70,13 @@ export default function DataTable({ rows }: TableProps) {
             type="text"
             placeholder="Search by common name, scientific name, NCBI assembly name, or accession number..."
             value={searchQuery}
-            onChange={e => setSearchQuery(e.target.value)}
+            onChange={e => { setSearchQuery(e.target.value) }}
             className={styles.searchInput}
           />
           {searchQuery && (
             <button
               type="button"
-              onClick={() => setSearchQuery('')}
+              onClick={() => { setSearchQuery('') }}
               className={styles.clearButton}
               aria-label="Clear search"
             >
@@ -107,14 +108,14 @@ export default function DataTable({ rows }: TableProps) {
       <div className={styles.paginationContainer}>
         <button
           className={styles.paginationButton}
-          onClick={() => table.setPageIndex(0)}
+          onClick={() => { table.setPageIndex(0) }}
           disabled={!table.getCanPreviousPage()}
         >
           {'<<'}
         </button>
         <button
           className={styles.paginationButton}
-          onClick={() => table.previousPage()}
+          onClick={() => { table.previousPage() }}
           disabled={!table.getCanPreviousPage()}
         >
           {'<'}
@@ -128,14 +129,14 @@ export default function DataTable({ rows }: TableProps) {
         </span>
         <button
           className={styles.paginationButton}
-          onClick={() => table.nextPage()}
+          onClick={() => { table.nextPage() }}
           disabled={!table.getCanNextPage()}
         >
           {'>'}
         </button>
         <button
           className={styles.paginationButton}
-          onClick={() => table.setPageIndex(table.getPageCount() - 1)}
+          onClick={() => { table.setPageIndex(table.getPageCount() - 1) }}
           disabled={!table.getCanNextPage()}
         >
           {'>>'}
@@ -146,11 +147,11 @@ export default function DataTable({ rows }: TableProps) {
             id="pageSize"
             value={pagination.pageSize}
             onChange={e => {
-              const newSize = Number(e.target.value);
+              const newSize = Number(e.target.value)
               setPagination({
                 pageIndex: 0,
                 pageSize: newSize,
-              });
+              })
             }}
             className={styles.pageSizeSelect}
           >
@@ -168,5 +169,5 @@ export default function DataTable({ rows }: TableProps) {
         </span>
       </div>
     </>
-  );
+  )
 }

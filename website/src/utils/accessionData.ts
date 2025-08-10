@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'fs'
+import path from 'path'
 
 /**
  * @typedef {object} AssemblyData
@@ -33,7 +33,7 @@ export interface AssemblyData {
   [key: string]: any; // Allow other properties
 }
 
-let accessionMap: Map<string, AssemblyData> | null = null;
+let accessionMap: Map<string, AssemblyData> | null = null
 
 /**
  * Loads and caches the accession data from all.json.
@@ -47,9 +47,9 @@ export function loadAccessionMap(): Map<string, AssemblyData> {
       )
         .filter((f: AssemblyData) => !!f && f.accession)
         .map((f: AssemblyData) => [f.accession, f]),
-    );
+    )
   }
-  return accessionMap;
+  return accessionMap
 }
 
 /**
@@ -60,9 +60,9 @@ export function loadAccessionMap(): Map<string, AssemblyData> {
  */
 export function tryAndReadJSON<T>(filePath: string): T | null {
   try {
-    return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as T;
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as T
   } catch (error) {
     // console.error(`Error reading or parsing JSON from ${filePath}:`, error);
-    return null;
+    return null
   }
 }
