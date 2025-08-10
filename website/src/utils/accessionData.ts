@@ -1,5 +1,5 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'fs';
+import path from 'path';
 
 /**
  * @typedef {object} AssemblyData
@@ -18,23 +18,38 @@ import path from 'path'
  * [key: string]: any; // Allow other properties
  */
 
-let accessionMap = null
+export interface AssemblyData {
+  accession: string;
+  scientificName: string;
+  ncbiAssemblyName: string;
+  commonName: string;
+  jbrowseLink: string;
+  igvBrowserLink: string;
+  ncbiBrowserLink: string;
+  ucscBrowserLink: string;
+  ucscDataLink: string;
+  ncbiLink: string;
+  taxonId: number;
+  [key: string]: any; // Allow other properties
+}
+
+let accessionMap: Map<string, AssemblyData> | null = null;
 
 /**
  * Loads and caches the accession data from all.json.
  * @returns {Map<string, AssemblyData>}
  */
-export function loadAccessionMap() {
+export function loadAccessionMap(): Map<string, AssemblyData> {
   if (accessionMap === null) {
     accessionMap = new Map(
       JSON.parse(
         fs.readFileSync(path.join('processedHubJson', 'all.json'), 'utf-8'),
       )
-        .filter(f => !!f && f.accession)
-        .map(f => [f.accession, f]),
-    )
+        .filter((f: AssemblyData) => !!f && f.accession)
+        .map((f: AssemblyData) => [f.accession, f]),
+    );
   }
-  return accessionMap
+  return accessionMap;
 }
 
 /**
@@ -43,11 +58,11 @@ export function loadAccessionMap() {
  * @param {string} filePath
  * @returns {Promise<T | null>}
  */
-export function tryAndReadJSON(filePath) {
+export function tryAndReadJSON<T>(filePath: string): T | null {
   try {
-    return JSON.parse(fs.readFileSync(filePath, 'utf-8'))
+    return JSON.parse(fs.readFileSync(filePath, 'utf-8')) as T;
   } catch (error) {
     // console.error(`Error reading or parsing JSON from ${filePath}:`, error);
-    return null
+    return null;
   }
 }

@@ -1,13 +1,21 @@
-import { flexRender } from '@tanstack/react-table'
+import { flexRender, HeaderGroup } from '@tanstack/react-table';
+import { SortDirection } from '@tanstack/react-table';
 
-import styles from './TableHeader.module.css'
+import styles from './TableHeader.module.css';
 
-export default function TableHeader({
+interface TableHeaderProps<TData> {
+  headerGroups: HeaderGroup<TData>[];
+  handleSort: (id: string) => void;
+  sortState: string;
+  sortDirectionPre: SortDirection | false | ''; // Allow empty string
+}
+
+export default function TableHeader<TData>({
   headerGroups,
   handleSort,
   sortState,
   sortDirectionPre,
-}) {
+}: TableHeaderProps<TData>) {
   return (
     <thead>
       {headerGroups.map(headerGroup => (
@@ -19,7 +27,7 @@ export default function TableHeader({
               onClick={
                 header.column.getCanSort()
                   ? () => {
-                      handleSort(header.id)
+                      handleSort(header.id);
                     }
                   : undefined
               }
@@ -37,5 +45,5 @@ export default function TableHeader({
         </tr>
       ))}
     </thead>
-  )
+  );
 }

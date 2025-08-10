@@ -1,49 +1,54 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import {
   getCoreRowModel,
   getPaginationRowModel,
   getSortedRowModel,
   useReactTable,
   flexRender,
-} from '@tanstack/react-table'
-import { Search } from 'lucide-react'
+  SortingState,
+  PaginationState,
+} from '@tanstack/react-table';
+import { Search } from 'lucide-react';
 
-import TableBody from './DataTable/components/TableBody.jsx'
-import TableHeader from './DataTable/components/TableHeader.jsx'
-import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility.js'
-import { useTableColumns } from './DataTable/hooks/useTableColumns.jsx'
-import { useCategoryFilter } from './DataTable/hooks/useCategoryFilter.js'
-import { useSearchFilter } from './DataTable/hooks/useSearchFilter.js'
-import { useTableSort } from './DataTable/hooks/useTableSort.js'
-import TableOptions from './TableOptions.jsx'
+import TableBody from './DataTable/components/TableBody.tsx';
+import TableHeader from './DataTable/components/TableHeader.tsx';
+import { useColumnVisibility } from './DataTable/hooks/useColumnVisibility.ts';
+import { useTableColumns, RowData } from './DataTable/hooks/useTableColumns.tsx';
+import { useCategoryFilter } from './DataTable/hooks/useCategoryFilter.ts';
+import { useSearchFilter } from './DataTable/hooks/useSearchFilter.ts';
+import { useTableSort } from './DataTable/hooks/useTableSort.ts';
+import TableOptions from './TableOptions.tsx';
 
-import styles from './DataTable.module.css'
-import '../styles/common-table.css'
+import styles from './DataTable.module.css';
+import '../styles/common-table.css';
 
-export default function DataTable({ rows }) {
-  const [pagination, setPagination] = useState({
+export interface TableProps {
+  rows: RowData[];
+}
+
+export default function DataTable({ rows }: TableProps) {
+  const [pagination, setPagination] = useState<PaginationState>({
     pageIndex: 0,
     pageSize: 200,
-  })
+  });
   // Apply category filter first
   const {
     filterOption,
     setFilterOption,
     filteredRows: categoryFilteredRows,
-  } = useCategoryFilter(rows)
+  } = useCategoryFilter(rows);
 
   // Then apply search filter to the category-filtered results
   const { searchQuery, setSearchQuery, filteredRows } =
-    useSearchFilter(categoryFilteredRows)
+    useSearchFilter(categoryFilteredRows);
   const { sorting, onSortingChange, handleSort, sortState, sortDirectionPre } =
-    useTableSort()
-  const { showAllColumns, setShowAllColumns } = useColumnVisibility()
-  const { columns } = useTableColumns({ searchQuery })
+    useTableSort();
+  const { showAllColumns, setShowAllColumns } = useColumnVisibility();
+  const { columns } = useTableColumns({ searchQuery });
 
   const table = useReactTable({
-    // @ts-expect-error
     data: filteredRows,
-    columns: columns.filter(col => showAllColumns || !col.meta?.extra),
+    columns,
     state: {
       sorting,
       pagination,
@@ -53,7 +58,7 @@ export default function DataTable({ rows }) {
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getPaginationRowModel: getPaginationRowModel(),
-  })
+  });
 
   return (
     <>
@@ -89,41 +94,13 @@ export default function DataTable({ rows }) {
 
       <div>
         <table>
-          <thead>
-            {table.getHeaderGroups().map(group => (
-              <tr key={group.id}>
-                {group.headers.map(header => (
-                  <th
-                    key={header.id}
-                    onClick={header.column.getToggleSortingHandler()}
-                    className={
-                      header.column.getCanSort() ? 'cursor-pointer' : ''
-                    }
-                  >
-                    {flexRender(
-                      header.column.columnDef.header,
-                      header.getContext(),
-                    )}
-                    {{
-                      asc: ' ↑',
-                      desc: ' ↓',
-                    }[header.column.getIsSorted()] ?? ''}
-                  </th>
-                ))}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map(row => (
-              <tr key={row.id}>
-                {row.getVisibleCells().map(cell => (
-                  <td key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
+          <TableHeader
+            headerGroups={table.getHeaderGroups()}
+            handleSort={handleSort} // Use handleSort from useTableSort
+            sortState={sortState} // Use sortState from useTableSort
+            sortDirectionPre={sortDirectionPre} // Use sortDirectionPre from useTableSort
+          />
+          <TableBody rows={table.getRowModel().rows} />
         </table>
       </div>
 
@@ -169,11 +146,11 @@ export default function DataTable({ rows }) {
             id="pageSize"
             value={pagination.pageSize}
             onChange={e => {
-              const newSize = Number(e.target.value)
+              const newSize = Number(e.target.value);
               setPagination({
                 pageIndex: 0,
                 pageSize: newSize,
-              })
+              });
             }}
             className={styles.pageSizeSelect}
           >
@@ -191,5 +168,5 @@ export default function DataTable({ rows }) {
         </span>
       </div>
     </>
-  )
+  );
 }

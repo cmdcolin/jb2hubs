@@ -1,15 +1,29 @@
-import { useMemo } from 'react'
+import { useMemo } from 'react';
+import { createColumnHelper, ColumnDef } from '@tanstack/react-table';
+import OrangeStar from '../../OrangeStar.tsx';
+import RedX from '../../RedX.tsx';
+import { statusOrder } from '../utils.ts';
+import { highlightText } from '../utils/highlightText.tsx';
+import styles from './useTableColumns.module.css';
 
-import { createColumnHelper } from '@tanstack/react-table'
+// Define the shape of the row data
+export interface RowData {
+  commonName: string;
+  accession: string;
+  ncbiRefSeqCategory: string;
+  suppressed: boolean;
+  jbrowseLink: string;
+  assemblyStatus: string;
+  seqReleaseDate: string;
+  scientificName: string;
+  ncbiAssemblyName: string;
+  taxonId: string;
+  submitterOrg: string;
+  _searchText?: string; // Add _searchText
+}
 
-import OrangeStar from '../../OrangeStar.jsx'
-import RedX from '../../RedX.jsx'
-import { statusOrder } from '../utils.js'
-import { highlightText } from '../utils/highlightText.jsx'
-import styles from './useTableColumns.module.css'
-
-export function useTableColumns({ searchQuery = '' } = {}) {
-  const columnHelper = createColumnHelper()
+export function useTableColumns({ searchQuery = '' }: { searchQuery?: string }) {
+  const columnHelper = createColumnHelper<RowData>();
 
   const columns = useMemo(
     () => [
@@ -32,7 +46,6 @@ export function useTableColumns({ searchQuery = '' } = {}) {
         cell: info => <a href={info.getValue()}>JBrowse</a>,
         enableSorting: false,
       }),
-
       columnHelper.accessor('assemblyStatus', {
         header: 'Assembly status',
         enableSorting: true,
@@ -40,12 +53,11 @@ export function useTableColumns({ searchQuery = '' } = {}) {
           <div className={styles.whitespaceNowrap}>{info.getValue()}</div>
         ),
         sortingFn: (rowA, rowB) => {
-          const a = statusOrder[rowA.original.assemblyStatus] || 999
-          const b = statusOrder[rowB.original.assemblyStatus] || 999
-          return a - b
+          const a = statusOrder[rowA.original.assemblyStatus] || 999;
+          const b = statusOrder[rowB.original.assemblyStatus] || 999;
+          return a - b;
         },
       }),
-
       columnHelper.accessor('seqReleaseDate', {
         header: 'Release date',
         cell: info => info.getValue().replace('00:00', ''),
@@ -84,7 +96,7 @@ export function useTableColumns({ searchQuery = '' } = {}) {
       }),
     ],
     [columnHelper, searchQuery],
-  )
+  );
 
-  return { columns }
+  return { columns };
 }

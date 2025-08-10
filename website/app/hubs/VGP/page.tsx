@@ -1,4 +1,4 @@
-import Page from '../../components/Page.tsx'
+import Page from '../../../src/components/Page.tsx'
 
 export default function VGP() {
   return <Page title="VGP" raw="VGP" />

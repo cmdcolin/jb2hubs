@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
 export default function Spinner() {
   return (
     <div className="spinner-container">
       <div className="spinner"></div>
-      <style jsx>{`
+      <style>{`
         .spinner-container {
           display: flex;
           justify-content: center;
@@ -31,5 +31,5 @@ export default function Spinner() {
         }
       `}</style>
     </div>
-  )
+  );
 }
