@@ -91,10 +91,10 @@
     },
     "27916661": {
       "uid": "27916661",
-      "rsuid": "",
+      "rsuid": "74417838",
       "gbuid": "72224748",
-      "assemblyaccession": "GCA_048934315.1",
-      "lastmajorreleaseaccession": "GCA_048934315.1",
+      "assemblyaccession": "GCF_048934315.1",
+      "lastmajorreleaseaccession": "GCF_048934315.1",
       "latestaccession": "",
       "chainid": "48934315",
       "assemblyname": "UKy_Petmar_22M1.pri1.0",
@@ -112,7 +112,9 @@
         { "bioprojectaccn": "PRJNA1226267", "bioprojectid": 1226267 }
       ],
       "gb_projects": [],
-      "rs_bioprojects": [],
+      "rs_bioprojects": [
+        { "bioprojectaccn": "PRJNA1269050", "bioprojectid": 1269050 }
+      ],
       "rs_projects": [],
       "biosampleaccn": "SAMN46926778",
       "biosampleid": "46926778",
@@ -128,16 +130,16 @@
       },
       "coverage": "44",
       "partialgenomerepresentation": "false",
-      "primary": "72224698",
+      "primary": "74417828",
       "assemblydescription": "",
       "releaselevel": "Major",
       "releasetype": "Major",
       "asmreleasedate_genbank": "2025/03/25 00:00",
-      "asmreleasedate_refseq": "1/01/01 00:00",
+      "asmreleasedate_refseq": "2025/05/28 00:00",
       "seqreleasedate": "2025/03/25 00:00",
-      "asmupdatedate": "2025/03/26 00:00",
+      "asmupdatedate": "2025/08/08 00:00",
       "submissiondate": "2025/03/25 00:00",
-      "lastupdatedate": "2025/03/26 00:00",
+      "lastupdatedate": "2025/08/08 00:00",
       "submitterorganization": "University of Kentucky",
       "refseq_category": "na",
       "anomalouslist": [],
@@ -145,37 +147,40 @@
       "propertylist": [
         "full-genome-representation",
         "has-chromosome",
+        "has-mitochondrion",
+        "has_egap_annotation",
         "has_linked_assembly",
         "latest",
         "latest_genbank",
+        "latest_refseq",
         "wgs"
       ],
       "fromtype": "",
       "synonym": {
         "genbank": "GCA_048934315.1",
-        "refseq": "",
-        "similarity": ""
+        "refseq": "GCF_048934315.1",
+        "similarity": "different"
       },
       "contign50": 4594409,
       "scaffoldn50": 13495987,
       "annotrpturl": "",
       "ftppath_genbank": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/048/934/315/GCA_048934315.1_UKy_Petmar_22M1.pri1.0",
-      "ftppath_refseq": "",
-      "ftppath_assembly_rpt": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/048/934/315/GCA_048934315.1_UKy_Petmar_22M1.pri1.0/GCA_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_report.txt",
-      "ftppath_stats_rpt": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/048/934/315/GCA_048934315.1_UKy_Petmar_22M1.pri1.0/GCA_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_stats.txt",
+      "ftppath_refseq": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/934/315/GCF_048934315.1_UKy_Petmar_22M1.pri1.0",
+      "ftppath_assembly_rpt": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/934/315/GCF_048934315.1_UKy_Petmar_22M1.pri1.0/GCF_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_report.txt",
+      "ftppath_stats_rpt": "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/934/315/GCF_048934315.1_UKy_Petmar_22M1.pri1.0/GCF_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_stats.txt",
       "ftppath_regions_rpt": "",
       "busco": {
-        "refseqannotationrelease": "",
-        "buscolineage": "",
-        "buscover": "",
-        "complete": "",
-        "singlecopy": "",
-        "duplicated": "",
-        "fragmented": "",
-        "missing": "",
-        "totalcount": ""
+        "refseqannotationrelease": "RS_2025_08",
+        "buscolineage": "vertebrata_odb10",
+        "buscover": "5.7.1",
+        "complete": "0.782648",
+        "singlecopy": "0.730769",
+        "duplicated": "0.0518784",
+        "fragmented": "0.0536673",
+        "missing": "0.163685",
+        "totalcount": 3354
       },
-      "meta": " <Stats> <Stat category=\"alt_loci_count\" sequence_tag=\"all\">0</Stat> <Stat category=\"chromosome_count\" sequence_tag=\"all\">84</Stat> <Stat category=\"contig_count\" sequence_tag=\"all\">2195</Stat> <Stat category=\"contig_l50\" sequence_tag=\"all\">99</Stat> <Stat category=\"contig_n50\" sequence_tag=\"all\">4594409</Stat> <Stat category=\"non_chromosome_replicon_count\" sequence_tag=\"all\">0</Stat> <Stat category=\"replicon_count\" sequence_tag=\"all\">84</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"all\">1203</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"placed\">84</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"unlocalized\">59</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"unplaced\">1060</Stat> <Stat category=\"scaffold_l50\" sequence_tag=\"all\">47</Stat> <Stat category=\"scaffold_n50\" sequence_tag=\"all\">13495987</Stat> <Stat category=\"total_length\" sequence_tag=\"all\">1808332251</Stat> <Stat category=\"ungapped_length\" sequence_tag=\"all\">1808233051</Stat> </Stats> <FtpSites>   <FtpPath type=\"Assembly_rpt\">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/048/934/315/GCA_048934315.1_UKy_Petmar_22M1.pri1.0/GCA_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_report.txt</FtpPath>   <FtpPath type=\"GenBank\">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/048/934/315/GCA_048934315.1_UKy_Petmar_22M1.pri1.0</FtpPath>   <FtpPath type=\"Stats_rpt\">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/048/934/315/GCA_048934315.1_UKy_Petmar_22M1.pri1.0/GCA_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_stats.txt</FtpPath> </FtpSites> <assembly-level>3</assembly-level> <assembly-status>Chromosome</assembly-status> <representative-status>na</representative-status> <submitter-organization>University of Kentucky</submitter-organization>    "
+      "meta": " <Stats> <Stat category=\"alt_loci_count\" sequence_tag=\"all\">0</Stat> <Stat category=\"chromosome_count\" sequence_tag=\"all\">84</Stat> <Stat category=\"contig_count\" sequence_tag=\"all\">2196</Stat> <Stat category=\"contig_l50\" sequence_tag=\"all\">99</Stat> <Stat category=\"contig_n50\" sequence_tag=\"all\">4594409</Stat> <Stat category=\"non_chromosome_replicon_count\" sequence_tag=\"all\">1</Stat> <Stat category=\"replicon_count\" sequence_tag=\"all\">85</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"all\">1204</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"placed\">85</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"unlocalized\">59</Stat> <Stat category=\"scaffold_count\" sequence_tag=\"unplaced\">1060</Stat> <Stat category=\"scaffold_l50\" sequence_tag=\"all\">47</Stat> <Stat category=\"scaffold_n50\" sequence_tag=\"all\">13495987</Stat> <Stat category=\"total_length\" sequence_tag=\"all\">1808348452</Stat> <Stat category=\"ungapped_length\" sequence_tag=\"all\">1808249252</Stat> </Stats> <FtpSites>   <FtpPath type=\"Assembly_rpt\">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/934/315/GCF_048934315.1_UKy_Petmar_22M1.pri1.0/GCF_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_report.txt</FtpPath>   <FtpPath type=\"GenBank\">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/048/934/315/GCA_048934315.1_UKy_Petmar_22M1.pri1.0</FtpPath>   <FtpPath type=\"RefSeq\">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/934/315/GCF_048934315.1_UKy_Petmar_22M1.pri1.0</FtpPath>   <FtpPath type=\"Stats_rpt\">ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/048/934/315/GCF_048934315.1_UKy_Petmar_22M1.pri1.0/GCF_048934315.1_UKy_Petmar_22M1.pri1.0_assembly_stats.txt</FtpPath> </FtpSites> <assembly-level>3</assembly-level> <assembly-status>Chromosome</assembly-status> <representative-status>na</representative-status> <submitter-organization>University of Kentucky</submitter-organization>    "
     }
   }
 }
