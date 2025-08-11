@@ -1,6 +1,9 @@
 import fs from 'fs'
+import path from 'path'
 
 import { readConfig, writeJSON } from './util.ts'
+
+const BASE_RENAMES_DIR = 'ucscRenames'
 
 function modifyTracks(configPath: string, mappings: { [key: string]: string }) {
   const config = readConfig(configPath)
@@ -20,14 +23,23 @@ function modifyTracks(configPath: string, mappings: { [key: string]: string }) {
   writeJSON(configPath, config)
 }
 
-if (process.argv.length !== 4) {
-  console.error(
-    'Usage: node rewriteUcscTrackNames.ts <configFile> <mappingsFile>',
-  )
+function rewriteUcscTrackNames(targetDir: string) {
+  const renameFiles = fs.readdirSync(BASE_RENAMES_DIR)
+
+  for (const item of renameFiles) {
+    const accession = item.replace('.json', '')
+    const configFilePath = path.join(targetDir, accession, 'config.json')
+    const mappings = JSON.parse(
+      fs.readFileSync(path.join(BASE_RENAMES_DIR, item), 'utf-8'),
+    )
+    modifyTracks(configFilePath, mappings)
+    console.log(`Updated config file: ${configFilePath}`)
+  }
+}
+
+if (process.argv.length !== 3) {
+  console.error('Usage: node rewriteUcscTrackNames.ts <targetDirectory>')
   process.exit(1)
 }
 
-const configFile = process.argv[2]!
-const mappingsFile = process.argv[3]!
-const mappings = JSON.parse(fs.readFileSync(mappingsFile, 'utf-8'))
-modifyTracks(configFile, mappings)
+rewriteUcscTrackNames(process.argv[2]!)
