@@ -151,8 +151,8 @@ find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
 echo "Adding GenArk extensions (special tracks)..."
 node src/makeGenArkExtensions.ts
 
-# echo "Generating AI descriptions for species..."
-# node src/getAutomatedSpeciesDescription.ts
+echo "Calculate gff file hashes"
+./getFileListing.sh
 
 sleep 1 # Small pause
 

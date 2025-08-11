@@ -487,10 +487,13 @@ function parseAssemblyEntry({ entry }) {
   const [base, rest] = accession.split('_')
   const [b1, b2, b3] = rest.match(/.{1,3}/g)
   let ncbiData
+  const fn = `hubs/${base}/${b1}/${b2}/${b3}/${accession}/ncbi.json`
   try {
-    ncbiData = readJSON(`hubs/${base}/${b1}/${b2}/${b3}/${accession}/ncbi.json`)
+    ncbiData = readJSON(fn)
   } catch {
-    console.error(`NCBI data not found for ${accession} (${comName})`)
+    console.error(
+      `NCBI data not found for ${accession} (${comName}): ${fn} does not exist`,
+    )
   }
   const r = ncbiData?.result.uids[0]
   const r2 = r ? ncbiData?.result[r] : void 0
