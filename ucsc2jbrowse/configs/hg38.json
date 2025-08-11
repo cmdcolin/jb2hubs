@@ -367,6 +367,33 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
+      "trackId": "hg38-target_regions",
+      "name": "Targets - CLS targets",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-targets.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-targets.bb",
+        "color": "0,100,0",
+        "defaultLabelFields": "none",
+        "labelFields": "name",
+        "longLabel": "CLS target regions",
+        "parent": "targets_view off",
+        "priority": "1",
+        "shortLabel": "CLS targets",
+        "subGroups": "view=targets_view sample=combined type=targets",
+        "track": "target_regions",
+        "type": "bigBed 6 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "CLS target regions",
+      "category": ["mRNA and EST"]
+    },
+    {
       "trackId": "hg38-dbSnp153Common",
       "name": "Variants - Common dbSNP(153)",
       "type": "FeatureTrack",
@@ -1040,31 +1067,37 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
-      "trackId": "hg38-panelAppCNVs",
-      "name": "PanelApp - PanelApp CNVs",
+      "trackId": "hg38-panelAppGenes",
+      "name": "PanelApp - PanelApp GE Genes",
       "type": "FeatureTrack",
       "assemblyNames": ["hg38"],
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/panelApp/cnv.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/panelApp/genes.bb"
       },
       "metadata": {
-        "bigDataUrl": "/gbdb/hg38/panelApp/cnv.bb",
+        "bigDataUrl": "/gbdb/hg38/panelApp/genes.bb",
+        "filter.panelVersion": "1",
+        "filterLabel.panelVersion": "Minimum panel version to display",
         "filterValues.confidenceLevel": "3,2,1,0",
         "itemRgb": "on",
-        "labelFields": "entityName",
-        "longLabel": "Genomics England PanelApp CNV Regions",
+        "labelFields": "geneSymbol",
+        "longLabel": "Genomics England PanelApp Genes",
+        "mouseOver": "<b>Gene:</b> $entityName<br><b>Panel:</b> $panelName<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
         "parent": "panelApp on",
-        "shortLabel": "PanelApp CNVs",
+        "priority": "1",
+        "shortLabel": "PanelApp GE Genes",
         "skipEmptyFields": "on",
-        "skipFields": "chrom,chromStart,blockStarts,blockSizes",
-        "track": "panelAppCNVs",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes,entityName,tags,status,mouseOverField",
+        "track": "panelAppGenes",
         "type": "bigBed 9 +",
-        "urls": "omimGene=\"https://www.omim.org/entry/$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" entityName=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
+        "url": "https://panelapp.genomicsengland.co.uk/panels/$<panelID>/gene/$<geneSymbol>/",
+        "urlLabel": "Link to PanelApp",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblGenes=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" geneSymbol=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
         "visibility": "pack",
         "html": ""
       },
-      "description": "Genomics England PanelApp CNV Regions",
+      "description": "Genomics England PanelApp Genes",
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
@@ -1608,6 +1641,31 @@
       },
       "description": "Short Genetic Variants from dbSNP Release 155 Included in ClinVar",
       "category": ["Variation and Repeats"]
+    },
+    {
+      "trackId": "hg38-cls_gene_models",
+      "name": "Models - CLS transcripts",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models.bb",
+        "color": "12,12,120",
+        "longLabel": "CLS transcript models",
+        "parent": "models_view on",
+        "priority": "2",
+        "shortLabel": "CLS transcripts",
+        "subGroups": "view=models_view sample=combined type=models",
+        "track": "cls_gene_models",
+        "type": "bigBed 12 +",
+        "visibility": "pack",
+        "html": ""
+      },
+      "description": "CLS transcript models",
+      "category": ["mRNA and EST"]
     },
     {
       "trackId": "hg38-crossTissueMapsFullDetails",
@@ -2244,34 +2302,35 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
-      "trackId": "hg38-panelAppGenes",
-      "name": "PanelApp - PanelApp Genes",
+      "trackId": "hg38-panelAppCNVs",
+      "name": "PanelApp - PanelApp GE CNVs",
       "type": "FeatureTrack",
       "assemblyNames": ["hg38"],
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/panelApp/genes.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/panelApp/cnv.bb"
       },
       "metadata": {
-        "bigDataUrl": "/gbdb/hg38/panelApp/genes.bb",
+        "bigDataUrl": "/gbdb/hg38/panelApp/cnv.bb",
+        "filter.versionCreated": "1",
+        "filterLabel.versionCreated": "Minimum panel version to display",
         "filterValues.confidenceLevel": "3,2,1,0",
         "itemRgb": "on",
-        "labelFields": "geneSymbol",
-        "longLabel": "Genomics England PanelApp Genes",
-        "mouseOverField": "mouseOverField",
+        "labelFields": "entityName",
+        "longLabel": "Genomics England PanelApp CNV Regions",
+        "mouseOver": "<b>Gene:</b> $entityName<br><b>Panel:</b> $panelName<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
         "parent": "panelApp on",
-        "shortLabel": "PanelApp Genes",
+        "priority": "2",
+        "shortLabel": "PanelApp GE CNVs",
         "skipEmptyFields": "on",
-        "skipFields": "chrom,chromStart,blockStarts,blockSizes,entityName,tags,status,mouseOverField",
-        "track": "panelAppGenes",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes",
+        "track": "panelAppCNVs",
         "type": "bigBed 9 +",
-        "url": "https://panelapp.genomicsengland.co.uk/panels/$<panelID>/gene/$<geneSymbol>/",
-        "urlLabel": "Link to PanelApp",
-        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblGenes=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" geneSymbol=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" entityName=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
         "visibility": "pack",
         "html": ""
       },
-      "description": "Genomics England PanelApp Genes",
+      "description": "Genomics England PanelApp CNV Regions",
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
@@ -3261,7 +3320,7 @@
     },
     {
       "trackId": "hg38-panelAppTandRep",
-      "name": "PanelApp - PanelApp STRs",
+      "name": "PanelApp - PanelApp GE STRs",
       "type": "FeatureTrack",
       "assemblyNames": ["hg38"],
       "adapter": {
@@ -3270,18 +3329,21 @@
       },
       "metadata": {
         "bigDataUrl": "/gbdb/hg38/panelApp/tandRep.bb",
+        "filter.version": "1",
+        "filterLabel.version": "Minimum panel version to display",
         "filterValues.confidenceLevel": "3,2,1,0",
         "itemRgb": "on",
         "labelFields": "hgncSymbol",
         "longLabel": "Genomics England PanelApp Short Tandem Repeats",
-        "mouseOverField": "mouseOverField",
+        "mouseOver": "<b>Gene name:</b> $geneName<br><b>Panel:</b> $name<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
         "parent": "panelApp on",
-        "shortLabel": "PanelApp STRs",
+        "priority": "3",
+        "shortLabel": "PanelApp GE STRs",
         "skipEmptyFields": "on",
         "skipFields": "chrom,chromStart,blockStarts,blockSizes,mouseOverField",
         "track": "panelAppTandRep",
         "type": "bigBed 9 +",
-        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblID=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" geneSymbol=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblID=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" geneSymbol=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
         "visibility": "pack",
         "html": ""
       },
@@ -4139,6 +4201,39 @@
       "category": ["Mapping and Sequencing"]
     },
     {
+      "trackId": "hg38-panelAppAusGenes",
+      "name": "PanelApp - PanelApp Australia Genes",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/panelApp/genesAus.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/panelApp/genesAus.bb",
+        "filter.panelVersion": "0",
+        "filterLabel.panelVersion": "Minimum panel version to display",
+        "filterValues.confidenceLevel": "3,2,1,0",
+        "labelFields": "geneSymbol",
+        "longLabel": "PanelApp Australia Genes Panels",
+        "mouseOver": "<b>Gene:</b> $entityName<br><b>Panel:</b> $panelName<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
+        "parent": "panelApp on",
+        "priority": "4",
+        "shortLabel": "PanelApp Australia Genes",
+        "skipEmptyFields": "on",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes,entityName,tags,status,mouseOverField",
+        "track": "panelAppAusGenes",
+        "type": "bigBed 9 +",
+        "url": "https://panelapp-aus.org/panels/$<panelID>/gene/$<geneSymbol>/",
+        "urlLabel": "Link to PanelApp Australia",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblGenes=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:$$\" panelID=\"https://panelapp-aus.org/panels/$$/\" geneSymbol=\"https://panelapp-aus.org/panels/entities/$$\"",
+        "visibility": "pack",
+        "html": ""
+      },
+      "description": "PanelApp Australia Genes Panels",
+      "category": ["Phenotypes, Variants, and Literature"]
+    },
+    {
       "trackId": "hg38-recombEvents",
       "name": "Recomb Rate - Recomb. deCODE Evts",
       "type": "FeatureTrack",
@@ -4470,6 +4565,38 @@
       "category": ["Variation and Repeats"]
     },
     {
+      "trackId": "hg38-panelAppAusCNVs",
+      "name": "PanelApp - PanelApp Australia CNVs",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/panelApp/cnvAus.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/panelApp/cnvAus.bb",
+        "filter.versionCreated": "0",
+        "filterLabel.versionCreated": "Minimum panel version to display",
+        "filterValues.confidenceLevel": "3,2,1,0",
+        "itemRgb": "on",
+        "labelFields": "entityName",
+        "longLabel": "PanelApp Australia CNV Regions",
+        "mouseOver": "<b>Gene:</b> $entityName<br><b>Panel:</b> $panelName<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
+        "parent": "panelApp on",
+        "priority": "5",
+        "shortLabel": "PanelApp Australia CNVs",
+        "skipEmptyFields": "on",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes",
+        "track": "panelAppAusCNVs",
+        "type": "bigBed 9 +",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" panelID=\"https://panelapp-aus.org/panels/$$/\" entityName=\"https://panelapp-aus.org/panels/entities/$$\"",
+        "visibility": "pack",
+        "html": ""
+      },
+      "description": "PanelApp Australia CNV Regions",
+      "category": ["Phenotypes, Variants, and Literature"]
+    },
+    {
       "trackId": "hg38-recombDnm",
       "name": "Recomb Rate - Recomb. deCODE Dmn",
       "type": "FeatureTrack",
@@ -4798,6 +4925,38 @@
       },
       "description": "Roche - KAPA HyperExome Primary Target Regions",
       "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
+    },
+    {
+      "trackId": "hg38-panelAppAusTandRep",
+      "name": "PanelApp - PanelApp Australia STRs",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/panelApp/tandRepAus.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/panelApp/tandRepAus.bb",
+        "filter.version": "0",
+        "filterLabel.version": "Minimum panel version to display",
+        "filterValues.confidenceLevel": "3,2,1,0",
+        "itemRgb": "on",
+        "labelFields": "hgncSymbol",
+        "longLabel": "PanelApp Australia Short Tandem Repeats",
+        "mouseOver": "<b>Gene name:</b> $geneName<br><b>Panel:</b> $name<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
+        "parent": "panelApp on",
+        "priority": "6",
+        "shortLabel": "PanelApp Australia STRs",
+        "skipEmptyFields": "on",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes,mouseOverField",
+        "track": "panelAppAusTandRep",
+        "type": "bigBed 9 +",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblID=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/$$\" panelID=\"https://panelapp-aus.org/panels/$$/\" geneSymbol=\"https://panelapp-aus.org/panels/entities/$$\"",
+        "visibility": "pack",
+        "html": ""
+      },
+      "description": "PanelApp Australia Short Tandem Repeats",
+      "category": ["Phenotypes, Variants, and Literature"]
     },
     {
       "trackId": "hg38-recomb1000GAvg",
@@ -8428,6 +8587,242 @@
       "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
+      "trackId": "hg38-adult_wblood_models",
+      "name": "Sample models - Blood models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-WBlood.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-WBlood.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Blood transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Blood models",
+        "subGroups": "view=sample_models_view sample=adult_wblood type=models",
+        "track": "adult_wblood_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Adult Blood transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_ont_post_models",
+      "name": "Models - Blood ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_WBlood01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_WBlood01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Blood ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Blood ONT post models",
+        "subGroups": "view=per_expr_models_view sample=adult_wblood type=post_capture_ont_models",
+        "track": "adult_wblood_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_ont_post_reads",
+      "name": "Reads - Blood ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_WBlood01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_WBlood01Rep1.bam",
+        "longLabel": "Adult Blood ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Blood ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_wblood type=post_capture_ont_reads",
+        "track": "adult_wblood_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_ont_pre_models",
+      "name": "Models - Blood ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_WBlood01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_WBlood01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Blood ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Blood ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_wblood type=pre_capture_ont_models",
+        "track": "adult_wblood_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_ont_pre_reads",
+      "name": "Reads - Blood ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_WBlood01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_WBlood01Rep1.bam",
+        "longLabel": "Adult Blood ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Blood ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_wblood type=pre_capture_ont_reads",
+        "track": "adult_wblood_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_pacbio_post_models",
+      "name": "Models - Blood PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_WBlood01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_WBlood01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Blood PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Blood PB post models",
+        "subGroups": "view=per_expr_models_view sample=adult_wblood type=post_capture_pacbio_models",
+        "track": "adult_wblood_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_pacbio_post_reads",
+      "name": "Reads - Blood PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_WBlood01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_WBlood01Rep1.bam",
+        "longLabel": "Adult Blood PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Blood PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_wblood type=post_capture_pacbio_reads",
+        "track": "adult_wblood_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_pacbio_pre_models",
+      "name": "Models - Blood PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_WBlood01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_WBlood01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Blood PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Blood PB pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_wblood type=pre_capture_pacbio_models",
+        "track": "adult_wblood_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_wblood_pacbio_pre_reads",
+      "name": "Reads - Blood PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_WBlood01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_WBlood01Rep1.bam",
+        "longLabel": "Adult Blood PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Blood PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_wblood type=pre_capture_pacbio_reads",
+        "track": "adult_wblood_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Blood PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
       "trackId": "hg38-bloodHaoCellType",
       "name": "Blood (PBMC) Hao - Blood PBMC Cells",
       "type": "FeatureTrack",
@@ -8623,6 +9018,242 @@
       },
       "description": "Blood PBMCs binned by time into experiment from Hao et al 2020",
       "category": ["Single cell"]
+    },
+    {
+      "trackId": "hg38-adult_brain_models",
+      "name": "Sample models - Brain models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-Brain.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-Brain.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Brain transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Brain models",
+        "subGroups": "view=sample_models_view sample=adult_brain type=models",
+        "track": "adult_brain_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Adult Brain transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_ont_post_models",
+      "name": "Models - Brain ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Brain03Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Brain03Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Brain ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Brain ONT post models",
+        "subGroups": "view=per_expr_models_view sample=adult_brain type=post_capture_ont_models",
+        "track": "adult_brain_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_ont_post_reads",
+      "name": "Reads - Brain ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Brain03Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Brain03Rep1.bam",
+        "longLabel": "Adult Brain ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Brain ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_brain type=post_capture_ont_reads",
+        "track": "adult_brain_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_ont_pre_models",
+      "name": "Models - Brain ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Brain03Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Brain03Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Brain ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Brain ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_brain type=pre_capture_ont_models",
+        "track": "adult_brain_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_ont_pre_reads",
+      "name": "Reads - Brain ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Brain03Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Brain03Rep1.bam",
+        "longLabel": "Adult Brain ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Brain ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_brain type=pre_capture_ont_reads",
+        "track": "adult_brain_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_pacbio_post_models",
+      "name": "Models - Brain PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Brain03Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Brain03Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Brain PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Brain PB post models",
+        "subGroups": "view=per_expr_models_view sample=adult_brain type=post_capture_pacbio_models",
+        "track": "adult_brain_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_pacbio_post_reads",
+      "name": "Reads - Brain PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Brain03Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Brain03Rep1.bam",
+        "longLabel": "Adult Brain PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Brain PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_brain type=post_capture_pacbio_reads",
+        "track": "adult_brain_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_pacbio_pre_models",
+      "name": "Models - Brain PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Brain03Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Brain03Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Brain PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Brain PB pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_brain type=pre_capture_pacbio_models",
+        "track": "adult_brain_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_brain_pacbio_pre_reads",
+      "name": "Reads - Brain PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Brain03Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Brain03Rep1.bam",
+        "longLabel": "Adult Brain PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Brain PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_brain type=pre_capture_pacbio_reads",
+        "track": "adult_brain_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Brain PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
     },
     {
       "trackId": "hg38-gnomADPextBrain_Amygdala",
@@ -9105,6 +9736,242 @@
       },
       "description": "Transcript-level Expression in 33 TCGA Cancer Tissues (GENCODE v23)",
       "category": ["Phenotypes, Variants, and Literature"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_models",
+      "name": "Sample models - Cell Line Pool models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-CpoolA.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-CpoolA.bb",
+        "color": "100,22,180",
+        "longLabel": "Cell Line Pool transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Cell Line Pool models",
+        "subGroups": "view=sample_models_view sample=adult_cpoola type=models",
+        "track": "adult_cpoola_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Cell Line Pool transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_ont_post_models",
+      "name": "Models - Cell Line Pool ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_CpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_CpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Cell Line Pool ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Cell Line Pool ONT post models",
+        "subGroups": "view=per_expr_models_view sample=adult_cpoola type=post_capture_ont_models",
+        "track": "adult_cpoola_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_ont_post_reads",
+      "name": "Reads - Cell Line Pool ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_CpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_CpoolA01Rep1.bam",
+        "longLabel": "Cell Line Pool ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Cell Line Pool ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_cpoola type=post_capture_ont_reads",
+        "track": "adult_cpoola_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_ont_pre_models",
+      "name": "Models - Cell Line Pool ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_CpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_CpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Cell Line Pool ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Cell Line Pool ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_cpoola type=pre_capture_ont_models",
+        "track": "adult_cpoola_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_ont_pre_reads",
+      "name": "Reads - Cell Line Pool ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_CpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_CpoolA01Rep1.bam",
+        "longLabel": "Cell Line Pool ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Cell Line Pool ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_cpoola type=pre_capture_ont_reads",
+        "track": "adult_cpoola_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_pacbio_post_models",
+      "name": "Models - Cell Line Pool PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_CpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_CpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Cell Line Pool PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Cell Line Pool PB post models",
+        "subGroups": "view=per_expr_models_view sample=adult_cpoola type=post_capture_pacbio_models",
+        "track": "adult_cpoola_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_pacbio_post_reads",
+      "name": "Reads - Cell Line Pool PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_CpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_CpoolA01Rep1.bam",
+        "longLabel": "Cell Line Pool PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Cell Line Pool PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_cpoola type=post_capture_pacbio_reads",
+        "track": "adult_cpoola_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_pacbio_pre_models",
+      "name": "Models - Cell Line Pool PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_CpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_CpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Cell Line Pool PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Cell Line Pool PB pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_cpoola type=pre_capture_pacbio_models",
+        "track": "adult_cpoola_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_cpoola_pacbio_pre_reads",
+      "name": "Reads - Cell Line Pool PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_CpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_CpoolA01Rep1.bam",
+        "longLabel": "Cell Line Pool PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Cell Line Pool PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_cpoola type=pre_capture_pacbio_reads",
+        "track": "adult_cpoola_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Cell Line Pool PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
     },
     {
       "trackId": "hg38-gnomADPextCells_Culturedfibroblasts",
@@ -9591,6 +10458,950 @@
       },
       "description": "Database of Genomic Variants: Gold Standard Variants",
       "category": ["Variation and Repeats"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_models",
+      "name": "Sample models - Emb Brain models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-EmbBrain.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-EmbBrain.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Brain transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Emb Brain models",
+        "subGroups": "view=sample_models_view sample=embryo_brain type=models",
+        "track": "embryo_brain_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Embryonic Brain transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_ont_post_models",
+      "name": "Models - Emb Brain ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbBrain01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbBrain01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Brain ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Brain ONT post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_brain type=post_capture_ont_models",
+        "track": "embryo_brain_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_ont_post_reads",
+      "name": "Reads - Emb Brain ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbBrain01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbBrain01Rep1.bam",
+        "longLabel": "Embryonic Brain ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Brain ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_brain type=post_capture_ont_reads",
+        "track": "embryo_brain_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_ont_pre_models",
+      "name": "Models - Emb Brain ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbBrain01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbBrain01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Brain ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Brain ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_brain type=pre_capture_ont_models",
+        "track": "embryo_brain_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_ont_pre_reads",
+      "name": "Reads - Emb Brain ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbBrain01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbBrain01Rep1.bam",
+        "longLabel": "Embryonic Brain ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Brain ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_brain type=pre_capture_ont_reads",
+        "track": "embryo_brain_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_pacbio_post_models",
+      "name": "Models - Emb Brain PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbBrain01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbBrain01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Brain PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Brain PB post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_brain type=post_capture_pacbio_models",
+        "track": "embryo_brain_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_pacbio_post_reads",
+      "name": "Reads - Emb Brain PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbBrain01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbBrain01Rep1.bam",
+        "longLabel": "Embryonic Brain PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Brain PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_brain type=post_capture_pacbio_reads",
+        "track": "embryo_brain_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_pacbio_pre_models",
+      "name": "Models - Emb Brain PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbBrain01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbBrain01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Brain PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Brain PB pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_brain type=pre_capture_pacbio_models",
+        "track": "embryo_brain_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_brain_pacbio_pre_reads",
+      "name": "Reads - Emb Brain PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbBrain01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbBrain01Rep1.bam",
+        "longLabel": "Embryonic Brain PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Brain PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_brain type=pre_capture_pacbio_reads",
+        "track": "embryo_brain_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Brain PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_models",
+      "name": "Sample models - Emb Heart models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-EmbHeart.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-EmbHeart.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Heart transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Emb Heart models",
+        "subGroups": "view=sample_models_view sample=embryo_heart type=models",
+        "track": "embryo_heart_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Embryonic Heart transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_ont_post_models",
+      "name": "Models - Emb Heart ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbHeart01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbHeart01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Heart ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Heart ONT post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_heart type=post_capture_ont_models",
+        "track": "embryo_heart_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_ont_post_reads",
+      "name": "Reads - Emb Heart ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbHeart01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbHeart01Rep1.bam",
+        "longLabel": "Embryonic Heart ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Heart ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_heart type=post_capture_ont_reads",
+        "track": "embryo_heart_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_ont_pre_models",
+      "name": "Models - Emb Heart ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbHeart01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbHeart01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Heart ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Heart ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_heart type=pre_capture_ont_models",
+        "track": "embryo_heart_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_ont_pre_reads",
+      "name": "Reads - Emb Heart ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbHeart01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbHeart01Rep1.bam",
+        "longLabel": "Embryonic Heart ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Heart ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_heart type=pre_capture_ont_reads",
+        "track": "embryo_heart_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_pacbio_post_models",
+      "name": "Models - Emb Heart PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbHeart01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbHeart01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Heart PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Heart PB post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_heart type=post_capture_pacbio_models",
+        "track": "embryo_heart_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_pacbio_post_reads",
+      "name": "Reads - Emb Heart PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbHeart01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbHeart01Rep1.bam",
+        "longLabel": "Embryonic Heart PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Heart PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_heart type=post_capture_pacbio_reads",
+        "track": "embryo_heart_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_pacbio_pre_models",
+      "name": "Models - Emb Heart PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbHeart01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbHeart01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Heart PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Heart PB pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_heart type=pre_capture_pacbio_models",
+        "track": "embryo_heart_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_heart_pacbio_pre_reads",
+      "name": "Reads - Emb Heart PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbHeart01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbHeart01Rep1.bam",
+        "longLabel": "Embryonic Heart PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Heart PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_heart type=pre_capture_pacbio_reads",
+        "track": "embryo_heart_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Heart PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_models",
+      "name": "Sample models - Emb iPSC models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-EmbiPSC.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-EmbiPSC.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic iPSC transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Emb iPSC models",
+        "subGroups": "view=sample_models_view sample=embryo_ipsc type=models",
+        "track": "embryo_ipsc_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Embryonic iPSC transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_ont_post_models",
+      "name": "Models - Emb iPSC ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_iPSC01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_iPSC01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic iPSC ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb iPSC ONT post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_ipsc type=post_capture_ont_models",
+        "track": "embryo_ipsc_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_ont_post_reads",
+      "name": "Reads - Emb iPSC ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_iPSC01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_iPSC01Rep1.bam",
+        "longLabel": "Embryonic iPSC ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb iPSC ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_ipsc type=post_capture_ont_reads",
+        "track": "embryo_ipsc_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_ont_pre_models",
+      "name": "Models - Emb iPSC ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_iPSC01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_iPSC01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic iPSC ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb iPSC ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_ipsc type=pre_capture_ont_models",
+        "track": "embryo_ipsc_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_ont_pre_reads",
+      "name": "Reads - Emb iPSC ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_iPSC01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_iPSC01Rep1.bam",
+        "longLabel": "Embryonic iPSC ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb iPSC ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_ipsc type=pre_capture_ont_reads",
+        "track": "embryo_ipsc_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_pacbio_post_models",
+      "name": "Models - Emb iPSC PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_iPSC01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_iPSC01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic iPSC PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb iPSC PB post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_ipsc type=post_capture_pacbio_models",
+        "track": "embryo_ipsc_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_pacbio_post_reads",
+      "name": "Reads - Emb iPSC PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_iPSC01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_iPSC01Rep1.bam",
+        "longLabel": "Embryonic iPSC PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb iPSC PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_ipsc type=post_capture_pacbio_reads",
+        "track": "embryo_ipsc_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_pacbio_pre_models",
+      "name": "Models - Emb iPSC PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_iPSC01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_iPSC01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic iPSC PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb iPSC PB pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_ipsc type=pre_capture_pacbio_models",
+        "track": "embryo_ipsc_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_ipsc_pacbio_pre_reads",
+      "name": "Reads - Emb iPSC PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_iPSC01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_iPSC01Rep1.bam",
+        "longLabel": "Embryonic iPSC PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb iPSC PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_ipsc type=pre_capture_pacbio_reads",
+        "track": "embryo_ipsc_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic iPSC PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_models",
+      "name": "Sample models - Emb Liver models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-EmbLiver.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-EmbLiver.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Liver transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Emb Liver models",
+        "subGroups": "view=sample_models_view sample=embryo_liver type=models",
+        "track": "embryo_liver_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Embryonic Liver transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_ont_post_models",
+      "name": "Models - Emb Liver ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbLiver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbLiver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Liver ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Liver ONT post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_liver type=post_capture_ont_models",
+        "track": "embryo_liver_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_ont_post_reads",
+      "name": "Reads - Emb Liver ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbLiver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_EmbLiver01Rep1.bam",
+        "longLabel": "Embryonic Liver ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Liver ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_liver type=post_capture_ont_reads",
+        "track": "embryo_liver_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_ont_pre_models",
+      "name": "Models - Emb Liver ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbLiver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbLiver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Liver ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Liver ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_liver type=pre_capture_ont_models",
+        "track": "embryo_liver_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_ont_pre_reads",
+      "name": "Reads - Emb Liver ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbLiver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_EmbLiver01Rep1.bam",
+        "longLabel": "Embryonic Liver ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Liver ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_liver type=pre_capture_ont_reads",
+        "track": "embryo_liver_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_pacbio_post_models",
+      "name": "Models - Emb Liver PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbLiver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbLiver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Liver PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Liver PB post models",
+        "subGroups": "view=per_expr_models_view sample=embryo_liver type=post_capture_pacbio_models",
+        "track": "embryo_liver_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_pacbio_post_reads",
+      "name": "Reads - Emb Liver PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbLiver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_EmbLiver01Rep1.bam",
+        "longLabel": "Embryonic Liver PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Liver PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_liver type=post_capture_pacbio_reads",
+        "track": "embryo_liver_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_pacbio_pre_models",
+      "name": "Models - Emb Liver PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbLiver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbLiver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Embryonic Liver PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Emb Liver PB pre models",
+        "subGroups": "view=per_expr_models_view sample=embryo_liver type=pre_capture_pacbio_models",
+        "track": "embryo_liver_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-embryo_liver_pacbio_pre_reads",
+      "name": "Reads - Emb Liver PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbLiver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_EmbLiver01Rep1.bam",
+        "longLabel": "Embryonic Liver PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Emb Liver PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=embryo_liver type=pre_capture_pacbio_reads",
+        "track": "embryo_liver_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Embryonic Liver PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
     },
     {
       "trackId": "hg38-encode4LongRnaTranscripts",
@@ -10464,6 +12275,242 @@
       "category": ["Single cell"]
     },
     {
+      "trackId": "hg38-adult_heart_models",
+      "name": "Sample models - Heart models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-Heart.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-Heart.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Heart transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Heart models",
+        "subGroups": "view=sample_models_view sample=adult_heart type=models",
+        "track": "adult_heart_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Adult Heart transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_ont_post_models",
+      "name": "Models - Heart ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Heart02Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Heart02Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Heart ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Heart ONT post models",
+        "subGroups": "view=per_expr_models_view sample=adult_heart type=post_capture_ont_models",
+        "track": "adult_heart_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_ont_post_reads",
+      "name": "Reads - Heart ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Heart02Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Heart02Rep1.bam",
+        "longLabel": "Adult Heart ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Heart ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_heart type=post_capture_ont_reads",
+        "track": "adult_heart_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_ont_pre_models",
+      "name": "Models - Heart ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Heart02Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Heart02Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Heart ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Heart ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_heart type=pre_capture_ont_models",
+        "track": "adult_heart_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_ont_pre_reads",
+      "name": "Reads - Heart ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Heart02Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Heart02Rep1.bam",
+        "longLabel": "Adult Heart ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Heart ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_heart type=pre_capture_ont_reads",
+        "track": "adult_heart_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_pacbio_post_models",
+      "name": "Models - Heart PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Heart02Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Heart02Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Heart PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Heart PB post models",
+        "subGroups": "view=per_expr_models_view sample=adult_heart type=post_capture_pacbio_models",
+        "track": "adult_heart_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_pacbio_post_reads",
+      "name": "Reads - Heart PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Heart02Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Heart02Rep1.bam",
+        "longLabel": "Adult Heart PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Heart PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_heart type=post_capture_pacbio_reads",
+        "track": "adult_heart_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_pacbio_pre_models",
+      "name": "Models - Heart PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Heart02Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Heart02Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Heart PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Heart PB pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_heart type=pre_capture_pacbio_models",
+        "track": "adult_heart_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_heart_pacbio_pre_reads",
+      "name": "Reads - Heart PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Heart02Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Heart02Rep1.bam",
+        "longLabel": "Adult Heart PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Heart PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_heart type=pre_capture_pacbio_reads",
+        "track": "adult_heart_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Heart PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
       "trackId": "hg38-gnomADPextHeart_AtrialAppendage",
       "name": "gnomAD pext - Heart-Atrial Appendage",
       "type": "QuantitativeTrack",
@@ -10973,6 +13020,242 @@
       },
       "description": "Liver cells binned by organ donor from MacParland et al 2018",
       "category": ["Single cell"]
+    },
+    {
+      "trackId": "hg38-adult_liver_models",
+      "name": "Sample models - Liver models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-Liver.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-Liver.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Liver transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Liver models",
+        "subGroups": "view=sample_models_view sample=adult_liver type=models",
+        "track": "adult_liver_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Adult Liver transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_ont_post_models",
+      "name": "Models - Liver ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Liver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Liver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Liver ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Liver ONT post models",
+        "subGroups": "view=per_expr_models_view sample=adult_liver type=post_capture_ont_models",
+        "track": "adult_liver_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_ont_post_reads",
+      "name": "Reads - Liver ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Liver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Liver01Rep1.bam",
+        "longLabel": "Adult Liver ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Liver ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_liver type=post_capture_ont_reads",
+        "track": "adult_liver_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_ont_pre_models",
+      "name": "Models - Liver ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Liver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Liver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Liver ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Liver ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_liver type=pre_capture_ont_models",
+        "track": "adult_liver_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_ont_pre_reads",
+      "name": "Reads - Liver ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Liver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Liver01Rep1.bam",
+        "longLabel": "Adult Liver ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Liver ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_liver type=pre_capture_ont_reads",
+        "track": "adult_liver_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_pacbio_post_models",
+      "name": "Models - Liver PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Liver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Liver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Liver PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Liver PB post models",
+        "subGroups": "view=per_expr_models_view sample=adult_liver type=post_capture_pacbio_models",
+        "track": "adult_liver_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_pacbio_post_reads",
+      "name": "Reads - Liver PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Liver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Liver01Rep1.bam",
+        "longLabel": "Adult Liver PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Liver PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_liver type=post_capture_pacbio_reads",
+        "track": "adult_liver_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_pacbio_pre_models",
+      "name": "Models - Liver PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Liver01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Liver01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Liver PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Liver PB pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_liver type=pre_capture_pacbio_models",
+        "track": "adult_liver_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_liver_pacbio_pre_reads",
+      "name": "Reads - Liver PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Liver01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Liver01Rep1.bam",
+        "longLabel": "Adult Liver PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Liver PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_liver type=pre_capture_pacbio_reads",
+        "track": "adult_liver_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Liver PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
     },
     {
       "trackId": "hg38-lrgTranscriptAli",
@@ -12356,6 +14639,242 @@
       "category": ["Single cell"]
     },
     {
+      "trackId": "hg38-placenta_placenta_models",
+      "name": "Sample models - Placenta models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-Placenta.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-Placenta.bb",
+        "color": "100,22,180",
+        "longLabel": "Placenta transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Placenta models",
+        "subGroups": "view=sample_models_view sample=placenta_placenta type=models",
+        "track": "placenta_placenta_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Placenta transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_ont_post_models",
+      "name": "Models - Placenta ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Placenta01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Placenta01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Placenta ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Placenta ONT post models",
+        "subGroups": "view=per_expr_models_view sample=placenta_placenta type=post_capture_ont_models",
+        "track": "placenta_placenta_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_ont_post_reads",
+      "name": "Reads - Placenta ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Placenta01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Placenta01Rep1.bam",
+        "longLabel": "Placenta ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Placenta ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=placenta_placenta type=post_capture_ont_reads",
+        "track": "placenta_placenta_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_ont_pre_models",
+      "name": "Models - Placenta ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Placenta01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Placenta01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Placenta ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Placenta ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=placenta_placenta type=pre_capture_ont_models",
+        "track": "placenta_placenta_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_ont_pre_reads",
+      "name": "Reads - Placenta ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Placenta01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Placenta01Rep1.bam",
+        "longLabel": "Placenta ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Placenta ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=placenta_placenta type=pre_capture_ont_reads",
+        "track": "placenta_placenta_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_pacbio_post_models",
+      "name": "Models - Placenta PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Placenta01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Placenta01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Placenta PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Placenta PB post models",
+        "subGroups": "view=per_expr_models_view sample=placenta_placenta type=post_capture_pacbio_models",
+        "track": "placenta_placenta_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_pacbio_post_reads",
+      "name": "Reads - Placenta PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Placenta01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Placenta01Rep1.bam",
+        "longLabel": "Placenta PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Placenta PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=placenta_placenta type=post_capture_pacbio_reads",
+        "track": "placenta_placenta_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_pacbio_pre_models",
+      "name": "Models - Placenta PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Placenta01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Placenta01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Placenta PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Placenta PB pre models",
+        "subGroups": "view=per_expr_models_view sample=placenta_placenta type=pre_capture_pacbio_models",
+        "track": "placenta_placenta_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-placenta_placenta_pacbio_pre_reads",
+      "name": "Reads - Placenta PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Placenta01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Placenta01Rep1.bam",
+        "longLabel": "Placenta PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Placenta PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=placenta_placenta type=pre_capture_pacbio_reads",
+        "track": "placenta_placenta_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Placenta PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
       "trackId": "hg38-placentaVentoTormoStage10x",
       "name": "Placenta Vento-Tormo - Placenta Stage",
       "type": "FeatureTrack",
@@ -12931,6 +15450,242 @@
       "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
+      "trackId": "hg38-adult_testis_models",
+      "name": "Sample models - Testis models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-Testis.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-Testis.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Testis transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Testis models",
+        "subGroups": "view=sample_models_view sample=adult_testis type=models",
+        "track": "adult_testis_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Adult Testis transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_ont_post_models",
+      "name": "Models - Testis ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Testis01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Testis01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Testis ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Testis ONT post models",
+        "subGroups": "view=per_expr_models_view sample=adult_testis type=post_capture_ont_models",
+        "track": "adult_testis_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_ont_post_reads",
+      "name": "Reads - Testis ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Testis01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_Testis01Rep1.bam",
+        "longLabel": "Adult Testis ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Testis ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_testis type=post_capture_ont_reads",
+        "track": "adult_testis_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_ont_pre_models",
+      "name": "Models - Testis ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Testis01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Testis01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Testis ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Testis ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_testis type=pre_capture_ont_models",
+        "track": "adult_testis_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_ont_pre_reads",
+      "name": "Reads - Testis ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Testis01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_Testis01Rep1.bam",
+        "longLabel": "Adult Testis ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Testis ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_testis type=pre_capture_ont_reads",
+        "track": "adult_testis_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_pacbio_post_models",
+      "name": "Models - Testis PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Testis01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Testis01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Testis PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Testis PB post models",
+        "subGroups": "view=per_expr_models_view sample=adult_testis type=post_capture_pacbio_models",
+        "track": "adult_testis_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_pacbio_post_reads",
+      "name": "Reads - Testis PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Testis01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_Testis01Rep1.bam",
+        "longLabel": "Adult Testis PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Testis PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_testis type=post_capture_pacbio_reads",
+        "track": "adult_testis_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_pacbio_pre_models",
+      "name": "Models - Testis PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Testis01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Testis01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Adult Testis PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Testis PB pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_testis type=pre_capture_pacbio_models",
+        "track": "adult_testis_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_testis_pacbio_pre_reads",
+      "name": "Reads - Testis PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Testis01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_Testis01Rep1.bam",
+        "longLabel": "Adult Testis PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Testis PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_testis type=pre_capture_pacbio_reads",
+        "track": "adult_testis_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Adult Testis PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
       "trackId": "hg38-gnomADPextThyroid",
       "name": "gnomAD pext - Thyroid",
       "type": "QuantitativeTrack",
@@ -12951,6 +15706,242 @@
       },
       "description": "gnomAD pext Thyroid",
       "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_models",
+      "name": "Sample models - Tissue Pool models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/cls-models-TpoolA.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/cls-models-TpoolA.bb",
+        "color": "100,22,180",
+        "longLabel": "Tissue Pool transcript models",
+        "parent": "sample_models_view on",
+        "shortLabel": "Tissue Pool models",
+        "subGroups": "view=sample_models_view sample=adult_tpoola type=models",
+        "track": "adult_tpoola_models",
+        "type": "bigBed 12 +",
+        "visibility": "squish",
+        "html": ""
+      },
+      "description": "Tissue Pool transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_ont_post_models",
+      "name": "Models - Tissue Pool ONT post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_TpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_TpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Tissue Pool ONT post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Tissue Pool ONT post models",
+        "subGroups": "view=per_expr_models_view sample=adult_tpoola type=post_capture_ont_models",
+        "track": "adult_tpoola_ont_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool ONT post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_ont_post_reads",
+      "name": "Reads - Tissue Pool ONT post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_TpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/ont-Crg-CapTrap_Hv3_0+_TpoolA01Rep1.bam",
+        "longLabel": "Tissue Pool ONT post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Tissue Pool ONT post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_tpoola type=post_capture_ont_reads",
+        "track": "adult_tpoola_ont_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool ONT post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_ont_pre_models",
+      "name": "Models - Tissue Pool ONT pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_TpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_TpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Tissue Pool ONT pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Tissue Pool ONT pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_tpoola type=pre_capture_ont_models",
+        "track": "adult_tpoola_ont_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool ONT pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_ont_pre_reads",
+      "name": "Reads - Tissue Pool ONT pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_TpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/ont-Crg-CapTrap_HpreCap_0+_TpoolA01Rep1.bam",
+        "longLabel": "Tissue Pool ONT pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Tissue Pool ONT pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_tpoola type=pre_capture_ont_reads",
+        "track": "adult_tpoola_ont_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool ONT pre-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_pacbio_post_models",
+      "name": "Models - Tissue Pool PB post models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_TpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_TpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Tissue Pool PacBio post-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Tissue Pool PB post models",
+        "subGroups": "view=per_expr_models_view sample=adult_tpoola type=post_capture_pacbio_models",
+        "track": "adult_tpoola_pacbio_post_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool PacBio post-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_pacbio_post_reads",
+      "name": "Reads - Tissue Pool PB post reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_TpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/post-capture/pacBioSII-Cshl-CapTrap_Hv3_0+_TpoolA01Rep1.bam",
+        "longLabel": "Tissue Pool PacBio post-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Tissue Pool PB post reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_tpoola type=post_capture_pacbio_reads",
+        "track": "adult_tpoola_pacbio_post_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool PacBio post-capture reads",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_pacbio_pre_models",
+      "name": "Models - Tissue Pool PB pre models",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_TpoolA01Rep1.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_TpoolA01Rep1.bb",
+        "color": "100,22,180",
+        "longLabel": "Tissue Pool PacBio pre-capture transcript models",
+        "noScoreFilter": "on",
+        "parent": "per_expr_models_view off",
+        "shortLabel": "Tissue Pool PB pre models",
+        "subGroups": "view=per_expr_models_view sample=adult_tpoola type=pre_capture_pacbio_models",
+        "track": "adult_tpoola_pacbio_pre_models",
+        "type": "bigBed 12 +",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool PacBio pre-capture transcript models",
+      "category": ["mRNA and EST"]
+    },
+    {
+      "trackId": "hg38-adult_tpoola_pacbio_pre_reads",
+      "name": "Reads - Tissue Pool PB pre reads",
+      "type": "AlignmentsTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BamAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_TpoolA01Rep1.bam",
+        "sequenceAdapter": {
+          "type": "TwoBitAdapter",
+          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit",
+          "chromSizes": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/hg38.chrom.sizes"
+        }
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/clsLongReadRna/pre-capture/pacBioSII-Cshl-CapTrap_HpreCap_0+_TpoolA01Rep1.bam",
+        "longLabel": "Tissue Pool PacBio pre-capture reads",
+        "parent": "per_expr_reads_view off",
+        "shortLabel": "Tissue Pool PB pre reads",
+        "subGroups": "view=per_expr_reads_view sample=adult_tpoola type=pre_capture_pacbio_reads",
+        "track": "adult_tpoola_pacbio_pre_reads",
+        "type": "bam",
+        "visibility": "hide",
+        "html": ""
+      },
+      "description": "Tissue Pool PacBio pre-capture reads",
+      "category": ["mRNA and EST"]
     },
     {
       "trackId": "hg38-spMut",

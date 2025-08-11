@@ -88,9 +88,6 @@ log "Downloading and processing hs1 GFF..."
 log "Creating chain track PIFs..."
 ./makePifs.sh
 
-log "Hashing all output files for integrity checking..."
-find "$UCSC_RESULTS_DIR"/ -type f ! -name "*meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel --bar ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
-
 log "Copying generated config files to the local 'configs' directory..."
 fd "config.json$" "$UCSC_RESULTS_DIR"/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'
 
@@ -106,5 +103,8 @@ echo "Formatting codebase..."
 cd ..
 yarn format
 cd -
+
+log "Hashing all output files for integrity checking..."
+find "$UCSC_RESULTS_DIR"/ -type f ! -name "*meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel --bar ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
 
 log "Pipeline finished successfully!"

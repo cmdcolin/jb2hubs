@@ -47,7 +47,7 @@ function makeUcscExtensions(targetDir: string) {
       assemblies: [
         {
           ...existingConfig.assemblies[0]!,
-          ...(extensionConfig.assemblies[0] ?? {}),
+          ...(extensionConfig.assemblies?.[0] ?? {}),
         },
       ],
       tracks: dedupe(

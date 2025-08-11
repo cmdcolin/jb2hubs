@@ -784,7 +784,7 @@
     },
     {
       "trackId": "hg19-panelAppGenes",
-      "name": "PanelApp - PanelApp Genes",
+      "name": "PanelApp - PanelApp GE Genes",
       "type": "FeatureTrack",
       "assemblyNames": ["hg19"],
       "adapter": {
@@ -793,13 +793,16 @@
       },
       "metadata": {
         "bigDataUrl": "/gbdb/hg19/panelApp/genes.bb",
+        "filter.panelVersion": "1",
+        "filterLabel.panelVersion": "Minimum panel version to display",
         "filterValues.confidenceLevel": "3,2,1,0",
         "itemRgb": "on",
         "labelFields": "geneSymbol",
         "longLabel": "Genomics England PanelApp Genes",
-        "mouseOverField": "mouseOverField",
+        "mouseOver": "<b>Gene:</b> $entityName<br><b>Panel:</b> $panelName<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
         "parent": "panelApp on",
-        "shortLabel": "PanelApp Genes",
+        "priority": "1",
+        "shortLabel": "PanelApp GE Genes",
         "skipEmptyFields": "on",
         "skipFields": "chrom,chromStart,blockStarts,blockSizes,entityName,tags,status,mouseOverField",
         "track": "panelAppGenes",
@@ -1736,35 +1739,6 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
-      "trackId": "hg19-panelAppTandRep",
-      "name": "PanelApp - PanelApp STRs",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg19"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/panelApp/tandRep.bb"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg19/panelApp/tandRep.bb",
-        "filterValues.confidenceLevel": "3,2,1,0",
-        "itemRgb": "on",
-        "labelFields": "hgncSymbol",
-        "longLabel": "Genomics England PanelApp Short Tandem Repeats",
-        "mouseOverField": "mouseOverField",
-        "parent": "panelApp on",
-        "shortLabel": "PanelApp STRs",
-        "skipEmptyFields": "on",
-        "skipFields": "chrom,chromStart,blockStarts,blockSizes,mouseOverField",
-        "track": "panelAppTandRep",
-        "type": "bigBed 9 +",
-        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblID=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" geneSymbol=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
-        "visibility": "pack",
-        "html": ""
-      },
-      "description": "Genomics England PanelApp Short Tandem Repeats",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg19-prsAtrialFib",
       "name": "PRS eMERGE - PRS-E Atrial Fib",
       "type": "FeatureTrack",
@@ -2489,6 +2463,38 @@
       "category": ["Mapping and Sequencing"]
     },
     {
+      "trackId": "hg19-panelAppTandRep",
+      "name": "PanelApp - PanelApp GE STRs",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg19"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/panelApp/tandRep.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg19/panelApp/tandRep.bb",
+        "filter.version": "1",
+        "filterLabel.version": "Minimum panel version to display",
+        "filterValues.confidenceLevel": "3,2,1,0",
+        "itemRgb": "on",
+        "labelFields": "hgncSymbol",
+        "longLabel": "Genomics England PanelApp Short Tandem Repeats",
+        "mouseOver": "<b>Gene name:</b> $geneName<br><b>Panel:</b> $name<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
+        "parent": "panelApp on",
+        "priority": "3",
+        "shortLabel": "PanelApp GE STRs",
+        "skipEmptyFields": "on",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes,mouseOverField",
+        "track": "panelAppTandRep",
+        "type": "bigBed 9 +",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblID=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/$$\" panelID=\"https://panelapp.genomicsengland.co.uk/panels/$$/\" geneSymbol=\"https://panelapp.genomicsengland.co.uk/panels/entities/$$\"",
+        "visibility": "pack",
+        "html": ""
+      },
+      "description": "Genomics England PanelApp Short Tandem Repeats",
+      "category": ["Phenotypes, Variants, and Literature"]
+    },
+    {
       "trackId": "hg19-prsBrCancer",
       "name": "PRS eMERGE - PRS-E Breast Cancer",
       "type": "FeatureTrack",
@@ -3052,6 +3058,39 @@
       },
       "description": "NCBI GeT-RM Sanger Dead Zone",
       "category": ["Mapping and Sequencing"]
+    },
+    {
+      "trackId": "hg19-panelAppAusGenes",
+      "name": "PanelApp - PanelApp Australia Genes",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg19"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/panelApp/genesAus.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg19/panelApp/genesAus.bb",
+        "filter.panelVersion": "0",
+        "filterLabel.panelVersion": "Minimum panel version to display",
+        "filterValues.confidenceLevel": "3,2,1,0",
+        "labelFields": "geneSymbol",
+        "longLabel": "PanelApp Australia Genes Panels",
+        "mouseOver": "<b>Gene:</b> $entityName<br><b>Panel:</b> $panelName<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
+        "parent": "panelApp on",
+        "priority": "4",
+        "shortLabel": "PanelApp Australia Genes",
+        "skipEmptyFields": "on",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes,entityName,tags,status,mouseOverField",
+        "track": "panelAppAusGenes",
+        "type": "bigBed 9 +",
+        "url": "https://panelapp-aus.org/panels/$<panelID>/gene/$<geneSymbol>/",
+        "urlLabel": "Link to PanelApp Australia",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblGenes=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:$$\" panelID=\"https://panelapp-aus.org/panels/$$/\" geneSymbol=\"https://panelapp-aus.org/panels/entities/$$\"",
+        "visibility": "pack",
+        "html": ""
+      },
+      "description": "PanelApp Australia Genes Panels",
+      "category": ["Phenotypes, Variants, and Literature"]
     },
     {
       "trackId": "hg19-prsChKidneyDis",
@@ -3646,6 +3685,38 @@
         "windowingFunction": "mean+whiskers"
       },
       "description": "BayesDel v1 Score (without MaxAF): Mutation is C",
+      "category": ["Phenotypes, Variants, and Literature"]
+    },
+    {
+      "trackId": "hg19-panelAppAusTandRep",
+      "name": "PanelApp - PanelApp Australia STRs",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg19"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/panelApp/tandRepAus.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg19/panelApp/tandRepAus.bb",
+        "filter.version": "0",
+        "filterLabel.version": "Minimum panel version to display",
+        "filterValues.confidenceLevel": "3,2,1,0",
+        "itemRgb": "on",
+        "labelFields": "hgncSymbol",
+        "longLabel": "PanelApp Australia Short Tandem Repeats",
+        "mouseOver": "<b>Gene name:</b> $geneName<br><b>Panel:</b> $name<br><b>MOI:</b> $modeOfInheritance<br><b>Phenotypes: </b> $phenotypes<br><b>Confidence level:</b> $confidenceLevel",
+        "parent": "panelApp on",
+        "priority": "6",
+        "shortLabel": "PanelApp Australia STRs",
+        "skipEmptyFields": "on",
+        "skipFields": "chrom,chromStart,blockStarts,blockSizes,mouseOverField",
+        "track": "panelAppAusTandRep",
+        "type": "bigBed 9 +",
+        "urls": "omimGene=\"https://www.omim.org/entry/$$\" ensemblID=\"https://ensembl.org/Homo_sapiens/Gene/Summary?db=core;g=$$\" hgncID=\"https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/$$\" panelID=\"https://panelapp-aus.org/panels/$$/\" geneSymbol=\"https://panelapp-aus.org/panels/entities/$$\"",
+        "visibility": "pack",
+        "html": ""
+      },
+      "description": "PanelApp Australia Short Tandem Repeats",
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
