@@ -82,6 +82,9 @@ log "Creating configurations from track hubs..."
 log "Adding non-UCSC 'extension' tracks..."
 node src/makeUcscExtensions.ts "$UCSC_RESULTS_DIR"
 
+log "Renaming some tracks..."
+node src/rewriteUcscTrackNames.ts "$UCSC_RESULTS_DIR/config.json" "ucscExtensions/renames.json"
+
 log "Downloading and processing hs1 GFF..."
 ./downloadNcbiGff.sh
 
