@@ -105,7 +105,7 @@
     {
       "type": "MafTrack",
       "trackId": "hg38-multiz470way",
-      "name": "Multiz Alignments of 470 mammals",
+      "name": "Multiz Alignments - 470-way Mammal Alignment (Hiller lab)",
       "assemblyNames": ["hg38"],
       "category": ["Comparative Genomics"],
       "adapter": {
@@ -123,7 +123,7 @@
     {
       "type": "MafTrack",
       "trackId": "hg38-cactus447way",
-      "name": "Multiz 447-way - Cactus 447-way",
+      "name": "Cactus Alignments - 447-way Mammal Alignment (Zoonomia+Primates)",
       "assemblyNames": ["hg38"],
       "description": "Cactus alignment on 447 mammal species, including Zoonomia genomes and 233 primates",
       "category": ["Comparative Genomics"],
@@ -10018,30 +10018,6 @@
       "category": ["Uncommon or Specialized tracks", "Variation and Repeats"]
     },
     {
-      "trackId": "hg38-chm13LiftOver",
-      "name": "CHM13 alignments",
-      "type": "FeatureTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/bbi/chm13LiftOver/hg38-chm13v2.ncbi-qnames.over.chain.bb"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/bbi/chm13LiftOver/hg38-chm13v2.ncbi-qnames.over.chain.bb",
-        "color": "120,20,0",
-        "group": "compGeno",
-        "linkDataUrl": "/gbdb/hg38/bbi/chm13LiftOver/hg38-chm13v2.ncbi-qnames.over.link.bb",
-        "longLabel": "CHM13 (GCA_009914755.4) v1_nfLO liftOver alignments",
-        "shortLabel": "CHM13 alignments",
-        "track": "chm13LiftOver",
-        "type": "bigChain GCA_009914755.4",
-        "visibility": "hide",
-        "html": "<h2>Description</h2>\n<p>\n  These tracks show the one-to-one v1_nfLO alignments of the GRCh38/hg38 to the\n  T2T-CHM13 v2.0 assembly.\n</p>\n\n<h2>Display Conventions</h2>\n<p>\n  The track displays boxes joined together by either single or double lines,\n  with the boxes represent aligning regions, single lines indicating gaps that\n  are largely due to a deletion in the CHM13 v2.0 assembly or an insertion in\n  the GRCh38/hg38, and double lines representing more complex gaps that involve\n  substantial sequence in both assembly.\n</p>\n\n\n<h2>Methods</h2>\n<p>\n<h3>GRCh38/hg38 pre-processing</h3>\n<p>\nTo prevent ambiguous alignments, all false duplications, as determined by the Genome in a Bottle Consortium\n(<a target=\"_blank\" \nhref=\"https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/references/GRCh38/GCA_000001405.15_GRCh38_GRC_exclusions_T2Tv2.bed\">GCA_000001405.15_GRCh38_GRC_exclusions_T2Tv2.bed</a>), \nas well as the GRCh38 <a  target=\"_blank\" \nhref=\"https://genome.ucsc.edu/cgi-bin/hgTrackUi?hgsid=1285829831_crE6AIbRoN8GqiiHOPmjhYm2qTq2&db=hg38&c=chrX&g=centromeres\">modeled centromeres</a>,\nwere masked from the GRCh38/hg38 primary assembly. In addition, unlocalized and unplaced (random) contigs were removed.\n</p>\n\n<h3>Alignment and Chain Creation</h3>\n<p>\nFor the minimap2-based pipeline, the initial chain file was generated using\n<a target=\"_blank\" href=\"https://github.com/evotools/nf-LO\">nf-LO</a> v1.5.1 with\n<a target=\"_blank\" href=\"https://github.com/lh3/minimap2\">minimap2</a> v2.24 alignments. These \nchains were then split at all locations that contained unaligned segments greater than 1kbp or \ngaps greater than 10kbp. Split chain files were then converted to PAF format\nwith extended CIGAR strings using <a target=\"_blank\"\nhref=\"https://doi.org/10.5281/zenodo.6342391\">chaintools (v0.1)</a>,\nand alignments between nonhomologous chromosomes were removed. The trim-paf operation of\n<a target=\"_blank\" href=\"https://zenodo.org/record/6342176\">rustybam (v0.1.29)</a> \nwas next used to remove overlapping alignments \nin the query sequence, and then the target sequence, to create 1:1 alignments. PAF alignments \nwere converted back to the chain format with <a  target=\"_blank\" \nhref=\"https://github.com/AndreaGuarracino/paf2chain\">paf2chain</a> commit f68eeca, and finally, \nchaintools was used to generate the inverted chain file.\n</p>\n\n<p>\nFull commands with parameters used were:\n</p>\n<pre><code>\n    nextflow run main.nf --source GRCh38.fa --target chm13v2.0.fasta --outdir dir -profile local --aligner minimap2\n    python chaintools/src/split.py -c input.chain -o input-split.chain\n    python chaintools/src/to_paf.py -c input-split.chain -t target.fa -q query.fa -o input-split.paf\n    awk '$1==$6' input-split.paf | rb break-paf --max-size 10000  | rb trim-paf -r | rb invert | rb trim-paf -r | rb invert > out.paf\n    paf2chain -i out.paf > out.chain\n    python chaintools/src/invert.py -c out.chain -o out_inverted.chain\n</code></pre>\n\n<p>\nThe above process does not add chain ids or scores.  The UCSC utilities\n<code>chainMergeSort</code> and <code>chainScore</code> are used to update the\nchains:\n\n<pre><code>\n    chainMergeSort out.chain | chainScore stdin chm13v2.0.2bit hg38.2bit chm13v2.0-hg38.chain\n    chainMergeSort out_inverted.chain | chainScore stdin hg38.2bit chm13v2.0.2bit hg38-chm13v2.0.chain\n</code></pre>\n</p>\n\n<p>\n<a target=\"_blank\" href=\"https://mrvollger.github.io/rustybam/#align-once\">Rustybam trim-paf</a>\nuses dynamic programming and the CIGAR string to find an optimal\nsplitting point between overlapping alignments in the query sequence. It\nstarts its trimming with the largest overlap and then recursively trims\nsmaller overlaps.\n</p>\n\n<p>\nResults were validated by using chaintools to confirm that there were no\noverlapping sequences with respect to both CHM13v2.0 and GRCh38 in the\nreleased chain file. In addition, trimmed alignments were visually inspected\nwith SafFire to confirm their quality.\n</p>\n\n<p>\nChains were swapped to make GRCh38/hg38 the target.\n</p>\n</p>\n\n<h2>Credits</h2>\n<p>\nThe v1_nflo chains were generated by <a href=\"mailto:naechyun.chen@gmail.com\">Nae-Chyun Chen&lt;naechyun.chen@gmail.com&gt;</a>\nand <a href=\"mvollger@uw.edu\">Mitchell Vollger&lt;mvollger@uw.edu&gt;</a>\n</p>\n\n<h2>References</h2>\n<p>\n<p>Nurk S, Koren S, Rhie A, Rautiainen M, et al. The complete sequence of a human genome. bioRxiv, 2021.</p>\n</p>\n"
-      },
-      "description": "CHM13 (GCA_009914755.4) v1_nfLO liftOver alignments",
-      "category": ["Comparative Genomics"]
-    },
-    {
       "trackId": "hg38-civic",
       "name": "CIViC",
       "type": "FeatureTrack",
@@ -16237,7 +16213,7 @@
     },
     {
       "trackId": "hg38-cactus241wayBM",
-      "name": "Cactus Alignments - Cactus Align",
+      "name": "Cactus Alignments - 241-way (Zoonomia Placental Mammals)",
       "type": "MafTrack",
       "assemblyNames": ["hg38"],
       "adapter": {
