@@ -22,10 +22,10 @@ fetch_ncbi_data() {
   local file="$1"
   local dir=$(dirname "$file")
   local id=$(basename "$dir")
-  if [ ! -f "$dir/ncbi.json" ] || [ -n "$REPROCESS" ]; then
+  if [ ! -f "$dir/ncbi.json" ] || [ -n "$REPROCESS_NCBI_META" ]; then
     echo "Fetching NCBI data for $id"
     # Use esearch and esummary to get assembly metadata and save as ncbi.json
-    (esearch -db assembly -query "$id" </dev/null | esummary -mode json) >"$dir/ncbi.json"
+    (esearch -db assembly -query "$id" </dev/null | esummary -mode json) | grep -v "sortorder" >"$dir/ncbi.json"
     sleep 0.1 # Small delay to avoid overwhelming the NCBI E-utilities
   fi
 }
@@ -111,7 +111,7 @@ add_track_and_text_index() {
   jbrowse add-track --force "$gff_file_path" --out "$hub_dir" --load copy --indexFile "${gff_file_path}".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
 
   # Check if trix folder exists
-  if [ -d "$hub_dir/trix" ]; then
+  if [ -d "$hub_dir/trix" ] && [ -z "$REDOWNLOAD" ] && [ -z "$REPROCESS" ]; then
     # Add JSON snippet to config.json using jq
     local config_file="$hub_dir/config.json"
     local temp_file=$(mktemp)
