@@ -15,6 +15,7 @@
 : ${UCSC_DATA_DIR:=~/ucsc}
 : ${UCSC_RESULTS_DIR:=~/ucscResults}
 export UCSC_RESULTS_DIR
+export CHECK_404=true
 export TMPDIR=/mnt/sdb/cdiesh/tmp
 
 # Ensure the script's path is in the PATH for tool access.
@@ -84,6 +85,9 @@ node src/makeUcscExtensions.ts "$UCSC_RESULTS_DIR"
 
 log "Renaming some tracks..."
 node src/rewriteUcscTrackNames.ts "$UCSC_RESULTS_DIR"
+
+log "Adding liftover to track name"
+./addOrigAssemblyToAllTrackNames.sh
 
 log "Downloading and processing hs1 GFF..."
 ./downloadNcbiGff.sh

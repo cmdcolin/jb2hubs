@@ -21,7 +21,7 @@ function addMetadata(configPath: string, tracksDbPath: string) {
   const tracksDb = readJSON<Record<string, TrackDbEntry>>(tracksDbPath)
 
   const updatedTracks = config.tracks
-    ?.map(track => {
+    .map(track => {
       const [, trackLabelWithoutAssemblyName] = splitOnFirst(track.trackId, '-')
       const trackDbEntry = tracksDb[trackLabelWithoutAssemblyName]
       const currentCategories = track.category ?? []

@@ -22,7 +22,7 @@ function checkTracks(tracksFilePath: string, configPath: string) {
       .map(t => t.tableName),
   )
 
-  const configTrackIds = new Set(config.tracks?.map(t => t.trackId) ?? [])
+  const configTrackIds = new Set(config.tracks.map(t => t.trackId))
 
   const missingTracks = [...trackTableNames].filter(
     tableName => !configTrackIds.has(tableName),

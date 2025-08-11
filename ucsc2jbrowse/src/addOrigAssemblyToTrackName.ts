@@ -2,11 +2,9 @@ import { readConfig, writeJSON } from './util.ts'
 
 function addOrigAssemblyToTrackName(configPath: string) {
   const config = readConfig(configPath)
-  if (config.tracks) {
-    for (const track of config.tracks) {
-      if (track.metadata?.origAssembly) {
-        track.name = `${track.name} (${track.metadata.origAssembly})`
-      }
+  for (const track of config.tracks) {
+    if (track.metadata?.origAssembly) {
+      track.name = `${track.name} (${track.metadata.origAssembly})`
     }
   }
   writeJSON(configPath, config)

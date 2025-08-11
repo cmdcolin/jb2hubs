@@ -114,7 +114,7 @@ function addEntries(configPath: string) {
     ...config,
     plugins: [...(config.plugins ?? []), ...newPlugins],
     tracks: [
-      ...config.tracks!.map(track => {
+      ...config.tracks.map(track => {
         if (track.trackId.startsWith('jaspar')) {
           return {
             ...track,

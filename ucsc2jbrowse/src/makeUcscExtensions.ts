@@ -39,12 +39,14 @@ function makeUcscExtensions(targetDir: string) {
       ...extensionConfig,
       assemblies: [
         {
+          // this specifically mixes in properties of the assembly for
+          // cytobands, seen in the ucscExtensions/hs1.json
           ...existingConfig.assemblies[0]!,
-          ...(extensionConfig.assemblies?.[0] ?? {}),
+          ...(extensionConfig.assemblies[0] ?? {}),
         },
       ],
       tracks: dedupe(
-        [...(extensionConfig.tracks ?? []), ...(existingConfig.tracks ?? [])],
+        [...extensionConfig.tracks, ...existingConfig.tracks],
         track => track.trackId,
       ),
       // Merge plugins if they exist

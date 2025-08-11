@@ -6,13 +6,9 @@ import fs from 'fs'
  * @param url The URL to check.
  * @returns A promise that resolves to true if the file is accessible, false otherwise.
  */
-export async function checkIfFileAccessible({
-  url,
-}: {
-  url: string
-}): Promise<boolean> {
+export async function checkIfFileAccessible({ url }: { url: string }) {
   // Only perform HEAD request for UCSC-related URLs
-  if (url.includes('hg19') || url.includes('hg38')) {
+  if ((url.includes('hg19') || url.includes('hg38')) && process.env.CHECK_404) {
     try {
       const response = await fetch(
         url.startsWith('https') ? url : `https://hgdownload.soe.ucsc.edu${url}`,

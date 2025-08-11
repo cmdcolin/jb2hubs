@@ -5,15 +5,15 @@ import { readConfig, writeJSON } from './util.ts'
 
 const BASE_RENAMES_DIR = 'ucscRenames'
 
-function modifyTracks(configPath: string, mappings: { [key: string]: string }) {
+function modifyTracks(configPath: string, mappings: Record<string, string>) {
   const config = readConfig(configPath)
   const trackIds = Object.keys(mappings)
 
   for (const trackId of trackIds) {
     const newName = mappings[trackId]!
     if (newName === 'DELETE') {
-      config.tracks = config.tracks?.filter(track => track.trackId !== trackId)
-    } else if (config.tracks) {
+      config.tracks = config.tracks.filter(track => track.trackId !== trackId)
+    } else {
       const track = config.tracks.find(t => t.trackId === trackId)
       if (track) {
         track.name = newName

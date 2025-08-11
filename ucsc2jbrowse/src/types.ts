@@ -1,5 +1,5 @@
 export interface JBrowseConfig {
-  tracks?: {
+  tracks: {
     category?: string[]
     name: string
     metadata?: Record<string, unknown>
@@ -15,13 +15,13 @@ export interface JBrowseConfig {
       metadata?: Record<string, unknown>
       adapter: Record<string, unknown> // This is the sequence adapter
     }
-    // Add other common assembly properties if needed
   }[]
   plugins?: unknown[]
   aggregateTextSearchAdapters?: Record<string, unknown>[]
 }
 
 export interface TrackDbEntry {
+  tableName: string
   settings: string
   html: string
   longLabel: string

@@ -1,9 +1,10 @@
 {
+  "assemblies": [],
   "tracks": [
     {
       "type": "VariantTrack",
       "trackId": "hg38-1KGP_3202.Illumina_ensemble_callset.freeze_V1",
-      "name": "30x Illumina WGS SVs (V1)",
+      "name": "1000 Genomes SVs - Illumina ensemble callset freeze V1",
       "assemblyNames": ["hg38"],
       "category": ["Variation and Repeats", "1000 Genomes"],
       "adapter": {
@@ -14,7 +15,7 @@
     {
       "type": "VariantTrack",
       "trackId": "hg38-1KGP_3202.gatksv_svtools_novelins.freeze_V3.wAF",
-      "name": "30x Illumina WGS SVs (V3)",
+      "name": "1000 Genomes SVs - GATKSV svtools novelins freeze V3 wAF",
       "assemblyNames": ["hg38"],
       "category": ["Variation and Repeats", "1000 Genomes"],
       "adapter": {
@@ -26,7 +27,7 @@
       "type": "QuantitativeTrack",
       "trackId": "hg38-phyloP30way",
       "category": ["Comparative Genomics"],
-      "name": "Basewise conservation (phyloP) - 30-way vertebrate alignment",
+      "name": "Basewise Conservation (phyloP) - 30-way vertebrate alignment",
       "assemblyNames": ["hg38"],
       "metadata": {
         "source": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phyloP30way/"
@@ -40,7 +41,7 @@
       "type": "QuantitativeTrack",
       "trackId": "hg38-phyloP100way",
       "category": ["Comparative Genomics"],
-      "name": "Basewise conservation (phyloP) - 100-way vertebrate alignment",
+      "name": "Basewise Conservation (phyloP) - 100-way vertebrate alignment",
       "assemblyNames": ["hg38"],
       "metadata": {
         "source": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phyloP100way/"
@@ -50,41 +51,27 @@
         "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phyloP100way/hg38.phyloP100way.bw"
       }
     },
+
     {
-      "type": "MafTrack",
-      "trackId": "hg38-multiz470way",
-      "name": "Multiz Alignments of 470 mammals",
+      "type": "QuantitativeTrack",
+      "trackId": "hg38-phastCons30way",
+      "name": "Element Conservation (phastCons) - 30-way vertebrates",
       "assemblyNames": ["hg38"],
       "category": ["Comparative Genomics"],
       "adapter": {
-        "type": "BigMafAdapter",
-        "bigBedLocation": {
-          "locationType": "UriLocation",
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/multiz470way/multiz470way.bigMaf"
-        },
-        "nhLocation": {
-          "locationType": "UriLocation",
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/multiz470way/hg38.470way.nh"
-        }
+        "type": "BigWigAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons30way/hg38.phastCons30way.bw"
       }
     },
     {
-      "type": "MafTrack",
-      "trackId": "hg38-cactus447way",
-      "name": "Multiz 447-way - Cactus 447-way",
+      "type": "QuantitativeTrack",
+      "trackId": "hg38-phastCons100way",
+      "name": "Element Conservation (phastCons) - 100-way vertebrates",
       "assemblyNames": ["hg38"],
-      "description": "Cactus alignment on 447 mammal species, including Zoonomia genomes and 233 primates",
       "category": ["Comparative Genomics"],
       "adapter": {
-        "type": "BigMafAdapter",
-        "bigBedLocation": {
-          "locationType": "UriLocation",
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/cactus447way/hg38.cactus447way.bb"
-        },
-        "nhLocation": {
-          "locationType": "UriLocation",
-          "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/cactus447way/hg38.447way.nh.txt"
-        }
+        "type": "BigWigAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw"
       }
     }
   ]

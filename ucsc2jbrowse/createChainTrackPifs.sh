@@ -173,7 +173,7 @@ process_liftover() {
   mkdir -p "$liftover_dir"
 
   local base_url="https://hgdownload.soe.ucsc.edu/goldenPath/$ASSEMBLY/liftOver/"
-  log_info "Processing liftOver chains for $ASSEMBLY from $base_url"
+  # log_info "Processing liftOver chains for $ASSEMBLY from $base_url"
 
   # Get chain file URLs, excluding md5sum files
   local urls

@@ -1,5 +1,3 @@
-import type { JBrowseConfig } from './types.ts'
-
 const specializedParents = new Set([
   'exomeProbesets',
   'genotypeArrays',
