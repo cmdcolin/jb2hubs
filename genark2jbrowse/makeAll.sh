@@ -47,7 +47,7 @@ download_ncbi_gff() {
   local url="$1"
   local filename=$(basename "$url")
   if [ ! -f "gff/$filename" ] || [ -n "$REDOWNLOAD" ]; then
-    echo "Downloading GFF file: $filename"
+    echo "Downloading GFF file: $url"
     if [ -n "$REDOWNLOAD" ]; then
       wget -N -q "$url" -P gff
     else
@@ -111,7 +111,7 @@ add_track_and_text_index() {
   jbrowse add-track --force "$gff_file_path" --out "$hub_dir" --load copy --indexFile "${gff_file_path}".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
 
   # Check if trix folder exists
-  if [ -d "$hub_dir/trix" ] && [ -z "$REDOWNLOAD" ] && [ -z "$REPROCESS" ]; then
+  if [ -d "$hub_dir/trix" ] && [ -z "$REDOWNLOAD" ] && [ -z "$REPROCESS" ] && [ -z "$REPROCESS_TRIX" ]; then
     # Add JSON snippet to config.json using jq
     local config_file="$hub_dir/config.json"
     local temp_file=$(mktemp)
@@ -139,7 +139,7 @@ add_track_and_text_index() {
     }' "$config_file" >"$temp_file" && mv "$temp_file" "$config_file"
   else
     echo "Trix folder does not exist for $accession, running jbrowse text-index"
-    jbrowse text-index --force --out "$hub_dir" --tracks ncbiGff
+    jbrowse text-index --force --out "$hub_dir" --tracks ncbiGff --attributes Name,ID,Note
   fi
 }
 
