@@ -9,11 +9,11 @@ Resources:
     Properties:
       StageName: Prod
 
-  ListFunction:
+  JBrowseHubsFunction:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: src/
-      Handler: app.handler
+      Handler: index.handler
       Runtime: nodejs20.x
       Architectures:
         - x86_64
@@ -21,26 +21,7 @@ Resources:
         Api:
           Type: Api
           Properties:
-            Path: /list
-            Method: get
-            RestApiId: !Ref ApiGateway
-      FunctionUrlConfig:
-        AuthType: NONE
-        InvokeMode: RESPONSE_STREAM
-
-  DbFunction:
-    Type: AWS::Serverless::Function
-    Properties:
-      CodeUri: src/
-      Handler: db.handler
-      Runtime: nodejs20.x
-      Architectures:
-        - x86_64
-      Events:
-        Api:
-          Type: Api
-          Properties:
-            Path: /db
+            Path: /api
             Method: get
             RestApiId: !Ref ApiGateway
       FunctionUrlConfig:
@@ -50,4 +31,4 @@ Resources:
 Outputs:
   ApiUrl:
     Description: 'API Gateway endpoint URL for Prod stage'
-    Value: !Join [ '', [ 'https://', !Ref ApiGateway, '.execute-api.',!Ref 'AWS::Region', '.amazonaws.com/Prod/'] ]
+    Value: !Join [ '', [ 'https://', !Ref ApiGateway, '.execute-api.',!Ref 'AWS::Region', '.amazonaws.com/Prod/api'] ]
