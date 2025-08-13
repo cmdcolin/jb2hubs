@@ -14,10 +14,15 @@ exports.handler = streamifyResponse(async (event, responseStream, context) => {
     return
   }
 
-  const [base, rest] = accession.split('_')
-  const [b1, b2, b3] = rest.match(/.{1,3}/g)
-  const filename = `hubs/${base}/${b1}/${b2}/${b3}/${accession}/config.json`
-  const url = `https://genomes.jbrowse.org/${filename}`
+  let url
+  if (accession.startsWith('GCA') || accession.startsWith('GCF')) {
+    const [base, rest] = accession.split('_')
+    const [b1, b2, b3] = rest.match(/.{1,3}/g)
+    const filename = `hubs/${base}/${b1}/${b2}/${b3}/${accession}/config.json`
+    url = `https://genomes.jbrowse.org/${filename}`
+  } else {
+    url = `https://genomes.jbrowse.org/ucsc/${accession}/config.json`
+  }
 
   try {
     const fetchResponse = await fetch(url)

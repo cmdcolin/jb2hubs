@@ -4,6 +4,11 @@ Description: >
   SAM application to fetch a JSON file from a URL
 
 Resources:
+  ApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+
   ListFunction:
     Type: AWS::Serverless::Function
     Properties:
@@ -18,6 +23,7 @@ Resources:
           Properties:
             Path: /list
             Method: get
+            RestApiId: !Ref ApiGateway
       FunctionUrlConfig:
         AuthType: NONE
         InvokeMode: RESPONSE_STREAM
@@ -36,6 +42,7 @@ Resources:
           Properties:
             Path: /db
             Method: get
+            RestApiId: !Ref ApiGateway
       FunctionUrlConfig:
         AuthType: NONE
         InvokeMode: RESPONSE_STREAM
@@ -43,4 +50,4 @@ Resources:
 Outputs:
   ApiUrl:
     Description: 'API Gateway endpoint URL for Prod stage'
-    Value: !Sub 'https://$(ServerlessRestApi).execute-api.$(AWS::Region).amazonaws.com/Prod/'
+    Value: !Join [ '', [ 'https://', !Ref ApiGateway, '.execute-api.',!Ref 'AWS::Region', '.amazonaws.com/Prod/'] ]

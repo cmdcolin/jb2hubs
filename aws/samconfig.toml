@@ -1,0 +1,11 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "genomes-db"
+resolve_s3 = true
+s3_prefix = "genomes-db"
+region = "us-east-1"
+profile = "colin"
+confirm_changeset = true
+capabilities = "CAPABILITY_IAM"
+image_repositories = []
