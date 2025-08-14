@@ -1,6 +1,3 @@
-import { pipeline } from 'stream/promises'
-import { Readable } from 'stream'
-
 // The 'aws-lambda' types package does not yet include streamifyResponse,
 // so we declare it manually. It is available in the Lambda runtime.
 declare const awslambda: {
@@ -44,9 +41,12 @@ function getUrl(event: {
 
 export const handler = awslambda.streamifyResponse(
   async (event: any, responseStream: any, context: any) => {
+    console.log('Lambda invoked with event:', JSON.stringify(event))
+
     const url = getUrl(event)
 
     if (!url) {
+      console.log('Could not determine URL from query parameters')
       responseStream.setContentType('application/json')
       responseStream.write(
         JSON.stringify({
@@ -57,10 +57,14 @@ export const handler = awslambda.streamifyResponse(
       return
     }
 
+    console.log(`Fetching from URL: ${url}`)
+
     try {
       const fetchResponse = await fetch(url)
+      console.log(`Fetch response status: ${fetchResponse.status}`)
 
       if (!fetchResponse.ok) {
+        console.log('Fetch was not successful, writing error response.')
         const metadata = {
           statusCode: fetchResponse.status,
           headers: { 'Content-Type': 'application/json' },
@@ -69,16 +73,18 @@ export const handler = awslambda.streamifyResponse(
           responseStream,
           metadata,
         )
+        const body = await fetchResponse.text()
+        console.log(`Error body: ${body}`)
         httpResponseStream.write(
           JSON.stringify({
             message: `Failed to fetch file: ${fetchResponse.statusText}`,
+            body,
           }),
         )
         httpResponseStream.end()
         return
       }
 
-      // Set HTTP response metadata before writing the body
       const metadata = {
         statusCode: 200,
         headers: {
@@ -92,14 +98,21 @@ export const handler = awslambda.streamifyResponse(
         metadata,
       )
 
-      // Stream the response body from fetch directly to the Lambda response stream
-      // The 'any' type assertion is a workaround for type mismatches between Node.js and Web streams.
-      await pipeline(
-        Readable.fromWeb(fetchResponse.body as any),
-        httpResponseStream,
-      )
+      console.log('Starting native web stream read...')
+      // Using the native web stream reader to bypass Node.js stream adapters
+      // @ts-expect-error
+      const reader = fetchResponse.body.getReader()
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) {
+          break
+        }
+        httpResponseStream.write(value)
+      }
+      httpResponseStream.end()
+      console.log('Native web stream read finished successfully.')
     } catch (error) {
-      console.error('Error fetching file:', error)
+      console.error('Error during fetch or streaming:', error)
       const metadata = {
         statusCode: 500,
         headers: { 'Content-Type': 'application/json' },
@@ -117,4 +130,3 @@ export const handler = awslambda.streamifyResponse(
     }
   },
 )
-
