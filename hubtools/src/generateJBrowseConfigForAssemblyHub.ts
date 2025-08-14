@@ -74,14 +74,27 @@ export async function generateJBrowseConfigForAssemblyHub({
         : {}),
     }
 
+    const hubTracks = generateHubTracks({
+      trackDb: tracks,
+      trackDbUrl,
+      assemblyName: genomeName,
+      sequenceAdapter,
+    })
     return {
       assemblies: [asm],
-      tracks: generateHubTracks({
-        trackDb: tracks,
-        trackDbUrl,
-        assemblyName: genomeName,
-        sequenceAdapter,
-      }),
+      tracks: [
+        ...hubTracks,
+        {
+          type: 'QuantitativeTrack',
+          trackId: `${genomeName}-gc5Base`,
+          name: 'GCContent',
+          assemblyNames: [genomeName],
+          adapter: {
+            type: 'GCContentAdapter',
+            sequenceAdapter,
+          },
+        },
+      ],
       ...(defaultPos
         ? {
             defaultSession: {
