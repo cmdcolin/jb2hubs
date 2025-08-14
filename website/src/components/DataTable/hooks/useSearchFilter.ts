@@ -22,8 +22,14 @@ const uf = new uFuzzy({
 
 // Pre-computed search strings for better performance
 const getSearchableText = (row: RowData): string => {
-  const { commonName, scientificName, ncbiAssemblyName, accession } = row
-  return `${commonName} ${scientificName} ${ncbiAssemblyName} ${accession}`
+  const {
+    commonName,
+    scientificName,
+    ncbiAssemblyName,
+    accession,
+    submitterOrg,
+  } = row
+  return `${commonName} ${scientificName} ${ncbiAssemblyName} ${accession} ${submitterOrg}`
 }
 
 export function useSearchFilter(rows: RowData[]) {
