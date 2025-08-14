@@ -1,0 +1,17 @@
+{
+  "name": "jbrowse-hubs-lambda",
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "prebuild": "yarn clean",
+    "predeploy": "yarn build",
+    "deploy": "sam deploy --profile colin"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.143",
+    "@types/node": "^20.11.17",
+    "typescript": "^5.3.3"
+  }
+}
