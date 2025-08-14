@@ -17,7 +17,7 @@ Resources:
       Runtime: nodejs20.x
       Architectures:
         - x86_64
-      Timeout: 15
+      Timeout: 120
       Events:
         Api:
           Type: Api
@@ -27,6 +27,7 @@ Resources:
             RestApiId: !Ref ApiGateway
       FunctionUrlConfig:
         AuthType: NONE
+        InvokeMode: RESPONSE_STREAM
     Metadata:
       BuildMethod: nodejs20.x
 
