@@ -99,7 +99,7 @@ export function useTableColumns({
       }),
       columnHelper.accessor('submitterOrg', {
         header: 'Submitter',
-        enableSorting: false,
+        enableSorting: true,
         meta: { extra: true },
       }),
     ]

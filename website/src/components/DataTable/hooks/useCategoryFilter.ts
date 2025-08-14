@@ -33,16 +33,17 @@ export function useCategoryFilter(rows: RowData[]) {
 
   const filteredRows = useMemo(() => {
     const validRows = rows.filter(notEmpty).filter(f => f.accession)
+    console.log({ validRows, filterOption })
 
     switch (filterOption) {
       case 'all': {
         return validRows
       }
       case 'refseq': {
-        return validRows.filter(r => r.ncbiAssemblyName.startsWith('GCF_'))
+        return validRows.filter(r => r.accession.startsWith('GCF_'))
       }
       case 'genbank': {
-        return validRows.filter(r => r.ncbiAssemblyName.startsWith('GCA_'))
+        return validRows.filter(r => r.accession.startsWith('GCA_'))
       }
       case 'designatedReference': {
         return validRows.filter(
