@@ -2,7 +2,7 @@ hub GCA_005887515.3 genome assembly
 shortLabel domestic yak (maiwa yakHY00 2019)
 longLabel domestic yak (maiwa yakHY00 2019)/Bos grunniens/GCA_005887515.3_BosGru3.1 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCA_005887515.3_BosGru3.1.description.html
 
 genome GCA_005887515.3
@@ -21,7 +21,9 @@ htmlPath html/GCA_005887515.3_BosGru3.1.description.html
 blat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/005/887/515/GCA_005887515.3
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCA/005/887/515/GCA_005887515.3
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCA/005/887/515/GCA_005887515.3
+liftOver.GCF_001704415.2 liftOver/GCA_005887515.3ToGCF_001704415.2.over.chain.gz
 liftOver.GCF_002263795.3 liftOver/GCA_005887515.3ToGCF_002263795.3.over.chain.gz
+liftOver.GCF_016772045.2 liftOver/GCA_005887515.3ToGCF_016772045.2.over.chain.gz
 liftOver.hg38 liftOver/GCA_005887515.3ToHg38.over.chain.gz
 
 track assembly
@@ -175,7 +177,7 @@ compositeTrack on
 shortLabel Chain/Net
 longLabel Chain alignments to target sequence: GCA_005887515.3_BosGru3.1
 subGroup1 view Views chain=Chains synten=Syntenic rbest=Reciprocal_best liftover=Lift_over align=Alignment
-subGroup2 species Assembly s000=GCF_002263795.3 s001=hg38
+subGroup2 species Assembly s000=GCF_002263795.3 s001=GCF_001704415.2 s002=GCF_016772045.2 s003=hg38
 subGroup3 chainType chain_type c00=chain c01=syntenic c02=reciprocal_best c03=lift_over c04=chain_align c05=syntenic_align c06=reciprocal_align c07=lift_over_align
 dragAndDrop subTracks
 visibility hide
@@ -266,9 +268,105 @@ html html/GCA_005887515.3_BosGru3.1.chainNet
         html html/GCA_005887515.3_BosGru3.1.chainNet
         priority 3.487
 
-        track chainHg38
+        track chainGCF_001704415.2
         parent GCA_005887515.3_BosGru3.1ChainNetViewchain off
         subGroups view=chain species=s001 chainType=c00
+        shortLabel goat Chain
+        longLabel goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments
+        type bigChain GCF_001704415.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainGCF_001704415.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainGCF_001704415.2Link.bb
+        otherDb GCF_001704415.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.785
+
+        track chainSynGCF_001704415.2
+        parent GCA_005887515.3_BosGru3.1ChainNetViewSynTen off
+        subGroups view=synten species=s001 chainType=c01
+        shortLabel goat synChain
+        longLabel goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments
+        type bigChain GCF_001704415.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainSynGCF_001704415.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainSynGCF_001704415.2Link.bb
+        otherDb GCF_001704415.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.785
+
+        track chainRBestGCF_001704415.2
+        parent GCA_005887515.3_BosGru3.1ChainNetViewRBest off
+        subGroups view=rbest species=s001 chainType=c02
+        shortLabel goat rbChain
+        longLabel goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments
+        type bigChain GCF_001704415.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainRBestGCF_001704415.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainRBestGCF_001704415.2Link.bb
+        otherDb GCF_001704415.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.785
+
+        track chainLiftOverGCF_001704415.2
+        parent GCA_005887515.3_BosGru3.1ChainNetViewLiftOver off
+        subGroups view=liftover species=s001 chainType=c03
+        shortLabel goat loChain
+        longLabel goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments
+        type bigChain GCF_001704415.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainLiftOverGCF_001704415.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainLiftOverGCF_001704415.2Link.bb
+        otherDb GCF_001704415.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.785
+
+        track chainGCF_016772045.2
+        parent GCA_005887515.3_BosGru3.1ChainNetViewchain off
+        subGroups view=chain species=s002 chainType=c00
+        shortLabel sheep Chain
+        longLabel sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments
+        type bigChain GCF_016772045.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainGCF_016772045.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainGCF_016772045.2Link.bb
+        otherDb GCF_016772045.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.869
+
+        track chainSynGCF_016772045.2
+        parent GCA_005887515.3_BosGru3.1ChainNetViewSynTen off
+        subGroups view=synten species=s002 chainType=c01
+        shortLabel sheep synChain
+        longLabel sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments
+        type bigChain GCF_016772045.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainSynGCF_016772045.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainSynGCF_016772045.2Link.bb
+        otherDb GCF_016772045.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.869
+
+        track chainRBestGCF_016772045.2
+        parent GCA_005887515.3_BosGru3.1ChainNetViewRBest off
+        subGroups view=rbest species=s002 chainType=c02
+        shortLabel sheep rbChain
+        longLabel sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments
+        type bigChain GCF_016772045.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainRBestGCF_016772045.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainRBestGCF_016772045.2Link.bb
+        otherDb GCF_016772045.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.869
+
+        track chainLiftOverGCF_016772045.2
+        parent GCA_005887515.3_BosGru3.1ChainNetViewLiftOver off
+        subGroups view=liftover species=s002 chainType=c03
+        shortLabel sheep loChain
+        longLabel sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments
+        type bigChain GCF_016772045.2
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.chainLiftOverGCF_016772045.2.bb
+        linkDataUrl bbi/GCA_005887515.3_BosGru3.1.chainLiftOverGCF_016772045.2Link.bb
+        otherDb GCF_016772045.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.869
+
+        track chainHg38
+        parent GCA_005887515.3_BosGru3.1ChainNetViewchain off
+        subGroups view=chain species=s003 chainType=c00
         shortLabel Human/hg38 Chain
         longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
@@ -280,7 +378,7 @@ html html/GCA_005887515.3_BosGru3.1.chainNet
 
         track chainSynHg38
         parent GCA_005887515.3_BosGru3.1ChainNetViewSynTen off
-        subGroups view=synten species=s001 chainType=c01
+        subGroups view=synten species=s003 chainType=c01
         shortLabel Human/hg38 synChain
         longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
@@ -292,7 +390,7 @@ html html/GCA_005887515.3_BosGru3.1.chainNet
 
         track chainRBestHg38
         parent GCA_005887515.3_BosGru3.1ChainNetViewRBest off
-        subGroups view=rbest species=s001 chainType=c02
+        subGroups view=rbest species=s003 chainType=c02
         shortLabel Human/hg38 rbChain
         longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
@@ -304,7 +402,7 @@ html html/GCA_005887515.3_BosGru3.1.chainNet
 
         track chainLiftOverHg38
         parent GCA_005887515.3_BosGru3.1ChainNetViewLiftOver off
-        subGroups view=liftover species=s001 chainType=c03
+        subGroups view=liftover species=s003 chainType=c03
         shortLabel Human/hg38 loChain
         longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigChain hg38
@@ -356,9 +454,81 @@ html html/GCA_005887515.3_BosGru3.1.chainNet
         html html/GCA_005887515.3_BosGru3.1.chainNet
         priority 3.487
 
-        track netHg38
+        track netGCF_001704415.2
         parent GCA_005887515.3_BosGru3.1MafNetViewnet off
         subGroups view=align species=s001 chainType=c04
+        shortLabel goat mafNet
+        longLabel goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.GCF_001704415.2.net.bb
+        summary bbi/GCA_005887515.3_BosGru3.1.GCF_001704415.2.net.summary.bb
+        speciesOrder GCF_001704415.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.785
+
+        track synNetGCF_001704415.2
+        parent GCA_005887515.3_BosGru3.1MafNetViewnet off
+        subGroups view=align species=s001 chainType=c05
+        shortLabel goat synNet
+        longLabel goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.GCF_001704415.2.synNet.bb
+        summary bbi/GCA_005887515.3_BosGru3.1.GCF_001704415.2.synNet.summary.bb
+        speciesOrder GCF_001704415.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.785
+
+        track rbestNetGCF_001704415.2
+        parent GCA_005887515.3_BosGru3.1MafNetViewnet off
+        subGroups view=align species=s001 chainType=c06
+        shortLabel goat rbestNet
+        longLabel goat/GCF_001704415.2_ARS1.2 (2016-08-24) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.GCF_001704415.2.rbestNet.bb
+        summary bbi/GCA_005887515.3_BosGru3.1.GCF_001704415.2.rbestNet.summary.bb
+        speciesOrder GCF_001704415.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.785
+
+        track netGCF_016772045.2
+        parent GCA_005887515.3_BosGru3.1MafNetViewnet off
+        subGroups view=align species=s002 chainType=c04
+        shortLabel sheep mafNet
+        longLabel sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.GCF_016772045.2.net.bb
+        summary bbi/GCA_005887515.3_BosGru3.1.GCF_016772045.2.net.summary.bb
+        speciesOrder GCF_016772045.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.869
+
+        track synNetGCF_016772045.2
+        parent GCA_005887515.3_BosGru3.1MafNetViewnet off
+        subGroups view=align species=s002 chainType=c05
+        shortLabel sheep synNet
+        longLabel sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.GCF_016772045.2.synNet.bb
+        summary bbi/GCA_005887515.3_BosGru3.1.GCF_016772045.2.synNet.summary.bb
+        speciesOrder GCF_016772045.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.869
+
+        track rbestNetGCF_016772045.2
+        parent GCA_005887515.3_BosGru3.1MafNetViewnet off
+        subGroups view=align species=s002 chainType=c06
+        shortLabel sheep rbestNet
+        longLabel sheep/GCF_016772045.2_ARS-UI_Ramb_v3.0 (2023-07-20) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCA_005887515.3_BosGru3.1.GCF_016772045.2.rbestNet.bb
+        summary bbi/GCA_005887515.3_BosGru3.1.GCF_016772045.2.rbestNet.summary.bb
+        speciesOrder GCF_016772045.2
+        html html/GCA_005887515.3_BosGru3.1.chainNet
+        priority 9.869
+
+        track netHg38
+        parent GCA_005887515.3_BosGru3.1MafNetViewnet off
+        subGroups view=align species=s003 chainType=c04
         shortLabel Human/hg38 mafNet
         longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
@@ -370,7 +540,7 @@ html html/GCA_005887515.3_BosGru3.1.chainNet
 
         track synNetHg38
         parent GCA_005887515.3_BosGru3.1MafNetViewnet off
-        subGroups view=align species=s001 chainType=c05
+        subGroups view=align species=s003 chainType=c05
         shortLabel Human/hg38 synNet
         longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
@@ -382,7 +552,7 @@ html html/GCA_005887515.3_BosGru3.1.chainNet
 
         track rbestNetHg38
         parent GCA_005887515.3_BosGru3.1MafNetViewnet off
-        subGroups view=align species=s001 chainType=c06
+        subGroups view=align species=s003 chainType=c06
         shortLabel Human/hg38 rbestNet
         longLabel Human/hg38/hg38 (Dec. 2013) Chained Alignments
         type bigMaf
@@ -401,7 +571,6 @@ type bigGenePred
 visibility pack
 color 0,102,204
 noScoreFilter on
-type bigGenePred
 html contrib/tiberius/Tiberius.html
 group genes
 dataVersion Tiberius version 2025-01-07

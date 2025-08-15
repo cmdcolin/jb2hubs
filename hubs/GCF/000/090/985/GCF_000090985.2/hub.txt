@@ -2,7 +2,7 @@ hub GCF_000090985.2 genome assembly
 shortLabel green algae M.commoda (RCC299 2009)
 longLabel green algae M.commoda (RCC299 2009)/Micromonas commoda/GCF_000090985.2_ASM9098v2 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_000090985.2_ASM9098v2.description.html
 
 genome GCF_000090985.2
@@ -132,23 +132,103 @@ type bigBed 4 +
 bigDataUrl bbi/GCF_000090985.2_ASM9098v2.simpleRepeat.bb
 html html/GCF_000090985.2_ASM9098v2.simpleRepeat
 
-track ncbiGene
-longLabel NCBI gene predictions
-shortLabel NCBI Genes
-visibility pack
-color 0,80,150
-altColor 150,80,0
-colorByStrand 0,80,150 150,80,0
-bigDataUrl bbi/GCF_000090985.2_ASM9098v2.ncbiGene.bb
-type bigGenePred
-html html/GCF_000090985.2_ASM9098v2.ncbiGene
-searchIndex name
-searchTrix ixIxx/GCF_000090985.2_ASM9098v2.ncbiGene.ix
-url https://www.ncbi.nlm.nih.gov/gene/?term=$$
-urlLabel Entrez gene:
-labelFields geneName,geneName2
-defaultLabelFields geneName2
+track refSeqComposite
+compositeTrack on
+shortLabel NCBI RefSeq
+longLabel RefSeq gene predictions from NCBI
 group genes
+visibility pack
+type bigBed
+dragAndDrop subTracks
+allButtonPair on
+dataVersion INSDC submitter  (2023-06-20)
+html html/GCF_000090985.2_ASM9098v2.refSeqComposite
+priority 2
+
+        track ncbiRefSeq
+        parent refSeqComposite on
+        color 12,12,120
+        shortLabel RefSeq All
+        type bigGenePred
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeq.ix
+        bigDataUrl bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeq.bb
+        longLabel NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)
+        idXref ncbiRefSeqLink mrnaAcc name
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 1
+
+        track ncbiRefSeqCurated
+        color 12,12,120
+        parent refSeqComposite on
+        shortLabel RefSeq Curated
+        longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
+        type bigGenePred
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeqCurated.ix
+        idXref ncbiRefSeqLink mrnaAcc name
+        bigDataUrl bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqCurated.bb
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 2
+
+        track ncbiRefSeqPredicted
+        color 12,12,120
+        parent refSeqComposite on
+        shortLabel RefSeq Predicted
+        longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
+        type bigGenePred
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeqPredicted.ix
+        idXref ncbiRefSeqLink mrnaAcc name
+        bigDataUrl bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqPredicted.bb
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 3
+
+        track ncbiRefSeqOther
+        color 32,32,32
+        parent refSeqComposite on
+        shortLabel RefSeq Other
+        longLabel NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)
+        priority 4
+        searchIndex name
+        searchTrix ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeqOther.ix
+        bigDataUrl bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqOther.bb
+        type bigBed 12 +
+        labelFields name
+        skipEmptyFields on
+        urls GeneID="https://www.ncbi.nlm.nih.gov/gene/$$" MIM="https://www.ncbi.nlm.nih.gov/omim/$$" HGNC="http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$" FlyBase="http://flybase.org/reports/$$" WormBase="http://www.wormbase.org/db/gene/gene?name=$$" RGD="https://rgd.mcw.edu/rgdweb/search/search.html?term=$$" SGD="https://www.yeastgenome.org/locus/$$" miRBase="http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$" ZFIN="https://zfin.org/$$" MGI="http://www.informatics.jax.org/marker/$$"
+
+        track ncbiRefSeqPsl
+        priority 5
+        parent refSeqComposite off
+        shortLabel RefSeq Alignments
+        longLabel RefSeq Alignments of RNAs
+        type bigPsl
+        searchIndex name
+        bigDataUrl bbi/GCF_000090985.2_ASM9098v2.bigPsl.bb
+        indelDoubleInsert on
+        indelQueryInsert on
+        showDiffBasesAllScales .
+        showDiffBasesMaxZoom 10000.0
+        showCdsMaxZoom 10000.0
+        showCdsAllScales .
+        baseColorDefault diffCodons
+        pslSequence no
+        baseColorUseSequence lfExtra
+        baseColorUseCds table given
+        color 0,0,0
 
 track cpgIslands
 compositeTrack on

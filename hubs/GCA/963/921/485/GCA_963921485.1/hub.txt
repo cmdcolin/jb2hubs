@@ -2,7 +2,7 @@ hub GCA_963921485.1 genome assembly
 shortLabel pig (Norwegian landrace 2024)
 longLabel pig (Norwegian landrace 2024)/Sus scrofa/GCA_963921485.1_norwegian_landrace genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCA_963921485.1_norwegian_landrace.description.html
 
 genome GCA_963921485.1
@@ -89,6 +89,17 @@ bigDataUrl bbi/GCA_963921485.1_norwegian_landrace.rmsk.bb
 xrefDataUrl bbi/GCA_963921485.1_norwegian_landrace.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCA_963921485.1_norwegian_landrace.repeatMasker
+
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCA_963921485.1_norwegian_landrace.rModel.bb
+xrefDataUrl bbi/GCA_963921485.1_norwegian_landrace.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCA_963921485.1_norwegian_landrace.repeatModeler
 
 track simpleRepeat
 shortLabel Simple Repeats

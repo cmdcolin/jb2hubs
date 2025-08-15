@@ -2,7 +2,7 @@ hub GCF_000147395.1 genome assembly
 shortLabel African rice (2021)
 longLabel African rice (2021)/Oryza glaberrima/GCF_000147395.1_OglaRS2 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_000147395.1_OglaRS2.description.html
 
 genome GCF_000147395.1
@@ -125,7 +125,7 @@ visibility pack
 type bigBed
 dragAndDrop subTracks
 allButtonPair on
-dataVersion NCBI RefSeq Oryza glaberrima Annotation Release 100 (2022-11-25)
+dataVersion NCBI RefSeq Oryza glaberrima Annotation Release 100 (2023-06-06)
 html html/GCF_000147395.1_OglaRS2.refSeqComposite
 priority 2
 
@@ -134,7 +134,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -146,13 +146,30 @@ priority 2
         baseColorDefault genomicCodons
         priority 1
 
+        track ncbiRefSeqCurated
+        color 12,12,120
+        parent refSeqComposite on
+        shortLabel RefSeq Curated
+        longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
+        type bigGenePred
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        labelFields name,geneName,geneName2
+        defaultLabelFields geneName2
+        searchIndex name
+        searchTrix ixIxx/GCF_000147395.1_OglaRS2.ncbiRefSeqCurated.ix
+        idXref ncbiRefSeqLink mrnaAcc name
+        bigDataUrl bbi/GCF_000147395.1_OglaRS2.ncbiRefSeqCurated.bb
+        baseColorUseCds given
+        baseColorDefault genomicCodons
+        priority 2
+
         track ncbiRefSeqPredicted
         color 12,12,120
         parent refSeqComposite on
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name

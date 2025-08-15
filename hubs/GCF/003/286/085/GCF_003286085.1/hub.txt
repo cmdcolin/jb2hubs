@@ -2,7 +2,7 @@ hub GCF_003286085.1 genome assembly
 shortLabel fly D.persimilis
 longLabel fly D.persimilis/Drosophila persimilis/GCF_003286085.1_DperRS2 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_003286085.1_DperRS2.description.html
 
 genome GCF_003286085.1
@@ -21,6 +21,7 @@ blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/003/286/085/GCF_003286085.1
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/003/286/085/GCF_003286085.1
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/003/286/085/GCF_003286085.1
 liftOver.GCF_018153845.1 liftOver/GCF_003286085.1ToGCF_018153845.1.over.chain.gz
+liftOver.dm6 liftOver/GCF_003286085.1ToDm6.over.chain.gz
 
 track assembly
 longLabel Assembly
@@ -238,98 +239,213 @@ searchIndex name
 searchTrix ixIxx/GCF_003286085.1_DperRS2.xenoRefGene.ix
 html html/GCF_003286085.1_DperRS2.xenoRefGene
 
-##############################################################################
-# GCF_018153845.1 - flies - Drosophila persimilis - taxId: 7234
-##############################################################################
-track chainNetGCF_018153845.1
+track GCF_003286085.1_DperRS2ChainNet
 compositeTrack on
-shortLabel flies Chain/Net
-longLabel flies (2018-10-23), Chain and Net Alignments
-subGroup1 view Views chain=Chain net=Net
+shortLabel Chain/Net
+longLabel Chain alignments to target sequence: GCF_003286085.1_DperRS2
+subGroup1 view Views chain=Chains synten=Syntenic rbest=Reciprocal_best liftover=Lift_over align=Alignment
+subGroup2 species Assembly s000=dm6 s001=GCF_018153845.1
+subGroup3 chainType chain_type c00=chain c01=syntenic c02=reciprocal_best c03=lift_over c04=chain_align c05=syntenic_align c06=reciprocal_align c07=lift_over_align
 dragAndDrop subTracks
 visibility hide
 group compGeno
-priority 100.1
 color 0,0,0
-altColor 100,50,0
+altColor 255,255,0
 type bed 3
-sortOrder view=+
-otherDb GCF_018153845.1
+chainLinearGap loose
+chainMinScore 5000
+dimensions dimensionX=chainType dimensionY=species
+sortOrder species=+ view=+ chainType=+
+configurable on
 html html/GCF_003286085.1_DperRS2.chainNet
 
-    track chainNetGCF_018153845.1Viewchain
-    shortLabel Chain
+    track GCF_003286085.1_DperRS2ChainNetViewchain
+    shortLabel Chains
     view chain
-    visibility pack
-    parent chainNetGCF_018153845.1
+    visibility dense
+    parent GCF_003286085.1_DperRS2ChainNet
     spectrum on
 
+        track chainDm6
+        parent GCF_003286085.1_DperRS2ChainNetViewchain on
+        subGroups view=chain species=s000 chainType=c00
+        shortLabel D. melanogaster/dm6 Chain
+        longLabel D. melanogaster/dm6/dm6 (Aug. 2014) Chained Alignments
+        type bigChain dm6
+        bigDataUrl bbi/GCF_003286085.1_DperRS2.chainDm6.bb
+        linkDataUrl bbi/GCF_003286085.1_DperRS2.chainDm6Link.bb
+        otherDb dm6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 59.143
+
         track chainGCF_018153845.1
-        parent chainNetGCF_018153845.1Viewchain
-        subGroups view=chain
-        shortLabel flies Chain
-        longLabel flies (2018-10-23) Chained Alignments
+        parent GCF_003286085.1_DperRS2ChainNetViewchain off
+        subGroups view=chain species=s001 chainType=c00
+        shortLabel fly D.bipectinata Chain
+        longLabel fly D.bipectinata/GCF_018153845.1_ASM1815384v1 (2021-04-28) Chained Alignments
         type bigChain GCF_018153845.1
         bigDataUrl bbi/GCF_003286085.1_DperRS2.chainGCF_018153845.1.bb
         linkDataUrl bbi/GCF_003286085.1_DperRS2.chainGCF_018153845.1Link.bb
-        priority 1
+        otherDb GCF_018153845.1
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 60.155
+
+    track GCF_003286085.1_DperRS2ChainNetViewSynTen
+    shortLabel Syntenic
+    view synten
+    visibility hide
+    parent GCF_003286085.1_DperRS2ChainNet
+    spectrum on
+
+        track chainSynDm6
+        parent GCF_003286085.1_DperRS2ChainNetViewSynTen off
+        subGroups view=synten species=s000 chainType=c01
+        shortLabel D. melanogaster/dm6 synChain
+        longLabel D. melanogaster/dm6/dm6_ASM1815384v1 (Aug. 2014) Chained Alignments
+        type bigChain dm6
+        bigDataUrl bbi/GCF_003286085.1_DperRS2.chainSynDm6.bb
+        linkDataUrl bbi/GCF_003286085.1_DperRS2.chainSynDm6Link.bb
+        otherDb dm6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 59.143
 
         track chainSynGCF_018153845.1
-        parent chainNetGCF_018153845.1Viewchain
-        subGroups view=chain
-        shortLabel flies synChain
-        longLabel flies (2018-10-23) Syntenic Chained Alignments
+        parent GCF_003286085.1_DperRS2ChainNetViewSynTen off
+        subGroups view=synten species=s001 chainType=c01
+        shortLabel fly D.bipectinata synChain
+        longLabel fly D.bipectinata/GCF_018153845.1_ASM1815384v1 (2021-04-28) Chained Alignments
         type bigChain GCF_018153845.1
         bigDataUrl bbi/GCF_003286085.1_DperRS2.chainSynGCF_018153845.1.bb
         linkDataUrl bbi/GCF_003286085.1_DperRS2.chainSynGCF_018153845.1Link.bb
-        priority 2
+        otherDb GCF_018153845.1
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 60.155
+
+    track GCF_003286085.1_DperRS2ChainNetViewRBest
+    shortLabel Reciprocal best
+    view rbest
+    visibility hide
+    parent GCF_003286085.1_DperRS2ChainNet
+    spectrum on
+
+        track chainRBestDm6
+        parent GCF_003286085.1_DperRS2ChainNetViewRBest off
+        subGroups view=rbest species=s000 chainType=c02
+        shortLabel D. melanogaster/dm6 rbChain
+        longLabel D. melanogaster/dm6/dm6_ASM1815384v1 (Aug. 2014) Chained Alignments
+        type bigChain dm6
+        bigDataUrl bbi/GCF_003286085.1_DperRS2.chainRBestDm6.bb
+        linkDataUrl bbi/GCF_003286085.1_DperRS2.chainRBestDm6Link.bb
+        otherDb dm6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 59.143
 
         track chainRBestGCF_018153845.1
-        parent chainNetGCF_018153845.1Viewchain
-        subGroups view=chain
-        shortLabel flies rbChain
-        longLabel flies (2018-10-23) Reciprocal Best Chained Alignments
+        parent GCF_003286085.1_DperRS2ChainNetViewRBest off
+        subGroups view=rbest species=s001 chainType=c02
+        shortLabel fly D.bipectinata rbChain
+        longLabel fly D.bipectinata/GCF_018153845.1_ASM1815384v1 (2021-04-28) Chained Alignments
         type bigChain GCF_018153845.1
         bigDataUrl bbi/GCF_003286085.1_DperRS2.chainRBestGCF_018153845.1.bb
         linkDataUrl bbi/GCF_003286085.1_DperRS2.chainRBestGCF_018153845.1Link.bb
-        priority 3
+        otherDb GCF_018153845.1
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 60.155
 
-    track mafNetGCF_018153845.1Viewnet
-    shortLabel Net
-    view net
-    visibility full
-    parent chainNetGCF_018153845.1
+    track GCF_003286085.1_DperRS2ChainNetViewLiftOver
+    shortLabel Lift over
+    view liftover
+    visibility hide
+    parent GCF_003286085.1_DperRS2ChainNet
+    spectrum on
+
+        track chainLiftOverDm6
+        parent GCF_003286085.1_DperRS2ChainNetViewLiftOver off
+        subGroups view=liftover species=s000 chainType=c03
+        shortLabel D. melanogaster/dm6 loChain
+        longLabel D. melanogaster/dm6/dm6_ASM1815384v1 (Aug. 2014) Chained Alignments
+        type bigChain dm6
+        bigDataUrl bbi/GCF_003286085.1_DperRS2.chainLiftOverDm6.bb
+        linkDataUrl bbi/GCF_003286085.1_DperRS2.chainLiftOverDm6Link.bb
+        otherDb dm6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 59.143
+
+    track GCF_003286085.1_DperRS2MafNetViewnet
+    shortLabel Nets
+    view align
+    visibility hide
+    parent GCF_003286085.1_DperRS2ChainNet
+
+        track netDm6
+        parent GCF_003286085.1_DperRS2MafNetViewnet off
+        subGroups view=align species=s000 chainType=c04
+        shortLabel D. melanogaster/dm6 mafNet
+        longLabel D. melanogaster/dm6/dm6 (Aug. 2014) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_003286085.1_DperRS2.dm6.net.bb
+        summary bbi/GCF_003286085.1_DperRS2.dm6.net.summary.bb
+        speciesOrder dm6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 59.143
+
+        track synNetDm6
+        parent GCF_003286085.1_DperRS2MafNetViewnet off
+        subGroups view=align species=s000 chainType=c05
+        shortLabel D. melanogaster/dm6 synNet
+        longLabel D. melanogaster/dm6/dm6 (Aug. 2014) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_003286085.1_DperRS2.dm6.synNet.bb
+        summary bbi/GCF_003286085.1_DperRS2.dm6.synNet.summary.bb
+        speciesOrder dm6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 59.143
+
+        track rbestNetDm6
+        parent GCF_003286085.1_DperRS2MafNetViewnet off
+        subGroups view=align species=s000 chainType=c06
+        shortLabel D. melanogaster/dm6 rbestNet
+        longLabel D. melanogaster/dm6/dm6 (Aug. 2014) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_003286085.1_DperRS2.dm6.rbestNet.bb
+        summary bbi/GCF_003286085.1_DperRS2.dm6.rbestNet.summary.bb
+        speciesOrder dm6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 59.143
 
         track netGCF_018153845.1
-        parent mafNetGCF_018153845.1Viewnet
-        subGroups view=net
-        shortLabel flies net
-        longLabel flies (2018-10-23) Net Alignment
+        parent GCF_003286085.1_DperRS2MafNetViewnet off
+        subGroups view=align species=s001 chainType=c04
+        shortLabel fly D.bipectinata mafNet
+        longLabel fly D.bipectinata/GCF_018153845.1_ASM1815384v1 (2021-04-28) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_003286085.1_DperRS2.GCF_018153845.1.net.bb
         summary bbi/GCF_003286085.1_DperRS2.GCF_018153845.1.net.summary.bb
         speciesOrder GCF_018153845.1
-        priority 4
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 60.155
 
         track synNetGCF_018153845.1
-        parent mafNetGCF_018153845.1Viewnet
-        subGroups view=net
-        shortLabel flies synNet
-        longLabel flies (2018-10-23) Syntenic Net Alignment
+        parent GCF_003286085.1_DperRS2MafNetViewnet off
+        subGroups view=align species=s001 chainType=c05
+        shortLabel fly D.bipectinata synNet
+        longLabel fly D.bipectinata/GCF_018153845.1_ASM1815384v1 (2021-04-28) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_003286085.1_DperRS2.GCF_018153845.1.synNet.bb
         summary bbi/GCF_003286085.1_DperRS2.GCF_018153845.1.synNet.summary.bb
         speciesOrder GCF_018153845.1
-        priority 5
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 60.155
 
         track rbestNetGCF_018153845.1
-        parent mafNetGCF_018153845.1Viewnet
-        subGroups view=net
-        shortLabel flies rbestNet
-        longLabel flies (2018-10-23) Reciprocal Best Net Alignment
+        parent GCF_003286085.1_DperRS2MafNetViewnet off
+        subGroups view=align species=s001 chainType=c06
+        shortLabel fly D.bipectinata rbestNet
+        longLabel fly D.bipectinata/GCF_018153845.1_ASM1815384v1 (2021-04-28) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_003286085.1_DperRS2.GCF_018153845.1.rbestNet.bb
         summary bbi/GCF_003286085.1_DperRS2.GCF_018153845.1.rbestNet.summary.bb
         speciesOrder GCF_018153845.1
-        priority 6
+        html html/GCF_003286085.1_DperRS2.chainNet
+        priority 60.155
 

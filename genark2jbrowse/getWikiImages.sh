@@ -24,6 +24,7 @@ process_wiki_image() {
   local hub_dir="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
   if [[ ! -f "$hub_dir/image.json" && ! -f "$hub_dir/image.json.notfound" ]]; then
+    echo "Fetching $scientific_name $accession"
     node src/getWikiImage.ts "$scientific_name" "$accession"
   fi
 }

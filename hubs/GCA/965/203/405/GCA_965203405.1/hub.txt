@@ -2,7 +2,7 @@ hub GCA_965203405.1 genome assembly
 shortLabel common pipistrelle (hap1.1 2025)
 longLabel common pipistrelle (hap1.1 2025)/Pipistrellus pipistrellus/GCA_965203405.1_mPipPip2.hap1.1 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCA_965203405.1_mPipPip2.hap1.1.description.html
 
 genome GCA_965203405.1
@@ -96,6 +96,17 @@ bigDataUrl bbi/GCA_965203405.1_mPipPip2.hap1.1.rmsk.bb
 xrefDataUrl bbi/GCA_965203405.1_mPipPip2.hap1.1.rmsk.align.bb
 maxWindowToDraw 5000000
 html html/GCA_965203405.1_mPipPip2.hap1.1.repeatMasker
+
+track repeatModeler
+shortLabel RepeatModeler
+longLabel RepeatModeler Repetitive Elements
+type bigRmsk 9 +
+visibility hide
+group varRep
+bigDataUrl bbi/GCA_965203405.1_mPipPip2.hap1.1.rModel.bb
+xrefDataUrl bbi/GCA_965203405.1_mPipPip2.hap1.1.rModel.align.bb
+maxWindowToDraw 5000000
+html html/GCA_965203405.1_mPipPip2.hap1.1.repeatModeler
 
 track simpleRepeat
 shortLabel Simple Repeats

@@ -1,10 +1,11 @@
 import * as fs from 'fs'
 import * as path from 'path'
 
-import { type UCSCGenArkAssemblyEntry, parseAssemblyEntry } from 'hubtools'
+import { parseAssemblyEntry } from 'hubtools'
 
 import { readJSON } from './util.ts'
 
+import type { UCSCGenArkAssemblyEntry } from 'hubtools'
 /**
  * Processes raw hub JSON files, parses each assembly entry, and writes
  * processed JSON files for individual categories and a combined 'all.json'.

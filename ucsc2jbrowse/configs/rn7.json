@@ -1307,6 +1307,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "rn7_to_GCF_036323735.1_liftOver",
+      "name": "rn7 to Norway rat (BN/NHsdMcwi 2024 refseq) (GCF_036323735.1) liftOver",
+      "category": ["Pairwise alignments", "liftOver"],
+      "assemblyNames": ["rn7", "GCF_036323735.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rn7",
+        "queryAssembly": "GCF_036323735.1",
+        "pifGzLocation": {
+          "uri": "liftOver/rn7ToGCF_036323735.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/rn7ToGCF_036323735.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "rn7_to_hg38_liftOver",
       "name": "rn7 to Human (hg38) liftOver",
       "category": ["Pairwise alignments", "liftOver"],

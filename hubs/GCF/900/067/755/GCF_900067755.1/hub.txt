@@ -1,14 +1,14 @@
 hub GCF_900067755.1 genome assembly
-shortLabel central bearded dragon
-longLabel central bearded dragon/Pogona vitticeps/GCF_900067755.1_pvi1.1 genome assembly
+shortLabel central bearded dragon (2017)
+longLabel central bearded dragon (2017)/Pogona vitticeps/GCF_900067755.1_pvi1.1 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_900067755.1_pvi1.1.description.html
 
 genome GCF_900067755.1
 taxId 103695
 groups groups.txt
-description central bearded dragon
+description central bearded dragon (2017)
 twoBitPath GCF_900067755.1.2bit
 twoBitBptUrl GCF_900067755.1.2bit.bpt
 chromSizes GCF_900067755.1.chrom.sizes.txt
@@ -122,7 +122,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -140,7 +140,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name

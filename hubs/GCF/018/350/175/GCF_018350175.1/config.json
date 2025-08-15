@@ -24,6 +24,7 @@
           "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/018/350/175/GCF_018350175.1",
           "liftOver.GCF_000181335.3": "liftOver/GCF_018350175.1ToGCF_000181335.3.over.chain.gz",
           "liftOver.felCat8": "liftOver/GCF_018350175.1ToFelCat8.over.chain.gz",
+          "liftOver.felCat9": "liftOver/GCF_018350175.1ToFelCat9.over.chain.gz",
           "liftOver.hg38": "liftOver/GCF_018350175.1ToHg38.over.chain.gz"
         },
         "trackId": "GCF_018350175.1-ReferenceSequenceTrack",
@@ -558,9 +559,34 @@
     },
     {
       "metadata": {
-        "track": "chainGCF_000181335.3",
+        "track": "chainFelCat9",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewchain on",
         "subGroups": "view=chain species=s000 chainType=c00",
+        "shortLabel": "Cat/felCat9 Chain",
+        "longLabel": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+        "type": "bigChain felCat9",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainFelCat9.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainFelCat9Link.bb",
+        "otherDb": "felCat9",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.731"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_018350175.1-chainFelCat9",
+      "description": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat9 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainFelCat9.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainGCF_000181335.3",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewchain off",
+        "subGroups": "view=chain species=s001 chainType=c00",
         "shortLabel": "domestic cat Chain",
         "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
         "type": "bigChain GCF_000181335.3",
@@ -583,84 +609,9 @@
     },
     {
       "metadata": {
-        "track": "chainSynGCF_000181335.3",
-        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s000 chainType=c01",
-        "shortLabel": "domestic cat synChain",
-        "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
-        "type": "bigChain GCF_000181335.3",
-        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynGCF_000181335.3.bb",
-        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynGCF_000181335.3Link.bb",
-        "otherDb": "GCF_000181335.3",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
-        "priority": "0.734"
-      },
-      "category": ["Chain/Net", "Syntenic"],
-      "trackId": "GCF_018350175.1-chainSynGCF_000181335.3",
-      "description": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
-      "assemblyNames": ["GCF_018350175.1"],
-      "name": "domestic cat synChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynGCF_000181335.3.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "chainRBestGCF_000181335.3",
-        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s000 chainType=c02",
-        "shortLabel": "domestic cat rbChain",
-        "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
-        "type": "bigChain GCF_000181335.3",
-        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestGCF_000181335.3.bb",
-        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestGCF_000181335.3Link.bb",
-        "otherDb": "GCF_000181335.3",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
-        "priority": "0.734"
-      },
-      "category": ["Chain/Net", "Reciprocal best"],
-      "trackId": "GCF_018350175.1-chainRBestGCF_000181335.3",
-      "description": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
-      "assemblyNames": ["GCF_018350175.1"],
-      "name": "domestic cat rbChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestGCF_000181335.3.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "chainLiftOverGCF_000181335.3",
-        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s000 chainType=c03",
-        "shortLabel": "domestic cat loChain",
-        "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
-        "type": "bigChain GCF_000181335.3",
-        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverGCF_000181335.3.bb",
-        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverGCF_000181335.3Link.bb",
-        "otherDb": "GCF_000181335.3",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
-        "priority": "0.734"
-      },
-      "category": ["Chain/Net", "Lift over"],
-      "trackId": "GCF_018350175.1-chainLiftOverGCF_000181335.3",
-      "description": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
-      "assemblyNames": ["GCF_018350175.1"],
-      "name": "domestic cat loChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverGCF_000181335.3.bb"
-      }
-    },
-    {
-      "metadata": {
         "track": "chainFelCat8",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s001 chainType=c00",
+        "subGroups": "view=chain species=s002 chainType=c00",
         "shortLabel": "Cat/felCat8 Chain",
         "longLabel": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
         "type": "bigChain felCat8",
@@ -683,84 +634,9 @@
     },
     {
       "metadata": {
-        "track": "chainSynFelCat8",
-        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s001 chainType=c01",
-        "shortLabel": "Cat/felCat8 synChain",
-        "longLabel": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
-        "type": "bigChain felCat8",
-        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat8.bb",
-        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat8Link.bb",
-        "otherDb": "felCat8",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
-        "priority": "1.255"
-      },
-      "category": ["Chain/Net", "Syntenic"],
-      "trackId": "GCF_018350175.1-chainSynFelCat8",
-      "description": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
-      "assemblyNames": ["GCF_018350175.1"],
-      "name": "Cat/felCat8 synChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat8.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "chainRBestFelCat8",
-        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s001 chainType=c02",
-        "shortLabel": "Cat/felCat8 rbChain",
-        "longLabel": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
-        "type": "bigChain felCat8",
-        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat8.bb",
-        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat8Link.bb",
-        "otherDb": "felCat8",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
-        "priority": "1.255"
-      },
-      "category": ["Chain/Net", "Reciprocal best"],
-      "trackId": "GCF_018350175.1-chainRBestFelCat8",
-      "description": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
-      "assemblyNames": ["GCF_018350175.1"],
-      "name": "Cat/felCat8 rbChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat8.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "chainLiftOverFelCat8",
-        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s001 chainType=c03",
-        "shortLabel": "Cat/felCat8 loChain",
-        "longLabel": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
-        "type": "bigChain felCat8",
-        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat8.bb",
-        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat8Link.bb",
-        "otherDb": "felCat8",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
-        "priority": "1.255"
-      },
-      "category": ["Chain/Net", "Lift over"],
-      "trackId": "GCF_018350175.1-chainLiftOverFelCat8",
-      "description": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
-      "assemblyNames": ["GCF_018350175.1"],
-      "name": "Cat/felCat8 loChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat8.bb"
-      }
-    },
-    {
-      "metadata": {
         "track": "chainHg38",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewchain off",
-        "subGroups": "view=chain species=s002 chainType=c00",
+        "subGroups": "view=chain species=s003 chainType=c00",
         "shortLabel": "Human/hg38 Chain",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
@@ -783,11 +659,86 @@
     },
     {
       "metadata": {
-        "track": "chainSynHg38",
+        "track": "chainSynFelCat9",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s000 chainType=c01",
+        "shortLabel": "Cat/felCat9 synChain",
+        "longLabel": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+        "type": "bigChain felCat9",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat9.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat9Link.bb",
+        "otherDb": "felCat9",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.731"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_018350175.1-chainSynFelCat9",
+      "description": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat9 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat9.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynGCF_000181335.3",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s001 chainType=c01",
+        "shortLabel": "domestic cat synChain",
+        "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
+        "type": "bigChain GCF_000181335.3",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynGCF_000181335.3.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynGCF_000181335.3Link.bb",
+        "otherDb": "GCF_000181335.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.734"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_018350175.1-chainSynGCF_000181335.3",
+      "description": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "domestic cat synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynGCF_000181335.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynFelCat8",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewSynTen off",
         "subGroups": "view=synten species=s002 chainType=c01",
+        "shortLabel": "Cat/felCat8 synChain",
+        "longLabel": "Cat/felCat8/felCat8_Felis_catus_9.0 (Nov. 2014) Chained Alignments",
+        "type": "bigChain felCat8",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat8.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat8Link.bb",
+        "otherDb": "felCat8",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "1.255"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_018350175.1-chainSynFelCat8",
+      "description": "Cat/felCat8/felCat8_Felis_catus_9.0 (Nov. 2014) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat8 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynFelCat8.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynHg38",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s003 chainType=c01",
         "shortLabel": "Human/hg38 synChain",
-        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "longLabel": "Human/hg38/hg38_Felis_catus_9.0 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynHg38.bb",
         "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainSynHg38Link.bb",
@@ -797,7 +748,7 @@
       },
       "category": ["Chain/Net", "Syntenic"],
       "trackId": "GCF_018350175.1-chainSynHg38",
-      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "description": "Human/hg38/hg38_Felis_catus_9.0 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_018350175.1"],
       "name": "Human/hg38 synChain",
       "type": "FeatureTrack",
@@ -808,11 +759,86 @@
     },
     {
       "metadata": {
-        "track": "chainRBestHg38",
+        "track": "chainRBestFelCat9",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s000 chainType=c02",
+        "shortLabel": "Cat/felCat9 rbChain",
+        "longLabel": "Cat/felCat9/felCat9_Felis_catus_9.0 (Nov. 2017) Chained Alignments",
+        "type": "bigChain felCat9",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat9.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat9Link.bb",
+        "otherDb": "felCat9",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.731"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_018350175.1-chainRBestFelCat9",
+      "description": "Cat/felCat9/felCat9_Felis_catus_9.0 (Nov. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat9 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat9.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestGCF_000181335.3",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s001 chainType=c02",
+        "shortLabel": "domestic cat rbChain",
+        "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
+        "type": "bigChain GCF_000181335.3",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestGCF_000181335.3.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestGCF_000181335.3Link.bb",
+        "otherDb": "GCF_000181335.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.734"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_018350175.1-chainRBestGCF_000181335.3",
+      "description": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "domestic cat rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestGCF_000181335.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestFelCat8",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewRBest off",
         "subGroups": "view=rbest species=s002 chainType=c02",
+        "shortLabel": "Cat/felCat8 rbChain",
+        "longLabel": "Cat/felCat8/felCat8_Felis_catus_9.0 (Nov. 2014) Chained Alignments",
+        "type": "bigChain felCat8",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat8.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat8Link.bb",
+        "otherDb": "felCat8",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "1.255"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_018350175.1-chainRBestFelCat8",
+      "description": "Cat/felCat8/felCat8_Felis_catus_9.0 (Nov. 2014) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat8 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestFelCat8.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestHg38",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s003 chainType=c02",
         "shortLabel": "Human/hg38 rbChain",
-        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "longLabel": "Human/hg38/hg38_Felis_catus_9.0 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestHg38.bb",
         "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainRBestHg38Link.bb",
@@ -822,7 +848,7 @@
       },
       "category": ["Chain/Net", "Reciprocal best"],
       "trackId": "GCF_018350175.1-chainRBestHg38",
-      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "description": "Human/hg38/hg38_Felis_catus_9.0 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_018350175.1"],
       "name": "Human/hg38 rbChain",
       "type": "FeatureTrack",
@@ -833,11 +859,86 @@
     },
     {
       "metadata": {
-        "track": "chainLiftOverHg38",
+        "track": "chainLiftOverFelCat9",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s000 chainType=c03",
+        "shortLabel": "Cat/felCat9 loChain",
+        "longLabel": "Cat/felCat9/felCat9_Felis_catus_9.0 (Nov. 2017) Chained Alignments",
+        "type": "bigChain felCat9",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat9.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat9Link.bb",
+        "otherDb": "felCat9",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.731"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_018350175.1-chainLiftOverFelCat9",
+      "description": "Cat/felCat9/felCat9_Felis_catus_9.0 (Nov. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat9 loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat9.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverGCF_000181335.3",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s001 chainType=c03",
+        "shortLabel": "domestic cat loChain",
+        "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
+        "type": "bigChain GCF_000181335.3",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverGCF_000181335.3.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverGCF_000181335.3Link.bb",
+        "otherDb": "GCF_000181335.3",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.734"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_018350175.1-chainLiftOverGCF_000181335.3",
+      "description": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "domestic cat loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverGCF_000181335.3.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverFelCat8",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewLiftOver off",
         "subGroups": "view=liftover species=s002 chainType=c03",
+        "shortLabel": "Cat/felCat8 loChain",
+        "longLabel": "Cat/felCat8/felCat8_Felis_catus_9.0 (Nov. 2014) Chained Alignments",
+        "type": "bigChain felCat8",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat8.bb",
+        "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat8Link.bb",
+        "otherDb": "felCat8",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "1.255"
+      },
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_018350175.1-chainLiftOverFelCat8",
+      "description": "Cat/felCat8/felCat8_Felis_catus_9.0 (Nov. 2014) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat8 loChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverFelCat8.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainLiftOverHg38",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s003 chainType=c03",
         "shortLabel": "Human/hg38 loChain",
-        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "longLabel": "Human/hg38/hg38_Felis_catus_9.0 (Dec. 2013) Chained Alignments",
         "type": "bigChain hg38",
         "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverHg38.bb",
         "linkDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.chainLiftOverHg38Link.bb",
@@ -847,7 +948,7 @@
       },
       "category": ["Chain/Net", "Lift over"],
       "trackId": "GCF_018350175.1-chainLiftOverHg38",
-      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "description": "Human/hg38/hg38_Felis_catus_9.0 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_018350175.1"],
       "name": "Human/hg38 loChain",
       "type": "FeatureTrack",
@@ -858,9 +959,84 @@
     },
     {
       "metadata": {
-        "track": "netGCF_000181335.3",
+        "track": "netFelCat9",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
         "subGroups": "view=align species=s000 chainType=c04",
+        "shortLabel": "Cat/felCat9 mafNet",
+        "longLabel": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.net.bb",
+        "summary": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.net.summary.bb",
+        "speciesOrder": "felCat9",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.731"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_018350175.1-netFelCat9",
+      "description": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat9 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetFelCat9",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c05",
+        "shortLabel": "Cat/felCat9 synNet",
+        "longLabel": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.synNet.bb",
+        "summary": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.synNet.summary.bb",
+        "speciesOrder": "felCat9",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.731"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_018350175.1-synNetFelCat9",
+      "description": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat9 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetFelCat9",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
+        "subGroups": "view=align species=s000 chainType=c06",
+        "shortLabel": "Cat/felCat9 rbestNet",
+        "longLabel": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.rbestNet.bb",
+        "summary": "bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.rbestNet.summary.bb",
+        "speciesOrder": "felCat9",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet\">html/GCF_018350175.1_F.catus_Fca126_mat1.0.chainNet</a>",
+        "priority": "0.731"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_018350175.1-rbestNetFelCat9",
+      "description": "Cat/felCat9/felCat9 (Nov. 2017) Chained Alignments",
+      "assemblyNames": ["GCF_018350175.1"],
+      "name": "Cat/felCat9 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/018/350/175/GCF_018350175.1/bbi/GCF_018350175.1_F.catus_Fca126_mat1.0.felCat9.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netGCF_000181335.3",
+        "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c04",
         "shortLabel": "domestic cat mafNet",
         "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
         "type": "bigMaf",
@@ -885,7 +1061,7 @@
       "metadata": {
         "track": "synNetGCF_000181335.3",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s000 chainType=c05",
+        "subGroups": "view=align species=s001 chainType=c05",
         "shortLabel": "domestic cat synNet",
         "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
         "type": "bigMaf",
@@ -910,7 +1086,7 @@
       "metadata": {
         "track": "rbestNetGCF_000181335.3",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s000 chainType=c06",
+        "subGroups": "view=align species=s001 chainType=c06",
         "shortLabel": "domestic cat rbestNet",
         "longLabel": "domestic cat/GCF_000181335.3_Felis_catus_9.0 (2017-11-20) Chained Alignments",
         "type": "bigMaf",
@@ -935,7 +1111,7 @@
       "metadata": {
         "track": "netFelCat8",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s001 chainType=c04",
+        "subGroups": "view=align species=s002 chainType=c04",
         "shortLabel": "Cat/felCat8 mafNet",
         "longLabel": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
         "type": "bigMaf",
@@ -960,7 +1136,7 @@
       "metadata": {
         "track": "synNetFelCat8",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s001 chainType=c05",
+        "subGroups": "view=align species=s002 chainType=c05",
         "shortLabel": "Cat/felCat8 synNet",
         "longLabel": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
         "type": "bigMaf",
@@ -985,7 +1161,7 @@
       "metadata": {
         "track": "rbestNetFelCat8",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s001 chainType=c06",
+        "subGroups": "view=align species=s002 chainType=c06",
         "shortLabel": "Cat/felCat8 rbestNet",
         "longLabel": "Cat/felCat8/felCat8 (Nov. 2014) Chained Alignments",
         "type": "bigMaf",
@@ -1010,7 +1186,7 @@
       "metadata": {
         "track": "netHg38",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s002 chainType=c04",
+        "subGroups": "view=align species=s003 chainType=c04",
         "shortLabel": "Human/hg38 mafNet",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
@@ -1035,7 +1211,7 @@
       "metadata": {
         "track": "synNetHg38",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s002 chainType=c05",
+        "subGroups": "view=align species=s003 chainType=c05",
         "shortLabel": "Human/hg38 synNet",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",
@@ -1060,7 +1236,7 @@
       "metadata": {
         "track": "rbestNetHg38",
         "parent": "GCF_018350175.1_F.catus_Fca126_mat1.0MafNetViewnet off",
-        "subGroups": "view=align species=s002 chainType=c06",
+        "subGroups": "view=align species=s003 chainType=c06",
         "shortLabel": "Human/hg38 rbestNet",
         "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
         "type": "bigMaf",

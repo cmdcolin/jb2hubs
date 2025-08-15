@@ -2,7 +2,7 @@ hub GCF_000006175.1 genome assembly
 shortLabel Methanococcus voltae (A3 2010)
 longLabel Methanococcus voltae (A3 2010)/Methanococcus voltae A3/GCF_000006175.1_ASM617v2 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_000006175.1_ASM617v2.description.html
 
 genome GCF_000006175.1
@@ -24,7 +24,7 @@ isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/006/175/GCF_000006175.1
 track assembly
 longLabel Assembly
 shortLabel Assembly
-visibility pack
+visibility hide
 colorByStrand 150,100,30 230,170,40
 color 150,100,30
 altColor 230,170,40
@@ -34,7 +34,7 @@ html html/GCF_000006175.1_ASM617v2.assembly
 searchIndex name
 searchTrix ixIxx/GCF_000006175.1_ASM617v2.assembly.ix
 url https://www.ncbi.nlm.nih.gov/nuccore/$$
-urlLabel NCBI Nucleotide database
+urlLabel NCBI Nucleotide database:
 group map
 
 track cytoBandIdeo
@@ -49,7 +49,7 @@ track gc5Base
 shortLabel GC Percent
 longLabel GC Percent in 5-Base Windows
 group map
-visibility full
+visibility dense
 autoScale Off
 maxHeightPixels 128:36:16
 graphTypeDefault Bar
@@ -100,8 +100,9 @@ html html/GCF_000006175.1_ASM617v2.ncbiGene
 searchIndex name
 searchTrix ixIxx/GCF_000006175.1_ASM617v2.ncbiGene.ix
 url https://www.ncbi.nlm.nih.gov/gene/?term=$$
-urlLabel Entrez gene
+urlLabel Entrez gene:
 labelFields geneName,geneName2
+defaultLabelFields geneName2
 group genes
 
 track cpgIslands
@@ -109,7 +110,7 @@ compositeTrack on
 shortLabel CpG Islands
 longLabel CpG Islands (Islands < 300 Bases are Light Green)
 group regulation
-visibility pack
+visibility dense
 type bigBed 4 +
 html html/GCF_000006175.1_ASM617v2.cpgIslands
 

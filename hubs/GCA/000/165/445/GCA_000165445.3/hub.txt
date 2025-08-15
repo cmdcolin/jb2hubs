@@ -2,7 +2,7 @@ hub GCA_000165445.3 genome assembly
 shortLabel gray mouse lemur genbank
 longLabel gray mouse lemur genbank/Microcebus murinus/GCA_000165445.3_Mmur_3.0 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCA_000165445.3_Mmur_3.0.description.html
 
 genome GCA_000165445.3
@@ -184,3 +184,16 @@ searchIndex name
 searchTrix ixIxx/GCA_000165445.3_Mmur_3.0.xenoRefGene.ix
 html html/GCA_000165445.3_Mmur_3.0.xenoRefGene
 
+
+track Tiberius
+bigDataUrl contrib/tiberius/tiberius.bigGenePred.bb
+shortLabel Tiberius genes
+longLabel Tiberius ab initio gene prediction
+type bigGenePred
+visibility pack
+color 0,102,204
+noScoreFilter on
+html contrib/tiberius/Tiberius.html
+group genes
+dataVersion Tiberius version 2025-01-07
+baseColorDefault genomicCodons

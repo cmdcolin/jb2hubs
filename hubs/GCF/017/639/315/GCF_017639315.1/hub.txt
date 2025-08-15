@@ -2,7 +2,7 @@ hub GCF_017639315.1 genome assembly
 shortLabel fly D.ananassae (14024-0371.13 U. Maryland 2021)
 longLabel fly D.ananassae (14024-0371.13 U. Maryland 2021)/Drosophila ananassae/GCF_017639315.1_ASM1763931v2 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_017639315.1_ASM1763931v2.description.html
 
 genome GCF_017639315.1
@@ -320,6 +320,16 @@ html html/GCF_017639315.1_ASM1763931v2.chainNet
         linkDataUrl bbi/GCF_017639315.1_ASM1763931v2.chainRBestDm6Link.bb
         priority 3
 
+        track chainLiftOverDm6
+        parent chainNetDm6Viewchain
+        subGroups view=chain
+        shortLabel D. melanogaster loChain
+        longLabel D. melanogaster (Aug. 2014 (BDGP Release 6 + ISO1 MT/dm6)) Lift Over Chained Alignments
+        type bigChain dm6
+        bigDataUrl bbi/GCF_017639315.1_ASM1763931v2.chainLiftOverDm6.bb
+        linkDataUrl bbi/GCF_017639315.1_ASM1763931v2.chainLiftOverDm6Link.bb
+        priority 4
+
     track mafNetDm6Viewnet
     shortLabel Net
     view net
@@ -335,7 +345,7 @@ html html/GCF_017639315.1_ASM1763931v2.chainNet
         bigDataUrl bbi/GCF_017639315.1_ASM1763931v2.dm6.net.bb
         summary bbi/GCF_017639315.1_ASM1763931v2.dm6.net.summary.bb
         speciesOrder dm6
-        priority 4
+        priority 5
 
         track synNetDm6
         parent mafNetDm6Viewnet
@@ -346,7 +356,7 @@ html html/GCF_017639315.1_ASM1763931v2.chainNet
         bigDataUrl bbi/GCF_017639315.1_ASM1763931v2.dm6.synNet.bb
         summary bbi/GCF_017639315.1_ASM1763931v2.dm6.synNet.summary.bb
         speciesOrder dm6
-        priority 5
+        priority 6
 
         track rbestNetDm6
         parent mafNetDm6Viewnet
@@ -357,5 +367,5 @@ html html/GCF_017639315.1_ASM1763931v2.chainNet
         bigDataUrl bbi/GCF_017639315.1_ASM1763931v2.dm6.rbestNet.bb
         summary bbi/GCF_017639315.1_ASM1763931v2.dm6.rbestNet.summary.bb
         speciesOrder dm6
-        priority 6
+        priority 7
 

@@ -208,6 +208,30 @@
     },
     {
       "metadata": {
+        "track": "repeatModeler",
+        "shortLabel": "RepeatModeler",
+        "longLabel": "RepeatModeler Repetitive Elements",
+        "type": "bigRmsk 9 +",
+        "visibility": "hide",
+        "group": "varRep",
+        "bigDataUrl": "bbi/GCF_029215685.1_rPitCat1.0.hap2.rModel.bb",
+        "xrefDataUrl": "bbi/GCF_029215685.1_rPitCat1.0.hap2.rModel.align.bb",
+        "maxWindowToDraw": "5000000",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/029/215/685/GCF_029215685.1/html/GCF_029215685.1_rPitCat1.0.hap2.repeatModeler\">html/GCF_029215685.1_rPitCat1.0.hap2.repeatModeler</a>"
+      },
+      "category": ["Variation and Repeats"],
+      "trackId": "GCF_029215685.1-repeatModeler",
+      "description": "RepeatModeler Repetitive Elements",
+      "assemblyNames": ["GCF_029215685.1"],
+      "name": "RepeatModeler",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/029/215/685/GCF_029215685.1/bbi/GCF_029215685.1_rPitCat1.0.hap2.rModel.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "simpleRepeat",
         "shortLabel": "Simple Repeats",
         "longLabel": "Simple Tandem Repeats by TRF",
@@ -235,7 +259,7 @@
         "color": "12,12,120",
         "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",
@@ -266,7 +290,7 @@
         "shortLabel": "RefSeq Predicted",
         "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
         "type": "bigGenePred",
-        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
         "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
         "searchIndex": "name",

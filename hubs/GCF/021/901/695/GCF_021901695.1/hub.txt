@@ -2,7 +2,7 @@ hub GCF_021901695.1 genome assembly
 shortLabel rust fungi P.striiformis f. sp. tritici
 longLabel rust fungi P.striiformis f. sp. tritici/Puccinia striiformis f. sp. tritici/GCF_021901695.1_Pst134E36_v1_pri genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_021901695.1_Pst134E36_v1_pri.description.html
 
 genome GCF_021901695.1
@@ -108,7 +108,7 @@ visibility pack
 type bigBed
 dragAndDrop subTracks
 allButtonPair on
-dataVersion INSDC submitter  (2022-05-06)
+dataVersion INSDC submitter  (2023-12-29)
 html html/GCF_021901695.1_Pst134E36_v1_pri.refSeqComposite
 priority 2
 
@@ -117,7 +117,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -135,7 +135,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls geneName="https://www.ncbi.nlm.nih.gov/nuccore/$$?report=genbank" geneName2="https://www.ncbi.nlm.nih.gov/datasets/gene/$D/?search=$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name

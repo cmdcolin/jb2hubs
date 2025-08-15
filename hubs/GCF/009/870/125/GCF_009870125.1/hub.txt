@@ -2,7 +2,7 @@ hub GCF_009870125.1 genome assembly
 shortLabel fly D.pseudoobscura
 longLabel fly D.pseudoobscura/Drosophila pseudoobscura/GCF_009870125.1_UCI_Dpse_MV25 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_009870125.1_UCI_Dpse_MV25.description.html
 
 genome GCF_009870125.1
@@ -326,6 +326,16 @@ html html/GCF_009870125.1_UCI_Dpse_MV25.chainNet
         linkDataUrl bbi/GCF_009870125.1_UCI_Dpse_MV25.chainRBestDm6Link.bb
         priority 3
 
+        track chainLiftOverDm6
+        parent chainNetDm6Viewchain
+        subGroups view=chain
+        shortLabel D. melanogaster loChain
+        longLabel D. melanogaster (Aug. 2014 (BDGP Release 6 + ISO1 MT/dm6)) Lift Over Chained Alignments
+        type bigChain dm6
+        bigDataUrl bbi/GCF_009870125.1_UCI_Dpse_MV25.chainLiftOverDm6.bb
+        linkDataUrl bbi/GCF_009870125.1_UCI_Dpse_MV25.chainLiftOverDm6Link.bb
+        priority 4
+
     track mafNetDm6Viewnet
     shortLabel Net
     view net
@@ -341,7 +351,7 @@ html html/GCF_009870125.1_UCI_Dpse_MV25.chainNet
         bigDataUrl bbi/GCF_009870125.1_UCI_Dpse_MV25.dm6.net.bb
         summary bbi/GCF_009870125.1_UCI_Dpse_MV25.dm6.net.summary.bb
         speciesOrder dm6
-        priority 4
+        priority 5
 
         track synNetDm6
         parent mafNetDm6Viewnet
@@ -352,7 +362,7 @@ html html/GCF_009870125.1_UCI_Dpse_MV25.chainNet
         bigDataUrl bbi/GCF_009870125.1_UCI_Dpse_MV25.dm6.synNet.bb
         summary bbi/GCF_009870125.1_UCI_Dpse_MV25.dm6.synNet.summary.bb
         speciesOrder dm6
-        priority 5
+        priority 6
 
         track rbestNetDm6
         parent mafNetDm6Viewnet
@@ -363,5 +373,5 @@ html html/GCF_009870125.1_UCI_Dpse_MV25.chainNet
         bigDataUrl bbi/GCF_009870125.1_UCI_Dpse_MV25.dm6.rbestNet.bb
         summary bbi/GCF_009870125.1_UCI_Dpse_MV25.dm6.rbestNet.summary.bb
         speciesOrder dm6
-        priority 6
+        priority 7
 

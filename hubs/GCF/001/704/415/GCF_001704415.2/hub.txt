@@ -2,7 +2,7 @@ hub GCF_001704415.2 genome assembly
 shortLabel goat (v2 San Clemente 2016 USDA)
 longLabel goat (v2 San Clemente 2016 USDA)/Capra hircus/GCF_001704415.2_ARS1.2 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_001704415.2_ARS1.2.description.html
 
 genome GCF_001704415.2
@@ -22,6 +22,7 @@ blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/001/704/415/GCF_001704415.2
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/001/704/415/GCF_001704415.2
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/001/704/415/GCF_001704415.2
 liftOver.GCA_000978405.1 liftOver/GCF_001704415.2ToGCA_000978405.1.over.chain.gz
+liftOver.GCA_005887515.3 liftOver/GCF_001704415.2ToGCA_005887515.3.over.chain.gz
 liftOver.GCF_002263795.3 liftOver/GCF_001704415.2ToGCF_002263795.3.over.chain.gz
 liftOver.GCF_016772045.2 liftOver/GCF_001704415.2ToGCF_016772045.2.over.chain.gz
 liftOver.oviAri4 liftOver/GCF_001704415.2ToOviAri4.over.chain.gz
@@ -276,7 +277,7 @@ compositeTrack on
 shortLabel Chain/Net
 longLabel Chain alignments to target sequence: GCF_001704415.2_ARS1.2
 subGroup1 view Views chain=Chains synten=Syntenic rbest=Reciprocal_best liftover=Lift_over align=Alignment
-subGroup2 species Assembly s000=GCF_016772045.2 s001=oviAri4 s002=GCA_000978405.1 s003=GCF_002263795.3 s004=susScr11
+subGroup2 species Assembly s000=GCF_016772045.2 s001=oviAri4 s002=GCA_000978405.1 s003=GCF_002263795.3 s004=GCA_005887515.3 s005=susScr11
 subGroup3 chainType chain_type c00=chain c01=syntenic c02=reciprocal_best c03=lift_over c04=chain_align c05=syntenic_align c06=reciprocal_align c07=lift_over_align
 dragAndDrop subTracks
 visibility hide
@@ -511,9 +512,57 @@ html html/GCF_001704415.2_ARS1.2.chainNet
         html html/GCF_001704415.2_ARS1.2.chainNet
         priority 16.366
 
-        track chainSusScr11
+        track chainGCA_005887515.3
         parent GCF_001704415.2_ARS1.2ChainNetViewchain off
         subGroups view=chain species=s004 chainType=c00
+        shortLabel domestic yak Chain
+        longLabel domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments
+        type bigChain GCA_005887515.3
+        bigDataUrl bbi/GCF_001704415.2_ARS1.2.chainGCA_005887515.3.bb
+        linkDataUrl bbi/GCF_001704415.2_ARS1.2.chainGCA_005887515.3Link.bb
+        otherDb GCA_005887515.3
+        html html/GCF_001704415.2_ARS1.2.chainNet
+        priority 18.375
+
+        track chainSynGCA_005887515.3
+        parent GCF_001704415.2_ARS1.2ChainNetViewSynTen off
+        subGroups view=synten species=s004 chainType=c01
+        shortLabel domestic yak synChain
+        longLabel domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments
+        type bigChain GCA_005887515.3
+        bigDataUrl bbi/GCF_001704415.2_ARS1.2.chainSynGCA_005887515.3.bb
+        linkDataUrl bbi/GCF_001704415.2_ARS1.2.chainSynGCA_005887515.3Link.bb
+        otherDb GCA_005887515.3
+        html html/GCF_001704415.2_ARS1.2.chainNet
+        priority 18.375
+
+        track chainRBestGCA_005887515.3
+        parent GCF_001704415.2_ARS1.2ChainNetViewRBest off
+        subGroups view=rbest species=s004 chainType=c02
+        shortLabel domestic yak rbChain
+        longLabel domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments
+        type bigChain GCA_005887515.3
+        bigDataUrl bbi/GCF_001704415.2_ARS1.2.chainRBestGCA_005887515.3.bb
+        linkDataUrl bbi/GCF_001704415.2_ARS1.2.chainRBestGCA_005887515.3Link.bb
+        otherDb GCA_005887515.3
+        html html/GCF_001704415.2_ARS1.2.chainNet
+        priority 18.375
+
+        track chainLiftOverGCA_005887515.3
+        parent GCF_001704415.2_ARS1.2ChainNetViewLiftOver off
+        subGroups view=liftover species=s004 chainType=c03
+        shortLabel domestic yak loChain
+        longLabel domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments
+        type bigChain GCA_005887515.3
+        bigDataUrl bbi/GCF_001704415.2_ARS1.2.chainLiftOverGCA_005887515.3.bb
+        linkDataUrl bbi/GCF_001704415.2_ARS1.2.chainLiftOverGCA_005887515.3Link.bb
+        otherDb GCA_005887515.3
+        html html/GCF_001704415.2_ARS1.2.chainNet
+        priority 18.375
+
+        track chainSusScr11
+        parent GCF_001704415.2_ARS1.2ChainNetViewchain off
+        subGroups view=chain species=s005 chainType=c00
         shortLabel Pig/susScr11 Chain
         longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
         type bigChain susScr11
@@ -525,7 +574,7 @@ html html/GCF_001704415.2_ARS1.2.chainNet
 
         track chainSynSusScr11
         parent GCF_001704415.2_ARS1.2ChainNetViewSynTen off
-        subGroups view=synten species=s004 chainType=c01
+        subGroups view=synten species=s005 chainType=c01
         shortLabel Pig/susScr11 synChain
         longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
         type bigChain susScr11
@@ -537,7 +586,7 @@ html html/GCF_001704415.2_ARS1.2.chainNet
 
         track chainRBestSusScr11
         parent GCF_001704415.2_ARS1.2ChainNetViewRBest off
-        subGroups view=rbest species=s004 chainType=c02
+        subGroups view=rbest species=s005 chainType=c02
         shortLabel Pig/susScr11 rbChain
         longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
         type bigChain susScr11
@@ -549,7 +598,7 @@ html html/GCF_001704415.2_ARS1.2.chainNet
 
         track chainLiftOverSusScr11
         parent GCF_001704415.2_ARS1.2ChainNetViewLiftOver off
-        subGroups view=liftover species=s004 chainType=c03
+        subGroups view=liftover species=s005 chainType=c03
         shortLabel Pig/susScr11 loChain
         longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
         type bigChain susScr11
@@ -709,9 +758,45 @@ html html/GCF_001704415.2_ARS1.2.chainNet
         html html/GCF_001704415.2_ARS1.2.chainNet
         priority 16.366
 
-        track netSusScr11
+        track netGCA_005887515.3
         parent GCF_001704415.2_ARS1.2MafNetViewnet off
         subGroups view=align species=s004 chainType=c04
+        shortLabel domestic yak mafNet
+        longLabel domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_001704415.2_ARS1.2.GCA_005887515.3.net.bb
+        summary bbi/GCF_001704415.2_ARS1.2.GCA_005887515.3.net.summary.bb
+        speciesOrder GCA_005887515.3
+        html html/GCF_001704415.2_ARS1.2.chainNet
+        priority 18.375
+
+        track synNetGCA_005887515.3
+        parent GCF_001704415.2_ARS1.2MafNetViewnet off
+        subGroups view=align species=s004 chainType=c05
+        shortLabel domestic yak synNet
+        longLabel domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_001704415.2_ARS1.2.GCA_005887515.3.synNet.bb
+        summary bbi/GCF_001704415.2_ARS1.2.GCA_005887515.3.synNet.summary.bb
+        speciesOrder GCA_005887515.3
+        html html/GCF_001704415.2_ARS1.2.chainNet
+        priority 18.375
+
+        track rbestNetGCA_005887515.3
+        parent GCF_001704415.2_ARS1.2MafNetViewnet off
+        subGroups view=align species=s004 chainType=c06
+        shortLabel domestic yak rbestNet
+        longLabel domestic yak/GCA_005887515.3_BosGru3.1 (2019-06-10) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_001704415.2_ARS1.2.GCA_005887515.3.rbestNet.bb
+        summary bbi/GCF_001704415.2_ARS1.2.GCA_005887515.3.rbestNet.summary.bb
+        speciesOrder GCA_005887515.3
+        html html/GCF_001704415.2_ARS1.2.chainNet
+        priority 18.375
+
+        track netSusScr11
+        parent GCF_001704415.2_ARS1.2MafNetViewnet off
+        subGroups view=align species=s005 chainType=c04
         shortLabel Pig/susScr11 mafNet
         longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
         type bigMaf
@@ -723,7 +808,7 @@ html html/GCF_001704415.2_ARS1.2.chainNet
 
         track synNetSusScr11
         parent GCF_001704415.2_ARS1.2MafNetViewnet off
-        subGroups view=align species=s004 chainType=c05
+        subGroups view=align species=s005 chainType=c05
         shortLabel Pig/susScr11 synNet
         longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
         type bigMaf
@@ -735,7 +820,7 @@ html html/GCF_001704415.2_ARS1.2.chainNet
 
         track rbestNetSusScr11
         parent GCF_001704415.2_ARS1.2MafNetViewnet off
-        subGroups view=align species=s004 chainType=c06
+        subGroups view=align species=s005 chainType=c06
         shortLabel Pig/susScr11 rbestNet
         longLabel Pig/susScr11/susScr11 (Feb. 2017) Chained Alignments
         type bigMaf
@@ -754,7 +839,6 @@ type bigGenePred
 visibility pack
 color 0,102,204
 noScoreFilter on
-type bigGenePred
 html contrib/tiberius/Tiberius.html
 group genes
 dataVersion Tiberius version 2025-01-07

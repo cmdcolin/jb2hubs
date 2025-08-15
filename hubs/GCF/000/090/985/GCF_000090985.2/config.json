@@ -248,33 +248,152 @@
     },
     {
       "metadata": {
-        "track": "ncbiGene",
-        "longLabel": "NCBI gene predictions",
-        "shortLabel": "NCBI Genes",
-        "visibility": "pack",
-        "color": "0,80,150",
-        "altColor": "150,80,0",
-        "colorByStrand": "0,80,150 150,80,0",
-        "bigDataUrl": "bbi/GCF_000090985.2_ASM9098v2.ncbiGene.bb",
+        "track": "ncbiRefSeq",
+        "parent": "refSeqComposite on",
+        "color": "12,12,120",
+        "shortLabel": "RefSeq All",
         "type": "bigGenePred",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/000/090/985/GCF_000090985.2/html/GCF_000090985.2_ASM9098v2.ncbiGene\">html/GCF_000090985.2_ASM9098v2.ncbiGene</a>",
-        "searchIndex": "name",
-        "searchTrix": "ixIxx/GCF_000090985.2_ASM9098v2.ncbiGene.ix",
-        "url": "https://www.ncbi.nlm.nih.gov/gene/?term=$$",
-        "urlLabel": "Entrez gene:",
-        "labelFields": "geneName,geneName2",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "labelFields": "name,geneName,geneName2",
         "defaultLabelFields": "geneName2",
-        "group": "genes"
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeq.ix",
+        "bigDataUrl": "bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeq.bb",
+        "longLabel": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "1"
       },
-      "category": ["Genes and Gene Predictions"],
-      "trackId": "GCF_000090985.2-ncbiGene",
-      "description": "NCBI gene predictions",
+      "category": ["NCBI RefSeq"],
+      "trackId": "GCF_000090985.2-ncbiRefSeq",
+      "description": "NCBI RefSeq genes, curated and predicted sets (NM_*, XM_*, NR_*, XR_*, NP_* or YP_*)",
       "assemblyNames": ["GCF_000090985.2"],
-      "name": "NCBI Genes",
+      "name": "RefSeq All",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/090/985/GCF_000090985.2/bbi/GCF_000090985.2_ASM9098v2.ncbiGene.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/090/985/GCF_000090985.2/bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeq.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqCurated",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Curated",
+        "longLabel": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+        "type": "bigGenePred",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeqCurated.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqCurated.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "2"
+      },
+      "category": ["NCBI RefSeq"],
+      "trackId": "GCF_000090985.2-ncbiRefSeqCurated",
+      "description": "NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)",
+      "assemblyNames": ["GCF_000090985.2"],
+      "name": "RefSeq Curated",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/090/985/GCF_000090985.2/bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqCurated.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPredicted",
+        "color": "12,12,120",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Predicted",
+        "longLabel": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+        "type": "bigGenePred",
+        "urls": "name2=\"https://www.ncbi.nlm.nih.gov/gene/?term=$$\" geneName=\"https://www.ncbi.nlm.nih.gov/gene/$$\" geneName2=\"https://www.ncbi.nlm.nih.gov/nuccore/$$\"",
+        "labelFields": "name,geneName,geneName2",
+        "defaultLabelFields": "geneName2",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeqPredicted.ix",
+        "idXref": "ncbiRefSeqLink mrnaAcc name",
+        "bigDataUrl": "bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqPredicted.bb",
+        "baseColorUseCds": "given",
+        "baseColorDefault": "genomicCodons",
+        "priority": "3"
+      },
+      "category": ["NCBI RefSeq"],
+      "trackId": "GCF_000090985.2-ncbiRefSeqPredicted",
+      "description": "NCBI RefSeq genes, predicted subset (XM_* or XR_*)",
+      "assemblyNames": ["GCF_000090985.2"],
+      "name": "RefSeq Predicted",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/090/985/GCF_000090985.2/bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqPredicted.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqOther",
+        "color": "32,32,32",
+        "parent": "refSeqComposite on",
+        "shortLabel": "RefSeq Other",
+        "longLabel": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+        "priority": "4",
+        "searchIndex": "name",
+        "searchTrix": "ixIxx/GCF_000090985.2_ASM9098v2.ncbiRefSeqOther.ix",
+        "bigDataUrl": "bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqOther.bb",
+        "type": "bigBed 12 +",
+        "labelFields": "name",
+        "skipEmptyFields": "on",
+        "urls": "GeneID=\"https://www.ncbi.nlm.nih.gov/gene/$$\" MIM=\"https://www.ncbi.nlm.nih.gov/omim/$$\" HGNC=\"http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=$$\" FlyBase=\"http://flybase.org/reports/$$\" WormBase=\"http://www.wormbase.org/db/gene/gene?name=$$\" RGD=\"https://rgd.mcw.edu/rgdweb/search/search.html?term=$$\" SGD=\"https://www.yeastgenome.org/locus/$$\" miRBase=\"http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc=$$\" ZFIN=\"https://zfin.org/$$\" MGI=\"http://www.informatics.jax.org/marker/$$\""
+      },
+      "category": ["NCBI RefSeq"],
+      "trackId": "GCF_000090985.2-ncbiRefSeqOther",
+      "description": "NCBI RefSeq other annotations (not NM_*, NR_*, XM_*, XR_*, NP_* or YP_*)",
+      "assemblyNames": ["GCF_000090985.2"],
+      "name": "RefSeq Other",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/090/985/GCF_000090985.2/bbi/GCF_000090985.2_ASM9098v2.ncbiRefSeqOther.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "ncbiRefSeqPsl",
+        "priority": "5",
+        "parent": "refSeqComposite off",
+        "shortLabel": "RefSeq Alignments",
+        "longLabel": "RefSeq Alignments of RNAs",
+        "type": "bigPsl",
+        "searchIndex": "name",
+        "bigDataUrl": "bbi/GCF_000090985.2_ASM9098v2.bigPsl.bb",
+        "indelDoubleInsert": "on",
+        "indelQueryInsert": "on",
+        "showDiffBasesAllScales": ".",
+        "showDiffBasesMaxZoom": "10000.0",
+        "showCdsMaxZoom": "10000.0",
+        "showCdsAllScales": ".",
+        "baseColorDefault": "diffCodons",
+        "pslSequence": "no",
+        "baseColorUseSequence": "lfExtra",
+        "baseColorUseCds": "table given",
+        "color": "0,0,0"
+      },
+      "category": ["NCBI RefSeq"],
+      "trackId": "GCF_000090985.2-ncbiRefSeqPsl",
+      "description": "RefSeq Alignments of RNAs",
+      "assemblyNames": ["GCF_000090985.2"],
+      "name": "RefSeq Alignments",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/000/090/985/GCF_000090985.2/bbi/GCF_000090985.2_ASM9098v2.bigPsl.bb"
       }
     },
     {

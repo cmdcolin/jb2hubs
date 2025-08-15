@@ -15,18 +15,21 @@ node src/downloadHubs.ts
 echo "Processing hub JSON data..."
 node src/processHubJson.ts
 
-# --- Step 2: Fetch NCBI Metadata ---
-# Define function to fetch NCBI assembly metadata for a given file.
-# It checks if ncbi.json exists or if REPROCESS is set to force re-fetching.
+# Fetch NCBI Metadata:
+# Define function to fetch NCBI assembly metadata for a given file. It checks
+# if ncbi.json exists or if REPROCESS_NCBI_META to force re-fetching.
 fetch_ncbi_data() {
   local file="$1"
   local dir=$(dirname "$file")
   local id=$(basename "$dir")
-  if [ ! -f "$dir/ncbi.json" ] || [ -n "$REPROCESS_NCBI_META" ]; then
+  if [ ! -f "$dir/ncbi.json" ] || [ ! -s "$dir/ncbi.json" ] || [ -n "$REPROCESS" ]; then
     echo "Fetching NCBI data for $id"
+
     # Use esearch and esummary to get assembly metadata and save as ncbi.json
-    (esearch -db assembly -query "$id" </dev/null | esummary -mode json) | grep -v "sortorder" >"$dir/ncbi.json"
-    sleep 0.1 # Small delay to avoid overwhelming the NCBI E-utilities
+    (esearch -db assembly -query "$id" </dev/null | esummary -mode json) >"$dir/ncbi.json"
+
+    # Small delay to avoid overwhelming the NCBI E-utilities
+    sleep 0.1
   fi
 }
 
@@ -35,12 +38,8 @@ export -f fetch_ncbi_data # Export function for use with GNU Parallel
 echo "Fetching NCBI metadata..."
 fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
 
-# --- Step 3: Generate JBrowse 2 Configurations ---
-
 echo "Generating JBrowse 2 config.json for each hub..."
 fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
-
-# --- Step 4: Download NCBI GFF Files ---
 
 # Define function to download a single NCBI GFF file.
 download_ncbi_gff() {
@@ -62,10 +61,8 @@ echo "Downloading NCBI GFF files..."
 # Extract NCBI GFF URLs from processed JSON and download them
 cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar download_ncbi_gff
 
-# --- Step 5: Process NCBI GFF Files ---
-
-# Define function to process a single GFF file.
-# It handles cases where start > end, sorts, bgzips, and tabix indexes the GFF.
+# Define function to process a single GFF file. It handles cases where start >
+# end, sorts, bgzips, and tabix indexes the GFF.
 process_gff_file() {
   local input_file="$1"
   local filename=$(basename "$input_file")
@@ -87,8 +84,6 @@ export -f process_gff_file # Export function for use with GNU Parallel
 
 echo "Processing NCBI GFF files in parallel..."
 ls gff/*.gz | parallel --bar -j8 process_gff_file
-
-# --- Step 6: Add GFF Tracks and Text Index to JBrowse 2 Hubs ---
 
 # Define function to add a GFF track to a JBrowse 2 assembly and create a text index.
 add_track_and_text_index() {
@@ -143,7 +138,8 @@ add_track_and_text_index() {
   fi
 }
 
-export -f add_track_and_text_index # Export function for use with GNU Parallel
+# Export function for use with GNU Parallel
+export -f add_track_and_text_index
 
 echo "Loading and text indexing NCBI GFF tracks in parallel..."
 find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
@@ -155,8 +151,6 @@ echo "Calculate gff file hashes"
 ./getFileListing.sh
 
 sleep 1 # Small pause
-
-# --- Step 8: Format Codebase ---
 
 echo "Formatting codebase..."
 cd ..

@@ -2,7 +2,7 @@ hub GCF_000242695.1 genome assembly
 shortLabel spotted gar
 longLabel spotted gar/Lepisosteus oculatus/GCF_000242695.1_LepOcu1 genome assembly
 useOneFile on
-email hclawson@ucsc.edu
+email genome-www@soe.ucsc.edu
 descriptionUrl html/GCF_000242695.1_LepOcu1.description.html
 
 genome GCF_000242695.1
@@ -22,6 +22,7 @@ blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/242/695/GCF_000242695.1
 transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/242/695/GCF_000242695.1
 isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/242/695/GCF_000242695.1
 liftOver.GCF_010993605.1 liftOver/GCF_000242695.1ToGCF_010993605.1.over.chain.gz
+liftOver.GCF_040954835.1 liftOver/GCF_000242695.1ToGCF_040954835.1.over.chain.gz
 
 track assembly
 longLabel Assembly
@@ -134,7 +135,7 @@ priority 2
         color 12,12,120
         shortLabel RefSeq All
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -152,7 +153,7 @@ priority 2
         shortLabel RefSeq Curated
         longLabel NCBI RefSeq genes, curated subset (NM_*, NR_*, NP_* or YP_*)
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -169,7 +170,7 @@ priority 2
         shortLabel RefSeq Predicted
         longLabel NCBI RefSeq genes, predicted subset (XM_* or XR_*)
         type bigGenePred
-        urls name2="https://www.ncbi.nlm.nih.gov/gene/$D/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+        urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
         labelFields name,geneName,geneName2
         defaultLabelFields geneName2
         searchIndex name
@@ -283,108 +284,225 @@ searchIndex name
 searchTrix ixIxx/GCF_000242695.1_LepOcu1.xenoRefGene.ix
 html html/GCF_000242695.1_LepOcu1.xenoRefGene
 
-##############################################################################
-# GCF_010993605.1 - spotted gar - Lepisosteus oculatus - taxId: 7918
-##############################################################################
-track chainNetGCF_010993605.1
+track GCF_000242695.1_LepOcu1ChainNet
 compositeTrack on
-shortLabel spotted gar Chain/Net
-longLabel spotted gar (2012-01-13), Chain and Net Alignments
-subGroup1 view Views chain=Chain net=Net
+shortLabel Chain/Net
+longLabel Chain alignments to target sequence: GCF_000242695.1_LepOcu1
+subGroup1 view Views chain=Chains synten=Syntenic rbest=Reciprocal_best liftover=Lift_over align=Alignment
+subGroup2 species Assembly s000=GCF_040954835.1 s001=GCF_010993605.1
+subGroup3 chainType chain_type c00=chain c01=syntenic c02=reciprocal_best c03=lift_over c04=chain_align c05=syntenic_align c06=reciprocal_align c07=lift_over_align
 dragAndDrop subTracks
 visibility hide
 group compGeno
-priority 100.1
 color 0,0,0
-altColor 100,50,0
+altColor 255,255,0
 type bed 3
-sortOrder view=+
-otherDb GCF_010993605.1
+chainLinearGap loose
+chainMinScore 5000
+dimensions dimensionX=chainType dimensionY=species
+sortOrder species=+ view=+ chainType=+
+configurable on
 html html/GCF_000242695.1_LepOcu1.chainNet
 
-    track chainNetGCF_010993605.1Viewchain
-    shortLabel Chain
+    track GCF_000242695.1_LepOcu1ChainNetViewchain
+    shortLabel Chains
     view chain
-    visibility pack
-    parent chainNetGCF_010993605.1
+    visibility dense
+    parent GCF_000242695.1_LepOcu1ChainNet
     spectrum on
 
-        track chainGCF_010993605.1
-        parent chainNetGCF_010993605.1Viewchain
-        subGroups view=chain
+    track GCF_000242695.1_LepOcu1ChainNetViewSynTen
+    shortLabel Syntenic
+    view synten
+    visibility hide
+    parent GCF_000242695.1_LepOcu1ChainNet
+    spectrum on
+
+    track GCF_000242695.1_LepOcu1ChainNetViewRBest
+    shortLabel Reciprocal best
+    view rbest
+    visibility hide
+    parent GCF_000242695.1_LepOcu1ChainNet
+    spectrum on
+
+    track GCF_000242695.1_LepOcu1ChainNetViewLiftOver
+    shortLabel Lift over
+    view liftover
+    visibility hide
+    parent GCF_000242695.1_LepOcu1ChainNet
+    spectrum on
+
+        track chainGCF_040954835.1
+        parent GCF_000242695.1_LepOcu1ChainNetViewchain on
+        subGroups view=chain species=s000 chainType=c00
         shortLabel spotted gar Chain
-        longLabel spotted gar (2012-01-13) Chained Alignments
+        longLabel spotted gar/GCF_040954835.1_fLepOcu1.hap2 (2024-08-01) Chained Alignments
+        type bigChain GCF_040954835.1
+        bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainGCF_040954835.1.bb
+        linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainGCF_040954835.1Link.bb
+        otherDb GCF_040954835.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 8.602
+
+        track chainSynGCF_040954835.1
+        parent GCF_000242695.1_LepOcu1ChainNetViewSynTen off
+        subGroups view=synten species=s000 chainType=c01
+        shortLabel spotted gar synChain
+        longLabel spotted gar/GCF_040954835.1_fLepOcu1.hap2 (2024-08-01) Chained Alignments
+        type bigChain GCF_040954835.1
+        bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainSynGCF_040954835.1.bb
+        linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainSynGCF_040954835.1Link.bb
+        otherDb GCF_040954835.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 8.602
+
+        track chainRBestGCF_040954835.1
+        parent GCF_000242695.1_LepOcu1ChainNetViewRBest off
+        subGroups view=rbest species=s000 chainType=c02
+        shortLabel spotted gar rbChain
+        longLabel spotted gar/GCF_040954835.1_fLepOcu1.hap2 (2024-08-01) Chained Alignments
+        type bigChain GCF_040954835.1
+        bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainRBestGCF_040954835.1.bb
+        linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainRBestGCF_040954835.1Link.bb
+        otherDb GCF_040954835.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 8.602
+
+        track chainLiftOverGCF_040954835.1
+        parent GCF_000242695.1_LepOcu1ChainNetViewLiftOver off
+        subGroups view=liftover species=s000 chainType=c03
+        shortLabel spotted gar loChain
+        longLabel spotted gar/GCF_040954835.1_fLepOcu1.hap2 (2024-08-01) Chained Alignments
+        type bigChain GCF_040954835.1
+        bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainLiftOverGCF_040954835.1.bb
+        linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainLiftOverGCF_040954835.1Link.bb
+        otherDb GCF_040954835.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 8.602
+
+        track chainGCF_010993605.1
+        parent GCF_000242695.1_LepOcu1ChainNetViewchain off
+        subGroups view=chain species=s001 chainType=c00
+        shortLabel sea lamprey Chain
+        longLabel sea lamprey/GCF_010993605.1_kPetMar1.pri (2020-02-24) Chained Alignments
         type bigChain GCF_010993605.1
         bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainGCF_010993605.1.bb
         linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainGCF_010993605.1Link.bb
-        priority 1
+        otherDb GCF_010993605.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 97.158
 
         track chainSynGCF_010993605.1
-        parent chainNetGCF_010993605.1Viewchain
-        subGroups view=chain
-        shortLabel spotted gar synChain
-        longLabel spotted gar (2012-01-13) Syntenic Chained Alignments
+        parent GCF_000242695.1_LepOcu1ChainNetViewSynTen off
+        subGroups view=synten species=s001 chainType=c01
+        shortLabel sea lamprey synChain
+        longLabel sea lamprey/GCF_010993605.1_kPetMar1.pri (2020-02-24) Chained Alignments
         type bigChain GCF_010993605.1
         bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainSynGCF_010993605.1.bb
         linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainSynGCF_010993605.1Link.bb
-        priority 2
+        otherDb GCF_010993605.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 97.158
 
         track chainRBestGCF_010993605.1
-        parent chainNetGCF_010993605.1Viewchain
-        subGroups view=chain
-        shortLabel spotted gar rbChain
-        longLabel spotted gar (2012-01-13) Reciprocal Best Chained Alignments
+        parent GCF_000242695.1_LepOcu1ChainNetViewRBest off
+        subGroups view=rbest species=s001 chainType=c02
+        shortLabel sea lamprey rbChain
+        longLabel sea lamprey/GCF_010993605.1_kPetMar1.pri (2020-02-24) Chained Alignments
         type bigChain GCF_010993605.1
         bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainRBestGCF_010993605.1.bb
         linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainRBestGCF_010993605.1Link.bb
-        priority 3
+        otherDb GCF_010993605.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 97.158
 
         track chainLiftOverGCF_010993605.1
-        parent chainNetGCF_010993605.1Viewchain
-        subGroups view=chain
-        shortLabel spotted gar loChain
-        longLabel spotted gar (2012-01-13) Lift Over Chained Alignments
+        parent GCF_000242695.1_LepOcu1ChainNetViewLiftOver off
+        subGroups view=liftover species=s001 chainType=c03
+        shortLabel sea lamprey loChain
+        longLabel sea lamprey/GCF_010993605.1_kPetMar1.pri (2020-02-24) Chained Alignments
         type bigChain GCF_010993605.1
         bigDataUrl bbi/GCF_000242695.1_LepOcu1.chainLiftOverGCF_010993605.1.bb
         linkDataUrl bbi/GCF_000242695.1_LepOcu1.chainLiftOverGCF_010993605.1Link.bb
-        priority 4
+        otherDb GCF_010993605.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 97.158
 
-    track mafNetGCF_010993605.1Viewnet
-    shortLabel Net
-    view net
-    visibility full
-    parent chainNetGCF_010993605.1
+    track GCF_000242695.1_LepOcu1MafNetViewnet
+    shortLabel Nets
+    view align
+    visibility hide
+    parent GCF_000242695.1_LepOcu1ChainNet
+
+        track netGCF_040954835.1
+        parent GCF_000242695.1_LepOcu1MafNetViewnet off
+        subGroups view=align species=s000 chainType=c04
+        shortLabel spotted gar mafNet
+        longLabel spotted gar/GCF_040954835.1_fLepOcu1.hap2 (2024-08-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_000242695.1_LepOcu1.GCF_040954835.1.net.bb
+        summary bbi/GCF_000242695.1_LepOcu1.GCF_040954835.1.net.summary.bb
+        speciesOrder GCF_040954835.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 8.602
+
+        track synNetGCF_040954835.1
+        parent GCF_000242695.1_LepOcu1MafNetViewnet off
+        subGroups view=align species=s000 chainType=c05
+        shortLabel spotted gar synNet
+        longLabel spotted gar/GCF_040954835.1_fLepOcu1.hap2 (2024-08-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_000242695.1_LepOcu1.GCF_040954835.1.synNet.bb
+        summary bbi/GCF_000242695.1_LepOcu1.GCF_040954835.1.synNet.summary.bb
+        speciesOrder GCF_040954835.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 8.602
+
+        track rbestNetGCF_040954835.1
+        parent GCF_000242695.1_LepOcu1MafNetViewnet off
+        subGroups view=align species=s000 chainType=c06
+        shortLabel spotted gar rbestNet
+        longLabel spotted gar/GCF_040954835.1_fLepOcu1.hap2 (2024-08-01) Chained Alignments
+        type bigMaf
+        bigDataUrl bbi/GCF_000242695.1_LepOcu1.GCF_040954835.1.rbestNet.bb
+        summary bbi/GCF_000242695.1_LepOcu1.GCF_040954835.1.rbestNet.summary.bb
+        speciesOrder GCF_040954835.1
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 8.602
 
         track netGCF_010993605.1
-        parent mafNetGCF_010993605.1Viewnet
-        subGroups view=net
-        shortLabel spotted gar net
-        longLabel spotted gar (2012-01-13) Net Alignment
+        parent GCF_000242695.1_LepOcu1MafNetViewnet off
+        subGroups view=align species=s001 chainType=c04
+        shortLabel sea lamprey mafNet
+        longLabel sea lamprey/GCF_010993605.1_kPetMar1.pri (2020-02-24) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_000242695.1_LepOcu1.GCF_010993605.1.net.bb
         summary bbi/GCF_000242695.1_LepOcu1.GCF_010993605.1.net.summary.bb
         speciesOrder GCF_010993605.1
-        priority 5
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 97.158
 
         track synNetGCF_010993605.1
-        parent mafNetGCF_010993605.1Viewnet
-        subGroups view=net
-        shortLabel spotted gar synNet
-        longLabel spotted gar (2012-01-13) Syntenic Net Alignment
+        parent GCF_000242695.1_LepOcu1MafNetViewnet off
+        subGroups view=align species=s001 chainType=c05
+        shortLabel sea lamprey synNet
+        longLabel sea lamprey/GCF_010993605.1_kPetMar1.pri (2020-02-24) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_000242695.1_LepOcu1.GCF_010993605.1.synNet.bb
         summary bbi/GCF_000242695.1_LepOcu1.GCF_010993605.1.synNet.summary.bb
         speciesOrder GCF_010993605.1
-        priority 6
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 97.158
 
         track rbestNetGCF_010993605.1
-        parent mafNetGCF_010993605.1Viewnet
-        subGroups view=net
-        shortLabel spotted gar rbestNet
-        longLabel spotted gar (2012-01-13) Reciprocal Best Net Alignment
+        parent GCF_000242695.1_LepOcu1MafNetViewnet off
+        subGroups view=align species=s001 chainType=c06
+        shortLabel sea lamprey rbestNet
+        longLabel sea lamprey/GCF_010993605.1_kPetMar1.pri (2020-02-24) Chained Alignments
         type bigMaf
         bigDataUrl bbi/GCF_000242695.1_LepOcu1.GCF_010993605.1.rbestNet.bb
         summary bbi/GCF_000242695.1_LepOcu1.GCF_010993605.1.rbestNet.summary.bb
         speciesOrder GCF_010993605.1
-        priority 7
+        html html/GCF_000242695.1_LepOcu1.chainNet
+        priority 97.158
 

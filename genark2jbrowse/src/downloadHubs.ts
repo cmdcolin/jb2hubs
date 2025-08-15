@@ -25,7 +25,9 @@ const allHubEntries = dedupe(
 )
 
 /**
- * Processes a single assembly hub entry: downloads its hub.txt and creates a meta.json file.
+ * Processes a single assembly hub entry: downloads its hub.txt and creates a
+ * meta.json file.
+ *
  * @param entry - The UCSCGenArkAssemblyEntry object.
  * @param idx - The current index of the entry in the list.
  * @param totalEntries - The total number of entries being processed.

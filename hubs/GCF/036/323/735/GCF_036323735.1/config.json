@@ -23,8 +23,11 @@
           "transBlat": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/036/323/735/GCF_036323735.1",
           "isPcr": "dynablat-01.soe.ucsc.edu 4040 dynamic GCF/036/323/735/GCF_036323735.1",
           "liftOver.hg19": "liftOver/GCF_036323735.1ToHg19.over.chain.gz",
+          "liftOver.hg38": "liftOver/GCF_036323735.1ToHg38.over.chain.gz",
           "liftOver.mm10": "liftOver/GCF_036323735.1ToMm10.over.chain.gz",
-          "liftOver.rn6": "liftOver/GCF_036323735.1ToRn6.over.chain.gz"
+          "liftOver.mm39": "liftOver/GCF_036323735.1ToMm39.over.chain.gz",
+          "liftOver.rn6": "liftOver/GCF_036323735.1ToRn6.over.chain.gz",
+          "liftOver.rn7": "liftOver/GCF_036323735.1ToRn7.over.chain.gz"
         },
         "trackId": "GCF_036323735.1-ReferenceSequenceTrack",
         "adapter": {
@@ -575,6 +578,131 @@
     },
     {
       "metadata": {
+        "track": "chainRn7",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewchain off",
+        "subGroups": "view=chain species=s001 chainType=c00",
+        "shortLabel": "Rat/rn7 Chain",
+        "longLabel": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+        "type": "bigChain rn7",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRn7.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRn7Link.bb",
+        "otherDb": "rn7",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "5.715"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_036323735.1-chainRn7",
+      "description": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Rat/rn7 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRn7.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainMm10",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewchain off",
+        "subGroups": "view=chain species=s002 chainType=c00",
+        "shortLabel": "Mouse/mm10 Chain",
+        "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
+        "type": "bigChain mm10",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainMm10.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainMm10Link.bb",
+        "otherDb": "mm10",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.636"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_036323735.1-chainMm10",
+      "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm10 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainMm10.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainMm39",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewchain off",
+        "subGroups": "view=chain species=s003 chainType=c00",
+        "shortLabel": "Mouse/mm39 Chain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainMm39.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.680"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_036323735.1-chainMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm39 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainMm39.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainHg38",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewchain off",
+        "subGroups": "view=chain species=s004 chainType=c00",
+        "shortLabel": "Human/hg38 Chain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainHg38.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.679"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_036323735.1-chainHg38",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg38 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainHg38.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainHg19",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewchain off",
+        "subGroups": "view=chain species=s005 chainType=c00",
+        "shortLabel": "Human/hg19 Chain",
+        "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+        "type": "bigChain hg19",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainHg19.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainHg19Link.bb",
+        "otherDb": "hg19",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.710"
+      },
+      "category": ["Chain/Net", "Chains"],
+      "trackId": "GCF_036323735.1-chainHg19",
+      "description": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg19 Chain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainHg19.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainSynRn6",
         "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
         "subGroups": "view=synten species=s000 chainType=c01",
@@ -596,6 +724,131 @@
       "adapter": {
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynRn6.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynRn7",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s001 chainType=c01",
+        "shortLabel": "Rat/rn7 synChain",
+        "longLabel": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+        "type": "bigChain rn7",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynRn7.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynRn7Link.bb",
+        "otherDb": "rn7",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "5.715"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_036323735.1-chainSynRn7",
+      "description": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Rat/rn7 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynRn7.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynMm10",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s002 chainType=c01",
+        "shortLabel": "Mouse/mm10 synChain",
+        "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
+        "type": "bigChain mm10",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynMm10.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynMm10Link.bb",
+        "otherDb": "mm10",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.636"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_036323735.1-chainSynMm10",
+      "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm10 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynMm10.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynMm39",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s003 chainType=c01",
+        "shortLabel": "Mouse/mm39 synChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynMm39.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.680"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_036323735.1-chainSynMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm39 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynMm39.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynHg38",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s004 chainType=c01",
+        "shortLabel": "Human/hg38 synChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynHg38.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.679"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_036323735.1-chainSynHg38",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg38 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynHg38.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainSynHg19",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
+        "subGroups": "view=synten species=s005 chainType=c01",
+        "shortLabel": "Human/hg19 synChain",
+        "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+        "type": "bigChain hg19",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynHg19.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynHg19Link.bb",
+        "otherDb": "hg19",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.710"
+      },
+      "category": ["Chain/Net", "Syntenic"],
+      "trackId": "GCF_036323735.1-chainSynHg19",
+      "description": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg19 synChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynHg19.bb"
       }
     },
     {
@@ -625,6 +878,131 @@
     },
     {
       "metadata": {
+        "track": "chainRBestRn7",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s001 chainType=c02",
+        "shortLabel": "Rat/rn7 rbChain",
+        "longLabel": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+        "type": "bigChain rn7",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestRn7.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestRn7Link.bb",
+        "otherDb": "rn7",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "5.715"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_036323735.1-chainRBestRn7",
+      "description": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Rat/rn7 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRBestRn7.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestMm10",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s002 chainType=c02",
+        "shortLabel": "Mouse/mm10 rbChain",
+        "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
+        "type": "bigChain mm10",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestMm10.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestMm10Link.bb",
+        "otherDb": "mm10",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.636"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_036323735.1-chainRBestMm10",
+      "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm10 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRBestMm10.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestMm39",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s003 chainType=c02",
+        "shortLabel": "Mouse/mm39 rbChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestMm39.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestMm39Link.bb",
+        "otherDb": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.680"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_036323735.1-chainRBestMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm39 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRBestMm39.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestHg38",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s004 chainType=c02",
+        "shortLabel": "Human/hg38 rbChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestHg38.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestHg38Link.bb",
+        "otherDb": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.679"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_036323735.1-chainRBestHg38",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg38 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRBestHg38.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "chainRBestHg19",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewRBest off",
+        "subGroups": "view=rbest species=s005 chainType=c02",
+        "shortLabel": "Human/hg19 rbChain",
+        "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+        "type": "bigChain hg19",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestHg19.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestHg19Link.bb",
+        "otherDb": "hg19",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.710"
+      },
+      "category": ["Chain/Net", "Reciprocal best"],
+      "trackId": "GCF_036323735.1-chainRBestHg19",
+      "description": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg19 rbChain",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRBestHg19.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "chainLiftOverRn6",
         "parent": "GCF_036323735.1_GRCr8ChainNetViewLiftOver off",
         "subGroups": "view=liftover species=s000 chainType=c03",
@@ -650,84 +1028,34 @@
     },
     {
       "metadata": {
-        "track": "chainMm10",
-        "parent": "GCF_036323735.1_GRCr8ChainNetViewchain off",
-        "subGroups": "view=chain species=s001 chainType=c00",
-        "shortLabel": "Mouse/mm10 Chain",
-        "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
-        "type": "bigChain mm10",
-        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainMm10.bb",
-        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainMm10Link.bb",
-        "otherDb": "mm10",
+        "track": "chainLiftOverRn7",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s001 chainType=c03",
+        "shortLabel": "Rat/rn7 loChain",
+        "longLabel": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+        "type": "bigChain rn7",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainLiftOverRn7.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainLiftOverRn7Link.bb",
+        "otherDb": "rn7",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
-        "priority": "30.636"
+        "priority": "5.715"
       },
-      "category": ["Chain/Net", "Chains"],
-      "trackId": "GCF_036323735.1-chainMm10",
-      "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_036323735.1-chainLiftOverRn7",
+      "description": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
       "assemblyNames": ["GCF_036323735.1"],
-      "name": "Mouse/mm10 Chain",
+      "name": "Rat/rn7 loChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainMm10.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "chainSynMm10",
-        "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s001 chainType=c01",
-        "shortLabel": "Mouse/mm10 synChain",
-        "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
-        "type": "bigChain mm10",
-        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynMm10.bb",
-        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynMm10Link.bb",
-        "otherDb": "mm10",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
-        "priority": "30.636"
-      },
-      "category": ["Chain/Net", "Syntenic"],
-      "trackId": "GCF_036323735.1-chainSynMm10",
-      "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
-      "assemblyNames": ["GCF_036323735.1"],
-      "name": "Mouse/mm10 synChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynMm10.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "chainRBestMm10",
-        "parent": "GCF_036323735.1_GRCr8ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s001 chainType=c02",
-        "shortLabel": "Mouse/mm10 rbChain",
-        "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
-        "type": "bigChain mm10",
-        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestMm10.bb",
-        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestMm10Link.bb",
-        "otherDb": "mm10",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
-        "priority": "30.636"
-      },
-      "category": ["Chain/Net", "Reciprocal best"],
-      "trackId": "GCF_036323735.1-chainRBestMm10",
-      "description": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
-      "assemblyNames": ["GCF_036323735.1"],
-      "name": "Mouse/mm10 rbChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRBestMm10.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainLiftOverRn7.bb"
       }
     },
     {
       "metadata": {
         "track": "chainLiftOverMm10",
         "parent": "GCF_036323735.1_GRCr8ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s001 chainType=c03",
+        "subGroups": "view=liftover species=s002 chainType=c03",
         "shortLabel": "Mouse/mm10 loChain",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigChain mm10",
@@ -750,84 +1078,59 @@
     },
     {
       "metadata": {
-        "track": "chainHg19",
-        "parent": "GCF_036323735.1_GRCr8ChainNetViewchain off",
-        "subGroups": "view=chain species=s002 chainType=c00",
-        "shortLabel": "Human/hg19 Chain",
-        "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
-        "type": "bigChain hg19",
-        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainHg19.bb",
-        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainHg19Link.bb",
-        "otherDb": "hg19",
+        "track": "chainLiftOverMm39",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s003 chainType=c03",
+        "shortLabel": "Mouse/mm39 loChain",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigChain mm39",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainLiftOverMm39.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainLiftOverMm39Link.bb",
+        "otherDb": "mm39",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
-        "priority": "66.710"
+        "priority": "30.680"
       },
-      "category": ["Chain/Net", "Chains"],
-      "trackId": "GCF_036323735.1-chainHg19",
-      "description": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_036323735.1-chainLiftOverMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
       "assemblyNames": ["GCF_036323735.1"],
-      "name": "Human/hg19 Chain",
+      "name": "Mouse/mm39 loChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainHg19.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainLiftOverMm39.bb"
       }
     },
     {
       "metadata": {
-        "track": "chainSynHg19",
-        "parent": "GCF_036323735.1_GRCr8ChainNetViewSynTen off",
-        "subGroups": "view=synten species=s002 chainType=c01",
-        "shortLabel": "Human/hg19 synChain",
-        "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
-        "type": "bigChain hg19",
-        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynHg19.bb",
-        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainSynHg19Link.bb",
-        "otherDb": "hg19",
+        "track": "chainLiftOverHg38",
+        "parent": "GCF_036323735.1_GRCr8ChainNetViewLiftOver off",
+        "subGroups": "view=liftover species=s004 chainType=c03",
+        "shortLabel": "Human/hg38 loChain",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigChain hg38",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainLiftOverHg38.bb",
+        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainLiftOverHg38Link.bb",
+        "otherDb": "hg38",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
-        "priority": "66.710"
+        "priority": "66.679"
       },
-      "category": ["Chain/Net", "Syntenic"],
-      "trackId": "GCF_036323735.1-chainSynHg19",
-      "description": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
+      "category": ["Chain/Net", "Lift over"],
+      "trackId": "GCF_036323735.1-chainLiftOverHg38",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
       "assemblyNames": ["GCF_036323735.1"],
-      "name": "Human/hg19 synChain",
+      "name": "Human/hg38 loChain",
       "type": "FeatureTrack",
       "adapter": {
         "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainSynHg19.bb"
-      }
-    },
-    {
-      "metadata": {
-        "track": "chainRBestHg19",
-        "parent": "GCF_036323735.1_GRCr8ChainNetViewRBest off",
-        "subGroups": "view=rbest species=s002 chainType=c02",
-        "shortLabel": "Human/hg19 rbChain",
-        "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
-        "type": "bigChain hg19",
-        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestHg19.bb",
-        "linkDataUrl": "bbi/GCF_036323735.1_GRCr8.chainRBestHg19Link.bb",
-        "otherDb": "hg19",
-        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
-        "priority": "66.710"
-      },
-      "category": ["Chain/Net", "Reciprocal best"],
-      "trackId": "GCF_036323735.1-chainRBestHg19",
-      "description": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
-      "assemblyNames": ["GCF_036323735.1"],
-      "name": "Human/hg19 rbChain",
-      "type": "FeatureTrack",
-      "adapter": {
-        "type": "BigBedAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainRBestHg19.bb"
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.chainLiftOverHg38.bb"
       }
     },
     {
       "metadata": {
         "track": "chainLiftOverHg19",
         "parent": "GCF_036323735.1_GRCr8ChainNetViewLiftOver off",
-        "subGroups": "view=liftover species=s002 chainType=c03",
+        "subGroups": "view=liftover species=s005 chainType=c03",
         "shortLabel": "Human/hg19 loChain",
         "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
         "type": "bigChain hg19",
@@ -925,9 +1228,84 @@
     },
     {
       "metadata": {
-        "track": "netMm10",
+        "track": "netRn7",
         "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
         "subGroups": "view=align species=s001 chainType=c04",
+        "shortLabel": "Rat/rn7 mafNet",
+        "longLabel": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.rn7.net.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.rn7.net.summary.bb",
+        "speciesOrder": "rn7",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "5.715"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-netRn7",
+      "description": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Rat/rn7 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.rn7.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetRn7",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c05",
+        "shortLabel": "Rat/rn7 synNet",
+        "longLabel": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.rn7.synNet.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.rn7.synNet.summary.bb",
+        "speciesOrder": "rn7",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "5.715"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-synNetRn7",
+      "description": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Rat/rn7 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.rn7.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetRn7",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s001 chainType=c06",
+        "shortLabel": "Rat/rn7 rbestNet",
+        "longLabel": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.rn7.rbestNet.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.rn7.rbestNet.summary.bb",
+        "speciesOrder": "rn7",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "5.715"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-rbestNetRn7",
+      "description": "Rat/rn7/rn7 (Nov. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Rat/rn7 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.rn7.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netMm10",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s002 chainType=c04",
         "shortLabel": "Mouse/mm10 mafNet",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigMaf",
@@ -952,7 +1330,7 @@
       "metadata": {
         "track": "synNetMm10",
         "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
-        "subGroups": "view=align species=s001 chainType=c05",
+        "subGroups": "view=align species=s002 chainType=c05",
         "shortLabel": "Mouse/mm10 synNet",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigMaf",
@@ -977,7 +1355,7 @@
       "metadata": {
         "track": "rbestNetMm10",
         "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
-        "subGroups": "view=align species=s001 chainType=c06",
+        "subGroups": "view=align species=s002 chainType=c06",
         "shortLabel": "Mouse/mm10 rbestNet",
         "longLabel": "Mouse/mm10/mm10 (Dec. 2011) Chained Alignments",
         "type": "bigMaf",
@@ -1000,9 +1378,159 @@
     },
     {
       "metadata": {
+        "track": "netMm39",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s003 chainType=c04",
+        "shortLabel": "Mouse/mm39 mafNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.mm39.net.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.mm39.net.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.680"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-netMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm39 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.mm39.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetMm39",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s003 chainType=c05",
+        "shortLabel": "Mouse/mm39 synNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.mm39.synNet.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.mm39.synNet.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.680"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-synNetMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm39 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.mm39.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetMm39",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s003 chainType=c06",
+        "shortLabel": "Mouse/mm39 rbestNet",
+        "longLabel": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.mm39.rbestNet.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.mm39.rbestNet.summary.bb",
+        "speciesOrder": "mm39",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "30.680"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-rbestNetMm39",
+      "description": "Mouse/mm39/mm39 (Jun. 2020) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Mouse/mm39 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.mm39.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "netHg38",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s004 chainType=c04",
+        "shortLabel": "Human/hg38 mafNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.hg38.net.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.hg38.net.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.679"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-netHg38",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg38 mafNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.hg38.net.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "synNetHg38",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s004 chainType=c05",
+        "shortLabel": "Human/hg38 synNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.hg38.synNet.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.hg38.synNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.679"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-synNetHg38",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg38 synNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.hg38.synNet.bb"
+      }
+    },
+    {
+      "metadata": {
+        "track": "rbestNetHg38",
+        "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
+        "subGroups": "view=align species=s004 chainType=c06",
+        "shortLabel": "Human/hg38 rbestNet",
+        "longLabel": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+        "type": "bigMaf",
+        "bigDataUrl": "bbi/GCF_036323735.1_GRCr8.hg38.rbestNet.bb",
+        "summary": "bbi/GCF_036323735.1_GRCr8.hg38.rbestNet.summary.bb",
+        "speciesOrder": "hg38",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/html/GCF_036323735.1_GRCr8.chainNet\">html/GCF_036323735.1_GRCr8.chainNet</a>",
+        "priority": "66.679"
+      },
+      "category": ["Chain/Net", "Nets"],
+      "trackId": "GCF_036323735.1-rbestNetHg38",
+      "description": "Human/hg38/hg38 (Dec. 2013) Chained Alignments",
+      "assemblyNames": ["GCF_036323735.1"],
+      "name": "Human/hg38 rbestNet",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/036/323/735/GCF_036323735.1/bbi/GCF_036323735.1_GRCr8.hg38.rbestNet.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "netHg19",
         "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
-        "subGroups": "view=align species=s002 chainType=c04",
+        "subGroups": "view=align species=s005 chainType=c04",
         "shortLabel": "Human/hg19 mafNet",
         "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
         "type": "bigMaf",
@@ -1027,7 +1555,7 @@
       "metadata": {
         "track": "synNetHg19",
         "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
-        "subGroups": "view=align species=s002 chainType=c05",
+        "subGroups": "view=align species=s005 chainType=c05",
         "shortLabel": "Human/hg19 synNet",
         "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
         "type": "bigMaf",
@@ -1052,7 +1580,7 @@
       "metadata": {
         "track": "rbestNetHg19",
         "parent": "GCF_036323735.1_GRCr8MafNetViewnet off",
-        "subGroups": "view=align species=s002 chainType=c06",
+        "subGroups": "view=align species=s005 chainType=c06",
         "shortLabel": "Human/hg19 rbestNet",
         "longLabel": "Human/hg19/hg19 (Feb. 2009) Chained Alignments",
         "type": "bigMaf",
