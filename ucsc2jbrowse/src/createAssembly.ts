@@ -23,11 +23,13 @@ try {
   hasAliases = true
 } catch (_e) {}
 
-let hasCyto = false
+let cytoLink = undefined
 try {
-  const res = await fetch(getCytoBandLink())
+  const cytoTxtLink = getCytoBandLink()
+  const res = await fetch(cytoTxtLink)
   if (!res.ok) {
-    const ideoRes = await fetch(getCytoBandIdeoLink())
+    const cytoIdeoLink = getCytoBandIdeoLink()
+    const ideoRes = await fetch(cytoIdeoLink)
     if (!ideoRes.ok) {
       throw new Error('Error fetching cytobands')
     }
@@ -39,7 +41,7 @@ try {
       .map(f => f.trim())
       .filter(f => !!f)
       .every(line => line.split('\t')[4] === 'gneg')
-    hasCyto = allGneg ? false : true
+    cytoLink = allGneg ? undefined : cytoIdeoLink
   } else {
     const ret = await res.arrayBuffer()
     const text = inflate(ret)
@@ -49,7 +51,7 @@ try {
       .map(f => f.trim())
       .filter(f => !!f)
       .every(line => line.split('\t')[4] === 'gneg')
-    hasCyto = allGneg ? false : true
+    cytoLink = allGneg ? undefined : cytoTxtLink
   }
 } catch (_e) {}
 
@@ -97,12 +99,12 @@ console.log(
                 },
               }
             : {}),
-          ...(hasCyto
+          ...(cytoLink
             ? {
                 cytobands: {
                   adapter: {
                     type: 'CytobandAdapter',
-                    uri: getCytoBandLink(),
+                    uri: cytoLink,
                   },
                 },
               }
