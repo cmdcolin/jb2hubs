@@ -48,9 +48,17 @@ download_ncbi_gff() {
   if [ ! -f "gff/$filename" ] || [ -n "$REDOWNLOAD" ]; then
     echo "Downloading GFF file: $url"
     if [ -n "$REDOWNLOAD" ]; then
-      wget -N -q "$url" -P gff
+      if wget -N -q "$url" -P gff; then
+        echo "Successfully downloaded: $filename"
+      else
+        echo "Failed to download: $url" >&2
+      fi
     else
-      wget -nc -q "$url" -P gff
+      if wget -nc -q "$url" -P gff; then
+        echo "Successfully downloaded: $filename"
+      else
+        echo "Failed to download: $url" >&2
+      fi
     fi
   fi
 }
@@ -103,15 +111,13 @@ add_track_and_text_index() {
 
   local hub_dir="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
-  jbrowse add-track --force "$gff_file_path" --out "$hub_dir" --load copy --indexFile "${gff_file_path}".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
-
   # Check if trix folder exists
   if [ -d "$hub_dir/trix" ] && [ -z "$REDOWNLOAD" ] && [ -z "$REPROCESS" ] && [ -z "$REPROCESS_TRIX" ]; then
     # Add JSON snippet to config.json using jq
     local config_file="$hub_dir/config.json"
     local temp_file=$(mktemp)
 
-    jq --arg accession "$accession" '. + {
+    jq --arg accession "$accession" --arg filename "$filename" '. + {
       "aggregateTextSearchAdapters": [
         {
           "type": "TrixTextSearchAdapter",
@@ -131,9 +137,35 @@ add_track_and_text_index() {
           "assemblyNames": [$accession]
         }
       ]
-    }' "$config_file" >"$temp_file" && mv "$temp_file" "$config_file"
+    } | .tracks = (.tracks // []) + [{
+      "type": "FeatureTrack",
+      "trackId": "ncbiGff",
+      "name": "RefSeq All - GFF",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": $filename,
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": ($filename + ".csi"),
+            "locationType": "UriLocation"
+          },
+          "indexType": "CSI"
+        }
+      },
+      "category": [
+        "NCBI RefSeq"
+      ],
+      "assemblyNames": [
+        $accession
+      ]
+    }]' "$config_file" >"$temp_file" && mv "$temp_file" "$config_file"
   else
     echo "Trix folder does not exist for $accession, running jbrowse text-index"
+
+    jbrowse add-track --force "$gff_file_path" --out "$hub_dir" --load copy --indexFile "${gff_file_path}".csi --trackId ncbiGff --name "RefSeq All - GFF" --category "NCBI RefSeq"
     jbrowse text-index --force --out "$hub_dir" --tracks ncbiGff --attributes Name,ID,Note
   fi
 }
