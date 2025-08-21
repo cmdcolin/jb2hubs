@@ -15,5 +15,9 @@ echo "Running ucsc2jbrowse/doAll.sh..." >>"$LOG_FILE"
 echo "Running website deploy..." >>"$LOG_FILE"
 (cd website && yarn deploy) >>"$LOG_FILE" 2>&1
 
+git add .
+git commit -m "Updates"
+git push
+
 # Clean up the log file
 rm "$LOG_FILE"
