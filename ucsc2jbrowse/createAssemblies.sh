@@ -41,4 +41,4 @@ if [ $# -eq 0 ]; then
 fi
 
 # Use GNU parallel to process assemblies in parallel.
-parallel --bar process_assembly ::: "$@"
+parallel $PARALLEL_OPTS process_assembly ::: "$@"

@@ -24,6 +24,13 @@ export PATH=$(pwd):$PATH
 # Suppress Node.js experimental warnings.
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 
+if [ -t 1 ]; then
+  PARALLEL_OPTS="--bar"
+else
+  PARALLEL_OPTS=""
+fi
+export PARALLEL_OPTS
+
 # --- Functions ---
 
 # Logs a message with a timestamp.
@@ -96,7 +103,7 @@ log "Creating chain track PIFs..."
 ./makePifs.sh
 
 log "Copying generated config files to the local 'configs' directory..."
-fd "config.json$" "$UCSC_RESULTS_DIR"/ | grep -v "meta.json" | parallel --bar -I {} 'cp {} configs/$(basename $(dirname {})).json'
+fd "config.json$" "$UCSC_RESULTS_DIR"/ | grep -v "meta.json" | parallel $PARALLEL_OPTS -I {} 'cp {} configs/$(basename $(dirname {})).json'
 
 log "Merging all assembly configs into a single file..."
 node src/mergeAll.ts
@@ -112,6 +119,6 @@ yarn format
 cd -
 
 log "Hashing all output files for integrity checking..."
-find "$UCSC_RESULTS_DIR"/ -type f ! -name "*meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel --bar ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
+find "$UCSC_RESULTS_DIR"/ -type f ! -name "*meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel $PARALLEL_OPTS ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
 
 log "Pipeline finished successfully!"

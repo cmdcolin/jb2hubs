@@ -46,4 +46,4 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
-parallel --bar --will-cite process_assembly ::: "$@"
+parallel $PARALLEL_OPTS --will-cite process_assembly ::: "$@"

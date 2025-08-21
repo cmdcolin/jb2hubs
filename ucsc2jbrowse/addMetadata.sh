@@ -46,4 +46,4 @@ if [ $# -eq 0 ]; then
 fi
 
 # Run the process_assembly function in parallel for each input directory.
-parallel --will-cite process_assembly ::: "$@"
+parallel $PARALLEL_OPTS --will-cite process_assembly ::: "$@"

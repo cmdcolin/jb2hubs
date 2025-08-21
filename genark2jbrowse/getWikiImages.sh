@@ -23,7 +23,7 @@ process_wiki_image() {
 
   local hub_dir="hubs/$prefix/$first_part/$second_part/$third_part/$accession/"
 
-  if [[ ! -f "$hub_dir/image.json" && ! -f "$hub_dir/image.json.notfound" ]]; then
+  if [[ ! -f "$hub_dir/image.json" && ! -f "$hub_dir/image.json.notfound" && "$scientific_name" != "null" ]]; then
     echo "Fetching $scientific_name $accession"
     node src/getWikiImage.ts "$scientific_name" "$accession"
   fi
@@ -31,5 +31,11 @@ process_wiki_image() {
 
 export -f process_wiki_image
 
+if [ -t 1 ]; then
+  PARALLEL_OPTS="-j 1 --colsep '\t'"
+else
+  PARALLEL_OPTS="-j 1 --bar --colsep '\t'"
+fi
+
 jq -r '.[] | select(. != null) | "\(.scientificName)\t\(.accession)"' "$INPUT_FILE" |
-  parallel -j 1 --colsep '\t' "process_wiki_image {1} {2}"
+  parallel $PARALLEL_OPTS "process_wiki_image {1} {2}"

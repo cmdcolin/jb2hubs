@@ -101,4 +101,4 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
-parallel -j 24 --bar --will-cite process_assembly ::: "$@"
+parallel -j 24 $PARALLEL_OPTS --will-cite process_assembly ::: "$@"

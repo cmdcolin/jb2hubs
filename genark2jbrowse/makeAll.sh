@@ -4,7 +4,12 @@
 # Set NODE_OPTIONS to suppress experimental warnings
 export NODE_OPTIONS="--no-warnings=ExperimentalWarning"
 
-# --- Step 1: Download and Process Hub Data ---
+if [ -t 1 ]; then
+  PARALLEL_OPTS="--bar"
+else
+  PARALLEL_OPTS=""
+fi
+export PARALLEL_OPTS
 
 echo "Downloading list of hubs..."
 node src/downloadHubList.ts
@@ -36,10 +41,10 @@ fetch_ncbi_data() {
 export -f fetch_ncbi_data # Export function for use with GNU Parallel
 
 echo "Fetching NCBI metadata..."
-fd meta.json hubs | parallel -j1 --bar fetch_ncbi_data {}
+fd meta.json hubs | parallel -j1 $PARALLEL_OPTS fetch_ncbi_data {}
 
 echo "Generating JBrowse 2 config.json for each hub..."
-fd meta.json hubs | parallel --bar node src/generateConfigs.ts {}
+fd meta.json hubs | parallel $PARALLEL_OPTS node src/generateConfigs.ts {}
 
 # Define function to download a single NCBI GFF file.
 download_ncbi_gff() {
@@ -67,7 +72,7 @@ export -f download_ncbi_gff # Export function for use with GNU Parallel
 
 echo "Downloading NCBI GFF files..."
 # Extract NCBI GFF URLs from processed JSON and download them
-cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 --bar download_ncbi_gff
+cat processedHubJson/all.json | jq -r ".[].ncbiGff" | grep GCF_ | parallel -j1 $PARALLEL_OPTS download_ncbi_gff
 
 # Define function to process a single GFF file. It handles cases where start >
 # end, sorts, bgzips, and tabix indexes the GFF.
@@ -91,7 +96,7 @@ process_gff_file() {
 export -f process_gff_file # Export function for use with GNU Parallel
 
 echo "Processing NCBI GFF files in parallel..."
-ls gff/*.gz | parallel --bar -j8 process_gff_file
+ls gff/*.gz | parallel -j8 $PARALLEL_OPTS process_gff_file
 
 # Define function to add a GFF track to a JBrowse 2 assembly and create a text index.
 add_track_and_text_index() {
@@ -101,9 +106,9 @@ add_track_and_text_index() {
 
   # Construct the target hub directory path based on accession
   # Example: hubs/GCF/000/896/435/GCF_000896435.1/
-  local prefix=${accession%%_*}   # GCF
-  local number=${accession#*_}    # 000896435.1
-  local base_number=${number%%.*} # 000896435
+  local prefix=${accession%%_*}
+  local number=${accession#*_}
+  local base_number=${number%%.*}
 
   local first_part=${base_number:0:3}
   local second_part=${base_number:3:3}
@@ -150,7 +155,8 @@ add_track_and_text_index() {
 export -f add_track_and_text_index
 
 echo "Loading and text indexing NCBI GFF tracks in parallel..."
-find bgz -name "*.gz" | parallel -j 16 --bar add_track_and_text_index
+echo "OPTS: $PARALLEL_OPTS"
+find bgz -name "*.gz" | parallel -j16 $PARALLEL_OPTS add_track_and_text_index
 
 echo "Adding GenArk extensions (special tracks)..."
 node src/makeGenArkExtensions.ts
