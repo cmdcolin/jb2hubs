@@ -1,0 +1,127 @@
+hub GCF_000868345.1 genome assembly
+shortLabel Chickpea chlorotic stunt virus (Et-fb-am1 2006)
+longLabel Chickpea chlorotic stunt virus (Et-fb-am1 2006)/Chickpea chlorotic stunt virus/GCF_000868345.1_ViralProj17363 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_000868345.1_ViralProj17363.description.html
+
+genome GCF_000868345.1
+taxId 328430
+groups groups.txt
+description Chickpea chlorotic stunt virus (Et-fb-am1 2006)
+twoBitPath GCF_000868345.1.2bit
+twoBitBptUrl GCF_000868345.1.2bit.bpt
+chromSizes GCF_000868345.1.chrom.sizes.txt
+chromAliasBb GCF_000868345.1.chromAlias.bb
+organism ViralProj17363 Jul. 2006
+defaultPos NC_008249.1:1966-5900
+scientificName Chickpea chlorotic stunt virus
+htmlPath html/GCF_000868345.1_ViralProj17363.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/868/345/GCF_000868345.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/868/345/GCF_000868345.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/868/345/GCF_000868345.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000868345.1_ViralProj17363.assembly.bb
+type bigBed 6
+html html/GCF_000868345.1_ViralProj17363.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000868345.1_ViralProj17363.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000868345.1_ViralProj17363.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000868345.1_ViralProj17363.gc5Base.bw
+html html/GCF_000868345.1_ViralProj17363.gc5Base
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_000868345.1_ViralProj17363.rmsk.bb
+xrefDataUrl bbi/GCF_000868345.1_ViralProj17363.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_000868345.1_ViralProj17363.repeatMasker
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000868345.1_ViralProj17363.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_000868345.1_ViralProj17363.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000868345.1_ViralProj17363.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000868345.1_ViralProj17363.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000868345.1_ViralProj17363.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000868345.1_ViralProj17363.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000868345.1_ViralProj17363.windowMasker.bb
+html html/GCF_000868345.1_ViralProj17363.windowMasker
+

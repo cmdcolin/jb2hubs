@@ -26,6 +26,7 @@ process_wiki_image() {
   if [[ ! -f "$hub_dir/image.json" && ! -f "$hub_dir/image.json.notfound" && "$scientific_name" != "null" ]]; then
     echo "Fetching $scientific_name $accession"
     node src/getWikiImage.ts "$scientific_name" "$accession"
+    sleep 0.1
   fi
 }
 

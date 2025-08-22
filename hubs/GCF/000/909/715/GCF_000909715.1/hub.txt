@@ -1,0 +1,125 @@
+hub GCF_000909715.1 genome assembly
+shortLabel Shigella phage SfII (2013)
+longLabel Shigella phage SfII (2013)/Shigella phage SfII/GCF_000909715.1_ViralProj213070 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_000909715.1_ViralProj213070.description.html
+
+genome GCF_000909715.1
+taxId 66284
+groups groups.txt
+description Shigella phage SfII (2013)
+twoBitPath GCF_000909715.1.2bit
+twoBitBptUrl GCF_000909715.1.2bit.bpt
+chromSizes GCF_000909715.1.chrom.sizes.txt
+chromAliasBb GCF_000909715.1.chromAlias.bb
+organism ViralProj213070 Jul. 2013
+defaultPos NC_021857.1:13825-23825
+scientificName Shigella phage SfII
+htmlPath html/GCF_000909715.1_ViralProj213070.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/909/715/GCF_000909715.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/909/715/GCF_000909715.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/909/715/GCF_000909715.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000909715.1_ViralProj213070.assembly.bb
+type bigBed 6
+html html/GCF_000909715.1_ViralProj213070.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000909715.1_ViralProj213070.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000909715.1_ViralProj213070.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000909715.1_ViralProj213070.gc5Base.bw
+html html/GCF_000909715.1_ViralProj213070.gc5Base
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000909715.1_ViralProj213070.simpleRepeat.bb
+html html/GCF_000909715.1_ViralProj213070.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000909715.1_ViralProj213070.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_000909715.1_ViralProj213070.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000909715.1_ViralProj213070.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000909715.1_ViralProj213070.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000909715.1_ViralProj213070.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000909715.1_ViralProj213070.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000909715.1_ViralProj213070.windowMasker.bb
+html html/GCF_000909715.1_ViralProj213070.windowMasker
+

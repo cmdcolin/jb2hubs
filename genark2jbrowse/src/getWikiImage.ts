@@ -149,5 +149,5 @@ const accession = process.argv[3]!
 if (accession && accession !== 'null') {
   await processSpeciesImage(scientificName, accession)
 } else {
-  // console.error('No accession?', { accession, scientificName })
+  console.error('No accession?', { accession, scientificName })
 }

@@ -1,0 +1,136 @@
+hub GCF_000858945.1 genome assembly
+shortLabel Orthotospovirus citrullomaculosi (2002)
+longLabel Orthotospovirus citrullomaculosi (2002)/Orthotospovirus citrullomaculosi/GCF_000858945.1_ViralMultiSegProj15176 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_000858945.1_ViralMultiSegProj15176.description.html
+
+genome GCF_000858945.1
+taxId 3052571
+groups groups.txt
+description Orthotospovirus citrullomaculosi (2002)
+twoBitPath GCF_000858945.1.2bit
+twoBitBptUrl GCF_000858945.1.2bit.bpt
+chromSizes GCF_000858945.1.chrom.sizes.txt
+chromAliasBb GCF_000858945.1.chromAlias.bb
+organism ViralMultiSegProj15176 May 2002
+defaultPos NC_003832.1:2972-8917
+scientificName Orthotospovirus citrullomaculosi
+htmlPath html/GCF_000858945.1_ViralMultiSegProj15176.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/858/945/GCF_000858945.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/858/945/GCF_000858945.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/858/945/GCF_000858945.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.assembly.bb
+type bigBed 6
+html html/GCF_000858945.1_ViralMultiSegProj15176.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000858945.1_ViralMultiSegProj15176.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.gc5Base.bw
+html html/GCF_000858945.1_ViralMultiSegProj15176.gc5Base
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.rmsk.bb
+xrefDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_000858945.1_ViralMultiSegProj15176.repeatMasker
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.simpleRepeat.bb
+html html/GCF_000858945.1_ViralMultiSegProj15176.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_000858945.1_ViralMultiSegProj15176.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000858945.1_ViralMultiSegProj15176.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000858945.1_ViralMultiSegProj15176.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000858945.1_ViralMultiSegProj15176.windowMasker.bb
+html html/GCF_000858945.1_ViralMultiSegProj15176.windowMasker
+

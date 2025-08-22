@@ -8,6 +8,12 @@
 - rclone
 - ncbi "datasets" cli
 
+## Do everything
+
+Run ./run.sh in root of repo
+
+It will update and deploy genark2jbrowse, ucsc2jbrowse, and website
+
 ## Preparing GenArk hubs
 
 ```bash

@@ -1,0 +1,136 @@
+hub GCF_002958895.1 genome assembly
+shortLabel Lactobacillus phage Nyseid (2020)
+longLabel Lactobacillus phage Nyseid (2020)/Lactobacillus phage Nyseid/GCF_002958895.1_Nyseid genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_002958895.1_Nyseid.description.html
+
+genome GCF_002958895.1
+taxId 2079432
+groups groups.txt
+description Lactobacillus phage Nyseid (2020)
+twoBitPath GCF_002958895.1.2bit
+twoBitBptUrl GCF_002958895.1.2bit.bpt
+chromSizes GCF_002958895.1.chrom.sizes.txt
+chromAliasBb GCF_002958895.1.chromAlias.bb
+organism Nyseid May 2020
+defaultPos NC_047925.1:26407-36407
+scientificName Lactobacillus phage Nyseid
+htmlPath html/GCF_002958895.1_Nyseid.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/958/895/GCF_002958895.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/958/895/GCF_002958895.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/958/895/GCF_002958895.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_002958895.1_Nyseid.assembly.bb
+type bigBed 6
+html html/GCF_002958895.1_Nyseid.assembly
+searchIndex name
+searchTrix ixIxx/GCF_002958895.1_Nyseid.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_002958895.1_Nyseid.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_002958895.1_Nyseid.gc5Base.bw
+html html/GCF_002958895.1_Nyseid.gc5Base
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_002958895.1_Nyseid.rmsk.bb
+xrefDataUrl bbi/GCF_002958895.1_Nyseid.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_002958895.1_Nyseid.repeatMasker
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_002958895.1_Nyseid.simpleRepeat.bb
+html html/GCF_002958895.1_Nyseid.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_002958895.1_Nyseid.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_002958895.1_Nyseid.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_002958895.1_Nyseid.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_002958895.1_Nyseid.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_002958895.1_Nyseid.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_002958895.1_Nyseid.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_002958895.1_Nyseid.windowMasker.bb
+html html/GCF_002958895.1_Nyseid.windowMasker
+

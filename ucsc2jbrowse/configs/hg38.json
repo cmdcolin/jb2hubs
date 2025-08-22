@@ -869,6 +869,26 @@
       "category": ["Regulation"]
     },
     {
+      "trackId": "hg38-mavedb_align_aa",
+      "name": "MaveDB Alignments - MaveDB AA Align",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/maveDB/mavedb_aa.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/maveDB/mavedb_aa.bb",
+        "longLabel": "Reference-Aligned AA Sequences from MaveDB Experiments",
+        "parent": "mavedb_align_composite",
+        "shortLabel": "MaveDB AA Align",
+        "track": "mavedb_align_aa",
+        "html": ""
+      },
+      "description": "Reference-Aligned AA Sequences from MaveDB Experiments",
+      "category": ["Expression"]
+    },
+    {
       "trackId": "hg38-gnomADPextmean_proportion",
       "name": "gnomAD pext - Mean Proportion",
       "type": "QuantitativeTrack",
@@ -2125,6 +2145,57 @@
       },
       "description": "Genome In a Bottle: lowMap+SegDup regions",
       "category": ["Mapping and Sequencing"]
+    },
+    {
+      "trackId": "hg38-mavedb_align_dna",
+      "name": "MaveDB Alignments - MaveDB DNA Align",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/maveDB/mavedb_dna.bb"
+      },
+      "metadata": {
+        "baseColorDefault": "diffBases",
+        "baseColorUseSequence": "lfExtra",
+        "bigDataUrl": "/gbdb/hg38/maveDB/mavedb_dna.bb",
+        "longLabel": "Reference-Aligned DNA Sequences from MaveDB Experiments",
+        "parent": "mavedb_align_composite",
+        "shortLabel": "MaveDB DNA Align",
+        "showDiffBasesAllScales": ".",
+        "track": "mavedb_align_dna",
+        "html": ""
+      },
+      "description": "Reference-Aligned DNA Sequences from MaveDB Experiments",
+      "category": ["Expression"]
+    },
+    {
+      "trackId": "hg38-mavedb_maps",
+      "name": "MaveDB Experiments - MaveDB Heatmaps",
+      "type": "FeatureTrack",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/maveDB/all_mave.bb"
+      },
+      "metadata": {
+        "bigDataUrl": "/gbdb/hg38/maveDB/all_mave.bb",
+        "filterLabel.name": "Experiment ID",
+        "filterText.name": ".*",
+        "filterType.name": "regexp",
+        "longLabel": "Variant Effect Maps from MaveDB",
+        "maxWindowCoverage": "200000",
+        "parent": "mavedb",
+        "priority": "2",
+        "shortLabel": "MaveDB Heatmaps",
+        "style": "heatmap",
+        "track": "mavedb_maps",
+        "type": "bigBed 12 +",
+        "visibility": "pack",
+        "html": "<h2>Description</h2>\n<p>\nThis track provides heatmaps of multiplexed assays of variant effects (MAVE) from\n<a href=\"https://mavedb.org\" target=_blank>MaveDB</a>.  Each heatmap presents the results of an\nexperiment where many small substitutions were tested within a gene to examine their\nfunctional consequences.\n</p>\n<h2>Display Conventions</h2>\n<p>\nHeatmaps within the track display the consequence of substituting invididual amino acids within the\ngenome with alternatives (alternatives are listed along the left edge of the heatmap).  Score ranges\nvary among experiments, but each is presented with the highest scores in\n<span style=\"color: #FF0000; font-weight: bold;\">red</span>, the lowest scores in\n<span style=\"color: #0000FF; font-weight: bold;\">blue</span>, and scores at the midpoint between the two in\n<span style=\"color: #C0C0C0; font-weight: bold;\">silver</span>.  Higher scores correspond to a\nhigher enrichment level for that variant compared to others in the experiment set.\n</p><p>\nThe column along the left edge of each heatmap provide single-letter amino acid codes do indicate what\nwas substituted in for that piece of the experiment.  = indicates a synonymous substitution, - indicates\na deletion, and * indicates a stop codon.\n</p><p>\nCells where multiple scores were reported are marked with the score count (e.g. \"2\" if two scores were\nreported).  Mousing over a cell in the heatmap will display the ID number of that particular substitution\nin the experiment, a <a href=\"https://www.mavedb.org/docs/mavehgvs/index.html\" target=_blank>MAVE-HGVS</a>\ndescription of the substitution with three-letter amino acid codes, and the score (or scores, if more\nthan one is present).\n</p><p>\nWhen the display is zoomed out farther than a 200,000 base window, the display switches to a coverage plot\nof where the MaveDB heatmaps can be found.\n</p>\n<h4>Track Controls</h4>\n<p>\nThe track controls include a filter for the URN ID of the experiment (e.g. 00000103-a-1).  The display supports\nfull, pack, and squish modes.  In dense mode, the track switches to a dense BED-like display where items mark\nthe extent of individual heatmaps and exons indicate where the heatmap includes score values.\n</p>\n<h2>Methods</h2>\n<p>\nMethods for the various experiments are described briefly on the individual details pages for each heatmap\nin the track, and in greater detail on the MaveDB page for that experiment (link available on our own\ndetails pages).\n</p><p>\nJSON files containing data from these experiments were processed into UCSC's heatmap extension of the\nstandard BED format for display here.\n</p>\n<h2>Data Access</h2>\n<p>\nDirect access to the data files for these experiments can be obtained from\n<a href=\"https://mavedb.org\" target=\"_blank\">MaveDB</a>.\n</p>\n<h2>References</h2>\n<p>\nRubin AF, Stone J, Bianchi AH, Capodanno BJ, Da EY, Dias M, Esposito D, Frazer J, Fu Y, Grindstaff\nSB <em>et al</em>.\n<a href=\"https://genomebiology.biomedcentral.com/articles/10.1186/s13059-025-03476-y\"\ntarget=\"_blank\">\nMaveDB 2024: a curated community database with over seven million variant effects from multiplexed\nfunctional assays</a>.\n<em>Genome Biol</em>. 2025 Jan 21;26(1):13.\nPMID: <a href=\"https://www.ncbi.nlm.nih.gov/pubmed/39838450\" target=\"_blank\">39838450</a>; PMC: <a\nhref=\"https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11753097/\" target=\"_blank\">PMC11753097</a>\n</p>\n"
+      },
+      "description": "Variant Effect Maps from MaveDB",
+      "category": ["Expression"]
     },
     {
       "trackId": "hg38-mitoMapDiseaseMuts",
@@ -7133,10 +7204,12 @@
         "maxHeightPixels": "128:40:8",
         "parent": "gnomadVariants on",
         "priority": "10",
+        "setColorWith": "/gbdb/hg38/gnomAD/mutConstraint/mutConstraint.color.bb",
         "shortLabel": "gnomAD Mut Constraint",
         "track": "gnomadConstraint",
         "type": "bigWig",
-        "viewLimitsMax": "-3:3"
+        "viewLimitsMax": "-3:3",
+        "windowingFunction": "minimum"
       },
       "description": "Gnocchi: Genome Aggregation Database (gnomAD) non-coding constraint of haploinsufficient variation, includes chrX",
       "category": ["Variation and Repeats"]

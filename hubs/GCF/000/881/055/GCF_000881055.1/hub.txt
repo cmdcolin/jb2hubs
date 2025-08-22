@@ -1,0 +1,125 @@
+hub GCF_000881055.1 genome assembly
+shortLabel Rudbeckia flower distortion virus (Minnesota 2009)
+longLabel Rudbeckia flower distortion virus (Minnesota 2009)/Rudbeckia flower distortion virus/GCF_000881055.1_ViralProj33679 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_000881055.1_ViralProj33679.description.html
+
+genome GCF_000881055.1
+taxId 587370
+groups groups.txt
+description Rudbeckia flower distortion virus (Minnesota 2009)
+twoBitPath GCF_000881055.1.2bit
+twoBitBptUrl GCF_000881055.1.2bit.bpt
+chromSizes GCF_000881055.1.chrom.sizes.txt
+chromAliasBb GCF_000881055.1.chromAlias.bb
+organism ViralProj33679 Jan. 2009
+defaultPos NC_011920.1:2740-8222
+scientificName Rudbeckia flower distortion virus
+htmlPath html/GCF_000881055.1_ViralProj33679.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/881/055/GCF_000881055.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/881/055/GCF_000881055.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/881/055/GCF_000881055.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000881055.1_ViralProj33679.assembly.bb
+type bigBed 6
+html html/GCF_000881055.1_ViralProj33679.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000881055.1_ViralProj33679.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000881055.1_ViralProj33679.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000881055.1_ViralProj33679.gc5Base.bw
+html html/GCF_000881055.1_ViralProj33679.gc5Base
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000881055.1_ViralProj33679.simpleRepeat.bb
+html html/GCF_000881055.1_ViralProj33679.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000881055.1_ViralProj33679.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_000881055.1_ViralProj33679.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000881055.1_ViralProj33679.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000881055.1_ViralProj33679.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000881055.1_ViralProj33679.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000881055.1_ViralProj33679.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000881055.1_ViralProj33679.windowMasker.bb
+html html/GCF_000881055.1_ViralProj33679.windowMasker
+

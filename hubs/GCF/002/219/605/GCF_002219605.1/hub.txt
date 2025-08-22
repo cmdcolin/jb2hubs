@@ -1,0 +1,127 @@
+hub GCF_002219605.1 genome assembly
+shortLabel Vanilla latent virus (CRV2148ALL 2017)
+longLabel Vanilla latent virus (CRV2148ALL 2017)/Vanilla latent virus/GCF_002219605.1_ViralProj394304 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_002219605.1_ViralProj394304.description.html
+
+genome GCF_002219605.1
+taxId 2016426
+groups groups.txt
+description Vanilla latent virus (CRV2148ALL 2017)
+twoBitPath GCF_002219605.1.2bit
+twoBitBptUrl GCF_002219605.1.2bit.bpt
+chromSizes GCF_002219605.1.chrom.sizes.txt
+chromAliasBb GCF_002219605.1.chromAlias.bb
+organism ViralProj394304 Jul. 2017
+defaultPos NC_035204.1:2487-7462
+scientificName Vanilla latent virus
+htmlPath html/GCF_002219605.1_ViralProj394304.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/219/605/GCF_002219605.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/219/605/GCF_002219605.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/219/605/GCF_002219605.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_002219605.1_ViralProj394304.assembly.bb
+type bigBed 6
+html html/GCF_002219605.1_ViralProj394304.assembly
+searchIndex name
+searchTrix ixIxx/GCF_002219605.1_ViralProj394304.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_002219605.1_ViralProj394304.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_002219605.1_ViralProj394304.gc5Base.bw
+html html/GCF_002219605.1_ViralProj394304.gc5Base
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_002219605.1_ViralProj394304.rmsk.bb
+xrefDataUrl bbi/GCF_002219605.1_ViralProj394304.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_002219605.1_ViralProj394304.repeatMasker
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_002219605.1_ViralProj394304.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_002219605.1_ViralProj394304.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_002219605.1_ViralProj394304.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_002219605.1_ViralProj394304.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_002219605.1_ViralProj394304.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_002219605.1_ViralProj394304.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_002219605.1_ViralProj394304.windowMasker.bb
+html html/GCF_002219605.1_ViralProj394304.windowMasker
+

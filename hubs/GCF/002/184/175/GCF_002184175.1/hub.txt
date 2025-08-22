@@ -1,0 +1,127 @@
+hub GCF_002184175.1 genome assembly
+shortLabel megrivirus D1 (harrier/MR-01/HUN/2014 2017)
+longLabel megrivirus D1 (harrier/MR-01/HUN/2014 2017)/megrivirus D1/GCF_002184175.1_ViralProj387617 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_002184175.1_ViralProj387617.description.html
+
+genome GCF_002184175.1
+taxId 2870375
+groups groups.txt
+description megrivirus D1 (harrier/MR-01/HUN/2014 2017)
+twoBitPath GCF_002184175.1.2bit
+twoBitBptUrl GCF_002184175.1.2bit.bpt
+chromSizes GCF_002184175.1.chrom.sizes.txt
+chromAliasBb GCF_002184175.1.chromAlias.bb
+organism ViralProj387617 May 2017
+defaultPos NC_034617.1:2847-8541
+scientificName megrivirus D1
+htmlPath html/GCF_002184175.1_ViralProj387617.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/184/175/GCF_002184175.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/184/175/GCF_002184175.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/002/184/175/GCF_002184175.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_002184175.1_ViralProj387617.assembly.bb
+type bigBed 6
+html html/GCF_002184175.1_ViralProj387617.assembly
+searchIndex name
+searchTrix ixIxx/GCF_002184175.1_ViralProj387617.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_002184175.1_ViralProj387617.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_002184175.1_ViralProj387617.gc5Base.bw
+html html/GCF_002184175.1_ViralProj387617.gc5Base
+
+track repeatMasker
+shortLabel RepeatMasker
+longLabel RepeatMasker Repetitive Elements
+type bigRmsk 9 +
+visibility pack
+group varRep
+bigDataUrl bbi/GCF_002184175.1_ViralProj387617.rmsk.bb
+xrefDataUrl bbi/GCF_002184175.1_ViralProj387617.rmsk.align.bb
+maxWindowToDraw 5000000
+html html/GCF_002184175.1_ViralProj387617.repeatMasker
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_002184175.1_ViralProj387617.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_002184175.1_ViralProj387617.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_002184175.1_ViralProj387617.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_002184175.1_ViralProj387617.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_002184175.1_ViralProj387617.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_002184175.1_ViralProj387617.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_002184175.1_ViralProj387617.windowMasker.bb
+html html/GCF_002184175.1_ViralProj387617.windowMasker
+

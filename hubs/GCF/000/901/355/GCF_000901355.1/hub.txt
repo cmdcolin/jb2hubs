@@ -1,0 +1,116 @@
+hub GCF_000901355.1 genome assembly
+shortLabel Betapolyomavirus mafricanus (KY369 2013)
+longLabel Betapolyomavirus mafricanus (KY369 2013)/Betapolyomavirus mafricanus/GCF_000901355.1_ViralProj185189 genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_000901355.1_ViralProj185189.description.html
+
+genome GCF_000901355.1
+taxId 1891769
+groups groups.txt
+description Betapolyomavirus mafricanus (KY369 2013)
+twoBitPath GCF_000901355.1.2bit
+twoBitBptUrl GCF_000901355.1.2bit.bpt
+chromSizes GCF_000901355.1.chrom.sizes.txt
+chromAliasBb GCF_000901355.1.chromAlias.bb
+organism ViralProj185189 Jan. 2013
+defaultPos NC_020069.1:1737-5213
+scientificName Betapolyomavirus mafricanus
+htmlPath html/GCF_000901355.1_ViralProj185189.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/901/355/GCF_000901355.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/901/355/GCF_000901355.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/000/901/355/GCF_000901355.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_000901355.1_ViralProj185189.assembly.bb
+type bigBed 6
+html html/GCF_000901355.1_ViralProj185189.assembly
+searchIndex name
+searchTrix ixIxx/GCF_000901355.1_ViralProj185189.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_000901355.1_ViralProj185189.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_000901355.1_ViralProj185189.gc5Base.bw
+html html/GCF_000901355.1_ViralProj185189.gc5Base
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_000901355.1_ViralProj185189.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_000901355.1_ViralProj185189.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_000901355.1_ViralProj185189.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_000901355.1_ViralProj185189.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_000901355.1_ViralProj185189.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_000901355.1_ViralProj185189.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_000901355.1_ViralProj185189.windowMasker.bb
+html html/GCF_000901355.1_ViralProj185189.windowMasker
+
