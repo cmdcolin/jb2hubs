@@ -1,0 +1,142 @@
+hub GCF_902813195.1 genome assembly
+shortLabel Thermococcus sp. 2319x1 (2020)
+longLabel Thermococcus sp. 2319x1 (2020)/Thermococcus sp. 2319x1/GCF_902813195.1_Essen genome assembly
+useOneFile on
+email genome-www@soe.ucsc.edu
+descriptionUrl html/GCF_902813195.1_Essen.description.html
+
+genome GCF_902813195.1
+taxId 1674923
+groups groups.txt
+description Thermococcus sp. 2319x1 (2020)
+twoBitPath GCF_902813195.1.2bit
+twoBitBptUrl GCF_902813195.1.2bit.bpt
+chromSizes GCF_902813195.1.chrom.sizes.txt
+chromAliasBb GCF_902813195.1.chromAlias.bb
+chromAuthority ucsc
+organism Essen May 2020
+defaultPos NZ_LR778300.1:663283-673283
+scientificName Thermococcus sp. 2319x1
+htmlPath html/GCF_902813195.1_Essen.description.html
+blat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/902/813/195/GCF_902813195.1
+transBlat dynablat-01.soe.ucsc.edu 4040 dynamic GCF/902/813/195/GCF_902813195.1
+isPcr dynablat-01.soe.ucsc.edu 4040 dynamic GCF/902/813/195/GCF_902813195.1
+
+track assembly
+longLabel Assembly
+shortLabel Assembly
+visibility hide
+colorByStrand 150,100,30 230,170,40
+color 150,100,30
+altColor 230,170,40
+bigDataUrl bbi/GCF_902813195.1_Essen.assembly.bb
+type bigBed 6
+html html/GCF_902813195.1_Essen.assembly
+searchIndex name
+searchTrix ixIxx/GCF_902813195.1_Essen.assembly.ix
+url https://www.ncbi.nlm.nih.gov/nuccore/$$
+urlLabel NCBI Nucleotide database:
+group map
+
+track cytoBandIdeo
+shortLabel Chromosome Band (Ideogram)
+longLabel Ideogram for Orientation
+group map
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_902813195.1_Essen.cytoBand.bb
+
+track gc5Base
+shortLabel GC Percent
+longLabel GC Percent in 5-Base Windows
+group map
+visibility dense
+autoScale Off
+maxHeightPixels 128:36:16
+graphTypeDefault Bar
+gridDefault OFF
+windowingFunction Mean
+color 0,0,0
+altColor 128,128,128
+viewLimits 30:70
+type bigWig 0 100
+bigDataUrl bbi/GCF_902813195.1_Essen.gc5Base.bw
+html html/GCF_902813195.1_Essen.gc5Base
+
+track tanDups
+shortLabel Tandem Dups
+longLabel Paired identical sequences
+compositeTrack on
+visibility hide
+type bigBed 12
+group map
+html html/GCF_902813195.1_Essen.tanDups
+
+    track tandemDups
+    parent tanDups on
+    shortLabel Tandem Dups
+    longLabel Paired exactly identical sequence survey over entire genome assembly
+    bigDataUrl bbi/GCF_902813195.1_Essen.tandemDups.bb
+    type bigBed 12
+
+track simpleRepeat
+shortLabel Simple Repeats
+longLabel Simple Tandem Repeats by TRF
+group varRep
+visibility dense
+type bigBed 4 +
+bigDataUrl bbi/GCF_902813195.1_Essen.simpleRepeat.bb
+html html/GCF_902813195.1_Essen.simpleRepeat
+
+track ncbiGene
+longLabel NCBI gene predictions
+shortLabel NCBI Genes
+visibility pack
+color 0,80,150
+altColor 150,80,0
+colorByStrand 0,80,150 150,80,0
+bigDataUrl bbi/GCF_902813195.1_Essen.ncbiGene.bb
+type bigGenePred
+urls name2="https://www.ncbi.nlm.nih.gov/gene/?term=$$" geneName="https://www.ncbi.nlm.nih.gov/gene/$$" geneName2="https://www.ncbi.nlm.nih.gov/nuccore/$$"
+html html/GCF_902813195.1_Essen.ncbiGene
+searchIndex name
+searchTrix ixIxx/GCF_902813195.1_Essen.ncbiGene.ix
+urlLabel Entrez gene:
+labelFields name,geneName,geneName2
+defaultLabelFields geneName2
+group genes
+
+track cpgIslands
+compositeTrack on
+shortLabel CpG Islands
+longLabel CpG Islands (Islands < 300 Bases are Light Green)
+group regulation
+visibility dense
+type bigBed 4 +
+html html/GCF_902813195.1_Essen.cpgIslands
+
+    track cpgIslandExt
+    parent cpgIslands off
+    shortLabel CpG Islands
+    longLabel CpG Islands (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 1
+    bigDataUrl bbi/GCF_902813195.1_Essen.cpgIslandExt.bb
+
+    track cpgIslandExtUnmasked
+    parent cpgIslands on
+    shortLabel Unmasked CpG
+    longLabel CpG Islands on All Sequence (Islands < 300 Bases are Light Green)
+    type bigBed 4 +
+    priority 2
+    bigDataUrl bbi/GCF_902813195.1_Essen.cpgIslandExtUnmasked.bb
+
+track windowMasker
+shortLabel WM + SDust
+longLabel Genomic Intervals Masked by WindowMasker + SDust
+group varRep
+visibility dense
+type bigBed 3
+bigDataUrl bbi/GCF_902813195.1_Essen.windowMasker.bb
+html html/GCF_902813195.1_Essen.windowMasker
+

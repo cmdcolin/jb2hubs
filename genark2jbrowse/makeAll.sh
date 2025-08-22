@@ -17,9 +17,6 @@ node src/downloadHubList.ts
 echo "Downloading actual hub.txt files..."
 node src/downloadHubs.ts
 
-echo "Processing hub JSON data..."
-node src/processHubJson.ts
-
 # Fetch NCBI Metadata:
 # Define function to fetch NCBI assembly metadata for a given file. It checks
 # if ncbi.json exists or if REPROCESS_NCBI_META to force re-fetching.
@@ -28,7 +25,7 @@ fetch_ncbi_data() {
   local dir=$(dirname "$file")
   local id=$(basename "$dir")
   if [ ! -f "$dir/ncbi.json" ] || [ ! -s "$dir/ncbi.json" ] || [ -n "$REPROCESS" ]; then
-    echo "Fetching NCBI data for $id"
+    echo "Fetching NCBI data for $id ($(jq -r '.commonName // "Unknown"' "$dir/meta.json"))"
 
     # Use esearch and esummary to get assembly metadata and save as ncbi.json
     (esearch -db assembly -query "$id" </dev/null | esummary -mode json) >"$dir/ncbi.json"
@@ -42,6 +39,9 @@ export -f fetch_ncbi_data # Export function for use with GNU Parallel
 
 echo "Fetching NCBI metadata..."
 fd meta.json hubs | parallel -j1 $PARALLEL_OPTS fetch_ncbi_data {}
+
+echo "Processing hub JSON data..."
+node src/processHubJson.ts
 
 echo "Generating JBrowse 2 config.json for each hub..."
 fd meta.json hubs | parallel $PARALLEL_OPTS node src/generateConfigs.ts {}
