@@ -139,6 +139,9 @@ async function processSpeciesImage(scientificName: string, accession: string) {
     } else {
       // console.log(`${e}`)
     }
+    console.log(
+      `Image not found for: "${scientificName}" (used string "${processedName}")`,
+    )
     fs.writeFileSync(filePath + '.notfound', 'none')
   }
 }
