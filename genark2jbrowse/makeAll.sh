@@ -43,6 +43,9 @@ fd meta.json hubs | parallel -j1 $PARALLEL_OPTS fetch_ncbi_data {}
 echo "Processing hub JSON data..."
 node src/processHubJson.ts
 
+echo "Processing UCSC list data..."
+node src/processUcscList.ts
+
 echo "Generating JBrowse 2 config.json for each hub..."
 fd meta.json hubs | parallel $PARALLEL_OPTS node src/generateConfigs.ts {}
 
