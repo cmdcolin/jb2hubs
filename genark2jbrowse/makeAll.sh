@@ -19,7 +19,7 @@ node src/downloadHubs.ts
 
 # Fetch NCBI Metadata:
 # Define function to fetch NCBI assembly metadata for a given file. It checks
-# if ncbi.json exists or if REPROCESS_NCBI_META to force re-fetching.
+# if ncbi.json exists or if REPROCESS to force re-fetching.
 fetch_ncbi_data() {
   local file="$1"
   local dir=$(dirname "$file")
