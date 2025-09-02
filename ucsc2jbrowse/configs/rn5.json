@@ -874,6 +874,27 @@
     },
     {
       "type": "SyntenyTrack",
+      "trackId": "rn5_to_GCF_036323735.1_liftOver",
+      "name": "rn5 to Norway rat (BN/NHsdMcwi 2024 refseq) (GCF_036323735.1) liftOver",
+      "category": ["Pairwise alignments", "liftOver"],
+      "assemblyNames": ["rn5", "GCF_036323735.1"],
+      "adapter": {
+        "type": "PairwiseIndexedPAFAdapter",
+        "targetAssembly": "rn5",
+        "queryAssembly": "GCF_036323735.1",
+        "pifGzLocation": {
+          "uri": "liftOver/rn5ToGCF_036323735.1.over.pif.gz"
+        },
+        "index": {
+          "location": {
+            "uri": "liftOver/rn5ToGCF_036323735.1.over.pif.gz.csi"
+          },
+          "indexType": "CSI"
+        }
+      }
+    },
+    {
+      "type": "SyntenyTrack",
       "trackId": "rn5_to_galGal4_liftOver",
       "name": "rn5 to Chicken (galGal4) liftOver",
       "category": ["Pairwise alignments", "liftOver"],
