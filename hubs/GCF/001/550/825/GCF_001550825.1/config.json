@@ -259,6 +259,27 @@
         "type": "BigBedAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/hubs/GCF/001/550/825/GCF_001550825.1/bbi/GCF_001550825.1_ViralProj310887.windowMasker.bb"
       }
+    },
+    {
+      "type": "FeatureTrack",
+      "trackId": "ncbiGff",
+      "name": "RefSeq All - GFF",
+      "adapter": {
+        "type": "Gff3TabixAdapter",
+        "gffGzLocation": {
+          "uri": "GCF_001550825.1_ViralProj310887_genomic.gff.gz",
+          "locationType": "UriLocation"
+        },
+        "index": {
+          "location": {
+            "uri": "GCF_001550825.1_ViralProj310887_genomic.gff.gz.csi",
+            "locationType": "UriLocation"
+          },
+          "indexType": "CSI"
+        }
+      },
+      "category": ["NCBI RefSeq"],
+      "assemblyNames": ["GCF_001550825.1"]
     }
   ],
   "defaultSession": {
@@ -283,5 +304,24 @@
         }
       }
     ]
-  }
+  },
+  "aggregateTextSearchAdapters": [
+    {
+      "type": "TrixTextSearchAdapter",
+      "textSearchAdapterId": "GCF_001550825.1-index",
+      "ixFilePath": {
+        "uri": "trix/GCF_001550825.1.ix",
+        "locationType": "UriLocation"
+      },
+      "ixxFilePath": {
+        "uri": "trix/GCF_001550825.1.ixx",
+        "locationType": "UriLocation"
+      },
+      "metaFilePath": {
+        "uri": "trix/GCF_001550825.1_meta.json",
+        "locationType": "UriLocation"
+      },
+      "assemblyNames": ["GCF_001550825.1"]
+    }
+  ]
 }

@@ -14,6 +14,7 @@ download_ncbi_gff() {
   local url="$1"
   local common_name="$2"
   local filename=$(basename "$url")
+
   if [ ! -f "gff/$filename" ] || [ -n "$REDOWNLOAD" ]; then
     echo "Downloading GFF file for $common_name: $url"
     if [ -n "$REDOWNLOAD" ]; then
@@ -35,4 +36,5 @@ download_ncbi_gff() {
 export -f download_ncbi_gff # Export function for use with GNU Parallel
 
 # Extract NCBI GFF URLs from processed JSON and download them
-cat processedHubJson/all.json | jq -r '.[] | select(.ncbiGff | test("GCF_")) | "\(.ncbiGff)\t\(.commonName)"' | parallel -j1 $PARALLEL_OPTS --colsep '\t' download_ncbi_gff
+jq -r '.[] | select(. != null) | select(.ncbiGff | test("GCF_")) | "\(.ncbiGff)\t\(.commonName)"' processedHubJson/all.json |
+  parallel -j1 $PARALLEL_OPTS --colsep $'\t' "download_ncbi_gff {1} {2}"
