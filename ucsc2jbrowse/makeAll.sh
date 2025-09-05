@@ -85,7 +85,7 @@ log "Adding metadata to tracks..."
 ./addMetadata.sh "$UCSC_RESULTS_DIR"/*
 
 log "Creating configurations from track hubs..."
-./makeTrackHubConfigs.sh
+./generateJBrowseConfigForAssemblyHub.sh
 
 log "Adding non-UCSC 'extension' tracks..."
 node src/makeUcscExtensions.ts "$UCSC_RESULTS_DIR"

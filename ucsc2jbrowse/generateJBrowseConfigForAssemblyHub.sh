@@ -29,5 +29,5 @@ cat "$UCSC_RESULTS_DIR/list.json" | jq -r '.ucscGenomes | to_entries[] | select(
   echo "Processing track hub for $assembly..."
   outdir="$UCSC_RESULTS_DIR/$assembly"
   mkdir -p "$outdir"
-  node src/parseTrackHub.ts "https://hgdownload.soe.ucsc.edu/gbdb/$assembly/hubs/public/hub.txt" "$outdir/config.json"
+  node src/generateJBrowseConfigForAssemblyHub.ts "https://hgdownload.soe.ucsc.edu/gbdb/$assembly/hubs/public/hub.txt" "$outdir/config.json"
 done
