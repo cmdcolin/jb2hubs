@@ -45,12 +45,10 @@ async function myfetch(url) {
   return res
 }
 async function myfetchtext(url) {
-  const res = await myfetch(url)
-  return res.text()
+  return (await myfetch(url)).text()
 }
 async function myfetchjson(url) {
-  const res = await myfetch(url)
-  return res.json()
+  return (await myfetch(url)).json()
 }
 function makeLoc(first, base) {
   return {
@@ -180,8 +178,7 @@ function makeTrackConfigSub({ track, trackDbUrl, trackDb, sequenceAdapter }) {
   const { data } = track
   const parent = data.parent ?? ''
   const bigDataUrlPre = data.bigDataUrl ?? ''
-  const bigDataIdx = data.bigDataIndex ?? ''
-  if (bigDataIdx) throw new Error("Don't yet support bigDataIdx")
+  if (data.bigDataIndex ?? '') throw new Error("Don't yet support bigDataIdx")
   const trackType = data.type ?? trackDb.data[parent].data.type ?? ''
   const name =
     (data.shortLabel ?? '') + (bigDataUrlPre.includes('xeno') ? ' (xeno)' : '')
@@ -240,7 +237,7 @@ function makeTrackConfigSub({ track, trackDbUrl, trackDb, sequenceAdapter }) {
     }
   else {
     console.error('Unknown track:', name, baseTrackType)
-    return void 0
+    return
   }
 }
 
@@ -279,8 +276,7 @@ function generateHubTracks({
 async function hasAliases(url) {
   let hasAliases$1 = false
   try {
-    const res = await fetch(url)
-    if (!res.ok) throw new Error('Error fetching chromAlias')
+    if (!(await fetch(url)).ok) throw new Error('Error fetching chromAlias')
     hasAliases$1 = true
   } catch (_e) {}
   return hasAliases$1
@@ -290,8 +286,7 @@ async function generateJBrowseConfigForAssemblyHub({
   trackDbUrl,
 }) {
   if (hubFileText.includes('useOneFile on')) {
-    const hub = new SingleFileHub(hubFileText)
-    const { genome, tracks } = hub
+    const { genome, tracks } = new SingleFileHub(hubFileText)
     const { data } = genome
     const { twoBitPath, chromSizes, htmlPath, chromAliasBb } = data
     const genomeName = genome.name
@@ -497,7 +492,7 @@ function parseAssemblyEntry({ entry }) {
   }
   const r = ncbiData?.result.uids[0]
   const r2 = r ? ncbiData?.result[r] : void 0
-  if (!r2) return void 0
+  if (!r2) return
   const assemblyStatus = r2.assemblystatus
   const ncbiAssemblyName = r2.assemblyname
   const seqReleaseDate = r2.seqreleasedate
@@ -506,9 +501,8 @@ function parseAssemblyEntry({ entry }) {
   const buscoStats = r2.busco
   const ncbiRefSeqCategory = r2.refseq_category
   const ucscBase = `https://hgdownload.soe.ucsc.edu/hubs/${base}/${b1}/${b2}/${b3}/${accession}`
-  const stats = ncbiData ? extractStats(r2.meta) : void 0
   return {
-    stats,
+    stats: ncbiData ? extractStats(r2.meta) : void 0,
     buscoStats,
     seqReleaseDate,
     submitterOrg,
