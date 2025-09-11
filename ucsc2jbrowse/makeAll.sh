@@ -122,3 +122,5 @@ log "Hashing all output files for integrity checking..."
 find "$UCSC_RESULTS_DIR"/ -type f ! -name "*meta.json" ! -name "*.xxh" ! -name "*.hash" | parallel $PARALLEL_OPTS ./hash_if_needed.sh {} | sort -k2,2 >fileListing.txt
 
 log "Pipeline finished successfully!"
+
+aws s3 cp defaultFavs.json s3://jbrowse.org/hubs/defaultFavs.json

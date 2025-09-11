@@ -1,4 +1,5 @@
 export interface JBrowseConfig {
+  configuration?: Record<string, unknown>
   tracks: {
     category?: string[]
     name: string

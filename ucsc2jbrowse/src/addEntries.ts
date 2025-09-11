@@ -141,6 +141,17 @@ function addEntries(configPath: string) {
       ...(config.aggregateTextSearchAdapters ?? []),
       ...newAggregateTextSearchAdapters,
     ],
+    configuration: {
+      hierarchical: {
+        sort: {
+          trackNames: true,
+          categories: true,
+        },
+        defaultCollapsed: {
+          subCategories: true, // collapse all subcategories on initial startup
+        },
+      },
+    },
   }
 
   writeJSON(configPath, updatedConfig)
