@@ -73,6 +73,221 @@
         "type": "BigWigAdapter",
         "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/phastCons100way/hg38.phastCons100way.bw"
       }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-alphaMissense",
+      "name": "AlphaMissense",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-cadd",
+      "name": "CADD 1.6",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-cadd1_7",
+      "name": "CADD 1.7",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-mutscore",
+      "name": "MutScore",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreA.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreC.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreG.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreT.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-revel",
+      "name": "REVEL Scores",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
     }
   ]
 }
