@@ -127,7 +127,8 @@ console.log(
             categories: true,
           },
           defaultCollapsed: {
-            subCategories: true, // collapse all subcategories on initial startup
+            topLevelCategories: true,
+            subCategories: true,
           },
         },
       },
