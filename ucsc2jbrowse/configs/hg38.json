@@ -133,6 +133,221 @@
       }
     },
     {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-alphaMissense",
+      "name": "AlphaMissense",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-cadd",
+      "name": "CADD 1.6",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-cadd1_7",
+      "name": "CADD 1.7",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/cadd1.7/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-mutscore",
+      "name": "MutScore",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreA.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreC.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreG.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreT.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg38-revel",
+      "name": "REVEL Scores",
+      "assemblyNames": ["hg38"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
+      }
+    },
+    {
       "trackId": "hg38-phyloP447wayBW",
       "name": "Basewise Conservation (phyloP) - 447 phyloP REV",
       "type": "QuantitativeTrack",
@@ -947,31 +1162,6 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
-      "trackId": "hg38-alphaMissense_A",
-      "name": "AlphaMissense - Mutation: A",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/a.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/alphaMissense/a.bw",
-        "longLabel": "AlphaMissense Score: Mutation is A",
-        "maxHeightPixels": "128:20:8",
-        "parent": "alphaMissense on",
-        "setColorWith": "/gbdb/hg38/alphaMissense/a.color.bb",
-        "shortLabel": "Mutation: A",
-        "track": "alphaMissense_A",
-        "type": "bigWig",
-        "viewLimits": "0:1",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "AlphaMissense Score: Mutation is A",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-cadd1_7_A",
       "name": "CADD 1.7 - Mutation: A",
       "type": "QuantitativeTrack",
@@ -995,63 +1185,6 @@
         "html": ""
       },
       "description": "CADD 1.7 Score: Mutation is A",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-mutScoreA",
-      "name": "MutScore - Mutation: A",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreA.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/mutscore/mutscoreA.bw",
-        "longLabel": "MutScore: Mutation is A",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "mutScore on",
-        "shortLabel": "Mutation: A",
-        "track": "mutScoreA",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "full",
-        "html": ""
-      },
-      "description": "MutScore: Mutation is A",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-revelA",
-      "name": "REVEL Scores - Mutation: A",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/a.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/revel/a.bw",
-        "longLabel": "REVEL: Mutation is A",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "revel on",
-        "setColorWith": "/gbdb/hg38/revel/a.color.bb",
-        "shortLabel": "Mutation: A",
-        "track": "revelA",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "REVEL: Mutation is A",
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
@@ -2231,31 +2364,6 @@
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
-      "trackId": "hg38-alphaMissense_C",
-      "name": "AlphaMissense - Mutation: C",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/c.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/alphaMissense/c.bw",
-        "longLabel": "AlphaMissense Score: Mutation is C",
-        "maxHeightPixels": "128:20:8",
-        "parent": "alphaMissense on",
-        "setColorWith": "/gbdb/hg38/alphaMissense/c.color.bb",
-        "shortLabel": "Mutation: C",
-        "track": "alphaMissense_C",
-        "type": "bigWig",
-        "viewLimits": "0:1",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "AlphaMissense Score: Mutation is C",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-cadd1_7_C",
       "name": "CADD 1.7 - Mutation: C",
       "type": "QuantitativeTrack",
@@ -2279,63 +2387,6 @@
         "html": ""
       },
       "description": "CADD 1.7 Score: Mutation is C",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-mutScoreC",
-      "name": "MutScore - Mutation: C",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreC.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/mutscore/mutscoreC.bw",
-        "longLabel": "MutScore: Mutation is C",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "mutScore on",
-        "shortLabel": "Mutation: C",
-        "track": "mutScoreC",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "full",
-        "html": ""
-      },
-      "description": "MutScore: Mutation is C",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-revelC",
-      "name": "REVEL Scores - Mutation: C",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/c.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/revel/c.bw",
-        "longLabel": "REVEL: Mutation is C",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "revel on",
-        "setColorWith": "/gbdb/hg38/revel/c.color.bb",
-        "shortLabel": "Mutation: C",
-        "track": "revelC",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "REVEL: Mutation is C",
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
@@ -3201,31 +3252,6 @@
       "category": ["Variation and Repeats"]
     },
     {
-      "trackId": "hg38-alphaMissense_G",
-      "name": "AlphaMissense - Mutation: G",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/g.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/alphaMissense/g.bw",
-        "longLabel": "AlphaMissense Score: Mutation is G",
-        "maxHeightPixels": "128:20:8",
-        "parent": "alphaMissense on",
-        "setColorWith": "/gbdb/hg38/alphaMissense/g.color.bb",
-        "shortLabel": "Mutation: G",
-        "track": "alphaMissense_G",
-        "type": "bigWig",
-        "viewLimits": "0:1",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "AlphaMissense Score: Mutation is G",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-cadd1_7_G",
       "name": "CADD 1.7 - Mutation: G",
       "type": "QuantitativeTrack",
@@ -3249,63 +3275,6 @@
         "html": ""
       },
       "description": "CADD 1.7 Score: Mutation is G",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-mutScoreG",
-      "name": "MutScore - Mutation: G",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreG.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/mutscore/mutscoreG.bw",
-        "longLabel": "MutScore: Mutation is G",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "mutScore on",
-        "shortLabel": "Mutation: G",
-        "track": "mutScoreG",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "full",
-        "html": ""
-      },
-      "description": "MutScore: Mutation is G",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-revelG",
-      "name": "REVEL Scores - Mutation: G",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/g.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/revel/g.bw",
-        "longLabel": "REVEL: Mutation is G",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "revel on",
-        "setColorWith": "/gbdb/hg38/revel/g.color.bb",
-        "shortLabel": "Mutation: G",
-        "track": "revelG",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "REVEL: Mutation is G",
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
@@ -4111,31 +4080,6 @@
       "category": ["Regulation"]
     },
     {
-      "trackId": "hg38-alphaMissense_T",
-      "name": "AlphaMissense - Mutation: T",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/alphaMissense/t.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/alphaMissense/t.bw",
-        "longLabel": "AlphaMissense Score: Mutation is T",
-        "maxHeightPixels": "128:20:8",
-        "parent": "alphaMissense on",
-        "setColorWith": "/gbdb/hg38/alphaMissense/t.color.bb",
-        "shortLabel": "Mutation: T",
-        "track": "alphaMissense_T",
-        "type": "bigWig",
-        "viewLimits": "0:1",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "AlphaMissense Score: Mutation is T",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
       "trackId": "hg38-cadd1_7_T",
       "name": "CADD 1.7 - Mutation: T",
       "type": "QuantitativeTrack",
@@ -4159,63 +4103,6 @@
         "html": ""
       },
       "description": "CADD 1.7 Score: Mutation is T",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-mutScoreT",
-      "name": "MutScore - Mutation: T",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/mutscore/mutscoreT.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/mutscore/mutscoreT.bw",
-        "longLabel": "MutScore: Mutation is T",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "mutScore on",
-        "shortLabel": "Mutation: T",
-        "track": "mutScoreT",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "full",
-        "html": ""
-      },
-      "description": "MutScore: Mutation is T",
-      "category": ["Phenotypes, Variants, and Literature"]
-    },
-    {
-      "trackId": "hg38-revelT",
-      "name": "REVEL Scores - Mutation: T",
-      "type": "QuantitativeTrack",
-      "assemblyNames": ["hg38"],
-      "adapter": {
-        "type": "BigWigAdapter",
-        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg38/revel/t.bw"
-      },
-      "metadata": {
-        "bigDataUrl": "/gbdb/hg38/revel/t.bw",
-        "longLabel": "REVEL: Mutation is T",
-        "maxHeightPixels": "128:20:8",
-        "maxWindowToDraw": "10000000",
-        "maxWindowToQuery": "500000",
-        "mouseOverFunction": "noAverage",
-        "parent": "revel on",
-        "setColorWith": "/gbdb/hg38/revel/t.color.bb",
-        "shortLabel": "Mutation: T",
-        "track": "revelT",
-        "type": "bigWig",
-        "viewLimits": "0:1.0",
-        "viewLimitsMax": "0:1.0",
-        "visibility": "dense",
-        "html": ""
-      },
-      "description": "REVEL: Mutation is T",
       "category": ["Phenotypes, Variants, and Literature"]
     },
     {
@@ -10025,7 +9912,7 @@
         "html": ""
       },
       "description": "Adult Blood transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_ont_post_models",
@@ -10050,7 +9937,7 @@
         "html": ""
       },
       "description": "Adult Blood ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_ont_post_reads",
@@ -10078,7 +9965,7 @@
         "html": ""
       },
       "description": "Adult Blood ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_ont_pre_models",
@@ -10103,7 +9990,7 @@
         "html": ""
       },
       "description": "Adult Blood ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_ont_pre_reads",
@@ -10131,7 +10018,7 @@
         "html": ""
       },
       "description": "Adult Blood ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_pacbio_post_models",
@@ -10156,7 +10043,7 @@
         "html": ""
       },
       "description": "Adult Blood PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_pacbio_post_reads",
@@ -10184,7 +10071,7 @@
         "html": ""
       },
       "description": "Adult Blood PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_pacbio_pre_models",
@@ -10209,7 +10096,7 @@
         "html": ""
       },
       "description": "Adult Blood PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_wblood_pacbio_pre_reads",
@@ -10237,7 +10124,7 @@
         "html": ""
       },
       "description": "Adult Blood PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-bloodHaoCellType",
@@ -10458,7 +10345,7 @@
         "html": ""
       },
       "description": "Adult Brain transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_ont_post_models",
@@ -10483,7 +10370,7 @@
         "html": ""
       },
       "description": "Adult Brain ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_ont_post_reads",
@@ -10511,7 +10398,7 @@
         "html": ""
       },
       "description": "Adult Brain ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_ont_pre_models",
@@ -10536,7 +10423,7 @@
         "html": ""
       },
       "description": "Adult Brain ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_ont_pre_reads",
@@ -10564,7 +10451,7 @@
         "html": ""
       },
       "description": "Adult Brain ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_pacbio_post_models",
@@ -10589,7 +10476,7 @@
         "html": ""
       },
       "description": "Adult Brain PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_pacbio_post_reads",
@@ -10617,7 +10504,7 @@
         "html": ""
       },
       "description": "Adult Brain PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_pacbio_pre_models",
@@ -10642,7 +10529,7 @@
         "html": ""
       },
       "description": "Adult Brain PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_brain_pacbio_pre_reads",
@@ -10670,7 +10557,7 @@
         "html": ""
       },
       "description": "Adult Brain PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-gnomADPextBrain_Amygdala",
@@ -13012,7 +12899,7 @@
         "html": ""
       },
       "description": "Cell Line Pool transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_ont_post_models",
@@ -13037,7 +12924,7 @@
         "html": ""
       },
       "description": "Cell Line Pool ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_ont_post_reads",
@@ -13065,7 +12952,7 @@
         "html": ""
       },
       "description": "Cell Line Pool ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_ont_pre_models",
@@ -13090,7 +12977,7 @@
         "html": ""
       },
       "description": "Cell Line Pool ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_ont_pre_reads",
@@ -13118,7 +13005,7 @@
         "html": ""
       },
       "description": "Cell Line Pool ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_pacbio_post_models",
@@ -13143,7 +13030,7 @@
         "html": ""
       },
       "description": "Cell Line Pool PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_pacbio_post_reads",
@@ -13171,7 +13058,7 @@
         "html": ""
       },
       "description": "Cell Line Pool PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_pacbio_pre_models",
@@ -13196,7 +13083,7 @@
         "html": ""
       },
       "description": "Cell Line Pool PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_cpoola_pacbio_pre_reads",
@@ -13224,7 +13111,7 @@
         "html": ""
       },
       "description": "Cell Line Pool PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-gnomADPextCells_Culturedfibroblasts",
@@ -13710,7 +13597,7 @@
         "html": ""
       },
       "description": "Embryonic Brain transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_ont_post_models",
@@ -13735,7 +13622,7 @@
         "html": ""
       },
       "description": "Embryonic Brain ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_ont_post_reads",
@@ -13763,7 +13650,7 @@
         "html": ""
       },
       "description": "Embryonic Brain ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_ont_pre_models",
@@ -13788,7 +13675,7 @@
         "html": ""
       },
       "description": "Embryonic Brain ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_ont_pre_reads",
@@ -13816,7 +13703,7 @@
         "html": ""
       },
       "description": "Embryonic Brain ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_pacbio_post_models",
@@ -13841,7 +13728,7 @@
         "html": ""
       },
       "description": "Embryonic Brain PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_pacbio_post_reads",
@@ -13869,7 +13756,7 @@
         "html": ""
       },
       "description": "Embryonic Brain PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_pacbio_pre_models",
@@ -13894,7 +13781,7 @@
         "html": ""
       },
       "description": "Embryonic Brain PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_brain_pacbio_pre_reads",
@@ -13922,7 +13809,7 @@
         "html": ""
       },
       "description": "Embryonic Brain PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_models",
@@ -13946,7 +13833,7 @@
         "html": ""
       },
       "description": "Embryonic Heart transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_ont_post_models",
@@ -13971,7 +13858,7 @@
         "html": ""
       },
       "description": "Embryonic Heart ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_ont_post_reads",
@@ -13999,7 +13886,7 @@
         "html": ""
       },
       "description": "Embryonic Heart ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_ont_pre_models",
@@ -14024,7 +13911,7 @@
         "html": ""
       },
       "description": "Embryonic Heart ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_ont_pre_reads",
@@ -14052,7 +13939,7 @@
         "html": ""
       },
       "description": "Embryonic Heart ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_pacbio_post_models",
@@ -14077,7 +13964,7 @@
         "html": ""
       },
       "description": "Embryonic Heart PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_pacbio_post_reads",
@@ -14105,7 +13992,7 @@
         "html": ""
       },
       "description": "Embryonic Heart PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_pacbio_pre_models",
@@ -14130,7 +14017,7 @@
         "html": ""
       },
       "description": "Embryonic Heart PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_heart_pacbio_pre_reads",
@@ -14158,7 +14045,7 @@
         "html": ""
       },
       "description": "Embryonic Heart PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_models",
@@ -14182,7 +14069,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_ont_post_models",
@@ -14207,7 +14094,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_ont_post_reads",
@@ -14235,7 +14122,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_ont_pre_models",
@@ -14260,7 +14147,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_ont_pre_reads",
@@ -14288,7 +14175,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_pacbio_post_models",
@@ -14313,7 +14200,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_pacbio_post_reads",
@@ -14341,7 +14228,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_pacbio_pre_models",
@@ -14366,7 +14253,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_ipsc_pacbio_pre_reads",
@@ -14394,7 +14281,7 @@
         "html": ""
       },
       "description": "Embryonic iPSC PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_models",
@@ -14418,7 +14305,7 @@
         "html": ""
       },
       "description": "Embryonic Liver transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_ont_post_models",
@@ -14443,7 +14330,7 @@
         "html": ""
       },
       "description": "Embryonic Liver ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_ont_post_reads",
@@ -14471,7 +14358,7 @@
         "html": ""
       },
       "description": "Embryonic Liver ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_ont_pre_models",
@@ -14496,7 +14383,7 @@
         "html": ""
       },
       "description": "Embryonic Liver ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_ont_pre_reads",
@@ -14524,7 +14411,7 @@
         "html": ""
       },
       "description": "Embryonic Liver ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_pacbio_post_models",
@@ -14549,7 +14436,7 @@
         "html": ""
       },
       "description": "Embryonic Liver PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_pacbio_post_reads",
@@ -14577,7 +14464,7 @@
         "html": ""
       },
       "description": "Embryonic Liver PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_pacbio_pre_models",
@@ -14602,7 +14489,7 @@
         "html": ""
       },
       "description": "Embryonic Liver PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-embryo_liver_pacbio_pre_reads",
@@ -14630,7 +14517,7 @@
         "html": ""
       },
       "description": "Embryonic Liver PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-encode4LongRnaTranscripts",
@@ -15525,7 +15412,7 @@
         "html": ""
       },
       "description": "Adult Heart transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_ont_post_models",
@@ -15550,7 +15437,7 @@
         "html": ""
       },
       "description": "Adult Heart ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_ont_post_reads",
@@ -15578,7 +15465,7 @@
         "html": ""
       },
       "description": "Adult Heart ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_ont_pre_models",
@@ -15603,7 +15490,7 @@
         "html": ""
       },
       "description": "Adult Heart ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_ont_pre_reads",
@@ -15631,7 +15518,7 @@
         "html": ""
       },
       "description": "Adult Heart ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_pacbio_post_models",
@@ -15656,7 +15543,7 @@
         "html": ""
       },
       "description": "Adult Heart PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_pacbio_post_reads",
@@ -15684,7 +15571,7 @@
         "html": ""
       },
       "description": "Adult Heart PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_pacbio_pre_models",
@@ -15709,7 +15596,7 @@
         "html": ""
       },
       "description": "Adult Heart PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_heart_pacbio_pre_reads",
@@ -15737,7 +15624,7 @@
         "html": ""
       },
       "description": "Adult Heart PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-gnomADPextHeart_AtrialAppendage",
@@ -16272,7 +16159,7 @@
         "html": ""
       },
       "description": "Adult Liver transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_ont_post_models",
@@ -16297,7 +16184,7 @@
         "html": ""
       },
       "description": "Adult Liver ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_ont_post_reads",
@@ -16325,7 +16212,7 @@
         "html": ""
       },
       "description": "Adult Liver ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_ont_pre_models",
@@ -16350,7 +16237,7 @@
         "html": ""
       },
       "description": "Adult Liver ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_ont_pre_reads",
@@ -16378,7 +16265,7 @@
         "html": ""
       },
       "description": "Adult Liver ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_pacbio_post_models",
@@ -16403,7 +16290,7 @@
         "html": ""
       },
       "description": "Adult Liver PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_pacbio_post_reads",
@@ -16431,7 +16318,7 @@
         "html": ""
       },
       "description": "Adult Liver PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_pacbio_pre_models",
@@ -16456,7 +16343,7 @@
         "html": ""
       },
       "description": "Adult Liver PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_liver_pacbio_pre_reads",
@@ -16484,7 +16371,7 @@
         "html": ""
       },
       "description": "Adult Liver PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-lrgTranscriptAli",
@@ -17889,7 +17776,7 @@
         "html": ""
       },
       "description": "Placenta transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_ont_post_models",
@@ -17914,7 +17801,7 @@
         "html": ""
       },
       "description": "Placenta ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_ont_post_reads",
@@ -17942,7 +17829,7 @@
         "html": ""
       },
       "description": "Placenta ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_ont_pre_models",
@@ -17967,7 +17854,7 @@
         "html": ""
       },
       "description": "Placenta ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_ont_pre_reads",
@@ -17995,7 +17882,7 @@
         "html": ""
       },
       "description": "Placenta ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_pacbio_post_models",
@@ -18020,7 +17907,7 @@
         "html": ""
       },
       "description": "Placenta PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_pacbio_post_reads",
@@ -18048,7 +17935,7 @@
         "html": ""
       },
       "description": "Placenta PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_pacbio_pre_models",
@@ -18073,7 +17960,7 @@
         "html": ""
       },
       "description": "Placenta PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placenta_placenta_pacbio_pre_reads",
@@ -18101,7 +17988,7 @@
         "html": ""
       },
       "description": "Placenta PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-placentaVentoTormoStage10x",
@@ -18700,7 +18587,7 @@
         "html": ""
       },
       "description": "Adult Testis transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_ont_post_models",
@@ -18725,7 +18612,7 @@
         "html": ""
       },
       "description": "Adult Testis ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_ont_post_reads",
@@ -18753,7 +18640,7 @@
         "html": ""
       },
       "description": "Adult Testis ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_ont_pre_models",
@@ -18778,7 +18665,7 @@
         "html": ""
       },
       "description": "Adult Testis ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_ont_pre_reads",
@@ -18806,7 +18693,7 @@
         "html": ""
       },
       "description": "Adult Testis ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_pacbio_post_models",
@@ -18831,7 +18718,7 @@
         "html": ""
       },
       "description": "Adult Testis PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_pacbio_post_reads",
@@ -18859,7 +18746,7 @@
         "html": ""
       },
       "description": "Adult Testis PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_pacbio_pre_models",
@@ -18884,7 +18771,7 @@
         "html": ""
       },
       "description": "Adult Testis PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_testis_pacbio_pre_reads",
@@ -18912,7 +18799,7 @@
         "html": ""
       },
       "description": "Adult Testis PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-gnomADPextThyroid",
@@ -18958,7 +18845,7 @@
         "html": ""
       },
       "description": "Tissue Pool transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_ont_post_models",
@@ -18983,7 +18870,7 @@
         "html": ""
       },
       "description": "Tissue Pool ONT post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_ont_post_reads",
@@ -19011,7 +18898,7 @@
         "html": ""
       },
       "description": "Tissue Pool ONT post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_ont_pre_models",
@@ -19036,7 +18923,7 @@
         "html": ""
       },
       "description": "Tissue Pool ONT pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_ont_pre_reads",
@@ -19064,7 +18951,7 @@
         "html": ""
       },
       "description": "Tissue Pool ONT pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_pacbio_post_models",
@@ -19089,7 +18976,7 @@
         "html": ""
       },
       "description": "Tissue Pool PacBio post-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_pacbio_post_reads",
@@ -19117,7 +19004,7 @@
         "html": ""
       },
       "description": "Tissue Pool PacBio post-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_pacbio_pre_models",
@@ -19142,7 +19029,7 @@
         "html": ""
       },
       "description": "Tissue Pool PacBio pre-capture transcript models",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-adult_tpoola_pacbio_pre_reads",
@@ -19170,7 +19057,7 @@
         "html": ""
       },
       "description": "Tissue Pool PacBio pre-capture reads",
-      "category": ["mRNA and EST"]
+      "category": ["Uncommon or Specialized tracks", "mRNA and EST"]
     },
     {
       "trackId": "hg38-spMut",
@@ -20445,7 +20332,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 10",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20477,7 +20364,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 11",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20509,7 +20396,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 12",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20541,7 +20428,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 13",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20573,7 +20460,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 14",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20605,7 +20492,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 16",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20637,7 +20524,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 18",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20669,7 +20556,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 20",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20701,7 +20588,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 21",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20733,7 +20620,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 22",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20765,7 +20652,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 23",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20797,7 +20684,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 24",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20829,7 +20716,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 27",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20861,7 +20748,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 7",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20893,7 +20780,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 8",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20925,7 +20812,7 @@
         "html": ""
       },
       "description": "Agencourt fosmid library 9",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20957,7 +20844,7 @@
         "html": ""
       },
       "description": "CHORI BAC hydatidiform mole",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -20989,7 +20876,7 @@
         "html": ""
       },
       "description": "NHGRI-CORIELLE CORIELL-02-F-39-40KB",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -21021,7 +20908,7 @@
         "html": ""
       },
       "description": "NHGRI-CORIELLE CORIELL-02A-F-39-40KB",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -21053,7 +20940,7 @@
         "html": ""
       },
       "description": "CalTech BAC library D",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -21085,7 +20972,7 @@
         "html": ""
       },
       "description": "RPCI BAC library 11",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -21117,7 +21004,7 @@
         "html": ""
       },
       "description": "WIBR-2 Fosmid library",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -21149,7 +21036,7 @@
         "html": ""
       },
       "description": "Clone end placements dropped at UCSC, map distance 3X median library size",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -21181,7 +21068,7 @@
         "html": ""
       },
       "description": "Clone end placements that map to multiple locations in the genome",
-      "category": ["Mapping and Sequencing"]
+      "category": ["Uncommon or Specialized tracks", "Mapping and Sequencing"]
     },
     {
       "type": "FeatureTrack",
@@ -21630,7 +21517,7 @@
     {
       "type": "FeatureTrack",
       "trackId": "hg38-iscaBenignGainCum",
-      "name": "Coverage (Graphical) - Benign Gain",
+      "name": "ClinGen CNVs - Benign Gain",
       "assemblyNames": ["hg38"],
       "adapter": {
         "type": "BedTabixAdapter",
@@ -21659,7 +21546,7 @@
     {
       "type": "FeatureTrack",
       "trackId": "hg38-iscaBenignLossCum",
-      "name": "Coverage (Graphical) - Benign Loss",
+      "name": "ClinGen CNVs - Benign Loss",
       "assemblyNames": ["hg38"],
       "adapter": {
         "type": "BedTabixAdapter",
@@ -21688,7 +21575,7 @@
     {
       "type": "FeatureTrack",
       "trackId": "hg38-iscaPathGainCum",
-      "name": "Coverage (Graphical) - Path Gain",
+      "name": "ClinGen CNVs - Pathogenic Gain",
       "assemblyNames": ["hg38"],
       "adapter": {
         "type": "BedTabixAdapter",
@@ -21717,7 +21604,7 @@
     {
       "type": "FeatureTrack",
       "trackId": "hg38-iscaPathLossCum",
-      "name": "Coverage (Graphical) - Path Loss",
+      "name": "ClinGen CNVs - Pathogenic Loss",
       "assemblyNames": ["hg38"],
       "adapter": {
         "type": "BedTabixAdapter",
