@@ -3,7 +3,7 @@
   "tracks": [
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_100way_phastCons",
+      "trackId": "hg19-100way_phastCons",
       "name": "hg19.100way.phastCons",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -17,7 +17,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_100way_phyloP100way",
+      "trackId": "hg19-100way_phyloP100way",
       "name": "hg19.100way.phyloP100way",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -31,7 +31,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_phastCons46way_placental",
+      "trackId": "hg19-phastCons46way_placental",
       "name": "placentalMammals.phastCons46way",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -45,7 +45,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_phastCons46way_primates",
+      "trackId": "hg19-phastCons46way_primates",
       "name": "primates.phastCons46way",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -59,7 +59,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_phastCons46way_vertebrate",
+      "trackId": "hg19-phastCons46way_vertebrate",
       "name": "vertebrate.phastCons46way",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -73,7 +73,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_phyloP46way_placental",
+      "trackId": "hg19-phyloP46way_placental",
       "name": "placentalMammals.phyloP46way",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -87,7 +87,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_phyloP46way_primates",
+      "trackId": "hg19-phyloP46way_primates",
       "name": "primates.phyloP46way",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -101,7 +101,7 @@
     },
     {
       "type": "QuantitativeTrack",
-      "trackId": "hg19_phyloP46way_vertebrate",
+      "trackId": "hg19-phyloP46way_vertebrate",
       "name": "vertebrate.phyloP46way",
       "category": ["Comparative Genomics"],
       "assemblyNames": ["hg19"],
@@ -111,6 +111,49 @@
           "uri": "https://hgdownload.soe.ucsc.edu/goldenPath/hg19/phyloP46way/vertebrate.phyloP46way.bw",
           "locationType": "UriLocation"
         }
+      }
+    },
+    {
+      "type": "MultiQuantitativeTrack",
+      "trackId": "hg19-alphaMissense",
+      "name": "AlphaMissense",
+      "assemblyNames": ["hg19"],
+      "adapter": {
+        "type": "MultiWiggleAdapter",
+        "subadapters": [
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/alphaMissense/a.bw"
+            },
+            "source": "Mutation: A"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/alphaMissense/c.bw"
+            },
+            "source": "Mutation: C"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/alphaMissense/g.bw"
+            },
+            "source": "Mutation: G"
+          },
+          {
+            "type": "BigWigAdapter",
+            "bigWigLocation": {
+              "locationType": "UriLocation",
+              "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hg19/alphaMissense/t.bw"
+            },
+            "source": "Mutation: T"
+          }
+        ]
       }
     }
   ]
