@@ -120,6 +120,17 @@ console.log(
         },
       ],
       tracks: [],
+      configuration: {
+        hierarchical: {
+          sort: {
+            trackNames: true,
+            categories: true,
+          },
+          defaultCollapsed: {
+            subCategories: true, // collapse all subcategories on initial startup
+          },
+        },
+      },
     },
     null,
     2,
