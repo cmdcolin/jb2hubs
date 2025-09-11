@@ -12,6 +12,10 @@ const specializedParents = new Set([
   'gnomadPext',
   'gdcCancer',
   'affyExonProbeset',
+  'cloneEndSuper',
+  'per_expr_models_view',
+  'sample_models_view',
+  'per_expr_reads_view',
 ])
 
 const specializedTypes = new Set(['pgSnp'])
