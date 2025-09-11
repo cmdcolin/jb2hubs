@@ -24885,6 +24885,17 @@
       }
     }
   ],
+  "configuration": {
+    "hierarchical": {
+      "sort": {
+        "trackNames": true,
+        "categories": true
+      },
+      "defaultCollapsed": {
+        "subCategories": true
+      }
+    }
+  },
   "aggregateTextSearchAdapters": [
     {
       "type": "TrixTextSearchAdapter",
@@ -24903,5 +24914,29 @@
       },
       "assemblyNames": ["hg19"]
     }
-  ]
+  ],
+  "defaultSession": {
+    "name": "New session",
+    "views": [
+      {
+        "id": "main",
+        "type": "LinearGenomeView",
+        "init": {
+          "loc": "chr10:89,601,719..89,753,346",
+          "assembly": "hg19",
+          "tracks": ["hg19-ncbiRefSeq"]
+        }
+      }
+    ],
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "main"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    }
+  }
 }

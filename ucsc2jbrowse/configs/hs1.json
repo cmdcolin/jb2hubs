@@ -14725,27 +14725,28 @@
     }
   ],
   "defaultSession": {
-    "name": "hs1",
+    "name": "New session",
+    "views": [
+      {
+        "id": "main",
+        "type": "LinearGenomeView",
+        "init": {
+          "loc": "chr10:88,725,843..88,877,466",
+          "assembly": "hs1",
+          "tracks": ["hs1-ncbiRefSeq"]
+        }
+      }
+    ],
     "widgets": {
       "hierarchicalTrackSelector": {
         "id": "hierarchicalTrackSelector",
         "type": "HierarchicalTrackSelectorWidget",
-        "view": "initialView"
+        "view": "main"
       }
     },
     "activeWidgets": {
       "hierarchicalTrackSelector": "hierarchicalTrackSelector"
-    },
-    "views": [
-      {
-        "type": "LinearGenomeView",
-        "id": "initialView",
-        "init": {
-          "assembly": "hs1",
-          "loc": "chr9:145458455-145495201"
-        }
-      }
-    ]
+    }
   },
   "plugins": [],
   "aggregateTextSearchAdapters": [

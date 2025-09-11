@@ -1,5 +1,29 @@
 {
   "tracks": [],
+  "defaultSession": {
+    "name": "New session",
+    "views": [
+      {
+        "id": "main",
+        "type": "LinearGenomeView",
+        "init": {
+          "loc": "chr10:88,725,843..88,877,466",
+          "assembly": "hs1",
+          "tracks": ["hs1-ncbiRefSeq"]
+        }
+      }
+    ],
+    "widgets": {
+      "hierarchicalTrackSelector": {
+        "id": "hierarchicalTrackSelector",
+        "type": "HierarchicalTrackSelectorWidget",
+        "view": "main"
+      }
+    },
+    "activeWidgets": {
+      "hierarchicalTrackSelector": "hierarchicalTrackSelector"
+    }
+  },
   "assemblies": [
     {
       "cytobands": {
