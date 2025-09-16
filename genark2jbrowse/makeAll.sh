@@ -41,6 +41,9 @@ echo "Loading and text indexing NCBI GFF tracks..."
 echo "Adding GenArk extensions (special tracks)..."
 node src/makeGenArkExtensions.ts
 
+echo "Fetching wiki images"
+./getWikiImages.sh
+
 echo "Calculate gff file hashes"
 ./getFileListing.sh
 
