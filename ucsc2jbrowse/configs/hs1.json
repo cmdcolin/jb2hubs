@@ -654,6 +654,64 @@
     },
     {
       "metadata": {
+        "track": "deepvariant",
+        "type": "vcfTabix",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/deepvariant.html\">deepvariant.html</a>",
+        "visibility": "pack",
+        "shortLabel": "CoLoRSdb Small Variants",
+        "bigDataUrl": "/gbdb/hs1/colorsDb/colorsDb.v1.2.0.deepvariant.glnexus.vcf.gz",
+        "parent": "structuralVariants",
+        "longLabel": "CoLoRSdb DeepVariant + GLnexus callset"
+      },
+      "category": ["Structural Variants"],
+      "trackId": "hs1-deepvariant",
+      "description": "CoLoRSdb DeepVariant + GLnexus callset",
+      "assemblyNames": ["hs1"],
+      "name": "CoLoRSdb Small Variants",
+      "type": "VariantTrack",
+      "adapter": {
+        "type": "VcfTabixAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hs1/colorsDb/colorsDb.v1.2.0.deepvariant.glnexus.vcf.gz"
+      }
+    },
+    {
+      "metadata": {
+        "track": "pbsv",
+        "type": "bigBed 9 +",
+        "html": "<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/pbsv.html\">pbsv.html</a>",
+        "mouseOver": "<b>Position</b>: $chrom:${chromStart}-${chromEnd}<br> <b>SV type</b>: ${svType}<br> <b>Length</b>: ${svLen} bp<br> <b>Allele Frequency</b>: ${af}<br> <b>Alt allele count</b>: ${AC} (Hom: ${AC_Hom}, Het: ${AC_Het}, Hemi: ${AC_Hemi})<br> <b>Number of samples</b>: ${NS} <br> <b>Total allele number</b>: ${AN}<br> <b>HWE p-value</b>: ${HWE}<br> <b>ExcHet</b>: ${ExcHet}",
+        "filter.AC": "0",
+        "visibility": "pack",
+        "shortLabel": "CoLoRSdb Structural Variants",
+        "searchIndex": "name,svType",
+        "filterLabel.svType": "Type",
+        "filterValues.svType": "INS,DEL,INV",
+        "filterLabel.svLen": "SV length (bp)",
+        "filterByRange.svLen": "on",
+        "filterLabel.AC": "Alt allele count (AC)",
+        "filterByRange.AC": "on",
+        "itemRgb": "on",
+        "filterLimits.svLen": "0:12000",
+        "bigDataUrl": "/gbdb/hs1/colorsDb/colorsDb.v1.2.0.sv.bb",
+        "parent": "structuralVariants",
+        "longLabel": "CoLoRSdb pbsv + Jasmine callset",
+        "filterType.svType": "multiple",
+        "filterLimits.AC": "0:3000",
+        "filter.svLen": "0"
+      },
+      "category": ["Structural Variants"],
+      "trackId": "hs1-pbsv",
+      "description": "CoLoRSdb pbsv + Jasmine callset",
+      "assemblyNames": ["hs1"],
+      "name": "CoLoRSdb Structural Variants",
+      "type": "FeatureTrack",
+      "adapter": {
+        "type": "BigBedAdapter",
+        "uri": "https://hgdownload.soe.ucsc.edu/gbdb/hs1/colorsDb/colorsDb.v1.2.0.sv.bb"
+      }
+    },
+    {
+      "metadata": {
         "track": "cpgIslandExt",
         "type": "bigBed 4 +",
         "html": "<a href=\"https://hgdownload.soe.ucsc.edu/gbdb/hs1/hubs/public/cpgIslandExt.html\">cpgIslandExt.html</a>",
