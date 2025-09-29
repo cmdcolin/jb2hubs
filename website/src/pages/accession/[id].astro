@@ -86,7 +86,13 @@ const { imageUrl, pageUrl } =
               </figcaption>
             </figure>
           </div>
-        ) : null
+        ) : (
+          <div class="imageContainer">
+            <div class="placeholder">
+              No image
+            </div>
+          </div>
+        )
       }
     </div>
     <div>
@@ -148,5 +154,16 @@ const { imageUrl, pageUrl } =
 
   .image {
     max-width: 100%;
+  }
+
+  .placeholder {
+    background-color: #d3d3d3;
+    color: #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    font-size: 1rem;
+    border-radius: 4px;
   }
 </style>
