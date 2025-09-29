@@ -88,9 +88,7 @@ const { imageUrl, pageUrl } =
           </div>
         ) : (
           <div class="imageContainer">
-            <div class="placeholder">
-              No image
-            </div>
+            <div class="placeholder">No image</div>
           </div>
         )
       }
@@ -132,6 +130,13 @@ const { imageUrl, pageUrl } =
           <a
             href={`https://www.google.com/search?q=${encodeURIComponent(scientificName)}`}
           >
+            Google
+          </a>
+        </li>
+        <li>
+          <a
+            href={`https://www.google.com/search?q=${encodeURIComponent(scientificName)}&udm=50`}
+          >
             Google AI overview
           </a>
         </li>
@@ -163,6 +168,7 @@ const { imageUrl, pageUrl } =
     align-items: center;
     justify-content: center;
     min-height: 150px;
+    min-width: 150px;
     font-size: 1rem;
     border-radius: 4px;
   }
