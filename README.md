@@ -19,3 +19,21 @@ This repo was written with the aid of AI tools including Claude and avante.nvim
 
 A huge thank you to UCSC team for their generous data sharing policy and work on
 these resources
+
+## Rclone config
+
+This is in ~/.config/rclone/rclone.conf
+
+```
+[jbrowse-data]
+type = s3
+provider = AWS
+env_auth = true
+region = us-east-1
+acl = public-read
+storage_class = STANDARD_IA
+
+[jbrowse-data-hashed]
+type = hasher
+remote = jbrowse-data:
+```
