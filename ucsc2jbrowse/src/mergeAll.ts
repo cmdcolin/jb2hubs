@@ -54,14 +54,24 @@ function mergeAllConfigs() {
     return config
   })
 
+  const mergedPlugins = new Map<string, unknown>()
+  for (const config of allConfigs) {
+    if (config.plugins) {
+      for (const plugin of config.plugins) {
+        mergedPlugins.set(JSON.stringify(plugin), plugin)
+      }
+    }
+  }
+
   const mergedConfig: JBrowseConfig = {
-    assemblies: allConfigs.flatMap(config => config.assemblies),
+    assemblies: allConfigs
+      .flatMap(config => config.assemblies)
+      .filter(assembly => assembly.name),
     tracks: allConfigs.flatMap(config => config.tracks),
     aggregateTextSearchAdapters: allConfigs.flatMap(
       config => config.aggregateTextSearchAdapters ?? [],
     ),
-    // Plugins are not merged here, assuming they are handled separately or are global
-    plugins: [],
+    plugins: [...mergedPlugins.values()],
   }
 
   const ucscResultsDir = process.env.UCSC_RESULTS_DIR
